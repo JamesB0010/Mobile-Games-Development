@@ -1,5 +1,37 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1928905232882831120
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6714768980019920918}
+  m_Layer: 0
+  m_Name: CockpitThrottlePivot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6714768980019920918
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1928905232882831120}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.03214, y: -0.00243, z: 0.03042999}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 7324250504900933750}
+  m_Father: {fileID: 7562002872784024217}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &204528288953295904
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -154,7 +186,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 7562002872784024217}
+    m_TransformParent: {fileID: 6714768980019920918}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 5dcc189adf31a9f4eab289190cba2beb, type: 3}
       propertyPath: m_LocalScale.x
@@ -170,15 +202,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5dcc189adf31a9f4eab289190cba2beb, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.01098
+      value: 0.04312
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5dcc189adf31a9f4eab289190cba2beb, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.03735
+      value: -0.034919985
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5dcc189adf31a9f4eab289190cba2beb, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.03043
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5dcc189adf31a9f4eab289190cba2beb, type: 3}
       propertyPath: m_LocalRotation.w
@@ -186,15 +218,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5dcc189adf31a9f4eab289190cba2beb, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5dcc189adf31a9f4eab289190cba2beb, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5dcc189adf31a9f4eab289190cba2beb, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5dcc189adf31a9f4eab289190cba2beb, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -318,15 +350,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1882bb7d8cf5c9d4b94ef8b1fe7fdc60, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1882bb7d8cf5c9d4b94ef8b1fe7fdc60, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.78325
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1882bb7d8cf5c9d4b94ef8b1fe7fdc60, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.5286
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1882bb7d8cf5c9d4b94ef8b1fe7fdc60, type: 3}
       propertyPath: m_LocalRotation.w
@@ -374,7 +406,7 @@ PrefabInstance:
       addedObject: {fileID: 386210160867607499}
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 1882bb7d8cf5c9d4b94ef8b1fe7fdc60, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 7324250504900933750}
+      addedObject: {fileID: 6714768980019920918}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1882bb7d8cf5c9d4b94ef8b1fe7fdc60, type: 3}
 --- !u!4 &7562002872784024217 stripped
