@@ -6,7 +6,7 @@
             "id": "ff186970-a5f3-41c9-8ee7-116ac87dba3f",
             "actions": [
                 {
-                    "name": "Throttle",
+                    "name": "Throttle And Yaw",
                     "type": "Value",
                     "id": "177888fb-e8a0-48a1-ac39-955eff65caf8",
                     "expectedControlType": "Vector2",
@@ -41,7 +41,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": ";Gamepad",
-                    "action": "Throttle",
+                    "action": "Throttle And Yaw",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -52,7 +52,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Throttle",
+                    "action": "Throttle And Yaw",
                     "isComposite": true,
                     "isPartOfComposite": false
                 },
@@ -63,7 +63,29 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard&Mouse",
-                    "action": "Throttle",
+                    "action": "Throttle And Yaw",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "left",
+                    "id": "2abe705e-8596-4d7c-9ed4-ad82ab00114e",
+                    "path": "<Keyboard>/#(A)",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
+                    "action": "Throttle And Yaw",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "right",
+                    "id": "fc1e6ba7-a0f6-4ad1-b43b-779ccd1d7c6f",
+                    "path": "<Keyboard>/#(D)",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
+                    "action": "Throttle And Yaw",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -74,7 +96,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard&Mouse",
-                    "action": "Throttle",
+                    "action": "Throttle And Yaw",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -85,7 +107,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "XR",
-                    "action": "Throttle",
+                    "action": "Throttle And Yaw",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -96,7 +118,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Joystick",
-                    "action": "Throttle",
+                    "action": "Throttle And Yaw",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },

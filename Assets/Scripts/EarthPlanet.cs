@@ -13,6 +13,8 @@ public class EarthPlanet : MonoBehaviour
 
     private IssApiJsonResponse issPosition;
 
+    [SerializeField] private Transform issObject;
+
     void Start()
     {
         this.player = FindObjectOfType<PlayerMovement>();
@@ -38,23 +40,11 @@ public class EarthPlanet : MonoBehaviour
     }
 
     //chat gpt
-    private Vector3 convertLatAndLonToPositionOnSphere(float latitude, float longitude)
+    private void PlaceISSTransform()
     {
-        float theta = Mathf.Deg2Rad * (90.0f - latitude);
-        float phi = Mathf.Deg2Rad * longitude;
-
-        float x = Mathf.Sin(theta) * Mathf.Cos(phi);
-        float y = Mathf.Cos(theta);
-        float z = Mathf.Sin(theta) * Mathf.Sin(phi);
-
-        return new Vector3(x, y, z);
     }
 
-    private void RotateEarthToBeLikeISS(Vector3 positionOnSphere)
-    {
-        Debug.Log(positionOnSphere);
-        transform.rotation = Quaternion.Euler(positionOnSphere);
-    }
+
     
     IEnumerator RequestIssPosition()
     {
@@ -73,7 +63,8 @@ public class EarthPlanet : MonoBehaviour
                 Debug.Log("iss position longitude " + this.issPosition.iss_position.longitude);
                 Debug.Log("Time Since level loaded " + this.issPosition.timestamp);
                 
-                this.RotateEarthToBeLikeISS(this.convertLatAndLonToPositionOnSphere(this.issPosition.iss_position.latitude, this.issPosition.iss_position.longitude));
+                this.PlaceISSTransform();
+                
             }
         }
     }

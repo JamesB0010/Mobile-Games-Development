@@ -18,12 +18,16 @@ public class PlayerMovement : MonoBehaviour
     private float inputtedRoll;
     public float InputtedRoll => inputtedRoll;
 
+    private float inputtedYaw;
+
     private float inputtedPitch;
     public float InputtedPitch => inputtedPitch;
 
     [SerializeField] private float rollSpeed;
 
     [SerializeField] private float pitchSpeed;
+
+    [SerializeField] private float yawSpeed;
 
     [SerializeField] private Camera playerCamera;
 
@@ -35,7 +39,7 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         this.throttle = Mathf.Lerp(this.throttle, this.inputtedThrottle, Time.deltaTime * this.throttleChangeRate);
-        transform.Rotate(new Vector3(inputtedPitch * Time.deltaTime * this.pitchSpeed, 0,-inputtedRoll * Time.deltaTime * this.rollSpeed));
+        transform.Rotate(new Vector3(inputtedPitch * Time.deltaTime * this.pitchSpeed, this.inputtedYaw * Time.deltaTime * this.yawSpeed,-inputtedRoll * Time.deltaTime * this.rollSpeed));
 
         Vector3 acceleration = Vector3.zero;
         acceleration += this.playerCamera.transform.forward * (speed * this.throttle);
@@ -44,12 +48,13 @@ public class PlayerMovement : MonoBehaviour
         transform.Translate(this.velocity, Space.World);
     }
 
-    public void OnThrottle(InputAction.CallbackContext ctx)
+    public void OnThrottleAndYaw(InputAction.CallbackContext ctx)
     {
         Vector2 input = ctx.ReadValue<Vector2>();
         float throttleInput = input.y < 0 ? 0 : input.y;
 
         this.inputtedThrottle = throttleInput;
+        this.inputtedYaw = input.x;
     }
 
     public void OnPitchAndRoll(InputAction.CallbackContext ctx)
