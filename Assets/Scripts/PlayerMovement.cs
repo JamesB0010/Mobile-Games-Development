@@ -38,7 +38,7 @@ public class PlayerMovement : MonoBehaviour
         transform.Rotate(new Vector3(inputtedPitch * Time.deltaTime * this.pitchSpeed, 0,-inputtedRoll * Time.deltaTime * this.rollSpeed));
 
         Vector3 acceleration = Vector3.zero;
-        acceleration += this.playerCamera.transform.forward * (speed * Time.deltaTime * this.throttle);
+        acceleration += this.playerCamera.transform.forward * (speed * this.throttle);
         this.velocity += acceleration;
         this.velocity = Vector3.ClampMagnitude(this.velocity, maxVelocity);
         transform.Translate(this.velocity, Space.World);
