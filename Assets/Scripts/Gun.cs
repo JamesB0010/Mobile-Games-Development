@@ -56,6 +56,9 @@ public class Gun : ScriptableObject
         this.UpdateLastBulletShotTimestamp();
 
         Bullet bullet = Instantiate(this.bulletPrefab, bulletStartPosition, Quaternion.identity);
+        
+        bullet.transform.localRotation= Quaternion.Euler(forwardDirection);
+
 
         SetupBullet(bullet, forwardDirection);
 

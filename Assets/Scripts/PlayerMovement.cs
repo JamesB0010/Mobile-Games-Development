@@ -1,8 +1,10 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
+using Gyroscope = UnityEngine.InputSystem.Gyroscope;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -35,17 +37,18 @@ public class PlayerMovement : MonoBehaviour
     private Vector3 velocity = Vector3.zero;
 
     [SerializeField] private float maxVelocity;
-    
+
+
     void Update()
     {
         this.throttle = Mathf.Lerp(this.throttle, this.inputtedThrottle, Time.deltaTime * this.throttleChangeRate);
         transform.Rotate(new Vector3(inputtedPitch * Time.deltaTime * this.pitchSpeed, this.inputtedYaw * Time.deltaTime * this.yawSpeed,-inputtedRoll * Time.deltaTime * this.rollSpeed));
 
         Vector3 acceleration = Vector3.zero;
-        acceleration += this.playerCamera.transform.forward * (speed * this.throttle);
+        acceleration += this.playerCamera.transform.forward * (speed * this.throttle * Time.deltaTime);
         this.velocity += acceleration;
         this.velocity = Vector3.ClampMagnitude(this.velocity, maxVelocity);
-        transform.Translate(this.velocity, Space.World);
+        transform.Translate(this.velocity * Time.deltaTime, Space.World);
     }
 
     public void OnThrottleAndYaw(InputAction.CallbackContext ctx)
@@ -61,5 +64,10 @@ public class PlayerMovement : MonoBehaviour
     {
         this.inputtedPitch = ctx.ReadValue<Vector2>().y;
         this.inputtedRoll = ctx.ReadValue<Vector2>().x;
+    }
+
+    public void OnGyroUpdate(InputAction.CallbackContext ctx)
+    {
+        Debug.Log(ctx.ReadValue<Quaternion>());
     }
 }

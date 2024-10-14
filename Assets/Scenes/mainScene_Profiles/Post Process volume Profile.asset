@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-8119422967667081590
+--- !u!114 &-4982096027208263381
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -18,7 +18,7 @@ MonoBehaviour:
     value: 1
   intensity:
     overrideState: 1
-    value: 1.89
+    value: 1.68
   threshold:
     overrideState: 1
     value: 1
@@ -60,4 +60,4 @@ MonoBehaviour:
   m_Name: Post Process volume Profile
   m_EditorClassIdentifier: 
   settings:
-  - {fileID: -8119422967667081590}
+  - {fileID: -4982096027208263381}

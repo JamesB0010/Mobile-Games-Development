@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class CameraFOVChanger : MonoBehaviour
 {
-    CinemachineVirtualCamera camera;
+    CinemachineVirtualCamera virtualCamera;
     
     private PlayerMovement playerMovement;
 
@@ -15,13 +15,13 @@ public class CameraFOVChanger : MonoBehaviour
     private void Start()
     {
         this.playerMovement = FindObjectOfType<PlayerMovement>();
-        this.camera = GetComponent<CinemachineVirtualCamera>();
+        this.virtualCamera = GetComponent<CinemachineVirtualCamera>();
     }
 
     private void Update()
     {
         float throttleAmount = playerMovement.Throttle;
 
-        this.camera.m_Lens.FieldOfView = ValueInRangeMapper.Map(throttleAmount, 0, 1, this.minFov, this.maxFov);
+        this.virtualCamera.m_Lens.FieldOfView = ValueInRangeMapper.Map(throttleAmount, 0, 1, this.minFov, this.maxFov);
     }
 }
