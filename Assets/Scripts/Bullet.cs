@@ -14,4 +14,12 @@ public class Bullet : MonoBehaviour
     {
         transform.Translate(this.forwards * (this.speed * Time.deltaTime));
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        Debug.Log("Bullet collided");
+
+        Destroy(this.gameObject);
+    }
+
 }
