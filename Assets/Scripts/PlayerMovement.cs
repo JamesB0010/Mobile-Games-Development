@@ -8,6 +8,7 @@ using Gyroscope = UnityEngine.InputSystem.Gyroscope;
 
 public class PlayerMovement : MonoBehaviour
 {
+    
     [SerializeField]
     private float speed;
 
