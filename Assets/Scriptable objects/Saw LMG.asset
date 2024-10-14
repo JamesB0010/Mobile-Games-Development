@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2008404cba8f7647b47da7b08f99d37, type: 3}
+  m_Name: Saw LMG
+  m_EditorClassIdentifier: 
+  bulletPrefab: {fileID: 3118056857120007577, guid: 5a6baa86ac946c647b5019508c95ae8d, type: 3}
+  gunshotSound: {fileID: 8300000, guid: c12a25ac230b79a4b85ec63119fdf75c, type: 3}
+  timeBetweenBullets: 0.32
