@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Cinemachine;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
@@ -8,6 +9,8 @@ using Gyroscope = UnityEngine.InputSystem.Gyroscope;
 
 public class PlayerMovement : MonoBehaviour
 {
+
+    [SerializeField] private CinemachineVirtualCamera boostCam;
     
     [SerializeField]
     private float speed;
@@ -39,6 +42,18 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField] private float maxVelocity;
 
+    private float currentMaxVelocity;
+
+    private float maxVelocityDefault;
+
+    [SerializeField] private float maxBoostVelocity;
+
+
+    private void Start()
+    {
+        this.maxVelocityDefault = this.maxVelocity;
+        this.currentMaxVelocity = this.maxVelocity;
+    }
 
     void Update()
     {
@@ -48,7 +63,7 @@ public class PlayerMovement : MonoBehaviour
         Vector3 acceleration = Vector3.zero;
         acceleration += this.playerCamera.transform.forward * (speed * this.throttle * Time.deltaTime);
         this.velocity += acceleration;
-        this.velocity = Vector3.ClampMagnitude(this.velocity, maxVelocity);
+        this.velocity = Vector3.ClampMagnitude(this.velocity, this.currentMaxVelocity);
         transform.Translate(this.velocity * Time.deltaTime, Space.World);
     }
 
@@ -70,5 +85,19 @@ public class PlayerMovement : MonoBehaviour
     public void OnGyroUpdate(InputAction.CallbackContext ctx)
     {
         Debug.Log(ctx.ReadValue<Quaternion>());
+    }
+
+    public void OnBoost(InputAction.CallbackContext ctx)
+    {
+        if (ctx.action.IsPressed())
+        {
+            this.currentMaxVelocity = this.maxBoostVelocity;
+            this.boostCam.gameObject.SetActive(true);
+        }
+        else
+        {
+            this.currentMaxVelocity = this.maxVelocityDefault;
+            this.boostCam.gameObject.SetActive(false);
+        }
     }
 }

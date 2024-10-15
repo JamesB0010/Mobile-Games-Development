@@ -29,7 +29,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: -95.09, y: 58.7, z: 280.14}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 3, y: 3, z: 3}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4523201618664576786}
@@ -50,7 +50,9 @@ MonoBehaviour:
   health: 100
   DeathParticle: {fileID: 3882828615210567630, guid: 7a8e966794bfadc459366685b18688c9, type: 3}
   speed: 1
-  maxVelocity: 0
+  maxVelocity: 0.06
+  rotationSpeed: 0.08
+  desiredDirectionChangeInterval: 10
 --- !u!114 &1904863700040533921
 MonoBehaviour:
   m_ObjectHideFlags: 0

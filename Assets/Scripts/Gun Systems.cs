@@ -46,7 +46,6 @@ public class GunSystems : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log(this.tryingToShoot);
         foreach (var animatorController in this.animationControllers)
         {
             animatorController.SetBool(TryingToShoot, this.tryingToShoot);
