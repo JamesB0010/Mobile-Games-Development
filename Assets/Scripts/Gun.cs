@@ -10,9 +10,6 @@ public class Gun : ScriptableObject
     [SerializeField]
     private Bullet bulletPrefab;
 
-    [SerializeField]
-    private AudioClip gunshotSound;
-
     private float lastBulletShotTimestamp = -100.0f;
 
     [SerializeField]
@@ -27,18 +24,17 @@ public class Gun : ScriptableObject
     {
         if (this.IsPrimedToShoot())
         {
-            //shoot
+            Bullet bullet = InstantiateBullet(bulletStartPosition, targetPosition, hasValidTarget);
+            bullet.hit = hit;
             return true;
         }
         return false;
     }
-    public bool Shoot(Vector3 bulletStartPosition, Vector3 forwardDirection)
+    public bool Shoot(Vector3 bulletStartPosition, Vector3 targetPosition, bool hasValidTarget)
     {
         if (this.IsPrimedToShoot())
         {
-            //instantiate bullet
-            Debug.Log("instantiate bullet");
-            this.InstantiateBullet(bulletStartPosition, forwardDirection);
+            this.InstantiateBullet(bulletStartPosition, targetPosition, hasValidTarget);
             return true;
         }
 
@@ -51,34 +47,23 @@ public class Gun : ScriptableObject
         return requiredTimeElapsed;
     }
 
-    private void InstantiateBullet(Vector3 bulletStartPosition, Vector3 forwardDirection)
+    private Bullet InstantiateBullet(Vector3 bulletStartPosition, Vector3 targetPosition, bool hasValidTarget)
     {
         this.UpdateLastBulletShotTimestamp();
 
         Bullet bullet = Instantiate(this.bulletPrefab, bulletStartPosition, Quaternion.identity);
-        
-        bullet.transform.localRotation= Quaternion.Euler(forwardDirection);
 
+        SetupBullet(bulletStartPosition, targetPosition, hasValidTarget, bullet);
 
-        SetupBullet(bullet, forwardDirection);
-
-        //PlayBulletShotSound(bulletStartPosition);
+        return bullet;
     }
     private void UpdateLastBulletShotTimestamp()
     {
         this.lastBulletShotTimestamp = Time.timeSinceLevelLoad;
     }
-    private static void SetupBullet(Bullet bullet, Vector3 forwardsDirection)
+    private static void SetupBullet(Vector3 bulletStartPosition, Vector3 targetPosition, bool hasValidTarget, Bullet bullet)
     {
-        bullet.forwards = forwardsDirection;
+        bullet.SetupBulletData(hasValidTarget, bulletStartPosition, targetPosition);
     }
-
-    private void PlayBulletShotSound(Vector3 bulletStartPosition)
-    {
-        AudioSource.PlayClipAtPoint(this.gunshotSound, bulletStartPosition);
-    }
-
-
-
 
 }

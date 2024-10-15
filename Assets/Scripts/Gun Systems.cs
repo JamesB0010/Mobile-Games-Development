@@ -5,6 +5,7 @@ using UnityEditor.Animations;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+[RequireComponent(typeof(CrosshairTargetFinder))]
 public class GunSystems : MonoBehaviour
 {
     [SerializeField]
@@ -14,6 +15,8 @@ public class GunSystems : MonoBehaviour
     private AudioSource[] gunshotSoundLocations;
 
     private int gunshotSoundLocationIndex = 0;
+
+    private CrosshairTargetFinder crosshairTargetFinder;
 
     private Camera playerCamera;
 
@@ -37,13 +40,28 @@ public class GunSystems : MonoBehaviour
     {
         this.gun.PrimeWeaponToShoot();
         this.playerCamera = FindObjectOfType<Camera>();
+        this.crosshairTargetFinder = GetComponent<CrosshairTargetFinder>();
     }
 
     private void Update()
     {
         if (this.tryingToShoot)
         {
-            bool bulletShot = this.gun.Shoot(this.bulletSpawnLocations[this.bulletSpwanLocationIndex].position, this.playerCamera.transform.forward);
+            bool bulletShot = false;
+
+            Vector3 crosshairWorldTargetPosition = this.crosshairTargetFinder.GetLatestHitPosition();
+            bool lastHitValid = this.crosshairTargetFinder.WasLastHitValid();
+            if (lastHitValid)
+            {
+                RaycastHit hit = this.crosshairTargetFinder.GetLastHit();
+                bulletShot = this.gun.Shoot(this.bulletSpawnLocations[this.bulletSpwanLocationIndex].position, crosshairWorldTargetPosition, true, hit);
+            }
+            else
+            {
+                bulletShot = this.gun.Shoot(this.bulletSpawnLocations[this.bulletSpwanLocationIndex].position,
+                    crosshairWorldTargetPosition, false);
+            }
+            
             if (bulletShot)
             {
                 ParticleSystem muzzleFlash = this.muzzleFlashes[this.muzzleFlashIndex].GetComponent<ParticleSystem>();
