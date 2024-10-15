@@ -17,7 +17,7 @@ public class EnemyBase : MonoBehaviour
 
             if (this.health <= 0)
             {
-                Debug.Log("Dead");
+                this.OnDeath();
                 Destroy(this.gameObject);
             }
         }
@@ -26,5 +26,10 @@ public class EnemyBase : MonoBehaviour
     public virtual void TakeDamage(float damageToTake)
     {
         this.Health = this.health - damageToTake;
+    }
+
+    protected virtual void OnDeath()
+    {
+        
     }
 }
