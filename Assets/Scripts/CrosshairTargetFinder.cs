@@ -54,7 +54,6 @@ public class CrosshairTargetFinder : MonoBehaviour
 
         if (raycastHitCollider)
         {
-            Debug.Log("Ray hit collider");
             this.latestHitData.UpdateData(true, hit, hit.distance);
             SetLookAtPointPosition(hit);
         }
