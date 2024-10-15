@@ -35,6 +35,7 @@ public class GunSystems : MonoBehaviour
     private int bulletSpwanLocationIndex = 0;
 
     private bool tryingToShoot = false;
+    private static readonly int TryingToShoot = Animator.StringToHash("TryingToShoot");
 
     private void Start()
     {
@@ -45,10 +46,16 @@ public class GunSystems : MonoBehaviour
 
     private void Update()
     {
+        Debug.Log(this.tryingToShoot);
+        foreach (var animatorController in this.animationControllers)
+        {
+            animatorController.SetBool(TryingToShoot, this.tryingToShoot);
+            animatorController.SetBool("BulletFired", false);
+        }
+        bool bulletShot = false;
+        
         if (this.tryingToShoot)
         {
-            bool bulletShot = false;
-
             Vector3 crosshairWorldTargetPosition = this.crosshairTargetFinder.GetLatestHitPosition();
             bool lastHitValid = this.crosshairTargetFinder.WasLastHitValid();
             if (lastHitValid)
@@ -73,7 +80,7 @@ public class GunSystems : MonoBehaviour
 
                 this.muzzleFlashIndex++;
                 this.muzzleFlashIndex %= this.muzzleFlashes.Length;
-                this.animationControllers[this.animationControllerIndex].SetTrigger("BulletFired");
+                this.animationControllers[this.animationControllerIndex].SetBool("BulletFired", true);
                 this.animationControllerIndex++;
                 this.animationControllerIndex %= this.animationControllers.Length;
                 this.bulletSpwanLocationIndex++;
@@ -87,7 +94,14 @@ public class GunSystems : MonoBehaviour
 
     public void OnShoot(InputAction.CallbackContext ctx)
     {
-        this.tryingToShoot = ctx.action.IsPressed();
+        if (ctx.action.IsPressed())
+        {
+            this.tryingToShoot = true;
+        }
+        else
+        {
+            this.tryingToShoot = false;
+        }
     }
 
     public void OnShootButtonActivate()

@@ -83,7 +83,7 @@ public class Bullet : MonoBehaviour
 
             if (targetStillExists)
             {
-                enemyBase.TakeDamage(20f);
+                enemyBase.TakeDamage(3f);
             }
             SpawnImpactParticle();
         }
