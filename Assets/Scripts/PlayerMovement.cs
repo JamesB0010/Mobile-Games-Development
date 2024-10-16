@@ -37,6 +37,8 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField] private Camera playerCamera;
 
+    public bool isBoosting;
+
 
     private Vector3 velocity = Vector3.zero;
 
@@ -93,11 +95,13 @@ public class PlayerMovement : MonoBehaviour
         {
             this.currentMaxVelocity = this.maxBoostVelocity;
             this.boostCam.gameObject.SetActive(true);
+            this.isBoosting = true;
         }
         else
         {
             this.currentMaxVelocity = this.maxVelocityDefault;
             this.boostCam.gameObject.SetActive(false);
+            this.isBoosting = false;
         }
     }
 }

@@ -14,6 +14,8 @@ public class Playerenginesoundsmanager : MonoBehaviour
     [FormerlySerializedAs("minVol")] [SerializeField] private float bigThursterMinVol;
     [FormerlySerializedAs("maxVol")] [SerializeField] private float bigThrusterMaxVol;
 
+    [SerializeField] private float bigThrusterBoostingMinVol, bigThrusterBoostingMaxVol;
+
 
     [SerializeField] private float littleThrusterMinVol, littleThrusterMaxVol;
 
@@ -24,7 +26,14 @@ public class Playerenginesoundsmanager : MonoBehaviour
 
     private void Update()
     {
-        this.bigThruster.volume = ValueInRangeMapper.Map(this.playerMovement.Throttle, 0, 1, this.bigThursterMinVol, this.bigThrusterMaxVol);
+        if (this.playerMovement.isBoosting)
+        {
+            this.bigThruster.volume = ValueInRangeMapper.Map(this.playerMovement.Throttle, 0, 1, this.bigThrusterBoostingMinVol, this.bigThrusterBoostingMaxVol);
+        }
+        else
+        {
+            this.bigThruster.volume = ValueInRangeMapper.Map(this.playerMovement.Throttle, 0, 1, this.bigThursterMinVol, this.bigThrusterMaxVol);
+        }
         this.littleThruster.volume = ValueInRangeMapper.Map(this.playerMovement.Throttle, 0, 1,
             this.littleThrusterMinVol, this.littleThrusterMaxVol);
     }
