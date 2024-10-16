@@ -15,6 +15,21 @@ public class Gun : ScriptableObject
     [SerializeField]
     private float timeBetweenBullets;
 
+    [SerializeField]
+    private bool ownedByPlayer;
+
+    public bool OwnedByPlayer
+    {
+        get => this.ownedByPlayer;
+
+        set => this.ownedByPlayer = value;
+    }
+
+
+    [SerializeField] private float cost;
+
+    public float Cost => this.cost;
+
     [SerializeField] private float bulletDamage;
 
     public void PrimeWeaponToShoot()

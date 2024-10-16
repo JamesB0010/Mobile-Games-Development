@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -23,6 +24,13 @@ public class Enemy : EnemyBase
 
     private float desiredDirectionChangeTimestamp = -100;
     [SerializeField] private float desiredDirectionChangeInterval = 5;
+
+    private GameManager gameManager;
+
+    public GameManager GameManager
+    {
+        set => this.gameManager = value;
+    }
 
     private void Start()
     {
@@ -63,6 +71,7 @@ public class Enemy : EnemyBase
     protected override void OnDeath()
     {
         Instantiate(this.DeathParticle, transform.position, Quaternion.identity);
+        this.gameManager.EnemyKilled();
         Destroy(this.gameObject);
     }
 }

@@ -9,8 +9,9 @@ using UnityEngine.InputSystem;
 [RequireComponent(typeof(CrosshairTargetFinder))]
 public class GunSystems : MonoBehaviour
 {
-    [SerializeField]
     private Gun gun;
+
+    [SerializeField] private GunSystemsGunStorer playerGun;
 
     [SerializeField]
     private AudioSource[] gunshotSoundLocations;
@@ -46,6 +47,7 @@ public class GunSystems : MonoBehaviour
 
     private void Start()
     {
+        this.gun = this.playerGun.GetStoredGun();
         this.gun.PrimeWeaponToShoot();
         this.playerCamera = FindObjectOfType<Camera>();
         this.crosshairTargetFinder = GetComponent<CrosshairTargetFinder>();
