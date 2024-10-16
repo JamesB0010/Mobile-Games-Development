@@ -33,6 +33,9 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField] private float pitchSpeed;
 
+
+    [SerializeField] private float rollSpeedDefault, PitchSpeedDefault;
+
     [SerializeField] private float yawSpeed;
 
     [SerializeField] private Camera playerCamera;
@@ -51,10 +54,26 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float maxBoostVelocity;
 
 
+    public void SetSensitivityAiming()
+    {
+        this.pitchSpeed = 10;
+        this.rollSpeed = 10;
+    }
+
+    public void SetSensitivityNormal()
+    {
+        this.rollSpeed = this.rollSpeedDefault;
+        this.pitchSpeed = this.PitchSpeedDefault;
+    }
+
+
     private void Start()
     {
         this.maxVelocityDefault = this.maxVelocity;
         this.currentMaxVelocity = this.maxVelocity;
+
+        this.PitchSpeedDefault = this.pitchSpeed;
+        this.rollSpeedDefault = this.rollSpeed;
     }
 
     void Update()

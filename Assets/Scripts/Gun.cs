@@ -15,6 +15,7 @@ public class Gun : ScriptableObject
     [SerializeField]
     private float timeBetweenBullets;
 
+    [SerializeField] private float bulletDamage;
 
     public void PrimeWeaponToShoot()
     {
@@ -61,9 +62,9 @@ public class Gun : ScriptableObject
     {
         this.lastBulletShotTimestamp = Time.timeSinceLevelLoad;
     }
-    private static void SetupBullet(Vector3 bulletStartPosition, Vector3 targetPosition, bool hasValidTarget, Bullet bullet)
+    private void SetupBullet(Vector3 bulletStartPosition, Vector3 targetPosition, bool hasValidTarget, Bullet bullet)
     {
-        bullet.SetupBulletData(hasValidTarget, bulletStartPosition, targetPosition);
+        bullet.SetupBulletData(hasValidTarget, this.bulletDamage, bulletStartPosition, targetPosition);
     }
 
 }

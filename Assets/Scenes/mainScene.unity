@@ -3071,6 +3071,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6338160408a9a9a4ab18fbb9440cc431, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  zoomCamera: 0
+  zoomRate: 10
   minFov: 70
   maxFov: 75
 --- !u!114 &1511019338
@@ -3347,7 +3349,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1602104569
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4083,6 +4085,7 @@ MonoBehaviour:
   bulletSpawnLocations:
   - {fileID: 823619920}
   - {fileID: 823327469}
+  ZoomHudElement: {fileID: 1602104568}
 --- !u!4 &1803987135 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2927752190066450377, guid: a1cbc9ce975b8684e8ab0fcf5e4f360e, type: 3}

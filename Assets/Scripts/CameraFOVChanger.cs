@@ -10,6 +10,10 @@ public class CameraFOVChanger : MonoBehaviour
     
     private PlayerMovement playerMovement;
 
+    public bool zoomCamera = false;
+
+    [SerializeField] private float zoomRate;
+
     [SerializeField]
     private float minFov, maxFov;
     private void Start()
@@ -20,8 +24,15 @@ public class CameraFOVChanger : MonoBehaviour
 
     private void Update()
     {
+        if (this.zoomCamera)
+        {
+            this.virtualCamera.m_Lens.FieldOfView = Mathf.Lerp(this.virtualCamera.m_Lens.FieldOfView, 25, Time.deltaTime * this.zoomRate);
+            return;
+        }
+        
         float throttleAmount = playerMovement.Throttle;
 
         this.virtualCamera.m_Lens.FieldOfView = ValueInRangeMapper.Map(throttleAmount, 0, 1, this.minFov, this.maxFov);
+
     }
 }

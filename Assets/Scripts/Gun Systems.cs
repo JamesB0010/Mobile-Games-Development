@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Cinemachine;
 using UnityEditor.Animations;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -24,7 +25,6 @@ public class GunSystems : MonoBehaviour
 
     private int muzzleFlashIndex = 0;
 
-
     [SerializeField] private Animator[] animationControllers;
 
     private int animationControllerIndex = 0;
@@ -37,11 +37,20 @@ public class GunSystems : MonoBehaviour
     private bool tryingToShoot = false;
     private static readonly int TryingToShoot = Animator.StringToHash("TryingToShoot");
 
+    private CameraFOVChanger camFovChanger;
+
+    [SerializeField]
+    private GameObject ZoomHudElement;
+
+    private PlayerMovement playerMovement;
+
     private void Start()
     {
         this.gun.PrimeWeaponToShoot();
         this.playerCamera = FindObjectOfType<Camera>();
         this.crosshairTargetFinder = GetComponent<CrosshairTargetFinder>();
+        this.camFovChanger = FindObjectOfType<CameraFOVChanger>();
+        this.playerMovement = FindObjectOfType<PlayerMovement>();
     }
 
     private void Update()
@@ -61,11 +70,39 @@ public class GunSystems : MonoBehaviour
             {
                 RaycastHit hit = this.crosshairTargetFinder.GetLastHit();
                 bulletShot = this.gun.Shoot(this.bulletSpawnLocations[this.bulletSpwanLocationIndex].position, crosshairWorldTargetPosition, true, hit);
+                if (this.playerMovement.isBoosting == false)
+                {
+                    if (hit.collider != null)
+                    {
+                        if (hit.collider.gameObject.CompareTag("Enemy"))
+                        {
+                            this.camFovChanger.zoomCamera = true;
+                            this.ZoomHudElement.SetActive(true);
+                            this.playerMovement.SetSensitivityAiming();
+                            
+                        }
+                    }
+                    else
+                    {
+                        this.camFovChanger.zoomCamera = false; 
+                        this.ZoomHudElement.SetActive(false);
+                        this.playerMovement.SetSensitivityNormal();
+                    }
+                }
+                else
+                {
+                    this.camFovChanger.zoomCamera = false; 
+                    this.ZoomHudElement.SetActive(false);
+                    this.playerMovement.SetSensitivityNormal();
+                }
             }
             else
             {
                 bulletShot = this.gun.Shoot(this.bulletSpawnLocations[this.bulletSpwanLocationIndex].position,
                     crosshairWorldTargetPosition, false);
+                this.camFovChanger.zoomCamera = false; 
+                this.ZoomHudElement.SetActive(false);
+                this.playerMovement.SetSensitivityNormal();
             }
             
             if (bulletShot)

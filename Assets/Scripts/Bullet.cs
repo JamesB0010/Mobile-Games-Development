@@ -23,13 +23,16 @@ public class Bullet : MonoBehaviour
 
     public RaycastHit hit;
 
+    public float damage;
+
     //methods
-    public void SetupBulletData(bool bulletHasValidTarget, Vector3 startPosition, Vector3 bulletDestination)
+    public void SetupBulletData(bool bulletHasValidTarget, float bulletDamage, Vector3 startPosition, Vector3 bulletDestination)
     {
         this.hasValidTarget = bulletHasValidTarget;
         this.bulletMovementData.startPosition = startPosition;
         this.bulletMovementData.destination = bulletDestination;
         this.bulletMovementData.direction = (this.bulletMovementData.destination - transform.position).normalized;
+        this.damage = bulletDamage;
 
         this.OrientBullet();
         this.setDestinationIfInvalidTarget();
@@ -83,7 +86,7 @@ public class Bullet : MonoBehaviour
 
             if (targetStillExists)
             {
-                enemyBase.TakeDamage(3f);
+                enemyBase.TakeDamage(this.damage);
             }
             SpawnImpactParticle();
         }
