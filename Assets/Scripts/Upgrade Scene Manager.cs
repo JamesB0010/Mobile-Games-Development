@@ -4,9 +4,6 @@ using UnityEngine;
 
 public class UpgradeSceneManager : MonoBehaviour
 {
-    [SerializeField]
-    private GunSystemsGunStorer playerGunStorer;
-
     [SerializeField] private FloatReference playerMoney;
     
     public bool PurchaseGun(Gun gun, float price)
@@ -15,7 +12,6 @@ public class UpgradeSceneManager : MonoBehaviour
         {
             float newBalance = (float)playerMoney.GetValue() - price;
             this.playerMoney.SetValue(newBalance);
-            this.playerGunStorer.SetStoredGun(gun);
             return true;
         }
         return false;

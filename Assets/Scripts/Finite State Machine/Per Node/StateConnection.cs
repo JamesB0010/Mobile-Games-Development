@@ -45,13 +45,14 @@ public class StateConnection : ICloneable
         {
             return agent.EvaluateTransition(stateAttachedTo, this.stateTo);
         }
+
+        bool transition = true;
         foreach (TransitionConditionBase condition in this.transitionConditions)
         {
-            if (condition.Evaluate())
-                return true;
+            transition &= condition.Evaluate();
         }
 
-        return false;
+        return transition;
     }
 
     //Getter

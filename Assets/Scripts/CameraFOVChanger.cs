@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using Cinemachine;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.Events;
+using UnityEngine.Serialization;
 
 public class CameraFOVChanger : FSMBehaviour
 {
@@ -18,6 +20,14 @@ public class CameraFOVChanger : FSMBehaviour
 
     [SerializeField]
     private float minFov, maxFov;
+
+    [SerializeField] private BoolReference lookingAtEnemy;
+
+    [SerializeField] private FloatReference timeSpentLookingAtEnemy;
+
+    [SerializeField] private UnityEvent ZoomInEvent = new UnityEvent();
+
+    [SerializeField] private UnityEvent ZoomOutEvent = new UnityEvent();
     
     //dependencies resolved in the start function
     CinemachineVirtualCamera virtualCamera;
@@ -49,6 +59,29 @@ public class CameraFOVChanger : FSMBehaviour
         else if (state.StateName == this.zoom.name)
         {
             this.ZoomCameraForShooting();
+        }
+    }
+
+    public override bool EvaluateTransition(State current, State to)
+    {
+        bool lookingAtAnyEnemy = Convert.ToBoolean(this.lookingAtEnemy.GetValue());
+        bool beenLookingAtEnemyLongEnough = (float)this.timeSpentLookingAtEnemy.GetValue() > 0.6f;
+        if (lookingAtAnyEnemy && beenLookingAtEnemyLongEnough)
+            return true;
+        
+        
+        return false;
+    }
+
+    public override void EnterState(State state)
+    {
+        if (state.StateName == this.idleMove.name)
+        {
+            this.ZoomOutEvent?.Invoke();
+        }
+        else if (state.StateName == this.zoom.name)
+        {
+            this.ZoomInEvent?.Invoke();
         }
     }
 }

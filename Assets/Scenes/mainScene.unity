@@ -2042,7 +2042,6 @@ GameObject:
   - component: {fileID: 935031997}
   - component: {fileID: 935031999}
   - component: {fileID: 935031998}
-  - component: {fileID: 935032001}
   - component: {fileID: 935032000}
   - component: {fileID: 935032002}
   m_Layer: 0
@@ -2204,27 +2203,6 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
---- !u!320 &935032001
-PlayableDirector:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 935031992}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_PlayableAsset: {fileID: 11400000, guid: 1d720d1b71f35df4fb5ec9c7b5a57489, type: 2}
-  m_InitialState: 0
-  m_WrapMode: 2
-  m_DirectorUpdateMode: 1
-  m_InitialTime: 0
-  m_SceneBindings:
-  - key: {fileID: 8683058068585651490, guid: 1d720d1b71f35df4fb5ec9c7b5a57489, type: 2}
-    value: {fileID: 881444019}
-  - key: {fileID: 2348033728441649679, guid: 1d720d1b71f35df4fb5ec9c7b5a57489, type: 2}
-    value: {fileID: 935032000}
-  m_ExposedReferences:
-    m_References: []
 --- !u!65 &935032002
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2242,7 +2220,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
   m_ProvidesContacts: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 0.99999994, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -3171,6 +3149,62 @@ MonoBehaviour:
   zoomRate: 10
   minFov: 70
   maxFov: 75
+  lookingAtEnemy: {fileID: 11400000, guid: e7e857e760247884cbbf3d566327de25, type: 2}
+  timeSpentLookingAtEnemy: {fileID: 11400000, guid: ddc5db2a17bea5b45bdcc970079b26e2, type: 2}
+  ZoomInEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1602104568}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1872181221}
+        m_TargetAssemblyTypeName: PlayerMovement, Assembly-CSharp
+        m_MethodName: SetSensitivityAiming
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+  ZoomOutEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1602104568}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1872181221}
+        m_TargetAssemblyTypeName: PlayerMovement, Assembly-CSharp
+        m_MethodName: SetSensitivityNormal
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1511019338
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4214,7 +4248,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   aimingAtEnemy: {fileID: 11400000, guid: e7e857e760247884cbbf3d566327de25, type: 2}
-  ZoomHudElement: {fileID: 1602104568}
+  timeSpentLookingAtEnemy: {fileID: 11400000, guid: ddc5db2a17bea5b45bdcc970079b26e2, type: 2}
 --- !u!4 &1803987135 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2927752190066450377, guid: a1cbc9ce975b8684e8ab0fcf5e4f360e, type: 3}

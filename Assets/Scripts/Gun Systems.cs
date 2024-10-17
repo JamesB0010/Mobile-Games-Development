@@ -11,105 +11,74 @@ using UnityEngine.InputSystem;
 public class GunSystems : MonoBehaviour
 {
     private CrosshairTargetFinder crosshairTargetFinder;
-
-    [SerializeField] private BoolReference aimingAtEnemy;
-
     public CrosshairTargetFinder CrosshairTargetFinder => this.crosshairTargetFinder;
 
-    private Camera playerCamera;
+    [SerializeField] private BoolReference aimingAtEnemy;
 
 
     private bool tryingToShoot = false;
     public bool TryingToShoot => this.tryingToShoot;
 
-    private CameraFOVChanger camFovChanger;
+    private float timeStartedLookingAtEnemy;
 
     [SerializeField]
-    private GameObject ZoomHudElement;
-
-    private PlayerMovement playerMovement;
-
-
+    private FloatReference timeSpentLookingAtEnemy;
     private void Start()
     {
         this.aimingAtEnemy.SetValue(false);
-        this.playerCamera = FindObjectOfType<Camera>();
         this.crosshairTargetFinder = GetComponent<CrosshairTargetFinder>();
-        this.camFovChanger = FindObjectOfType<CameraFOVChanger>();
-        this.playerMovement = FindObjectOfType<PlayerMovement>();
     }
 
     private void Update()
     {
+        if (CrosshairNotAimingAtAnythingValid()) 
+            return;
+        
+        
+        bool aimingAtAnyEnemy = IsAimingAtEnemy();
+        if (aimingAtAnyEnemy)
+        {
+            AimingAtEnemyLogic();
+        }
+    }
+
+    private void AimingAtEnemyLogic()
+    {
+        bool wasntAimingAtEnemyLastFrame = Convert.ToBoolean(this.aimingAtEnemy.GetValue()) == false;
+        if (wasntAimingAtEnemyLastFrame)
+        {
+            //started looking at enemy
+            this.timeStartedLookingAtEnemy = Time.timeSinceLevelLoad;
+        }
+
+        this.aimingAtEnemy.SetValue(true);
+        this.timeSpentLookingAtEnemy.SetValue(Time.timeSinceLevelLoad - this.timeStartedLookingAtEnemy);
+    }
+
+    private bool IsAimingAtEnemy()
+    {
+        return this.crosshairTargetFinder.GetLastHit().collider.TryGetComponent(out EnemyBase enemy);
+    }
+
+    private bool CrosshairNotAimingAtAnythingValid()
+    {
+        //Aiming at nothing
         if (this.crosshairTargetFinder.WasLastHitValid() == false)
         {
             this.aimingAtEnemy.SetValue(false);
-            return;
+            return true;
         }
 
+        //aiming at something which no longer exists
+        //(this occurs when you destroy an enemy, until you look at something else the last thing you looked at (the enemy) doesnt exist)
         if (this.crosshairTargetFinder.GetLastHit().collider == null)
         {
             this.aimingAtEnemy.SetValue(false);
-            return;
+            return true;
         }
-        bool aimingAtAnyEnemy = this.crosshairTargetFinder.GetLastHit().collider.TryGetComponent(out EnemyBase enemy);
-        this.aimingAtEnemy.SetValue(aimingAtAnyEnemy);
 
+        return false;
     }
-
-    /*private void Update()
-    {
-        foreach (var animatorController in this.animationControllers)
-        {
-            animatorController.SetBool(TryingToShoot, this.tryingToShoot);
-            animatorController.SetBool("BulletFired", false);
-        }
-        bool bulletShot = false;
-        
-        if (this.tryingToShoot)
-        {
-            Vector3 crosshairWorldTargetPosition = this.crosshairTargetFinder.GetLatestHitPosition();
-            bool lastHitValid = this.crosshairTargetFinder.WasLastHitValid();
-            if (lastHitValid)
-            {
-                RaycastHit hit = this.crosshairTargetFinder.GetLastHit();
-                bulletShot = this.gun.Shoot(this.bulletSpawnLocations[this.bulletSpwanLocationIndex].position, crosshairWorldTargetPosition, true, hit);
-                if (this.playerMovement.isBoosting == false)
-                {
-                    if (hit.collider != null)
-                    {
-                        if (hit.collider.gameObject.CompareTag("Enemy"))
-                        {
-                            this.camFovChanger.zoomCamera = true;
-                            this.ZoomHudElement.SetActive(true);
-                            this.playerMovement.SetSensitivityAiming();
-                            
-                        }
-                    }
-                    else
-                    {
-                        this.camFovChanger.zoomCamera = false; 
-                        this.ZoomHudElement.SetActive(false);
-                        this.playerMovement.SetSensitivityNormal();
-                    }
-                }
-                else
-                {
-                    this.camFovChanger.zoomCamera = false; 
-                    this.ZoomHudElement.SetActive(false);
-                    this.playerMovement.SetSensitivityNormal();
-                }
-            }
-            else
-            {
-                bulletShot = this.gun.Shoot(this.bulletSpawnLocations[this.bulletSpwanLocationIndex].position,
-                    crosshairWorldTargetPosition, false);
-                this.camFovChanger.zoomCamera = false; 
-                this.ZoomHudElement.SetActive(false);
-                this.playerMovement.SetSensitivityNormal();
-            }
-        }
-    }*/
 
     public void OnShoot(InputAction.CallbackContext ctx)
     {

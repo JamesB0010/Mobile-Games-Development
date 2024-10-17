@@ -16,7 +16,6 @@ public class BoolReference : ScriptableObjectValueReference
 
     public override void SetValue(object val)
     {
-        Debug.Log("Set bool reference " + name + " Value: " + Convert.ToBoolean(val));
         this.value = (bool)val;
     }
 }

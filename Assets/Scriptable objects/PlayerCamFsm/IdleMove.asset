@@ -12,7 +12,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7562ecde526829a408eaf6ce111ec73d, type: 3}
   m_Name: IdleMove
   m_EditorClassIdentifier: 
-  stateConnections: []
+  stateConnections:
+  - stateTo: {fileID: 11400000, guid: db3a059aa0bd01b468fbcca76465ba46, type: 2}
+    transitionHandledByAgent: 0
+    transitionConditions:
+    - rid: 4680077143554916353
+    - rid: 4680077143554916362
   references:
     version: 2
-    RefIds: []
+    RefIds:
+    - rid: 4680077143554916353
+      type: {class: BoolTransitionCondition, ns: , asm: Assembly-CSharp}
+      data:
+        transitionHandledByAgent: 0
+        valueToTest: {fileID: 11400000, guid: e7e857e760247884cbbf3d566327de25, type: 2}
+        comparand: 1
+    - rid: 4680077143554916362
+      type: {class: FloatTransitionCondition, ns: , asm: Assembly-CSharp}
+      data:
+        transitionHandledByAgent: 0
+        valueToTest: {fileID: 11400000, guid: ddc5db2a17bea5b45bdcc970079b26e2, type: 2}
+        comparand: 0.6

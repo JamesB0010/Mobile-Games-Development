@@ -7,23 +7,6 @@ using UnityEngine.SceneManagement;
 
 public class GunShopEntrence : MonoBehaviour
 {
-    private float BorderOutlineWidth;
-
-    private Outline areaOutline;
-
-    private void Start()
-    {
-        areaOutline = this.GetComponent<Outline>();
-        this.BorderOutlineWidth = areaOutline.OutlineWidth;
-        areaOutline.OutlineWidth = 0;
-    }
-
-    public void OpenGunShop()
-    {
-        this.areaOutline.OutlineWidth = this.BorderOutlineWidth;
-        GetComponent<Collider>().enabled = true;
-    }
-
     public void LoadGunShop()
     {
         SceneManager.LoadScene(2, LoadSceneMode.Single);
@@ -31,6 +14,6 @@ public class GunShopEntrence : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        GetComponent<PlayableDirector>().Play();
+        LoadGunShop();
     }
 }

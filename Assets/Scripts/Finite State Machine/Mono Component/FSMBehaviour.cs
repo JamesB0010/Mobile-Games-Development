@@ -11,6 +11,10 @@ using UnityEngine;
 //by comparing scriptable object value references with a comparand
 public abstract class FSMBehaviour : MonoBehaviour
 {
+    public virtual void EnterState(State state)
+    {
+        
+    }
     public abstract void Behave(State state);
 
     public virtual bool EvaluateTransition(State current, State to)

@@ -24,6 +24,11 @@ public class State : ScriptableObject, ICloneable
     public string StateName => this.stateName;
 
     //Behavioural methods
+
+    public void EnterState()
+    {
+        this.agent.EnterState(this);
+    }
     public void Behave()
     {
         //following feedback no longer using send message
@@ -162,8 +167,9 @@ class StateCustomEditor : Editor
         {
             DrawStateConnectionsFoldoutContent();
         }
-
+        
         serializedObject.ApplyModifiedProperties();
+        EditorUtility.SetDirty(target);
     }
 
     private void DrawConnectionsListFoldout()

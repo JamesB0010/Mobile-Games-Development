@@ -40,7 +40,14 @@ public class StateManager : MonoBehaviour
 
     private void Update()
     {
-        activeState = activeState.TestTransitions();
+        State newState = activeState.TestTransitions();
+        if (this.activeState != newState)
+        {
+            //Start
+            newState.EnterState();
+        }
+
+        activeState = newState;
 
         activeState.Behave();
     }
