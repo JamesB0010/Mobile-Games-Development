@@ -5,24 +5,25 @@ using UnityEngine;
 
 public class JoystickRotator : MonoBehaviour
 {
-    private PlayerMovement playerMovement;
 
+    private PlayerShipElevator pitchControls;
+
+    private PlayerShipAilerons rollControls;
+    
     [SerializeField] private float minX, maxX, minZ, maxZ;
 
     [SerializeField] private float stickMovementSpeed;
 
     private void Start()
     {
-        this.playerMovement = FindObjectOfType<PlayerMovement>();
+        this.pitchControls = FindObjectOfType<PlayerShipElevator>();
+        this.rollControls = FindObjectOfType<PlayerShipAilerons>();
     }
 
     private void Update()
     {
-        //fix me
-        //float pitchAmount = playerMovement.InputtedPitch;
-        //float rollAmount = playerMovement.InputtedRoll;
-        float pitchAmount = 0.0f;
-        float rollAmount = 0.0f;
+        float pitchAmount = pitchControls.InputtedPitch;
+        float rollAmount = rollControls.InputtedRoll;
         
         float targetZRotation = ValueInRangeMapper.Map(rollAmount, -1, 1, minZ, maxZ);
         float targetXRotation = ValueInRangeMapper.Map(pitchAmount, -1, 1, minX, maxX);

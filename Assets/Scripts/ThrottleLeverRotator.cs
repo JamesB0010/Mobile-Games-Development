@@ -6,7 +6,7 @@ using UnityEngine;
 public class ThrottleLeverRotator : MonoBehaviour
 {
     //Attributes
-    private PlayerMovement playerMovement;
+    private PlayerShipThrottle playerThrottle;
     
     //configurables
     [SerializeField] private float minXRotation, maxXRotation;
@@ -14,12 +14,12 @@ public class ThrottleLeverRotator : MonoBehaviour
 
     private void Start()
     {
-        this.playerMovement = FindObjectOfType<PlayerMovement>();
+        this.playerThrottle = FindObjectOfType<PlayerShipThrottle>();
     }
 
     private void Update()
     {
-        float throttleAmount = playerMovement.Throttle;
+        float throttleAmount = playerThrottle.Throttle;
         float targetXRotation = ValueInRangeMapper.Map(throttleAmount, 0, 1, minXRotation, maxXRotation);
     
         Quaternion localRotation = transform.localRotation;

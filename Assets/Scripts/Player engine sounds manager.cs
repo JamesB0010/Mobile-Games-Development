@@ -7,7 +7,7 @@ using UnityEngine.Serialization;
 public class Playerenginesoundsmanager : MonoBehaviour
 {
     //Attributes
-    private PlayerMovement playerMovement;
+    private PlayerShipThrottle playerThrottle;
 
     private PlayerShipBooster booster;
     
@@ -33,14 +33,14 @@ public class Playerenginesoundsmanager : MonoBehaviour
 
     private void Start()
     {
-        this.playerMovement = FindObjectOfType<PlayerMovement>();
+        this.playerThrottle = FindObjectOfType<PlayerShipThrottle>();
         this.booster = FindObjectOfType<PlayerShipBooster>();
     }
 
     private void Update()
     {
         SetBigThrusterVolume();
-        this.littleThruster.volume = ValueInRangeMapper.Map(this.playerMovement.Throttle, 0, 1,
+        this.littleThruster.volume = ValueInRangeMapper.Map(this.playerThrottle.Throttle, 0, 1,
             this.littleThrusterMinVol, this.littleThrusterMaxVol);
     }
 
@@ -48,12 +48,12 @@ public class Playerenginesoundsmanager : MonoBehaviour
     {
         if (this.booster.IsBoosting)
         {
-            this.bigThruster.volume = ValueInRangeMapper.Map(this.playerMovement.Throttle, 0, 1,
+            this.bigThruster.volume = ValueInRangeMapper.Map(this.playerThrottle.Throttle, 0, 1,
                 this.bigThrusterBoostingMinVol, this.bigThrusterBoostingMaxVol);
         }
         else
         {
-            this.bigThruster.volume = ValueInRangeMapper.Map(this.playerMovement.Throttle, 0, 1, this.bigThursterMinVol,
+            this.bigThruster.volume = ValueInRangeMapper.Map(this.playerThrottle.Throttle, 0, 1, this.bigThursterMinVol,
                 this.bigThrusterMaxVol);
         }
     }

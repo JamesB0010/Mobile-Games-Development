@@ -10,8 +10,6 @@ using UnityEngine.Serialization;
 public class CameraFOVChanger : FSMBehaviour
 {
     //Attributes
-    public bool zoomCamera = false;
-
     [Header("States")] [SerializeField] private State idleMove;
     [SerializeField] private State zoom;
     
@@ -32,10 +30,10 @@ public class CameraFOVChanger : FSMBehaviour
     //dependencies resolved in the start function
     CinemachineVirtualCamera virtualCamera;
     
-    private PlayerMovement playerMovement;
+    private PlayerShipThrottle playerThrottle;
     private void Start()
     {
-        this.playerMovement = FindObjectOfType<PlayerMovement>();
+        this.playerThrottle = FindObjectOfType<PlayerShipThrottle>();
         this.virtualCamera = GetComponent<CinemachineVirtualCamera>();
     }
 
@@ -45,7 +43,7 @@ public class CameraFOVChanger : FSMBehaviour
     }
     private void MapThrottleToFOV()
     {
-        float throttleAmount = playerMovement.Throttle;
+        float throttleAmount = playerThrottle.Throttle;
 
         this.virtualCamera.m_Lens.FieldOfView = Mathf.Lerp(this.virtualCamera.m_Lens.FieldOfView, ValueInRangeMapper.Map(throttleAmount, 0, 1, this.minFov, this.maxFov), Time.deltaTime * this.zoomRate);
     }
