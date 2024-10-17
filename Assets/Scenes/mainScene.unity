@@ -976,6 +976,58 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2201199348038593001, guid: 8976fdd099a631343a930a304dfc9efd, type: 3}
   m_PrefabInstance: {fileID: 448364793}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &498202302
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 498202303}
+  - component: {fileID: 498202304}
+  m_Layer: 0
+  m_Name: EnemySpawnManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &498202303
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 498202302}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1461499936}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &498202304
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 498202302}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7e321f654abb244ca0f11a75b315fe0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyPrefab: {fileID: 6999675460621940730, guid: 08f9d57a1cceca440872d84f05c1f814, type: 3}
+  enemiesToSpawn: 11
+  spawnBoundaryPositiveZ: {fileID: 1744559026}
+  spawnBoundaryNegativeZ: {fileID: 1070783237}
+  spawnBoundaryPositiveX: {fileID: 195731048}
+  spawnBoundaryNegativeX: {fileID: 1434706284}
+  spawnBoundaryPositiveY: {fileID: 1493184042}
+  spawnBoundaryNegativeY: {fileID: 1460430863}
 --- !u!1 &509812178
 GameObject:
   m_ObjectHideFlags: 0
@@ -2964,21 +3016,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33f1cc6679330924f8514afa10dd756d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AlertEnemyKilled:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1899830135}
-        m_TargetAssemblyTypeName: PlayerWallet, Assembly-CSharp
-        m_MethodName: OnEnemyKilled
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+  enemySpawnManager: {fileID: 498202304}
   AlertRoundFinished:
     m_PersistentCalls:
       m_Calls:
@@ -3006,14 +3044,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  enemiesToSpawn: 11
-  spawnBoundaryPositiveZ: {fileID: 1744559026}
-  spawnBoundaryNegativeZ: {fileID: 1070783237}
-  spawnBoundaryPositiveX: {fileID: 195731048}
-  spawnBoundaryNegativeX: {fileID: 1434706284}
-  spawnBoundaryPositiveY: {fileID: 1493184042}
-  spawnBoundaryNegativeY: {fileID: 1460430863}
-  enemyPrefab: {fileID: 6999675460621940730, guid: 08f9d57a1cceca440872d84f05c1f814, type: 3}
 --- !u!4 &1461499936
 Transform:
   m_ObjectHideFlags: 0
@@ -3027,12 +3057,13 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1493184042}
-  - {fileID: 1460430863}
   - {fileID: 1744559026}
-  - {fileID: 1434706284}
   - {fileID: 1070783237}
   - {fileID: 195731048}
+  - {fileID: 1434706284}
+  - {fileID: 1493184042}
+  - {fileID: 1460430863}
+  - {fileID: 498202303}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1493184041

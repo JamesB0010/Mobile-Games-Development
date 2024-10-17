@@ -28,8 +28,7 @@ public class GameManager : MonoBehaviour
     private void SpawnEnemies()
     {
         this.activeEnemiesManager = new ActiveEnemiesManager();
-        short enemySpawnedCount = enemySpawnManager.SpawnEnemies(this, this.activeEnemiesManager);
-        activeEnemiesManager.ActiveEnemyCount = enemySpawnedCount;
+        enemySpawnManager.SpawnEnemies(this, this.activeEnemiesManager);
     }
 
     private void SubscribeToEvents()

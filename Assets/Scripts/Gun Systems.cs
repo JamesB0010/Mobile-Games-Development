@@ -13,6 +13,8 @@ public class GunSystems : MonoBehaviour
 
     [SerializeField] private GunSystemsGunStorer playerGun;
 
+    [SerializeField] private PlayerShipWeapon[] weapons;
+
     [SerializeField]
     private AudioSource[] gunshotSoundLocations;
 

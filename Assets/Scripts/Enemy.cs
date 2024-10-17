@@ -29,8 +29,14 @@ public class Enemy : EnemyBase
     
     [Header("Behaviour settings")]
     [SerializeField] private float desiredDirectionChangeInterval = 5;
-    private float desiredDirectionChangeTimestamp = -100;
+    private PhasedEventTimeKeeper directionChangeTimeKeeper;
     
+
+    private void Start()
+    {
+        this.directionChangeTimeKeeper = new PhasedEventTimeKeeper(this.desiredDirectionChangeInterval);
+    }
+
     private void Update()
     {
         TryGenerateNewRotation();
@@ -40,9 +46,7 @@ public class Enemy : EnemyBase
 
     private void TryGenerateNewRotation()
     {
-        bool intervalPassedSinceLastNewDirection = Time.timeSinceLevelLoad - this.desiredDirectionChangeTimestamp >
-                                                   this.desiredDirectionChangeInterval;
-        if (intervalPassedSinceLastNewDirection)
+        if (directionChangeTimeKeeper.HasEnoughTimeElapsedSinceEvent())
         {
             GenerateNewRotation();
         }
@@ -59,7 +63,7 @@ public class Enemy : EnemyBase
 
     private void GenerateNewRotation()
         {
-            this.desiredDirectionChangeTimestamp = Time.timeSinceLevelLoad;
+            this.directionChangeTimeKeeper.UpdateTimestamp();
     
             this.desiredRotation = Random.rotation;
         }

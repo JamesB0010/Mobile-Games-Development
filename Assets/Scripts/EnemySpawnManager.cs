@@ -14,7 +14,7 @@ public class EnemySpawnManager : MonoBehaviour
         spawnBoundaryNegativeY;
     
     
-    public short SpawnEnemies(GameManager gameManager, ActiveEnemiesManager enemiesManager)
+    public void SpawnEnemies(GameManager gameManager, ActiveEnemiesManager enemiesManager)
         {
             short activeEnemies = 0;
             
@@ -34,6 +34,6 @@ public class EnemySpawnManager : MonoBehaviour
                 enemy.EnemiesManager = enemiesManager;
             }
 
-            return activeEnemies;
+            enemiesManager.ActiveEnemyCount = activeEnemies;
         }
 }
