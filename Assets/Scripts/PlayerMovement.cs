@@ -5,21 +5,18 @@ using Cinemachine;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
-using Gyroscope = UnityEngine.InputSystem.Gyroscope;
 
 
 //Responsibilities of this class
 //handling inputted throttle and applying speed
-//Handling roll input and applying roll
-//handling yaw input and applying yaw
-//handling pitch input and applying pitch
 //setting the boost cam on boost
-//handling the boost input and boosting
 
 public class PlayerMovement : MonoBehaviour
 {
 
     [SerializeField] private CinemachineVirtualCamera boostCam;
+
+    public CinemachineVirtualCamera BoostCam => this.boostCam;
     
     [SerializeField]
     private float speed;
@@ -30,65 +27,37 @@ public class PlayerMovement : MonoBehaviour
     public float Throttle => throttle;
     [SerializeField] private float throttleChangeRate;
 
-    private float inputtedRoll;
-    public float InputtedRoll => inputtedRoll;
-
-    private float inputtedYaw;
-
-    private float inputtedPitch;
-    public float InputtedPitch => inputtedPitch;
-
-    [SerializeField] private float rollSpeed;
-
-    [SerializeField] private float pitchSpeed;
+    
 
 
-    [SerializeField] private float rollSpeedDefault, PitchSpeedDefault;
-
-    [SerializeField] private float yawSpeed;
 
     [SerializeField] private Camera playerCamera;
 
-    public bool isBoosting;
 
 
     private Vector3 velocity = Vector3.zero;
 
     [SerializeField] private float maxVelocity;
+    public float MaxVelocity => this.maxVelocity;
 
     private float currentMaxVelocity;
 
-    private float maxVelocityDefault;
-
-    [SerializeField] private float maxBoostVelocity;
-
-
-    public void SetSensitivityAiming()
+    public float CurrentMaxVelocity
     {
-        this.pitchSpeed = 10;
-        this.rollSpeed = 10;
+        set => currentMaxVelocity = value;
     }
 
-    public void SetSensitivityNormal()
-    {
-        this.rollSpeed = this.rollSpeedDefault;
-        this.pitchSpeed = this.PitchSpeedDefault;
-    }
+
 
 
     private void Start()
     {
-        this.maxVelocityDefault = this.maxVelocity;
         this.currentMaxVelocity = this.maxVelocity;
-
-        this.PitchSpeedDefault = this.pitchSpeed;
-        this.rollSpeedDefault = this.rollSpeed;
     }
 
     void Update()
     {
         this.throttle = Mathf.Lerp(this.throttle, this.inputtedThrottle, Time.deltaTime * this.throttleChangeRate);
-        transform.Rotate(new Vector3(inputtedPitch * Time.deltaTime * this.pitchSpeed, this.inputtedYaw * Time.deltaTime * this.yawSpeed,-inputtedRoll * Time.deltaTime * this.rollSpeed));
 
         Vector3 acceleration = Vector3.zero;
         acceleration += this.playerCamera.transform.forward * (speed * this.throttle * Time.deltaTime);
@@ -101,15 +70,8 @@ public class PlayerMovement : MonoBehaviour
     {
         Vector2 input = ctx.ReadValue<Vector2>();
         float throttleInput = input.y < 0 ? 0 : input.y;
-
+        
         this.inputtedThrottle = throttleInput;
-        this.inputtedYaw = input.x;
-    }
-
-    public void OnPitchAndRoll(InputAction.CallbackContext ctx)
-    {
-        this.inputtedPitch = ctx.ReadValue<Vector2>().y;
-        this.inputtedRoll = ctx.ReadValue<Vector2>().x;
     }
 
     public void OnGyroUpdate(InputAction.CallbackContext ctx)
@@ -119,17 +81,6 @@ public class PlayerMovement : MonoBehaviour
 
     public void OnBoost(InputAction.CallbackContext ctx)
     {
-        if (ctx.action.IsPressed())
-        {
-            this.currentMaxVelocity = this.maxBoostVelocity;
-            this.boostCam.gameObject.SetActive(true);
-            this.isBoosting = true;
-        }
-        else
-        {
-            this.currentMaxVelocity = this.maxVelocityDefault;
-            this.boostCam.gameObject.SetActive(false);
-            this.isBoosting = false;
-        }
+        
     }
 }

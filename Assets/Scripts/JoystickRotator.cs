@@ -18,8 +18,11 @@ public class JoystickRotator : MonoBehaviour
 
     private void Update()
     {
-        float pitchAmount = playerMovement.InputtedPitch;
-        float rollAmount = playerMovement.InputtedRoll;
+        //fix me
+        //float pitchAmount = playerMovement.InputtedPitch;
+        //float rollAmount = playerMovement.InputtedRoll;
+        float pitchAmount = 0.0f;
+        float rollAmount = 0.0f;
         
         float targetZRotation = ValueInRangeMapper.Map(rollAmount, -1, 1, minZ, maxZ);
         float targetXRotation = ValueInRangeMapper.Map(pitchAmount, -1, 1, minX, maxX);

@@ -8,6 +8,8 @@ public class Playerenginesoundsmanager : MonoBehaviour
 {
     //Attributes
     private PlayerMovement playerMovement;
+
+    private PlayerShipBooster booster;
     
     //Injected Dependencies
     [SerializeField]
@@ -32,6 +34,7 @@ public class Playerenginesoundsmanager : MonoBehaviour
     private void Start()
     {
         this.playerMovement = FindObjectOfType<PlayerMovement>();
+        this.booster = FindObjectOfType<PlayerShipBooster>();
     }
 
     private void Update()
@@ -43,7 +46,7 @@ public class Playerenginesoundsmanager : MonoBehaviour
 
     private void SetBigThrusterVolume()
     {
-        if (this.playerMovement.isBoosting)
+        if (this.booster.IsBoosting)
         {
             this.bigThruster.volume = ValueInRangeMapper.Map(this.playerMovement.Throttle, 0, 1,
                 this.bigThrusterBoostingMinVol, this.bigThrusterBoostingMaxVol);
