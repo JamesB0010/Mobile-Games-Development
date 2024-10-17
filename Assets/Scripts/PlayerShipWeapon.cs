@@ -10,12 +10,6 @@ public class PlayerShipWeapon : MonoBehaviour
 
     [SerializeField] private GunSystems gunSystem;
 
-    private void Start()
-    {
-        this.gun = (Gun)this.gun.Clone();
-        this.gun.PrimeWeaponToShoot();
-    }
-
     [SerializeField] private AudioSource gunshotSoundLocation;
 
     [SerializeField] private ParticleSystem muzzleFlash;
@@ -23,11 +17,34 @@ public class PlayerShipWeapon : MonoBehaviour
     [SerializeField] private Animator animator;
 
     [SerializeField] private Transform bulletSpawnLocation;
+
+    private List<ParticleSystem> muzzleFlashParticles = new List<ParticleSystem>();
+    
+    private static readonly int BulletFired = Animator.StringToHash("BulletFired");
+    private static readonly int TryingToShoot = Animator.StringToHash("TryingToShoot");
+
+    private void Start()
+    {
+        this.gun = (Gun)this.gun.Clone();
+        this.gun.PrimeWeaponToShoot();
+        this.cacheMuzzleFlashParticles();
+    }
+
+    private void cacheMuzzleFlashParticles()
+    {
+        for (int i = 0; i < this.muzzleFlash.transform.childCount; i++)
+        {
+            if (this.muzzleFlash.transform.GetChild(i).TryGetComponent(out ParticleSystem system))
+            {
+                this.muzzleFlashParticles.Add(system);
+            }
+        }
+    }
     
     private void Update()
     {
-        this.animator.SetBool("TryingToShoot", gunSystem.TryingToShoot);
-        this.animator.SetBool("BulletFired", false);
+        this.animator.SetBool(TryingToShoot, gunSystem.TryingToShoot);
+        this.animator.SetBool(BulletFired, false);
 
         if (this.gunSystem.TryingToShoot == false)
         {
@@ -52,13 +69,12 @@ public class PlayerShipWeapon : MonoBehaviour
             if (bulletShot)
             {
                 this.muzzleFlash.Play();
-                for (int i = 0; i < muzzleFlash.transform.childCount; i++)
+                for (int i = 0; i < this.muzzleFlashParticles.Count; i++)
                 {
-                    //Make this more efficient
-                    muzzleFlash.transform.GetChild(i).GetComponent<ParticleSystem>().Play();
+                    this.muzzleFlashParticles[i].Play();
                 }
                 
-                this.animator.SetBool("BulletFired", true);
+                this.animator.SetBool(BulletFired, true);
                 
                 this.gunshotSoundLocation.Play();
             }

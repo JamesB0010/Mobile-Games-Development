@@ -10,6 +10,7 @@ using UnityEngine.InputSystem;
 [RequireComponent(typeof(CrosshairTargetFinder))]
 public class GunSystems : MonoBehaviour
 {
+    //Attributes
     private CrosshairTargetFinder crosshairTargetFinder;
     public CrosshairTargetFinder CrosshairTargetFinder => this.crosshairTargetFinder;
 
