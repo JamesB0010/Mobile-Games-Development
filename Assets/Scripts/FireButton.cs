@@ -7,7 +7,13 @@ using UnityEngine.EventSystems;
 
 public class FireButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 {
+    //Dependencies resolved in start
+    private GunSystems gunSystem;
 
+    private void Start()
+    {
+        this.gunSystem = FindObjectOfType<GunSystems>();
+    }
 
     public void OnPointerDown(PointerEventData eventData)
     {
@@ -19,10 +25,5 @@ public class FireButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
         this.gunSystem.OnShootButtonDeactiveated();
     }
 
-    private GunSystems gunSystem;
 
-    private void Start()
-    {
-        this.gunSystem = FindObjectOfType<GunSystems>();
-    }
 }

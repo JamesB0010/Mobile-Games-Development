@@ -7,71 +7,83 @@ using Random = UnityEngine.Random;
 
 public class Enemy : EnemyBase
 {
+    //Attributes
     [SerializeField] private GameObject DeathParticle;
+    
+    private ActiveEnemiesManager enemiesManager;
 
+    public ActiveEnemiesManager EnemiesManager
+    {
+        set => this.enemiesManager = value;
+    }
+    
+    
+    [Header("Movement")]
     private Vector3 velocity = Vector3.zero;
-
+    [SerializeField] private float maxVelocity;
     [SerializeField] private float speed;
 
-    [SerializeField] private float maxVelocity;
 
-    private Quaternion enemyRotation;
-
+    private Quaternion desiredRotation;
     [SerializeField] private float rotationSpeed;
     
-    private float defaultRotationSpeed;
-
-
-    private float desiredDirectionChangeTimestamp = -100;
+    [Header("Behaviour settings")]
     [SerializeField] private float desiredDirectionChangeInterval = 5;
-
-    private GameManager gameManager;
-
-    public GameManager GameManager
-    {
-        set => this.gameManager = value;
-    }
-
-    private void Start()
-    {
-        this.defaultRotationSpeed = this.rotationSpeed;
-    }
-
+    private float desiredDirectionChangeTimestamp = -100;
+    
     private void Update()
     {
-        if (Time.timeSinceLevelLoad - this.desiredDirectionChangeTimestamp > this.desiredDirectionChangeInterval)
+        TryGenerateNewRotation();
+
+        RotateAndMoveAgent();
+    }
+
+    private void TryGenerateNewRotation()
+    {
+        bool intervalPassedSinceLastNewDirection = Time.timeSinceLevelLoad - this.desiredDirectionChangeTimestamp >
+                                                   this.desiredDirectionChangeInterval;
+        if (intervalPassedSinceLastNewDirection)
         {
             GenerateNewRotation();
         }
-
-        if (Physics.Raycast(transform.position + transform.forward * 20, transform.forward, out RaycastHit hit))
-        {
-            if (hit.distance < 50)
-            {
-                this.GenerateNewRotation();
-                //this.rotationSpeed = 10;
-            }
-        }
-
-        transform.rotation =
-            Quaternion.Lerp(transform.rotation, this.enemyRotation, Time.deltaTime * this.rotationSpeed);
-        Vector3 acceleration = transform.forward * (Time.deltaTime * speed);
-        this.velocity += acceleration;
-        this.velocity = Vector3.ClampMagnitude(this.velocity, this.maxVelocity);
+    }
+    
+    private void RotateAndMoveAgent()
+    {
+        RotateTowardsDesiredRotation();
+        Vector3 acceleration = CalculateAcceleration();
+        ApplyAccelerationToVelocity(acceleration);
         transform.Translate(this.velocity, Space.World);
     }
 
-    private void GenerateNewRotation()
-    {
-        this.desiredDirectionChangeTimestamp = Time.timeSinceLevelLoad;
 
-        this.enemyRotation = Random.rotation;
+    private void GenerateNewRotation()
+        {
+            this.desiredDirectionChangeTimestamp = Time.timeSinceLevelLoad;
+    
+            this.desiredRotation = Random.rotation;
+        }
+    
+    private void RotateTowardsDesiredRotation()
+    {
+        transform.rotation =
+            Quaternion.Lerp(transform.rotation, this.desiredRotation, Time.deltaTime * this.rotationSpeed);
+    }
+    private Vector3 CalculateAcceleration()
+    {
+        return transform.forward * (Time.deltaTime * speed);
+    }
+    
+    private void ApplyAccelerationToVelocity(Vector3 acceleration)
+    {
+        this.velocity += acceleration;
+        this.velocity = Vector3.ClampMagnitude(this.velocity, this.maxVelocity);
     }
 
     protected override void OnDeath()
     {
         Instantiate(this.DeathParticle, transform.position, Quaternion.identity);
-        this.gameManager.EnemyKilled();
+        this.enemiesManager.EnemyDied();
         Destroy(this.gameObject);
     }
 }
