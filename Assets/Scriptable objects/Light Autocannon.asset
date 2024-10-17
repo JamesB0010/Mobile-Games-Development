@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Light Autocannon
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 3118056857120007577, guid: 5a6baa86ac946c647b5019508c95ae8d, type: 3}
-  timeBetweenBullets: 0.05
+  timeBetweenBullets: 0.1
   ownedByPlayer: 0
   cost: 400
   bulletDamage: 3.5

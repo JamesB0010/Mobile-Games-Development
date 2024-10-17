@@ -9,11 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c2008404cba8f7647b47da7b08f99d37, type: 3}
-  m_Name: Heavy Autocannon
+  m_Script: {fileID: 11500000, guid: e0f9f49cf65e01344a688ae193c75143, type: 3}
+  m_Name: AimingAtEnemy
   m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 3118056857120007577, guid: 5a6baa86ac946c647b5019508c95ae8d, type: 3}
-  timeBetweenBullets: 1
-  ownedByPlayer: 0
-  cost: 1000
-  bulletDamage: 50

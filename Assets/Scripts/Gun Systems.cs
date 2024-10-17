@@ -4,41 +4,23 @@ using System.Collections.Generic;
 using Cinemachine;
 using UnityEditor.Animations;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.InputSystem;
 
 [RequireComponent(typeof(CrosshairTargetFinder))]
 public class GunSystems : MonoBehaviour
 {
-    private Gun gun;
-
-    [SerializeField] private GunSystemsGunStorer playerGun;
-
-    [SerializeField] private PlayerShipWeapon[] weapons;
-
-    [SerializeField]
-    private AudioSource[] gunshotSoundLocations;
-
-    private int gunshotSoundLocationIndex = 0;
-
     private CrosshairTargetFinder crosshairTargetFinder;
+
+    [SerializeField] private BoolReference aimingAtEnemy;
+
+    public CrosshairTargetFinder CrosshairTargetFinder => this.crosshairTargetFinder;
 
     private Camera playerCamera;
 
-    [SerializeField] private GameObject[] muzzleFlashes;
-
-    private int muzzleFlashIndex = 0;
-
-    [SerializeField] private Animator[] animationControllers;
-
-    private int animationControllerIndex = 0;
-
-
-    [SerializeField] private Transform[] bulletSpawnLocations;
-
-    private int bulletSpwanLocationIndex = 0;
 
     private bool tryingToShoot = false;
-    private static readonly int TryingToShoot = Animator.StringToHash("TryingToShoot");
+    public bool TryingToShoot => this.tryingToShoot;
 
     private CameraFOVChanger camFovChanger;
 
@@ -47,10 +29,10 @@ public class GunSystems : MonoBehaviour
 
     private PlayerMovement playerMovement;
 
+
     private void Start()
     {
-        this.gun = this.playerGun.GetStoredGun();
-        this.gun.PrimeWeaponToShoot();
+        this.aimingAtEnemy.SetValue(false);
         this.playerCamera = FindObjectOfType<Camera>();
         this.crosshairTargetFinder = GetComponent<CrosshairTargetFinder>();
         this.camFovChanger = FindObjectOfType<CameraFOVChanger>();
@@ -58,6 +40,24 @@ public class GunSystems : MonoBehaviour
     }
 
     private void Update()
+    {
+        if (this.crosshairTargetFinder.WasLastHitValid() == false)
+        {
+            this.aimingAtEnemy.SetValue(false);
+            return;
+        }
+
+        if (this.crosshairTargetFinder.GetLastHit().collider == null)
+        {
+            this.aimingAtEnemy.SetValue(false);
+            return;
+        }
+        bool aimingAtAnyEnemy = this.crosshairTargetFinder.GetLastHit().collider.TryGetComponent(out EnemyBase enemy);
+        this.aimingAtEnemy.SetValue(aimingAtAnyEnemy);
+
+    }
+
+    /*private void Update()
     {
         foreach (var animatorController in this.animationControllers)
         {
@@ -108,29 +108,8 @@ public class GunSystems : MonoBehaviour
                 this.ZoomHudElement.SetActive(false);
                 this.playerMovement.SetSensitivityNormal();
             }
-            
-            if (bulletShot)
-            {
-                ParticleSystem muzzleFlash = this.muzzleFlashes[this.muzzleFlashIndex].GetComponent<ParticleSystem>();
-                muzzleFlash.Play();
-                for (int i = 0; i < muzzleFlash.transform.childCount; i++)
-                {
-                    muzzleFlash.transform.GetChild(i).GetComponent<ParticleSystem>().Play();
-                }
-
-                this.muzzleFlashIndex++;
-                this.muzzleFlashIndex %= this.muzzleFlashes.Length;
-                this.animationControllers[this.animationControllerIndex].SetBool("BulletFired", true);
-                this.animationControllerIndex++;
-                this.animationControllerIndex %= this.animationControllers.Length;
-                this.bulletSpwanLocationIndex++;
-                this.bulletSpwanLocationIndex %= this.bulletSpawnLocations.Length;
-                this.gunshotSoundLocations[gunshotSoundLocationIndex].Play();
-                this.gunshotSoundLocationIndex++;
-                this.gunshotSoundLocationIndex %= this.gunshotSoundLocations.Length;
-            }
         }
-    }
+    }*/
 
     public void OnShoot(InputAction.CallbackContext ctx)
     {

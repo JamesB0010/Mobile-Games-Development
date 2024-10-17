@@ -5,7 +5,7 @@ using UnityEngine;
 
 
 [CreateAssetMenu]
-public class Gun : ScriptableObject
+public class Gun : ScriptableObject, ICloneable
 {
     [SerializeField]
     private Bullet bulletPrefab;
@@ -82,4 +82,15 @@ public class Gun : ScriptableObject
         bullet.SetupBulletData(hasValidTarget, this.bulletDamage, bulletStartPosition, targetPosition);
     }
 
+    public object Clone()
+    {
+        Gun obj = ScriptableObject.CreateInstance<Gun>();
+        obj.bulletDamage = bulletDamage;
+        obj.bulletPrefab = bulletPrefab;
+        obj.ownedByPlayer = ownedByPlayer;
+        obj.lastBulletShotTimestamp = lastBulletShotTimestamp;
+        obj.cost = cost;
+        obj.timeBetweenBullets = timeBetweenBullets;
+        return obj;
+    }
 }

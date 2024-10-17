@@ -5,10 +5,13 @@ using Cinemachine;
 using UnityEditor;
 using UnityEngine;
 
-public class CameraFOVChanger : MonoBehaviour
+public class CameraFOVChanger : FSMBehaviour
 {
     //Attributes
     public bool zoomCamera = false;
+
+    [Header("States")] [SerializeField] private State idleMove;
+    [SerializeField] private State zoom;
     
     [Header("Configurables")]
     [SerializeField] private float zoomRate;
@@ -26,17 +29,6 @@ public class CameraFOVChanger : MonoBehaviour
         this.virtualCamera = GetComponent<CinemachineVirtualCamera>();
     }
 
-    private void Update()
-    {
-        if (this.zoomCamera)
-        {
-            this.ZoomCameraForShooting();
-            return;
-        }
-
-        MapThrottleToFOV();
-    }
-
     private void ZoomCameraForShooting()
     {
         this.virtualCamera.m_Lens.FieldOfView = Mathf.Lerp(this.virtualCamera.m_Lens.FieldOfView, 25, Time.deltaTime * this.zoomRate);
@@ -45,6 +37,18 @@ public class CameraFOVChanger : MonoBehaviour
     {
         float throttleAmount = playerMovement.Throttle;
 
-        this.virtualCamera.m_Lens.FieldOfView = ValueInRangeMapper.Map(throttleAmount, 0, 1, this.minFov, this.maxFov);
+        this.virtualCamera.m_Lens.FieldOfView = Mathf.Lerp(this.virtualCamera.m_Lens.FieldOfView, ValueInRangeMapper.Map(throttleAmount, 0, 1, this.minFov, this.maxFov), Time.deltaTime * this.zoomRate);
+    }
+
+    public override void Behave(State state)
+    {
+        if (state.StateName == this.idleMove.name)
+        {
+            MapThrottleToFOV();
+        }
+        else if (state.StateName == this.zoom.name)
+        {
+            this.ZoomCameraForShooting();
+        }
     }
 }

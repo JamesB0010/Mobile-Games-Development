@@ -313,6 +313,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: a45c7e09bdeea5b4581f84e9fe46a7e2, type: 3}
       insertIndex: -1
       addedObject: {fileID: 68574205}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: a45c7e09bdeea5b4581f84e9fe46a7e2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 68574208}
   m_SourcePrefab: {fileID: 100100000, guid: a45c7e09bdeea5b4581f84e9fe46a7e2, type: 3}
 --- !u!4 &68574197 stripped
 Transform:
@@ -464,6 +467,24 @@ AudioReverbFilter:
   m_LFReference: 250
   m_ReflectionsDelay: 0
   m_ReverbPreset: 2
+--- !u!114 &68574208
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 68574198}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: accf624fe5ef3574ba1868039d148925, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gun: {fileID: 11400000, guid: 1db04b6de7548164393792d81184d542, type: 2}
+  gunSystem: {fileID: 1803987134}
+  gunshotSoundLocation: {fileID: 68574199}
+  muzzleFlash: {fileID: 1634511612}
+  animator: {fileID: 68574202}
+  bulletSpawnLocation: {fileID: 823619920}
 --- !u!1 &195731047
 GameObject:
   m_ObjectHideFlags: 0
@@ -971,9 +992,9 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 756341951042136858, guid: 8976fdd099a631343a930a304dfc9efd, type: 3}
   m_PrefabInstance: {fileID: 448364793}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &448364795 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2201199348038593001, guid: 8976fdd099a631343a930a304dfc9efd, type: 3}
+--- !u!198 &448364797 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 4452594906299861188, guid: 8976fdd099a631343a930a304dfc9efd, type: 3}
   m_PrefabInstance: {fileID: 448364793}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &498202302
@@ -3108,6 +3129,7 @@ GameObject:
   - component: {fileID: 1511019336}
   - component: {fileID: 1511019338}
   - component: {fileID: 1511019337}
+  - component: {fileID: 1511019339}
   m_Layer: 10
   m_Name: Virtual Cam
   m_TagString: MainCamera
@@ -3144,6 +3166,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   zoomCamera: 0
+  idleMove: {fileID: 11400000, guid: ce2015cd9bc422b4f88068c8fe4cc84f, type: 2}
+  zoom: {fileID: 11400000, guid: db3a059aa0bd01b468fbcca76465ba46, type: 2}
   zoomRate: 10
   minFov: 70
   maxFov: 75
@@ -3186,6 +3210,19 @@ MonoBehaviour:
         m_Calls: []
   m_LegacyBlendHint: 0
   m_ComponentOwner: {fileID: 1858699433}
+--- !u!114 &1511019339
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1511019335}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88ad5ca929f7c6f449176dd6da12e5ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activeState: {fileID: 11400000, guid: ce2015cd9bc422b4f88068c8fe4cc84f, type: 2}
 --- !u!1 &1545632105
 GameObject:
   m_ObjectHideFlags: 0
@@ -3613,9 +3650,9 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 756341951042136858, guid: 8976fdd099a631343a930a304dfc9efd, type: 3}
   m_PrefabInstance: {fileID: 1634511608}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1634511610 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2201199348038593001, guid: 8976fdd099a631343a930a304dfc9efd, type: 3}
+--- !u!198 &1634511612 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 4452594906299861188, guid: 8976fdd099a631343a930a304dfc9efd, type: 3}
   m_PrefabInstance: {fileID: 1634511608}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1688565314
@@ -4176,19 +4213,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 706d216f7e9a8334f92dbab1bbcf5056, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerGun: {fileID: 11400000, guid: b2ef7f07bb2d62f4aa7a0a08a5041cda, type: 2}
-  gunshotSoundLocations:
-  - {fileID: 68574199}
-  - {fileID: 1990246720}
-  muzzleFlashes:
-  - {fileID: 1634511610}
-  - {fileID: 448364795}
-  animationControllers:
-  - {fileID: 68574202}
-  - {fileID: 1990246723}
-  bulletSpawnLocations:
-  - {fileID: 823619920}
-  - {fileID: 823327469}
+  aimingAtEnemy: {fileID: 11400000, guid: e7e857e760247884cbbf3d566327de25, type: 2}
   ZoomHudElement: {fileID: 1602104568}
 --- !u!4 &1803987135 stripped
 Transform:
@@ -4947,6 +4972,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: a45c7e09bdeea5b4581f84e9fe46a7e2, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1990246726}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: a45c7e09bdeea5b4581f84e9fe46a7e2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1990246729}
   m_SourcePrefab: {fileID: 100100000, guid: a45c7e09bdeea5b4581f84e9fe46a7e2, type: 3}
 --- !u!4 &1990246718 stripped
 Transform:
@@ -5098,6 +5126,24 @@ AudioReverbFilter:
   m_LFReference: 250
   m_ReflectionsDelay: 0
   m_ReverbPreset: 2
+--- !u!114 &1990246729
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1990246719}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: accf624fe5ef3574ba1868039d148925, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gun: {fileID: 11400000, guid: 1db04b6de7548164393792d81184d542, type: 2}
+  gunSystem: {fileID: 1803987134}
+  gunshotSoundLocation: {fileID: 1990246720}
+  muzzleFlash: {fileID: 448364797}
+  animator: {fileID: 1990246723}
+  bulletSpawnLocation: {fileID: 823327469}
 --- !u!1 &2097882479
 GameObject:
   m_ObjectHideFlags: 0
