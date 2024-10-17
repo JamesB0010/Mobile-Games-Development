@@ -479,7 +479,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: accf624fe5ef3574ba1868039d148925, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gun: {fileID: 11400000, guid: 1db04b6de7548164393792d81184d542, type: 2}
+  gun: {fileID: 11400000, guid: aaac8ad849c909441aedf5871f7ff83e, type: 2}
   gunSystem: {fileID: 1803987134}
   gunshotSoundLocation: {fileID: 68574199}
   muzzleFlash: {fileID: 1634511612}
@@ -2044,6 +2044,7 @@ GameObject:
   - component: {fileID: 935031998}
   - component: {fileID: 935032000}
   - component: {fileID: 935032002}
+  - component: {fileID: 935032003}
   m_Layer: 0
   m_Name: Gun Shop Entrance
   m_TagString: Untagged
@@ -2224,6 +2225,27 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.99999994, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!320 &935032003
+PlayableDirector:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 935031992}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_PlayableAsset: {fileID: 11400000, guid: cb5108c2d30a5144690d7b593e9e2515, type: 2}
+  m_InitialState: 0
+  m_WrapMode: 2
+  m_DirectorUpdateMode: 1
+  m_InitialTime: 0
+  m_SceneBindings:
+  - key: {fileID: 6049700119699421601, guid: cb5108c2d30a5144690d7b593e9e2515, type: 2}
+    value: {fileID: 881444019}
+  - key: {fileID: -8034542253344210376, guid: cb5108c2d30a5144690d7b593e9e2515, type: 2}
+    value: {fileID: 935032000}
+  m_ExposedReferences:
+    m_References: []
 --- !u!1 &1027933021
 GameObject:
   m_ObjectHideFlags: 0
@@ -3143,14 +3165,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6338160408a9a9a4ab18fbb9440cc431, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  zoomCamera: 0
   idleMove: {fileID: 11400000, guid: ce2015cd9bc422b4f88068c8fe4cc84f, type: 2}
   zoom: {fileID: 11400000, guid: db3a059aa0bd01b468fbcca76465ba46, type: 2}
   zoomRate: 10
   minFov: 70
-  maxFov: 75
-  lookingAtEnemy: {fileID: 11400000, guid: e7e857e760247884cbbf3d566327de25, type: 2}
-  timeSpentLookingAtEnemy: {fileID: 11400000, guid: ddc5db2a17bea5b45bdcc970079b26e2, type: 2}
+  maxFov: 75.5
   ZoomInEvent:
     m_PersistentCalls:
       m_Calls:
@@ -4179,6 +4198,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5496800069053558799, guid: a1cbc9ce975b8684e8ab0fcf5e4f360e, type: 3}
+      propertyPath: m_ActionEvents.Array.data[0].m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1899830143}
+    - target: {fileID: 5496800069053558799, guid: a1cbc9ce975b8684e8ab0fcf5e4f360e, type: 3}
       propertyPath: m_ActionEvents.Array.data[0].m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 1899830139}
@@ -4237,6 +4260,10 @@ PrefabInstance:
     - target: {fileID: 5496800069053558799, guid: a1cbc9ce975b8684e8ab0fcf5e4f360e, type: 3}
       propertyPath: m_ActionEvents.Array.data[13].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: OnBoost
+      objectReference: {fileID: 0}
+    - target: {fileID: 5496800069053558799, guid: a1cbc9ce975b8684e8ab0fcf5e4f360e, type: 3}
+      propertyPath: m_ActionEvents.Array.data[0].m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PlayerShipThrottle, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 5496800069053558799, guid: a1cbc9ce975b8684e8ab0fcf5e4f360e, type: 3}
       propertyPath: m_ActionEvents.Array.data[0].m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
@@ -4329,6 +4356,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4936494512065095665, guid: a1cbc9ce975b8684e8ab0fcf5e4f360e, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1899830142}
+    - targetCorrespondingSourceObject: {fileID: 4936494512065095665, guid: a1cbc9ce975b8684e8ab0fcf5e4f360e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1899830143}
     - targetCorrespondingSourceObject: {fileID: 8028261648759347436, guid: a1cbc9ce975b8684e8ab0fcf5e4f360e, type: 3}
       insertIndex: -1
       addedObject: {fileID: 901833687}
@@ -4564,6 +4594,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &1899830143
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1899830134}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b5befd9e0be1144f9fa81c2a68cd266, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  throttleChangeRate: 10
 --- !u!1 &1942338636
 GameObject:
   m_ObjectHideFlags: 0
@@ -5365,7 +5408,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: accf624fe5ef3574ba1868039d148925, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gun: {fileID: 11400000, guid: 1db04b6de7548164393792d81184d542, type: 2}
+  gun: {fileID: 11400000, guid: 5de53fcef43d8164090a1591e3efa089, type: 2}
   gunSystem: {fileID: 1803987134}
   gunshotSoundLocation: {fileID: 1990246720}
   muzzleFlash: {fileID: 448364797}

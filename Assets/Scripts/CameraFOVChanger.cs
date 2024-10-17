@@ -10,7 +10,8 @@ using UnityEngine.Serialization;
 public class CameraFOVChanger : FSMBehaviour
 {
     //Attributes
-    [Header("States")] [SerializeField] private State idleMove;
+    [Header("States")] 
+    [SerializeField] private State idleMove;
     [SerializeField] private State zoom;
     
     [Header("Configurables")]
@@ -18,10 +19,6 @@ public class CameraFOVChanger : FSMBehaviour
 
     [SerializeField]
     private float minFov, maxFov;
-
-    [SerializeField] private BoolReference lookingAtEnemy;
-
-    [SerializeField] private FloatReference timeSpentLookingAtEnemy;
 
     [SerializeField] private UnityEvent ZoomInEvent = new UnityEvent();
 
@@ -58,17 +55,6 @@ public class CameraFOVChanger : FSMBehaviour
         {
             this.ZoomCameraForShooting();
         }
-    }
-
-    public override bool EvaluateTransition(State current, State to)
-    {
-        bool lookingAtAnyEnemy = Convert.ToBoolean(this.lookingAtEnemy.GetValue());
-        bool beenLookingAtEnemyLongEnough = (float)this.timeSpentLookingAtEnemy.GetValue() > 0.6f;
-        if (lookingAtAnyEnemy && beenLookingAtEnemyLongEnough)
-            return true;
-        
-        
-        return false;
     }
 
     public override void EnterState(State state)

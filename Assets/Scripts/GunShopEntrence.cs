@@ -14,6 +14,6 @@ public class GunShopEntrence : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        LoadGunShop();
+        GetComponent<PlayableDirector>().Play();
     }
 }

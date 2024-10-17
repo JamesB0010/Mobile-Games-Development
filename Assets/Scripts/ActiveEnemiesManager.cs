@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class ActiveEnemiesManager
 {
+    //Attributes
     private short activeEnemyCount;
     public short ActiveEnemyCount
     {
@@ -18,11 +19,12 @@ public class ActiveEnemiesManager
                 this.AllEnemiesDead?.Invoke();
         }
     }
-
+    
+    //Events
     public event Action EnemyDeathEvent;
-
     public event Action AllEnemiesDead;
-
+    
+    //methods
     public void EnemyDied()
     {
         EnemyDeathEvent?.Invoke();

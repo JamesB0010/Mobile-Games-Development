@@ -51,7 +51,7 @@ public class StateConnection : ICloneable
         {
             transition &= condition.Evaluate();
         }
-
+        
         return transition;
     }
 
