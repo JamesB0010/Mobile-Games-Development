@@ -49,8 +49,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 100
   DeathParticle: {fileID: 3882828615210567630, guid: 7a8e966794bfadc459366685b18688c9, type: 3}
-  speed: 1
   maxVelocity: 0.06
+  speed: 1
   rotationSpeed: 0.08
   desiredDirectionChangeInterval: 10
 --- !u!114 &1904863700040533921
