@@ -7,6 +7,15 @@ using UnityEngine.Events;
 using UnityEngine.InputSystem;
 using Gyroscope = UnityEngine.InputSystem.Gyroscope;
 
+
+//Responsibilities of this class
+//handling inputted throttle and applying speed
+//Handling roll input and applying roll
+//handling yaw input and applying yaw
+//handling pitch input and applying pitch
+//setting the boost cam on boost
+//handling the boost input and boosting
+
 public class PlayerMovement : MonoBehaviour
 {
 

@@ -5,11 +5,16 @@ using UnityEngine;
 
 public class JoystickRotator : MonoBehaviour
 {
-    [SerializeField] private PlayerMovement playerMovement;
+    private PlayerMovement playerMovement;
 
     [SerializeField] private float minX, maxX, minZ, maxZ;
 
     [SerializeField] private float stickMovementSpeed;
+
+    private void Start()
+    {
+        this.playerMovement = FindObjectOfType<PlayerMovement>();
+    }
 
     private void Update()
     {

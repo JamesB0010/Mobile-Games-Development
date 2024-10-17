@@ -8,7 +8,6 @@ public class MainMenuCameraMaskManager : MonoBehaviour
     [SerializeField] private LayerMask layerToChangeTo;
 
     private Camera sceneCamera;
-    // Start is called before the first frame update
     void Start()
     {
         this.sceneCamera = FindObjectOfType<Camera>();

@@ -12,6 +12,8 @@ public class UpgradeSceneManager : MonoBehaviour
         {
             float newBalance = (float)playerMoney.GetValue() - price;
             this.playerMoney.SetValue(newBalance);
+            
+            //Do gun purchasing logic here
             return true;
         }
         return false;

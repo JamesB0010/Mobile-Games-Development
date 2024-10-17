@@ -5,9 +5,17 @@ using UnityEngine;
 
 public class ThrottleLeverRotator : MonoBehaviour
 {
+    //Attributes
+    private PlayerMovement playerMovement;
+    
+    //configurables
     [SerializeField] private float minXRotation, maxXRotation;
 
-    [SerializeField] private PlayerMovement playerMovement;
+
+    private void Start()
+    {
+        this.playerMovement = FindObjectOfType<PlayerMovement>();
+    }
 
     private void Update()
     {

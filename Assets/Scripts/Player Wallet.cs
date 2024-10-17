@@ -11,6 +11,5 @@ public class PlayerWallet : MonoBehaviour
     public void OnEnemyKilled()
     {
         this.money += 100f;
-        Debug.Log("Money: " + (float)this.money.GetValue());
     }
 }

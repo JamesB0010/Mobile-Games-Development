@@ -11,6 +11,10 @@ public class MainMenuManager : MonoBehaviour
    {
        part1IntroDirector.Play();
    }
+   public void IntroFirstPartComplete()
+   {
+       this.startGameDirector.Play();
+   }
 
    public void IntroSequenceComplete()
 
@@ -18,9 +22,4 @@ public class MainMenuManager : MonoBehaviour
        SceneManager.LoadScene(1, LoadSceneMode.Single);
    }
 
-   public void IntroFirstPartComplete()
-   {
-       Debug.Log("First part complete");
-       this.startGameDirector.Play();
-   }
 }

@@ -6,18 +6,28 @@ using UnityEngine.Serialization;
 
 public class Playerenginesoundsmanager : MonoBehaviour
 {
+    //Attributes
+    private PlayerMovement playerMovement;
+    
+    //Injected Dependencies
     [SerializeField]
     private AudioSource bigThruster, littleThruster;
 
-    private PlayerMovement playerMovement;
 
+    [Header("Configurables")]
+    
+    [Header("Big Thruster")]
     [FormerlySerializedAs("minVol")] [SerializeField] private float bigThursterMinVol;
     [FormerlySerializedAs("maxVol")] [SerializeField] private float bigThrusterMaxVol;
 
-    [SerializeField] private float bigThrusterBoostingMinVol, bigThrusterBoostingMaxVol;
+    [Header("Big Thruster Boosting")]
+    [SerializeField] private float bigThrusterBoostingMinVol;
+    [SerializeField] private float bigThrusterBoostingMaxVol;
 
 
-    [SerializeField] private float littleThrusterMinVol, littleThrusterMaxVol;
+    [Header("Little Thruster")] 
+    [SerializeField] private float littleThrusterMinVol; 
+    [SerializeField] private float littleThrusterMaxVol;
 
     private void Start()
     {
@@ -26,15 +36,22 @@ public class Playerenginesoundsmanager : MonoBehaviour
 
     private void Update()
     {
+        SetBigThrusterVolume();
+        this.littleThruster.volume = ValueInRangeMapper.Map(this.playerMovement.Throttle, 0, 1,
+            this.littleThrusterMinVol, this.littleThrusterMaxVol);
+    }
+
+    private void SetBigThrusterVolume()
+    {
         if (this.playerMovement.isBoosting)
         {
-            this.bigThruster.volume = ValueInRangeMapper.Map(this.playerMovement.Throttle, 0, 1, this.bigThrusterBoostingMinVol, this.bigThrusterBoostingMaxVol);
+            this.bigThruster.volume = ValueInRangeMapper.Map(this.playerMovement.Throttle, 0, 1,
+                this.bigThrusterBoostingMinVol, this.bigThrusterBoostingMaxVol);
         }
         else
         {
-            this.bigThruster.volume = ValueInRangeMapper.Map(this.playerMovement.Throttle, 0, 1, this.bigThursterMinVol, this.bigThrusterMaxVol);
+            this.bigThruster.volume = ValueInRangeMapper.Map(this.playerMovement.Throttle, 0, 1, this.bigThursterMinVol,
+                this.bigThrusterMaxVol);
         }
-        this.littleThruster.volume = ValueInRangeMapper.Map(this.playerMovement.Throttle, 0, 1,
-            this.littleThrusterMinVol, this.littleThrusterMaxVol);
     }
 }
