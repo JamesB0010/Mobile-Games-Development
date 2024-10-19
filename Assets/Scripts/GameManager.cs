@@ -10,36 +10,19 @@ public class GameManager : MonoBehaviour
     //Attributes
     [Header("Enemy Spawning")]
     [SerializeField] EnemySpawnManager enemySpawnManager;
-    
-    
-    [Header("Enemy Management")]
-    ActiveEnemiesManager activeEnemiesManager;
-    
-    
-    [Header("Events")]
-    [SerializeField] private UnityEvent AlertRoundFinished = new UnityEvent();
 
 
+    [Header("Enemy Management")] 
+    [SerializeField] private ActiveEnemiesManager activeEnemiesManager;
+    
+    
     private void Start()
     {
         SpawnEnemies();
-        SubscribeToEvents();
     }
     private void SpawnEnemies()
     {
-        this.activeEnemiesManager = new ActiveEnemiesManager();
         enemySpawnManager.SpawnEnemies(this, this.activeEnemiesManager);
-    }
-
-    private void SubscribeToEvents()
-    {
-        this.activeEnemiesManager.AllEnemiesDead += this.OnAllEnemiesDead;
-    }
-
-
-    private void OnAllEnemiesDead()
-    {
-        this.AlertRoundFinished?.Invoke();
     }
 
 }

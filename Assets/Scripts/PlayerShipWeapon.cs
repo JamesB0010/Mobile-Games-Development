@@ -8,6 +8,11 @@ public class PlayerShipWeapon : MonoBehaviour
     [SerializeField]
     private Gun gun;
 
+    public Gun Gun
+    {
+        set => this.gun = value;
+    }
+
     [SerializeField] private GunSystems gunSystem;
 
     [SerializeField] private AudioSource gunshotSoundLocation;

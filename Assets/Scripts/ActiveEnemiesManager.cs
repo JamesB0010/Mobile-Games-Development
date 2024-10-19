@@ -2,8 +2,9 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
-public class ActiveEnemiesManager
+public class ActiveEnemiesManager: MonoBehaviour
 {
     //Attributes
     private short activeEnemyCount;
@@ -14,15 +15,12 @@ public class ActiveEnemiesManager
         set
         {
             this.activeEnemyCount = value;
-            
-            if(this.activeEnemyCount <= 0)
-                this.AllEnemiesDead?.Invoke();
         }
     }
     
     //Events
-    public event Action EnemyDeathEvent;
-    public event Action AllEnemiesDead;
+    [SerializeField]
+    public UnityEvent EnemyDeathEvent;
     
     //methods
     public void EnemyDied()

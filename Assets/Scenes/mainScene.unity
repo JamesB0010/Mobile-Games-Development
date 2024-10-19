@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18947631, g: 0.23074993, b: 0.19817215, a: 1}
+  m_IndirectSpecularColor: {r: 0.15157792, g: 0.18511817, b: 0.15892896, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -288,7 +288,7 @@ PrefabInstance:
       objectReference: {fileID: 1573689757189767941, guid: e199ab28dccfaa84ea61041a43173db7, type: 3}
     - target: {fileID: 919132149155446097, guid: a45c7e09bdeea5b4581f84e9fe46a7e2, type: 3}
       propertyPath: m_Name
-      value: Default AutoCannon
+      value: Default AutoCannon right
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: a45c7e09bdeea5b4581f84e9fe46a7e2, type: 3}
       propertyPath: m_Layer
@@ -1154,6 +1154,65 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1288605102}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &535710523
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 535710524}
+  - component: {fileID: 535710525}
+  m_Layer: 0
+  m_Name: ActiveEnemiesManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &535710524
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 535710523}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1461499936}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &535710525
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 535710523}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a649c605352c0243928758b5c3616bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EnemyDeathEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1899830135}
+        m_TargetAssemblyTypeName: PlayerWallet, Assembly-CSharp
+        m_MethodName: OnEnemyKilled
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &563110661
 GameObject:
   m_ObjectHideFlags: 0
@@ -3038,33 +3097,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemySpawnManager: {fileID: 498202304}
-  AlertRoundFinished:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: returnToBaseUiElement, Assembly-CSharp
-        m_MethodName: PlayAnimation
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 935031999}
-        m_TargetAssemblyTypeName: GunShopEntrence, Assembly-CSharp
-        m_MethodName: OpenGunShop
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+  activeEnemiesManager: {fileID: 535710525}
 --- !u!4 &1461499936
 Transform:
   m_ObjectHideFlags: 0
@@ -3085,6 +3118,7 @@ Transform:
   - {fileID: 1493184042}
   - {fileID: 1460430863}
   - {fileID: 498202303}
+  - {fileID: 535710524}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1493184041
@@ -4330,10 +4364,10 @@ PrefabInstance:
       addedObject: {fileID: 1942338637}
     - targetCorrespondingSourceObject: {fileID: 2927752190066450377, guid: a1cbc9ce975b8684e8ab0fcf5e4f360e, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 68574197}
+      addedObject: {fileID: 1990246718}
     - targetCorrespondingSourceObject: {fileID: 2927752190066450377, guid: a1cbc9ce975b8684e8ab0fcf5e4f360e, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1990246718}
+      addedObject: {fileID: 68574197}
     - targetCorrespondingSourceObject: {fileID: 2927752190066450377, guid: a1cbc9ce975b8684e8ab0fcf5e4f360e, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1591302708}
@@ -4390,6 +4424,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   aimingAtEnemy: {fileID: 11400000, guid: e7e857e760247884cbbf3d566327de25, type: 2}
+  weaponsList:
+  - {fileID: 1990246729}
+  - {fileID: 68574208}
+  playerWeaponsState: {fileID: 11400000, guid: b5f4d067d7d0e2744ab5cdf2c7f613f0, type: 2}
   timeSpentLookingAtEnemy: {fileID: 11400000, guid: ddc5db2a17bea5b45bdcc970079b26e2, type: 2}
 --- !u!4 &1803987135 stripped
 Transform:
@@ -5217,7 +5255,7 @@ PrefabInstance:
       objectReference: {fileID: 1573689757189767941, guid: e199ab28dccfaa84ea61041a43173db7, type: 3}
     - target: {fileID: 919132149155446097, guid: a45c7e09bdeea5b4581f84e9fe46a7e2, type: 3}
       propertyPath: m_Name
-      value: Default AutoCannon (1)
+      value: Default AutoCannon left
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: a45c7e09bdeea5b4581f84e9fe46a7e2, type: 3}
       propertyPath: m_Layer

@@ -16,6 +16,10 @@ public class GunSystems : MonoBehaviour
 
     [SerializeField] private BoolReference aimingAtEnemy;
 
+    [SerializeField] private PlayerShipWeapon[] weaponsList;
+
+    [SerializeField] private PlayerWeaponsState playerWeaponsState;
+
 
     private bool tryingToShoot = false;
     public bool TryingToShoot => this.tryingToShoot;
@@ -28,6 +32,8 @@ public class GunSystems : MonoBehaviour
     {
         this.aimingAtEnemy.SetValue(false);
         this.crosshairTargetFinder = GetComponent<CrosshairTargetFinder>();
+        
+        this.playerWeaponsState.SetCorrectWeapons(this.weaponsList);
     }
 
     private void Update()

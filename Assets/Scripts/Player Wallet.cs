@@ -10,6 +10,19 @@ public class PlayerWallet : MonoBehaviour
 
     public void OnEnemyKilled()
     {
-        this.money += 100f;
+        this.money += 10000f;
+    }
+
+    public void OnApplicationQuit()
+    {
+        PlayerPrefs.SetFloat(PlayerPrefsKeys.PlayerMoneyKey, (float)this.money.GetValue());
+    }
+
+    public void OnApplicationFocus(bool hasFocus)
+    {
+        if (hasFocus)
+        {
+            PlayerPrefs.SetFloat(PlayerPrefsKeys.PlayerMoneyKey, (float)this.money.GetValue());
+        }
     }
 }
