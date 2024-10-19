@@ -15,7 +15,7 @@ public class PlayerWeaponsState : ScriptableObject
     {
         for (int i = 0; i < this.guns.Length; i++)
         {
-            weapons[i].Gun = this.guns[i];
+            weapons[i].Gun = (Gun)this.guns[i].Clone();
         }
     }
 }
