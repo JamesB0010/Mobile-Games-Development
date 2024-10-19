@@ -479,7 +479,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: accf624fe5ef3574ba1868039d148925, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gun: {fileID: 11400000, guid: aaac8ad849c909441aedf5871f7ff83e, type: 2}
+  gun: {fileID: 11400000, guid: 5de53fcef43d8164090a1591e3efa089, type: 2}
   gunSystem: {fileID: 1803987134}
   gunshotSoundLocation: {fileID: 68574199}
   muzzleFlash: {fileID: 1634511612}
