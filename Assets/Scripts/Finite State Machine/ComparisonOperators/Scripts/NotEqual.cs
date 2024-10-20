@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[Serializable]
 public class NotEqualComparisonOperator : ComparisonOperator
 {
     public override bool Test(bool source, bool target)

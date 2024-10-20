@@ -15,6 +15,7 @@ public abstract class TransitionConditionBase
     protected ScriptableObjectValueReference valueToTest;
 
     [Tooltip("Choose a comparison operator from the dropdown menu")]
+    [SerializeField]
     public ComparisonOperator comparisonOperator { get; set; }
 
     //Methods

@@ -313,7 +313,11 @@ class StateCustomEditor : Editor
         object objectReferenceValue = EditorGUILayout.ObjectField(
             "Comparison Operator", transitionCondition.comparisonOperator, typeof(ComparisonOperator), false);
         if (objectReferenceValue != null)
-            transitionCondition.comparisonOperator = (ComparisonOperator)objectReferenceValue;
+        {
+            transitionCondition.comparisonOperator = (ComparisonOperator)objectReferenceValue; 
+            EditorUtility.SetDirty(transitionCondition.comparisonOperator);
+        }
+        
     }
 
     private void DrawAppropriateConditionComparand(int connectionIndex, int conditionOfThatConnectionIndex,

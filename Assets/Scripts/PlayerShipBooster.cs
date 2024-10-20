@@ -8,24 +8,17 @@ public class PlayerShipBooster : MonoBehaviour
 {
     private bool isBoosting;
     public bool IsBoosting => this.isBoosting;
-    
+    [SerializeField] private BoolReference isBoostingValRef;
     [SerializeField] private float maxBoostVelocity;
-
     private PlayerMovement playerMovement;
-
     [SerializeField] private UnityEvent StartBoostingEvent = new UnityEvent();
-
     [SerializeField] private UnityEvent StopBoostingEvent = new UnityEvent();
-    
-    
     private float maxVelocityDefault;
-
     private void Start()
     {
         playerMovement = FindObjectOfType<PlayerMovement>();
         this.maxVelocityDefault = this.playerMovement.MaxVelocity;
     }
-
     public void OnBoost(InputAction.CallbackContext ctx)
     {
         if (ctx.action.IsPressed())
@@ -34,6 +27,7 @@ public class PlayerShipBooster : MonoBehaviour
             {
                 //this is the first frame of boosting
                 this.StartBoostingEvent?.Invoke();
+                this.isBoostingValRef.SetValue(true);
             }
             this.playerMovement.CurrentMaxVelocity = this.maxBoostVelocity;
             isBoosting = true;
@@ -44,6 +38,7 @@ public class PlayerShipBooster : MonoBehaviour
             {
                 //this is the first frame we stopped boosting
                 this.StopBoostingEvent?.Invoke();
+                this.isBoostingValRef.SetValue(false);
             }
             this.playerMovement.CurrentMaxVelocity = this.maxVelocityDefault;
             isBoosting = false;
