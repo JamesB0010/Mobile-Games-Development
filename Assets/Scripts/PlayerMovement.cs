@@ -5,7 +5,7 @@ using Cinemachine;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
-
+using Gyroscope = UnityEngine.Gyroscope;
 
 
 public class PlayerMovement : MonoBehaviour
@@ -17,6 +17,9 @@ public class PlayerMovement : MonoBehaviour
     {
         set => currentMaxVelocity = value;
     }
+
+    private Gyroscope gyro;
+    
     [Header("Configurables")]
     [SerializeField] private float speed;
     [SerializeField] private float maxVelocity;
@@ -25,11 +28,26 @@ public class PlayerMovement : MonoBehaviour
     private PlayerShipThrottle playerThrottle;
     private void Start()
     {
+        gyro = Input.gyro;
+        gyro.enabled = true;
         this.currentMaxVelocity = this.maxVelocity;
         this.playerThrottle = FindObjectOfType<PlayerShipThrottle>();
+
+        if (UnityEngine.InputSystem.Gyroscope.current != null)
+        {
+            InputSystem.EnableDevice(UnityEngine.InputSystem.Gyroscope.current);
+        }
+
+        if (AttitudeSensor.current != null)
+        {
+            InputSystem.EnableDevice(AttitudeSensor.current);
+        }
     }
     void Update()
     {
+        Debug.Log(gyro.attitude);
+        Debug.Log(UnityEngine.InputSystem.Gyroscope.current.angularVelocity.ReadValue());
+        Debug.Log(AttitudeSensor.current.attitude.ReadValue());
         var acceleration = CalculateAcceleration();
         AddAccelerationToVelocity(acceleration);
         transform.Translate(this.velocity * Time.deltaTime, Space.World);
