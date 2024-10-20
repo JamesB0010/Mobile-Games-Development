@@ -25,6 +25,7 @@ public class FloatReference : ScriptableObjectValueReference
     }
 }
 
+#if UNITY_EDITOR
 
 [CustomEditor(typeof(FloatReference))]
 public class FloatRefEditor : Editor
@@ -40,3 +41,5 @@ public class FloatRefEditor : Editor
         this.reference.SetValue(EditorGUILayout.FloatField("Value", (float)this.reference.GetValue()));
     }
 }
+
+#endif

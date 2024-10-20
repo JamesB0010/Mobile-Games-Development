@@ -118,7 +118,7 @@ public class State : ScriptableObject, ICloneable
     }
 }
 
-
+#if UNITY_EDITOR
 
 //Custom editor for states
 [CustomEditor(typeof(State))]
@@ -427,3 +427,5 @@ internal class StateCustomEditorSetupHelper
         }
     }
 }
+
+#endif

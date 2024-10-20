@@ -20,6 +20,8 @@ public class BoolReference : ScriptableObjectValueReference
     }
 }
 
+#if UNITY_EDITOR
+
 [CustomEditor(typeof(BoolReference))]
 public class BoolRefEditor : Editor
 {
@@ -34,3 +36,5 @@ public class BoolRefEditor : Editor
         this.reference.SetValue(EditorGUILayout.Toggle("Value", (bool)this.reference.GetValue()));
     }
 }
+
+#endif
