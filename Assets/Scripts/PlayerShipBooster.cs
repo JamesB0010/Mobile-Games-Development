@@ -7,7 +7,40 @@ using UnityEngine.InputSystem;
 public class PlayerShipBooster : MonoBehaviour
 {
     private bool isBoosting;
-    public bool IsBoosting => this.isBoosting;
+
+    public bool IsBoosting
+    {
+        get => this.isBoosting;
+
+        set
+        {
+            if (value)
+            {
+            if (this.isBoosting == false)
+            {
+                //this is the first frame of boosting
+                                this.StartBoostingEvent?.Invoke();
+                                this.isBoostingValRef.SetValue(true);
+            }
+            this.playerMovement.CurrentMaxVelocity = this.maxBoostVelocity;
+                        isBoosting = true;
+            }
+            else
+            {
+                 if (this.isBoosting == true)
+                            {
+                                //this is the first frame we stopped boosting
+                                this.StopBoostingEvent?.Invoke();
+                                this.isBoostingValRef.SetValue(false);
+                            }
+                            this.playerMovement.CurrentMaxVelocity = this.maxVelocityDefault;
+                            isBoosting = false;
+            }
+        }
+    } 
+    
+    
+    
     [SerializeField] private BoolReference isBoostingValRef;
     [SerializeField] private float maxBoostVelocity;
     private PlayerMovement playerMovement;
@@ -21,27 +54,6 @@ public class PlayerShipBooster : MonoBehaviour
     }
     public void OnBoost(InputAction.CallbackContext ctx)
     {
-        if (ctx.action.IsPressed())
-        {
-            if (this.isBoosting == false)
-            {
-                //this is the first frame of boosting
-                this.StartBoostingEvent?.Invoke();
-                this.isBoostingValRef.SetValue(true);
-            }
-            this.playerMovement.CurrentMaxVelocity = this.maxBoostVelocity;
-            isBoosting = true;
-        }
-        else
-        {
-            if (this.isBoosting == true)
-            {
-                //this is the first frame we stopped boosting
-                this.StopBoostingEvent?.Invoke();
-                this.isBoostingValRef.SetValue(false);
-            }
-            this.playerMovement.CurrentMaxVelocity = this.maxVelocityDefault;
-            isBoosting = false;
-        }
+        this.IsBoosting = ctx.action.IsPressed();
     }
 }
