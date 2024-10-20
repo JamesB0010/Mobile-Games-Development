@@ -311,11 +311,11 @@ class StateCustomEditor : Editor
     private static void DrawComparisonOperatorSelector(TransitionConditionBase transitionCondition)
     {
         object objectReferenceValue = EditorGUILayout.ObjectField(
-            "Comparison Operator", transitionCondition.comparisonOperator, typeof(ComparisonOperator), false);
+            "Comparison Operator", transitionCondition.ComparisonOperator, typeof(ComparisonOperator), false);
         if (objectReferenceValue != null)
         {
-            transitionCondition.comparisonOperator = (ComparisonOperator)objectReferenceValue; 
-            EditorUtility.SetDirty(transitionCondition.comparisonOperator);
+            transitionCondition.ComparisonOperator = (ComparisonOperator)objectReferenceValue; 
+            EditorUtility.SetDirty(transitionCondition.ComparisonOperator);
         }
         
     }

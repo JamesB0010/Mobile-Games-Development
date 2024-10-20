@@ -25,4 +25,5 @@ MonoBehaviour:
       data:
         transitionHandledByAgent: 0
         valueToTest: {fileID: 11400000, guid: e7e857e760247884cbbf3d566327de25, type: 2}
+        comparisonOperator: {fileID: 11400000, guid: 40414d3cf4e88384c89e9f471098ef40, type: 2}
         comparand: 0
