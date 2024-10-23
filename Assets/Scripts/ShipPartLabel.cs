@@ -17,6 +17,8 @@ public class ShipPartLabel : MonoBehaviour
     [SerializeField] private UpgradeCell[] cells;
 
     [SerializeField] private int weaponIndex;
+
+    [SerializeField] private ShipSections shipSection;
     
     // Start is called before the first frame update
     void Start()
@@ -43,6 +45,7 @@ public class ShipPartLabel : MonoBehaviour
         {
             this.cells[i].Upgrade = this.ShipGunUpgrades[i];
             this.cells[i].WeaponIndex = this.weaponIndex;
+            this.cells[i].ShipSection = this.shipSection;
         }
     }
 }

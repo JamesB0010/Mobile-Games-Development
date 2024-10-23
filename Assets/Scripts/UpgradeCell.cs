@@ -7,6 +7,13 @@ using UnityEngine.InputSystem;
 
 public class UpgradeCell : MonoBehaviour
 {
+    private ShipSections shipSection;
+
+    public ShipSections ShipSection
+    {
+        get => this.shipSection;
+        set => this.shipSection = value;
+    }
     private ShipGunUpgrade upgrade; private Inventory inventory; public int WeaponIndex { get; set; }
     private void Start() { this.inventory = FindObjectOfType<Inventory>(); }
     public ShipGunUpgrade Upgrade

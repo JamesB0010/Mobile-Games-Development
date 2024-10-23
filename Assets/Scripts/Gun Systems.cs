@@ -32,7 +32,7 @@ public class GunSystems : MonoBehaviour
         this.aimingAtEnemy.SetValue(false);
         this.crosshairTargetFinder = GetComponent<CrosshairTargetFinder>();
         
-        this.playerWeaponsState.SetCorrectWeapons(this.weaponsList);
+        this.playerWeaponsState.SetPlayershipWithStoredWeapons(this.weaponsList);
     }
 
     private void Update()

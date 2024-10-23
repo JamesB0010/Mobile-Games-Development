@@ -9,9 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9482400910c60a646887470372279e73, type: 3}
-  m_Name: PlayerWeaponsState
+  m_Script: {fileID: 11500000, guid: a9b1a1ddae4d138488b138cbb96ac3c7, type: 3}
+  m_Name: Default Autocannon
   m_EditorClassIdentifier: 
-  guns:
-  - {fileID: 11400000, guid: aaac8ad849c909441aedf5871f7ff83e, type: 2}
-  - {fileID: 11400000, guid: e75a2679d77ffb345997434202ecb339, type: 2}
+  gun: {fileID: 11400000, guid: aaac8ad849c909441aedf5871f7ff83e, type: 2}
+  cost: 0
+  icon: {fileID: 21300000, guid: 35469ed843615424083bf79d5371bb28, type: 3}
+  isPurchaseable: 1

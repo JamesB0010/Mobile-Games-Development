@@ -1,9 +1,19 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using TMPro;
+using UnityEditor;
 using UnityEngine;
 
+[Serializable]
+public enum ShipSections
+{
+    lightWeapons,
+    heavyWeapons,
+    armour,
+    engine
+}
 public class Inventory : MonoBehaviour
 {
     private UpgradeCell selectedCell;
@@ -13,9 +23,9 @@ public class Inventory : MonoBehaviour
     [SerializeField] private TextMeshProUGUI playerBalanceUiText;
     [SerializeField] private FloatReference playerMoney;
     [SerializeField] private TextMeshProUGUI EquippedGunNameUiField;
+    [SerializeField] private TextAsset lightWeaponConfigurationSaveFile;
     private void Start()
     {
-        this.playerMoney.SetValue(PlayerPrefs.GetFloat(PlayerPrefsKeys.PlayerMoneyKey));
         this.playerBalanceUiText.text = ((float)playerMoney.GetValue()).ToString();
     }
     public void PurchaseSelectedCell()
@@ -29,9 +39,23 @@ public class Inventory : MonoBehaviour
         this.playerMoney.SetValue(PlayerMoneyFloat - this.selectedCell.Cost());
         PlayerPrefs.SetFloat(PlayerPrefsKeys.PlayerMoneyKey, (float)this.playerMoney.GetValue());
         this.playerBalanceUiText.text = ((float)playerMoney.GetValue()).ToString();
-        this.playerWeaponsState.EditWeaponAtIndex(this.selectedCell.WeaponIndex, this.selectedCell.GetGun());
         EquippedGunNameUiField.text = this.selectedCell.UpgradeName();
         Debug.Log("Purchased: " + selectedCell.UpgradeName());
+        
+        
+        //Save to Json
+        switch (this.selectedCell.ShipSection)
+        {
+            case ShipSections.lightWeapons:
+                this.playerWeaponsState.EditWeaponAtIndex(this.selectedCell.WeaponIndex, this.selectedCell.GetGun());
+                SavedLightWeaponsJsonObject lightWeapons = new SavedLightWeaponsJsonObject(this.playerWeaponsState.Guns);
+                string jsonString = JsonUtility.ToJson(lightWeapons);
+                File.WriteAllText(Application.dataPath + "/Json/lightWeaponConfiguration.txt", jsonString);
+                AssetDatabase.SaveAssetIfDirty(this.lightWeaponConfigurationSaveFile);
+                break;
+            default:
+                break;
+        }
     }
     public void SelectCell(UpgradeCell cell)
     {
