@@ -10,6 +10,8 @@ public class PlayerWallet : MonoBehaviour
     [SerializeField]
     private FloatReference money;
 
+    [SerializeField] private float moneyPerEnnemy;
+
     [SerializeField] private UnityEvent<string> OnMoneyChanged = new UnityEvent<string>();
 
     public void Start()
@@ -30,7 +32,7 @@ public class PlayerWallet : MonoBehaviour
 
     public void OnEnemyKilled()
     {
-        this.money += 10000f;
+        this.money += this.moneyPerEnnemy;
         this.OnMoneyChanged?.Invoke("Credits: " + (float)this.money.GetValue());
     }
 

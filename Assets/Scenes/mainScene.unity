@@ -4776,6 +4776,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   money: {fileID: 11400000, guid: 384a2dd2a2371ab4a992b55471c6b828, type: 2}
+  moneyPerEnnemy: 1
   OnMoneyChanged:
     m_PersistentCalls:
       m_Calls:

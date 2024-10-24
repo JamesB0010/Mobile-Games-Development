@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Light Autocannon
   m_EditorClassIdentifier: 
   gun: {fileID: 11400000, guid: 5de53fcef43d8164090a1591e3efa089, type: 2}
-  cost: 100000
+  cost: 1
   icon: {fileID: 21300000, guid: 35469ed843615424083bf79d5371bb28, type: 3}
   isPurchaseable: 1

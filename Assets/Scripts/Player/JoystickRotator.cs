@@ -26,12 +26,14 @@ public class JoystickRotator : MonoBehaviour
         float rollAmount = rollControls.InputtedRoll;
         
         float targetZRotation = rollAmount.MapRange(-1, 1, minZ, maxZ);
-        float targetXRotation = pitchAmount.MapRange(1, 1, minX, maxX);
+        float targetXRotation = pitchAmount.MapRange(-1, 1, minX, maxX);
             
         Quaternion localRotation = transform.localRotation;
             
         Quaternion targetRotation = Quaternion.Lerp(localRotation, Quaternion.Euler(new Vector3(targetXRotation, localRotation.eulerAngles.y,  targetZRotation)),Time.deltaTime * this.stickMovementSpeed);
         
+        
         transform.localRotation = targetRotation;
+        
     }
 }

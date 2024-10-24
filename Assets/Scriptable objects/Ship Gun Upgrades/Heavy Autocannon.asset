@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Heavy Autocannon
   m_EditorClassIdentifier: 
   gun: {fileID: 11400000, guid: 1db04b6de7548164393792d81184d542, type: 2}
-  cost: 500000
+  cost: 5
   icon: {fileID: 21300000, guid: 35469ed843615424083bf79d5371bb28, type: 3}
   isPurchaseable: 1
