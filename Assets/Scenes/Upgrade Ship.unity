@@ -1350,6 +1350,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5685de33155458046b8b82a17c33bb37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  weaponStatsDisplayer: {fileID: 2017502198}
+  playerWeaponsState: {fileID: 11400000, guid: b5f4d067d7d0e2744ab5cdf2c7f613f0, type: 2}
   OnZoomingIn:
     m_PersistentCalls:
       m_Calls:
@@ -2319,6 +2321,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5685de33155458046b8b82a17c33bb37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  weaponStatsDisplayer: {fileID: 2017502198}
+  playerWeaponsState: {fileID: 11400000, guid: b5f4d067d7d0e2744ab5cdf2c7f613f0, type: 2}
   OnZoomingIn:
     m_PersistentCalls:
       m_Calls:
@@ -3057,6 +3061,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5685de33155458046b8b82a17c33bb37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  weaponStatsDisplayer: {fileID: 2017502198}
+  playerWeaponsState: {fileID: 11400000, guid: b5f4d067d7d0e2744ab5cdf2c7f613f0, type: 2}
   OnZoomingIn:
     m_PersistentCalls:
       m_Calls:
@@ -4072,6 +4078,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5685de33155458046b8b82a17c33bb37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  weaponStatsDisplayer: {fileID: 2017502198}
+  playerWeaponsState: {fileID: 11400000, guid: b5f4d067d7d0e2744ab5cdf2c7f613f0, type: 2}
   OnZoomingIn:
     m_PersistentCalls:
       m_Calls:
@@ -4905,6 +4913,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5685de33155458046b8b82a17c33bb37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  weaponStatsDisplayer: {fileID: 2017502198}
+  playerWeaponsState: {fileID: 11400000, guid: b5f4d067d7d0e2744ab5cdf2c7f613f0, type: 2}
   OnZoomingIn:
     m_PersistentCalls:
       m_Calls:
@@ -8067,6 +8077,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5685de33155458046b8b82a17c33bb37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  weaponStatsDisplayer: {fileID: 2017502198}
+  playerWeaponsState: {fileID: 11400000, guid: b5f4d067d7d0e2744ab5cdf2c7f613f0, type: 2}
   OnZoomingIn:
     m_PersistentCalls:
       m_Calls:
@@ -10503,6 +10515,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2017502197}
+  - component: {fileID: 2017502198}
   m_Layer: 5
   m_Name: Gun
   m_TagString: Untagged
@@ -10536,6 +10549,21 @@ RectTransform:
   m_AnchoredPosition: {x: 99.4, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2017502198
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2017502196}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29b7762c1ccb954439b57e579508e640, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemNameField: {fileID: 452832897}
+  itemFireRateField: {fileID: 486726842}
+  damagePerShotField: {fileID: 2014986600}
 --- !u!1 &2055198800
 GameObject:
   m_ObjectHideFlags: 0
@@ -11527,6 +11555,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1023090527}
+        m_TargetAssemblyTypeName: TMPro.TMP_Text, Unity.TextMeshPro
+        m_MethodName: set_text
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Purchase
           m_BoolArgument: 1
         m_CallState: 2
 --- !u!114 &2111485046

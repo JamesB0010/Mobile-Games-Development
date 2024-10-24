@@ -29,7 +29,7 @@ public class PlayerMovement : MonoBehaviour
     private void Start()
     {
         //gyro = Input.gyro;
-        //gyro.enabled = true;
+        //Input.gyro.enabled = true;
         this.currentMaxVelocity = this.maxVelocity;
         this.playerThrottle = FindObjectOfType<PlayerShipThrottle>();
 

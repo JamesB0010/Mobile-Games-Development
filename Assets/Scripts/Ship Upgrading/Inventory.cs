@@ -31,7 +31,7 @@ public class Inventory : MonoBehaviour
     }
     public void PurchaseSelectedCell()
     {
-        if (this.selectedCell.IsOwned)
+        if (this.selectedCell.IsOwned && this.selectedCell.GunOwnedByThisSide())
         {
             Debug.Log("Equip item");
             EquippedGunNameUiField.text = this.selectedCell.UpgradeName();
@@ -71,6 +71,7 @@ public class Inventory : MonoBehaviour
                     string jsonString = JsonUtility.ToJson(lightWeapons);
                     File.WriteAllText(Application.dataPath + "/Json/lightWeaponConfiguration.txt", jsonString);
                     AssetDatabase.SaveAssetIfDirty(this.lightWeaponConfigurationSaveFile);
+                    this.selectedCell.AddThisSideToUpgradeOwnedSides();
                     break;
                 case ShipSections.heavyWeapons:
                     break;

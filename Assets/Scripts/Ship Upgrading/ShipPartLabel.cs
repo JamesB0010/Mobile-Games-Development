@@ -6,6 +6,11 @@ using UnityEngine.Events;
 
 public class ShipPartLabel : MonoBehaviour
 {
+    [SerializeField]
+    private WeaponStatsDisplayer weaponStatsDisplayer;
+    [SerializeField]
+    private PlayerWeaponsState playerWeaponsState;
+    
     private Camera playerCam;
 
     [SerializeField] private UnityEvent OnZoomingIn = new UnityEvent();
@@ -40,6 +45,7 @@ public class ShipPartLabel : MonoBehaviour
     {
         OnZoomingIn?.Invoke();
         openInventoryAnim.Play();
+        weaponStatsDisplayer.UpdateText(playerWeaponsState, this.weaponIndex);
 
         for (int i = 0; i < this.cells.Length; i++)
         {

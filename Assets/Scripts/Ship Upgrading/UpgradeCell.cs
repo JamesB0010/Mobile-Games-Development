@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -51,10 +52,19 @@ public class UpgradeCell : MonoBehaviour
 
         set => this.upgrade.Gun.OwnedByPlayer = true;
     }
-        
 
     public Gun GetGun()
     {
         return this.upgrade.Gun;
+    }
+
+    public bool GunOwnedByThisSide()
+    {
+        return this.upgrade.ownedSides.Contains(WeaponIndex);
+    }
+
+    public void AddThisSideToUpgradeOwnedSides()
+    {
+        this.upgrade.ownedSides.Add(this.WeaponIndex);
     }
 }

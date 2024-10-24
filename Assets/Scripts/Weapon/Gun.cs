@@ -15,6 +15,11 @@ public class Gun : ScriptableObject, ICloneable
     [SerializeField]
     private float timeBetweenBullets;
 
+    public float TimeBetweenBullets
+    {
+        get => this.timeBetweenBullets;
+    }
+
     [SerializeField]
     private bool ownedByPlayer;
 
@@ -31,6 +36,8 @@ public class Gun : ScriptableObject, ICloneable
     public float Cost => this.cost;
 
     [SerializeField] private float bulletDamage;
+
+    public float BulletDamage => this.bulletDamage;
 
     public void PrimeWeaponToShoot()
     {
