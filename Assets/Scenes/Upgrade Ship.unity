@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.070505984, g: 0.0258348, b: 0.03773361, a: 1}
+  m_IndirectSpecularColor: {r: 0.07003892, g: 0.026333805, b: 0.037120238, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -5338,7 +5338,7 @@ RectTransform:
   m_GameObject: {fileID: 1078265180}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_LocalScale: {x: 3, y: 3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1023090526}
@@ -5346,7 +5346,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -989.09985, y: 152.7}
+  m_AnchoredPosition: {x: -989.09985, y: 194.61}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1078265182
@@ -8989,7 +8989,7 @@ RectTransform:
   m_GameObject: {fileID: 1794142790}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.6371676, y: 0.6371676, z: 0.6371676}
+  m_LocalScale: {x: 0.56507844, y: 0.56507844, z: 0.56507844}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1677320584}
@@ -9009,7 +9009,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 501, y: 0}
+  m_AnchoredPosition: {x: 501, y: 0.75148}
   m_SizeDelta: {x: 1380.2, y: 1684.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!111 &1794142792
@@ -9086,6 +9086,7 @@ MonoBehaviour:
   playerMoney: {fileID: 11400000, guid: 384a2dd2a2371ab4a992b55471c6b828, type: 2}
   EquippedGunNameUiField: {fileID: 452832897}
   lightWeaponConfigurationSaveFile: {fileID: 4900000, guid: fc6796ea5dfbdc341a004d5f06320d94, type: 3}
+  purchaseButtonText: {fileID: 1023090527}
 --- !u!1 &1799741758
 GameObject:
   m_ObjectHideFlags: 0

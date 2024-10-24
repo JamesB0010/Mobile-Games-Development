@@ -14,7 +14,9 @@ public class UpgradeCell : MonoBehaviour
         get => this.shipSection;
         set => this.shipSection = value;
     }
-    private ShipGunUpgrade upgrade; private Inventory inventory; public int WeaponIndex { get; set; }
+    private ShipGunUpgrade upgrade; 
+    private Inventory inventory; 
+    public int WeaponIndex { get; set; }
     private void Start() { this.inventory = FindObjectOfType<Inventory>(); }
     public ShipGunUpgrade Upgrade
     {
@@ -42,6 +44,15 @@ public class UpgradeCell : MonoBehaviour
     {
         return this.upgrade.IsPurchaseable;
     }
+
+    public bool IsOwned
+    {
+        get => this.upgrade.Gun.OwnedByPlayer;
+
+        set => this.upgrade.Gun.OwnedByPlayer = true;
+    }
+        
+
     public Gun GetGun()
     {
         return this.upgrade.Gun;
