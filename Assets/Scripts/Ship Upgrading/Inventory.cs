@@ -53,6 +53,12 @@ public class Inventory : MonoBehaviour
                 File.WriteAllText(Application.dataPath + "/Json/lightWeaponConfiguration.txt", jsonString);
                 AssetDatabase.SaveAssetIfDirty(this.lightWeaponConfigurationSaveFile);
                 break;
+            case ShipSections.heavyWeapons:
+                break;
+            case ShipSections.armour:
+                break;
+            case ShipSections.engine:
+                break;
             default:
                 break;
         }

@@ -40,21 +40,18 @@ public class Playerenginesoundsmanager : MonoBehaviour
     private void Update()
     {
         SetBigThrusterVolume();
-        this.littleThruster.volume = ValueInRangeMapper.Map(this.playerThrottle.Throttle, 0, 1,
-            this.littleThrusterMinVol, this.littleThrusterMaxVol);
+        this.littleThruster.volume = this.playerThrottle.Throttle.MapRange(0, 1, this.littleThrusterMinVol, this.littleThrusterMaxVol);
     }
 
     private void SetBigThrusterVolume()
     {
         if (this.booster.IsBoosting)
         {
-            this.bigThruster.volume = ValueInRangeMapper.Map(this.playerThrottle.Throttle, 0, 1,
-                this.bigThrusterBoostingMinVol, this.bigThrusterBoostingMaxVol);
+            this.bigThruster.volume = this.playerThrottle.Throttle.MapRange(0, 1, this.bigThrusterBoostingMinVol, this.bigThrusterBoostingMaxVol);
         }
         else
         {
-            this.bigThruster.volume = ValueInRangeMapper.Map(this.playerThrottle.Throttle, 0, 1, this.bigThursterMinVol,
-                this.bigThrusterMaxVol);
+            this.bigThruster.volume = this.playerThrottle.Throttle.MapRange(0, 1, this.bigThursterMinVol, this.bigThrusterMaxVol);
         }
     }
 }

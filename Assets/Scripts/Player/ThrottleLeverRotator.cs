@@ -20,7 +20,7 @@ public class ThrottleLeverRotator : MonoBehaviour
     private void Update()
     {
         float throttleAmount = playerThrottle.Throttle;
-        float targetXRotation = ValueInRangeMapper.Map(throttleAmount, 0, 1, minXRotation, maxXRotation);
+        float targetXRotation = throttleAmount.MapRange(0, 1, minXRotation, maxXRotation);
     
         Quaternion localRotation = transform.localRotation;
     

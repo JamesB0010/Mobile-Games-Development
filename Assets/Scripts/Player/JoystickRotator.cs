@@ -25,8 +25,8 @@ public class JoystickRotator : MonoBehaviour
         float pitchAmount = pitchControls.InputtedPitch;
         float rollAmount = rollControls.InputtedRoll;
         
-        float targetZRotation = ValueInRangeMapper.Map(rollAmount, -1, 1, minZ, maxZ);
-        float targetXRotation = ValueInRangeMapper.Map(pitchAmount, -1, 1, minX, maxX);
+        float targetZRotation = rollAmount.MapRange(-1, 1, minZ, maxZ);
+        float targetXRotation = pitchAmount.MapRange(1, 1, minX, maxX);
             
         Quaternion localRotation = transform.localRotation;
             

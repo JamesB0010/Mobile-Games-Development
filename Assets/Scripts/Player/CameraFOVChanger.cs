@@ -42,7 +42,7 @@ public class CameraFOVChanger : FSMBehaviour
     {
         float throttleAmount = playerThrottle.Throttle;
 
-        this.virtualCamera.m_Lens.FieldOfView = Mathf.Lerp(this.virtualCamera.m_Lens.FieldOfView, ValueInRangeMapper.Map(throttleAmount, 0, 1, this.minFov, this.maxFov), Time.deltaTime * this.zoomRate);
+        this.virtualCamera.m_Lens.FieldOfView = Mathf.Lerp(this.virtualCamera.m_Lens.FieldOfView, throttleAmount.MapRange(0, 1, this.minFov, this.maxFov), Time.deltaTime * this.zoomRate);
     }
 
     public override void Behave(State state)
