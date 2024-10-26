@@ -7,7 +7,7 @@ using UnityEditor;
 using UnityEngine;
 
 
-public class PurchaseItem : ItemStoreAction
+public class PurchaseItem : ItemShopAction
 {
     [SerializeField] private FloatReference playerMoney;
     public event Action SelectedCellPurchased;

@@ -7,11 +7,6 @@ using UnityEngine.SceneManagement;
 
 public class GunShopEntrence : MonoBehaviour
 {
-    public void LoadGunShop()
-    {
-        SceneManager.LoadScene(2, LoadSceneMode.Single);
-    }
-
     private void OnTriggerEnter(Collider other)
     {
         GetComponent<PlayableDirector>().Play();

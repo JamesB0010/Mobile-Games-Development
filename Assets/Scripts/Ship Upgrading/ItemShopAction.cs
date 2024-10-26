@@ -4,7 +4,7 @@ using System.IO;
 using UnityEditor;
 using UnityEngine;
 
-public abstract class ItemStoreAction : ScriptableObject
+public abstract class ItemShopAction : ScriptableObject
 {
     [SerializeField] protected PlayerWeaponsState playerWeaponsState;
     [SerializeField] protected TextAsset lightWeaponConfigurationSaveFile;

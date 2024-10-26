@@ -5,7 +5,7 @@ using System.IO;
 using UnityEditor;
 using UnityEngine;
 
-public class EquipItem : ItemStoreAction
+public class EquipItem : ItemShopAction
 {
     public event Action SelectedCellEquipped;
     

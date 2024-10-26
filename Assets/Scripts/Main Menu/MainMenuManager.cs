@@ -16,10 +16,4 @@ public class MainMenuManager : MonoBehaviour
        this.startGameDirector.Play();
    }
 
-   public void IntroSequenceComplete()
-
-   {
-       SceneManager.LoadScene(1, LoadSceneMode.Single);
-   }
-
 }

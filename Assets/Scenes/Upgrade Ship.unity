@@ -921,14 +921,14 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1520440852}
-        m_TargetAssemblyTypeName: UpgradeSceneManager, Assembly-CSharp
-        m_MethodName: ExitShop
-        m_Mode: 1
+      - m_Target: {fileID: 11400000, guid: 7d699ffe0bb1d424fa77bd7e06e3ea1d, type: 2}
+        m_TargetAssemblyTypeName: SceneChanger, Assembly-CSharp
+        m_MethodName: LoadSceneSingle
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -1105,6 +1105,142 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 199626842}
   m_CullTransparentMesh: 1
+--- !u!1 &200020100
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 200020102}
+  - component: {fileID: 200020101}
+  m_Layer: 0
+  m_Name: Inputs
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &200020101
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 200020100}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f7ffce95b243f04f8ddac7c24942970, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  click:
+    m_Name: Click
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 3a9f3fa5-156d-4db2-a0f0-4f621c4e3038
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 6b769575-1f47-4826-8676-161bf69c59eb
+      m_Path: <Mouse>/leftButton
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Click
+      m_Flags: 0
+    - m_Name: 
+      m_Id: 2cdffe67-cac0-4678-873f-4199d546dcf0
+      m_Path: <Touchscreen>/Press
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Click
+      m_Flags: 0
+    m_Flags: 0
+  mousePos:
+    m_Name: Screen Pos
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 9ad23b17-c1f7-4031-8c07-18a20c5618d3
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: e3f59d82-d36b-475a-bd97-bc950fcf5e7b
+      m_Path: <Touchscreen>/position
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Screen Pos
+      m_Flags: 0
+    - m_Name: 
+      m_Id: 3a80f665-8aa8-4a67-b43c-a622e25405aa
+      m_Path: <Mouse>/position
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Screen Pos
+      m_Flags: 0
+    m_Flags: 0
+  ClickEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 318422503}
+        m_TargetAssemblyTypeName: ClickToUiElement, Assembly-CSharp
+        m_MethodName: OnClick
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1267475345}
+        m_TargetAssemblyTypeName: ShopOrbitController, Assembly-CSharp
+        m_MethodName: MouseDown
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  MoveEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1267475345}
+        m_TargetAssemblyTypeName: ShopOrbitController, Assembly-CSharp
+        m_MethodName: OnScreenPos
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!4 &200020102
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 200020100}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 469.4972, y: 204.66818, z: 33.345398}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &210957539
 GameObject:
   m_ObjectHideFlags: 0
@@ -2105,6 +2241,77 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b573c3aeec58f5e48ac93ec88af978b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &318422502
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 318422504}
+  - component: {fileID: 318422503}
+  m_Layer: 0
+  m_Name: Ui Click Raycaster
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &318422503
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 318422502}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a30dc86f95b7d3479992bbbed41299e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cellSelected:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1677320587}
+        m_TargetAssemblyTypeName: SelectedCellHighlight, Assembly-CSharp
+        m_MethodName: SelectCell
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1909742062}
+        m_TargetAssemblyTypeName: UIViewUpdater, Assembly-CSharp
+        m_MethodName: CellSelected
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!4 &318422504
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 318422502}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 552.5279, y: 215.34338, z: 17.703857}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &369525200
 GameObject:
   m_ObjectHideFlags: 0
@@ -5398,9 +5605,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1520440851}
-        m_TargetAssemblyTypeName: ItemPurchaser, Assembly-CSharp
-        m_MethodName: 
+      - m_Target: {fileID: 1520440852}
+        m_TargetAssemblyTypeName: UpgradeSceneManager, Assembly-CSharp
+        m_MethodName: TryPurchaseEquipCell
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 1677320587}
@@ -5537,6 +5744,91 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b573c3aeec58f5e48ac93ec88af978b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1105489849
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1105489851}
+  - component: {fileID: 1105489850}
+  m_Layer: 0
+  m_Name: Ui Animation player
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1105489850
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1105489849}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e1493f71dd1073458d4df680cc5c757, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inventoryAnimationComp: {fileID: 1794142792}
+  closeInventoryAnim: {fileID: 7400000, guid: c18b920d4d2c9e749b04bb29835ab11f, type: 2}
+  CloseInventoryEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 197567904}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 2017502196}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 255419605}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+--- !u!4 &1105489851
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1105489849}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 508.71866, y: 149.86943, z: 10.088745}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1106642944
 GameObject:
   m_ObjectHideFlags: 0
@@ -6381,56 +6673,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rotateAroundPoint: {fileID: 369525201}
   vCam: {fileID: 1250940241}
-  screenPos:
-    m_Name: Screen Pos
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: 9ad23b17-c1f7-4031-8c07-18a20c5618d3
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings:
-    - m_Name: 
-      m_Id: e3f59d82-d36b-475a-bd97-bc950fcf5e7b
-      m_Path: <Touchscreen>/position
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Screen Pos
-      m_Flags: 0
-    - m_Name: 
-      m_Id: 3a80f665-8aa8-4a67-b43c-a622e25405aa
-      m_Path: <Mouse>/position
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Screen Pos
-      m_Flags: 0
-    m_Flags: 0
-  click:
-    m_Name: Click
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: 3a9f3fa5-156d-4db2-a0f0-4f621c4e3038
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings:
-    - m_Name: 
-      m_Id: 6b769575-1f47-4826-8676-161bf69c59eb
-      m_Path: <Mouse>/leftButton
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Click
-      m_Flags: 0
-    - m_Name: 
-      m_Id: 2cdffe67-cac0-4678-873f-4199d546dcf0
-      m_Path: <Touchscreen>/Press
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Click
-      m_Flags: 0
-    m_Flags: 0
   rotationSpeed: 10
 --- !u!1 &1285677337
 GameObject:
@@ -7731,7 +7973,7 @@ GameObject:
   - component: {fileID: 1520440853}
   - component: {fileID: 1520440852}
   m_Layer: 0
-  m_Name: UpgradeManager
+  m_Name: ItemShopActionsManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7749,87 +7991,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e2cfe62eb49a3040bf271d86e0d5314, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  click:
-    m_Name: Click
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: 385e8e3a-54fd-4d66-9516-80def4e2bdb6
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings:
-    - m_Name: 
-      m_Id: ec409fc6-3fa1-49d5-a70d-38870342b3db
-      m_Path: <Mouse>/leftButton
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Click
-      m_Flags: 0
-    - m_Name: 
-      m_Id: 793eb059-09c2-4828-8e38-f78333dc3959
-      m_Path: <Touchscreen>/primaryTouch/tap
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Click
-      m_Flags: 0
-    m_Flags: 0
-  mousePos:
-    m_Name: Mouse Pos
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: 47ceb8c5-cea6-4951-8efd-389ec244a039
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings:
-    - m_Name: 
-      m_Id: 5c7adb29-bb20-495e-a14d-381082cf45ed
-      m_Path: <Mouse>/position
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Mouse Pos
-      m_Flags: 0
-    - m_Name: 
-      m_Id: 90b3e9ae-8ae6-462a-954e-12858aa8d2b0
-      m_Path: <Touchscreen>/position
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Mouse Pos
-      m_Flags: 0
-    m_Flags: 0
-  inventoryAnimationComp: {fileID: 1794142792}
-  closeInventoryAnim: {fileID: 7400000, guid: c18b920d4d2c9e749b04bb29835ab11f, type: 2}
-  purchaseItem: {fileID: 11400000, guid: 515126ee3da7d9b408c3928fa63a3705, type: 2}
-  equipItem: {fileID: 11400000, guid: 251fcebff9d6ad045af2064cd274d9bf, type: 2}
-  cellSelected:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1677320587}
-        m_TargetAssemblyTypeName: SelectedCellHighlight, Assembly-CSharp
-        m_MethodName: SelectCell
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1909742062}
-        m_TargetAssemblyTypeName: UIViewUpdater, Assembly-CSharp
-        m_MethodName: CellSelected
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+  purchaseItemShopAction: {fileID: 11400000, guid: 515126ee3da7d9b408c3928fa63a3705, type: 2}
+  equipItemShopAction: {fileID: 11400000, guid: 251fcebff9d6ad045af2064cd274d9bf, type: 2}
   CellPurchasedEvent:
     m_PersistentCalls:
       m_Calls:
@@ -7859,45 +8022,6 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 2
-  CloseInventoryEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 197567904}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 2017502196}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 255419605}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
         m_CallState: 2
 --- !u!224 &1520440853
 RectTransform:
@@ -11845,3 +11969,6 @@ SceneRoots:
   - {fileID: 2108029087}
   - {fileID: 1520440853}
   - {fileID: 1909742063}
+  - {fileID: 200020102}
+  - {fileID: 318422504}
+  - {fileID: 1105489851}
