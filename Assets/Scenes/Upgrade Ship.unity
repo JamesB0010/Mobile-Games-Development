@@ -1350,8 +1350,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5685de33155458046b8b82a17c33bb37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weaponStatsDisplayer: {fileID: 2017502198}
-  playerWeaponsState: {fileID: 11400000, guid: b5f4d067d7d0e2744ab5cdf2c7f613f0, type: 2}
+  uiViewUpdater: {fileID: 2017502198}
   OnZoomingIn:
     m_PersistentCalls:
       m_Calls:
@@ -2321,8 +2320,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5685de33155458046b8b82a17c33bb37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weaponStatsDisplayer: {fileID: 2017502198}
-  playerWeaponsState: {fileID: 11400000, guid: b5f4d067d7d0e2744ab5cdf2c7f613f0, type: 2}
+  uiViewUpdater: {fileID: 2017502198}
   OnZoomingIn:
     m_PersistentCalls:
       m_Calls:
@@ -3061,8 +3059,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5685de33155458046b8b82a17c33bb37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weaponStatsDisplayer: {fileID: 2017502198}
-  playerWeaponsState: {fileID: 11400000, guid: b5f4d067d7d0e2744ab5cdf2c7f613f0, type: 2}
+  uiViewUpdater: {fileID: 2017502198}
   OnZoomingIn:
     m_PersistentCalls:
       m_Calls:
@@ -4078,8 +4075,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5685de33155458046b8b82a17c33bb37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weaponStatsDisplayer: {fileID: 2017502198}
-  playerWeaponsState: {fileID: 11400000, guid: b5f4d067d7d0e2744ab5cdf2c7f613f0, type: 2}
+  uiViewUpdater: {fileID: 2017502198}
   OnZoomingIn:
     m_PersistentCalls:
       m_Calls:
@@ -4913,8 +4909,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5685de33155458046b8b82a17c33bb37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weaponStatsDisplayer: {fileID: 2017502198}
-  playerWeaponsState: {fileID: 11400000, guid: b5f4d067d7d0e2744ab5cdf2c7f613f0, type: 2}
+  uiViewUpdater: {fileID: 2017502198}
   OnZoomingIn:
     m_PersistentCalls:
       m_Calls:
@@ -5406,10 +5401,10 @@ MonoBehaviour:
       - m_Target: {fileID: 1794142795}
         m_TargetAssemblyTypeName: Inventory, Assembly-CSharp
         m_MethodName: PurchaseSelectedCell
-        m_Mode: 1
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 1677320587}
+          m_ObjectArgumentAssemblyTypeName: SelectedCellHighlight, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -7807,6 +7802,48 @@ MonoBehaviour:
     m_Flags: 0
   inventoryAnimationComp: {fileID: 1794142792}
   closeInventoryAnim: {fileID: 7400000, guid: c18b920d4d2c9e749b04bb29835ab11f, type: 2}
+  cellSelected:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1677320587}
+        m_TargetAssemblyTypeName: SelectedCellHighlight, Assembly-CSharp
+        m_MethodName: SelectCell
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2017502198}
+        m_TargetAssemblyTypeName: WeaponStatsDisplayer, Assembly-CSharp
+        m_MethodName: CellSelected
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  CellPurchased:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2017502198}
+        m_TargetAssemblyTypeName: UIViewUpdater, Assembly-CSharp
+        m_MethodName: SetPurchaseButtonText
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Equip
+          m_BoolArgument: 0
+        m_CallState: 2
   CloseInventoryEvent:
     m_PersistentCalls:
       m_Calls:
@@ -8077,8 +8114,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5685de33155458046b8b82a17c33bb37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weaponStatsDisplayer: {fileID: 2017502198}
-  playerWeaponsState: {fileID: 11400000, guid: b5f4d067d7d0e2744ab5cdf2c7f613f0, type: 2}
+  uiViewUpdater: {fileID: 2017502198}
   OnZoomingIn:
     m_PersistentCalls:
       m_Calls:
@@ -8701,6 +8737,7 @@ GameObject:
   - component: {fileID: 1677320584}
   - component: {fileID: 1677320586}
   - component: {fileID: 1677320585}
+  - component: {fileID: 1677320587}
   m_Layer: 5
   m_Name: Highlight
   m_TagString: Untagged
@@ -8765,6 +8802,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1677320583}
   m_CullTransparentMesh: 1
+--- !u!114 &1677320587
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1677320583}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4f1cc49ccc94a343aaf5e45448c848b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1699746690
 GameObject:
   m_ObjectHideFlags: 0
@@ -9229,7 +9278,7 @@ GameObject:
   - component: {fileID: 1823732409}
   - component: {fileID: 1823732408}
   m_Layer: 5
-  m_Name: Text (TMP) (1)
+  m_Name: Item Cost Field
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10564,6 +10613,9 @@ MonoBehaviour:
   itemNameField: {fileID: 452832897}
   itemFireRateField: {fileID: 486726842}
   damagePerShotField: {fileID: 2014986600}
+  costField: {fileID: 1823732408}
+  purchaseEquipButtonText: {fileID: 1023090527}
+  playerWeaponsState: {fileID: 11400000, guid: b5f4d067d7d0e2744ab5cdf2c7f613f0, type: 2}
 --- !u!1 &2055198800
 GameObject:
   m_ObjectHideFlags: 0

@@ -17,8 +17,15 @@ public class UpgradeCell : MonoBehaviour
     }
     private ShipGunUpgrade upgrade; 
     private Inventory inventory; 
+    
+    
     public int WeaponIndex { get; set; }
-    private void Start() { this.inventory = FindObjectOfType<Inventory>(); }
+
+    private void Start()
+    {
+        this.inventory = FindObjectOfType<Inventory>();
+        
+    }
     public ShipGunUpgrade Upgrade
     {
         set
@@ -37,10 +44,7 @@ public class UpgradeCell : MonoBehaviour
     {
         return this.upgrade.name;
     }
-    public void SetAsSelectedUpgradeCell()
-    {
-        this.inventory.SelectCell(this);
-    }
+    
     public bool Purchaseable()
     {
         return this.upgrade.IsPurchaseable;

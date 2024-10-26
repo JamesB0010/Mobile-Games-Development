@@ -6,6 +6,7 @@ using UnityEngine.Events;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 public class UpgradeSceneManager : MonoBehaviour
@@ -24,6 +25,10 @@ public class UpgradeSceneManager : MonoBehaviour
 
     private Vector2 mousePosition;
 
+
+    [SerializeField] private UnityEvent<UpgradeCell> cellSelected = new UnityEvent<UpgradeCell>();
+
+    [SerializeField] private UnityEvent CellPurchasedEvent = new UnityEvent();
     private void Start()
     {
         click.Enable();
@@ -35,6 +40,11 @@ public class UpgradeSceneManager : MonoBehaviour
     public void ExitShop()
     {
         SceneManager.LoadScene(1, LoadSceneMode.Single);
+    }
+
+    public void CellPurchased()
+    {
+        this.CellPurchasedEvent?.Invoke();
     }
 
     public bool PurchaseGun(Gun gun, float price)
@@ -90,7 +100,7 @@ public class UpgradeSceneManager : MonoBehaviour
             }
             else if (result.gameObject.TryGetComponent(out UpgradeCell upgradeCell))
             {
-                upgradeCell.SetAsSelectedUpgradeCell();
+                this.cellSelected?.Invoke(upgradeCell);
             }
         }
 

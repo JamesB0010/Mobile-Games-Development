@@ -3,13 +3,14 @@ using System.Collections.Generic;
 using Cinemachine;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.Serialization;
 
 public class ShipPartLabel : MonoBehaviour
 {
-    [SerializeField]
-    private WeaponStatsDisplayer weaponStatsDisplayer;
-    [SerializeField]
-    private PlayerWeaponsState playerWeaponsState;
+    [FormerlySerializedAs("weaponStatsDisplayer")] [SerializeField]
+    private UIViewUpdater uiViewUpdater;
+    //[SerializeField]
+    //private PlayerWeaponsState playerWeaponsState;
     
     private Camera playerCam;
 
@@ -45,7 +46,7 @@ public class ShipPartLabel : MonoBehaviour
     {
         OnZoomingIn?.Invoke();
         openInventoryAnim.Play();
-        weaponStatsDisplayer.UpdateText(playerWeaponsState, this.weaponIndex);
+        uiViewUpdater.UpdateText(this.weaponIndex);
 
         for (int i = 0; i < this.cells.Length; i++)
         {
