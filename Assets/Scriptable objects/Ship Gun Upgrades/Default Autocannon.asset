@@ -16,3 +16,4 @@ MonoBehaviour:
   cost: 0
   icon: {fileID: 21300000, guid: 35469ed843615424083bf79d5371bb28, type: 3}
   isPurchaseable: 1
+  ownedSides: 0000000001000000

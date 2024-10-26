@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
@@ -25,16 +26,43 @@ public class UpgradeSceneManager : MonoBehaviour
 
     private Vector2 mousePosition;
 
+    [FormerlySerializedAs("itemPurchaser")] [SerializeField]
+    private PurchaseItem purchaseItem;
+
+    [FormerlySerializedAs("itemEquipper")] [SerializeField] private EquipItem equipItem;
 
     [SerializeField] private UnityEvent<UpgradeCell> cellSelected = new UnityEvent<UpgradeCell>();
 
     [SerializeField] private UnityEvent CellPurchasedEvent = new UnityEvent();
+
+    [SerializeField] private UnityEvent CellEquippedEvent = new UnityEvent();
     private void Start()
     {
         click.Enable();
         click.performed += this.OnClick;
         mousePos.Enable();
         mousePos.performed += this.OnMouseMove;
+        this.purchaseItem.SelectedCellPurchased += this.CellPurchased;
+        this.equipItem.SelectedCellEquipped += this.CellEquipped;
+    }
+
+    public void TryPurchaseEquipCell(SelectedCellHighlight highlight)
+    {
+        UpgradeCell cell = highlight.SelectedCell;
+
+        bool cellCanBeEquipped = cell.IsOwned && 
+                                 cell.GunOwnedByThisSide();
+        
+        if (cellCanBeEquipped) 
+            this.equipItem.EquipCell(cell);
+        else
+            this.purchaseItem.PurchaseCell(cell);
+    }
+
+    private void OnDestroy()
+    {
+        this.purchaseItem.SelectedCellPurchased -= this.CellPurchased;
+        this.equipItem.SelectedCellEquipped -= this.CellEquipped;
     }
 
     public void ExitShop()
@@ -47,17 +75,9 @@ public class UpgradeSceneManager : MonoBehaviour
         this.CellPurchasedEvent?.Invoke();
     }
 
-    public bool PurchaseGun(Gun gun, float price)
+    public void CellEquipped()
     {
-        if (price <= (float)playerMoney.GetValue())
-        {
-            float newBalance = (float)playerMoney.GetValue() - price;
-            this.playerMoney.SetValue(newBalance);
-            
-            //Do gun purchasing logic here
-            return true;
-        }
-        return false;
+        this.CellEquippedEvent?.Invoke();
     }
 
     private void OnMouseMove(InputAction.CallbackContext ctx)

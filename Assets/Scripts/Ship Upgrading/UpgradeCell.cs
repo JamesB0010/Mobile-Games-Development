@@ -16,14 +16,14 @@ public class UpgradeCell : MonoBehaviour
         set => this.shipSection = value;
     }
     private ShipGunUpgrade upgrade; 
-    private Inventory inventory; 
+    private PurchaseItem _purchaseItem; 
     
     
     public int WeaponIndex { get; set; }
 
     private void Start()
     {
-        this.inventory = FindObjectOfType<Inventory>();
+        this._purchaseItem = FindObjectOfType<PurchaseItem>();
         
     }
     public ShipGunUpgrade Upgrade

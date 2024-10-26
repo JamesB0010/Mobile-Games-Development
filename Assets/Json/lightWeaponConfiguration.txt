@@ -1,1 +1,1 @@
-{"lightGunReferences":["Heavy Autocannon","Default Autocannon"]}
+{"lightGunReferences":["Minigun","Light Autocannon"]}
