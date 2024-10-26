@@ -22,7 +22,7 @@ public class UIViewUpdater : MonoBehaviour
         this.playerMoneyField.text = ((float)playerMoney.GetValue()).ToString();
     }
 
-    public void UpdateText( int side)
+    public void UpdateItemDetailsText( int side)
     {
         Gun gun = this.playerWeaponsState.Guns[side];
         itemNameField.text = gun.name;
@@ -34,8 +34,8 @@ public class UIViewUpdater : MonoBehaviour
 
     public void CellSelected(UpgradeCell selectedCell)
     {
-        this.costField.text = selectedCell.Cost().ToString();
-        this.purchaseEquipButtonText.text = selectedCell.IsOwned == false ? "Purchase" : "Equip";
+        this.costField.text = selectedCell.Upgrade.Cost.ToString();
+        this.purchaseEquipButtonText.text = selectedCell.Upgrade.Gun.OwnedByPlayer == false ? "Purchase" : "Equip";
     }
 
     public void CellPurchased(SelectedCellHighlight highlight)
@@ -56,7 +56,7 @@ public class UIViewUpdater : MonoBehaviour
     }
     private void UpdateUiBasedOnGun(UpgradeCell cell)
     {
-        Gun gun = cell.GetGun();
+        Gun gun = cell.Upgrade.Gun;
         itemNameField.text = gun.name;
                 
         this.itemFireRateField.text = gun.TimeBetweenBullets.ToString();

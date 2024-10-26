@@ -46,7 +46,7 @@ public class ShipPartLabel : MonoBehaviour
     {
         OnZoomingIn?.Invoke();
         openInventoryAnim.Play();
-        uiViewUpdater.UpdateText(this.weaponIndex);
+        uiViewUpdater.UpdateItemDetailsText(this.weaponIndex);
 
         for (int i = 0; i < this.cells.Length; i++)
         {

@@ -16,59 +16,32 @@ public class UpgradeCell : MonoBehaviour
         set => this.shipSection = value;
     }
     private ShipGunUpgrade upgrade; 
-    private PurchaseItem _purchaseItem; 
-    
-    
-    public int WeaponIndex { get; set; }
-
-    private void Start()
-    {
-        this._purchaseItem = FindObjectOfType<PurchaseItem>();
-        
-    }
     public ShipGunUpgrade Upgrade
     {
+        get => this.upgrade;
         set
         {
             this.upgrade = value;
-            GetComponent<UnityEngine.UI.Image>().sprite = this.upgrade.Icon;
-            string textToDisplay = this.upgrade.IsPurchaseable ? this.upgrade.name : "";
-            transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = textToDisplay;
+            UpdateUpgradeCellUI();
         }
     }
-    public float Cost()
+
+    private void UpdateUpgradeCellUI()
     {
-        return this.upgrade.Cost;
-    }
-    public string UpgradeName()
-    {
-        return this.upgrade.name;
-    }
-    
-    public bool Purchaseable()
-    {
-        return this.upgrade.IsPurchaseable;
+        GetComponent<UnityEngine.UI.Image>().sprite = this.upgrade.Icon;
+        string textToDisplay = this.upgrade.IsPurchaseable ? this.upgrade.name : "";
+        transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = textToDisplay;
     }
 
-    public bool IsOwned
-    {
-        get => this.upgrade.Gun.OwnedByPlayer;
-
-        set => this.upgrade.Gun.OwnedByPlayer = true;
-    }
-
-    public Gun GetGun()
-    {
-        return this.upgrade.Gun;
-    }
+    public int WeaponIndex { get; set; }
 
     public bool GunOwnedByThisSide()
     {
-        return this.upgrade.ownedSides.Contains(WeaponIndex);
+        return this.upgrade.OwnedSides.Contains(WeaponIndex);
     }
 
     public void AddThisSideToUpgradeOwnedSides()
     {
-        this.upgrade.ownedSides.Add(this.WeaponIndex);
+        this.upgrade.OwnedSides.Add(this.WeaponIndex);
     }
 }

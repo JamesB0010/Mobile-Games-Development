@@ -12,8 +12,6 @@ using UnityEngine.UI;
 
 public class UpgradeSceneManager : MonoBehaviour
 {
-    [SerializeField] private FloatReference playerMoney;
-
     [SerializeField] private InputAction click;
 
     [SerializeField] private InputAction mousePos;
@@ -50,7 +48,7 @@ public class UpgradeSceneManager : MonoBehaviour
     {
         UpgradeCell cell = highlight.SelectedCell;
 
-        bool cellCanBeEquipped = cell.IsOwned && 
+        bool cellCanBeEquipped = cell.Upgrade.Gun.OwnedByPlayer && 
                                  cell.GunOwnedByThisSide();
         
         if (cellCanBeEquipped) 

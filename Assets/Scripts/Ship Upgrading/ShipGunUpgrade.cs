@@ -17,5 +17,8 @@ public class ShipGunUpgrade : ScriptableObject
     [SerializeField] private bool isPurchaseable;
     public bool IsPurchaseable => this.isPurchaseable;
 
-    public List<int> ownedSides = new List<int>();
+    [SerializeField]
+    private List<int> ownedSides = new List<int>();
+
+    public List<int> OwnedSides => this.ownedSides;
 }

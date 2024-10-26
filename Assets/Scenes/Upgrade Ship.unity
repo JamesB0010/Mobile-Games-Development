@@ -1350,7 +1350,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5685de33155458046b8b82a17c33bb37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  uiViewUpdater: {fileID: 2017502198}
+  uiViewUpdater: {fileID: 1909742062}
   OnZoomingIn:
     m_PersistentCalls:
       m_Calls:
@@ -2320,7 +2320,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5685de33155458046b8b82a17c33bb37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  uiViewUpdater: {fileID: 2017502198}
+  uiViewUpdater: {fileID: 1909742062}
   OnZoomingIn:
     m_PersistentCalls:
       m_Calls:
@@ -2603,7 +2603,7 @@ GameObject:
   - component: {fileID: 486726843}
   - component: {fileID: 486726842}
   m_Layer: 5
-  m_Name: Text (TMP) (6)
+  m_Name: Fire Rate
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3059,7 +3059,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5685de33155458046b8b82a17c33bb37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  uiViewUpdater: {fileID: 2017502198}
+  uiViewUpdater: {fileID: 1909742062}
   OnZoomingIn:
     m_PersistentCalls:
       m_Calls:
@@ -4075,7 +4075,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5685de33155458046b8b82a17c33bb37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  uiViewUpdater: {fileID: 2017502198}
+  uiViewUpdater: {fileID: 1909742062}
   OnZoomingIn:
     m_PersistentCalls:
       m_Calls:
@@ -4909,7 +4909,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5685de33155458046b8b82a17c33bb37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  uiViewUpdater: {fileID: 2017502198}
+  uiViewUpdater: {fileID: 1909742062}
   OnZoomingIn:
     m_PersistentCalls:
       m_Calls:
@@ -7480,7 +7480,7 @@ GameObject:
   - component: {fileID: 1503079699}
   - component: {fileID: 1503079698}
   m_Layer: 5
-  m_Name: Text (TMP) (1)
+  m_Name: Item Name Field
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7749,7 +7749,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e2cfe62eb49a3040bf271d86e0d5314, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerMoney: {fileID: 11400000, guid: 384a2dd2a2371ab4a992b55471c6b828, type: 2}
   click:
     m_Name: Click
     m_Type: 0
@@ -7802,8 +7801,8 @@ MonoBehaviour:
     m_Flags: 0
   inventoryAnimationComp: {fileID: 1794142792}
   closeInventoryAnim: {fileID: 7400000, guid: c18b920d4d2c9e749b04bb29835ab11f, type: 2}
-  itemPurchaser: {fileID: 11400000, guid: 515126ee3da7d9b408c3928fa63a3705, type: 2}
-  itemEquipper: {fileID: 11400000, guid: 251fcebff9d6ad045af2064cd274d9bf, type: 2}
+  purchaseItem: {fileID: 11400000, guid: 515126ee3da7d9b408c3928fa63a3705, type: 2}
+  equipItem: {fileID: 11400000, guid: 251fcebff9d6ad045af2064cd274d9bf, type: 2}
   cellSelected:
     m_PersistentCalls:
       m_Calls:
@@ -7819,8 +7818,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 2017502198}
-        m_TargetAssemblyTypeName: WeaponStatsDisplayer, Assembly-CSharp
+      - m_Target: {fileID: 1909742062}
+        m_TargetAssemblyTypeName: UIViewUpdater, Assembly-CSharp
         m_MethodName: CellSelected
         m_Mode: 0
         m_Arguments:
@@ -7834,7 +7833,7 @@ MonoBehaviour:
   CellPurchasedEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2017502198}
+      - m_Target: {fileID: 1909742062}
         m_TargetAssemblyTypeName: UIViewUpdater, Assembly-CSharp
         m_MethodName: CellPurchased
         m_Mode: 2
@@ -7849,7 +7848,7 @@ MonoBehaviour:
   CellEquippedEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2017502198}
+      - m_Target: {fileID: 1909742062}
         m_TargetAssemblyTypeName: UIViewUpdater, Assembly-CSharp
         m_MethodName: CellEquipped
         m_Mode: 2
@@ -8131,7 +8130,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5685de33155458046b8b82a17c33bb37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  uiViewUpdater: {fileID: 2017502198}
+  uiViewUpdater: {fileID: 1909742062}
   OnZoomingIn:
     m_PersistentCalls:
       m_Calls:
@@ -9664,6 +9663,58 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1884731505}
   m_CullTransparentMesh: 1
+--- !u!1 &1909742061
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1909742063}
+  - component: {fileID: 1909742062}
+  m_Layer: 5
+  m_Name: UiViewUpdater
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1909742062
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1909742061}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29b7762c1ccb954439b57e579508e640, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemNameField: {fileID: 452832897}
+  itemFireRateField: {fileID: 486726842}
+  damagePerShotField: {fileID: 2014986600}
+  costField: {fileID: 1823732408}
+  purchaseEquipButtonText: {fileID: 1023090527}
+  playerMoneyField: {fileID: 1117392923}
+  playerWeaponsState: {fileID: 11400000, guid: b5f4d067d7d0e2744ab5cdf2c7f613f0, type: 2}
+  playerMoney: {fileID: 11400000, guid: 384a2dd2a2371ab4a992b55471c6b828, type: 2}
+--- !u!4 &1909742063
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1909742061}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 84.239525, y: 855.331, z: 0}
+  m_LocalScale: {x: 0.27854714, y: 0.27854714, z: 0.27854714}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1913455153
 GameObject:
   m_ObjectHideFlags: 0
@@ -10429,7 +10480,7 @@ GameObject:
   - component: {fileID: 2014986601}
   - component: {fileID: 2014986600}
   m_Layer: 5
-  m_Name: Text (TMP) (7)
+  m_Name: Damage per shot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10560,7 +10611,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2017502197}
-  - component: {fileID: 2017502198}
   m_Layer: 5
   m_Name: Gun
   m_TagString: Untagged
@@ -10594,26 +10644,6 @@ RectTransform:
   m_AnchoredPosition: {x: 99.4, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2017502198
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2017502196}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 29b7762c1ccb954439b57e579508e640, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemNameField: {fileID: 452832897}
-  itemFireRateField: {fileID: 486726842}
-  damagePerShotField: {fileID: 2014986600}
-  costField: {fileID: 1823732408}
-  purchaseEquipButtonText: {fileID: 1023090527}
-  playerMoneyField: {fileID: 1117392923}
-  playerWeaponsState: {fileID: 11400000, guid: b5f4d067d7d0e2744ab5cdf2c7f613f0, type: 2}
-  playerMoney: {fileID: 11400000, guid: 384a2dd2a2371ab4a992b55471c6b828, type: 2}
 --- !u!1 &2055198800
 GameObject:
   m_ObjectHideFlags: 0
@@ -11814,3 +11844,4 @@ SceneRoots:
   - {fileID: 1986553643}
   - {fileID: 2108029087}
   - {fileID: 1520440853}
+  - {fileID: 1909742063}

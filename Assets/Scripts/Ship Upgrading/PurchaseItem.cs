@@ -17,11 +17,11 @@ public class PurchaseItem : ItemStoreAction
             if (!IsAbleToMakePurchase(cell)) 
                 return;
 
-            DeductFromPlayerMoney(cell.Cost());
+            DeductFromPlayerMoney(cell.Upgrade.Cost);
 
             SaveToJson(cell);
             
-            cell.IsOwned = true;
+            cell.Upgrade.Gun.OwnedByPlayer = true;
             this.SelectedCellPurchased?.Invoke();
         }
 
@@ -29,7 +29,7 @@ public class PurchaseItem : ItemStoreAction
     private bool IsAbleToMakePurchase(UpgradeCell cell)
     {
         float PlayerMoneyFloat = (float)this.playerMoney.GetValue();
-        bool unableToMakePurchase = cell.Cost() > PlayerMoneyFloat || !cell.Purchaseable();
+        bool unableToMakePurchase = cell.Upgrade.Cost > PlayerMoneyFloat || !cell.Upgrade.IsPurchaseable;
         if (unableToMakePurchase)
         {
             return false;
