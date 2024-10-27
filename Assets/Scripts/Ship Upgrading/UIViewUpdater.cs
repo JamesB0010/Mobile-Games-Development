@@ -62,7 +62,7 @@ public class UIViewUpdater : MonoBehaviour
         this.costField.text = selectedCell.Upgrade.Cost.ToString();
         if(selectedCell.Upgrade.IsPurchaseable)
             
-            this.purchaseEquipButtonText.text = /* enough owned?*/ false == false ? "Purchase" : "Equip";
+            this.purchaseEquipButtonText.text = OwnedUpgradesCounter.Instance.GetUpgradeCount(selectedCell.Upgrade) <= 0 ? "Purchase" : "Equip";
     }
 
     public void CellPurchased(SelectedCellHighlight highlight)
