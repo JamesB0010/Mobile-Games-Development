@@ -14,6 +14,6 @@ public class PlayerShipStateLoader : MonoBehaviour
         string jsonString = this.lightWeaponsJson.text;
         SavedLightWeaponsJsonObject lightWeaponsObject = JsonUtility.FromJson<SavedLightWeaponsJsonObject>(jsonString);
 
-        this.playerWeaponsState.Guns = lightWeaponsObject.GetSavedGuns();
+        this.playerWeaponsState.LightGuns = lightWeaponsObject.GetSavedGuns();
     }
 }

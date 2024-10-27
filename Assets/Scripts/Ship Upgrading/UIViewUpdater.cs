@@ -22,20 +22,46 @@ public class UIViewUpdater : MonoBehaviour
         this.playerMoneyField.text = ((float)playerMoney.GetValue()).ToString();
     }
 
-    public void UpdateItemDetailsText( int side)
+    public void UpdateItemDetailsText(ShipSections shipSection, int side = 0)
     {
-        Gun gun = this.playerWeaponsState.Guns[side];
-        itemNameField.text = gun.name;
+        switch (shipSection)
+        {
+            case ShipSections.lightWeapons:
+                Gun lightGun = this.playerWeaponsState.LightGuns[side];
+                this.SetItemStatsUi(lightGun);
+                break;
+            case ShipSections.heavyWeapons:
+                Gun heavyGun = this.playerWeaponsState.HeavyGuns[side];
+                this.SetItemStatsUi(heavyGun);
+                break;
+            case ShipSections.armour:
+                Gun armour = this.playerWeaponsState.Shield;
+                this.SetItemStatsUi(armour);
+                break;
+            case ShipSections.engine:
+                Gun engine = this.playerWeaponsState.Shield;
+                this.SetItemStatsUi(engine);
+                break;
+            default:
+                break;
+        }
+        
+    }
 
-        this.itemFireRateField.text = gun.TimeBetweenBullets.ToString();
+    private void SetItemStatsUi(Gun lightGun)
+    {
+        itemNameField.text = lightGun.name;
 
-        this.damagePerShotField.text = gun.BulletDamage.ToString();
+        this.itemFireRateField.text = lightGun.TimeBetweenBullets.ToString();
+
+        this.damagePerShotField.text = lightGun.BulletDamage.ToString();
     }
 
     public void CellSelected(UpgradeCell selectedCell)
     {
         this.costField.text = selectedCell.Upgrade.Cost.ToString();
-        this.purchaseEquipButtonText.text = selectedCell.Upgrade.Gun.OwnedByPlayer == false ? "Purchase" : "Equip";
+        if(selectedCell.Upgrade.IsPurchaseable)
+            this.purchaseEquipButtonText.text = selectedCell.Upgrade.Gun.OwnedByPlayer == false ? "Purchase" : "Equip";
     }
 
     public void CellPurchased(SelectedCellHighlight highlight)

@@ -12,6 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9482400910c60a646887470372279e73, type: 3}
   m_Name: PlayerWeaponsState
   m_EditorClassIdentifier: 
-  guns:
+  lightGuns:
   - {fileID: 11400000, guid: aaac8ad849c909441aedf5871f7ff83e, type: 2}
   - {fileID: 11400000, guid: aaac8ad849c909441aedf5871f7ff83e, type: 2}
+  heavyGuns:
+  - {fileID: 11400000, guid: aaac8ad849c909441aedf5871f7ff83e, type: 2}
+  - {fileID: 11400000, guid: aaac8ad849c909441aedf5871f7ff83e, type: 2}
+  shield: {fileID: 11400000, guid: aaac8ad849c909441aedf5871f7ff83e, type: 2}
+  engine: {fileID: 11400000, guid: aaac8ad849c909441aedf5871f7ff83e, type: 2}

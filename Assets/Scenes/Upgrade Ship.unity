@@ -1455,7 +1455,8 @@ GameObject:
   - component: {fileID: 227054708}
   - component: {fileID: 227054711}
   - component: {fileID: 227054710}
-  - component: {fileID: 227054709}
+  - component: {fileID: 227054712}
+  - component: {fileID: 227054713}
   m_Layer: 5
   m_Name: LightWeaponLeftLabel
   m_TagString: Untagged
@@ -1482,117 +1483,6 @@ RectTransform:
   m_AnchoredPosition: {x: -1031.792, y: -764.0548}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &227054709
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 227054707}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5685de33155458046b8b82a17c33bb37, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  uiViewUpdater: {fileID: 1909742062}
-  OnZoomingIn:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1106642944}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 1267475343}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1794142792}
-        m_TargetAssemblyTypeName: UnityEngine.Animation, UnityEngine
-        m_MethodName: set_clip
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 7400000, guid: 030f7c349556c474d8b6797af0697eab, type: 2}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.AnimationClip, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 197567904}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 255419605}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 2017502196}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-  openInventoryAnim: {fileID: 1794142792}
-  ShipGunUpgrades:
-  - {fileID: 11400000, guid: 0b50d9da9d8c7b2468cf5ac53a772479, type: 2}
-  - {fileID: 11400000, guid: 68d72bc779fb10b499771704619568e9, type: 2}
-  - {fileID: 11400000, guid: 3e756e8e4d045534aaca7b5076153425, type: 2}
-  - {fileID: 11400000, guid: 78c56c7c38b32d34db7a8f356085d5cb, type: 2}
-  - {fileID: 11400000, guid: fc8c3860e8ecb4b499394ef4e2a04889, type: 2}
-  - {fileID: 11400000, guid: fc8c3860e8ecb4b499394ef4e2a04889, type: 2}
-  - {fileID: 11400000, guid: fc8c3860e8ecb4b499394ef4e2a04889, type: 2}
-  - {fileID: 11400000, guid: fc8c3860e8ecb4b499394ef4e2a04889, type: 2}
-  - {fileID: 11400000, guid: fc8c3860e8ecb4b499394ef4e2a04889, type: 2}
-  cells:
-  - {fileID: 1968275997}
-  - {fileID: 1627387945}
-  - {fileID: 1089418634}
-  - {fileID: 876203792}
-  - {fileID: 314204788}
-  - {fileID: 604686257}
-  - {fileID: 1493545661}
-  - {fileID: 686335782}
-  - {fileID: 1726709883}
-  weaponIndex: 0
-  shipSection: 0
 --- !u!114 &227054710
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1631,6 +1521,34 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 227054707}
   m_CullTransparentMesh: 1
+--- !u!114 &227054712
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 227054707}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5011df8786b92a94eae7a73da30984fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &227054713
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 227054707}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5685de33155458046b8b82a17c33bb37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  upgrades: {fileID: 11400000, guid: d10368684a05e4e488422165fb84d446, type: 2}
+  shipSectionCamera: {fileID: 1106642945}
+  shipSection: 0
+  weaponIndex: 0
 --- !u!1 &255419605
 GameObject:
   m_ObjectHideFlags: 0
@@ -2501,7 +2419,8 @@ GameObject:
   - component: {fileID: 440922417}
   - component: {fileID: 440922420}
   - component: {fileID: 440922419}
-  - component: {fileID: 440922418}
+  - component: {fileID: 440922421}
+  - component: {fileID: 440922422}
   m_Layer: 5
   m_Name: EngineLabel
   m_TagString: Untagged
@@ -2528,117 +2447,6 @@ RectTransform:
   m_AnchoredPosition: {x: -1010.643, y: -763.3019}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &440922418
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 440922416}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5685de33155458046b8b82a17c33bb37, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  uiViewUpdater: {fileID: 1909742062}
-  OnZoomingIn:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1937570169}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 1267475343}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1794142792}
-        m_TargetAssemblyTypeName: UnityEngine.Animation, UnityEngine
-        m_MethodName: set_clip
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 7400000, guid: 030f7c349556c474d8b6797af0697eab, type: 2}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.AnimationClip, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 197567904}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 255419605}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 2017502196}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-  openInventoryAnim: {fileID: 1794142792}
-  ShipGunUpgrades:
-  - {fileID: 11400000, guid: fc8c3860e8ecb4b499394ef4e2a04889, type: 2}
-  - {fileID: 11400000, guid: fc8c3860e8ecb4b499394ef4e2a04889, type: 2}
-  - {fileID: 11400000, guid: fc8c3860e8ecb4b499394ef4e2a04889, type: 2}
-  - {fileID: 11400000, guid: fc8c3860e8ecb4b499394ef4e2a04889, type: 2}
-  - {fileID: 11400000, guid: fc8c3860e8ecb4b499394ef4e2a04889, type: 2}
-  - {fileID: 11400000, guid: fc8c3860e8ecb4b499394ef4e2a04889, type: 2}
-  - {fileID: 11400000, guid: fc8c3860e8ecb4b499394ef4e2a04889, type: 2}
-  - {fileID: 11400000, guid: fc8c3860e8ecb4b499394ef4e2a04889, type: 2}
-  - {fileID: 11400000, guid: fc8c3860e8ecb4b499394ef4e2a04889, type: 2}
-  cells:
-  - {fileID: 1968275997}
-  - {fileID: 1627387945}
-  - {fileID: 1089418634}
-  - {fileID: 876203792}
-  - {fileID: 314204788}
-  - {fileID: 604686257}
-  - {fileID: 1493545661}
-  - {fileID: 686335782}
-  - {fileID: 1726709883}
-  weaponIndex: 0
-  shipSection: 3
 --- !u!114 &440922419
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2677,6 +2485,34 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 440922416}
   m_CullTransparentMesh: 1
+--- !u!114 &440922421
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 440922416}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5011df8786b92a94eae7a73da30984fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &440922422
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 440922416}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5685de33155458046b8b82a17c33bb37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  upgrades: {fileID: 11400000, guid: 3add166f3419a144c96d793357e8fd1f, type: 2}
+  shipSectionCamera: {fileID: 1937570170}
+  shipSection: 3
+  weaponIndex: 0
 --- !u!1 &452832895
 GameObject:
   m_ObjectHideFlags: 0
@@ -3240,7 +3076,8 @@ GameObject:
   - component: {fileID: 600569912}
   - component: {fileID: 600569915}
   - component: {fileID: 600569914}
-  - component: {fileID: 600569913}
+  - component: {fileID: 600569916}
+  - component: {fileID: 600569917}
   m_Layer: 5
   m_Name: ShieldLabel
   m_TagString: Untagged
@@ -3267,117 +3104,6 @@ RectTransform:
   m_AnchoredPosition: {x: -1022.537, y: -762.64}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &600569913
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 600569911}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5685de33155458046b8b82a17c33bb37, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  uiViewUpdater: {fileID: 1909742062}
-  OnZoomingIn:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 29005969}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 1267475343}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1794142792}
-        m_TargetAssemblyTypeName: UnityEngine.Animation, UnityEngine
-        m_MethodName: set_clip
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 7400000, guid: 030f7c349556c474d8b6797af0697eab, type: 2}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.AnimationClip, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 197567904}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 255419605}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 2017502196}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-  openInventoryAnim: {fileID: 1794142792}
-  ShipGunUpgrades:
-  - {fileID: 11400000, guid: fc8c3860e8ecb4b499394ef4e2a04889, type: 2}
-  - {fileID: 11400000, guid: fc8c3860e8ecb4b499394ef4e2a04889, type: 2}
-  - {fileID: 11400000, guid: fc8c3860e8ecb4b499394ef4e2a04889, type: 2}
-  - {fileID: 11400000, guid: fc8c3860e8ecb4b499394ef4e2a04889, type: 2}
-  - {fileID: 11400000, guid: fc8c3860e8ecb4b499394ef4e2a04889, type: 2}
-  - {fileID: 11400000, guid: fc8c3860e8ecb4b499394ef4e2a04889, type: 2}
-  - {fileID: 11400000, guid: fc8c3860e8ecb4b499394ef4e2a04889, type: 2}
-  - {fileID: 11400000, guid: fc8c3860e8ecb4b499394ef4e2a04889, type: 2}
-  - {fileID: 11400000, guid: fc8c3860e8ecb4b499394ef4e2a04889, type: 2}
-  cells:
-  - {fileID: 1968275997}
-  - {fileID: 1627387945}
-  - {fileID: 1089418634}
-  - {fileID: 876203792}
-  - {fileID: 314204788}
-  - {fileID: 604686257}
-  - {fileID: 1493545661}
-  - {fileID: 686335782}
-  - {fileID: 1726709883}
-  weaponIndex: 0
-  shipSection: 2
 --- !u!114 &600569914
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3416,6 +3142,34 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 600569911}
   m_CullTransparentMesh: 1
+--- !u!114 &600569916
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 600569911}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5011df8786b92a94eae7a73da30984fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &600569917
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 600569911}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5685de33155458046b8b82a17c33bb37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  upgrades: {fileID: 11400000, guid: 53aec7911bc70ca4fb47c4963c44439d, type: 2}
+  shipSectionCamera: {fileID: 29005970}
+  shipSection: 2
+  weaponIndex: 0
 --- !u!1 &604686253
 GameObject:
   m_ObjectHideFlags: 0
@@ -4265,7 +4019,8 @@ GameObject:
   - component: {fileID: 800659896}
   - component: {fileID: 800659899}
   - component: {fileID: 800659898}
-  - component: {fileID: 800659897}
+  - component: {fileID: 800659900}
+  - component: {fileID: 800659901}
   m_Layer: 5
   m_Name: HeavyWeaponRightLabel
   m_TagString: Untagged
@@ -4292,117 +4047,6 @@ RectTransform:
   m_AnchoredPosition: {x: -1022.6775, y: -768.6299}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &800659897
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 800659895}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5685de33155458046b8b82a17c33bb37, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  uiViewUpdater: {fileID: 1909742062}
-  OnZoomingIn:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2061721213}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 1267475343}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1794142792}
-        m_TargetAssemblyTypeName: UnityEngine.Animation, UnityEngine
-        m_MethodName: set_clip
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 7400000, guid: 030f7c349556c474d8b6797af0697eab, type: 2}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.AnimationClip, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 197567904}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 255419605}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 2017502196}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-  openInventoryAnim: {fileID: 1794142792}
-  ShipGunUpgrades:
-  - {fileID: 11400000, guid: fc8c3860e8ecb4b499394ef4e2a04889, type: 2}
-  - {fileID: 11400000, guid: fc8c3860e8ecb4b499394ef4e2a04889, type: 2}
-  - {fileID: 11400000, guid: fc8c3860e8ecb4b499394ef4e2a04889, type: 2}
-  - {fileID: 11400000, guid: fc8c3860e8ecb4b499394ef4e2a04889, type: 2}
-  - {fileID: 11400000, guid: fc8c3860e8ecb4b499394ef4e2a04889, type: 2}
-  - {fileID: 11400000, guid: fc8c3860e8ecb4b499394ef4e2a04889, type: 2}
-  - {fileID: 11400000, guid: fc8c3860e8ecb4b499394ef4e2a04889, type: 2}
-  - {fileID: 11400000, guid: fc8c3860e8ecb4b499394ef4e2a04889, type: 2}
-  - {fileID: 11400000, guid: fc8c3860e8ecb4b499394ef4e2a04889, type: 2}
-  cells:
-  - {fileID: 1968275997}
-  - {fileID: 1627387945}
-  - {fileID: 1089418634}
-  - {fileID: 876203792}
-  - {fileID: 314204788}
-  - {fileID: 604686257}
-  - {fileID: 1493545661}
-  - {fileID: 686335782}
-  - {fileID: 1726709883}
-  weaponIndex: 1
-  shipSection: 1
 --- !u!114 &800659898
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4441,6 +4085,34 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 800659895}
   m_CullTransparentMesh: 1
+--- !u!114 &800659900
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 800659895}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5011df8786b92a94eae7a73da30984fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &800659901
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 800659895}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5685de33155458046b8b82a17c33bb37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  upgrades: {fileID: 11400000, guid: 61b1208ab748a8840a830c31196cb356, type: 2}
+  shipSectionCamera: {fileID: 2061721214}
+  shipSection: 1
+  weaponIndex: 1
 --- !u!4 &840632548 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8433507581721789825, guid: 6ac3f90453b63674691a4d74ab6fd07b, type: 3}
@@ -5008,6 +4680,83 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8433507581721789825, guid: 6ac3f90453b63674691a4d74ab6fd07b, type: 3}
   m_PrefabInstance: {fileID: 4652780463042161955}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1017967624
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1017967625}
+  - component: {fileID: 1017967626}
+  m_Layer: 0
+  m_Name: ShipPartLabelDirector
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1017967625
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1017967624}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2112129366}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1017967626
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1017967624}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f4094b67d41d2c408ee09193fbbc02d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shipPartLabels:
+  - {fileID: 440922422}
+  - {fileID: 600569917}
+  - {fileID: 227054713}
+  - {fileID: 1046949910}
+  - {fileID: 800659901}
+  - {fileID: 1605249147}
+  uiUpdater: {fileID: 1909742062}
+  cells:
+  - {fileID: 1968275997}
+  - {fileID: 1627387945}
+  - {fileID: 1089418634}
+  - {fileID: 876203792}
+  - {fileID: 314204788}
+  - {fileID: 604686257}
+  - {fileID: 1493545661}
+  - {fileID: 686335782}
+  - {fileID: 1726709883}
+  ShipPartLabelClicked:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1105489850}
+        m_TargetAssemblyTypeName: ShopUiAnimationPlayer, Assembly-CSharp
+        m_MethodName: OpenInventory
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1023090525
 GameObject:
   m_ObjectHideFlags: 0
@@ -5153,7 +4902,8 @@ GameObject:
   - component: {fileID: 1046949905}
   - component: {fileID: 1046949908}
   - component: {fileID: 1046949907}
-  - component: {fileID: 1046949906}
+  - component: {fileID: 1046949909}
+  - component: {fileID: 1046949910}
   m_Layer: 5
   m_Name: LightWeaponRightLabel
   m_TagString: Untagged
@@ -5180,117 +4930,6 @@ RectTransform:
   m_AnchoredPosition: {x: -1031.299, y: -764.05664}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1046949906
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1046949904}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5685de33155458046b8b82a17c33bb37, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  uiViewUpdater: {fileID: 1909742062}
-  OnZoomingIn:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 145424505}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 1267475343}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1794142792}
-        m_TargetAssemblyTypeName: UnityEngine.Animation, UnityEngine
-        m_MethodName: set_clip
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 7400000, guid: 030f7c349556c474d8b6797af0697eab, type: 2}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.AnimationClip, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 197567904}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 255419605}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 2017502196}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-  openInventoryAnim: {fileID: 1794142792}
-  ShipGunUpgrades:
-  - {fileID: 11400000, guid: 0b50d9da9d8c7b2468cf5ac53a772479, type: 2}
-  - {fileID: 11400000, guid: 68d72bc779fb10b499771704619568e9, type: 2}
-  - {fileID: 11400000, guid: 3e756e8e4d045534aaca7b5076153425, type: 2}
-  - {fileID: 11400000, guid: 78c56c7c38b32d34db7a8f356085d5cb, type: 2}
-  - {fileID: 11400000, guid: fc8c3860e8ecb4b499394ef4e2a04889, type: 2}
-  - {fileID: 11400000, guid: fc8c3860e8ecb4b499394ef4e2a04889, type: 2}
-  - {fileID: 11400000, guid: fc8c3860e8ecb4b499394ef4e2a04889, type: 2}
-  - {fileID: 11400000, guid: fc8c3860e8ecb4b499394ef4e2a04889, type: 2}
-  - {fileID: 11400000, guid: fc8c3860e8ecb4b499394ef4e2a04889, type: 2}
-  cells:
-  - {fileID: 1968275997}
-  - {fileID: 1627387945}
-  - {fileID: 1089418634}
-  - {fileID: 876203792}
-  - {fileID: 314204788}
-  - {fileID: 604686257}
-  - {fileID: 1493545661}
-  - {fileID: 686335782}
-  - {fileID: 1726709883}
-  weaponIndex: 1
-  shipSection: 0
 --- !u!114 &1046949907
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5329,6 +4968,34 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1046949904}
   m_CullTransparentMesh: 1
+--- !u!114 &1046949909
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1046949904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5011df8786b92a94eae7a73da30984fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1046949910
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1046949904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5685de33155458046b8b82a17c33bb37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  upgrades: {fileID: 11400000, guid: d10368684a05e4e488422165fb84d446, type: 2}
+  shipSectionCamera: {fileID: 145424506}
+  shipSection: 0
+  weaponIndex: 1
 --- !u!1 &1057276754
 GameObject:
   m_ObjectHideFlags: 0
@@ -5850,7 +5517,59 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inventoryAnimationComp: {fileID: 1794142792}
+  openInventoryAnim: {fileID: 7400000, guid: 030f7c349556c474d8b6797af0697eab, type: 2}
   closeInventoryAnim: {fileID: 7400000, guid: c18b920d4d2c9e749b04bb29835ab11f, type: 2}
+  OpenInventoryEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1267475343}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 197567904}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 255419605}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2017502196}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
   CloseInventoryEvent:
     m_PersistentCalls:
       m_Calls:
@@ -8342,7 +8061,8 @@ GameObject:
   - component: {fileID: 1605249142}
   - component: {fileID: 1605249145}
   - component: {fileID: 1605249144}
-  - component: {fileID: 1605249143}
+  - component: {fileID: 1605249146}
+  - component: {fileID: 1605249147}
   m_Layer: 5
   m_Name: HeavyWeaponLeftLabel
   m_TagString: Untagged
@@ -8369,117 +8089,6 @@ RectTransform:
   m_AnchoredPosition: {x: -1022.6775, y: -768.36694}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1605249143
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1605249141}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5685de33155458046b8b82a17c33bb37, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  uiViewUpdater: {fileID: 1909742062}
-  OnZoomingIn:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1913455153}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 1267475343}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1794142792}
-        m_TargetAssemblyTypeName: UnityEngine.Animation, UnityEngine
-        m_MethodName: set_clip
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 7400000, guid: 030f7c349556c474d8b6797af0697eab, type: 2}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.AnimationClip, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 197567904}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 255419605}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 2017502196}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-  openInventoryAnim: {fileID: 1794142792}
-  ShipGunUpgrades:
-  - {fileID: 11400000, guid: fc8c3860e8ecb4b499394ef4e2a04889, type: 2}
-  - {fileID: 11400000, guid: fc8c3860e8ecb4b499394ef4e2a04889, type: 2}
-  - {fileID: 11400000, guid: fc8c3860e8ecb4b499394ef4e2a04889, type: 2}
-  - {fileID: 11400000, guid: fc8c3860e8ecb4b499394ef4e2a04889, type: 2}
-  - {fileID: 11400000, guid: fc8c3860e8ecb4b499394ef4e2a04889, type: 2}
-  - {fileID: 11400000, guid: fc8c3860e8ecb4b499394ef4e2a04889, type: 2}
-  - {fileID: 11400000, guid: fc8c3860e8ecb4b499394ef4e2a04889, type: 2}
-  - {fileID: 11400000, guid: fc8c3860e8ecb4b499394ef4e2a04889, type: 2}
-  - {fileID: 11400000, guid: fc8c3860e8ecb4b499394ef4e2a04889, type: 2}
-  cells:
-  - {fileID: 1968275997}
-  - {fileID: 1627387945}
-  - {fileID: 1089418634}
-  - {fileID: 876203792}
-  - {fileID: 314204788}
-  - {fileID: 604686257}
-  - {fileID: 1493545661}
-  - {fileID: 686335782}
-  - {fileID: 1726709883}
-  weaponIndex: 0
-  shipSection: 1
 --- !u!114 &1605249144
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8518,6 +8127,34 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1605249141}
   m_CullTransparentMesh: 1
+--- !u!114 &1605249146
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1605249141}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5011df8786b92a94eae7a73da30984fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1605249147
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1605249141}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5685de33155458046b8b82a17c33bb37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  upgrades: {fileID: 11400000, guid: 61b1208ab748a8840a830c31196cb356, type: 2}
+  shipSectionCamera: {fileID: 1913455154}
+  shipSection: 1
+  weaponIndex: 0
 --- !u!1 &1609539994
 GameObject:
   m_ObjectHideFlags: 0
@@ -12226,6 +11863,7 @@ Transform:
   - {fileID: 1520440853}
   - {fileID: 1267475344}
   - {fileID: 369525201}
+  - {fileID: 1017967625}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &4652780463042161955

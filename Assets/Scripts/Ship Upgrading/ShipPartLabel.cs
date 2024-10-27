@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Cinemachine;
@@ -5,54 +6,32 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.Serialization;
 
+//Responsibilities
+//1. Notify others when clicked
+//2. Hold a selection of upgrades for this part
+//3. enable related camera
+//4. store data (section and side of ship)
 public class ShipPartLabel : MonoBehaviour
 {
-    [FormerlySerializedAs("weaponStatsDisplayer")] [SerializeField]
-    private UIViewUpdater uiViewUpdater;
-    //[SerializeField]
-    //private PlayerWeaponsState playerWeaponsState;
+    [SerializeField] private ShipUpgradesSelection upgrades;
+    public ShipUpgradesSelection Upgrades => this.upgrades;
     
-    private Camera playerCam;
-
-    [SerializeField] private UnityEvent OnZoomingIn = new UnityEvent();
-
-    [SerializeField] private Animation openInventoryAnim;
-
-    [SerializeField] private ShipGunUpgrade[] ShipGunUpgrades;
-
-    [SerializeField] private UpgradeCell[] cells;
-
-    [SerializeField] private int weaponIndex;
+    [SerializeField]
+    private CinemachineVirtualCamera shipSectionCamera;
 
     [SerializeField] private ShipSections shipSection;
+    public ShipSections ShipSection => this.shipSection;
     
-    // Start is called before the first frame update
-    void Start()
-    {
-        playerCam = FindObjectOfType<Camera>();
-        Vector3 directionToCamera = transform.position - this.playerCam.transform.position;
-        transform.forward = directionToCamera.normalized;
-    }
+    public event Action<ShipPartLabel> clicked;
+        
+    [SerializeField] private int weaponIndex;
 
-    // Update is called once per frame
-    void Update()
-    {
-        Vector3 directionToCamera = transform.position - this.playerCam.transform.position;
+    public int WeaponIndex => this.weaponIndex;
 
-        transform.forward = directionToCamera.normalized;
-    }
-
-    public void Clicked()
-    {
-        OnZoomingIn?.Invoke();
-        openInventoryAnim.Play();
-        uiViewUpdater.UpdateItemDetailsText(this.weaponIndex);
-
-        for (int i = 0; i < this.cells.Length; i++)
-        {
-            this.cells[i].Upgrade = this.ShipGunUpgrades[i];
-            this.cells[i].WeaponIndex = this.weaponIndex;
-            this.cells[i].ShipSection = this.shipSection;
-        }
-    }
+     public void Clicked()
+     {
+         clicked?.Invoke(this);
+            
+         this.shipSectionCamera.gameObject.SetActive(true);
+     }
 }
