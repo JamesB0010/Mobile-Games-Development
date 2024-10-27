@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
+using Weapon;
 
 public class FireButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 {

@@ -6,12 +6,13 @@ public class EnemySpawnManager : MonoBehaviour
 {
     [SerializeField] private Enemy enemyPrefab;
     [SerializeField] private float enemiesToSpawn;
-    [SerializeField] private Transform spawnBoundaryPositiveZ,
-        spawnBoundaryNegativeZ,
-        spawnBoundaryPositiveX,
+    [SerializeField] private Transform spawnBoundaryPositiveX, 
         spawnBoundaryNegativeX,
         spawnBoundaryPositiveY,
-        spawnBoundaryNegativeY;
+        spawnBoundaryNegativeY,
+        spawnBoundaryPositiveZ,
+        spawnBoundaryNegativeZ;
+        
     
     
     public void SpawnEnemies(GameManager gameManager, ActiveEnemiesManager enemiesManager)

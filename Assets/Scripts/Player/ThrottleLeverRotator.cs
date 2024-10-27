@@ -1,32 +1,32 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class ThrottleLeverRotator : MonoBehaviour
+namespace Player
 {
-    //Attributes
-    private PlayerShipThrottle playerThrottle;
-    
-    //configurables
-    [SerializeField] private float minXRotation, maxXRotation;
-
-
-    private void Start()
+    public class ThrottleLeverRotator : MonoBehaviour
     {
-        this.playerThrottle = FindObjectOfType<PlayerShipThrottle>();
-    }
-
-    private void Update()
-    {
-        float throttleAmount = playerThrottle.Throttle;
-        float targetXRotation = throttleAmount.MapRange(0, 1, minXRotation, maxXRotation);
+        //Attributes
+        private PlayerShipThrottle playerThrottle;
     
-        Quaternion localRotation = transform.localRotation;
+        //configurables
+        [SerializeField] private float minXRotation, maxXRotation;
+
+
+        private void Start()
+        {
+            this.playerThrottle = FindObjectOfType<PlayerShipThrottle>();
+        }
+
+        private void Update()
+        {
+            float throttleAmount = playerThrottle.Throttle;
+            float targetXRotation = throttleAmount.MapRange(0, 1, minXRotation, maxXRotation);
     
-        Quaternion targetRotation = Quaternion.Euler(new Vector3(targetXRotation, localRotation.eulerAngles.y, localRotation.eulerAngles.z));
+            Quaternion localRotation = transform.localRotation;
+    
+            Quaternion targetRotation = Quaternion.Euler(new Vector3(targetXRotation, localRotation.eulerAngles.y, localRotation.eulerAngles.z));
 
-        transform.localRotation = targetRotation;
+            transform.localRotation = targetRotation;
+        }
+
     }
-
 }
