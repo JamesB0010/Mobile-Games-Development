@@ -2,14 +2,22 @@
     "serializedDictionary": [
         {
             "key": "Default Autocannon",
-            "value": 1
+            "value": 0
+        },
+        {
+            "key": "Empty",
+            "value": 0
+        },
+        {
+            "key": "Heavy Autocannon",
+            "value": 0
         },
         {
             "key": "Light Autocannon",
             "value": 0
         },
         {
-            "key": "Heavy Autocannon",
+            "key": "Locked",
             "value": 0
         },
         {

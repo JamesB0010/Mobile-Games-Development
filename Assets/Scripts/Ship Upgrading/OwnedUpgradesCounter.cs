@@ -21,6 +21,20 @@ internal class UpgradesCounterJsonObject
         }
     }
 
+    internal Dictionary<ShipGunUpgrade, int> GenerateDictionaryFromJson()
+    {
+        Dictionary<ShipGunUpgrade, int> dictionary = new();
+
+        foreach (var keyValuePair in this.serializedDictionary)
+        {
+            ShipGunUpgrade key = Resources.Load<ShipGunUpgrade>("ShipUpgrades/" + keyValuePair.key);
+            int value = keyValuePair.value;
+            
+            dictionary.Add(key, value);
+        }
+
+        return dictionary;
+    }
 
     internal void SaveData(TextAsset saveFile)
     {
@@ -37,10 +51,10 @@ internal class UpgradesCounterJsonObject
 internal struct KeyValuePairWrapper<T1, T2>
 {
     [SerializeField] 
-    private T1 key;
+    public T1 key;
 
     [SerializeField] 
-    private T2 value;
+    public T2 value;
 
     public KeyValuePairWrapper(T1 key, T2 value)
     {
@@ -55,9 +69,6 @@ public class OwnedUpgradesCounter : MonoBehaviour
     public static OwnedUpgradesCounter Instance => OwnedUpgradesCounter.instance;
     
     internal Dictionary<ShipGunUpgrade, int> upgradesCount = new Dictionary<ShipGunUpgrade, int>();
-
-    [SerializeField] private ShipGunUpgrade[] allEquippableUpgrades;
-
 
     private SelectedCellHighlight cellHighlight;
 
@@ -74,10 +85,10 @@ public class OwnedUpgradesCounter : MonoBehaviour
     private void Start()
     {
         this.cellHighlight = FindObjectOfType<SelectedCellHighlight>();
-        foreach (ShipGunUpgrade upgrade in GenerateHashSet(this.allEquippableUpgrades))
-        {
-            this.upgradesCount.Add(upgrade, 0);
-        }
+
+        UpgradesCounterJsonObject obj = JsonUtility.FromJson<UpgradesCounterJsonObject>(this.jsonSaveFile.text);
+
+        this.upgradesCount = obj.GenerateDictionaryFromJson();
     }
 
     private HashSet<T> GenerateHashSet<T>(T[] arrayIn)
@@ -115,6 +126,24 @@ public class OwnedUpgradesCounter : MonoBehaviour
         UpgradesCounterJsonObject obj = new UpgradesCounterJsonObject(this.upgradesCount);
         return obj;
     }
+
+    internal UpgradesCounterJsonObject GenerateSaveableObject(Dictionary<ShipGunUpgrade, int> dictionary)
+    {
+        UpgradesCounterJsonObject obj = new UpgradesCounterJsonObject(dictionary);
+        return obj;
+    }
+
+    internal void GenerateDefaultSafeFile()
+    {
+        Dictionary<ShipGunUpgrade, int> dictionary = new();
+        var shipGunUpgrades= Resources.LoadAll<ShipGunUpgrade>("ShipUpgrades");
+        foreach (ShipGunUpgrade upgrade in shipGunUpgrades)
+        {
+            dictionary.Add(upgrade, 0);
+        }
+
+        this.GenerateSaveableObject(dictionary).SaveData(this.jsonSaveFile);
+    }
 }
 
 #if UNITY_EDITOR
@@ -149,6 +178,12 @@ class OwnedUpgradesCounterCustomUI : Editor
         if (GUILayout.Button("Save state To json"))
         {
             this.castedTarget.GenerateSaveableObject().SaveData(this.castedTarget.jsonSaveFile);
+        }
+
+
+        if (GUILayout.Button("Generate Default Save File"))
+        {
+            this.castedTarget.GenerateDefaultSafeFile();
         }
     }
 }

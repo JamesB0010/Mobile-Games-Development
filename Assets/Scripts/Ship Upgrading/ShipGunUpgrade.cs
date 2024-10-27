@@ -17,4 +17,6 @@ public class ShipGunUpgrade : ScriptableObject
     [SerializeField] private bool isPurchaseable;
     public bool IsPurchaseable => this.isPurchaseable;
 
+    public bool OwnedByDefault;
+
 }

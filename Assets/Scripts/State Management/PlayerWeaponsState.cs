@@ -9,11 +9,20 @@ public class PlayerWeaponsState : ScriptableObject
 {
     [SerializeField] private List<ShipGunUpgrade> lightGuns;
 
+    [SerializeField] private ShipGunUpgrade defaultLightGun;
     public List<ShipGunUpgrade> LightGuns
     {
         get => this.lightGuns;
         
         set => this.lightGuns = value;
+    }
+
+    public void ResetLightGuns()
+    {
+        for (int i = 0; i < this.lightGuns.Count; i++)
+        {
+            this.lightGuns[i] = this.defaultLightGun;
+        }
     }
 
 
