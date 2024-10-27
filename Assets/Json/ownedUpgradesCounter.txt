@@ -1,1 +1,20 @@
-{"lightGunReferences":["Default Autocannon","Default Autocannon"]}
+{
+    "serializedDictionary": [
+        {
+            "key": "Default Autocannon",
+            "value": 1
+        },
+        {
+            "key": "Light Autocannon",
+            "value": 0
+        },
+        {
+            "key": "Heavy Autocannon",
+            "value": 0
+        },
+        {
+            "key": "MiniGun",
+            "value": 0
+        }
+    ]
+}

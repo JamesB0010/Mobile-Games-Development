@@ -1,10 +1,53 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using System.Runtime.CompilerServices;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.Serialization;
+
+[Serializable]
+internal class UpgradesCounterJsonObject
+{
+    [SerializeField]
+    private List<KeyValuePairWrapper<string, int>> serializedDictionary = new List<KeyValuePairWrapper<string, int>>();
+
+    internal UpgradesCounterJsonObject(Dictionary<ShipGunUpgrade, int> unSerializedDictionary)
+    {
+        foreach(KeyValuePair<ShipGunUpgrade, int> pair in unSerializedDictionary)
+        {
+            this.serializedDictionary.Add(new KeyValuePairWrapper<string, int>(pair.Key.name, pair.Value));
+        }
+    }
+
+
+    internal void SaveData(TextAsset saveFile)
+    {
+        string saveFilePath = AssetDatabase.GetAssetPath(saveFile);
+        saveFilePath = saveFilePath.Substring(6);
+        
+        File.WriteAllText(Application.dataPath + saveFilePath, JsonUtility.ToJson(this, true));
+        
+        Debug.Log("Saved Upgrades Counter");
+    }
+}
+
+[Serializable]
+internal struct KeyValuePairWrapper<T1, T2>
+{
+    [SerializeField] 
+    private T1 key;
+
+    [SerializeField] 
+    private T2 value;
+
+    public KeyValuePairWrapper(T1 key, T2 value)
+    {
+        this.key = key;
+        this.value = value;
+    }
+}
 
 public class OwnedUpgradesCounter : MonoBehaviour
 {
@@ -18,6 +61,7 @@ public class OwnedUpgradesCounter : MonoBehaviour
 
     private SelectedCellHighlight cellHighlight;
 
+    [SerializeField] internal TextAsset jsonSaveFile;
     private void Awake()
     {
         if (OwnedUpgradesCounter.instance == null)
@@ -65,6 +109,12 @@ public class OwnedUpgradesCounter : MonoBehaviour
     {
         return this.upgradesCount[upgrade];
     }
+
+    internal UpgradesCounterJsonObject GenerateSaveableObject()
+    {
+        UpgradesCounterJsonObject obj = new UpgradesCounterJsonObject(this.upgradesCount);
+        return obj;
+    }
 }
 
 #if UNITY_EDITOR
@@ -93,6 +143,12 @@ class OwnedUpgradesCounterCustomUI : Editor
             {
                 Debug.Log("Upgrade Name: " + upgradePair.Key.name + " Count: " + upgradePair.Value);
             }
+        }
+
+
+        if (GUILayout.Button("Save state To json"))
+        {
+            this.castedTarget.GenerateSaveableObject().SaveData(this.castedTarget.jsonSaveFile);
         }
     }
 }

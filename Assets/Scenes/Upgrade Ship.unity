@@ -3352,6 +3352,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 68d72bc779fb10b499771704619568e9, type: 2}
   - {fileID: 11400000, guid: 3e756e8e4d045534aaca7b5076153425, type: 2}
   - {fileID: 11400000, guid: 78c56c7c38b32d34db7a8f356085d5cb, type: 2}
+  jsonSaveFile: {fileID: 4900000, guid: eb7ae1a04d337494b829de8ec0039560, type: 3}
 --- !u!1 &664287973
 GameObject:
   m_ObjectHideFlags: 0
