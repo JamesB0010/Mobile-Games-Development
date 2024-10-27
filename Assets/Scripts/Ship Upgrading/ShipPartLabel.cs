@@ -9,12 +9,10 @@ using UnityEngine.Serialization;
 //Responsibilities
 //1. Notify others when clicked
 //2. Hold a selection of upgrades for this part
-//3. enable related camera
-//4. store data (section and side of ship)
 public class ShipPartLabel : MonoBehaviour
 {
-    [SerializeField] private ShipUpgradesSelection upgrades;
-    public ShipUpgradesSelection Upgrades => this.upgrades;
+    [SerializeField] private ShipUpgradesPlatter upgrades;
+    public ShipUpgradesPlatter Upgrades => this.upgrades;
     
     [SerializeField]
     private CinemachineVirtualCamera shipSectionCamera;

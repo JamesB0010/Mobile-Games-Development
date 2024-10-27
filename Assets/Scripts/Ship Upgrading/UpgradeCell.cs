@@ -37,11 +37,7 @@ public class UpgradeCell : MonoBehaviour
 
     public bool GunOwnedByThisSide()
     {
-        return this.upgrade.OwnedSides.Contains(WeaponIndex);
-    }
-
-    public void AddThisSideToUpgradeOwnedSides()
-    {
-        this.upgrade.OwnedSides.Add(this.WeaponIndex);
+        //are there enough owned?
+        return true;
     }
 }

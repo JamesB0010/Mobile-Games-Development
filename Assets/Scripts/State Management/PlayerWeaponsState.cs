@@ -7,9 +7,9 @@ using UnityEngine.TestTools;
 [System.Serializable]
 public class PlayerWeaponsState : ScriptableObject
 {
-    [SerializeField] private List<Gun> lightGuns;
+    [SerializeField] private List<ShipGunUpgrade> lightGuns;
 
-    public List<Gun> LightGuns
+    public List<ShipGunUpgrade> LightGuns
     {
         get => this.lightGuns;
         
@@ -17,31 +17,31 @@ public class PlayerWeaponsState : ScriptableObject
     }
 
 
-    [SerializeField] private List<Gun> heavyGuns;
+    [SerializeField] private List<ShipGunUpgrade> heavyGuns;
 
-    public List<Gun> HeavyGuns
+    public List<ShipGunUpgrade> HeavyGuns
     {
         get => this.heavyGuns;
         set => this.heavyGuns = value;
     }
 
-    [SerializeField] private Gun shield;
+    [SerializeField] private ShipGunUpgrade shield;
 
-    public Gun Shield
+    public ShipGunUpgrade Shield
     {
         get => this.shield;
         set => this.shield = value;
     }
 
-    [SerializeField] private Gun engine;
+    [SerializeField] private ShipGunUpgrade engine;
 
-    public Gun Engine
+    public ShipGunUpgrade Engine
     {
         get => this.engine;
         set => this.engine = value;
     }
 
-    public void EditWeaponAtIndex(int index, Gun gun)
+    public void EditWeaponAtIndex(int index, ShipGunUpgrade gun)
     {
         this.lightGuns[index] = gun;
     }
@@ -50,7 +50,7 @@ public class PlayerWeaponsState : ScriptableObject
     {
         for (int i = 0; i < this.lightGuns.Count; i++)
         {
-            weapons[i].Gun = (Gun)this.lightGuns[i].Clone();
+            weapons[i].Gun = (Gun)this.lightGuns[i].Gun.Clone();
         }
     }
 }

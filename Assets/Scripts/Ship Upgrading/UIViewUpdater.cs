@@ -27,19 +27,19 @@ public class UIViewUpdater : MonoBehaviour
         switch (shipSection)
         {
             case ShipSections.lightWeapons:
-                Gun lightGun = this.playerWeaponsState.LightGuns[side];
+                Gun lightGun = this.playerWeaponsState.LightGuns[side].Gun;
                 this.SetItemStatsUi(lightGun);
                 break;
             case ShipSections.heavyWeapons:
-                Gun heavyGun = this.playerWeaponsState.HeavyGuns[side];
+                Gun heavyGun = this.playerWeaponsState.HeavyGuns[side].Gun;
                 this.SetItemStatsUi(heavyGun);
                 break;
             case ShipSections.armour:
-                Gun armour = this.playerWeaponsState.Shield;
+                Gun armour = this.playerWeaponsState.Shield.Gun;
                 this.SetItemStatsUi(armour);
                 break;
             case ShipSections.engine:
-                Gun engine = this.playerWeaponsState.Shield;
+                Gun engine = this.playerWeaponsState.Shield.Gun;
                 this.SetItemStatsUi(engine);
                 break;
             default:
@@ -61,7 +61,8 @@ public class UIViewUpdater : MonoBehaviour
     {
         this.costField.text = selectedCell.Upgrade.Cost.ToString();
         if(selectedCell.Upgrade.IsPurchaseable)
-            this.purchaseEquipButtonText.text = selectedCell.Upgrade.Gun.OwnedByPlayer == false ? "Purchase" : "Equip";
+            
+            this.purchaseEquipButtonText.text = /* enough owned?*/ false == false ? "Purchase" : "Equip";
     }
 
     public void CellPurchased(SelectedCellHighlight highlight)

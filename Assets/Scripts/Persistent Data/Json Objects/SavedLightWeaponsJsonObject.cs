@@ -5,7 +5,7 @@ using UnityEngine;
 public struct SavedLightWeaponsJsonObject 
 {
     public List<string> lightGunReferences;
-        public SavedLightWeaponsJsonObject(List<Gun> guns)
+        public SavedLightWeaponsJsonObject(List<ShipGunUpgrade> guns)
         {
             this.lightGunReferences = new List<string>();
     
@@ -16,16 +16,16 @@ public struct SavedLightWeaponsJsonObject
         }
         
     
-        public List<Gun> GetSavedGuns()
+        public List<ShipGunUpgrade> GetSavedGuns()
         {
-            List<Gun> upgrades = new List<Gun>();
+            List<ShipGunUpgrade> upgrades = new List<ShipGunUpgrade>();
     
     
             for (int i = 0; i < this.lightGunReferences.Count; i++)
             {
-                object weaponUpgrade = Resources.Load("Guns/" + this.lightGunReferences[i]);
+                object weaponUpgrade = Resources.Load("ShipUpgrades/" + this.lightGunReferences[i]);
     
-                upgrades.Add((Gun)weaponUpgrade);
+                upgrades.Add((ShipGunUpgrade)weaponUpgrade);
             }
             
             return upgrades;

@@ -8,7 +8,11 @@ using UnityEngine;
 public class EquipItem : ItemShopAction
 {
     public event Action SelectedCellEquipped;
-    
+
+
+    [SerializeField] private ShipGunUpgrade previouslyOwnedLightWeapon;
+    public ShipGunUpgrade PreviouslyOwnedLightWeapon => this.previouslyOwnedLightWeapon;
+
     public void EquipCell(UpgradeCell cell)
     {
         SaveToJson(cell);
@@ -19,6 +23,7 @@ public class EquipItem : ItemShopAction
         switch (cell.ShipSection)
                 {
                     case ShipSections.lightWeapons:
+                        this.UpdatePreviouslyOwnedLightWeapon(cell.WeaponIndex);
                         base.SaveLightWeaponAction(cell);
                         this.SelectedCellEquipped?.Invoke();
                         break;
@@ -31,5 +36,14 @@ public class EquipItem : ItemShopAction
                     default:
                         break;
                 }
+    }
+    public void UpdatePreviouslyOwnedLightWeapon(ShipPartLabel label)
+    {
+        this.previouslyOwnedLightWeapon = base.playerWeaponsState.LightGuns[label.WeaponIndex];
+    }
+    
+    public void UpdatePreviouslyOwnedLightWeapon(int side)
+    {
+        this.previouslyOwnedLightWeapon = base.playerWeaponsState.LightGuns[side];
     }
 }

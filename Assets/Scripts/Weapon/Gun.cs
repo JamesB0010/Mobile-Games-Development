@@ -20,17 +20,6 @@ public class Gun : ScriptableObject, ICloneable
         get => this.timeBetweenBullets;
     }
 
-    [SerializeField]
-    private bool ownedByPlayer;
-
-    public bool OwnedByPlayer
-    {
-        get => this.ownedByPlayer;
-
-        set => this.ownedByPlayer = value;
-    }
-
-
     [SerializeField] private float cost;
 
     public float Cost => this.cost;
@@ -94,7 +83,6 @@ public class Gun : ScriptableObject, ICloneable
         Gun obj = ScriptableObject.CreateInstance<Gun>();
         obj.bulletDamage = bulletDamage;
         obj.bulletPrefab = bulletPrefab;
-        obj.ownedByPlayer = ownedByPlayer;
         obj.lastBulletShotTimestamp = lastBulletShotTimestamp;
         obj.cost = cost;
         obj.timeBetweenBullets = timeBetweenBullets;

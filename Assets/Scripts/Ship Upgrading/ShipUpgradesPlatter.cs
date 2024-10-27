@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu]
-public class ShipUpgradesSelection : ScriptableObject
+public class ShipUpgradesPlatter : ScriptableObject
 {
     public ShipGunUpgrade[] shipGunUpgrades;
 }

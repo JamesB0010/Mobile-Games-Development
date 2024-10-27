@@ -11,7 +11,7 @@ public abstract class ItemShopAction : ScriptableObject
 
     protected void SaveLightWeaponAction(UpgradeCell cell)
     {
-        this.playerWeaponsState.EditWeaponAtIndex(cell.WeaponIndex, cell.Upgrade.Gun);
+        this.playerWeaponsState.EditWeaponAtIndex(cell.WeaponIndex, cell.Upgrade);
         SavedLightWeaponsJsonObject lightWeapons = new SavedLightWeaponsJsonObject(this.playerWeaponsState.LightGuns);
         string jsonString = JsonUtility.ToJson(lightWeapons);
         File.WriteAllText(Application.dataPath + "/Json/lightWeaponConfiguration.txt", jsonString);

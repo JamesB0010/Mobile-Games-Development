@@ -6,16 +6,20 @@ using UnityEngine.Events;
 
 public class ShipPartLabelDirector : MonoBehaviour
 {
+    
     [Header("Dependencies")]
+    [SerializeField] private CellsSetupHelper cellsSetupHelper;
+    [SerializeField] private UIViewUpdater uiUpdater;
+    
+    [Space]
+    
     [SerializeField] private ShipPartLabel[] shipPartLabels;
 
-    [SerializeField] private UIViewUpdater uiUpdater;
 
-    [SerializeField] private UpgradeCell[] cells;
 
     [Space(2)]
     [Header("Events")]
-    [SerializeField] private UnityEvent ShipPartLabelClicked = new UnityEvent();
+    [SerializeField] private UnityEvent<ShipPartLabel> ShipPartLabelClicked = new UnityEvent<ShipPartLabel>();
 
     private void Start()
     {
@@ -27,15 +31,9 @@ public class ShipPartLabelDirector : MonoBehaviour
 
     private void OnShipPartClicked(ShipPartLabel label)
     {
-        this.ShipPartLabelClicked?.Invoke();
+        this.ShipPartLabelClicked?.Invoke(label);
         uiUpdater.UpdateItemDetailsText(label.ShipSection, label.WeaponIndex);
         
-        for (int i = 0; i < this.cells.Length; i++)
-        {
-            this.cells[i].Upgrade = label.Upgrades.shipGunUpgrades[i];
-            this.cells[i].WeaponIndex = label.WeaponIndex;
-            this.cells[i].ShipSection = label.ShipSection;
-        }
+        this.cellsSetupHelper.SetupCells(label);
     }
-    
 }

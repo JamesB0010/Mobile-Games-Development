@@ -33,13 +33,17 @@ public class ItemShopActionsManager : MonoBehaviour
     {
         UpgradeCell cell = highlight.SelectedCell;
 
-        bool cellCanBeEquipped = cell.Upgrade.Gun.OwnedByPlayer && 
-                                 cell.GunOwnedByThisSide();
+        bool cellCanBeEquipped = false;
+        if (cell.Upgrade.IsPurchaseable)
+            cellCanBeEquipped = OwnedUpgradesCounter.Instance.GetUpgradeCount(cell.Upgrade) > 0;
         
         if (cellCanBeEquipped) 
             this.equipItemShopAction.EquipCell(cell);
         else
+        {
             this.purchaseItemShopAction.PurchaseCell(cell);
+            this.equipItemShopAction.EquipCell(cell);
+        }
     }
 
 

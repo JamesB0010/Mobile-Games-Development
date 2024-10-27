@@ -21,7 +21,6 @@ public class PurchaseItem : ItemShopAction
 
             SaveToJson(cell);
             
-            cell.Upgrade.Gun.OwnedByPlayer = true;
             this.SelectedCellPurchased?.Invoke();
         }
 
@@ -49,8 +48,6 @@ public class PurchaseItem : ItemShopAction
         switch (cell.ShipSection)
         {
             case ShipSections.lightWeapons:
-                base.SaveLightWeaponAction(cell);
-                cell.AddThisSideToUpgradeOwnedSides();
                 break;
             case ShipSections.heavyWeapons:
                 break;
