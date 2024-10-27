@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponsState: {fileID: 11400000, guid: b5f4d067d7d0e2744ab5cdf2c7f613f0, type: 2}
   lightWeaponConfigurationSaveFile: {fileID: 4900000, guid: fc6796ea5dfbdc341a004d5f06320d94, type: 3}
+  OwnedUpgradesCounterJsonSaveFile: {fileID: 4900000, guid: eb7ae1a04d337494b829de8ec0039560, type: 3}

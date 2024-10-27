@@ -10,9 +10,11 @@ public class ResetScriptableObjects : ScriptableObject
 {
     [SerializeField] private PlayerWeaponsState weaponsState;
 
-    [FormerlySerializedAs("lightWeaponConfiguration")] [SerializeField] private TextAsset lightWeaponConfigurationSaveFile;
+    [SerializeField] private TextAsset lightWeaponConfigurationSaveFile;
 
-    [MenuItem("Custom/Reset Scriptable Objects")]
+    [SerializeField] private TextAsset OwnedUpgradesCounterJsonSaveFile;
+
+    [MenuItem("Custom/Reset Scriptable Objects and Save Files")]
     //This resets the scriptable objects which need to be resetted for the game to be built
     public static void ResetObjects()
     {
@@ -21,6 +23,8 @@ public class ResetScriptableObjects : ScriptableObject
         instance.weaponsState.ResetLightGuns();
         
        SaveLightWeaponsStateJsonFile(instance);
+
+       new UpgradesCounterJsonObject().GenerateDefaultSafeFile(instance.OwnedUpgradesCounterJsonSaveFile);
     }
 
     private static void SaveLightWeaponsStateJsonFile(ResetScriptableObjects instance)
@@ -31,6 +35,8 @@ public class ResetScriptableObjects : ScriptableObject
         File.WriteAllText(saveFilePath, jsonString);
         AssetDatabase.SaveAssetIfDirty(instance.lightWeaponConfigurationSaveFile);
     }
+    
+    
 }
 
 #if UNITY_EDITOR

@@ -21,6 +21,11 @@ internal class UpgradesCounterJsonObject
         }
     }
 
+    internal UpgradesCounterJsonObject()
+    {
+        
+    }
+
     internal Dictionary<ShipGunUpgrade, int> GenerateDictionaryFromJson()
     {
         Dictionary<ShipGunUpgrade, int> dictionary = new();
@@ -45,6 +50,24 @@ internal class UpgradesCounterJsonObject
         
         Debug.Log("Saved Upgrades Counter");
     }
+    
+    internal void GenerateDefaultSafeFile(TextAsset jsonSaveFile)
+        {
+            Dictionary<ShipGunUpgrade, int> dictionary = new();
+            var shipGunUpgrades= Resources.LoadAll<ShipGunUpgrade>("ShipUpgrades");
+            foreach (ShipGunUpgrade upgrade in shipGunUpgrades)
+            {
+                dictionary.Add(upgrade, 0);
+            }
+    
+            this.GenerateSaveableObject(dictionary).SaveData(jsonSaveFile);
+        }
+    
+    internal UpgradesCounterJsonObject GenerateSaveableObject(Dictionary<ShipGunUpgrade, int> dictionary)
+        {
+            UpgradesCounterJsonObject obj = new UpgradesCounterJsonObject(dictionary);
+            return obj;
+        }
 }
 
 [Serializable]
@@ -117,23 +140,9 @@ public class OwnedUpgradesCounter : MonoBehaviour
         return obj;
     }
 
-    internal UpgradesCounterJsonObject GenerateSaveableObject(Dictionary<ShipGunUpgrade, int> dictionary)
-    {
-        UpgradesCounterJsonObject obj = new UpgradesCounterJsonObject(dictionary);
-        return obj;
-    }
+    
 
-    internal void GenerateDefaultSafeFile()
-    {
-        Dictionary<ShipGunUpgrade, int> dictionary = new();
-        var shipGunUpgrades= Resources.LoadAll<ShipGunUpgrade>("ShipUpgrades");
-        foreach (ShipGunUpgrade upgrade in shipGunUpgrades)
-        {
-            dictionary.Add(upgrade, 0);
-        }
-
-        this.GenerateSaveableObject(dictionary).SaveData(this.jsonSaveFile);
-    }
+    
 
     internal void SaveToJson()
     {
@@ -179,7 +188,7 @@ class OwnedUpgradesCounterCustomUI : Editor
 
         if (GUILayout.Button("Generate Default Save File"))
         {
-            this.castedTarget.GenerateDefaultSafeFile();
+            new UpgradesCounterJsonObject().GenerateDefaultSafeFile(this.castedTarget.jsonSaveFile);
         }
     }
 }

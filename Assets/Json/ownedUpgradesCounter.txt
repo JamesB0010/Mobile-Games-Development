@@ -2,7 +2,7 @@
     "serializedDictionary": [
         {
             "key": "Default Autocannon",
-            "value": 3
+            "value": 0
         },
         {
             "key": "Empty",
