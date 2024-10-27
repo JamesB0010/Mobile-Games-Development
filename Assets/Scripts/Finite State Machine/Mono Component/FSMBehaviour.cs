@@ -13,7 +13,7 @@ public abstract class FSMBehaviour : MonoBehaviour
 {
     public virtual void EnterState(State state)
     {
-        
+
     }
     public abstract void Behave(State state);
 

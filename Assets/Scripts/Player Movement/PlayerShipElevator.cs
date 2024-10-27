@@ -8,8 +8,8 @@ public class PlayerShipElevator : MonoBehaviour
 {
     private float inputtedPitch;
     public float InputtedPitch => inputtedPitch;
-    
-    
+
+
     [SerializeField] private float pitchSpeed;
 
     private float pitchSpeedDefault;
@@ -22,12 +22,12 @@ public class PlayerShipElevator : MonoBehaviour
     private void Update()
     {
         float pitchAmount = this.inputtedPitch * Time.deltaTime * this.pitchSpeed;
-        transform.Rotate(new Vector3(pitchAmount, 0,0));
+        transform.Rotate(new Vector3(pitchAmount, 0, 0));
     }
 
     public void OnPitchAndRoll(InputAction.CallbackContext ctx)
     {
-     this.inputtedPitch = ctx.ReadValue<Vector2>().y;   
+        this.inputtedPitch = ctx.ReadValue<Vector2>().y;
     }
 
     public void SetSensitivityAiming()

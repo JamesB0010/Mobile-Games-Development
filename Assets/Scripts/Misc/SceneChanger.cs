@@ -7,6 +7,6 @@ public class SceneChanger : ScriptableObject
 {
     public void LoadSceneSingle(int sceneIndex)
     {
-        SceneManager.LoadScene(sceneIndex, LoadSceneMode.Single );
+        SceneManager.LoadScene(sceneIndex, LoadSceneMode.Single);
     }
 }

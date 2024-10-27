@@ -9,15 +9,15 @@ public class Enemy : EnemyBase
 {
     //Attributes
     [SerializeField] private GameObject DeathParticle;
-    
+
     private ActiveEnemiesManager enemiesManager;
 
     public ActiveEnemiesManager EnemiesManager
     {
         set => this.enemiesManager = value;
     }
-    
-    
+
+
     [Header("Movement")]
     private Vector3 velocity = Vector3.zero;
     [SerializeField] private float maxVelocity;
@@ -26,11 +26,11 @@ public class Enemy : EnemyBase
 
     private Quaternion desiredRotation;
     [SerializeField] private float rotationSpeed;
-    
+
     [Header("Behaviour settings")]
     [SerializeField] private float desiredDirectionChangeInterval = 5;
     private PhasedEventTimeKeeper directionChangeTimeKeeper;
-    
+
 
     private void Start()
     {
@@ -51,7 +51,7 @@ public class Enemy : EnemyBase
             GenerateNewRotation();
         }
     }
-    
+
     private void RotateAndMoveAgent()
     {
         RotateTowardsDesiredRotation();
@@ -62,12 +62,12 @@ public class Enemy : EnemyBase
 
 
     private void GenerateNewRotation()
-        {
-            this.directionChangeTimeKeeper.UpdateTimestamp();
-    
-            this.desiredRotation = Random.rotation;
-        }
-    
+    {
+        this.directionChangeTimeKeeper.UpdateTimestamp();
+
+        this.desiredRotation = Random.rotation;
+    }
+
     private void RotateTowardsDesiredRotation()
     {
         transform.rotation =
@@ -77,7 +77,7 @@ public class Enemy : EnemyBase
     {
         return transform.forward * (Time.deltaTime * speed);
     }
-    
+
     private void ApplyAccelerationToVelocity(Vector3 acceleration)
     {
         this.velocity += acceleration;

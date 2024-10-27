@@ -13,7 +13,7 @@ public class PlayerWeaponsState : ScriptableObject
     public List<ShipGunUpgrade> LightGuns
     {
         get => this.lightGuns;
-        
+
         set => this.lightGuns = value;
     }
 

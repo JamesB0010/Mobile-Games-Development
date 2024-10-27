@@ -22,7 +22,7 @@ public class PlayerShipThrottle : MonoBehaviour
     {
         Vector2 input = ctx.ReadValue<Vector2>();
         float throttleInput = input.y < 0 ? 0 : input.y;
-                
+
         this.inputtedThrottle = throttleInput;
     }
 }

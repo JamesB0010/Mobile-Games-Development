@@ -14,7 +14,7 @@ public class PhasedEventTimeKeeper
     {
         this.timeBetweenEvents = timeBetweenEvents;
     }
-    
+
     public bool HasEnoughTimeElapsedSinceEvent()
     {
         return Time.timeSinceLevelLoad - lastEventTimestamp > timeBetweenEvents;

@@ -25,7 +25,7 @@ public class PlayerShipWeapon : MonoBehaviour
     [SerializeField] private Transform bulletSpawnLocation;
 
     private List<ParticleSystem> muzzleFlashParticles = new List<ParticleSystem>();
-    
+
     private static readonly int BulletFired = Animator.StringToHash("BulletFired");
     private static readonly int TryingToShoot = Animator.StringToHash("TryingToShoot");
 
@@ -46,7 +46,7 @@ public class PlayerShipWeapon : MonoBehaviour
             }
         }
     }
-    
+
     private void Update()
     {
         this.animator.SetBool(TryingToShoot, gunSystem.TryingToShoot);
@@ -56,33 +56,33 @@ public class PlayerShipWeapon : MonoBehaviour
         {
             return;
         }
-        
+
 
         bool bulletShot = false;
         CrosshairTargetFinder crosshairTargetFinder = this.gunSystem.CrosshairTargetFinder;
-            Vector3 crosshairWorldTargetPosition = crosshairTargetFinder.GetLatestHitPosition();
-            bool lastHitValid = crosshairTargetFinder.WasLastHitValid();
-            if (lastHitValid)
+        Vector3 crosshairWorldTargetPosition = crosshairTargetFinder.GetLatestHitPosition();
+        bool lastHitValid = crosshairTargetFinder.WasLastHitValid();
+        if (lastHitValid)
+        {
+            RaycastHit hit = crosshairTargetFinder.GetLastHit();
+            bulletShot = this.gun.Shoot(this.bulletSpawnLocation.position, crosshairWorldTargetPosition, true, hit);
+        }
+        else
+        {
+            bulletShot = this.gun.Shoot(this.bulletSpawnLocation.position, crosshairWorldTargetPosition, false);
+        }
+
+        if (bulletShot)
+        {
+            this.muzzleFlash.Play();
+            for (int i = 0; i < this.muzzleFlashParticles.Count; i++)
             {
-                RaycastHit hit = crosshairTargetFinder.GetLastHit();
-                bulletShot = this.gun.Shoot(this.bulletSpawnLocation.position, crosshairWorldTargetPosition, true, hit);
-            }
-            else
-            {
-                bulletShot = this.gun.Shoot(this.bulletSpawnLocation.position, crosshairWorldTargetPosition, false);
+                this.muzzleFlashParticles[i].Play();
             }
 
-            if (bulletShot)
-            {
-                this.muzzleFlash.Play();
-                for (int i = 0; i < this.muzzleFlashParticles.Count; i++)
-                {
-                    this.muzzleFlashParticles[i].Play();
-                }
-                
-                this.animator.SetBool(BulletFired, true);
-                
-                this.gunshotSoundLocation.Play();
-            }
+            this.animator.SetBool(BulletFired, true);
+
+            this.gunshotSoundLocation.Play();
+        }
     }
 }

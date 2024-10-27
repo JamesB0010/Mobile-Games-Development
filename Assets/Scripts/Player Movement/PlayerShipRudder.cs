@@ -7,9 +7,9 @@ using UnityEngine.InputSystem;
 public class PlayerShipRudder : MonoBehaviour
 {
     private float inputtedYaw;
-    
+
     [SerializeField] private float yawSpeed;
-    
+
     private void Update()
     {
         float yawAmount = this.inputtedYaw * Time.deltaTime * this.yawSpeed;

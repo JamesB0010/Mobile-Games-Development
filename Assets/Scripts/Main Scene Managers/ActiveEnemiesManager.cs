@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class ActiveEnemiesManager: MonoBehaviour
+public class ActiveEnemiesManager : MonoBehaviour
 {
     //Attributes
     private short activeEnemyCount;
@@ -17,11 +17,11 @@ public class ActiveEnemiesManager: MonoBehaviour
             this.activeEnemyCount = value;
         }
     }
-    
+
     //Events
     [SerializeField]
     public UnityEvent EnemyDeathEvent;
-    
+
     //methods
     public void EnemyDied()
     {

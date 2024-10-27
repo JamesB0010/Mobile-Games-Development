@@ -14,15 +14,15 @@ public class PurchaseItem : ItemShopAction
 
     public void PurchaseCell(UpgradeCell cell)
     {
-            if (!IsAbleToMakePurchase(cell)) 
-                return;
+        if (!IsAbleToMakePurchase(cell))
+            return;
 
-            DeductFromPlayerMoney(cell.Upgrade.Cost);
+        DeductFromPlayerMoney(cell.Upgrade.Cost);
 
-            SaveToJson(cell);
-            
-            this.SelectedCellPurchased?.Invoke();
-        }
+        SaveToJson(cell);
+
+        this.SelectedCellPurchased?.Invoke();
+    }
 
 
     private bool IsAbleToMakePurchase(UpgradeCell cell)

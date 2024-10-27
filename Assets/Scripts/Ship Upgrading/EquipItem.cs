@@ -21,27 +21,27 @@ public class EquipItem : ItemShopAction
     protected override void SaveToJson(UpgradeCell cell)
     {
         switch (cell.ShipSection)
-                {
-                    case ShipSections.lightWeapons:
-                        this.UpdatePreviouslyOwnedLightWeapon(cell.WeaponIndex);
-                        base.SaveLightWeaponAction(cell);
-                        this.SelectedCellEquipped?.Invoke();
-                        break;
-                    case ShipSections.heavyWeapons:
-                        break;
-                    case ShipSections.armour:
-                        break;
-                    case ShipSections.engine:
-                        break;
-                    default:
-                        break;
-                }
+        {
+            case ShipSections.lightWeapons:
+                this.UpdatePreviouslyOwnedLightWeapon(cell.WeaponIndex);
+                base.SaveLightWeaponAction(cell);
+                this.SelectedCellEquipped?.Invoke();
+                break;
+            case ShipSections.heavyWeapons:
+                break;
+            case ShipSections.armour:
+                break;
+            case ShipSections.engine:
+                break;
+            default:
+                break;
+        }
     }
     public void UpdatePreviouslyOwnedLightWeapon(ShipPartLabel label)
     {
         this.previouslyOwnedLightWeapon = base.playerWeaponsState.LightGuns[label.WeaponIndex];
     }
-    
+
     public void UpdatePreviouslyOwnedLightWeapon(int side)
     {
         this.previouslyOwnedLightWeapon = base.playerWeaponsState.LightGuns[side];

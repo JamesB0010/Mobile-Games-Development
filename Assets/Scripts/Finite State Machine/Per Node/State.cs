@@ -167,7 +167,7 @@ class StateCustomEditor : Editor
         {
             DrawStateConnectionsFoldoutContent();
         }
-        
+
         serializedObject.ApplyModifiedProperties();
         EditorUtility.SetDirty(target);
     }
@@ -314,10 +314,10 @@ class StateCustomEditor : Editor
             "Comparison Operator", transitionCondition.ComparisonOperator, typeof(ComparisonOperator), false);
         if (objectReferenceValue != null)
         {
-            transitionCondition.ComparisonOperator = (ComparisonOperator)objectReferenceValue; 
+            transitionCondition.ComparisonOperator = (ComparisonOperator)objectReferenceValue;
             EditorUtility.SetDirty(transitionCondition.ComparisonOperator);
         }
-        
+
     }
 
     private void DrawAppropriateConditionComparand(int connectionIndex, int conditionOfThatConnectionIndex,

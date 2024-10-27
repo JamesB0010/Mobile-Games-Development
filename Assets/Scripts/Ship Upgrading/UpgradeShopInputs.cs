@@ -14,44 +14,44 @@ public class UpgradeShopInputs : MonoBehaviour
     [SerializeField] private InputAction click;
     [Space]
     [SerializeField] private InputAction mousePos;
-    
+
     private Vector2 mousePosition;
 
-    
+
     [Space(2)]
     [Header("Events")]
     [SerializeField]
     private UnityEvent<Vector2> ClickEvent = new UnityEvent<Vector2>();
-    
+
     [SerializeField]
     private UnityEvent<Vector2> MoveEvent = new UnityEvent<Vector2>();
-    
+
 
     private void Start()
     {
         click.Enable();
         click.performed += this.OnClick;
-        
+
         mousePos.Enable();
         mousePos.performed += this.OnMouseMove;
     }
-    
-    
+
+
     private void OnClick(InputAction.CallbackContext ctx)
+    {
+        float click = ctx.ReadValue<float>();
+
+        if (click != 1)
         {
-            float click = ctx.ReadValue<float>();
-    
-            if (click != 1)
-            {
-                return;
-            }
-            
-            this.ClickEvent?.Invoke(this.mousePosition);
+            return;
         }
-    
-     private void OnMouseMove(InputAction.CallbackContext ctx)
-        {
-            this.mousePosition = ctx.ReadValue<Vector2>();
-            this.MoveEvent?.Invoke(this.mousePosition);
-        }
+
+        this.ClickEvent?.Invoke(this.mousePosition);
+    }
+
+    private void OnMouseMove(InputAction.CallbackContext ctx)
+    {
+        this.mousePosition = ctx.ReadValue<Vector2>();
+        this.MoveEvent?.Invoke(this.mousePosition);
+    }
 }

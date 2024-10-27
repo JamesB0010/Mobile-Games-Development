@@ -1,6 +1,6 @@
 {
     "lightGunReferences": [
-        "Heavy Autocannon",
-        "Light Autocannon"
+        "Default Autocannon",
+        "Default Autocannon"
     ]
 }

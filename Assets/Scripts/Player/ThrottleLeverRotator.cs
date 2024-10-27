@@ -6,7 +6,7 @@ namespace Player
     {
         //Attributes
         private PlayerShipThrottle playerThrottle;
-    
+
         //configurables
         [SerializeField] private float minXRotation, maxXRotation;
 
@@ -20,9 +20,9 @@ namespace Player
         {
             float throttleAmount = playerThrottle.Throttle;
             float targetXRotation = throttleAmount.MapRange(0, 1, minXRotation, maxXRotation);
-    
+
             Quaternion localRotation = transform.localRotation;
-    
+
             Quaternion targetRotation = Quaternion.Euler(new Vector3(targetXRotation, localRotation.eulerAngles.y, localRotation.eulerAngles.z));
 
             transform.localRotation = targetRotation;

@@ -30,7 +30,7 @@ public class ShopOrbitController : MonoBehaviour
         float rotationMagnitudeY = Delta.x;
         float rotationMagnitudeZ = Delta.y;
         this.lastPos = pos;
-        this.vCam.transform.RotateAround(this.rotateAroundPoint.position, new UnityEngine.Vector3(0,1,0), rotationMagnitudeY * Time.deltaTime * this.rotationSpeed);
-        this.vCam.transform.RotateAround(this.rotateAroundPoint.position, new UnityEngine.Vector3(0,0,1), rotationMagnitudeZ * Time.deltaTime * this.rotationSpeed);
+        this.vCam.transform.RotateAround(this.rotateAroundPoint.position, new UnityEngine.Vector3(0, 1, 0), rotationMagnitudeY * Time.deltaTime * this.rotationSpeed);
+        this.vCam.transform.RotateAround(this.rotateAroundPoint.position, new UnityEngine.Vector3(0, 0, 1), rotationMagnitudeZ * Time.deltaTime * this.rotationSpeed);
     }
 }

@@ -19,12 +19,12 @@ public class ResetScriptableObjects : ScriptableObject
     public static void ResetObjects()
     {
         ResetScriptableObjects instance = Resources.Load<ResetScriptableObjects>("Reset Scriptable Objects");
-        
-        instance.weaponsState.ResetLightGuns();
-        
-       SaveLightWeaponsStateJsonFile(instance);
 
-       new UpgradesCounterJsonObject().GenerateDefaultSafeFile(instance.OwnedUpgradesCounterJsonSaveFile);
+        instance.weaponsState.ResetLightGuns();
+
+        SaveLightWeaponsStateJsonFile(instance);
+
+        new UpgradesCounterJsonObject().GenerateDefaultSafeFile(instance.OwnedUpgradesCounterJsonSaveFile);
     }
 
     private static void SaveLightWeaponsStateJsonFile(ResetScriptableObjects instance)
@@ -35,29 +35,4 @@ public class ResetScriptableObjects : ScriptableObject
         File.WriteAllText(saveFilePath, jsonString);
         AssetDatabase.SaveAssetIfDirty(instance.lightWeaponConfigurationSaveFile);
     }
-    
-    
 }
-
-#if UNITY_EDITOR
-[CustomEditor(typeof(ResetScriptableObjects))]
-public class ResetScriptableObjectsEditor : Editor
-{
-    private ResetScriptableObjects castedTarget;
-
-    private void OnEnable()
-    {
-        this.castedTarget = (ResetScriptableObjects)this.target;
-    }
-
-    public override void OnInspectorGUI()
-    {
-        base.DrawDefaultInspector();
-
-        if (GUILayout.Button("Reset Scriptable Objects"))
-        {
-            ResetScriptableObjects.ResetObjects();
-        }
-    }
-}
-#endif

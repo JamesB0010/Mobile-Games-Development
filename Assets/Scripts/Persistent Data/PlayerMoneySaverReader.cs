@@ -12,5 +12,5 @@ public class PlayerMoneySaverReader : MonoBehaviour
         Debug.Log(pMoney);
     }
 
-    
+
 }

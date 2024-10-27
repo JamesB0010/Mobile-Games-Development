@@ -12,10 +12,11 @@ namespace Player
     public class CameraFOVChanger : FSMBehaviour
     {
         //Attributes
-        [Header("States")] [SerializeField] private State idleMove;
+        [Header("States")][SerializeField] private State idleMove;
         [SerializeField] private State zoom;
 
-        [Header("Configurables")] [SerializeField]
+        [Header("Configurables")]
+        [SerializeField]
         private float zoomRate;
 
         [SerializeField] private float minFov, maxFov;

@@ -15,7 +15,7 @@ namespace Player_Movement
         }
 
         private Gyroscope gyro;
-    
+
         [Header("Configurables")]
         [SerializeField] private float speed;
         [SerializeField] private float maxVelocity;

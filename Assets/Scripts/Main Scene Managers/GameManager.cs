@@ -12,10 +12,10 @@ public class GameManager : MonoBehaviour
     [SerializeField] EnemySpawnManager enemySpawnManager;
 
 
-    [Header("Enemy Management")] 
+    [Header("Enemy Management")]
     [SerializeField] private ActiveEnemiesManager activeEnemiesManager;
-    
-    
+
+
     private void Start()
     {
         SpawnEnemies();

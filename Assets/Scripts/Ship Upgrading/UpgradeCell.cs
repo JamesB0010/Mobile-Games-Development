@@ -15,7 +15,7 @@ public class UpgradeCell : MonoBehaviour
         get => this.shipSection;
         set => this.shipSection = value;
     }
-    private ShipGunUpgrade upgrade; 
+    private ShipGunUpgrade upgrade;
     public ShipGunUpgrade Upgrade
     {
         get => this.upgrade;

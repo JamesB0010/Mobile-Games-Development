@@ -6,9 +6,9 @@ using UnityEngine.EventSystems;
 
 public class ClickToUiElement : MonoBehaviour
 {
-    
+
     [SerializeField] private UnityEvent<UpgradeCell> cellSelected = new UnityEvent<UpgradeCell>();
-        
+
     public void OnClick(Vector2 clickPosition)
     {
         List<RaycastResult> raycastResults = PerfromRaycast(clickPosition);
@@ -27,10 +27,10 @@ public class ClickToUiElement : MonoBehaviour
         List<RaycastResult> raycastResults = new List<RaycastResult>();
 
         EventSystem.current.RaycastAll(pointerEventData, raycastResults);
-        
+
         return raycastResults;
     }
-    
+
     private void TriggerClickedObjects(List<RaycastResult> raycastResults)
     {
         foreach (var result in raycastResults)

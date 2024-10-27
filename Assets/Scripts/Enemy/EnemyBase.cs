@@ -30,6 +30,6 @@ public class EnemyBase : MonoBehaviour
 
     protected virtual void OnDeath()
     {
-        
+
     }
 }

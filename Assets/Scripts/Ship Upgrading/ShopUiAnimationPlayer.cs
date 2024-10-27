@@ -11,7 +11,8 @@ public class ShopUiAnimationPlayer : MonoBehaviour
     [SerializeField] private AnimationClip openInventoryAnim;
     [SerializeField] private AnimationClip closeInventoryAnim;
 
-    [Space(2)] [Header("Events")]
+    [Space(2)]
+    [Header("Events")]
     [SerializeField] private UnityEvent OpenInventoryEvent = new UnityEvent();
     [SerializeField] private UnityEvent CloseInventoryEvent = new UnityEvent();
 

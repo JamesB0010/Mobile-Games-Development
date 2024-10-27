@@ -6,14 +6,14 @@ using UnityEngine.SceneManagement;
 
 public class MainMenuManager : MonoBehaviour
 {
-   [SerializeField] private PlayableDirector startGameDirector, part1IntroDirector;
-   public void EnterGameButtonPressed()
-   {
-       part1IntroDirector.Play();
-   }
-   public void IntroFirstPartComplete()
-   {
-       this.startGameDirector.Play();
-   }
+    [SerializeField] private PlayableDirector startGameDirector, part1IntroDirector;
+    public void EnterGameButtonPressed()
+    {
+        part1IntroDirector.Play();
+    }
+    public void IntroFirstPartComplete()
+    {
+        this.startGameDirector.Play();
+    }
 
 }

@@ -29,16 +29,16 @@ namespace Weapon
         {
             this.aimingAtEnemy.SetValue(false);
             this.crosshairTargetFinder = GetComponent<CrosshairTargetFinder>();
-        
+
             this.playerWeaponsState.SetPlayershipWithStoredWeapons(this.weaponsList);
         }
 
         private void Update()
         {
-            if (CrosshairNotAimingAtAnythingValid()) 
+            if (CrosshairNotAimingAtAnythingValid())
                 return;
-        
-        
+
+
             bool aimingAtAnyEnemy = IsAimingAtEnemy();
             if (aimingAtAnyEnemy)
             {

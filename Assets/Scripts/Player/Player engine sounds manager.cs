@@ -17,19 +17,25 @@ namespace Player
         [SerializeField] private AudioSource bigThruster, littleThruster;
 
 
-        [Header("Configurables")] [Header("Big Thruster")] [FormerlySerializedAs("minVol")] [SerializeField]
+        [Header("Configurables")]
+        [Header("Big Thruster")]
+        [FormerlySerializedAs("minVol")]
+        [SerializeField]
         private float bigThursterMinVol;
 
-        [FormerlySerializedAs("maxVol")] [SerializeField]
+        [FormerlySerializedAs("maxVol")]
+        [SerializeField]
         private float bigThrusterMaxVol;
 
-        [Header("Big Thruster Boosting")] [SerializeField]
+        [Header("Big Thruster Boosting")]
+        [SerializeField]
         private float bigThrusterBoostingMinVol;
 
         [SerializeField] private float bigThrusterBoostingMaxVol;
 
 
-        [Header("Little Thruster")] [SerializeField]
+        [Header("Little Thruster")]
+        [SerializeField]
         private float littleThrusterMinVol;
 
         [SerializeField] private float littleThrusterMaxVol;

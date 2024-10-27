@@ -18,8 +18,9 @@ public class FloatReference : ScriptableObjectValueReference
     {
         this.value = (float)val;
     }
-    
-    public static FloatReference operator + (FloatReference to, float val){
+
+    public static FloatReference operator +(FloatReference to, float val)
+    {
         to.SetValue((float)to.GetValue() + val);
         return to;
     }

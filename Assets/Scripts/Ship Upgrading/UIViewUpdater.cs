@@ -6,7 +6,8 @@ using UnityEngine;
 
 public class UIViewUpdater : MonoBehaviour
 {
-    [SerializeField] private TextMeshProUGUI itemNameField,
+    [SerializeField]
+    private TextMeshProUGUI itemNameField,
         itemFireRateField,
         damagePerShotField,
         costField,
@@ -45,7 +46,7 @@ public class UIViewUpdater : MonoBehaviour
             default:
                 break;
         }
-        
+
     }
 
     private void SetItemStatsUi(Gun lightGun)
@@ -84,7 +85,7 @@ public class UIViewUpdater : MonoBehaviour
 
 
         this.UpdateUiBasedOnGun(highlight.SelectedCell);
-        
+
     }
 
 
@@ -96,9 +97,9 @@ public class UIViewUpdater : MonoBehaviour
     {
         Gun gun = cell.Upgrade.Gun;
         itemNameField.text = gun.name;
-                
+
         this.itemFireRateField.text = gun.TimeBetweenBullets.ToString();
-                
+
         this.damagePerShotField.text = gun.BulletDamage.ToString();
     }
 }

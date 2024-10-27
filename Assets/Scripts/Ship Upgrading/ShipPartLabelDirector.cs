@@ -6,13 +6,13 @@ using UnityEngine.Events;
 
 public class ShipPartLabelDirector : MonoBehaviour
 {
-    
+
     [Header("Dependencies")]
     [SerializeField] private CellsSetupHelper cellsSetupHelper;
     [SerializeField] private UIViewUpdater uiUpdater;
-    
+
     [Space]
-    
+
     [SerializeField] private ShipPartLabel[] shipPartLabels;
 
 
@@ -33,7 +33,7 @@ public class ShipPartLabelDirector : MonoBehaviour
     {
         this.ShipPartLabelClicked?.Invoke(label);
         uiUpdater.UpdateItemDetailsText(label.ShipSection, label.WeaponIndex);
-        
+
         this.cellsSetupHelper.SetupCells(label);
     }
 }

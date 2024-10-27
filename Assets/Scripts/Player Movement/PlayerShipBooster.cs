@@ -17,31 +17,31 @@ public class PlayerShipBooster : MonoBehaviour
         {
             if (value)
             {
-            if (this.isBoosting == false)
-            {
-                //this is the first frame of boosting
-                                this.StartBoostingEvent?.Invoke();
-                                this.isBoostingValRef.SetValue(true);
-            }
-            this.playerMovement.CurrentMaxVelocity = this.maxBoostVelocity;
-                        isBoosting = true;
+                if (this.isBoosting == false)
+                {
+                    //this is the first frame of boosting
+                    this.StartBoostingEvent?.Invoke();
+                    this.isBoostingValRef.SetValue(true);
+                }
+                this.playerMovement.CurrentMaxVelocity = this.maxBoostVelocity;
+                isBoosting = true;
             }
             else
             {
-                 if (this.isBoosting == true)
-                            {
-                                //this is the first frame we stopped boosting
-                                this.StopBoostingEvent?.Invoke();
-                                this.isBoostingValRef.SetValue(false);
-                            }
-                            this.playerMovement.CurrentMaxVelocity = this.maxVelocityDefault;
-                            isBoosting = false;
+                if (this.isBoosting == true)
+                {
+                    //this is the first frame we stopped boosting
+                    this.StopBoostingEvent?.Invoke();
+                    this.isBoostingValRef.SetValue(false);
+                }
+                this.playerMovement.CurrentMaxVelocity = this.maxVelocityDefault;
+                isBoosting = false;
             }
         }
-    } 
-    
-    
-    
+    }
+
+
+
     [SerializeField] private BoolReference isBoostingValRef;
     [SerializeField] private float maxBoostVelocity;
     private PlayerMovement playerMovement;

@@ -10,7 +10,7 @@ public class FireButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 {
     //Dependencies resolved in start
     private GunSystems gunSystem;
-    
+
 
     private void Start()
     {

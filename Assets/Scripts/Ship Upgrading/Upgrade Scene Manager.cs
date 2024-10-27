@@ -16,13 +16,13 @@ public class ItemShopActionsManager : MonoBehaviour
     [SerializeField] private PurchaseItem purchaseItemShopAction;
 
     [SerializeField] private EquipItem equipItemShopAction;
-    
+
     [Space(2)]
     [Header("Events")]
     [SerializeField] private UnityEvent CellPurchasedEvent = new UnityEvent();
 
     [SerializeField] private UnityEvent CellEquippedEvent = new UnityEvent();
-    
+
     private void Start()
     {
         this.purchaseItemShopAction.SelectedCellPurchased += this.CellPurchased;
@@ -36,8 +36,8 @@ public class ItemShopActionsManager : MonoBehaviour
         bool cellCanBeEquipped = false;
         if (cell.Upgrade.IsPurchaseable)
             cellCanBeEquipped = OwnedUpgradesCounter.Instance.GetUpgradeCount(cell.Upgrade) > 0;
-        
-        if (cellCanBeEquipped) 
+
+        if (cellCanBeEquipped)
             this.equipItemShopAction.EquipCell(cell);
         else
         {
@@ -56,7 +56,7 @@ public class ItemShopActionsManager : MonoBehaviour
     {
         this.CellEquippedEvent?.Invoke();
     }
-    
+
     private void OnDestroy()
     {
         this.purchaseItemShopAction.SelectedCellPurchased -= this.CellPurchased;
