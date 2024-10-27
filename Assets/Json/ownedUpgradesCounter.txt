@@ -2,7 +2,7 @@
     "serializedDictionary": [
         {
             "key": "Default Autocannon",
-            "value": 0
+            "value": 2
         },
         {
             "key": "Empty",
@@ -10,7 +10,7 @@
         },
         {
             "key": "Heavy Autocannon",
-            "value": 0
+            "value": 1
         },
         {
             "key": "Light Autocannon",
@@ -22,7 +22,7 @@
         },
         {
             "key": "MiniGun",
-            "value": 0
+            "value": 1
         }
     ]
 }
