@@ -91,22 +91,11 @@ public class OwnedUpgradesCounter : MonoBehaviour
         this.upgradesCount = obj.GenerateDictionaryFromJson();
     }
 
-    private HashSet<T> GenerateHashSet<T>(T[] arrayIn)
-    {
-        HashSet<T> set = new HashSet<T>();
-        foreach (T element in arrayIn)
-        {
-            set.Add(element);
-        }
-
-        return set;
-    }
-
-
     //on upgrade purchased
     public void IncrementUpgradeCount(SelectedCellHighlight highlight)
     {
         this.upgradesCount[highlight.SelectedCell.Upgrade]++;
+        this.SaveToJson();
     }
 
     //on upgrade equipped
@@ -114,6 +103,7 @@ public class OwnedUpgradesCounter : MonoBehaviour
     {
         this.upgradesCount[this.cellHighlight.SelectedCell.Upgrade]--;
         this.upgradesCount[itemEquipper.PreviouslyOwnedLightWeapon]++;
+        this.SaveToJson();
     }
 
     public int GetUpgradeCount(ShipGunUpgrade upgrade)
@@ -143,6 +133,12 @@ public class OwnedUpgradesCounter : MonoBehaviour
         }
 
         this.GenerateSaveableObject(dictionary).SaveData(this.jsonSaveFile);
+    }
+
+    internal void SaveToJson()
+    {
+        
+        GenerateSaveableObject().SaveData(this.jsonSaveFile);
     }
 }
 
@@ -177,7 +173,7 @@ class OwnedUpgradesCounterCustomUI : Editor
 
         if (GUILayout.Button("Save state To json"))
         {
-            this.castedTarget.GenerateSaveableObject().SaveData(this.castedTarget.jsonSaveFile);
+            this.castedTarget.SaveToJson();
         }
 
 

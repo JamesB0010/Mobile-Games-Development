@@ -62,10 +62,10 @@ public class UIViewUpdater : MonoBehaviour
         this.costField.text = selectedCell.Upgrade.Cost.ToString();
         if (selectedCell.Upgrade.IsPurchaseable)
         {
-            bool isOwned = OwnedUpgradesCounter.Instance.GetUpgradeCount(selectedCell.Upgrade) > 0 || selectedCell.Upgrade.OwnedByDefault;
+            bool isEquipped = playerWeaponsState.LightGuns[selectedCell.WeaponIndex] == selectedCell.Upgrade;
+            bool isOwned = OwnedUpgradesCounter.Instance.GetUpgradeCount(selectedCell.Upgrade) > 0 || selectedCell.Upgrade.OwnedByDefault || isEquipped;
             if (isOwned)
             {
-                bool isEquipped = playerWeaponsState.LightGuns[selectedCell.WeaponIndex] == selectedCell.Upgrade;
                 if (isEquipped)
                     this.purchaseEquipButtonText.text = "Equipped";
                 else

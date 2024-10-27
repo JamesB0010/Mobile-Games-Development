@@ -3347,11 +3347,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3150a2efb0c7aac4c96e07d52abc87e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  allEquippableUpgrades:
-  - {fileID: 11400000, guid: 0b50d9da9d8c7b2468cf5ac53a772479, type: 2}
-  - {fileID: 11400000, guid: 68d72bc779fb10b499771704619568e9, type: 2}
-  - {fileID: 11400000, guid: 3e756e8e4d045534aaca7b5076153425, type: 2}
-  - {fileID: 11400000, guid: 78c56c7c38b32d34db7a8f356085d5cb, type: 2}
   jsonSaveFile: {fileID: 4900000, guid: eb7ae1a04d337494b829de8ec0039560, type: 3}
 --- !u!1 &664287973
 GameObject:
@@ -8004,6 +7999,52 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac0b09e7857660247b1477e93731de29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1530957902
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1530957903}
+  - component: {fileID: 1530957904}
+  m_Layer: 0
+  m_Name: PlayerShipLoader
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1530957903
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1530957902}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -8.11833, y: -2.8754241, z: -15.110249}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2112129366}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1530957904
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1530957902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a814270161b71664389a48fe0aced99a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lightWeaponsJson: {fileID: 4900000, guid: fc6796ea5dfbdc341a004d5f06320d94, type: 3}
+  playerWeaponsState: {fileID: 11400000, guid: b5f4d067d7d0e2744ab5cdf2c7f613f0, type: 2}
 --- !u!1 &1532187056
 GameObject:
   m_ObjectHideFlags: 0
@@ -11997,6 +12038,7 @@ Transform:
   - {fileID: 1017967625}
   - {fileID: 1563098487}
   - {fileID: 643424338}
+  - {fileID: 1530957903}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &4652780463042161955
