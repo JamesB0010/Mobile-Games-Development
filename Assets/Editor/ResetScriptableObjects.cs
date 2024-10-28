@@ -12,6 +12,8 @@ public class ResetScriptableObjects : ScriptableObject
 
     [SerializeField] private TextAsset lightWeaponConfigurationSaveFile;
 
+    [SerializeField] private TextAsset heavyWeaponConfigurationSaveFile;
+
     [SerializeField] private TextAsset OwnedUpgradesCounterJsonSaveFile;
 
     [MenuItem("Custom/Reset Scriptable Objects and Save Files")]
@@ -22,17 +24,30 @@ public class ResetScriptableObjects : ScriptableObject
 
         instance.weaponsState.ResetLightGuns();
 
+        instance.weaponsState.ResetHeavyGuns();
+
         SaveLightWeaponsStateJsonFile(instance);
+
+        SaveHeavyWeaponsStateJsonFile(instance);
 
         new UpgradesCounterJsonObject().GenerateDefaultSafeFile(instance.OwnedUpgradesCounterJsonSaveFile);
     }
 
     private static void SaveLightWeaponsStateJsonFile(ResetScriptableObjects instance)
     {
-        SavedLightWeaponsJsonObject lightWeapons = new SavedLightWeaponsJsonObject(instance.weaponsState.LightGuns);
-        string jsonString = JsonUtility.ToJson(lightWeapons, true);
+        SavedWeaponsJsonObject weapons = new SavedWeaponsJsonObject(instance.weaponsState.LightGuns);
+        string jsonString = JsonUtility.ToJson(weapons, true);
         string saveFilePath = Application.dataPath + AssetDatabase.GetAssetPath(instance.lightWeaponConfigurationSaveFile).Substring(6);
         File.WriteAllText(saveFilePath, jsonString);
         AssetDatabase.SaveAssetIfDirty(instance.lightWeaponConfigurationSaveFile);
+    }
+
+    private static void SaveHeavyWeaponsStateJsonFile(ResetScriptableObjects instance)
+    {
+        SavedWeaponsJsonObject weapons = new SavedWeaponsJsonObject(instance.weaponsState.HeavyGuns);
+        string jsonString = JsonUtility.ToJson(weapons, true);
+        string saveFilePath = Application.dataPath + AssetDatabase.GetAssetPath(instance.heavyWeaponConfigurationSaveFile).Substring(6);
+        File.WriteAllText(saveFilePath, jsonString);
+        AssetDatabase.SaveAssetIfDirty(instance.heavyWeaponConfigurationSaveFile);
     }
 }

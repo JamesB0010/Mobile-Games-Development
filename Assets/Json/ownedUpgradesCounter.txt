@@ -5,15 +5,63 @@
             "value": 0
         },
         {
-            "key": "Empty",
-            "value": 0
-        },
-        {
             "key": "Heavy Autocannon",
             "value": 0
         },
         {
+            "key": "Heavy Weapon 1",
+            "value": 0
+        },
+        {
+            "key": "Heavy Weapon 2",
+            "value": 0
+        },
+        {
+            "key": "Heavy Weapon 3",
+            "value": 0
+        },
+        {
+            "key": "Heavy Weapon 4",
+            "value": 0
+        },
+        {
+            "key": "Heavy Weapon 5",
+            "value": 0
+        },
+        {
+            "key": "Heavy Weapon 6",
+            "value": 0
+        },
+        {
+            "key": "Heavy Weapon 7",
+            "value": 0
+        },
+        {
+            "key": "Heavy Weapon 8",
+            "value": 0
+        },
+        {
             "key": "Light Autocannon",
+            "value": 0
+        },
+        {
+            "key": "Light Weapon 5",
+            "value": 0
+        },
+        {
+            "key": "Light Weapon 6",
+            "value": 0
+        },
+        {
+            "key": "Light Weapon 7",
+            "value": 0
+        },
+        {
+            "key": "Light Weapon 8",
+            "value": 0
+        },
+        {
+            "key": "Light Weapon 9",
             "value": 0
         },
         {
@@ -22,6 +70,10 @@
         },
         {
             "key": "MiniGun",
+            "value": 0
+        },
+        {
+            "key": "No Gun",
             "value": 0
         }
     ]

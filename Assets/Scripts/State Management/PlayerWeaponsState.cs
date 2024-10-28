@@ -7,9 +7,10 @@ using UnityEngine.TestTools;
 [System.Serializable]
 public class PlayerWeaponsState : ScriptableObject
 {
-    [SerializeField] private List<ShipGunUpgrade> lightGuns;
-
+    [Header("Light Guns")]
     [SerializeField] private ShipGunUpgrade defaultLightGun;
+
+    [SerializeField] private List<ShipGunUpgrade> lightGuns;
     public List<ShipGunUpgrade> LightGuns
     {
         get => this.lightGuns;
@@ -26,14 +27,28 @@ public class PlayerWeaponsState : ScriptableObject
     }
 
 
-    [SerializeField] private List<ShipGunUpgrade> heavyGuns;
 
+    [Space(5)]
+    [Header("Heavy Guns")]
+    [SerializeField] private ShipGunUpgrade defaultHeavyGun;
+
+    [SerializeField] private List<ShipGunUpgrade> heavyGuns;
     public List<ShipGunUpgrade> HeavyGuns
     {
         get => this.heavyGuns;
         set => this.heavyGuns = value;
     }
 
+    public void ResetHeavyGuns()
+    {
+        for (int i = 0; i < this.heavyGuns.Count; i++)
+        {
+            this.heavyGuns[i] = this.defaultHeavyGun;
+        }
+    }
+
+    [Space(5)]
+    [Header("Shield / Armour")]
     [SerializeField] private ShipGunUpgrade shield;
 
     public ShipGunUpgrade Shield
@@ -42,6 +57,8 @@ public class PlayerWeaponsState : ScriptableObject
         set => this.shield = value;
     }
 
+    [Space(5)]
+    [Header("Engine / Booster")]
     [SerializeField] private ShipGunUpgrade engine;
 
     public ShipGunUpgrade Engine
@@ -50,16 +67,21 @@ public class PlayerWeaponsState : ScriptableObject
         set => this.engine = value;
     }
 
-    public void EditWeaponAtIndex(int index, ShipGunUpgrade gun)
+    public void EditLightWeaponAtIndex(int index, ShipGunUpgrade gun)
     {
         this.lightGuns[index] = gun;
+    }
+
+    public void EditHeavyWeaponAtIndex(int index, ShipGunUpgrade gun)
+    {
+        this.heavyGuns[index] = gun;
     }
 
     public void SetPlayershipWithStoredWeapons(PlayerShipWeapon[] weapons)
     {
         for (int i = 0; i < this.lightGuns.Count; i++)
         {
-            weapons[i].Gun = (Gun)this.lightGuns[i].Gun.Clone();
+            weapons[i].LightGun = (LightGun)this.lightGuns[i].LightGun.Clone();
         }
     }
 }

@@ -19,8 +19,6 @@ public class PurchaseItem : ItemShopAction
 
         DeductFromPlayerMoney(cell.Upgrade.Cost);
 
-        SaveToJson(cell);
-
         this.SelectedCellPurchased?.Invoke();
     }
 
@@ -42,21 +40,5 @@ public class PurchaseItem : ItemShopAction
         float PlayerMoneyFloat = (float)this.playerMoney.GetValue();
         this.playerMoney.SetValue(PlayerMoneyFloat - amountToDeduct);
         PlayerPrefs.SetFloat(PlayerPrefsKeys.PlayerMoneyKey, (float)this.playerMoney.GetValue());
-    }
-    protected override void SaveToJson(UpgradeCell cell)
-    {
-        switch (cell.ShipSection)
-        {
-            case ShipSections.lightWeapons:
-                break;
-            case ShipSections.heavyWeapons:
-                break;
-            case ShipSections.armour:
-                break;
-            case ShipSections.engine:
-                break;
-            default:
-                break;
-        }
     }
 }

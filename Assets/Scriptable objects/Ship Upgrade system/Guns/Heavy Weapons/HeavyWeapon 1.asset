@@ -9,10 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a9b1a1ddae4d138488b138cbb96ac3c7, type: 3}
-  m_Name: Empty
+  m_Script: {fileID: 11500000, guid: f50b1feee89f5224195c52a7ef84c2ab, type: 3}
+  m_Name: HeavyWeapon 1
   m_EditorClassIdentifier: 
-  gun: {fileID: 0}
+  bulletPrefab: {fileID: 3118056857120007577, guid: 5a6baa86ac946c647b5019508c95ae8d, type: 3}
+  timeBetweenBullets: 0
   cost: 0
-  icon: {fileID: 0}
-  isPurchaseable: 0
+  bulletDamage: 0
+  ableToShoot: 0

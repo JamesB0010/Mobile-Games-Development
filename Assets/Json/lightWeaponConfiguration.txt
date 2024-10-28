@@ -1,5 +1,5 @@
 {
-    "lightGunReferences": [
+    "gunReferences": [
         "Default Autocannon",
         "Default Autocannon"
     ]

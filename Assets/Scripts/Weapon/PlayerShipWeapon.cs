@@ -2,16 +2,18 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 using Weapon;
 
 public class PlayerShipWeapon : MonoBehaviour
 {
+    [FormerlySerializedAs("gun")]
     [SerializeField]
-    private Gun gun;
+    private LightGun lightGun;
 
-    public Gun Gun
+    public LightGun LightGun
     {
-        set => this.gun = value;
+        set => this.lightGun = value;
     }
 
     [SerializeField] private GunSystems gunSystem;
@@ -31,8 +33,8 @@ public class PlayerShipWeapon : MonoBehaviour
 
     private void Start()
     {
-        this.gun = (Gun)this.gun.Clone();
-        this.gun.PrimeWeaponToShoot();
+        this.lightGun = (LightGun)this.lightGun.Clone();
+        this.lightGun.PrimeWeaponToShoot();
         this.cacheMuzzleFlashParticles();
     }
 
@@ -65,11 +67,11 @@ public class PlayerShipWeapon : MonoBehaviour
         if (lastHitValid)
         {
             RaycastHit hit = crosshairTargetFinder.GetLastHit();
-            bulletShot = this.gun.Shoot(this.bulletSpawnLocation.position, crosshairWorldTargetPosition, true, hit);
+            bulletShot = this.lightGun.Shoot(this.bulletSpawnLocation.position, crosshairWorldTargetPosition, true, hit);
         }
         else
         {
-            bulletShot = this.gun.Shoot(this.bulletSpawnLocation.position, crosshairWorldTargetPosition, false);
+            bulletShot = this.lightGun.Shoot(this.bulletSpawnLocation.position, crosshairWorldTargetPosition, false);
         }
 
         if (bulletShot)

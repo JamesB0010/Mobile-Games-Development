@@ -12,12 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9482400910c60a646887470372279e73, type: 3}
   m_Name: PlayerWeaponsState
   m_EditorClassIdentifier: 
+  defaultLightGun: {fileID: 11400000, guid: 0b50d9da9d8c7b2468cf5ac53a772479, type: 2}
   lightGuns:
   - {fileID: 11400000, guid: 0b50d9da9d8c7b2468cf5ac53a772479, type: 2}
   - {fileID: 11400000, guid: 0b50d9da9d8c7b2468cf5ac53a772479, type: 2}
-  defaultLightGun: {fileID: 11400000, guid: 0b50d9da9d8c7b2468cf5ac53a772479, type: 2}
+  defaultHeavyGun: {fileID: 11400000, guid: 882f3f120ab9c3746b560efda9ee35bd, type: 2}
   heavyGuns:
-  - {fileID: 11400000, guid: 0b50d9da9d8c7b2468cf5ac53a772479, type: 2}
-  - {fileID: 11400000, guid: 0b50d9da9d8c7b2468cf5ac53a772479, type: 2}
+  - {fileID: 11400000, guid: 882f3f120ab9c3746b560efda9ee35bd, type: 2}
+  - {fileID: 11400000, guid: 882f3f120ab9c3746b560efda9ee35bd, type: 2}
   shield: {fileID: 11400000, guid: 0b50d9da9d8c7b2468cf5ac53a772479, type: 2}
   engine: {fileID: 11400000, guid: 0b50d9da9d8c7b2468cf5ac53a772479, type: 2}

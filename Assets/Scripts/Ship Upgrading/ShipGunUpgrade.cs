@@ -1,12 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 [CreateAssetMenu]
 public class ShipGunUpgrade : ScriptableObject
 {
-    [SerializeField] private Gun gun;
-    public Gun Gun => this.gun;
+    [FormerlySerializedAs("gun")][SerializeField] private LightGun lightGun;
+    public LightGun LightGun => this.lightGun;
 
     [SerializeField] private float cost;
     public float Cost => this.cost;

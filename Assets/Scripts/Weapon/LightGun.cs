@@ -4,8 +4,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-[CreateAssetMenu]
-public class Gun : ScriptableObject, ICloneable
+[CreateAssetMenu(menuName = "Guns/Light Gun")]
+public class LightGun : ScriptableObject, ICloneable
 {
     [SerializeField]
     private Bullet bulletPrefab;
@@ -20,10 +20,6 @@ public class Gun : ScriptableObject, ICloneable
         get => this.timeBetweenBullets;
     }
 
-    [SerializeField] private float cost;
-
-    public float Cost => this.cost;
-
     [SerializeField] private float bulletDamage;
 
     public float BulletDamage => this.bulletDamage;
@@ -32,7 +28,7 @@ public class Gun : ScriptableObject, ICloneable
     {
         this.lastBulletShotTimestamp = -100.0f;
     }
-    public bool Shoot(Vector3 bulletStartPosition, Vector3 targetPosition, bool hasValidTarget, RaycastHit hit)
+    public virtual bool Shoot(Vector3 bulletStartPosition, Vector3 targetPosition, bool hasValidTarget, RaycastHit hit)
     {
         if (this.IsPrimedToShoot())
         {
@@ -42,7 +38,7 @@ public class Gun : ScriptableObject, ICloneable
         }
         return false;
     }
-    public bool Shoot(Vector3 bulletStartPosition, Vector3 targetPosition, bool hasValidTarget)
+    public virtual bool Shoot(Vector3 bulletStartPosition, Vector3 targetPosition, bool hasValidTarget)
     {
         if (this.IsPrimedToShoot())
         {
@@ -53,13 +49,13 @@ public class Gun : ScriptableObject, ICloneable
         return false;
     }
 
-    private bool IsPrimedToShoot()
+    protected bool IsPrimedToShoot()
     {
         bool requiredTimeElapsed = Time.timeSinceLevelLoad - lastBulletShotTimestamp > timeBetweenBullets;
         return requiredTimeElapsed;
     }
 
-    private Bullet InstantiateBullet(Vector3 bulletStartPosition, Vector3 targetPosition, bool hasValidTarget)
+    protected Bullet InstantiateBullet(Vector3 bulletStartPosition, Vector3 targetPosition, bool hasValidTarget)
     {
         this.UpdateLastBulletShotTimestamp();
 
@@ -80,12 +76,13 @@ public class Gun : ScriptableObject, ICloneable
 
     public object Clone()
     {
-        Gun obj = ScriptableObject.CreateInstance<Gun>();
+        LightGun obj = ScriptableObject.CreateInstance<LightGun>();
         obj.bulletDamage = bulletDamage;
         obj.bulletPrefab = bulletPrefab;
         obj.lastBulletShotTimestamp = lastBulletShotTimestamp;
-        obj.cost = cost;
         obj.timeBetweenBullets = timeBetweenBullets;
         return obj;
     }
 }
+
+
