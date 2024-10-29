@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7562ecde526829a408eaf6ce111ec73d, type: 3}
-  m_Name: IdleMove
+  m_Name: weaponsIdle
   m_EditorClassIdentifier: 
   stateConnections:
   - stateTo: {fileID: 11400000, guid: db3a059aa0bd01b468fbcca76465ba46, type: 2}
     transitionHandledByAgent: 0
     transitionConditions:
     - rid: 4680077143554916353
-    - rid: 4680077143554916362
-    - rid: 4680077193319284737
+    - rid: 4680077397781643264
+    - rid: 4680077397781643272
   references:
     version: 2
     RefIds:
@@ -29,17 +29,17 @@ MonoBehaviour:
         valueToTest: {fileID: 11400000, guid: e7e857e760247884cbbf3d566327de25, type: 2}
         comparisonOperator: {fileID: 11400000, guid: 40414d3cf4e88384c89e9f471098ef40, type: 2}
         comparand: 1
-    - rid: 4680077143554916362
-      type: {class: FloatTransitionCondition, ns: , asm: Assembly-CSharp}
-      data:
-        transitionHandledByAgent: 0
-        valueToTest: {fileID: 11400000, guid: ddc5db2a17bea5b45bdcc970079b26e2, type: 2}
-        comparisonOperator: {fileID: 11400000, guid: 8180d1b46e7208745a008a733cfb7a68, type: 2}
-        comparand: 0.6
-    - rid: 4680077193319284737
+    - rid: 4680077397781643264
       type: {class: BoolTransitionCondition, ns: , asm: Assembly-CSharp}
       data:
         transitionHandledByAgent: 0
         valueToTest: {fileID: 11400000, guid: 3d9017b5464ba654cbef4ccb8a95b835, type: 2}
         comparisonOperator: {fileID: 11400000, guid: 40414d3cf4e88384c89e9f471098ef40, type: 2}
         comparand: 0
+    - rid: 4680077397781643272
+      type: {class: FloatTransitionCondition, ns: , asm: Assembly-CSharp}
+      data:
+        transitionHandledByAgent: 0
+        valueToTest: {fileID: 11400000, guid: ddc5db2a17bea5b45bdcc970079b26e2, type: 2}
+        comparisonOperator: {fileID: 11400000, guid: 8180d1b46e7208745a008a733cfb7a68, type: 2}
+        comparand: 0.2

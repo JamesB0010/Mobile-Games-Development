@@ -19,7 +19,12 @@ namespace Weapon
 
 
         private bool tryingToShoot = false;
-        public bool TryingToShoot => this.tryingToShoot;
+        public bool TryingToShoot
+        {
+            get => this.tryingToShoot;
+
+            set => this.tryingToShoot = value;
+        }
 
         private float timeStartedLookingAtEnemy;
 
@@ -82,28 +87,6 @@ namespace Weapon
             }
 
             return false;
-        }
-
-        public void OnShoot(InputAction.CallbackContext ctx)
-        {
-            if (ctx.action.IsPressed())
-            {
-                this.tryingToShoot = true;
-            }
-            else
-            {
-                this.tryingToShoot = false;
-            }
-        }
-
-        public void OnShootButtonActivate()
-        {
-            this.tryingToShoot = true;
-        }
-
-        public void OnShootButtonDeactiveated()
-        {
-            this.tryingToShoot = false;
         }
     }
 }

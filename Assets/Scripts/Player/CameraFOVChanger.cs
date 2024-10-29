@@ -5,6 +5,7 @@ using Cinemachine;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.InputSystem;
 using UnityEngine.Serialization;
 
 namespace Player
@@ -14,6 +15,13 @@ namespace Player
         //Attributes
         [Header("States")][SerializeField] private State idleMove;
         [SerializeField] private State zoom;
+
+        private bool zoomIn;
+
+        public bool ZoomIn
+        {
+            set => this.zoomIn = value;
+        }
 
         [Header("Configurables")]
         [SerializeField]
@@ -72,6 +80,43 @@ namespace Player
             {
                 this.ZoomInEvent?.Invoke();
             }
+        }
+        
+        public override bool EvaluateTransition(State current, State to)
+        {
+            if (current.StateName == this.idleMove.name)
+            {
+                return this.zoomIn;
+            }
+
+            if (current.StateName == this.zoom.name)
+            {
+                return !this.zoomIn;
+            }
+
+            return false;
+        }
+    
+        public void OnShoot(InputAction.CallbackContext ctx)
+        {
+            if (ctx.action.IsPressed())
+            {
+                this.zoomIn = true;
+            }
+            else
+            {
+                this.zoomIn = false;
+            }
+        }
+
+        public void OnShootButtonActivate()
+        {
+            this.zoomIn = true;
+        }
+
+        public void OnShootButtonDeactiveated()
+        {
+            this.zoomIn = false;
         }
     }
 }

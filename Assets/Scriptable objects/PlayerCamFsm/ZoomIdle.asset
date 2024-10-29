@@ -10,20 +10,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7562ecde526829a408eaf6ce111ec73d, type: 3}
-  m_Name: Zooming
+  m_Name: ZoomIdle
   m_EditorClassIdentifier: 
   stateConnections:
-  - stateTo: {fileID: 11400000, guid: ce2015cd9bc422b4f88068c8fe4cc84f, type: 2}
-    transitionHandledByAgent: 0
+  - stateTo: {fileID: 11400000, guid: 498a15afa51f1104cbe33699f077bdb8, type: 2}
+    transitionHandledByAgent: 1
     transitionConditions:
-    - rid: 4680077143554916358
+    - rid: 4680077397781643270
   references:
     version: 2
     RefIds:
-    - rid: 4680077143554916358
-      type: {class: BoolTransitionCondition, ns: , asm: Assembly-CSharp}
+    - rid: 4680077397781643270
+      type: {class: FloatTransitionCondition, ns: , asm: Assembly-CSharp}
       data:
         transitionHandledByAgent: 0
-        valueToTest: {fileID: 11400000, guid: e7e857e760247884cbbf3d566327de25, type: 2}
-        comparisonOperator: {fileID: 11400000, guid: 40414d3cf4e88384c89e9f471098ef40, type: 2}
+        valueToTest: {fileID: 0}
+        comparisonOperator: {fileID: 0}
         comparand: 0

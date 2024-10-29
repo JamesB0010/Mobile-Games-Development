@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Player;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
@@ -9,22 +10,22 @@ using Weapon;
 public class FireButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 {
     //Dependencies resolved in start
-    private GunSystems gunSystem;
+    private CameraFOVChanger fovChanger;
 
 
     private void Start()
     {
-        this.gunSystem = FindObjectOfType<GunSystems>();
+        this.fovChanger = FindObjectOfType<CameraFOVChanger>();
     }
 
     public void OnPointerDown(PointerEventData eventData)
     {
-        this.gunSystem.OnShootButtonActivate();
+        this.fovChanger.ZoomIn = true;
     }
 
     public void OnPointerUp(PointerEventData eventData)
     {
-        this.gunSystem.OnShootButtonDeactiveated();
+        this.fovChanger.ZoomIn = false;
     }
 
 

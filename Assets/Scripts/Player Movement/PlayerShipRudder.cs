@@ -10,6 +10,13 @@ public class PlayerShipRudder : MonoBehaviour
 
     [SerializeField] private float yawSpeed;
 
+    private float yawSpeedDefault;
+
+    private void Start()
+    {
+        this.yawSpeedDefault = yawSpeed;
+    }
+
     private void Update()
     {
         float yawAmount = this.inputtedYaw * Time.deltaTime * this.yawSpeed;
@@ -21,4 +28,13 @@ public class PlayerShipRudder : MonoBehaviour
         Vector2 input = ctx.ReadValue<Vector2>();
         this.inputtedYaw = input.x;
     }
+    public void SetSensitivityAiming()
+    {
+        this.yawSpeed = 5;
+    }
+    
+   public void SetSensitivityNormal()
+   {
+       this.yawSpeed = this.yawSpeedDefault;
+   }
 }
