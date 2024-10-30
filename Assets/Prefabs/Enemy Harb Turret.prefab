@@ -9,9 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5572911970215649981}
-  - component: {fileID: 6999675460621940730}
   - component: {fileID: 1904863700040533921}
   - component: {fileID: 7056405623187739976}
+  - component: {fileID: 7454186304477823367}
   m_Layer: 0
   m_Name: Enemy Harb Turret
   m_TagString: Enemy
@@ -35,24 +35,6 @@ Transform:
   - {fileID: 7891964893928641570}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
---- !u!114 &6999675460621940730
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7485390389520306416}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c85b71981f14f244a96549ca5fe3180a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 100
-  DeathParticle: {fileID: 3882828615210567630, guid: 7a8e966794bfadc459366685b18688c9, type: 3}
-  maxVelocity: 0.06
-  speed: 1
-  rotationSpeed: 0.08
-  desiredDirectionChangeInterval: 10
 --- !u!114 &1904863700040533921
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16453,6 +16435,20 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2.4328873, y: 1.7634357, z: 3.4226153}
   m_Center: {x: -0.024885692, y: -0.09087849, z: -0.5148929}
+--- !u!114 &7454186304477823367
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7485390389520306416}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d704984ed73cf747aa08190630e7d52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
+  DeathParticle: {fileID: 3882828615210567630, guid: 7a8e966794bfadc459366685b18688c9, type: 3}
 --- !u!1001 &7642429607312176073
 PrefabInstance:
   m_ObjectHideFlags: 0

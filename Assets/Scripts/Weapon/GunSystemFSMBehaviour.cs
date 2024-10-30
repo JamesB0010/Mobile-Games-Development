@@ -26,7 +26,6 @@ public class GunSystemFSMBehaviour : FSMBehaviour
     public override void Behave(State state)
     {
         
-        Debug.Log("lalal");
         if(state.StateName == lightIdle.name)
             this.gunSystem.TryingToShootLight = false;
             

@@ -1,18 +1,24 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TurretEnemy : MonoBehaviour
+public class TurretEnemy : EnemyBase
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] private GameObject DeathParticle;
 
-    // Update is called once per frame
-    void Update()
+    private bool dead = false;
+
+    public event Action DeathEvent;
+
+    protected override void OnDeath()
     {
-        
+        if (this.dead)
+            return;
+
+        this.dead = true;
+        DeathEvent?.Invoke();
+        Instantiate(this.DeathParticle, transform.position, Quaternion.identity);
+        Destroy(this.gameObject);
     }
 }
