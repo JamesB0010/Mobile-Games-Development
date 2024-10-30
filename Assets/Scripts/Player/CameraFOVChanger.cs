@@ -16,6 +16,9 @@ namespace Player
         [Header("States")][SerializeField] private State idleMove;
         [SerializeField] private State zoom;
 
+
+        [SerializeField] private BoolReference isBoosting;
+
         private bool zoomIn;
 
         public bool ZoomIn
@@ -81,12 +84,12 @@ namespace Player
                 this.ZoomInEvent?.Invoke();
             }
         }
-        
+
         public override bool EvaluateTransition(State current, State to)
         {
-            if (current.StateName == this.idleMove.name)
+            if (current.StateName == this.idleMove.name && this.zoomIn && !(Convert.ToBoolean(this.isBoosting.GetValue())))
             {
-                return this.zoomIn;
+                return true;
             }
 
             if (current.StateName == this.zoom.name)
@@ -96,7 +99,7 @@ namespace Player
 
             return false;
         }
-    
+
         public void OnShoot(InputAction.CallbackContext ctx)
         {
             if (ctx.action.IsPressed())

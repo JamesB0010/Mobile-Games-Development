@@ -28,19 +28,19 @@ public class UIViewUpdater : MonoBehaviour
         switch (shipSection)
         {
             case ShipSections.lightWeapons:
-                LightGun lightLightGun = this.playerWeaponsState.LightGuns[side].LightGun;
+                LightGun lightLightGun = (LightGun)this.playerWeaponsState.LightGuns[side].Gun;
                 this.SetItemStatsUi(lightLightGun);
                 break;
             case ShipSections.heavyWeapons:
-                LightGun heavyLightGun = this.playerWeaponsState.HeavyGuns[side].LightGun;
+                HeavyGun heavyLightGun = (HeavyGun)this.playerWeaponsState.HeavyGuns[side].Gun;
                 this.SetItemStatsUi(heavyLightGun);
                 break;
             case ShipSections.armour:
-                LightGun armour = this.playerWeaponsState.Shield.LightGun;
+                LightGun armour = (LightGun)this.playerWeaponsState.Shield.Gun;
                 this.SetItemStatsUi(armour);
                 break;
             case ShipSections.engine:
-                LightGun engine = this.playerWeaponsState.Shield.LightGun;
+                LightGun engine = (LightGun)this.playerWeaponsState.Shield.Gun;
                 this.SetItemStatsUi(engine);
                 break;
             default:
@@ -49,13 +49,13 @@ public class UIViewUpdater : MonoBehaviour
 
     }
 
-    private void SetItemStatsUi(LightGun lightLightGun)
+    private void SetItemStatsUi(Gun gun)
     {
-        itemNameField.text = lightLightGun.name;
+        itemNameField.text = gun.name;
 
-        this.itemFireRateField.text = lightLightGun.TimeBetweenBullets.ToString();
+        this.itemFireRateField.text = gun.TimeBetweenBullets.ToString();
 
-        this.damagePerShotField.text = lightLightGun.BulletDamage.ToString();
+        this.damagePerShotField.text = gun.BulletDamage.ToString();
     }
 
     public void CellSelected(UpgradeCell selectedCell)
@@ -95,7 +95,7 @@ public class UIViewUpdater : MonoBehaviour
     }
     private void UpdateUiBasedOnGun(UpgradeCell cell)
     {
-        LightGun lightGun = cell.Upgrade.LightGun;
+        LightGun lightGun = (LightGun)cell.Upgrade.Gun;
         itemNameField.text = lightGun.name;
 
         this.itemFireRateField.text = lightGun.TimeBetweenBullets.ToString();

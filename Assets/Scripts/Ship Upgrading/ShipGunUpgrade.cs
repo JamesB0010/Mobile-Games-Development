@@ -6,8 +6,8 @@ using UnityEngine.Serialization;
 [CreateAssetMenu]
 public class ShipGunUpgrade : ScriptableObject
 {
-    [FormerlySerializedAs("gun")][SerializeField] private LightGun lightGun;
-    public LightGun LightGun => this.lightGun;
+    [FormerlySerializedAs("lightGun")] [SerializeField] private Gun gun;
+    public Gun Gun => this.gun;
 
     [SerializeField] private float cost;
     public float Cost => this.cost;

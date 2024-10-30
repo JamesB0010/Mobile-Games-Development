@@ -77,11 +77,19 @@ public class PlayerWeaponsState : ScriptableObject
         this.heavyGuns[index] = gun;
     }
 
-    public void SetPlayershipWithStoredWeapons(PlayerShipWeapon[] weapons)
+    public void SetPlayershipWithStoredLightWeapons(PlayerShipLightWeapon[] weapons)
     {
         for (int i = 0; i < this.lightGuns.Count; i++)
         {
-            weapons[i].LightGun = (LightGun)this.lightGuns[i].LightGun.Clone();
+            weapons[i].LightGun = (LightGun)this.lightGuns[i].Gun.Clone();
+        }
+    }
+
+    public void SetPlayershipWithStoredHeavyWeapons(PlayerShipHeavyWeapon[] weapons)
+    {
+        for (int i = 0; i < this.heavyGuns.Count; i++)
+        {
+            weapons[i].HeavyGun = (HeavyGun)this.heavyGuns[i].Gun.Clone();
         }
     }
 }

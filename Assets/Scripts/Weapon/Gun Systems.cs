@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Serialization;
 
 namespace Weapon
 {
@@ -13,17 +14,27 @@ namespace Weapon
 
         [SerializeField] private BoolReference aimingAtEnemy;
 
-        [SerializeField] private PlayerShipWeapon[] weaponsList;
+        [SerializeField] private PlayerShipLightWeapon[] lightWeaponsList;
+
+        [SerializeField] private PlayerShipHeavyWeapon[] heavyWeaponList;
 
         [SerializeField] private PlayerWeaponsState playerWeaponsState;
 
 
-        private bool tryingToShoot = false;
-        public bool TryingToShoot
+        public bool tryingToShootLightLight = false;
+        public bool TryingToShootLight
         {
-            get => this.tryingToShoot;
+            get => this.tryingToShootLightLight;
 
-            set => this.tryingToShoot = value;
+            set => this.tryingToShootLightLight = value;
+        }
+
+        public bool tryingToShootHeavy = false;
+
+        public bool TryingToShootHeavy
+        {
+            get => this.tryingToShootHeavy;
+            set => this.tryingToShootHeavy = value;
         }
 
         private float timeStartedLookingAtEnemy;
@@ -35,7 +46,8 @@ namespace Weapon
             this.aimingAtEnemy.SetValue(false);
             this.crosshairTargetFinder = GetComponent<CrosshairTargetFinder>();
 
-            this.playerWeaponsState.SetPlayershipWithStoredWeapons(this.weaponsList);
+            this.playerWeaponsState.SetPlayershipWithStoredLightWeapons(this.lightWeaponsList);
+            this.playerWeaponsState.SetPlayershipWithStoredHeavyWeapons(this.heavyWeaponList);
         }
 
         private void Update()
