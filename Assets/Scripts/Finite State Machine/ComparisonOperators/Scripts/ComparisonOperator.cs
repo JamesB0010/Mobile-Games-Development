@@ -6,7 +6,7 @@ using UnityEngine;
 [Serializable]
 public abstract class ComparisonOperator : ScriptableObject
 {
-    public virtual bool Test(float source, float target)
+    public virtual bool Test<T>(IComparable<T> source, T target)
     {
         return false;
     }

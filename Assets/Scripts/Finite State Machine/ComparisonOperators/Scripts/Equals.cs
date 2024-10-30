@@ -6,13 +6,13 @@ using UnityEngine;
 [Serializable]
 public class EqualsComparisonOperator : ComparisonOperator
 {
-    public override bool Test(bool toTest, bool requirement)
+    public override bool Test(bool source, bool target) 
     {
-        return toTest == requirement;
+        return source.Equals(target);
     }
 
-    public override bool Test(float source, float target)
+    public override bool Test<T>(IComparable<T> source, T target)
     {
-        return source == target;
+        return source.CompareTo(target) == 0;
     }
 }

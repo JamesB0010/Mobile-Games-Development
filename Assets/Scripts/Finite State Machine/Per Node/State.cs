@@ -302,10 +302,10 @@ class StateCustomEditor : Editor
     {
         object objectReferenceValue = EditorGUILayout.ObjectField("Value Reference",
             transitionCondition.ValueToTest,
-            typeof(ScriptableObjectValueReference), false);
+            typeof(SuperBaseScriptableValRef), false);
 
         if (objectReferenceValue != null)
-            transitionCondition.ValueToTest = (ScriptableObjectValueReference)objectReferenceValue;
+            transitionCondition.ValueToTest = (SuperBaseScriptableValRef)objectReferenceValue;
     }
 
     private static void DrawComparisonOperatorSelector(TransitionConditionBase transitionCondition)

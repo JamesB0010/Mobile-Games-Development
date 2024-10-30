@@ -12,7 +12,7 @@ public abstract class TransitionConditionBase
     protected bool transitionHandledByAgent = false;
 
     [SerializeField]
-    protected ScriptableObjectValueReference valueToTest;
+    protected SuperBaseScriptableValRef valueToTest;
 
     [Tooltip("Choose a comparison operator from the dropdown menu")]
     [SerializeField]
@@ -29,7 +29,7 @@ public abstract class TransitionConditionBase
 
     //Methods
     //getters
-    public ScriptableObjectValueReference ValueToTest
+    public SuperBaseScriptableValRef ValueToTest
     {
         get => this.valueToTest;
 
@@ -86,7 +86,7 @@ public class FloatTransitionCondition : TransitionConditionBase
 
     public override bool Evaluate()
     {
-        return this.ComparisonOperator.Test((float)this.valueToTest.GetValue(), this.comparand);
+        return this.ComparisonOperator.Test((float)this.valueToTest.GetVal(), this.comparand);
     }
 }
 
@@ -106,6 +106,6 @@ public class BoolTransitionCondition : TransitionConditionBase
 
     public override bool Evaluate()
     {
-        return this.ComparisonOperator.Test((bool)this.valueToTest.GetValue(), this.comparand);
+        return this.ComparisonOperator.Test(Convert.ToBoolean(this.valueToTest.GetVal()), this.comparand);
     }
 }

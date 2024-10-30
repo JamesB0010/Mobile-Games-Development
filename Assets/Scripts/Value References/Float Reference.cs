@@ -5,11 +5,11 @@ using UnityEditor;
 using UnityEngine;
 
 [CreateAssetMenu(menuName = "Scriptable Object Value References/Float")]
-public class FloatReference : ScriptableObjectValueReference
+public class FloatReference : SuperBaseScriptableValRef<float>
 {
     private float value;
 
-    public override object GetValue()
+    public override float GetValue()
     {
         return value;
     }
@@ -21,7 +21,7 @@ public class FloatReference : ScriptableObjectValueReference
 
     public static FloatReference operator +(FloatReference to, float val)
     {
-        to.SetValue((float)to.GetValue() + val);
+        to.SetValue(to.GetValue() + val);
         return to;
     }
 }

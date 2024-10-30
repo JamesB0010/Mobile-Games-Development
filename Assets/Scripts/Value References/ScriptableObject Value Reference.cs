@@ -4,9 +4,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using Object = System.Object;
 
-public abstract class ScriptableObjectValueReference : ScriptableObject
+public abstract class SuperBaseScriptableValRef<T> :  SuperBaseScriptableValRef
 {
-    public abstract object GetValue();
+    public abstract T GetValue();
 
     public abstract void SetValue(object val);
+
+    public override object GetVal() => this.GetValue();
+
 }

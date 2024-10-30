@@ -6,8 +6,9 @@ using UnityEngine;
 [Serializable]
 public class LessEquals : ComparisonOperator
 {
-    public override bool Test(float source, float target)
-    {
-        return source <= target;
-    }
+    public override bool Test<T>(IComparable<T> source, T target)
+            {
+                return source.CompareTo(target) <= 0;
+            }
+
 }

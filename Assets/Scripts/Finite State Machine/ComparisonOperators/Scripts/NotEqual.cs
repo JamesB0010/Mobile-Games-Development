@@ -6,13 +6,14 @@ using UnityEngine;
 [Serializable]
 public class NotEqualComparisonOperator : ComparisonOperator
 {
-    public override bool Test(bool source, bool target)
+    public override bool Test(bool source, bool target) 
     {
-        return source != target;
+        return !source.Equals(target);
     }
-    public override bool Test(float source, float target)
+
+    public override bool Test<T>(IComparable<T> source, T target)
     {
-        return source != target;
+        return source.CompareTo(target) != 0;
     }
 
 }

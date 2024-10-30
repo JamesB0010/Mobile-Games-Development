@@ -5,11 +5,11 @@ using UnityEditor;
 using UnityEngine;
 
 [CreateAssetMenu(menuName = "Scriptable Object Value References/Boolean")]
-public class BoolReference : ScriptableObjectValueReference
+public class BoolReference : SuperBaseScriptableValRef<bool>
 {
     private bool value;
 
-    public override object GetValue()
+    public override bool GetValue()
     {
         return value;
     }
@@ -33,7 +33,7 @@ public class BoolRefEditor : Editor
 
     public override void OnInspectorGUI()
     {
-        this.reference.SetValue(EditorGUILayout.Toggle("Value", (bool)this.reference.GetValue()));
+        this.reference.SetValue(EditorGUILayout.Toggle("Value", this.reference.GetValue()));
     }
 }
 
