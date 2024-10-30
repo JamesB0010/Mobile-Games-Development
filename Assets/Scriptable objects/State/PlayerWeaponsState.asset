@@ -16,13 +16,10 @@ MonoBehaviour:
   lightGuns:
   - {fileID: 11400000, guid: 0b50d9da9d8c7b2468cf5ac53a772479, type: 2}
   - {fileID: 11400000, guid: 0b50d9da9d8c7b2468cf5ac53a772479, type: 2}
-  - {fileID: 11400000, guid: 68d72bc779fb10b499771704619568e9, type: 2}
-  - {fileID: 11400000, guid: 68d72bc779fb10b499771704619568e9, type: 2}
+  - {fileID: 11400000, guid: 0b50d9da9d8c7b2468cf5ac53a772479, type: 2}
+  - {fileID: 11400000, guid: 0b50d9da9d8c7b2468cf5ac53a772479, type: 2}
   defaultHeavyGun: {fileID: 11400000, guid: 882f3f120ab9c3746b560efda9ee35bd, type: 2}
   heavyGuns:
-  - {fileID: 11400000, guid: 80bacbbd6fdda634aa81c2bf793d2496, type: 2}
-  - {fileID: 11400000, guid: 80bacbbd6fdda634aa81c2bf793d2496, type: 2}
-  - {fileID: 11400000, guid: 80bacbbd6fdda634aa81c2bf793d2496, type: 2}
   - {fileID: 11400000, guid: 80bacbbd6fdda634aa81c2bf793d2496, type: 2}
   - {fileID: 11400000, guid: 80bacbbd6fdda634aa81c2bf793d2496, type: 2}
   shield: {fileID: 11400000, guid: 0b50d9da9d8c7b2468cf5ac53a772479, type: 2}

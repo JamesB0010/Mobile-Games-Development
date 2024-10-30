@@ -7,7 +7,7 @@ public class EnemyBase : MonoBehaviour
     [SerializeField]
     private float health = 100.0f;
 
-    private float Health
+    protected float Health
     {
         get => this.health;
 

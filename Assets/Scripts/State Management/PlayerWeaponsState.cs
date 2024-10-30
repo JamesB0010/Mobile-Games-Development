@@ -79,17 +79,33 @@ public class PlayerWeaponsState : ScriptableObject
 
     public void SetPlayershipWithStoredLightWeapons(PlayerShipLightWeapon[] weapons)
     {
-        for (int i = 0; i < this.lightGuns.Count; i++)
+        int i = 0;
+        for (; i < this.lightGuns.Count; i++)
         {
+            if(i >= weapons.Length)
+                break;
             weapons[i].LightGun = (LightGun)this.lightGuns[i].Gun.Clone();
+        }
+
+        for (; i < weapons.Length; i++)
+        {
+            weapons[i].gameObject.SetActive(false);
         }
     }
 
     public void SetPlayershipWithStoredHeavyWeapons(PlayerShipHeavyWeapon[] weapons)
     {
-        for (int i = 0; i < this.heavyGuns.Count; i++)
+        int i = 0;
+        for (; i < this.heavyGuns.Count; i++)
         {
+            if(i >= weapons.Length)
+                break;
             weapons[i].HeavyGun = (HeavyGun)this.heavyGuns[i].Gun.Clone();
+        }
+
+        for (; i < weapons.Length; i++)
+        {
+            weapons[i].gameObject.SetActive(false);
         }
     }
 }

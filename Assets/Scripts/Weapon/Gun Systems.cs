@@ -14,9 +14,9 @@ namespace Weapon
 
         [SerializeField] private BoolReference aimingAtEnemy;
 
-        [SerializeField] private PlayerShipLightWeapon[] lightWeaponsList;
+        private PlayerShipLightWeapon[] lightWeaponsList;
 
-        [SerializeField] private PlayerShipHeavyWeapon[] heavyWeaponList;
+        private PlayerShipHeavyWeapon[] heavyWeaponList;
 
         [SerializeField] private PlayerWeaponsState playerWeaponsState;
 
@@ -45,6 +45,9 @@ namespace Weapon
         {
             this.aimingAtEnemy.SetValue(false);
             this.crosshairTargetFinder = GetComponent<CrosshairTargetFinder>();
+
+            this.lightWeaponsList = transform.GetComponentsInChildren<PlayerShipLightWeapon>();
+            this.heavyWeaponList = transform.GetComponentsInChildren<PlayerShipHeavyWeapon>();
 
             this.playerWeaponsState.SetPlayershipWithStoredLightWeapons(this.lightWeaponsList);
             this.playerWeaponsState.SetPlayershipWithStoredHeavyWeapons(this.heavyWeaponList);

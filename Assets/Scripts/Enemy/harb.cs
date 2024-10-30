@@ -30,10 +30,9 @@ public class Harb : EnemyBase
     private void TurretDied()
     {
         this.turrentsLeft--;
-        Debug.Log("Turrets Left: " + this.turrentsLeft);
         if (this.turrentsLeft <= 0)
         {
-            Destroy(this.gameObject);
+            StartCoroutine(nameof(this.DramaticDeath));
         }
     }
 
@@ -51,8 +50,13 @@ public class Harb : EnemyBase
             turret.DeathEvent += this.TurretDied;
             this.turrentsLeft++;
         }
-        
-        Debug.Log("turret count: " + this.turrentsLeft );
+    }
+
+    private IEnumerator DramaticDeath()
+    {
+        yield return new WaitForSeconds(2);
+
+        this.Health = 0;
     }
 
     private void Update()
