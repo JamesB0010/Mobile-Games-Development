@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Upgrade Ship.unity
     guid: b9267ac4233bd934fb731d957b8bb1b9
   - enabled: 1
+    path: Assets/Scenes/LoadingScreen.unity
+    guid: a9592858c156a2d45a06a33cf3adb1b9
+  - enabled: 1
     path: Assets/Scenes/mainScene.unity
     guid: 0623f6f790b29b641a68e4b1eab0622e
   m_configObjects: {}
