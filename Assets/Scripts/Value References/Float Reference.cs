@@ -14,9 +14,9 @@ public class FloatReference : SuperBaseScriptableValRef<float>
         return value;
     }
 
-    public override void SetValue(object val)
+    public void SetValue(float val)
     {
-        this.value = (float)val;
+        this.value = val;
     }
 
     public static FloatReference operator +(FloatReference to, float val)

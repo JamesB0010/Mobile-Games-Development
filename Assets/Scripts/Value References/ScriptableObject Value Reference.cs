@@ -8,8 +8,6 @@ public abstract class SuperBaseScriptableValRef<T> :  SuperBaseScriptableValRef
 {
     public abstract T GetValue();
 
-    public abstract void SetValue(object val);
-
     public override object GetVal() => this.GetValue();
 
 }

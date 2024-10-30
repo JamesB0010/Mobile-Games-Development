@@ -14,9 +14,9 @@ public class BoolReference : SuperBaseScriptableValRef<bool>
         return value;
     }
 
-    public override void SetValue(object val)
+    public void SetValue(bool val)
     {
-        this.value = (bool)val;
+        this.value = val;
     }
 }
 
