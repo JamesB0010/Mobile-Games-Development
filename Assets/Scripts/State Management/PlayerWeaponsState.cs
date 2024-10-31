@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.Serialization;
 using UnityEngine.TestTools;
@@ -8,15 +9,17 @@ using UnityEngine.TestTools;
 public class PlayerWeaponsState : ScriptableObject
 {
     [Header("Light Guns")]
-    [SerializeField] private ShipGunUpgrade defaultLightGun;
+    [SerializeField] private LightGunUpgrade defaultLightGun;
 
-    [SerializeField] private List<ShipGunUpgrade> lightGuns;
-    public List<ShipGunUpgrade> LightGuns
+    [SerializeField] private List<LightGunUpgrade> lightGuns;
+    public List<LightGunUpgrade> LightGuns
     {
         get => this.lightGuns;
 
         set => this.lightGuns = value;
     }
+
+    public List<ShipGunUpgrade> LightGunsAbstract => this.lightGuns.Cast<ShipGunUpgrade>().ToList();
 
     public void ResetLightGuns()
     {
@@ -30,14 +33,16 @@ public class PlayerWeaponsState : ScriptableObject
 
     [Space(5)]
     [Header("Heavy Guns")]
-    [SerializeField] private ShipGunUpgrade defaultHeavyGun;
+    [SerializeField] private HeavyGunUpgrade defaultHeavyGun;
 
-    [SerializeField] private List<ShipGunUpgrade> heavyGuns;
-    public List<ShipGunUpgrade> HeavyGuns
+    [SerializeField] private List<HeavyGunUpgrade> heavyGuns;
+    public List<HeavyGunUpgrade> HeavyGuns
     {
         get => this.heavyGuns;
         set => this.heavyGuns = value;
     }
+
+    public List<ShipGunUpgrade> HeavyGunsAbstract => this.heavyGuns.Cast<ShipGunUpgrade>().ToList();
 
     public void ResetHeavyGuns()
     {
@@ -69,12 +74,12 @@ public class PlayerWeaponsState : ScriptableObject
 
     public void EditLightWeaponAtIndex(int index, ShipGunUpgrade gun)
     {
-        this.lightGuns[index] = gun;
+        this.lightGuns[index] = (LightGunUpgrade)gun;
     }
 
     public void EditHeavyWeaponAtIndex(int index, ShipGunUpgrade gun)
     {
-        this.heavyGuns[index] = gun;
+        this.heavyGuns[index] = (HeavyGunUpgrade)gun;
     }
 
     public void SetPlayershipWithStoredLightWeapons(PlayerShipLightWeapon[] weapons)

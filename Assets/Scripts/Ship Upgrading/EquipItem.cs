@@ -29,7 +29,7 @@ public class EquipItem : ItemShopAction
     private void SaveLightWeaponAction(UpgradeCell cell)
     {
         this.playerWeaponsState.EditLightWeaponAtIndex(cell.WeaponIndex, cell.Upgrade);
-        SavedWeaponsJsonObject weapons = new SavedWeaponsJsonObject(this.playerWeaponsState.LightGuns);
+        SavedWeaponsJsonObject weapons = new SavedWeaponsJsonObject(this.playerWeaponsState.LightGunsAbstract);
         string jsonString = JsonUtility.ToJson(weapons, true);
         File.WriteAllText(Application.dataPath + AssetDatabase.GetAssetPath(this.lightWeaponConfigurationSaveFile).Substring(6), jsonString);
         AssetDatabase.SaveAssetIfDirty(this.lightWeaponConfigurationSaveFile);
@@ -38,7 +38,7 @@ public class EquipItem : ItemShopAction
     private void SaveHeavyWeaponAction(UpgradeCell cell)
     {
         this.playerWeaponsState.EditHeavyWeaponAtIndex(cell.WeaponIndex, cell.Upgrade);
-        SavedWeaponsJsonObject weapons = new SavedWeaponsJsonObject(this.playerWeaponsState.HeavyGuns);
+        SavedWeaponsJsonObject weapons = new SavedWeaponsJsonObject(this.playerWeaponsState.HeavyGunsAbstract);
         string jsonString = JsonUtility.ToJson(weapons, true);
         File.WriteAllText(Application.dataPath + AssetDatabase.GetAssetPath(this.heavyWeaponConfigurationSaveFile).Substring(6), jsonString);
         AssetDatabase.SaveAssetIfDirty(this.heavyWeaponConfigurationSaveFile);

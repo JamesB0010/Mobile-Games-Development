@@ -9,11 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a9b1a1ddae4d138488b138cbb96ac3c7, type: 3}
+  m_Script: {fileID: 11500000, guid: 1688acab0abbd284d809ac0d63c93c0e, type: 3}
   m_Name: Heavy Autocannon
   m_EditorClassIdentifier: 
-  gun: {fileID: 11400000, guid: 1db04b6de7548164393792d81184d542, type: 2}
-  cost: 5
+  cost: 0
   icon: {fileID: 21300000, guid: 35469ed843615424083bf79d5371bb28, type: 3}
   isPurchaseable: 1
-  DefaultQuantity: 0
+  OwnedByDefault: 0
+  gun: {fileID: 11400000, guid: 1db04b6de7548164393792d81184d542, type: 2}

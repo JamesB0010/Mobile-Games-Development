@@ -35,7 +35,7 @@ public class ResetScriptableObjects : ScriptableObject
 
     private static void SaveLightWeaponsStateJsonFile(ResetScriptableObjects instance)
     {
-        SavedWeaponsJsonObject weapons = new SavedWeaponsJsonObject(instance.weaponsState.LightGuns);
+        SavedWeaponsJsonObject weapons = new SavedWeaponsJsonObject(instance.weaponsState.LightGunsAbstract);
         string jsonString = JsonUtility.ToJson(weapons, true);
         string saveFilePath = Application.dataPath + AssetDatabase.GetAssetPath(instance.lightWeaponConfigurationSaveFile).Substring(6);
         File.WriteAllText(saveFilePath, jsonString);
@@ -44,7 +44,7 @@ public class ResetScriptableObjects : ScriptableObject
 
     private static void SaveHeavyWeaponsStateJsonFile(ResetScriptableObjects instance)
     {
-        SavedWeaponsJsonObject weapons = new SavedWeaponsJsonObject(instance.weaponsState.HeavyGuns);
+        SavedWeaponsJsonObject weapons = new SavedWeaponsJsonObject(instance.weaponsState.HeavyGunsAbstract);
         string jsonString = JsonUtility.ToJson(weapons, true);
         string saveFilePath = Application.dataPath + AssetDatabase.GetAssetPath(instance.heavyWeaponConfigurationSaveFile).Substring(6);
         File.WriteAllText(saveFilePath, jsonString);
