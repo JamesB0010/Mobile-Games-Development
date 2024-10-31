@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.07003892, g: 0.026333805, b: 0.037120238, a: 1}
+  m_IndirectSpecularColor: {r: 0.070371695, g: 0.024862193, b: 0.03721711, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1545,7 +1545,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5685de33155458046b8b82a17c33bb37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  upgrades: {fileID: 11400000, guid: d10368684a05e4e488422165fb84d446, type: 2}
+  upgrades: {fileID: 11400000, guid: 9dca33cc5ace0b44abf7f3511eb6606a, type: 2}
   shipSectionCamera: {fileID: 1106642945}
   shipSection: 0
   weaponIndex: 0
@@ -2509,7 +2509,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5685de33155458046b8b82a17c33bb37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  upgrades: {fileID: 11400000, guid: 3add166f3419a144c96d793357e8fd1f, type: 2}
+  upgrades: {fileID: 11400000, guid: 2e8790b5e026b47419cd5f1dae94182b, type: 2}
   shipSectionCamera: {fileID: 1937570170}
   shipSection: 3
   weaponIndex: 0
@@ -3166,7 +3166,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5685de33155458046b8b82a17c33bb37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  upgrades: {fileID: 11400000, guid: 53aec7911bc70ca4fb47c4963c44439d, type: 2}
+  upgrades: {fileID: 11400000, guid: aac0abc014c85684f9d8456ed3ca15ed, type: 2}
   shipSectionCamera: {fileID: 29005970}
   shipSection: 2
   weaponIndex: 0
@@ -4154,7 +4154,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5685de33155458046b8b82a17c33bb37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  upgrades: {fileID: 11400000, guid: 61b1208ab748a8840a830c31196cb356, type: 2}
+  upgrades: {fileID: 11400000, guid: d29ca8c37fb5cd249babc1c7bbed210e, type: 2}
   shipSectionCamera: {fileID: 2061721214}
   shipSection: 1
   weaponIndex: 1
@@ -5040,7 +5040,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5685de33155458046b8b82a17c33bb37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  upgrades: {fileID: 11400000, guid: d10368684a05e4e488422165fb84d446, type: 2}
+  upgrades: {fileID: 11400000, guid: 9dca33cc5ace0b44abf7f3511eb6606a, type: 2}
   shipSectionCamera: {fileID: 145424506}
   shipSection: 0
   weaponIndex: 1
@@ -8324,7 +8324,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5685de33155458046b8b82a17c33bb37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  upgrades: {fileID: 11400000, guid: 61b1208ab748a8840a830c31196cb356, type: 2}
+  upgrades: {fileID: 11400000, guid: d29ca8c37fb5cd249babc1c7bbed210e, type: 2}
   shipSectionCamera: {fileID: 1913455154}
   shipSection: 1
   weaponIndex: 0

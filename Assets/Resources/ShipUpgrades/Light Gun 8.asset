@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1688acab0abbd284d809ac0d63c93c0e, type: 3}
-  m_Name: Light Autocannon
+  m_Name: Light Gun 8
   m_EditorClassIdentifier: 
   cost: 0
   icon: {fileID: 21300000, guid: 35469ed843615424083bf79d5371bb28, type: 3}
   isPurchaseable: 1
   OwnedByDefault: 0
-  gun: {fileID: 11400000, guid: 5de53fcef43d8164090a1591e3efa089, type: 2}
+  gun: {fileID: 11400000, guid: 6db6823e8f98fec4a980c15e92dcc1f7, type: 2}

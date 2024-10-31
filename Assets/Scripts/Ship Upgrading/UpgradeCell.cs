@@ -34,10 +34,4 @@ public class UpgradeCell : MonoBehaviour
     }
 
     public int WeaponIndex { get; set; }
-
-    public bool GunOwnedByThisSide()
-    {
-        //are there enough owned?
-        return true;
-    }
 }

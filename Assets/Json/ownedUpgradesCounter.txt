@@ -9,35 +9,35 @@
             "value": 0
         },
         {
-            "key": "Heavy Weapon 1",
+            "key": "Heavy Gun 1",
             "value": 0
         },
         {
-            "key": "Heavy Weapon 2",
+            "key": "Heavy Gun 2",
             "value": 0
         },
         {
-            "key": "Heavy Weapon 3",
+            "key": "Heavy Gun 3",
             "value": 0
         },
         {
-            "key": "Heavy Weapon 4",
+            "key": "Heavy Gun 4",
             "value": 0
         },
         {
-            "key": "Heavy Weapon 5",
+            "key": "Heavy Gun 5",
             "value": 0
         },
         {
-            "key": "Heavy Weapon 6",
+            "key": "Heavy Gun 6",
             "value": 0
         },
         {
-            "key": "Heavy Weapon 7",
+            "key": "Heavy Gun 7",
             "value": 0
         },
         {
-            "key": "Heavy Weapon 8",
+            "key": "Heavy Gun 8",
             "value": 0
         },
         {
@@ -45,31 +45,27 @@
             "value": 0
         },
         {
-            "key": "Light Weapon 5",
+            "key": "Light Gun 5",
             "value": 0
         },
         {
-            "key": "Light Weapon 6",
+            "key": "Light Gun 6",
             "value": 0
         },
         {
-            "key": "Light Weapon 7",
+            "key": "Light Gun 7",
             "value": 0
         },
         {
-            "key": "Light Weapon 8",
+            "key": "Light Gun 8",
             "value": 0
         },
         {
-            "key": "Light Weapon 9",
+            "key": "Light Gun 9",
             "value": 0
         },
         {
-            "key": "Locked",
-            "value": 0
-        },
-        {
-            "key": "MiniGun",
+            "key": "Minigun",
             "value": 0
         },
         {

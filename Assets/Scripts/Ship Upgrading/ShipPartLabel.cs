@@ -11,8 +11,8 @@ using UnityEngine.Serialization;
 //2. Hold a selection of upgrades for this part
 public class ShipPartLabel : MonoBehaviour
 {
-    [SerializeField] private ShipUpgradesPlatter upgrades;
-    public ShipUpgradesPlatter Upgrades => this.upgrades;
+    [SerializeField] private ShipUpgradesPlatterBase upgrades;
+    public ShipUpgradesPlatterBase Upgrades => this.upgrades;
 
     [SerializeField]
     private CinemachineVirtualCamera shipSectionCamera;
