@@ -9,16 +9,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9cbc6bb72a4048146a07a9e8bca7cf54, type: 3}
-  m_Name: LightGuns
+  m_Script: {fileID: 11500000, guid: e5da97755a782074bac54204e89982de, type: 3}
+  m_Name: Light Gun Upgrade Platter
   m_EditorClassIdentifier: 
-  shipGunUpgrades:
+  upgrades:
   - {fileID: 11400000, guid: 0b50d9da9d8c7b2468cf5ac53a772479, type: 2}
   - {fileID: 11400000, guid: 68d72bc779fb10b499771704619568e9, type: 2}
   - {fileID: 11400000, guid: 3e756e8e4d045534aaca7b5076153425, type: 2}
   - {fileID: 11400000, guid: 78c56c7c38b32d34db7a8f356085d5cb, type: 2}
-  - {fileID: 11400000, guid: 75929a727839c184e8cd51f2925970a9, type: 2}
-  - {fileID: 11400000, guid: 6639db4680888fc45aa54d2098ba8704, type: 2}
-  - {fileID: 11400000, guid: e87e9139c21fec849998dc22409ad9de, type: 2}
-  - {fileID: 11400000, guid: e13257c84957ca947ad437227826f8a7, type: 2}
-  - {fileID: 11400000, guid: 16bcfabb14b92b747851247cc3a58dcc, type: 2}
+  - {fileID: 11400000, guid: da7f7cc04be84aa45a6e0df1015ec9b0, type: 2}
+  - {fileID: 11400000, guid: 99ab9a2f5606187429f3cbc1400ef055, type: 2}
+  - {fileID: 11400000, guid: f1073291b2ec4924fa762614bce3f3a2, type: 2}
+  - {fileID: 11400000, guid: 0d16163f092174d4b85342b217450a25, type: 2}
+  - {fileID: 11400000, guid: f7b40999819c77c46966bc928074e127, type: 2}

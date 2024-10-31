@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu]
+[CreateAssetMenu(menuName = "Ship Gun Upgrades/Light Ship Gun")]
 public class LightGunUpgrade : ShipGunUpgrade
 {
     [SerializeField] private LightGun gun;

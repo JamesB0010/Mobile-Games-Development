@@ -72,13 +72,13 @@ public class EquipItem : ItemShopAction
     }
 
 
-    public void UpdatePreviouslyOwnedLightWeapon(int side)
+    public void UpdatePreviouslyOwnedLightWeapon(int weaponIndex)
     {
-        this.previouslyOwnedLightWeapon = base.playerWeaponsState.LightGuns[side];
+        this.previouslyOwnedLightWeapon = base.playerWeaponsState.LightGuns[weaponIndex];
     }
-    public void UpdatePreviouslyOwnedHeavyWeapon(int side)
+    public void UpdatePreviouslyOwnedHeavyWeapon(int weaponIndex)
     {
-        this.previouslyOwnedLightWeapon = base.playerWeaponsState.HeavyGuns[side];
+        this.previouslyOwnedLightWeapon = base.playerWeaponsState.HeavyGuns[weaponIndex];
     }
     public void UpdatePreviouslyOwnedHeavyWeapon(ShipPartLabel label)
     {
