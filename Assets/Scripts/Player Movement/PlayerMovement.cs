@@ -22,28 +22,16 @@ namespace Player_Movement
         public float MaxVelocity => this.maxVelocity;
         //Dependencies resolved in start
         private PlayerShipThrottle playerThrottle;
+
+        private PlayerShipBooster playerShipBooster;
         private void Start()
         {
-            //gyro = Input.gyro;
-            //Input.gyro.enabled = true;
             this.currentMaxVelocity = this.maxVelocity;
             this.playerThrottle = FindObjectOfType<PlayerShipThrottle>();
-
-            //if (UnityEngine.InputSystem.Gyroscope.current != null)
-            //{
-            //InputSystem.EnableDevice(UnityEngine.InputSystem.Gyroscope.current);
-            //}
-
-            //if (AttitudeSensor.current != null)
-            //{
-            //InputSystem.EnableDevice(AttitudeSensor.current);
-            //}
+            this.playerShipBooster = FindObjectOfType<PlayerShipBooster>();
         }
         void Update()
         {
-            //Debug.Log(gyro.attitude);
-            //Debug.Log(UnityEngine.InputSystem.Gyroscope.current.angularVelocity.ReadValue());
-            //Debug.Log(AttitudeSensor.current.attitude.ReadValue());
             var acceleration = CalculateAcceleration();
             AddAccelerationToVelocity(acceleration);
             transform.Translate(this.velocity * Time.deltaTime, Space.World);
@@ -51,7 +39,10 @@ namespace Player_Movement
         private Vector3 CalculateAcceleration()
         {
             Vector3 acceleration = Vector3.zero;
-            acceleration += this.playerCamera.transform.forward * (speed * this.playerThrottle.Throttle * Time.deltaTime);
+            if (this.playerShipBooster.IsBoosting)
+                acceleration += this.playerCamera.transform.forward * (speed * 1 * Time.deltaTime);
+            else
+                acceleration += this.playerCamera.transform.forward * (speed * this.playerThrottle.Throttle * Time.deltaTime);
             return acceleration;
         }
         private void AddAccelerationToVelocity(Vector3 acceleration)
