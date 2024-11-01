@@ -23,12 +23,13 @@ public class PlayerShipAilerons : MonoBehaviour
     {
         float rollAmount = -inputtedRoll * Time.deltaTime * this.rollSpeed;
         transform.Rotate(new Vector3(0, 0, rollAmount));
-        Debug.Log(AttitudeInput.RollNormalized);
+        this.inputtedRoll = AttitudeInput.GetRollNormalized();
+        Debug.Log(this.inputtedRoll);
     }
 
     public void OnPitchAndRoll(InputAction.CallbackContext ctx)
     {
-        this.inputtedRoll = ctx.ReadValue<Vector2>().x;
+        //this.inputtedRoll = ctx.ReadValue<Vector2>().x;
     }
 
     public void SetSensitivityAiming()

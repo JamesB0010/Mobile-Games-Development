@@ -26,15 +26,29 @@ public class AttitudeInput
 
     private Quaternion attitude => Input.gyro.attitude;
     
-    public static float Pitch => AttitudeInput.NormalizedYAngle(AttitudeInput.GetInstance().attitude);
-    public static float Roll => AttitudeInput.NormalizedZAngle(AttitudeInput.GetInstance().attitude);
+    private static float Pitch()
+    {
+        return NormalizedYAngle(GetInstance().attitude);
+    }
 
-    public static float PitchNormalized = ValueInRangeMapper.MapRange(AttitudeInput.Pitch, 0, 180, -1, 1);
+    private static float Roll()
+    {
+        return NormalizedZAngle(GetInstance().attitude);
+    }
 
-    public static float RollNormalized = ValueInRangeMapper.MapRange(AttitudeInput.Roll, 0, 180, -1, 1);
+    public static float GetPitchNormalized()
+    {
+        return ValueInRangeMapper.MapRange(Pitch(), 0, 180, -1, 1);
+    }
 
-    
-    
+    public static float GetRollNormalized()
+    {
+        return ValueInRangeMapper.MapRange(Roll(), 0, 180, -1, 1);
+    }
+
+
+
+
     //credit for this method: https://stackoverflow.com/questions/42895305/unity-input-gyro-attitude-accuracy
     /// <summary>
     /// This method normalizes the y euler angle between 0 and 180. When the y euler
@@ -83,7 +97,7 @@ public class AttitudeInput
             private static float NormalizedZAngle(Quaternion q)
             {
                 Vector3 eulers = q.eulerAngles;
-                float zAngle = eulers.y;
+                float zAngle = eulers.z;
                 if(zAngle >= 180f)
                 {
                     //ex: 182 = 182 - 360 = -178

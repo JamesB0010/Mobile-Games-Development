@@ -24,12 +24,13 @@ public class PlayerShipElevator : MonoBehaviour
         float pitchAmount = this.inputtedPitch * Time.deltaTime * this.pitchSpeed;
         transform.Rotate(new Vector3(pitchAmount, 0, 0));
         
-        Debug.Log("Pitch Amount: " + AttitudeInput.PitchNormalized);
+        this.inputtedPitch = -AttitudeInput.GetPitchNormalized();
+        Debug.Log(this.inputtedPitch);
     }
 
     public void OnPitchAndRoll(InputAction.CallbackContext ctx)
     {
-        this.inputtedPitch = ctx.ReadValue<Vector2>().y;
+        //this.inputtedPitch = ctx.ReadValue<Vector2>().y;
     }
 
     public void SetSensitivityAiming()
