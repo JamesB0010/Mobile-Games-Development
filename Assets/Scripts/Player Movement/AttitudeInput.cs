@@ -23,7 +23,6 @@ public class AttitudeInput
     {
         Input.gyro.enabled = true;
     }
-
     private Quaternion attitude => Input.gyro.attitude;
     
     private static float Pitch()
@@ -38,12 +37,20 @@ public class AttitudeInput
 
     public static float GetPitchNormalized()
     {
-        return ValueInRangeMapper.MapRange(Pitch(), 0, 180, -1, 1);
+        float pitch = Pitch();
+        pitch += 30;
+        if(pitch >= 180f)
+        {
+            //ex: 182 = 182 - 360 = -178
+            pitch -= 360;
+        }
+        return Mathf.Clamp(ValueInRangeMapper.MapRange(pitch, 75, 105, -1, 1), -1f, 1f);
     }
 
     public static float GetRollNormalized()
     {
-        return ValueInRangeMapper.MapRange(Roll(), 0, 180, -1, 1);
+        float roll = Roll();
+        return Mathf.Clamp(ValueInRangeMapper.MapRange(roll, 75, 105, -1, 1), -1f, 1f);
     }
 
 
