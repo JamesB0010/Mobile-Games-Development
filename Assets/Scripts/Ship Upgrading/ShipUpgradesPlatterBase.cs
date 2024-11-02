@@ -5,5 +5,5 @@ using UnityEngine;
 
 public abstract class ShipUpgradesPlatterBase : ScriptableObject
 {
-    public abstract ShipGunUpgrade[] GetShipUpgrades();
+    public abstract ShipItemUpgrade[] GetShipUpgrades();
 }

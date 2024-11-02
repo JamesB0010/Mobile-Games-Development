@@ -12,8 +12,8 @@ public class OwnedUpgradesCounter : MonoBehaviour
     private static OwnedUpgradesCounter instance = null;
     public static OwnedUpgradesCounter Instance => OwnedUpgradesCounter.instance;
 
-    private Dictionary<ShipGunUpgrade, int> upgradesCount = new Dictionary<ShipGunUpgrade, int>();
-    public Dictionary<ShipGunUpgrade, int> UpgradesCount => this.upgradesCount;
+    private Dictionary<ShipItemUpgrade, int> upgradesCount = new Dictionary<ShipItemUpgrade, int>();
+    public Dictionary<ShipItemUpgrade, int> UpgradesCount => this.upgradesCount;
     private SelectedCellHighlight cellHighlight;
 
     [SerializeField] private TextAsset jsonSaveFile;
@@ -51,7 +51,7 @@ public class OwnedUpgradesCounter : MonoBehaviour
         this.SaveToJson();
     }
 
-    public int GetUpgradeCount(ShipGunUpgrade upgrade)
+    public int GetUpgradeCount(ShipItemUpgrade upgrade)
     {
         return this.upgradesCount[upgrade];
     }

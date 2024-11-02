@@ -6,7 +6,7 @@ using UnityEngine.Serialization;
 public struct SavedWeaponsJsonObject
 {
     public List<string> gunReferences;
-    public SavedWeaponsJsonObject(List<ShipGunUpgrade> guns)
+    public SavedWeaponsJsonObject(List<ShipItemUpgrade> guns)
     {
         this.gunReferences = new List<string>();
 
@@ -17,16 +17,16 @@ public struct SavedWeaponsJsonObject
     }
 
 
-    public List<ShipGunUpgrade> GetSavedGuns()
+    public List<ShipItemUpgrade> GetSavedGuns()
     {
-        List<ShipGunUpgrade> upgrades = new List<ShipGunUpgrade>();
+        List<ShipItemUpgrade> upgrades = new List<ShipItemUpgrade>();
 
 
         for (int i = 0; i < this.gunReferences.Count; i++)
         {
             object weaponUpgrade = Resources.Load("ShipUpgrades/" + this.gunReferences[i]);
 
-            upgrades.Add((ShipGunUpgrade)weaponUpgrade);
+            upgrades.Add((ShipItemUpgrade)weaponUpgrade);
         }
 
         return upgrades;

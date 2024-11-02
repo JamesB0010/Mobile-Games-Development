@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class Gun : ScriptableObject, ICloneable
+public abstract class Gun : ShipItem
 {
     [SerializeField]
     protected Bullet bulletPrefab;
@@ -16,8 +16,6 @@ public abstract class Gun : ScriptableObject, ICloneable
 
     [SerializeField] protected float bulletDamage;
     public float BulletDamage => this.bulletDamage;
-
-    public abstract object Clone();
 
     protected void CloneGunSharedAttributes(Gun gun)
     {

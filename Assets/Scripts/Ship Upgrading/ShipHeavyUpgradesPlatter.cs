@@ -5,9 +5,9 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Upgrade Platters/Heavy Gun Upgrade Platter")]
 public class ShipHeavyUpgradesPlatter : ShipUpgradesPlatterBase
 {
-    [SerializeField] private HeavyGunUpgrade[] upgrades;
+    [SerializeField] private HeavyItemUpgrade[] upgrades;
 
-    public override ShipGunUpgrade[] GetShipUpgrades()
+    public override ShipItemUpgrade[] GetShipUpgrades()
     {
         return upgrades;
     }

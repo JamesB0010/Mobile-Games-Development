@@ -15,12 +15,12 @@ public class EquipItem : ItemShopAction
     [SerializeField] private TextAsset heavyWeaponConfigurationSaveFile;
 
 
-    private ShipGunUpgrade previouslyOwnedLightWeapon;
-    public ShipGunUpgrade PreviouslyOwnedLightWeapon => this.previouslyOwnedLightWeapon;
+    private ShipItemUpgrade previouslyOwnedLightWeapon;
+    public ShipItemUpgrade PreviouslyOwnedLightWeapon => this.previouslyOwnedLightWeapon;
 
-    private ShipGunUpgrade previouslyOwnedHeavyWeapon;
+    private ShipItemUpgrade previouslyOwnedHeavyWeapon;
 
-    public ShipGunUpgrade PreviouslyOwnedHeavyWeapon => this.previouslyOwnedHeavyWeapon;
+    public ShipItemUpgrade PreviouslyOwnedHeavyWeapon => this.previouslyOwnedHeavyWeapon;
 
     public void EquipCell(UpgradeCell cell)
     {

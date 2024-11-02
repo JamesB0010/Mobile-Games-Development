@@ -36,11 +36,11 @@ public class UIViewUpdater : MonoBehaviour
                 this.SetItemStatsUi(heavyLightGun);
                 break;
             case ShipSections.armour:
-                LightGun armour = (LightGun)this.playerWeaponsState.Shield.GetGun();
+                LightGun armour = (LightGun)this.playerWeaponsState.Shield.GetUpgrade();
                 this.SetItemStatsUi(armour);
                 break;
             case ShipSections.engine:
-                LightGun engine = (LightGun)this.playerWeaponsState.Shield.GetGun();
+                LightGun engine = (LightGun)this.playerWeaponsState.Shield.GetUpgrade();
                 this.SetItemStatsUi(engine);
                 break;
             default:
@@ -95,7 +95,7 @@ public class UIViewUpdater : MonoBehaviour
     }
     private void UpdateUiBasedOnGun(UpgradeCell cell)
     {
-        LightGun lightGun = (LightGun)cell.Upgrade.GetGun();
+        LightGun lightGun = (LightGun)cell.Upgrade.GetUpgrade();
         itemNameField.text = lightGun.name;
 
         this.itemFireRateField.text = lightGun.TimeBetweenBullets.ToString();

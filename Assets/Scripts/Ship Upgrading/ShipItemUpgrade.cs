@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Serialization;
 
-public abstract class ShipGunUpgrade : ScriptableObject
+public abstract class ShipItemUpgrade : ScriptableObject
 {
-    public abstract object GetGun();
+    public abstract object GetUpgrade();
 
     [SerializeField] private float cost;
     public float Cost => this.cost;

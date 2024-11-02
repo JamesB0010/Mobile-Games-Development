@@ -17,10 +17,10 @@ public class PlayerShipStateLoader : MonoBehaviour
         string jsonStringLight = this.lightWeaponsJson.text;
         SavedWeaponsJsonObject lightWeaponsObject = JsonUtility.FromJson<SavedWeaponsJsonObject>(jsonStringLight);
 
-        this.playerWeaponsState.LightGuns = lightWeaponsObject.GetSavedGuns().OfType<LightGunUpgrade>().ToList();
+        this.playerWeaponsState.LightGuns = lightWeaponsObject.GetSavedGuns().OfType<LightItemUpgrade>().ToList();
 
         string jsonStringHeavy = this.heavyWeaponsJson.text;
         SavedWeaponsJsonObject heavyWeaponsObject = JsonUtility.FromJson<SavedWeaponsJsonObject>(jsonStringHeavy);
-        this.playerWeaponsState.HeavyGuns = heavyWeaponsObject.GetSavedGuns().OfType<HeavyGunUpgrade>().ToList();
+        this.playerWeaponsState.HeavyGuns = heavyWeaponsObject.GetSavedGuns().OfType<HeavyItemUpgrade>().ToList();
     }
 }

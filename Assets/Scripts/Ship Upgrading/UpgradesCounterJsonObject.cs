@@ -11,9 +11,9 @@ public class UpgradesCounterJsonObject
     [SerializeField]
     private List<KeyValuePairWrapper<string, int>> serializedDictionary = new List<KeyValuePairWrapper<string, int>>();
 
-    public UpgradesCounterJsonObject(Dictionary<ShipGunUpgrade, int> unSerializedDictionary)
+    public UpgradesCounterJsonObject(Dictionary<ShipItemUpgrade, int> unSerializedDictionary)
     {
-        foreach (KeyValuePair<ShipGunUpgrade, int> pair in unSerializedDictionary)
+        foreach (KeyValuePair<ShipItemUpgrade, int> pair in unSerializedDictionary)
         {
             this.serializedDictionary.Add(new KeyValuePairWrapper<string, int>(pair.Key.name, pair.Value));
         }
@@ -24,13 +24,13 @@ public class UpgradesCounterJsonObject
 
     }
 
-    public Dictionary<ShipGunUpgrade, int> GenerateDictionaryFromJson()
+    public Dictionary<ShipItemUpgrade, int> GenerateDictionaryFromJson()
     {
-        Dictionary<ShipGunUpgrade, int> dictionary = new();
+        Dictionary<ShipItemUpgrade, int> dictionary = new();
 
         foreach (var keyValuePair in this.serializedDictionary)
         {
-            ShipGunUpgrade key = Resources.Load<ShipGunUpgrade>("ShipUpgrades/" + keyValuePair.key);
+            ShipItemUpgrade key = Resources.Load<ShipItemUpgrade>("ShipUpgrades/" + keyValuePair.key);
             int value = keyValuePair.value;
 
             dictionary.Add(key, value);
@@ -51,9 +51,9 @@ public class UpgradesCounterJsonObject
 
     public void GenerateDefaultSafeFile(TextAsset jsonSaveFile)
     {
-        Dictionary<ShipGunUpgrade, int> dictionary = new();
-        var shipGunUpgrades = Resources.LoadAll<ShipGunUpgrade>("ShipUpgrades");
-        foreach (ShipGunUpgrade upgrade in shipGunUpgrades)
+        Dictionary<ShipItemUpgrade, int> dictionary = new();
+        var shipGunUpgrades = Resources.LoadAll<ShipItemUpgrade>("ShipUpgrades");
+        foreach (ShipItemUpgrade upgrade in shipGunUpgrades)
         {
             dictionary.Add(upgrade, 0);
         }
@@ -61,7 +61,7 @@ public class UpgradesCounterJsonObject
         this.GenerateSaveableObject(dictionary).SaveData(jsonSaveFile);
     }
 
-    public UpgradesCounterJsonObject GenerateSaveableObject(Dictionary<ShipGunUpgrade, int> dictionary)
+    public UpgradesCounterJsonObject GenerateSaveableObject(Dictionary<ShipItemUpgrade, int> dictionary)
     {
         UpgradesCounterJsonObject obj = new UpgradesCounterJsonObject(dictionary);
         return obj;

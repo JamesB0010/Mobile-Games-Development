@@ -2,13 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "Ship Gun Upgrades/Heavy Ship Gun")]
-public class HeavyGunUpgrade : ShipGunUpgrade
+[CreateAssetMenu(menuName = "Ship Item Upgrades/Heavy Ship Gun")]
+public class HeavyItemUpgrade : ShipItemUpgrade
 {
     [SerializeField] private HeavyGun gun;
     public HeavyGun Gun => this.gun;
 
-    public override object GetGun()
+    public override object GetUpgrade()
     {
         return gun;
     }
