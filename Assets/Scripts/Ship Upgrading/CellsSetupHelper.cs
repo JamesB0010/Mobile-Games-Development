@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,6 +6,19 @@ using UnityEngine;
 public class CellsSetupHelper : MonoBehaviour
 {
     [SerializeField] private UpgradeCell[] cells;
+
+    private void Start()
+    {
+        this.DisableCells();
+    }
+
+    public void DisableCells()
+    {
+        foreach (UpgradeCell cell in this.cells)
+        {
+            cell.gameObject.SetActive(false);
+        }
+    }
 
     public void SetupCells(ShipPartLabel label)
     {
@@ -26,6 +40,7 @@ public class CellsSetupHelper : MonoBehaviour
             this.cells[i].Upgrade = label.Upgrades.GetShipUpgrades()[i];
             this.cells[i].WeaponIndex = label.WeaponIndex;
             this.cells[i].ShipSection = label.ShipSection;
+            this.cells[i].gameObject.SetActive(true);
         }
     }
 }

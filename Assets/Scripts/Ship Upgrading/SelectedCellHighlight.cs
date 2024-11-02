@@ -23,4 +23,9 @@ public class SelectedCellHighlight : MonoBehaviour
         transform.position = cell.transform.position;
         this.selectedCell = cell;
     }
+
+    public void MoveOffScreen()
+    {
+        transform.position = new Vector3(-3000, -3000, 0);
+    }
 }

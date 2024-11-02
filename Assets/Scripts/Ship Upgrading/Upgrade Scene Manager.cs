@@ -4,11 +4,8 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.Events;
-using UnityEngine.EventSystems;
-using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 using UnityEngine.Serialization;
-using UnityEngine.UI;
 
 public class ItemShopActionsManager : MonoBehaviour
 {
@@ -24,7 +21,7 @@ public class ItemShopActionsManager : MonoBehaviour
     [SerializeField] private UnityEvent CellEquippedEvent = new UnityEvent();
 
     private void Start()
-    {
+        {
         this.purchaseItemShopAction.SelectedCellPurchased += this.CellPurchased;
         this.equipItemShopAction.SelectedCellEquipped += this.CellEquipped;
     }

@@ -103,22 +103,74 @@ public class UIViewUpdater : MonoBehaviour
 
 
 
-        this.UpdateUiBasedOnGun(highlight.SelectedCell);
+        this.UpdateUiBasedOnItem(highlight.SelectedCell);
 
     }
 
 
     public void CellEquipped(SelectedCellHighlight highlight)
     {
-        this.UpdateUiBasedOnGun(highlight.SelectedCell);
+        this.UpdateUiBasedOnItem(highlight.SelectedCell);
     }
-    private void UpdateUiBasedOnGun(UpgradeCell cell)
+    private void UpdateUiBasedOnItem(UpgradeCell cell)
     {
-        LightGun lightGun = (LightGun)cell.Upgrade.GetUpgrade();
-        itemNameField.text = lightGun.name;
+        ShipItem item = (ShipItem)cell.Upgrade.GetUpgrade();
 
-        this.itemFireRateField.text = lightGun.TimeBetweenBullets.ToString();
+        switch (item)
+        {
+            case LightGun lightGun:
+                this.UpdateUiLightGun(lightGun);
+                break;
+            case HeavyGun heavyGun:
+                this.UpdateUiHeavyGun(heavyGun);
+                break;
+            case Engine engine:
+                this.UpdateUiEngine(engine);
+                break;
+            case EnergySystem energySystem:
+                this.UpdateUiEnergySystem(energySystem);
+                break;
+            case Armour armour:
+                this.UpdateUiArmour(armour);
+                break;
+            default:
+                break;
+        }
 
-        this.damagePerShotField.text = lightGun.BulletDamage.ToString();
+
+    }
+
+    private void UpdateUiLightGun(LightGun gun)
+    {
+        itemNameField.text = gun.name;
+        
+        this.itemFireRateField.text = gun.TimeBetweenBullets.ToString();
+        
+        
+        this.damagePerShotField.text = gun.BulletDamage.ToString();
+    }
+
+    private void UpdateUiHeavyGun(HeavyGun gun)
+    {
+        itemNameField.text = gun.name;
+        
+        this.itemFireRateField.text = gun.TimeBetweenBullets.ToString();
+        
+        this.damagePerShotField.text = gun.BulletDamage.ToString();
+    }
+
+    private void UpdateUiArmour(Armour armour)
+    {
+        itemNameField.text = armour.name;
+    }
+
+    private void UpdateUiEngine(Engine engine)
+    {
+        itemNameField.text = engine.name;
+    }
+
+    private void UpdateUiEnergySystem(EnergySystem energySystem)
+    {
+        itemNameField.text = energySystem.name;
     }
 }

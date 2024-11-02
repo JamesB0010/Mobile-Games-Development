@@ -129,7 +129,9 @@ public class PlayerWeaponsState : ScriptableObject
         {
             if (i >= weapons.Length)
                 break;
-            weapons[i].LightGun = (LightGun)this.lightGuns[i].Gun.Clone();
+            weapons[i].LightGun = (LightGun)this.lightGuns[i].Gun;
+            weapons[i].SetupWeapon();
+
         }
 
         for (; i < weapons.Length; i++)
@@ -145,7 +147,8 @@ public class PlayerWeaponsState : ScriptableObject
         {
             if (i >= weapons.Length)
                 break;
-            weapons[i].HeavyGun = (HeavyGun)this.heavyGuns[i].Gun.Clone();
+            weapons[i].HeavyGun = (HeavyGun)this.heavyGuns[i].Gun;
+            weapons[i].SetupWeapon();
         }
 
         for (; i < weapons.Length; i++)

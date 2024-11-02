@@ -22,11 +22,6 @@ public class PlayerShipHeavyWeapon : PlayerShipWeapon
         return this.heavyGun;
     }
 
-    private new void Start()
-    {
-        base.Start();
-    }
-
     private void Update()
     {
         this.animator.SetBool(TryingToShoot, gunSystem.tryingToShootHeavy);

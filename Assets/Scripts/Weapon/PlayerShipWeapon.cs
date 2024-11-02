@@ -36,7 +36,7 @@ public abstract class PlayerShipWeapon : MonoBehaviour
 
     protected abstract Gun getGun();
 
-    protected void Start()
+    public void SetupWeapon()
     {
         this.cloneGun();
         this.getGun().PrimeWeaponToShoot();

@@ -25,13 +25,6 @@ public class PlayerShipLightWeapon : PlayerShipWeapon
         return this.lightGun;
     }
 
-    private new void Start()
-    {
-        base.Start();
-    }
-
-
-
     private void Update()
     {
         this.animator.SetBool(TryingToShoot, gunSystem.TryingToShootLight);
