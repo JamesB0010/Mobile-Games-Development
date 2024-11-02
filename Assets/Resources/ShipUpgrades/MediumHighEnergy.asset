@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: MediumHighEnergy
   m_EditorClassIdentifier: 
   cost: 0
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: 1e999e744c547704cb215ae907038700, type: 3}
   isPurchaseable: 1
   OwnedByDefault: 0
   armour: {fileID: 11400000, guid: 06fc75bc1b30fd44d8243aa22ad1056b, type: 2}

@@ -4890,6 +4890,7 @@ MonoBehaviour:
   - {fileID: 1046949910}
   - {fileID: 800659901}
   - {fileID: 1605249147}
+  - {fileID: 1219805120}
   ShipPartLabelClicked:
     m_PersistentCalls:
       m_Calls:

@@ -36,12 +36,16 @@ public class UIViewUpdater : MonoBehaviour
                 this.SetItemStatsUi(heavyLightGun);
                 break;
             case ShipSections.armour:
-                LightGun armour = (LightGun)this.playerWeaponsState.Armour.GetUpgrade();
+                Armour armour = (Armour)this.playerWeaponsState.Armour.GetUpgrade();
                 this.SetItemStatsUi(armour);
                 break;
             case ShipSections.engine:
-                LightGun engine = (LightGun)this.playerWeaponsState.Armour.GetUpgrade();
+                Engine engine = (Engine)this.playerWeaponsState.Engine.GetUpgrade();
                 this.SetItemStatsUi(engine);
+                break;
+            case ShipSections.energy:
+                EnergySystem energySystem = (EnergySystem)this.playerWeaponsState.EnergySystem.GetUpgrade();
+                this.SetItemStatsUi(energySystem);
                 break;
             default:
                 break;
@@ -56,6 +60,21 @@ public class UIViewUpdater : MonoBehaviour
         this.itemFireRateField.text = gun.TimeBetweenBullets.ToString();
 
         this.damagePerShotField.text = gun.BulletDamage.ToString();
+    }
+
+    private void SetItemStatsUi(Armour armour)
+    {
+        Debug.Log("Display armour stats");
+    }
+
+    private void SetItemStatsUi(Engine engine)
+    {
+        Debug.Log("Display engine stats");
+    }
+
+    private void SetItemStatsUi(EnergySystem energySystem)
+    {
+        Debug.Log("Display energy system stats");
     }
 
     public void CellSelected(UpgradeCell selectedCell)
