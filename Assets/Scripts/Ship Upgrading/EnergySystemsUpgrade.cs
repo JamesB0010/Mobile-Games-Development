@@ -2,7 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnergySystemsUpgrade : MonoBehaviour
+[CreateAssetMenu(menuName = "Ship Item Upgrades/Energy System")]
+public class EnergySystemsUpgrade : ShipItemUpgrade
 {
-    
+    [SerializeField] private EnergySystem energySystem;
+
+    public override object GetUpgrade()
+    {
+        return this.energySystem;
+    }
 }

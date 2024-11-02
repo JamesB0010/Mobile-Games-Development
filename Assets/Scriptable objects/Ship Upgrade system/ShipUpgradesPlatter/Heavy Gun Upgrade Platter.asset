@@ -13,12 +13,11 @@ MonoBehaviour:
   m_Name: Heavy Gun Upgrade Platter
   m_EditorClassIdentifier: 
   upgrades:
-  - {fileID: 11400000, guid: 882f3f120ab9c3746b560efda9ee35bd, type: 2}
-  - {fileID: 11400000, guid: f1d0ee5e536031a40b2d4394f58deadf, type: 2}
-  - {fileID: 11400000, guid: 88dcd1d1cc3713343b048e4a429290ee, type: 2}
-  - {fileID: 11400000, guid: 5e61a392459be354c9139bb4723c26bf, type: 2}
-  - {fileID: 11400000, guid: a572dc228de3c51448536340910e0741, type: 2}
-  - {fileID: 11400000, guid: 329dcb51f58b9e244834447c66c457d4, type: 2}
-  - {fileID: 11400000, guid: d348e7e4d1859ad4280f9da58447ffcd, type: 2}
-  - {fileID: 11400000, guid: 6715ae55d1c31f44fa24821c935d1fc6, type: 2}
-  - {fileID: 11400000, guid: a01c9d55ed5959e44838c5eb2ee5b0ca, type: 2}
+  - {fileID: 11400000, guid: 654056ab37c9ef74b87b9b5e65e4ab50, type: 2}
+  - {fileID: 11400000, guid: 1d892c12acb09d14b9bae84006fd2e9b, type: 2}
+  - {fileID: 11400000, guid: c7a007013a2fd7d47bba9e2a6e02a40c, type: 2}
+  - {fileID: 11400000, guid: d7170bb2ad244b346bb93abfc6a17d7e, type: 2}
+  - {fileID: 11400000, guid: d39e8d0d56211794893a33a4c19a0e3a, type: 2}
+  - {fileID: 11400000, guid: ae4b44307a00f1241a502489cac5695d, type: 2}
+  - {fileID: 11400000, guid: 6e06bc29190e520468444e7ac3e026f3, type: 2}
+  - {fileID: 11400000, guid: 482110b67bd0c3445ae83a08482e6623, type: 2}

@@ -5,7 +5,7 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Ship Item Upgrades/Engine")]
 public class EngineUpgrade : ShipItemUpgrade
 {
-    [SerializeField] private EngineUpgrade engine;
+    [SerializeField] private Engine engine;
     public override object GetUpgrade()
     {
         return engine;

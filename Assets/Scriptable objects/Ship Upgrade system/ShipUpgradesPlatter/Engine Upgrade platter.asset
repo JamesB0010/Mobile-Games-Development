@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9117c8730c66d614db36cfa0b4a347cb, type: 3}
+  m_Name: Engine Upgrade platter
+  m_EditorClassIdentifier: 
+  upgrades:
+  - {fileID: 11400000, guid: c3c55ec69c349c9428fa66fdaa60d9ae, type: 2}
+  - {fileID: 11400000, guid: 212a62747c77d404599c0d3eeb23dff6, type: 2}
+  - {fileID: 11400000, guid: 49c1c1cc58c41bc47aaae491ffc93209, type: 2}
+  - {fileID: 11400000, guid: 0c6205a7283a56d49a1d3955fb410e14, type: 2}
+  - {fileID: 11400000, guid: 46ca42b100f674545b2af3bcde16b0d0, type: 2}
+  - {fileID: 11400000, guid: 25a2bda508122484e8d5a4d8aec13d75, type: 2}
+  - {fileID: 11400000, guid: 10be4bdd2217e7e42a1139913ad0a1ef, type: 2}
+  - {fileID: 11400000, guid: 7cbdd2a741da31e43b3460ae1065afe1, type: 2}
+  - {fileID: 11400000, guid: 4e6e3a23082c5d94ca6146f4c6f27a36, type: 2}

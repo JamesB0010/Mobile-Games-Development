@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-[CreateAssetMenu(menuName = "Guns/Light Gun")]
+[CreateAssetMenu(menuName = "Items/Guns/Light Gun")]
 public class LightGun : Gun
 {
     public override bool Shoot(Vector3 bulletStartPosition, Vector3 targetPosition, bool hasValidTarget, RaycastHit hit)

@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61ee835f35e284a4f91c3ef1f8c0e55b, type: 3}
+  m_Name: EnergySystemUpgradePlatter
+  m_EditorClassIdentifier: 
+  upgrades:
+  - {fileID: 11400000, guid: f8ab4004ae39b274b99841ebfd935409, type: 2}
+  - {fileID: 11400000, guid: 8888e4c5660eeba4b9fd13fa9fead544, type: 2}
+  - {fileID: 11400000, guid: 2d4c812ed0714514b80226b80cc4ddb1, type: 2}
+  - {fileID: 11400000, guid: b7ceda7596dd85a488f443fbed04205d, type: 2}
+  - {fileID: 11400000, guid: 536300ab297dc86459a6b40d3c580779, type: 2}
+  - {fileID: 11400000, guid: b104de1f82396ec49a4c5c98ff580cbf, type: 2}

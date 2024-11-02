@@ -13,12 +13,9 @@ MonoBehaviour:
   m_Name: Light Gun Upgrade Platter
   m_EditorClassIdentifier: 
   upgrades:
-  - {fileID: 11400000, guid: 0b50d9da9d8c7b2468cf5ac53a772479, type: 2}
-  - {fileID: 11400000, guid: 68d72bc779fb10b499771704619568e9, type: 2}
-  - {fileID: 11400000, guid: 3e756e8e4d045534aaca7b5076153425, type: 2}
-  - {fileID: 11400000, guid: 78c56c7c38b32d34db7a8f356085d5cb, type: 2}
-  - {fileID: 11400000, guid: da7f7cc04be84aa45a6e0df1015ec9b0, type: 2}
-  - {fileID: 11400000, guid: 99ab9a2f5606187429f3cbc1400ef055, type: 2}
-  - {fileID: 11400000, guid: f1073291b2ec4924fa762614bce3f3a2, type: 2}
-  - {fileID: 11400000, guid: 0d16163f092174d4b85342b217450a25, type: 2}
-  - {fileID: 11400000, guid: f7b40999819c77c46966bc928074e127, type: 2}
+  - {fileID: 11400000, guid: 5b1c74579afd1624b9d483f4953b755a, type: 2}
+  - {fileID: 11400000, guid: 001e711458261114f8b759ff63cf3e8b, type: 2}
+  - {fileID: 11400000, guid: 3f92cdefcb3297a4bb7aadbeaee613cb, type: 2}
+  - {fileID: 11400000, guid: cc61c00bd9603fe41b9b51dbf9f5decb, type: 2}
+  - {fileID: 11400000, guid: da2602b39fccdf9428c3a265e4162c09, type: 2}
+  - {fileID: 11400000, guid: 8c5d8edaf80e7d64a992e3ab9bde085a, type: 2}

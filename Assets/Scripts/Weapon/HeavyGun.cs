@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "Guns/Heavy Gun")]
+[CreateAssetMenu(menuName = "Items/Guns/Heavy Gun")]
 public class HeavyGun : Gun
 {
     [SerializeField] private bool ableToShoot;
