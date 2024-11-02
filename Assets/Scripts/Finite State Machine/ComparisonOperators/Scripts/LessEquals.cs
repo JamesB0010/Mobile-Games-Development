@@ -7,8 +7,8 @@ using UnityEngine;
 public class LessEquals : ComparisonOperator
 {
     public override bool Test<T>(IComparable<T> source, T target)
-            {
-                return source.CompareTo(target) <= 0;
-            }
+    {
+        return source.CompareTo(target) <= 0;
+    }
 
 }

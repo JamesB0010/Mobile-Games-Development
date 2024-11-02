@@ -26,43 +26,43 @@ public class PlayerShipHeavyWeapon : PlayerShipWeapon
     {
         base.Start();
     }
-    
+
     private void Update()
+    {
+        this.animator.SetBool(TryingToShoot, gunSystem.tryingToShootHeavy);
+        this.animator.SetBool(BulletFired, false);
+
+        if (this.gunSystem.tryingToShootHeavy == false)
         {
-            this.animator.SetBool(TryingToShoot, gunSystem.tryingToShootHeavy);
-            this.animator.SetBool(BulletFired, false);
-    
-            if (this.gunSystem.tryingToShootHeavy== false)
-            {
-                return;
-            }
-    
-    
-            bool bulletShot = false;
-            CrosshairTargetFinder crosshairTargetFinder = this.gunSystem.CrosshairTargetFinder;
-            Vector3 crosshairWorldTargetPosition = crosshairTargetFinder.GetLatestHitPosition();
-            bool lastHitValid = crosshairTargetFinder.WasLastHitValid();
-            if (lastHitValid)
-            {
-                RaycastHit hit = crosshairTargetFinder.GetLastHit();
-                bulletShot = this.heavyGun.Shoot(this.bulletSpawnLocation.position, crosshairWorldTargetPosition, true, hit);
-            }
-            else
-            {
-                bulletShot = this.heavyGun.Shoot(this.bulletSpawnLocation.position, crosshairWorldTargetPosition, false);
-            }
-    
-            if (bulletShot)
-            {
-                this.muzzleFlash.Play();
-                for (int i = 0; i < this.muzzleFlashParticles.Count; i++)
-                {
-                    this.muzzleFlashParticles[i].Play();
-                }
-    
-                this.animator.SetBool(BulletFired, true);
-    
-                this.gunshotSoundLocation.Play();
-            }
+            return;
         }
+
+
+        bool bulletShot = false;
+        CrosshairTargetFinder crosshairTargetFinder = this.gunSystem.CrosshairTargetFinder;
+        Vector3 crosshairWorldTargetPosition = crosshairTargetFinder.GetLatestHitPosition();
+        bool lastHitValid = crosshairTargetFinder.WasLastHitValid();
+        if (lastHitValid)
+        {
+            RaycastHit hit = crosshairTargetFinder.GetLastHit();
+            bulletShot = this.heavyGun.Shoot(this.bulletSpawnLocation.position, crosshairWorldTargetPosition, true, hit);
+        }
+        else
+        {
+            bulletShot = this.heavyGun.Shoot(this.bulletSpawnLocation.position, crosshairWorldTargetPosition, false);
+        }
+
+        if (bulletShot)
+        {
+            this.muzzleFlash.Play();
+            for (int i = 0; i < this.muzzleFlashParticles.Count; i++)
+            {
+                this.muzzleFlashParticles[i].Play();
+            }
+
+            this.animator.SetBool(BulletFired, true);
+
+            this.gunshotSoundLocation.Play();
+        }
+    }
 }

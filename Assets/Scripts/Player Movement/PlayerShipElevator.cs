@@ -43,7 +43,7 @@ public class PlayerShipElevator : MonoBehaviour
     {
         if (this.usingGyro)
             return;
-        
+
         this.inputtedPitch = ctx.ReadValue<Vector2>().y;
     }
 

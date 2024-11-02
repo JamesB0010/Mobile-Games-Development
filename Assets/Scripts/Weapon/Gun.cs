@@ -20,9 +20,9 @@ public abstract class Gun : ShipItem
     protected void CloneGunSharedAttributes(Gun gun)
     {
         gun.bulletDamage = bulletDamage;
-                        gun.bulletPrefab = bulletPrefab;
-                        gun.lastBulletShotTimestamp = lastBulletShotTimestamp;
-                        gun.timeBetweenBullets = timeBetweenBullets;
+        gun.bulletPrefab = bulletPrefab;
+        gun.lastBulletShotTimestamp = lastBulletShotTimestamp;
+        gun.timeBetweenBullets = timeBetweenBullets;
     }
 
     public abstract bool Shoot(Vector3 bulletStartPosition, Vector3 targetPosition, bool hasValidTarget, RaycastHit hit);

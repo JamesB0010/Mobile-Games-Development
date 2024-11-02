@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Object = System.Object;
 
-public abstract class SuperBaseScriptableValRef<T> :  SuperBaseScriptableValRef
+public abstract class SuperBaseScriptableValRef<T> : SuperBaseScriptableValRef
 {
     public abstract T GetValue();
 

@@ -6,7 +6,7 @@ using UnityEngine;
 [Serializable]
 public class NotEqualComparisonOperator : ComparisonOperator
 {
-    public override bool Test(bool source, bool target) 
+    public override bool Test(bool source, bool target)
     {
         return !source.Equals(target);
     }

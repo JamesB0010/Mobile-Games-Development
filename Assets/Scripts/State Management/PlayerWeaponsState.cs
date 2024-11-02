@@ -8,80 +8,118 @@ using UnityEngine.TestTools;
 [System.Serializable]
 public class PlayerWeaponsState : ScriptableObject
 {
-    [FormerlySerializedAs("defaultLightGun")]
+    [FormerlySerializedAs("defaultLightItem")]
     [Header("Light Guns")]
-    [SerializeField] private LightItemUpgrade defaultLightItem;
+    [SerializeField] private LightGunUpgrade defaultLightGun;
 
-    [SerializeField] private List<LightItemUpgrade> lightGuns;
-    public List<LightItemUpgrade> LightGuns
+    [SerializeField] private List<LightGunUpgrade> lightGuns;
+    public List<LightGunUpgrade> LightGuns
     {
         get => this.lightGuns;
 
         set => this.lightGuns = value;
     }
 
-    public List<ShipItemUpgrade> LightGunsAbstract => this.lightGuns.Cast<ShipItemUpgrade>().ToList();
+    public List<ShipItemUpgrade> LightGunsAbstract => this.lightGuns.ConvertAll(child => (ShipItemUpgrade)child);
 
     public void ResetLightGuns()
     {
         for (int i = 0; i < this.lightGuns.Count; i++)
         {
-            this.lightGuns[i] = this.defaultLightItem;
+            this.lightGuns[i] = this.defaultLightGun;
         }
     }
 
 
 
-    [FormerlySerializedAs("defaultHeavyGun")]
     [Space(5)]
     [Header("Heavy Guns")]
-    [SerializeField] private HeavyItemUpgrade defaultHeavyItem;
+    [SerializeField] private HeavyGunUpgrade defaultHeavyGun;
 
-    [SerializeField] private List<HeavyItemUpgrade> heavyGuns;
-    public List<HeavyItemUpgrade> HeavyGuns
+    [SerializeField] private List<HeavyGunUpgrade> heavyGuns;
+    public List<HeavyGunUpgrade> HeavyGuns
     {
         get => this.heavyGuns;
         set => this.heavyGuns = value;
     }
 
-    public List<ShipItemUpgrade> HeavyGunsAbstract => this.heavyGuns.Cast<ShipItemUpgrade>().ToList();
+    public List<ShipItemUpgrade> HeavyGunsAbstract => this.heavyGuns.ConvertAll(child => (ShipItemUpgrade)child);
 
     public void ResetHeavyGuns()
     {
         for (int i = 0; i < this.heavyGuns.Count; i++)
         {
-            this.heavyGuns[i] = this.defaultHeavyItem;
+            this.heavyGuns[i] = this.defaultHeavyGun;
         }
     }
 
+    [FormerlySerializedAs("shield")]
     [Space(5)]
     [Header("Shield / Armour")]
-    [SerializeField] private ShipItemUpgrade shield;
+    [SerializeField] private ArmourUpgrade armour;
 
-    public ShipItemUpgrade Shield
+    [SerializeField] private ArmourUpgrade defaultArmour;
+
+    public ArmourUpgrade Armour
     {
-        get => this.shield;
-        set => this.shield = value;
+        get => this.armour;
+        set => this.armour = value;
+    }
+
+    public ShipItemUpgrade ArmourAbstract => this.armour;
+
+    public void ResetArmour()
+    {
+        this.armour = this.defaultArmour;
     }
 
     [Space(5)]
     [Header("Engine / Booster")]
-    [SerializeField] private ShipItemUpgrade engine;
+    [SerializeField] private EngineUpgrade engine;
 
-    public ShipItemUpgrade Engine
+    [SerializeField] private EngineUpgrade defaultEngine;
+
+    public EngineUpgrade Engine
     {
         get => this.engine;
         set => this.engine = value;
     }
 
+    public ShipItemUpgrade EngineAbstract => this.engine;
+
+    public void ResetEngine()
+    {
+        this.engine = this.defaultEngine;
+    }
+
+    [Space(5)]
+    [Header("Energy System")]
+    [SerializeField]
+    private EnergySystemsUpgrade energySystem;
+
+    [SerializeField] private EnergySystemsUpgrade defaultEnergySystem;
+
+    public EnergySystemsUpgrade EnergySystem
+    {
+        get => this.energySystem;
+        set => this.energySystem = value;
+    }
+
+    public ShipItemUpgrade EnergySystemAbstract => this.energySystem;
+
+    public void ResetEnergySystem()
+    {
+        this.energySystem = this.defaultEnergySystem;
+    }
+
     public void EditLightWeaponAtIndex(int index, ShipItemUpgrade item)
     {
-        this.lightGuns[index] = (LightItemUpgrade)item;
+        this.lightGuns[index] = (LightGunUpgrade)item;
     }
 
     public void EditHeavyWeaponAtIndex(int index, ShipItemUpgrade item)
     {
-        this.heavyGuns[index] = (HeavyItemUpgrade)item;
+        this.heavyGuns[index] = (HeavyGunUpgrade)item;
     }
 
     public void SetPlayershipWithStoredLightWeapons(PlayerShipLightWeapon[] weapons)
@@ -89,7 +127,7 @@ public class PlayerWeaponsState : ScriptableObject
         int i = 0;
         for (; i < this.lightGuns.Count; i++)
         {
-            if(i >= weapons.Length)
+            if (i >= weapons.Length)
                 break;
             weapons[i].LightGun = (LightGun)this.lightGuns[i].Gun.Clone();
         }
@@ -105,7 +143,7 @@ public class PlayerWeaponsState : ScriptableObject
         int i = 0;
         for (; i < this.heavyGuns.Count; i++)
         {
-            if(i >= weapons.Length)
+            if (i >= weapons.Length)
                 break;
             weapons[i].HeavyGun = (HeavyGun)this.heavyGuns[i].Gun.Clone();
         }

@@ -7,11 +7,13 @@ using Weapon;
 [RequireComponent(typeof(GunSystems))]
 public class GunSystemFSMBehaviour : FSMBehaviour
 {
-    [Header("States")] [Header("Light Guns")] 
+    [Header("States")]
+    [Header("Light Guns")]
     [SerializeField] private State lightIdle;
     [SerializeField] private State lightShooting;
 
-    [Space(5)] [Header("Heavy Guns")] 
+    [Space(5)]
+    [Header("Heavy Guns")]
     [SerializeField] private State heavyIdle;
     [SerializeField] private State heavyShooting;
 
@@ -25,13 +27,13 @@ public class GunSystemFSMBehaviour : FSMBehaviour
 
     public override void Behave(State state)
     {
-        
-        if(state.StateName == lightIdle.name)
+
+        if (state.StateName == lightIdle.name)
             this.gunSystem.TryingToShootLight = false;
-            
-        if(state.StateName == heavyIdle.name)
+
+        if (state.StateName == heavyIdle.name)
             this.gunSystem.TryingToShootHeavy = false;
-        
+
         if (state.StateName == lightShooting.name)
         {
             this.gunSystem.TryingToShootLight = true;
@@ -41,6 +43,6 @@ public class GunSystemFSMBehaviour : FSMBehaviour
         {
             this.gunSystem.TryingToShootHeavy = true;
         }
-        
+
     }
 }

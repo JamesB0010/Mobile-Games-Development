@@ -14,6 +14,12 @@ public class ResetScriptableObjects : ScriptableObject
 
     [SerializeField] private TextAsset heavyWeaponConfigurationSaveFile;
 
+    [SerializeField] private TextAsset armourConfigurationSaveFile;
+
+    [SerializeField] private TextAsset engineConfigurationSaveFile;
+
+    [SerializeField] private TextAsset energySystemConfigurationSaveFile;
+
     [SerializeField] private TextAsset OwnedUpgradesCounterJsonSaveFile;
 
     [MenuItem("Custom/Reset Scriptable Objects and Save Files")]
@@ -26,9 +32,21 @@ public class ResetScriptableObjects : ScriptableObject
 
         instance.weaponsState.ResetHeavyGuns();
 
+        instance.weaponsState.ResetArmour();
+
+        instance.weaponsState.ResetEngine();
+
+        instance.weaponsState.ResetEnergySystem();
+
         SaveLightWeaponsStateJsonFile(instance);
 
         SaveHeavyWeaponsStateJsonFile(instance);
+
+        SaveArmourStateJsonFile(instance);
+
+        SaveEngineStateJsonFile(instance);
+
+        SaveEnergySystemStateJsonFile(instance);
 
         new UpgradesCounterJsonObject().GenerateDefaultSafeFile(instance.OwnedUpgradesCounterJsonSaveFile);
     }
@@ -49,5 +67,41 @@ public class ResetScriptableObjects : ScriptableObject
         string saveFilePath = Application.dataPath + AssetDatabase.GetAssetPath(instance.heavyWeaponConfigurationSaveFile).Substring(6);
         File.WriteAllText(saveFilePath, jsonString);
         AssetDatabase.SaveAssetIfDirty(instance.heavyWeaponConfigurationSaveFile);
+    }
+
+    private static void SaveArmourStateJsonFile(ResetScriptableObjects instance)
+    {
+        SavedWeaponsJsonObject armour = new SavedWeaponsJsonObject(new List<ShipItemUpgrade>()
+            { instance.weaponsState.ArmourAbstract });
+
+        string jsonString = JsonUtility.ToJson(armour, true);
+        string saveFilePath = Application.dataPath + AssetDatabase.GetAssetPath(instance.armourConfigurationSaveFile).Substring(6);
+
+        File.WriteAllText(saveFilePath, jsonString);
+        AssetDatabase.SaveAssetIfDirty(instance.armourConfigurationSaveFile);
+    }
+
+    private static void SaveEngineStateJsonFile(ResetScriptableObjects instance)
+    {
+        SavedWeaponsJsonObject engine = new SavedWeaponsJsonObject(new List<ShipItemUpgrade>()
+            { instance.weaponsState.EngineAbstract });
+
+        string jsonString = JsonUtility.ToJson(engine, true);
+        string saveFilePath = Application.dataPath + AssetDatabase.GetAssetPath(instance.engineConfigurationSaveFile).Substring(6);
+
+        File.WriteAllText(saveFilePath, jsonString);
+        AssetDatabase.SaveAssetIfDirty(instance.engineConfigurationSaveFile);
+    }
+
+    private static void SaveEnergySystemStateJsonFile(ResetScriptableObjects instance)
+    {
+        SavedWeaponsJsonObject energySystem = new SavedWeaponsJsonObject(new List<ShipItemUpgrade>()
+            { instance.weaponsState.EnergySystemAbstract });
+
+        string jsonString = JsonUtility.ToJson(energySystem, true);
+        string saveFilePath = Application.dataPath + AssetDatabase.GetAssetPath(instance.energySystemConfigurationSaveFile).Substring(6);
+
+        File.WriteAllText(saveFilePath, jsonString);
+        AssetDatabase.SaveAssetIfDirty(instance.energySystemConfigurationSaveFile);
     }
 }

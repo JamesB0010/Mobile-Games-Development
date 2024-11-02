@@ -1,75 +1,143 @@
 {
     "serializedDictionary": [
         {
-            "key": "Default Autocannon",
+            "key": "AmmoHighDamageHigh",
             "value": 0
         },
         {
-            "key": "Heavy Autocannon",
+            "key": "AmmoHighDamageLow",
             "value": 0
         },
         {
-            "key": "Heavy Gun 1",
+            "key": "AmmoLowDamageHigh",
             "value": 0
         },
         {
-            "key": "Heavy Gun 2",
+            "key": "AmmoMediumDamageHigh",
             "value": 0
         },
         {
-            "key": "Heavy Gun 3",
+            "key": "AmmoMediumDamageLow",
             "value": 0
         },
         {
-            "key": "Heavy Gun 4",
+            "key": "DefaultArmour",
             "value": 0
         },
         {
-            "key": "Heavy Gun 5",
+            "key": "DefaultAutocannon",
             "value": 0
         },
         {
-            "key": "Heavy Gun 6",
+            "key": "DefaultEnergySystem",
             "value": 0
         },
         {
-            "key": "Heavy Gun 7",
+            "key": "DefaultEngine",
             "value": 0
         },
         {
-            "key": "Heavy Gun 8",
+            "key": "HeavyHighEnergy",
             "value": 0
         },
         {
-            "key": "Light Autocannon",
+            "key": "HeavyLowEnergy",
             "value": 0
         },
         {
-            "key": "Light Gun 5",
+            "key": "HighDamageHighEnergy",
             "value": 0
         },
         {
-            "key": "Light Gun 6",
+            "key": "HighDamageLowEnergy",
             "value": 0
         },
         {
-            "key": "Light Gun 7",
+            "key": "HighMaxHighRecharge",
             "value": 0
         },
         {
-            "key": "Light Gun 8",
+            "key": "HighMaxLowRecharge",
             "value": 0
         },
         {
-            "key": "Light Gun 9",
+            "key": "HighThrustHighEnergy",
             "value": 0
         },
         {
-            "key": "Minigun",
+            "key": "HighThrustHighEnergyBoost",
             "value": 0
         },
         {
-            "key": "No Gun",
+            "key": "HighThrustLowEnergy",
+            "value": 0
+        },
+        {
+            "key": "LowDamageLowEnergy",
+            "value": 0
+        },
+        {
+            "key": "LowMaxHighRecharge",
+            "value": 0
+        },
+        {
+            "key": "LowThrustHighEnergyBoost",
+            "value": 0
+        },
+        {
+            "key": "LowThrustLowEnergy",
+            "value": 0
+        },
+        {
+            "key": "MediumDamageHighEnergy",
+            "value": 0
+        },
+        {
+            "key": "MediumDamageLowEnergy",
+            "value": 0
+        },
+        {
+            "key": "MediumHighEnergy",
+            "value": 0
+        },
+        {
+            "key": "MediumLowEnergy",
+            "value": 0
+        },
+        {
+            "key": "MediumMaxHighRecharge",
+            "value": 0
+        },
+        {
+            "key": "MediumMaxLowRecharge",
+            "value": 0
+        },
+        {
+            "key": "MediumThrustHighEnergy",
+            "value": 0
+        },
+        {
+            "key": "MediumThrustHighEnergyBoost",
+            "value": 0
+        },
+        {
+            "key": "MediumThrustLowEnergy",
+            "value": 0
+        },
+        {
+            "key": "NoGun",
+            "value": 0
+        },
+        {
+            "key": "StrongEMP",
+            "value": 0
+        },
+        {
+            "key": "WeakEMP",
+            "value": 0
+        },
+        {
+            "key": "WeakLowEnergy",
             "value": 0
         }
     ]

@@ -43,7 +43,7 @@ public class PlayerShipAilerons : MonoBehaviour
     {
         if (this.usingGyro)
             return;
-        
+
         this.inputtedRoll = ctx.ReadValue<Vector2>().x;
     }
 

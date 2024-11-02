@@ -1,8 +1,6 @@
 {
     "gunReferences": [
-        "No Gun",
-        "No Gun",
-        "No Gun",
-        "No Gun"
+        "NoGun",
+        "NoGun"
     ]
 }

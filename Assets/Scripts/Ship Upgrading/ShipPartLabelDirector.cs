@@ -10,6 +10,7 @@ public class ShipPartLabelDirector : MonoBehaviour
     [Header("Dependencies")]
     [SerializeField] private CellsSetupHelper cellsSetupHelper;
     [SerializeField] private UIViewUpdater uiUpdater;
+    [SerializeField] private EquipItem equipItemAction;
 
     [Space]
 
@@ -32,6 +33,23 @@ public class ShipPartLabelDirector : MonoBehaviour
     private void OnShipPartClicked(ShipPartLabel label)
     {
         this.ShipPartLabelClicked?.Invoke(label);
+        switch (label.ShipSection)
+        {
+            case ShipSections.lightWeapons:
+                this.equipItemAction.UpdatePreviouslyOwnedLightWeapon(label.WeaponIndex);
+                break;
+            case ShipSections.heavyWeapons:
+                this.equipItemAction.UpdatePreviouslyOwnedHeavyWeapon(label.WeaponIndex);
+                break;
+            case ShipSections.armour:
+                break;
+            case ShipSections.energy:
+                break;
+            case ShipSections.engine:
+                break;
+            default:
+                break;
+        }
         uiUpdater.UpdateItemDetailsText(label.ShipSection, label.WeaponIndex);
 
         this.cellsSetupHelper.SetupCells(label);

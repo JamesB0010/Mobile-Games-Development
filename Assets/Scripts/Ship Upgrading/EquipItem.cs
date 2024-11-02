@@ -22,6 +22,17 @@ public class EquipItem : ItemShopAction
 
     public ShipItemUpgrade PreviouslyOwnedHeavyWeapon => this.previouslyOwnedHeavyWeapon;
 
+    private ShipItemUpgrade previouslyOwnedArmour;
+
+    public ShipItemUpgrade PreviouslyOwnedArmour => this.previouslyOwnedArmour;
+
+    private ShipItemUpgrade previouslyOwnedEnergySystem;
+    public ShipItemUpgrade PreviouslyownedEnergySystem => this.previouslyOwnedEnergySystem;
+
+    private ShipItemUpgrade previouslyOwnedEngine;
+
+    public ShipItemUpgrade PreviouslyOwnedEngine => this.previouslyOwnedEngine;
+
     public void EquipCell(UpgradeCell cell)
     {
         SaveToJson(cell);
@@ -66,11 +77,6 @@ public class EquipItem : ItemShopAction
                 break;
         }
     }
-    public void UpdatePreviouslyOwnedLightWeapon(ShipPartLabel label)
-    {
-        this.previouslyOwnedLightWeapon = base.playerWeaponsState.LightGuns[label.WeaponIndex];
-    }
-
 
     public void UpdatePreviouslyOwnedLightWeapon(int weaponIndex)
     {
@@ -80,8 +86,19 @@ public class EquipItem : ItemShopAction
     {
         this.previouslyOwnedLightWeapon = base.playerWeaponsState.HeavyGuns[weaponIndex];
     }
-    public void UpdatePreviouslyOwnedHeavyWeapon(ShipPartLabel label)
+
+    public void UpdatePreviouslyOwnedArmour()
     {
-        this.previouslyOwnedLightWeapon = base.playerWeaponsState.HeavyGuns[label.WeaponIndex];
+        this.previouslyOwnedArmour = base.playerWeaponsState.Armour;
+    }
+
+    public void UpdatePreviouslyOwnedEnergySystem()
+    {
+        this.previouslyOwnedEnergySystem = base.playerWeaponsState.EnergySystem;
+    }
+
+    public void UpdatePreviouslyOwnedEngine()
+    {
+        this.previouslyOwnedEngine = base.playerWeaponsState.Engine;
     }
 }

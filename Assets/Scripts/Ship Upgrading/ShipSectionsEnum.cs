@@ -10,5 +10,6 @@ public enum ShipSections
     lightWeapons,
     heavyWeapons,
     armour,
-    engine
+    engine,
+    energy
 }

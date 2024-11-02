@@ -1,6 +1,6 @@
 {
     "gunReferences": [
-        "Default Autocannon",
-        "Default Autocannon"
+        "DefaultAutocannon",
+        "DefaultAutocannon"
     ]
 }

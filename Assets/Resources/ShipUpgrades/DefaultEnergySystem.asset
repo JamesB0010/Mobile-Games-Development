@@ -9,11 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 363154144694fb84d99a940f5fdcfe9a, type: 3}
-  m_Name: Default
+  m_Script: {fileID: 11500000, guid: 4893267aeff0d604083e5e96fc51f2b3, type: 3}
+  m_Name: DefaultEnergySystem
   m_EditorClassIdentifier: 
   cost: 0
   icon: {fileID: 21300000, guid: d92891756e50dde4d88b4159d27731c7, type: 3}
   isPurchaseable: 1
   OwnedByDefault: 1
-  engine: {fileID: 11400000, guid: 6dfd6226dc458774e924038e2c2f36be, type: 2}
+  energySystem: {fileID: 11400000, guid: 28659a4bf3f51dd4bbf53f17bef137ad, type: 2}

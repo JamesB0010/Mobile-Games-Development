@@ -36,11 +36,11 @@ public class UIViewUpdater : MonoBehaviour
                 this.SetItemStatsUi(heavyLightGun);
                 break;
             case ShipSections.armour:
-                LightGun armour = (LightGun)this.playerWeaponsState.Shield.GetUpgrade();
+                LightGun armour = (LightGun)this.playerWeaponsState.Armour.GetUpgrade();
                 this.SetItemStatsUi(armour);
                 break;
             case ShipSections.engine:
-                LightGun engine = (LightGun)this.playerWeaponsState.Shield.GetUpgrade();
+                LightGun engine = (LightGun)this.playerWeaponsState.Armour.GetUpgrade();
                 this.SetItemStatsUi(engine);
                 break;
             default:

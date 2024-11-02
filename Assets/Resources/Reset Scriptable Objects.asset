@@ -15,4 +15,7 @@ MonoBehaviour:
   weaponsState: {fileID: 11400000, guid: b5f4d067d7d0e2744ab5cdf2c7f613f0, type: 2}
   lightWeaponConfigurationSaveFile: {fileID: 4900000, guid: fc6796ea5dfbdc341a004d5f06320d94, type: 3}
   heavyWeaponConfigurationSaveFile: {fileID: 4900000, guid: a877279f3d4a6bf44bae1eaf0be3f22c, type: 3}
+  armourConfigurationSaveFile: {fileID: 4900000, guid: 74b27149430c0d04eb9c06a405c0bf53, type: 3}
+  engineConfigurationSaveFile: {fileID: 4900000, guid: 2b33c56035e3e4e429ab3ea291490fc0, type: 3}
+  energySystemConfigurationSaveFile: {fileID: 4900000, guid: 8da2cd7e92868ce49b1df1629d5e95bc, type: 3}
   OwnedUpgradesCounterJsonSaveFile: {fileID: 4900000, guid: eb7ae1a04d337494b829de8ec0039560, type: 3}
