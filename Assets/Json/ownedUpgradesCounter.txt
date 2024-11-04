@@ -34,7 +34,7 @@
         },
         {
             "key": "DefaultEngine",
-            "value": 1
+            "value": 0
         },
         {
             "key": "HeavyHighEnergy",
@@ -122,11 +122,11 @@
         },
         {
             "key": "MediumThrustLowEnergy",
-            "value": 1
+            "value": 0
         },
         {
             "key": "NoGun",
-            "value": 2
+            "value": 0
         },
         {
             "key": "StrongEMP",

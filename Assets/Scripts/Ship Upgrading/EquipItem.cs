@@ -73,6 +73,8 @@ public class EquipItem : ItemShopAction
                 break;
             case ShipSections.engine:
                 break;
+            case ShipSections.energy:
+                break;
             default:
                 break;
         }

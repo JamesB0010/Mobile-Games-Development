@@ -1,6 +1,6 @@
 {
     "gunReferences": [
-        "WeakEMP",
-        "WeakEMP"
+        "NoGun",
+        "NoGun"
     ]
 }
