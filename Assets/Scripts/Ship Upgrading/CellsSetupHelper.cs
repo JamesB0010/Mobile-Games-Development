@@ -14,6 +14,12 @@ public class CellsSetupHelper : MonoBehaviour
 
     public void DisableCells()
     {
+        StartCoroutine(nameof(DisableCellsAfterSecond));
+    }
+
+    private IEnumerator DisableCellsAfterSecond()
+    {
+        yield return new WaitForSeconds(1);
         foreach (UpgradeCell cell in this.cells)
         {
             cell.gameObject.SetActive(false);

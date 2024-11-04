@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class UIViewUpdater : MonoBehaviour
 {
@@ -13,6 +14,8 @@ public class UIViewUpdater : MonoBehaviour
         costField,
         purchaseEquipButtonText,
         playerMoneyField;
+    
+    [SerializeField] private ScrollRect UpgradesScrollRect;
 
     [SerializeField] private PlayerWeaponsState playerWeaponsState;
 
@@ -21,6 +24,16 @@ public class UIViewUpdater : MonoBehaviour
     private void Start()
     {
         this.playerMoneyField.text = ((float)playerMoney.GetValue()).ToString();
+    }
+
+    public void ScrollRectTopAfterSeconds(float waitTime)
+    {
+        StartCoroutine(nameof(this.SetScrollVerticalAfterWait), waitTime);
+    }
+    private IEnumerator SetScrollVerticalAfterWait(float waitTime)
+    {
+        yield return new WaitForSeconds(waitTime);
+        this.UpgradesScrollRect.verticalNormalizedPosition = 1;
     }
 
     public void UpdateItemDetailsText(ShipSections shipSection, int side = 0)
