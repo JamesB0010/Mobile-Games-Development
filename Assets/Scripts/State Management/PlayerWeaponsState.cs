@@ -122,6 +122,21 @@ public class PlayerWeaponsState : ScriptableObject
         this.heavyGuns[index] = (HeavyGunUpgrade)item;
     }
 
+    public void EditEngine(EngineUpgrade engine)
+    {
+        this.engine = engine;
+    }
+
+    public void EditEnergySystem(EnergySystemsUpgrade energySystem)
+    {
+        this.energySystem = energySystem;
+    }
+
+    public void EditArmour(ArmourUpgrade armour)
+    {
+        this.armour = armour;
+    }
+
     public void SetPlayershipWithStoredLightWeapons(PlayerShipLightWeapon[] weapons)
     {
         int i = 0;

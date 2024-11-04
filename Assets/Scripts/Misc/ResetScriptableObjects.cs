@@ -53,8 +53,8 @@ public class ResetScriptableObjects : ScriptableObject
 
     private static void SaveLightWeaponsStateJsonFile(ResetScriptableObjects instance)
     {
-        SavedWeaponsJsonObject weapons = new SavedWeaponsJsonObject(instance.weaponsState.LightGunsAbstract);
-        string jsonString = JsonUtility.ToJson(weapons, true);
+        SavedUpgradesJsonObject upgrades = new SavedUpgradesJsonObject(instance.weaponsState.LightGunsAbstract);
+        string jsonString = JsonUtility.ToJson(upgrades, true);
         string saveFilePath = Application.dataPath + AssetDatabase.GetAssetPath(instance.lightWeaponConfigurationSaveFile).Substring(6);
         File.WriteAllText(saveFilePath, jsonString);
         AssetDatabase.SaveAssetIfDirty(instance.lightWeaponConfigurationSaveFile);
@@ -62,8 +62,8 @@ public class ResetScriptableObjects : ScriptableObject
 
     private static void SaveHeavyWeaponsStateJsonFile(ResetScriptableObjects instance)
     {
-        SavedWeaponsJsonObject weapons = new SavedWeaponsJsonObject(instance.weaponsState.HeavyGunsAbstract);
-        string jsonString = JsonUtility.ToJson(weapons, true);
+        SavedUpgradesJsonObject upgrades = new SavedUpgradesJsonObject(instance.weaponsState.HeavyGunsAbstract);
+        string jsonString = JsonUtility.ToJson(upgrades, true);
         string saveFilePath = Application.dataPath + AssetDatabase.GetAssetPath(instance.heavyWeaponConfigurationSaveFile).Substring(6);
         File.WriteAllText(saveFilePath, jsonString);
         AssetDatabase.SaveAssetIfDirty(instance.heavyWeaponConfigurationSaveFile);
@@ -71,7 +71,7 @@ public class ResetScriptableObjects : ScriptableObject
 
     private static void SaveArmourStateJsonFile(ResetScriptableObjects instance)
     {
-        SavedWeaponsJsonObject armour = new SavedWeaponsJsonObject(new List<ShipItemUpgrade>()
+        SavedUpgradesJsonObject armour = new SavedUpgradesJsonObject(new List<ShipItemUpgrade>()
             { instance.weaponsState.ArmourAbstract });
 
         string jsonString = JsonUtility.ToJson(armour, true);
@@ -83,7 +83,7 @@ public class ResetScriptableObjects : ScriptableObject
 
     private static void SaveEngineStateJsonFile(ResetScriptableObjects instance)
     {
-        SavedWeaponsJsonObject engine = new SavedWeaponsJsonObject(new List<ShipItemUpgrade>()
+        SavedUpgradesJsonObject engine = new SavedUpgradesJsonObject(new List<ShipItemUpgrade>()
             { instance.weaponsState.EngineAbstract });
 
         string jsonString = JsonUtility.ToJson(engine, true);
@@ -95,7 +95,7 @@ public class ResetScriptableObjects : ScriptableObject
 
     private static void SaveEnergySystemStateJsonFile(ResetScriptableObjects instance)
     {
-        SavedWeaponsJsonObject energySystem = new SavedWeaponsJsonObject(new List<ShipItemUpgrade>()
+        SavedUpgradesJsonObject energySystem = new SavedUpgradesJsonObject(new List<ShipItemUpgrade>()
             { instance.weaponsState.EnergySystemAbstract });
 
         string jsonString = JsonUtility.ToJson(energySystem, true);
