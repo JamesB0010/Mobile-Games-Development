@@ -21,7 +21,7 @@ public class ItemShopActionsManager : MonoBehaviour
     [SerializeField] private UnityEvent CellEquippedEvent = new UnityEvent();
 
     private void Start()
-        {
+    {
         this.purchaseItemShopAction.SelectedCellPurchased += this.CellPurchased;
         this.equipItemShopAction.SelectedCellEquipped += this.CellEquipped;
     }
@@ -52,6 +52,30 @@ public class ItemShopActionsManager : MonoBehaviour
     public void CellEquipped()
     {
         this.CellEquippedEvent?.Invoke();
+    }
+
+    public void NotifyOwnedUpgradesCounterOfEquip(OwnedUpgradesCounter upgradesCounter)
+    {
+        switch (SelectedCellHighlight.GetHighlight().SelectedCell.ShipSection)
+        {
+            case ShipSections.lightWeapons:
+                upgradesCounter.OnLightUpgradeEquipped(this.equipItemShopAction);
+                break;
+            case ShipSections.heavyWeapons:
+                upgradesCounter.OnHeavyUpgradeEquipped(this.equipItemShopAction);
+                break;
+            case ShipSections.armour:
+                upgradesCounter.OnArmourEquipped(this.equipItemShopAction);
+                break;
+            case ShipSections.energy:
+                upgradesCounter.OnEnergySystemEquipped(this.equipItemShopAction);
+                break;
+            case ShipSections.engine:
+                upgradesCounter.OnEngineEquipped(this.equipItemShopAction);
+                break;
+            default:
+                break;
+        }
     }
 
     private void OnDestroy()

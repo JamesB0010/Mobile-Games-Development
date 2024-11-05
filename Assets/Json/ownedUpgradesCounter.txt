@@ -129,14 +129,6 @@
             "value": 0
         },
         {
-            "key": "StrongEMP",
-            "value": 0
-        },
-        {
-            "key": "WeakEMP",
-            "value": 0
-        },
-        {
             "key": "WeakLowEnergy",
             "value": 0
         }

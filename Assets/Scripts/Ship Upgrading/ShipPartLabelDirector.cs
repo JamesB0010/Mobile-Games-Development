@@ -42,10 +42,13 @@ public class ShipPartLabelDirector : MonoBehaviour
                 this.equipItemAction.UpdatePreviouslyOwnedHeavyWeapon(label.WeaponIndex);
                 break;
             case ShipSections.armour:
+                this.equipItemAction.UpdatePreviouslyOwnedArmour();
                 break;
             case ShipSections.energy:
+                this.equipItemAction.UpdatePreviouslyOwnedEnergySystem();
                 break;
             case ShipSections.engine:
+                this.equipItemAction.UpdatePreviouslyOwnedEngine();
                 break;
             default:
                 break;

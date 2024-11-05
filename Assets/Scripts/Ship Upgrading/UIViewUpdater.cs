@@ -77,16 +77,19 @@ public class UIViewUpdater : MonoBehaviour
 
     private void SetItemStatsUi(Armour armour)
     {
+        itemNameField.text = armour.name;
         Debug.Log("Display armour stats");
     }
 
     private void SetItemStatsUi(Engine engine)
     {
+        itemNameField.text = engine.name;
         Debug.Log("Display engine stats");
     }
 
     private void SetItemStatsUi(EnergySystem energySystem)
     {
+        itemNameField.text = energySystem.name;
         Debug.Log("Display energy system stats");
     }
 

@@ -8379,13 +8379,13 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 643424339}
-        m_TargetAssemblyTypeName: OwnedUpgradesCounter, Assembly-CSharp
-        m_MethodName: OnUpgradeEquipped
+      - m_Target: {fileID: 1520440852}
+        m_TargetAssemblyTypeName: ItemShopActionsManager, Assembly-CSharp
+        m_MethodName: NotifyOwnedUpgradesCounterOfEquip
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 11400000, guid: 251fcebff9d6ad045af2064cd274d9bf, type: 2}
-          m_ObjectArgumentAssemblyTypeName: EquipItem, Assembly-CSharp
+          m_ObjectArgument: {fileID: 643424339}
+          m_ObjectArgumentAssemblyTypeName: OwnedUpgradesCounter, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 

@@ -43,14 +43,40 @@ public class OwnedUpgradesCounter : MonoBehaviour
         this.SaveToJson();
     }
 
-    //on upgrade equipped
-    public void OnUpgradeEquipped(EquipItem itemEquipper)
+    public void OnLightUpgradeEquipped(EquipItem itemEquipper)
     {
         this.upgradesCount[this.cellHighlight.SelectedCell.Upgrade]--;
         this.upgradesCount[itemEquipper.PreviouslyOwnedLightWeapon]++;
         this.SaveToJson();
     }
 
+    public void OnHeavyUpgradeEquipped(EquipItem itemEquipper)
+    {
+        this.upgradesCount[this.cellHighlight.SelectedCell.Upgrade]--;
+        this.upgradesCount[itemEquipper.PreviouslyOwnedHeavyWeapon]++;
+        this.SaveToJson();
+    }
+
+    public void OnArmourEquipped(EquipItem itemEquipper)
+    {
+        this.upgradesCount[this.cellHighlight.SelectedCell.Upgrade]--;
+        this.upgradesCount[itemEquipper.PreviouslyOwnedArmour]++;
+        this.SaveToJson();
+    }
+
+    public void OnEnergySystemEquipped(EquipItem itemEquipper)
+    {
+        this.upgradesCount[this.cellHighlight.SelectedCell.Upgrade]--;
+        this.upgradesCount[itemEquipper.PreviouslyownedEnergySystem]++;
+        this.SaveToJson();
+    }
+
+    public void OnEngineEquipped(EquipItem itemEquipper)
+    {
+        this.upgradesCount[this.cellHighlight.SelectedCell.Upgrade]--;
+        this.upgradesCount[itemEquipper.PreviouslyOwnedEngine]++ ;
+        this.SaveToJson();
+    }
     public int GetUpgradeCount(ShipItemUpgrade upgrade)
     {
         return this.upgradesCount[upgrade];

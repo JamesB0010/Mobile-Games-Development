@@ -12,6 +12,18 @@ public class SelectedCellHighlight : MonoBehaviour
 
     private static SelectedCellHighlight instance = null;
 
+    public static SelectedCellHighlight GetHighlight()
+    {
+        if (SelectedCellHighlight.instance == null)
+        {
+            GameObject obj = new GameObject("Selected Cell Highlight");
+            var comp = obj.AddComponent<SelectedCellHighlight>();
+            SelectedCellHighlight.instance = comp;
+        }
+
+        return SelectedCellHighlight.instance;
+    }
+
     private void Awake()
     {
         if (SelectedCellHighlight.instance == null)
