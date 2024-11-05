@@ -46,6 +46,9 @@ public class UpgradesCounterJsonObject
 
         File.WriteAllText(Application.dataPath + saveFilePath, JsonUtility.ToJson(this, true));
 
+        #if UNITY_EDITOR
+        AssetDatabase.Refresh();
+        #endif
         Debug.Log("Saved Upgrades Counter");
     }
 

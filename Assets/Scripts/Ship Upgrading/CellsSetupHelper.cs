@@ -28,6 +28,7 @@ public class CellsSetupHelper : MonoBehaviour
 
     public void SetupCells(ShipPartLabel label)
     {
+        StopCoroutine(nameof(this.DisableCellsAfterSecond));
         int smallerMax;
 
         int numberOfUpgrades = label.Upgrades.GetShipUpgrades().Length;
