@@ -21,6 +21,29 @@ public class UIViewUpdater : MonoBehaviour
 
     [SerializeField] private FloatReference playerMoney;
 
+    private static UIViewUpdater instance = null;
+
+    public static UIViewUpdater GetInstance()
+    {
+        if (instance == null)
+        {
+            Debug.LogError("Ui view Updater does not exist please add it in the editor");
+            throw new NullReferenceException();
+        }
+
+        return instance;
+    }
+    private void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+            return;
+        }
+        
+        Destroy(this.gameObject);
+    }
+
     private void Start()
     {
         this.playerMoneyField.text = ((float)playerMoney.GetValue()).ToString();
@@ -98,7 +121,27 @@ public class UIViewUpdater : MonoBehaviour
         this.costField.text = selectedCell.Upgrade.Cost.ToString();
         if (selectedCell.Upgrade.IsPurchaseable)
         {
-            bool isEquipped = playerWeaponsState.LightGuns[selectedCell.WeaponIndex] == selectedCell.Upgrade;
+            bool isEquipped = false;
+            switch (selectedCell.ShipSection)
+            {
+                case ShipSections.lightWeapons: 
+                    isEquipped = playerWeaponsState.LightGuns[selectedCell.WeaponIndex] == selectedCell.Upgrade;
+                    break;
+                case ShipSections.heavyWeapons:
+                    isEquipped = playerWeaponsState.HeavyGuns[selectedCell.WeaponIndex] == selectedCell.Upgrade;
+                    break;
+                case ShipSections.armour:
+                    isEquipped = playerWeaponsState.Armour == selectedCell.Upgrade;
+                    break;
+                case ShipSections.energy:
+                    isEquipped = playerWeaponsState.EnergySystem == selectedCell.Upgrade;
+                    break;
+                case ShipSections.engine:
+                    isEquipped = playerWeaponsState.Engine == selectedCell.Upgrade;
+                    break;
+                default:
+                    break;
+            }
             bool isOwned = OwnedUpgradesCounter.Instance.GetUpgradeCount(selectedCell.Upgrade) > 0 || selectedCell.Upgrade.OwnedByDefault || isEquipped;
             if (isOwned)
             {
@@ -116,7 +159,6 @@ public class UIViewUpdater : MonoBehaviour
     {
         this.purchaseEquipButtonText.text = "Equipped";
         this.playerMoneyField.text = ((float)this.playerMoney.GetValue()).ToString();
-
 
 
         this.UpdateUiBasedOnItem(highlight.SelectedCell);

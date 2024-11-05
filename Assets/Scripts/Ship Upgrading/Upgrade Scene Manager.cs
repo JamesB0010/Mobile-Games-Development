@@ -41,6 +41,8 @@ public class ItemShopActionsManager : MonoBehaviour
             this.purchaseItemShopAction.PurchaseCell(cell);
             this.equipItemShopAction.EquipCell(cell);
         }
+        
+        UIViewUpdater.GetInstance().CellSelected(highlight.SelectedCell);
     }
 
 
