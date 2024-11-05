@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.IO;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public abstract class ItemShopAction : ScriptableObject
 {
-    [SerializeField] protected PlayerWeaponsState playerWeaponsState;
+    [FormerlySerializedAs("playerWeaponsState")] [SerializeField] protected PlayerUpgradesState playerUpgradesState;
 
 
 }

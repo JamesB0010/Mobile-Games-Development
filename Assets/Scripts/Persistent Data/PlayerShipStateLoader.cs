@@ -10,17 +10,17 @@ public class PlayerShipStateLoader : MonoBehaviour
 
     [SerializeField] private TextAsset heavyWeaponsJson;
 
-    [SerializeField] private PlayerWeaponsState playerWeaponsState;
+    [FormerlySerializedAs("playerWeaponsState")] [SerializeField] private PlayerUpgradesState playerUpgradesState;
 
     void Start()
     {
         string jsonStringLight = this.lightWeaponsJson.text;
         SavedUpgradesJsonObject lightUpgradesObject = JsonUtility.FromJson<SavedUpgradesJsonObject>(jsonStringLight);
 
-        this.playerWeaponsState.LightGuns = lightUpgradesObject.GetSavedGuns().OfType<LightGunUpgrade>().ToList();
+        this.playerUpgradesState.LightGuns = lightUpgradesObject.GetSavedGuns().OfType<LightGunUpgrade>().ToList();
 
         string jsonStringHeavy = this.heavyWeaponsJson.text;
         SavedUpgradesJsonObject heavyUpgradesObject = JsonUtility.FromJson<SavedUpgradesJsonObject>(jsonStringHeavy);
-        this.playerWeaponsState.HeavyGuns = heavyUpgradesObject.GetSavedGuns().OfType<HeavyGunUpgrade>().ToList();
+        this.playerUpgradesState.HeavyGuns = heavyUpgradesObject.GetSavedGuns().OfType<HeavyGunUpgrade>().ToList();
     }
 }

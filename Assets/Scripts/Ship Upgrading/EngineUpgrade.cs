@@ -6,8 +6,11 @@ using UnityEngine;
 public class EngineUpgrade : ShipItemUpgrade
 {
     [SerializeField] private Engine engine;
+    public Engine Engine => this.engine;
     public override object GetUpgrade()
     {
         return engine;
     }
+
+    
 }

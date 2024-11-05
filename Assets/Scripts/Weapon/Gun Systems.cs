@@ -18,7 +18,7 @@ namespace Weapon
 
         private PlayerShipHeavyWeapon[] heavyWeaponList;
 
-        [SerializeField] private PlayerWeaponsState playerWeaponsState;
+        [FormerlySerializedAs("playerWeaponsState")] [SerializeField] private PlayerUpgradesState playerUpgradesState;
 
 
         public bool tryingToShootLightLight = false;
@@ -49,8 +49,8 @@ namespace Weapon
             this.lightWeaponsList = transform.GetComponentsInChildren<PlayerShipLightWeapon>();
             this.heavyWeaponList = transform.GetComponentsInChildren<PlayerShipHeavyWeapon>();
 
-            this.playerWeaponsState.SetPlayershipWithStoredLightWeapons(this.lightWeaponsList);
-            this.playerWeaponsState.SetPlayershipWithStoredHeavyWeapons(this.heavyWeaponList);
+            this.playerUpgradesState.SetPlayershipWithStoredLightWeapons(this.lightWeaponsList);
+            this.playerUpgradesState.SetPlayershipWithStoredHeavyWeapons(this.heavyWeaponList);
         }
 
         private void Update()

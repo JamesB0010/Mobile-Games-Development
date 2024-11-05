@@ -7,6 +7,8 @@ public class ArmourUpgrade : ShipItemUpgrade
 {
     [SerializeField] private Armour armour;
 
+    public Armour Armour => this.armour;
+
     public override object GetUpgrade()
     {
         return armour;

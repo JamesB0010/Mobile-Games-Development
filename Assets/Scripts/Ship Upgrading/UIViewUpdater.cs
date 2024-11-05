@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 public class UIViewUpdater : MonoBehaviour
@@ -17,7 +18,7 @@ public class UIViewUpdater : MonoBehaviour
     
     [SerializeField] private ScrollRect UpgradesScrollRect;
 
-    [SerializeField] private PlayerWeaponsState playerWeaponsState;
+    [FormerlySerializedAs("playerWeaponsState")] [SerializeField] private PlayerUpgradesState playerUpgradesState;
 
     [SerializeField] private FloatReference playerMoney;
 
@@ -64,23 +65,23 @@ public class UIViewUpdater : MonoBehaviour
         switch (shipSection)
         {
             case ShipSections.lightWeapons:
-                LightGun lightLightGun = (LightGun)this.playerWeaponsState.LightGuns[side].Gun;
+                LightGun lightLightGun = (LightGun)this.playerUpgradesState.LightGuns[side].Gun;
                 this.SetItemStatsUi(lightLightGun);
                 break;
             case ShipSections.heavyWeapons:
-                HeavyGun heavyLightGun = (HeavyGun)this.playerWeaponsState.HeavyGuns[side].Gun;
+                HeavyGun heavyLightGun = (HeavyGun)this.playerUpgradesState.HeavyGuns[side].Gun;
                 this.SetItemStatsUi(heavyLightGun);
                 break;
             case ShipSections.armour:
-                Armour armour = (Armour)this.playerWeaponsState.Armour.GetUpgrade();
+                Armour armour = (Armour)this.playerUpgradesState.Armour.GetUpgrade();
                 this.SetItemStatsUi(armour);
                 break;
             case ShipSections.engine:
-                Engine engine = (Engine)this.playerWeaponsState.Engine.GetUpgrade();
+                Engine engine = (Engine)this.playerUpgradesState.Engine.GetUpgrade();
                 this.SetItemStatsUi(engine);
                 break;
             case ShipSections.energy:
-                EnergySystem energySystem = (EnergySystem)this.playerWeaponsState.EnergySystem.GetUpgrade();
+                EnergySystem energySystem = (EnergySystem)this.playerUpgradesState.EnergySystem.GetUpgrade();
                 this.SetItemStatsUi(energySystem);
                 break;
             default:
@@ -125,19 +126,19 @@ public class UIViewUpdater : MonoBehaviour
             switch (selectedCell.ShipSection)
             {
                 case ShipSections.lightWeapons: 
-                    isEquipped = playerWeaponsState.LightGuns[selectedCell.WeaponIndex] == selectedCell.Upgrade;
+                    isEquipped = playerUpgradesState.LightGuns[selectedCell.WeaponIndex] == selectedCell.Upgrade;
                     break;
                 case ShipSections.heavyWeapons:
-                    isEquipped = playerWeaponsState.HeavyGuns[selectedCell.WeaponIndex] == selectedCell.Upgrade;
+                    isEquipped = playerUpgradesState.HeavyGuns[selectedCell.WeaponIndex] == selectedCell.Upgrade;
                     break;
                 case ShipSections.armour:
-                    isEquipped = playerWeaponsState.Armour == selectedCell.Upgrade;
+                    isEquipped = playerUpgradesState.Armour == selectedCell.Upgrade;
                     break;
                 case ShipSections.energy:
-                    isEquipped = playerWeaponsState.EnergySystem == selectedCell.Upgrade;
+                    isEquipped = playerUpgradesState.EnergySystem == selectedCell.Upgrade;
                     break;
                 case ShipSections.engine:
-                    isEquipped = playerWeaponsState.Engine == selectedCell.Upgrade;
+                    isEquipped = playerUpgradesState.Engine == selectedCell.Upgrade;
                     break;
                 default:
                     break;

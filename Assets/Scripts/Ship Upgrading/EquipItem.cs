@@ -46,8 +46,8 @@ public class EquipItem : ItemShopAction
     }
     private void SaveLightWeaponAction(UpgradeCell cell)
     {
-        this.playerWeaponsState.EditLightWeaponAtIndex(cell.WeaponIndex, cell.Upgrade);
-        SavedUpgradesJsonObject upgrades = new SavedUpgradesJsonObject(this.playerWeaponsState.LightGunsAbstract);
+        this.playerUpgradesState.EditLightWeaponAtIndex(cell.WeaponIndex, cell.Upgrade);
+        SavedUpgradesJsonObject upgrades = new SavedUpgradesJsonObject(this.playerUpgradesState.LightGunsAbstract);
         string jsonString = JsonUtility.ToJson(upgrades, true);
         File.WriteAllText(Application.dataPath + AssetDatabase.GetAssetPath(this.lightWeaponConfigurationSaveFile).Substring(6), jsonString);
         AssetDatabase.SaveAssetIfDirty(this.lightWeaponConfigurationSaveFile);
@@ -55,8 +55,8 @@ public class EquipItem : ItemShopAction
 
     private void SaveHeavyWeaponAction(UpgradeCell cell)
     {
-        this.playerWeaponsState.EditHeavyWeaponAtIndex(cell.WeaponIndex, cell.Upgrade);
-        SavedUpgradesJsonObject upgrades = new SavedUpgradesJsonObject(this.playerWeaponsState.HeavyGunsAbstract);
+        this.playerUpgradesState.EditHeavyWeaponAtIndex(cell.WeaponIndex, cell.Upgrade);
+        SavedUpgradesJsonObject upgrades = new SavedUpgradesJsonObject(this.playerUpgradesState.HeavyGunsAbstract);
         string jsonString = JsonUtility.ToJson(upgrades, true);
         File.WriteAllText(Application.dataPath + AssetDatabase.GetAssetPath(this.heavyWeaponConfigurationSaveFile).Substring(6), jsonString);
         AssetDatabase.SaveAssetIfDirty(this.heavyWeaponConfigurationSaveFile);
@@ -64,8 +64,8 @@ public class EquipItem : ItemShopAction
 
     private void SaveEngineAction(UpgradeCell cell)
     {
-        this.playerWeaponsState.EditEngine((EngineUpgrade)cell.Upgrade);
-        SavedUpgradesJsonObject upgrade = new SavedUpgradesJsonObject(this.playerWeaponsState.EngineAbstract);
+        this.playerUpgradesState.EditEngine((EngineUpgrade)cell.Upgrade);
+        SavedUpgradesJsonObject upgrade = new SavedUpgradesJsonObject(this.playerUpgradesState.EngineAbstract);
         string jsonString = JsonUtility.ToJson(upgrade, true);
         File.WriteAllText(Application.dataPath + AssetDatabase.GetAssetPath(this.engineConfigutationFile).Substring(6),jsonString);
         AssetDatabase.SaveAssetIfDirty(this.engineConfigutationFile);
@@ -73,8 +73,8 @@ public class EquipItem : ItemShopAction
 
     private void SaveEnergySystemAction(UpgradeCell cell)
     {
-        this.playerWeaponsState.EditEnergySystem((EnergySystemsUpgrade)cell.Upgrade);
-        SavedUpgradesJsonObject upgrade = new SavedUpgradesJsonObject(this.playerWeaponsState.EnergySystemAbstract);
+        this.playerUpgradesState.EditEnergySystem((EnergySystemsUpgrade)cell.Upgrade);
+        SavedUpgradesJsonObject upgrade = new SavedUpgradesJsonObject(this.playerUpgradesState.EnergySystemAbstract);
         string jsonString = JsonUtility.ToJson(upgrade, true);
         File.WriteAllText(Application.dataPath + AssetDatabase.GetAssetPath(this.energySystemConfigurationFile).Substring(6), jsonString);
         AssetDatabase.SaveAssetIfDirty(this.energySystemConfigurationFile);
@@ -82,8 +82,8 @@ public class EquipItem : ItemShopAction
 
     private void SaveArmourAction(UpgradeCell cell)
     {
-        this.playerWeaponsState.EditArmour((ArmourUpgrade)cell.Upgrade);
-        SavedUpgradesJsonObject upgrade = new SavedUpgradesJsonObject(this.playerWeaponsState.ArmourAbstract);
+        this.playerUpgradesState.EditArmour((ArmourUpgrade)cell.Upgrade);
+        SavedUpgradesJsonObject upgrade = new SavedUpgradesJsonObject(this.playerUpgradesState.ArmourAbstract);
         string jsonString = JsonUtility.ToJson(upgrade, true);
         File.WriteAllText(Application.dataPath + AssetDatabase.GetAssetPath(this.armourConfigurationSaveFile).Substring(6), jsonString);
         AssetDatabase.SaveAssetIfDirty(this.armourConfigurationSaveFile);
@@ -125,25 +125,25 @@ public class EquipItem : ItemShopAction
 
     public void UpdatePreviouslyOwnedLightWeapon(int weaponIndex)
     {
-        this.previouslyOwnedLightWeapon = base.playerWeaponsState.LightGuns[weaponIndex];
+        this.previouslyOwnedLightWeapon = base.playerUpgradesState.LightGuns[weaponIndex];
     }
     public void UpdatePreviouslyOwnedHeavyWeapon(int weaponIndex)
     {
-        this.previouslyOwnedLightWeapon = base.playerWeaponsState.HeavyGuns[weaponIndex];
+        this.previouslyOwnedLightWeapon = base.playerUpgradesState.HeavyGuns[weaponIndex];
     }
 
     public void UpdatePreviouslyOwnedArmour()
     {
-        this.previouslyOwnedArmour = base.playerWeaponsState.Armour;
+        this.previouslyOwnedArmour = base.playerUpgradesState.Armour;
     }
 
     public void UpdatePreviouslyOwnedEnergySystem()
     {
-        this.previouslyOwnedEnergySystem = base.playerWeaponsState.EnergySystem;
+        this.previouslyOwnedEnergySystem = base.playerUpgradesState.EnergySystem;
     }
 
     public void UpdatePreviouslyOwnedEngine()
     {
-        this.previouslyOwnedEngine = base.playerWeaponsState.Engine;
+        this.previouslyOwnedEngine = base.playerUpgradesState.Engine;
     }
 }
