@@ -14,4 +14,9 @@ public class UiUpdaterInteractorArmour : UiUpdaterInteractorStrategy
         Armour armour = upgradesState.Armour.Armour;
         this.ui.SetItemStatsUi(armour);
     }
+
+    public override void UpdateUi(ShipItem item)
+    {
+        this.ui.UpdateUiArmour((Armour)item);
+    }
 }

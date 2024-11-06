@@ -14,4 +14,9 @@ public class UiUpdaterInteractorLight : UiUpdaterInteractorStrategy
         LightGun lightGun = playerUpgradesState.LightGuns[index].Gun;
         this.ui.SetItemStatsUi(lightGun);
     }
+
+    public override void UpdateUi(ShipItem item)
+    {
+        this.ui.UpdateUiLightGun((LightGun)item);
+    }
 }

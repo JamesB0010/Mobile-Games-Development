@@ -28,4 +28,9 @@ public class EnergySystemsUpgrade : ShipItemUpgrade
     {
         return new CounterInteractorEnergySystem(upgradesCounter);
     }
+
+    public override PlayerUpgradesStateInteractorStrategy GenerateUpgradesStateInteractor(PlayerUpgradesState playerUpgradesState)
+    {
+        return new playerUpgradesStateInteractorEnergySystem(playerUpgradesState);
+    }
 }

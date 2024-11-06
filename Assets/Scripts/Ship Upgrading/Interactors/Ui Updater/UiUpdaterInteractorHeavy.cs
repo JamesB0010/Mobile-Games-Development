@@ -14,4 +14,9 @@ public class UiUpdaterInteractorHeavy : UiUpdaterInteractorStrategy
         HeavyGun heavyGun = (HeavyGun)upgradesState.HeavyGuns[index].Gun;
         this.ui.SetItemStatsUi(heavyGun);
     }
+
+    public override void UpdateUi(ShipItem item)
+    {
+        this.ui.UpdateUiHeavyGun((HeavyGun)item);
+    }
 }

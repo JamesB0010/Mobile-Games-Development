@@ -14,4 +14,9 @@ public class UiUpdaterInteractorEnergySystem : UiUpdaterInteractorStrategy
         EnergySystem eSystem = upgradesState.EnergySystem.EnergySystem;
         this.ui.SetItemStatsUi(eSystem);
     }
+
+    public override void UpdateUi(ShipItem item)
+    {
+        this.ui.UpdateUiEnergySystem((EnergySystem)item);
+    }
 }

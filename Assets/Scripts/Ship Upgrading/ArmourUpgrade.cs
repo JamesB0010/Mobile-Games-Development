@@ -28,4 +28,9 @@ public class ArmourUpgrade : ShipItemUpgrade
     {
         return new UpgradesCounterInteractorArmour(upgradesCounter);
     }
+
+    public override PlayerUpgradesStateInteractorStrategy GenerateUpgradesStateInteractor(PlayerUpgradesState playerUpgradesState)
+    {
+        return new playerUpgradesStateInteractorArmour(playerUpgradesState);
+    }
 }

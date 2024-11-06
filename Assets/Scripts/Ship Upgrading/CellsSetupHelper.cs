@@ -46,7 +46,6 @@ public class CellsSetupHelper : MonoBehaviour
         {
             this.cells[i].Upgrade = label.Upgrades.GetShipUpgrades()[i];
             this.cells[i].WeaponIndex = label.WeaponIndex;
-            this.cells[i].ShipSection = label.ShipSection;
             this.cells[i].gameObject.SetActive(true);
         }
     }

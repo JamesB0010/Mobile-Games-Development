@@ -14,4 +14,9 @@ public class UiUpdaterInteractorEngine : UiUpdaterInteractorStrategy
         Engine engine = upgradesState.Engine.Engine;
         this.ui.SetItemStatsUi(engine);
     }
+
+    public override void UpdateUi(ShipItem item)
+    {
+        this.ui.UpdateUiEngine((Engine)item);
+    }
 }

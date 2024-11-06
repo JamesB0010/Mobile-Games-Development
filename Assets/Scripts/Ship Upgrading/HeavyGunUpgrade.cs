@@ -27,4 +27,9 @@ public class HeavyGunUpgrade : ShipItemUpgrade
     {
         return new UpgradeCounterInteractorHeavy(upgradesCounter);
     }
+
+    public override PlayerUpgradesStateInteractorStrategy GenerateUpgradesStateInteractor(PlayerUpgradesState playerUpgradesState)
+    {
+        return new playerUpgradesStateInteractorHeavy(playerUpgradesState);
+    }
 }

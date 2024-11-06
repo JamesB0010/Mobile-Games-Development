@@ -17,9 +17,6 @@ public class ShipPartLabel : MonoBehaviour
     [SerializeField]
     private CinemachineVirtualCamera shipSectionCamera;
 
-    [SerializeField] private ShipSections shipSection;
-    public ShipSections ShipSection => this.shipSection;
-
     public event Action<ShipPartLabel> clicked;
 
     [SerializeField] private int weaponIndex;

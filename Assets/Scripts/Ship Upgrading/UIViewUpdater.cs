@@ -94,26 +94,8 @@ public class UIViewUpdater : MonoBehaviour
         if (selectedCell.Upgrade.IsPurchaseable)
         {
             bool isEquipped = false;
-            switch (selectedCell.ShipSection)
-            {
-                case ShipSections.lightWeapons: 
-                    isEquipped = playerUpgradesState.LightGuns[selectedCell.WeaponIndex] == selectedCell.Upgrade;
-                    break;
-                case ShipSections.heavyWeapons:
-                    isEquipped = playerUpgradesState.HeavyGuns[selectedCell.WeaponIndex] == selectedCell.Upgrade;
-                    break;
-                case ShipSections.armour:
-                    isEquipped = playerUpgradesState.Armour == selectedCell.Upgrade;
-                    break;
-                case ShipSections.energy:
-                    isEquipped = playerUpgradesState.EnergySystem == selectedCell.Upgrade;
-                    break;
-                case ShipSections.engine:
-                    isEquipped = playerUpgradesState.Engine == selectedCell.Upgrade;
-                    break;
-                default:
-                    break;
-            }
+            isEquipped = selectedCell.Upgrade.GenerateUpgradesStateInteractor(this.playerUpgradesState).IsEqualTo(selectedCell.Upgrade, selectedCell.WeaponIndex);
+            
             bool isOwned = OwnedUpgradesCounter.Instance.GetUpgradeCount(selectedCell.Upgrade) > 0 || selectedCell.Upgrade.OwnedByDefault || isEquipped;
             if (isOwned)
             {
@@ -146,31 +128,10 @@ public class UIViewUpdater : MonoBehaviour
     {
         ShipItem item = (ShipItem)cell.Upgrade.GetUpgrade();
 
-        switch (item)
-        {
-            case LightGun lightGun:
-                this.UpdateUiLightGun(lightGun);
-                break;
-            case HeavyGun heavyGun:
-                this.UpdateUiHeavyGun(heavyGun);
-                break;
-            case Engine engine:
-                this.UpdateUiEngine(engine);
-                break;
-            case EnergySystem energySystem:
-                this.UpdateUiEnergySystem(energySystem);
-                break;
-            case Armour armour:
-                this.UpdateUiArmour(armour);
-                break;
-            default:
-                break;
-        }
-
-
+        cell.Upgrade.GenerateUiUpdatorInteractor(this).UpdateUi(item);
     }
 
-    private void UpdateUiLightGun(LightGun gun)
+    public void UpdateUiLightGun(LightGun gun)
     {
         itemNameField.text = gun.name;
         
@@ -180,7 +141,7 @@ public class UIViewUpdater : MonoBehaviour
         this.damagePerShotField.text = gun.BulletDamage.ToString();
     }
 
-    private void UpdateUiHeavyGun(HeavyGun gun)
+    public void UpdateUiHeavyGun(HeavyGun gun)
     {
         itemNameField.text = gun.name;
         
@@ -189,17 +150,17 @@ public class UIViewUpdater : MonoBehaviour
         this.damagePerShotField.text = gun.BulletDamage.ToString();
     }
 
-    private void UpdateUiArmour(Armour armour)
+    public void UpdateUiArmour(Armour armour)
     {
         itemNameField.text = armour.name;
     }
 
-    private void UpdateUiEngine(Engine engine)
+    public void UpdateUiEngine(Engine engine)
     {
         itemNameField.text = engine.name;
     }
 
-    private void UpdateUiEnergySystem(EnergySystem energySystem)
+    public void UpdateUiEnergySystem(EnergySystem energySystem)
     {
         itemNameField.text = energySystem.name;
     }

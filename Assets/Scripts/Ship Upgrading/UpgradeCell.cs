@@ -8,13 +8,6 @@ using UnityEngine.InputSystem;
 
 public class UpgradeCell : MonoBehaviour
 {
-    private ShipSections shipSection;
-
-    public ShipSections ShipSection
-    {
-        get => this.shipSection;
-        set => this.shipSection = value;
-    }
     private ShipItemUpgrade upgrade;
     public ShipItemUpgrade Upgrade
     {

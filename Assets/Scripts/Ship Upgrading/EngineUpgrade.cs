@@ -26,4 +26,9 @@ public class EngineUpgrade : ShipItemUpgrade
     {
         return new UpgradeCounterInteractorEngine(upgradesCounter);
     }
+
+    public override PlayerUpgradesStateInteractorStrategy GenerateUpgradesStateInteractor(PlayerUpgradesState playerUpgradesState)
+    {
+        return new playerUpgradesStateInteractorEngine(playerUpgradesState);
+    }
 }
