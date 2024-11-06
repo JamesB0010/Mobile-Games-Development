@@ -1613,7 +1613,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   upgrades: {fileID: 11400000, guid: 9dca33cc5ace0b44abf7f3511eb6606a, type: 2}
   shipSectionCamera: {fileID: 1106642945}
-  shipSection: 0
   weaponIndex: 0
 --- !u!1 &255419605
 GameObject:
@@ -2577,7 +2576,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   upgrades: {fileID: 11400000, guid: ef2af67e4c03f8f4e91e01fb8a5dae61, type: 2}
   shipSectionCamera: {fileID: 1937570170}
-  shipSection: 3
   weaponIndex: 0
 --- !u!1 &452832895
 GameObject:
@@ -3234,7 +3232,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   upgrades: {fileID: 11400000, guid: 562fc042957252146adf80f6070783cc, type: 2}
   shipSectionCamera: {fileID: 29005970}
-  shipSection: 2
   weaponIndex: 0
 --- !u!1 &604686253
 GameObject:
@@ -4223,7 +4220,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   upgrades: {fileID: 11400000, guid: d29ca8c37fb5cd249babc1c7bbed210e, type: 2}
   shipSectionCamera: {fileID: 2061721214}
-  shipSection: 1
   weaponIndex: 1
 --- !u!4 &840632548 stripped
 Transform:
@@ -5307,7 +5303,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   upgrades: {fileID: 11400000, guid: 9dca33cc5ace0b44abf7f3511eb6606a, type: 2}
   shipSectionCamera: {fileID: 145424506}
-  shipSection: 0
   weaponIndex: 1
 --- !u!1 &1057276754
 GameObject:
@@ -6804,7 +6799,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   upgrades: {fileID: 11400000, guid: 4619727480aa40c4daedad9085f8ff44, type: 2}
   shipSectionCamera: {fileID: 1181721771}
-  shipSection: 4
   weaponIndex: 0
 --- !u!114 &1219805121
 MonoBehaviour:
@@ -8500,7 +8494,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lightWeaponsJson: {fileID: 4900000, guid: fc6796ea5dfbdc341a004d5f06320d94, type: 3}
   heavyWeaponsJson: {fileID: 4900000, guid: a877279f3d4a6bf44bae1eaf0be3f22c, type: 3}
-  playerWeaponsState: {fileID: 11400000, guid: b5f4d067d7d0e2744ab5cdf2c7f613f0, type: 2}
+  playerUpgradesState: {fileID: 11400000, guid: b5f4d067d7d0e2744ab5cdf2c7f613f0, type: 2}
 --- !u!1 &1532187056
 GameObject:
   m_ObjectHideFlags: 0
@@ -8781,7 +8775,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   upgrades: {fileID: 11400000, guid: d29ca8c37fb5cd249babc1c7bbed210e, type: 2}
   shipSectionCamera: {fileID: 1913455154}
-  shipSection: 1
   weaponIndex: 0
 --- !u!1 &1609539994
 GameObject:
@@ -10369,7 +10362,7 @@ MonoBehaviour:
   purchaseEquipButtonText: {fileID: 1023090527}
   playerMoneyField: {fileID: 1117392923}
   UpgradesScrollRect: {fileID: 858950691}
-  playerWeaponsState: {fileID: 11400000, guid: b5f4d067d7d0e2744ab5cdf2c7f613f0, type: 2}
+  playerUpgradesState: {fileID: 11400000, guid: b5f4d067d7d0e2744ab5cdf2c7f613f0, type: 2}
   playerMoney: {fileID: 11400000, guid: 384a2dd2a2371ab4a992b55471c6b828, type: 2}
 --- !u!4 &1909742063
 Transform:

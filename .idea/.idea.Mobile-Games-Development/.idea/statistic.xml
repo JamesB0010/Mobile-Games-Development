@@ -5,6 +5,8 @@
       <list>
         <option value="$PROJECT_DIR$/Library" />
         <option value="$PROJECT_DIR$/Packages" />
+        <option value="$PROJECT_DIR$/Assets/Asset Store" />
+        <option value="$PROJECT_DIR$/obj" />
       </list>
     </option>
   </component>
