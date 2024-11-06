@@ -14,8 +14,13 @@ public class EnergySystemsUpgrade : ShipItemUpgrade
         return this.energySystem;
     }
 
-    public override UpdatePrevOwnedItemStrategy GenerateUpdatePrevOwnedStrategy(ShipPartLabel label, EquipItem itemEquipAction)
+    public override EquipItemInteractorStrategy GenerateEquipItemInteractor(ShipPartLabel label, EquipItem itemEquipAction)
     {
-        return new UpdatePrevownedEnergySystem(label, itemEquipAction);
+        return new EquipEnergySystemInteractorStrategy(label, itemEquipAction);
+    }
+
+    public override UpgradesCounterInteractorStrategy GenerateUpgradeCounterInteractor(OwnedUpgradesCounter upgradesCounter)
+    {
+        return new CounterInteractorEnergySystem(upgradesCounter);
     }
 }

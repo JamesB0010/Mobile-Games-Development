@@ -33,8 +33,8 @@ public class ShipPartLabel : MonoBehaviour
         this.shipSectionCamera.gameObject.SetActive(true);
     }
 
-    public UpdatePrevOwnedItemStrategy GenerateUpdatePrevItemStrat(EquipItem equipItemAction)
+    public EquipItemInteractorStrategy GenerateItemEquipInteractor(EquipItem equipItemAction)
     {
-        return this.upgrades.GetShipUpgrades()[0].GenerateUpdatePrevOwnedStrategy(this, equipItemAction);
+        return this.upgrades.GetShipUpgrades()[0].GenerateEquipItemInteractor(this, equipItemAction);
     }
 }

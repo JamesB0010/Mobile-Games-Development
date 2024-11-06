@@ -2,14 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class UpdatePrevOwnedItemStrategy
+public abstract class EquipItemInteractorStrategy
 {
     protected ShipPartLabel label;
     protected EquipItem equipItemAction;
-    public UpdatePrevOwnedItemStrategy(ShipPartLabel label, EquipItem equipItemAction)
+    public EquipItemInteractorStrategy(ShipPartLabel label, EquipItem equipItemAction)
     {
         this.label = label;
         this.equipItemAction = equipItemAction;
     }
-    public abstract void Execute();
+    public abstract void UpdatePrevOwned();
 }

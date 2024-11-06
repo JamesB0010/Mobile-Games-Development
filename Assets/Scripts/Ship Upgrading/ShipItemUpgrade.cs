@@ -7,7 +7,9 @@ public abstract class ShipItemUpgrade : ScriptableObject
 {
     public abstract object GetUpgrade();
 
-    public abstract UpdatePrevOwnedItemStrategy GenerateUpdatePrevOwnedStrategy(ShipPartLabel label, EquipItem itemEquipAction);
+    public abstract EquipItemInteractorStrategy GenerateEquipItemInteractor(ShipPartLabel label, EquipItem itemEquipAction);
+
+    public abstract UpgradesCounterInteractorStrategy GenerateUpgradeCounterInteractor(OwnedUpgradesCounter upgradesCounter);
 
     [SerializeField] private float cost;
     public float Cost => this.cost;

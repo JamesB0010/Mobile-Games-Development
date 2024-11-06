@@ -13,8 +13,13 @@ public class HeavyGunUpgrade : ShipItemUpgrade
         return gun;
     }
 
-    public override UpdatePrevOwnedItemStrategy GenerateUpdatePrevOwnedStrategy(ShipPartLabel label, EquipItem itemEquipAction)
+    public override EquipItemInteractorStrategy GenerateEquipItemInteractor(ShipPartLabel label, EquipItem itemEquipAction)
     {
-        return new UpdatePrevOwnedHeavy(label, itemEquipAction);
+        return new EquipHeavyItemInteractorStrategy(label, itemEquipAction);
+    }
+
+    public override UpgradesCounterInteractorStrategy GenerateUpgradeCounterInteractor(OwnedUpgradesCounter upgradesCounter)
+    {
+        return new UpgradeCounterInteractorHeavy(upgradesCounter);
     }
 }
