@@ -13,4 +13,9 @@ public class ArmourUpgrade : ShipItemUpgrade
     {
         return armour;
     }
+
+    public override UpdatePrevOwnedItemStrategy GenerateUpdatePrevOwnedStrategy(ShipPartLabel label, EquipItem itemEquipAction)
+    {
+        return new UpdatePrevOwnedArmor(label, itemEquipAction);
+    }
 }

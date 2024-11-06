@@ -12,5 +12,8 @@ public class EngineUpgrade : ShipItemUpgrade
         return engine;
     }
 
-    
+    public override UpdatePrevOwnedItemStrategy GenerateUpdatePrevOwnedStrategy(ShipPartLabel label, EquipItem itemEquipAction)
+    {
+        return new UpdatePrevOwnedEngine(label, itemEquipAction);
+    }
 }

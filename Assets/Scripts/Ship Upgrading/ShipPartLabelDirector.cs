@@ -33,28 +33,18 @@ public class ShipPartLabelDirector : MonoBehaviour
     private void OnShipPartClicked(ShipPartLabel label)
     {
         this.ShipPartLabelClicked?.Invoke(label);
-        switch (label.ShipSection)
-        {
-            case ShipSections.lightWeapons:
-                this.equipItemAction.UpdatePreviouslyOwnedLightWeapon(label.WeaponIndex);
-                break;
-            case ShipSections.heavyWeapons:
-                this.equipItemAction.UpdatePreviouslyOwnedHeavyWeapon(label.WeaponIndex);
-                break;
-            case ShipSections.armour:
-                this.equipItemAction.UpdatePreviouslyOwnedArmour();
-                break;
-            case ShipSections.energy:
-                this.equipItemAction.UpdatePreviouslyOwnedEnergySystem();
-                break;
-            case ShipSections.engine:
-                this.equipItemAction.UpdatePreviouslyOwnedEngine();
-                break;
-            default:
-                break;
-        }
+        label.GenerateUpdatePrevItemStrat(this.equipItemAction).Execute();
+        
         uiUpdater.UpdateItemDetailsText(label.ShipSection, label.WeaponIndex);
 
         this.cellsSetupHelper.SetupCells(label);
     }
 }
+
+
+
+
+
+
+
+

@@ -13,5 +13,9 @@ public class EnergySystemsUpgrade : ShipItemUpgrade
     {
         return this.energySystem;
     }
-    
+
+    public override UpdatePrevOwnedItemStrategy GenerateUpdatePrevOwnedStrategy(ShipPartLabel label, EquipItem itemEquipAction)
+    {
+        return new UpdatePrevownedEnergySystem(label, itemEquipAction);
+    }
 }

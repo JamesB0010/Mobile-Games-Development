@@ -12,4 +12,9 @@ public class HeavyGunUpgrade : ShipItemUpgrade
     {
         return gun;
     }
+
+    public override UpdatePrevOwnedItemStrategy GenerateUpdatePrevOwnedStrategy(ShipPartLabel label, EquipItem itemEquipAction)
+    {
+        return new UpdatePrevOwnedHeavy(label, itemEquipAction);
+    }
 }
