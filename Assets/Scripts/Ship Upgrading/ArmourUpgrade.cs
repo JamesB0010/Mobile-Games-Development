@@ -19,6 +19,11 @@ public class ArmourUpgrade : ShipItemUpgrade
         return new EquipArmourInteractorStrategy(itemEquipAction);
     }
 
+    public override UiUpdaterInteractorStrategy GenerateUiUpdatorInteractor(UIViewUpdater ui)
+    {
+        return new UiUpdaterInteractorArmour(ui);
+    }
+
     public override UpgradesCounterInteractorStrategy GenerateUpgradeCounterInteractor(OwnedUpgradesCounter upgradesCounter)
     {
         return new UpgradesCounterInteractorArmour(upgradesCounter);

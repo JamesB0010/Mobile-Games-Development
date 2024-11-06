@@ -17,6 +17,11 @@ public class EngineUpgrade : ShipItemUpgrade
         return new EquipEngineInteractorStrategy(itemEquipAction);
     }
 
+    public override UiUpdaterInteractorStrategy GenerateUiUpdatorInteractor(UIViewUpdater ui)
+    {
+        return new UiUpdaterInteractorEngine(ui);
+    }
+
     public override UpgradesCounterInteractorStrategy GenerateUpgradeCounterInteractor(OwnedUpgradesCounter upgradesCounter)
     {
         return new UpgradeCounterInteractorEngine(upgradesCounter);

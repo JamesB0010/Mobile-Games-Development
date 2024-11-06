@@ -19,6 +19,7 @@ public class UIViewUpdater : MonoBehaviour
     [SerializeField] private ScrollRect UpgradesScrollRect;
 
     [FormerlySerializedAs("playerWeaponsState")] [SerializeField] private PlayerUpgradesState playerUpgradesState;
+    public PlayerUpgradesState PlayerUpgradesState => this.playerUpgradesState;
 
     [SerializeField] private FloatReference playerMoney;
 
@@ -60,37 +61,7 @@ public class UIViewUpdater : MonoBehaviour
         this.UpgradesScrollRect.verticalNormalizedPosition = 1;
     }
 
-    public void UpdateItemDetailsText(ShipSections shipSection, int side = 0)
-    {
-        switch (shipSection)
-        {
-            case ShipSections.lightWeapons:
-                LightGun lightLightGun = (LightGun)this.playerUpgradesState.LightGuns[side].Gun;
-                this.SetItemStatsUi(lightLightGun);
-                break;
-            case ShipSections.heavyWeapons:
-                HeavyGun heavyLightGun = (HeavyGun)this.playerUpgradesState.HeavyGuns[side].Gun;
-                this.SetItemStatsUi(heavyLightGun);
-                break;
-            case ShipSections.armour:
-                Armour armour = (Armour)this.playerUpgradesState.Armour.GetUpgrade();
-                this.SetItemStatsUi(armour);
-                break;
-            case ShipSections.engine:
-                Engine engine = (Engine)this.playerUpgradesState.Engine.GetUpgrade();
-                this.SetItemStatsUi(engine);
-                break;
-            case ShipSections.energy:
-                EnergySystem energySystem = (EnergySystem)this.playerUpgradesState.EnergySystem.GetUpgrade();
-                this.SetItemStatsUi(energySystem);
-                break;
-            default:
-                break;
-        }
-
-    }
-
-    private void SetItemStatsUi(Gun gun)
+    public void SetItemStatsUi(Gun gun)
     {
         itemNameField.text = gun.name;
 
@@ -99,19 +70,19 @@ public class UIViewUpdater : MonoBehaviour
         this.damagePerShotField.text = gun.BulletDamage.ToString();
     }
 
-    private void SetItemStatsUi(Armour armour)
+    public void SetItemStatsUi(Armour armour)
     {
         itemNameField.text = armour.name;
         Debug.Log("Display armour stats");
     }
 
-    private void SetItemStatsUi(Engine engine)
+    public void SetItemStatsUi(Engine engine)
     {
         itemNameField.text = engine.name;
         Debug.Log("Display engine stats");
     }
 
-    private void SetItemStatsUi(EnergySystem energySystem)
+    public void SetItemStatsUi(EnergySystem energySystem)
     {
         itemNameField.text = energySystem.name;
         Debug.Log("Display energy system stats");

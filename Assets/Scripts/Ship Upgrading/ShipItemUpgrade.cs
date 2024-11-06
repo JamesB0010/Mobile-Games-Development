@@ -9,6 +9,8 @@ public abstract class ShipItemUpgrade : ScriptableObject
 
     public abstract EquipItemInteractorStrategy GenerateEquipItemInteractor(EquipItem itemEquipAction);
 
+    public abstract UiUpdaterInteractorStrategy GenerateUiUpdatorInteractor(UIViewUpdater ui);
+
     public abstract UpgradesCounterInteractorStrategy GenerateUpgradeCounterInteractor(OwnedUpgradesCounter upgradesCounter);
 
     [SerializeField] private float cost;

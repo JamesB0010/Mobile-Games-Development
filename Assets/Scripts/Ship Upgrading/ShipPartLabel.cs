@@ -37,4 +37,9 @@ public class ShipPartLabel : MonoBehaviour
     {
         return this.upgrades.GetShipUpgrades()[0].GenerateEquipItemInteractor(equipItemAction);
     }
+
+    public UiUpdaterInteractorStrategy GenerateUiUpdaterInteractor(UIViewUpdater ui)
+    {
+        return this.upgrades.GetShipUpgrades()[0].GenerateUiUpdatorInteractor(ui);
+    }
 }

@@ -18,6 +18,11 @@ public class LightGunUpgrade : ShipItemUpgrade
         return new EquipLightItemInteractorStrategy(itemEquipAction);
     }
 
+    public override UiUpdaterInteractorStrategy GenerateUiUpdatorInteractor(UIViewUpdater ui)
+    {
+        return new UiUpdaterInteractorLight(ui);
+    }
+
     public override UpgradesCounterInteractorStrategy GenerateUpgradeCounterInteractor(OwnedUpgradesCounter upgradesCounter)
     {
         return new UpgradeCounterInteractorLight(upgradesCounter);

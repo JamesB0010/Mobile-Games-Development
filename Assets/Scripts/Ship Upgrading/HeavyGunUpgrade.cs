@@ -18,6 +18,11 @@ public class HeavyGunUpgrade : ShipItemUpgrade
         return new EquipHeavyItemInteractorStrategy(itemEquipAction);
     }
 
+    public override UiUpdaterInteractorStrategy GenerateUiUpdatorInteractor(UIViewUpdater ui)
+    {
+        return new UiUpdaterInteractorHeavy(ui);
+    }
+
     public override UpgradesCounterInteractorStrategy GenerateUpgradeCounterInteractor(OwnedUpgradesCounter upgradesCounter)
     {
         return new UpgradeCounterInteractorHeavy(upgradesCounter);
