@@ -44,7 +44,7 @@ public class EquipItem : ItemShopAction
     {
         SaveToJson(cell);
     }
-    private void SaveLightWeaponAction(UpgradeCell cell)
+    public void SaveLightWeaponAction(UpgradeCell cell)
     {
         this.playerUpgradesState.EditLightWeaponAtIndex(cell.WeaponIndex, cell.Upgrade);
         SavedUpgradesJsonObject upgrades = new SavedUpgradesJsonObject(this.playerUpgradesState.LightGunsAbstract);
@@ -53,7 +53,7 @@ public class EquipItem : ItemShopAction
         AssetDatabase.SaveAssetIfDirty(this.lightWeaponConfigurationSaveFile);
     }
 
-    private void SaveHeavyWeaponAction(UpgradeCell cell)
+    public void SaveHeavyWeaponAction(UpgradeCell cell)
     {
         this.playerUpgradesState.EditHeavyWeaponAtIndex(cell.WeaponIndex, cell.Upgrade);
         SavedUpgradesJsonObject upgrades = new SavedUpgradesJsonObject(this.playerUpgradesState.HeavyGunsAbstract);
@@ -62,7 +62,7 @@ public class EquipItem : ItemShopAction
         AssetDatabase.SaveAssetIfDirty(this.heavyWeaponConfigurationSaveFile);
     }
 
-    private void SaveEngineAction(UpgradeCell cell)
+    public void SaveEngineAction(UpgradeCell cell)
     {
         this.playerUpgradesState.EditEngine((EngineUpgrade)cell.Upgrade);
         SavedUpgradesJsonObject upgrade = new SavedUpgradesJsonObject(this.playerUpgradesState.EngineAbstract);
@@ -71,7 +71,7 @@ public class EquipItem : ItemShopAction
         AssetDatabase.SaveAssetIfDirty(this.engineConfigutationFile);
     }
 
-    private void SaveEnergySystemAction(UpgradeCell cell)
+    public void SaveEnergySystemAction(UpgradeCell cell)
     {
         this.playerUpgradesState.EditEnergySystem((EnergySystemsUpgrade)cell.Upgrade);
         SavedUpgradesJsonObject upgrade = new SavedUpgradesJsonObject(this.playerUpgradesState.EnergySystemAbstract);
@@ -80,7 +80,7 @@ public class EquipItem : ItemShopAction
         AssetDatabase.SaveAssetIfDirty(this.energySystemConfigurationFile);
     }
 
-    private void SaveArmourAction(UpgradeCell cell)
+    public void SaveArmourAction(UpgradeCell cell)
     {
         this.playerUpgradesState.EditArmour((ArmourUpgrade)cell.Upgrade);
         SavedUpgradesJsonObject upgrade = new SavedUpgradesJsonObject(this.playerUpgradesState.ArmourAbstract);
@@ -91,36 +91,11 @@ public class EquipItem : ItemShopAction
 
     private void SaveToJson(UpgradeCell cell)
     {
-        switch (cell.ShipSection)
-        {
-            case ShipSections.lightWeapons:
-                this.UpdatePreviouslyOwnedLightWeapon(cell.WeaponIndex);
-                this.SaveLightWeaponAction(cell);
-                this.SelectedCellEquipped?.Invoke();
-                break;
-            case ShipSections.heavyWeapons:
-                this.UpdatePreviouslyOwnedHeavyWeapon(cell.WeaponIndex);
-                this.SaveHeavyWeaponAction(cell);
-                this.SelectedCellEquipped?.Invoke();
-                break;
-            case ShipSections.armour:
-                this.UpdatePreviouslyOwnedArmour();
-                this.SaveArmourAction(cell);
-                this.SelectedCellEquipped?.Invoke();
-                break;
-            case ShipSections.engine:
-                this.UpdatePreviouslyOwnedEngine();
-                this.SaveEngineAction(cell);
-                this.SelectedCellEquipped?.Invoke();
-                break;
-            case ShipSections.energy:
-                this.UpdatePreviouslyOwnedEnergySystem();
-                this.SaveEnergySystemAction(cell);
-                this.SelectedCellEquipped?.Invoke();
-                break;
-            default:
-                break;
-        }
+        var interactor = cell.Upgrade.GenerateEquipItemInteractor(this);
+        interactor.UpdatePrevOwned(cell.WeaponIndex);
+        interactor.SaveItemAction(cell);
+        
+        this.SelectedCellEquipped?.Invoke();
     }
 
     public void UpdatePreviouslyOwnedLightWeapon(int weaponIndex)

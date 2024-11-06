@@ -12,9 +12,9 @@ public class EngineUpgrade : ShipItemUpgrade
         return engine;
     }
 
-    public override EquipItemInteractorStrategy GenerateEquipItemInteractor(ShipPartLabel label, EquipItem itemEquipAction)
+    public override EquipItemInteractorStrategy GenerateEquipItemInteractor(EquipItem itemEquipAction)
     {
-        return new EquipEngineInteractorStrategy(label, itemEquipAction);
+        return new EquipEngineInteractorStrategy(itemEquipAction);
     }
 
     public override UpgradesCounterInteractorStrategy GenerateUpgradeCounterInteractor(OwnedUpgradesCounter upgradesCounter)

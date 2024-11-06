@@ -4,12 +4,12 @@ using UnityEngine;
 
 public abstract class EquipItemInteractorStrategy
 {
-    protected ShipPartLabel label;
     protected EquipItem equipItemAction;
-    public EquipItemInteractorStrategy(ShipPartLabel label, EquipItem equipItemAction)
+    public EquipItemInteractorStrategy(EquipItem equipItemAction)
     {
-        this.label = label;
         this.equipItemAction = equipItemAction;
     }
-    public abstract void UpdatePrevOwned();
+    public abstract void UpdatePrevOwned(int index = 0);
+
+    public abstract void SaveItemAction(UpgradeCell upgradeCell);
 }

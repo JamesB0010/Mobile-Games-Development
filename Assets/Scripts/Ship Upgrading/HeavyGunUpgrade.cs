@@ -13,9 +13,9 @@ public class HeavyGunUpgrade : ShipItemUpgrade
         return gun;
     }
 
-    public override EquipItemInteractorStrategy GenerateEquipItemInteractor(ShipPartLabel label, EquipItem itemEquipAction)
+    public override EquipItemInteractorStrategy GenerateEquipItemInteractor(EquipItem itemEquipAction)
     {
-        return new EquipHeavyItemInteractorStrategy(label, itemEquipAction);
+        return new EquipHeavyItemInteractorStrategy(itemEquipAction);
     }
 
     public override UpgradesCounterInteractorStrategy GenerateUpgradeCounterInteractor(OwnedUpgradesCounter upgradesCounter)

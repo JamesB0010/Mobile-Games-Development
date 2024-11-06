@@ -13,9 +13,9 @@ public class LightGunUpgrade : ShipItemUpgrade
         return this.gun;
     }
 
-    public override EquipItemInteractorStrategy GenerateEquipItemInteractor(ShipPartLabel label, EquipItem itemEquipAction)
+    public override EquipItemInteractorStrategy GenerateEquipItemInteractor(EquipItem itemEquipAction)
     {
-        return new EquipLightItemInteractorStrategy(label, itemEquipAction);
+        return new EquipLightItemInteractorStrategy(itemEquipAction);
     }
 
     public override UpgradesCounterInteractorStrategy GenerateUpgradeCounterInteractor(OwnedUpgradesCounter upgradesCounter)

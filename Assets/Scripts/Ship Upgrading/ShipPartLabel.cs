@@ -35,6 +35,6 @@ public class ShipPartLabel : MonoBehaviour
 
     public EquipItemInteractorStrategy GenerateItemEquipInteractor(EquipItem equipItemAction)
     {
-        return this.upgrades.GetShipUpgrades()[0].GenerateEquipItemInteractor(this, equipItemAction);
+        return this.upgrades.GetShipUpgrades()[0].GenerateEquipItemInteractor(equipItemAction);
     }
 }

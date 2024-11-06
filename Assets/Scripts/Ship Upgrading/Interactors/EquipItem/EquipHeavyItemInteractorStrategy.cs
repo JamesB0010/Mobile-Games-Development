@@ -4,12 +4,17 @@ using UnityEngine;
 
 public class EquipHeavyItemInteractorStrategy : EquipItemInteractorStrategy
 {
-    public EquipHeavyItemInteractorStrategy(ShipPartLabel label, EquipItem equipItemAction) : base(label, equipItemAction)
+    public EquipHeavyItemInteractorStrategy(EquipItem equipItemAction) : base(equipItemAction)
     {
     }
 
-    public override void UpdatePrevOwned()
+    public override void UpdatePrevOwned(int index)
     {
-        this.equipItemAction.UpdatePreviouslyOwnedHeavyWeapon(this.label.WeaponIndex);
+        this.equipItemAction.UpdatePreviouslyOwnedHeavyWeapon(index);
+    }
+
+    public override void SaveItemAction(UpgradeCell upgradeCell)
+    {
+        this.equipItemAction.SaveHeavyWeaponAction(upgradeCell);
     }
 }

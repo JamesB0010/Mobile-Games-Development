@@ -4,12 +4,17 @@ using UnityEngine;
 
 public class EquipEnergySystemInteractorStrategy : EquipItemInteractorStrategy
 {
-    public EquipEnergySystemInteractorStrategy(ShipPartLabel label, EquipItem equipItemAction) : base(label, equipItemAction)
+    public EquipEnergySystemInteractorStrategy(EquipItem equipItemAction) : base(equipItemAction)
     {
     }
 
-    public override void UpdatePrevOwned()
+    public override void UpdatePrevOwned(int index)
     {
         this.equipItemAction.UpdatePreviouslyOwnedEnergySystem();
+    }
+
+    public override void SaveItemAction(UpgradeCell upgradeCell)
+    {
+        this.equipItemAction.SaveEnergySystemAction(upgradeCell);
     }
 }

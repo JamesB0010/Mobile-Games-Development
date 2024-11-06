@@ -14,9 +14,9 @@ public class ArmourUpgrade : ShipItemUpgrade
         return armour;
     }
 
-    public override EquipItemInteractorStrategy GenerateEquipItemInteractor(ShipPartLabel label, EquipItem itemEquipAction)
+    public override EquipItemInteractorStrategy GenerateEquipItemInteractor(EquipItem itemEquipAction)
     {
-        return new EquipArmourInteractorStrategy(label, itemEquipAction);
+        return new EquipArmourInteractorStrategy(itemEquipAction);
     }
 
     public override UpgradesCounterInteractorStrategy GenerateUpgradeCounterInteractor(OwnedUpgradesCounter upgradesCounter)
