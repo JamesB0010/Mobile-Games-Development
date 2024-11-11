@@ -35,10 +35,7 @@ public class HeavyGun : Gun
 
     public override object Clone()
     {
-        HeavyGun obj = ScriptableObject.CreateInstance<HeavyGun>();
-        base.CloneGunSharedAttributes(obj);
-        obj.ableToShoot = this.ableToShoot;
-        return obj;
+        return ScriptableObject.Instantiate(this);
     }
 }
 

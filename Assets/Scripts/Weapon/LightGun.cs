@@ -34,9 +34,7 @@ public class LightGun : Gun
 
     public override object Clone()
     {
-        LightGun obj = ScriptableObject.CreateInstance<LightGun>();
-        base.CloneGunSharedAttributes(obj);
-        return obj;
+        return ScriptableObject.Instantiate(this);
     }
 }
 

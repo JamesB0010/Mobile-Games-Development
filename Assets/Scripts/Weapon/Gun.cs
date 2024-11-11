@@ -17,14 +17,6 @@ public abstract class Gun : ShipItem
     [SerializeField] protected float bulletDamage;
     public float BulletDamage => this.bulletDamage;
 
-    protected void CloneGunSharedAttributes(Gun gun)
-    {
-        gun.bulletDamage = bulletDamage;
-        gun.bulletPrefab = bulletPrefab;
-        gun.lastBulletShotTimestamp = lastBulletShotTimestamp;
-        gun.timeBetweenBullets = timeBetweenBullets;
-    }
-
     public abstract bool Shoot(Vector3 bulletStartPosition, Vector3 targetPosition, bool hasValidTarget, RaycastHit hit);
 
     public abstract bool Shoot(Vector3 bulletStartPosition, Vector3 targetPosition, bool hasValidTarget);
