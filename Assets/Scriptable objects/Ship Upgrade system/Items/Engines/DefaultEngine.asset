@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: DefaultEngine
   m_EditorClassIdentifier: 
   speed: 20
-  canBoost: 0
-  energyDrainRate: 1
-  energyBoostDrainRate: 0
+  energyDrainRate: 10
+  engineBoostStats:
+    canBoost: 0
+    energyBoostDrainRate: 0

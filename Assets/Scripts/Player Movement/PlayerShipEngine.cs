@@ -17,7 +17,7 @@ public class PlayerShipEngine : MonoBehaviour
     [SerializeField] private PlayerShipThrottle throttle;
     
     [SerializeField] PlayerShipEnergySystem energySystem;
-    public bool CanBoost => this.engine.CanBoost;
+    public bool CanBoost => this.engine.EngineBoostStats.CanBoost;
 
     private void Start()
     {
@@ -29,7 +29,7 @@ public class PlayerShipEngine : MonoBehaviour
     {
         Vector3 acceleration = Vector3.zero;
 
-        bool enoughEnergy = this.energySystem.TryDebitEnergy(this.engine.EnergyDrainRate * Time.deltaTime);
+        bool enoughEnergy = this.energySystem.TryDebitEnergy(this.engine.EnergyDrainRate * this.throttle.Throttle * Time.deltaTime);
         if (!enoughEnergy)
             return Vector3.zero;
 
@@ -37,7 +37,7 @@ public class PlayerShipEngine : MonoBehaviour
             acceleration += this.playerCamera.forward * (engine.Speed * 1 * Time.deltaTime);
         else
             acceleration += this.playerCamera.forward * (engine.Speed * this.throttle.Throttle * Time.deltaTime);
-
+        
         return acceleration;
     }
 }

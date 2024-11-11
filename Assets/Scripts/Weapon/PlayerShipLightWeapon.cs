@@ -10,6 +10,8 @@ public class PlayerShipLightWeapon : PlayerShipWeapon
     [SerializeField]
     private LightGun lightGun;
 
+    [SerializeField] private PlayerShipEnergySystem energySystem;
+
     public LightGun LightGun
     {
         set => this.lightGun = value;
@@ -35,6 +37,8 @@ public class PlayerShipLightWeapon : PlayerShipWeapon
             return;
         }
 
+        if (!this.energySystem.HasBudgetFor(this.lightGun.EnergyExpensePerShot))
+            return;
 
         bool bulletShot = false;
         CrosshairTargetFinder crosshairTargetFinder = this.gunSystem.CrosshairTargetFinder;
@@ -52,6 +56,7 @@ public class PlayerShipLightWeapon : PlayerShipWeapon
 
         if (bulletShot)
         {
+            this.energySystem.TryDebitEnergy(this.lightGun.EnergyExpensePerShot);
             this.muzzleFlash.Play();
             for (int i = 0; i < this.muzzleFlashParticles.Count; i++)
             {

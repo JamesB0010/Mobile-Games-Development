@@ -9,17 +9,18 @@ public class PlayerShipEnergySystem : MonoBehaviour
     private EnergySystem energySystem;
 
     [SerializeField] private PlayerUpgradesState playerUpgradesState;
-    
-    //this value is just for debugging
-    [SerializeField] private float debug_CurrentEnergy;
 
+    public void SubscribeToCurrentEnergyChanged(Action<float> callback)
+    {
+        this.energySystem.CurrentEnergyChanged += callback;
+    }
+    
 
     private void Start()
     {
         this.energySystem = this.playerUpgradesState.EnergySystem.EnergySystem;
         this.energySystem = (EnergySystem)this.energySystem.Clone();
         this.energySystem.ResetCurrentEnergy();
-        this.debug_CurrentEnergy = this.energySystem.CurrentEnergy;
     }
 
     public bool TryDebitEnergy(float amountToDebit)
@@ -28,10 +29,26 @@ public class PlayerShipEnergySystem : MonoBehaviour
         if (newEnergyAmount > 0)
         {
             this.energySystem.CurrentEnergy = newEnergyAmount;
-            this.debug_CurrentEnergy = newEnergyAmount;
             return true;
         }
 
+        this.energySystem.CurrentEnergy = 0;
+
         return false;
+    }
+
+    public bool HasBudgetFor(float expense)
+    {
+        return this.energySystem.CurrentEnergy - expense >= 0;
+    }
+
+    private void Update()
+    {
+        this.energySystem.Update();
+    }
+
+    public void SubscribeToEnergyPeaked(Action<float> callback)
+    {
+        this.energySystem.CurrentEnergyPeaked += callback;
     }
 }

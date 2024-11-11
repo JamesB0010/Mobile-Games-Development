@@ -7,6 +7,10 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Items/Guns/Light Gun")]
 public class LightGun : Gun
 {
+    [SerializeField] private float energyExpensePerShot;
+
+    public float EnergyExpensePerShot => this.energyExpensePerShot;
+    
     public override bool Shoot(Vector3 bulletStartPosition, Vector3 targetPosition, bool hasValidTarget, RaycastHit hit)
     {
         if (this.IsPrimedToShoot())

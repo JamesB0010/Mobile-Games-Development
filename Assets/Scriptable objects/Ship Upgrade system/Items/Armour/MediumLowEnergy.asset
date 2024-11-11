@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52b453c89a1fbd64092ab215baa48842, type: 3}
   m_Name: MediumLowEnergy
   m_EditorClassIdentifier: 
-  EnergyUsedPerHit: 3
+  energyUsedPerHit: 0
+  minimumOperationalEnergyLevel: 10
   damageDampeningMultiplier: 0.5

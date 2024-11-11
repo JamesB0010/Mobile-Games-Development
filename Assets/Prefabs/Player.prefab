@@ -610,6 +610,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerUpgradesState: {fileID: 11400000, guid: b5f4d067d7d0e2744ab5cdf2c7f613f0, type: 2}
+  debug_CurrentEnergy: 0
 --- !u!1 &2574337824375988703
 GameObject:
   m_ObjectHideFlags: 0
@@ -832,6 +833,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerUpgradesState: {fileID: 11400000, guid: b5f4d067d7d0e2744ab5cdf2c7f613f0, type: 2}
+  energySystem: {fileID: 7363665805322312746}
 --- !u!1 &3777332912568431151
 GameObject:
   m_ObjectHideFlags: 0
@@ -880,6 +882,7 @@ MonoBehaviour:
   playerUpgradesState: {fileID: 11400000, guid: b5f4d067d7d0e2744ab5cdf2c7f613f0, type: 2}
   booster: {fileID: 6839255818491527431}
   throttle: {fileID: 2282027921023702044}
+  energySystem: {fileID: 7363665805322312746}
 --- !u!1 &4104540416727232726
 GameObject:
   m_ObjectHideFlags: 0
@@ -3350,6 +3353,7 @@ MonoBehaviour:
   animator: {fileID: 3202696549785581572}
   bulletSpawnLocation: {fileID: 1523241009417913805}
   lightGun: {fileID: 11400000, guid: 5de53fcef43d8164090a1591e3efa089, type: 2}
+  energySystem: {fileID: 7363665805322312746}
 --- !u!1001 &385822068602893634
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3958,6 +3962,7 @@ MonoBehaviour:
   animator: {fileID: 2463125771650392669}
   bulletSpawnLocation: {fileID: 67003662207803246}
   lightGun: {fileID: 11400000, guid: aaac8ad849c909441aedf5871f7ff83e, type: 2}
+  energySystem: {fileID: 7363665805322312746}
 --- !u!4 &1024693304344900365 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: a45c7e09bdeea5b4581f84e9fe46a7e2, type: 3}
@@ -4312,6 +4317,7 @@ MonoBehaviour:
   animator: {fileID: 1391142263714847613}
   bulletSpawnLocation: {fileID: 2229642763838759009}
   lightGun: {fileID: 11400000, guid: aaac8ad849c909441aedf5871f7ff83e, type: 2}
+  energySystem: {fileID: 7363665805322312746}
 --- !u!4 &2226129446189805198 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: a45c7e09bdeea5b4581f84e9fe46a7e2, type: 3}
@@ -4925,6 +4931,7 @@ MonoBehaviour:
   animator: {fileID: 4488393106202449946}
   bulletSpawnLocation: {fileID: 79083873422189553}
   lightGun: {fileID: 11400000, guid: aaac8ad849c909441aedf5871f7ff83e, type: 2}
+  energySystem: {fileID: 7363665805322312746}
 --- !u!1001 &2954264529579777538
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5365,6 +5372,7 @@ MonoBehaviour:
   animator: {fileID: 4944527251776959623}
   bulletSpawnLocation: {fileID: 2941171122050685450}
   lightGun: {fileID: 11400000, guid: aaac8ad849c909441aedf5871f7ff83e, type: 2}
+  energySystem: {fileID: 7363665805322312746}
 --- !u!1001 &3762297374234713655
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5628,6 +5636,7 @@ MonoBehaviour:
   animator: {fileID: 1719936074819462770}
   bulletSpawnLocation: {fileID: 5899465124895608450}
   lightGun: {fileID: 11400000, guid: 5de53fcef43d8164090a1591e3efa089, type: 2}
+  energySystem: {fileID: 7363665805322312746}
 --- !u!1001 &3952272721173901394
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7113,6 +7122,7 @@ MonoBehaviour:
   animator: {fileID: 1382844632259939556}
   bulletSpawnLocation: {fileID: 2697469652988663399}
   lightGun: {fileID: 11400000, guid: 5de53fcef43d8164090a1591e3efa089, type: 2}
+  energySystem: {fileID: 7363665805322312746}
 --- !u!1001 &7432297241692600617
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7536,6 +7546,7 @@ MonoBehaviour:
   animator: {fileID: 4246810847641255885}
   bulletSpawnLocation: {fileID: 2972490487738006932}
   lightGun: {fileID: 11400000, guid: 5de53fcef43d8164090a1591e3efa089, type: 2}
+  energySystem: {fileID: 7363665805322312746}
 --- !u!4 &7506626763193739844 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: a45c7e09bdeea5b4581f84e9fe46a7e2, type: 3}
