@@ -12,3 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce0c28e9a12cca24b990eeb72e8dc303, type: 3}
   m_Name: HighThrustHighEnergyBoost
   m_EditorClassIdentifier: 
+  speed: 0
+  canBoost: 1
+  energyDrainRate: 0

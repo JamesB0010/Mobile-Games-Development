@@ -7,6 +7,7 @@ using UnityEngine.InputSystem;
 
 public class PlayerShipBooster : MonoBehaviour
 {
+    [SerializeField] private PlayerShipEngine engine;
     private bool isBoosting;
 
     public bool IsBoosting
@@ -55,6 +56,9 @@ public class PlayerShipBooster : MonoBehaviour
     }
     public void OnBoost(InputAction.CallbackContext ctx)
     {
+        if (!this.engine.CanBoost)
+            return;
+        
         this.IsBoosting = ctx.action.IsPressed();
     }
 }

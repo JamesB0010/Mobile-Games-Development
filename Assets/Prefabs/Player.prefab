@@ -876,7 +876,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3e596d0a44daf34a97944bb41d2d860, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerCamera: {fileID: 5682640556874137351}
   playerUpgradesState: {fileID: 11400000, guid: b5f4d067d7d0e2744ab5cdf2c7f613f0, type: 2}
+  booster: {fileID: 6839255818491527431}
+  throttle: {fileID: 2282027921023702044}
 --- !u!1 &4104540416727232726
 GameObject:
   m_ObjectHideFlags: 0
@@ -1658,12 +1661,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77f76df91006feb458b77b831b00ba8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerCamera: {fileID: 4434650746464354878}
-  speed: 40
-  maxVelocity: 60
-  playerThrottle: {fileID: 2282027921023702044}
-  playerShipBooster: {fileID: 6839255818491527431}
   playerShipEngine: {fileID: 8064550776064017643}
+  maxVelocity: 60
 --- !u!114 &679514156179551528
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1767,6 +1766,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d27f7be93c8403145984276a1d612545, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  engine: {fileID: 8064550776064017643}
   isBoostingValRef: {fileID: 11400000, guid: 3d9017b5464ba654cbef4ccb8a95b835, type: 2}
   maxBoostVelocity: 100
   StartBoostingEvent:

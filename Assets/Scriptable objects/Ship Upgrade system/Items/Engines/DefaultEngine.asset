@@ -12,3 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce0c28e9a12cca24b990eeb72e8dc303, type: 3}
   m_Name: DefaultEngine
   m_EditorClassIdentifier: 
+  speed: 20
+  canBoost: 0
+  energyDrainRate: 1
+  energyBoostDrainRate: 0

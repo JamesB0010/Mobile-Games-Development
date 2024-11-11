@@ -10,8 +10,11 @@ public class PlayerShipArmour : MonoBehaviour
 
     [SerializeField] private PlayerUpgradesState playerUpgradesState;
 
+    [SerializeField] private PlayerShipEnergySystem energySystem;
+
     private void Start()
     {
         this.armour = this.playerUpgradesState.Armour.Armour;
+        this.armour = (Armour)this.armour.Clone();
     }
 }
