@@ -19,7 +19,6 @@ public class PlayerShipEnergySystem : MonoBehaviour
     private void Start()
     {
         this.energySystem = this.playerUpgradesState.EnergySystem.EnergySystem;
-        this.energySystem = (EnergySystem)this.energySystem.Clone();
         this.energySystem.ResetCurrentEnergy();
     }
 

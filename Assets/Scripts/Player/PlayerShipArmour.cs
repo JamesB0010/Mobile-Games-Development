@@ -15,6 +15,5 @@ public class PlayerShipArmour : MonoBehaviour
     private void Start()
     {
         this.armour = this.playerUpgradesState.Armour.Armour;
-        this.armour = (Armour)this.armour.Clone();
     }
 }

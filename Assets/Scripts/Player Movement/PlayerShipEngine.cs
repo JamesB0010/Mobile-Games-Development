@@ -22,7 +22,6 @@ public class PlayerShipEngine : MonoBehaviour
     private void Start()
     {
         this.engine = this.playerUpgradesState.Engine.Engine;
-        this.engine = (Engine)this.engine.Clone();
     }
 
     public Vector3 CalculateAcceleration()
