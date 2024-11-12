@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "253690395595",
+    "project_id": "mobile-game-dev-push-notif",
+    "storage_bucket": "mobile-game-dev-push-notif.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:253690395595:android:9bde2892790beb81ff144e",
+        "android_client_info": {
+          "package_name": "com.JamesBland.HeavenBound"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCVENgMzTwaxKlDOAVzMOb0v0vttxYd7lc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
