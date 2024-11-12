@@ -5,7 +5,16 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Items/Guns/Heavy Gun")]
 public class HeavyGun : Gun
 {
+    [SerializeField]
+    private float maxAmmoCount;
+
+    public float MaxAmmoCount => this.maxAmmoCount;
+
+    private float currentAmmoCount;
+    
     [SerializeField] private bool ableToShoot;
+
+    public bool AbleToShoot => this.ableToShoot;
     public override bool Shoot(Vector3 bulletStartPosition, Vector3 targetPosition, bool hasValidTarget, RaycastHit hit)
     {
         if (!ableToShoot)

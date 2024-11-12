@@ -12,8 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce0c28e9a12cca24b990eeb72e8dc303, type: 3}
   m_Name: LowThrustLowEnergy
   m_EditorClassIdentifier: 
-  speed: 15
+  itemName: PlaceHolder Name
+  accelerationSpeed: 15
   energyDrainRate: 5
+  topSpeed: 0
   engineBoostStats:
     canBoost: 0
     energyBoostDrainRate: 0

@@ -19,4 +19,13 @@ public class UiUpdaterInteractorArmour : UiUpdaterInteractorStrategy
     {
         this.ui.UpdateUiArmour((Armour)item);
     }
+
+    public override void UpdateItemToPurchaseStats(ShipItem item)
+    {
+        Armour armour = (Armour)item;
+        this.ui.UpdateUiArmourToPurchase(armour.ItemName, 
+            armour.EnergyUsedPerHit.ToString(), 
+            armour.MinimumOperationalEnergyLevel.ToString(), 
+            armour.DamageDampeningMultiplier.ToString());
+    }
 }

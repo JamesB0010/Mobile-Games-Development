@@ -19,4 +19,14 @@ public class UiUpdaterInteractorLight : UiUpdaterInteractorStrategy
     {
         this.ui.UpdateUiLightGun((LightGun)item);
     }
+
+    public override void UpdateItemToPurchaseStats(ShipItem item)
+    {
+        LightGun lGun = (LightGun)item;
+        this.ui.UpdateLightGunWeaponToPurchase(lGun.ItemName, 
+            lGun.TimeBetweenBullets.ToString(), 
+            lGun.BulletDamage.ToString(),
+            lGun.EnergyExpensePerShot.ToString()
+            );
+    }
 }

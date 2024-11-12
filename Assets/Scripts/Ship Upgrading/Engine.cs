@@ -1,22 +1,28 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 [CreateAssetMenu(menuName = "Items/Engine")]
 public class Engine : ShipItem
 {
-    [SerializeField] private float speed;
+    [FormerlySerializedAs("speed")] [SerializeField] private float accelerationSpeed;
 
     [SerializeField] private float energyDrainRate;
+    
+    [SerializeField] private float topSpeed;
 
     [SerializeField] private EngineBoostStats engineBoostStats;
+
+
+    public float TopSpeed => this.topSpeed;
 
     public EngineBoostStats EngineBoostStats => this.engineBoostStats;
     
     
 
 
-    public float Speed => this.speed;
+    public float AccelerationSpeed => this.accelerationSpeed;
 
 
 

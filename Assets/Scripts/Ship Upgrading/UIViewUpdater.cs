@@ -18,11 +18,26 @@ public class UIViewUpdater : MonoBehaviour
     
     [SerializeField] private ScrollRect UpgradesScrollRect;
 
-    [FormerlySerializedAs("playerWeaponsState")] [SerializeField] private PlayerUpgradesState playerUpgradesState;
     public PlayerUpgradesState PlayerUpgradesState => this.playerUpgradesState;
 
     [SerializeField] private FloatReference playerMoney;
+    
+    [FormerlySerializedAs("playerWeaponsState")] [SerializeField] private PlayerUpgradesState playerUpgradesState;
 
+    [Header("Item To Purchase Stats Setters")] 
+    [SerializeField] private Image toPurchaseSectionBackground;
+    
+    [SerializeField] private ArmourToPurchaseStatSection armourToPurchaseStatSection;
+
+    [SerializeField] private EnergySystemToPurchaseStats energySystemToPurchaseStats;
+
+    [SerializeField] private EngineToPurchaseStats engineToPurchaseStats;
+
+    [SerializeField] private HeavyGunToPurchaseStats heavyGunToPurchaseStats;
+
+    [SerializeField] private LightGunToPurchaseStats lightGunToPurchaseStats;
+
+    
     private static UIViewUpdater instance = null;
 
     public static UIViewUpdater GetInstance()
@@ -107,6 +122,9 @@ public class UIViewUpdater : MonoBehaviour
             else
                 this.purchaseEquipButtonText.text = "Purchase";
         }
+        
+        
+        selectedCell.Upgrade.GenerateUiUpdatorInteractor(this).UpdateItemToPurchaseStats((ShipItem)selectedCell.Upgrade.GetUpgrade());
     }
 
     public void CellPurchased(SelectedCellHighlight highlight)
@@ -128,7 +146,8 @@ public class UIViewUpdater : MonoBehaviour
     {
         ShipItem item = (ShipItem)cell.Upgrade.GetUpgrade();
 
-        cell.Upgrade.GenerateUiUpdatorInteractor(this).UpdateUi(item);
+        cell.Upgrade.GenerateUiUpdatorInteractor(this).UpdateUi(item);;
+
     }
 
     public void UpdateUiLightGun(LightGun gun)
@@ -163,5 +182,87 @@ public class UIViewUpdater : MonoBehaviour
     public void UpdateUiEnergySystem(EnergySystem energySystem)
     {
         itemNameField.text = energySystem.name;
+    }
+
+
+    public void UpdateUiArmourToPurchase(string armourName, string energyUsedPerHit, string minEnergyReq, string shieldsStrength)
+    {
+        this.DisableAllToPurchaseFields();
+        this.toPurchaseSectionBackground.enabled = true;
+        this.armourToPurchaseStatSection.gameObject.SetActive(true);
+        this.armourToPurchaseStatSection.SetFields(armourName, energyUsedPerHit, minEnergyReq, shieldsStrength);
+    }
+
+    public void UpdateUiEnergySystemToPurchase(string energySysName, string maxEnergy, string rechargeRate)
+    {
+        this.DisableAllToPurchaseFields();
+        this.toPurchaseSectionBackground.enabled = true;
+        this.energySystemToPurchaseStats.gameObject.SetActive(true);
+        this.energySystemToPurchaseStats.SetFields(energySysName, maxEnergy, rechargeRate);
+    }
+
+    public void UpdateUiEngineToPurchase(string engineName, string accelerationSpeed, string topSpeed, string energyDrainRate, string boostEnergyDrainRate)
+    {
+        this.DisableAllToPurchaseFields();
+        this.toPurchaseSectionBackground.enabled = true;
+        this.engineToPurchaseStats.gameObject.SetActive(true);
+        this.engineToPurchaseStats.SetFields(engineName, accelerationSpeed, topSpeed, energyDrainRate, boostEnergyDrainRate);
+    }
+    
+    public void UpdateUiEngineToPurchase(string engineName, string accelerationSpeed, string topSpeed, string energyDrainRate)
+    {
+        this.DisableAllToPurchaseFields();
+        this.toPurchaseSectionBackground.enabled = true;
+        this.engineToPurchaseStats.gameObject.SetActive(true);
+        this.engineToPurchaseStats.SetFields(engineName, accelerationSpeed, topSpeed, energyDrainRate);
+    }
+
+    public void HeavyWeaponToPurchaseIsNoGun()
+    {
+        this.DisableAllToPurchaseFields();
+        this.toPurchaseSectionBackground.enabled = true;
+        this.heavyGunToPurchaseStats.gameObject.SetActive(true);
+        this.heavyGunToPurchaseStats.WeaponCantShoot();
+    }
+
+    public void UpdateHeavyWeaponToPurchase(string weaponName, string fireRate, string bulletDamage, string ammoCount)
+    {
+        this.DisableAllToPurchaseFields();
+        this.toPurchaseSectionBackground.enabled = true;
+        this.heavyGunToPurchaseStats.gameObject.SetActive(true);
+        this.heavyGunToPurchaseStats.SetFields(weaponName, fireRate, bulletDamage, ammoCount);
+    }
+
+    public void UpdateLightGunWeaponToPurchase(string weaponName, string fireRate, string bulletDamage, string energyExpense)
+    {
+        this.DisableAllToPurchaseFields();
+        this.toPurchaseSectionBackground.enabled = true;
+        this.lightGunToPurchaseStats.gameObject.SetActive(true);
+        this.lightGunToPurchaseStats.SetFields(weaponName, fireRate, bulletDamage, energyExpense);
+    }
+
+    private void DisableAllToPurchaseFields()
+    {
+        this.toPurchaseSectionBackground.enabled = false;
+        this.armourToPurchaseStatSection.gameObject.SetActive(false);
+        this.energySystemToPurchaseStats.gameObject.SetActive(false);
+        this.engineToPurchaseStats.gameObject.SetActive(false);
+        this.heavyGunToPurchaseStats.gameObject.SetActive(false);
+        this.lightGunToPurchaseStats.gameObject.SetActive(false);
+    }
+    
+    public IEnumerator DisableAllToPurchaseFieldsAfter(float seconds)
+    {
+        yield return new WaitForSeconds(seconds);
+        this.DisableAllToPurchaseFields();
+    }
+
+    public void StartDisableAllToPurchaseFieldsCoroutine(float timeToWait)
+    {
+        StartCoroutine(nameof(this.DisableAllToPurchaseFieldsAfter), timeToWait);
+    }
+    public void CancelDisableAllToPurchaseFieldsCoroutine()
+    {
+        StopCoroutine(nameof(this.DisableAllToPurchaseFieldsAfter));
     }
 }

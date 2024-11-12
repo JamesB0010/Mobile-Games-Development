@@ -12,7 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f50b1feee89f5224195c52a7ef84c2ab, type: 3}
   m_Name: AmmoMediumDamageLow
   m_EditorClassIdentifier: 
+  itemName: PlaceHolder Name
   bulletPrefab: {fileID: 3118056857120007577, guid: 7dc8c838d2c9a854abfacbe555b5733d, type: 3}
   timeBetweenBullets: 0
   bulletDamage: 0
+  maxAmmoCount: 0
   ableToShoot: 1

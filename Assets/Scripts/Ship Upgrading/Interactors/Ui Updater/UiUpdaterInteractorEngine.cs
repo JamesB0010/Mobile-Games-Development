@@ -19,4 +19,22 @@ public class UiUpdaterInteractorEngine : UiUpdaterInteractorStrategy
     {
         this.ui.UpdateUiEngine((Engine)item);
     }
+
+    public override void UpdateItemToPurchaseStats(ShipItem item)
+    {
+        Engine engine = (Engine)item;
+        if(engine.EngineBoostStats.CanBoost)
+            this.ui.UpdateUiEngineToPurchase(engine.ItemName, 
+                engine.AccelerationSpeed.ToString(),
+                engine.TopSpeed.ToString(),
+                engine.EnergyDrainRate.ToString(), 
+                engine.EngineBoostStats.EnergyBoostDrainRate.ToString()
+                );
+        else
+            this.ui.UpdateUiEngineToPurchase(engine.ItemName, 
+                engine.AccelerationSpeed.ToString(),
+                engine.TopSpeed.ToString(),
+                engine.EnergyDrainRate.ToString()
+                );
+    }
 }

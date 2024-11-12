@@ -19,4 +19,12 @@ public class UiUpdaterInteractorEnergySystem : UiUpdaterInteractorStrategy
     {
         this.ui.UpdateUiEnergySystem((EnergySystem)item);
     }
+
+    public override void UpdateItemToPurchaseStats(ShipItem item)
+    {
+        EnergySystem eSys = (EnergySystem)item;
+        this.ui.UpdateUiEnergySystemToPurchase(eSys.ItemName, 
+            eSys.MaxEnergy.ToString(),
+            eSys.RechargeRate.ToString());
+    }
 }

@@ -33,9 +33,9 @@ public class PlayerShipEngine : MonoBehaviour
             return Vector3.zero;
 
         if (this.booster.IsBoosting)
-            acceleration += this.playerCamera.forward * (engine.Speed * 1 * Time.deltaTime);
+            acceleration += this.playerCamera.forward * (engine.AccelerationSpeed * 1 * Time.deltaTime);
         else
-            acceleration += this.playerCamera.forward * (engine.Speed * this.throttle.Throttle * Time.deltaTime);
+            acceleration += this.playerCamera.forward * (engine.AccelerationSpeed * this.throttle.Throttle * Time.deltaTime);
         
         return acceleration;
     }

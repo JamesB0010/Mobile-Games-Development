@@ -14,6 +14,8 @@ public class EngineBoostStats
     
     
     [SerializeField] private float energyBoostDrainRate;
-    
-    
+
+    public float EnergyBoostDrainRate => this.energyBoostDrainRate;
+
+
 }

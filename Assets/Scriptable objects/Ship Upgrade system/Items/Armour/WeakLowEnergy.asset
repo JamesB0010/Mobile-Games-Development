@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52b453c89a1fbd64092ab215baa48842, type: 3}
   m_Name: WeakLowEnergy
   m_EditorClassIdentifier: 
+  itemName: PlaceHolder Name
   energyUsedPerHit: 0
   minimumOperationalEnergyLevel: 5
   damageDampeningMultiplier: 0.7

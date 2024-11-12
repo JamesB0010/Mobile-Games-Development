@@ -8,9 +8,15 @@ public class Armour : ShipItem
 {
     [SerializeField] private float energyUsedPerHit;
 
+    public float EnergyUsedPerHit => this.energyUsedPerHit;
+
     [SerializeField] private float minimumOperationalEnergyLevel;
 
+    public float MinimumOperationalEnergyLevel => this.minimumOperationalEnergyLevel;
+
     [Range(0,1)] [SerializeField] private float damageDampeningMultiplier;
+
+    public float DamageDampeningMultiplier => this.damageDampeningMultiplier;
     public override object Clone()
     {
         return ScriptableObject.Instantiate(this);

@@ -14,4 +14,5 @@ public abstract class UiUpdaterInteractorStrategy
     public abstract void UpdateItemDetailsText(int index = 0);
 
     public abstract void UpdateUi(ShipItem item);
+    public abstract void UpdateItemToPurchaseStats(ShipItem item);
 }
