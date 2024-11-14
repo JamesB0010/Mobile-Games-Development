@@ -175,6 +175,7 @@ public class PlayerUpgradesState : ScriptableObject
 
             weapons[i].HeavyGun = (HeavyGun)this.heavyGuns[i].Gun;
             weapons[i].SetupWeapon();
+            weapons[i].HeavyGun.CurrentAmmoCount = weapons[i].HeavyGun.MaxAmmoCount;
         }
     }
 }

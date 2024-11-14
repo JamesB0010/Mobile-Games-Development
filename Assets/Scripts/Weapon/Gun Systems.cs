@@ -8,6 +8,8 @@ namespace Weapon
     [RequireComponent(typeof(CrosshairTargetFinder))]
     public class GunSystems : MonoBehaviour
     {
+        public event Action<PlayerShipHeavyWeapon[]> HeavyGunsInitialied;
+        
         //Attributes
         private CrosshairTargetFinder crosshairTargetFinder;
         public CrosshairTargetFinder CrosshairTargetFinder => this.crosshairTargetFinder;
@@ -18,24 +20,14 @@ namespace Weapon
 
         private PlayerShipHeavyWeapon[] heavyWeaponList;
 
+        public PlayerShipHeavyWeapon[] HeavyWeaponsList => this.heavyWeaponList;
+
         [SerializeField] private PlayerUpgradesState playerUpgradesState;
 
 
-        public bool tryingToShootLightLight = false;
-        public bool TryingToShootLight
-        {
-            get => this.tryingToShootLightLight;
+        public bool TryingToShootLight { get; set; } = false;
 
-            set => this.tryingToShootLightLight = value;
-        }
-
-        public bool tryingToShootHeavy = false;
-
-        public bool TryingToShootHeavy
-        {
-            get => this.tryingToShootHeavy;
-            set => this.tryingToShootHeavy = value;
-        }
+        public bool TryingToShootHeavy { get; set; } = false;
 
         private float timeStartedLookingAtEnemy;
 
@@ -51,6 +43,8 @@ namespace Weapon
 
             this.playerUpgradesState.SetPlayershipWithStoredLightWeapons(this.lightWeaponsList);
             this.playerUpgradesState.SetPlayershipWithStoredHeavyWeapons(this.heavyWeaponList);
+            
+            this.HeavyGunsInitialied?.Invoke(this.HeavyWeaponsList);
         }
 
         private void Update()

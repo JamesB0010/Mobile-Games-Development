@@ -1,10 +1,18 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Weapon;
 
 public class PlayerShipHeavyWeapon : PlayerShipWeapon
 {
     private HeavyGun heavyGun;
+
+    public event Action<PlayerShipHeavyWeapon> GunFired;
+
+    [SerializeField] private int index;
+
+    public int Index => this.index;
 
     public HeavyGun HeavyGun
     {
@@ -24,10 +32,10 @@ public class PlayerShipHeavyWeapon : PlayerShipWeapon
 
     private void Update()
     {
-        this.animator.SetBool(TryingToShoot, gunSystem.tryingToShootHeavy);
+        this.animator.SetBool(TryingToShoot, gunSystem.TryingToShootHeavy);
         this.animator.SetBool(BulletFired, false);
 
-        if (this.gunSystem.tryingToShootHeavy == false)
+        if (this.gunSystem.TryingToShootHeavy == false || this.heavyGun.CurrentAmmoCount <= -1) 
         {
             return;
         }
@@ -49,6 +57,8 @@ public class PlayerShipHeavyWeapon : PlayerShipWeapon
 
         if (bulletShot)
         {
+            this.GunFired?.Invoke(this);
+            this.heavyGun.CurrentAmmoCount--;
             this.muzzleFlash.Play();
             for (int i = 0; i < this.muzzleFlashParticles.Count; i++)
             {

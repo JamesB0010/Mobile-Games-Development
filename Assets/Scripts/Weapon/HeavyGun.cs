@@ -10,8 +10,14 @@ public class HeavyGun : Gun
 
     public float MaxAmmoCount => this.maxAmmoCount;
 
-    private float currentAmmoCount;
-    
+    [SerializeField] private float currentAmmoCount;
+
+    public float CurrentAmmoCount
+    {
+        get => this.currentAmmoCount;
+        set => this.currentAmmoCount = value;
+    }
+
 
     public bool AbleToShoot => this.ableToShoot;
    

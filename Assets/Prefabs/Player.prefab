@@ -379,7 +379,6 @@ GameObject:
   - component: {fileID: 1287365500066873420}
   - component: {fileID: 6599734323396440271}
   - component: {fileID: 1339365005023637372}
-  - component: {fileID: 6432270006816569746}
   m_Layer: 10
   m_Name: Gun System
   m_TagString: Untagged
@@ -419,8 +418,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   aimingAtEnemy: {fileID: 11400000, guid: e7e857e760247884cbbf3d566327de25, type: 2}
   playerUpgradesState: {fileID: 11400000, guid: b5f4d067d7d0e2744ab5cdf2c7f613f0, type: 2}
-  tryingToShootLightLight: 0
-  tryingToShootHeavy: 0
   timeSpentLookingAtEnemy: {fileID: 11400000, guid: ddc5db2a17bea5b45bdcc970079b26e2, type: 2}
 --- !u!114 &1287365500066873420
 MonoBehaviour:
@@ -466,21 +463,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lightIdle: {fileID: 11400000, guid: ce2015cd9bc422b4f88068c8fe4cc84f, type: 2}
   lightShooting: {fileID: 11400000, guid: db3a059aa0bd01b468fbcca76465ba46, type: 2}
-  heavyIdle: {fileID: 11400000, guid: 165ad0ec0204b574c9a34c17795a535c, type: 2}
-  heavyShooting: {fileID: 11400000, guid: f3289f0512b17a047b304e78607792b9, type: 2}
---- !u!114 &6432270006816569746
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1628592894483055541}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 88ad5ca929f7c6f449176dd6da12e5ec, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  activeState: {fileID: 11400000, guid: 165ad0ec0204b574c9a34c17795a535c, type: 2}
 --- !u!1 &1886208442591971631
 GameObject:
   m_ObjectHideFlags: 0
@@ -610,7 +592,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerUpgradesState: {fileID: 11400000, guid: b5f4d067d7d0e2744ab5cdf2c7f613f0, type: 2}
-  debug_CurrentEnergy: 0
 --- !u!1 &2574337824375988703
 GameObject:
   m_ObjectHideFlags: 0
@@ -1665,7 +1646,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerShipEngine: {fileID: 8064550776064017643}
-  maxVelocity: 60
 --- !u!114 &679514156179551528
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1771,7 +1751,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   engine: {fileID: 8064550776064017643}
   isBoostingValRef: {fileID: 11400000, guid: 3d9017b5464ba654cbef4ccb8a95b835, type: 2}
-  maxBoostVelocity: 100
   StartBoostingEvent:
     m_PersistentCalls:
       m_Calls:
@@ -3349,10 +3328,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gunSystem: {fileID: 3725189694690446650}
   gunshotSoundLocation: {fileID: 415471125229124391}
-  muzzleFlash: {fileID: 5864902372505233869}
+  muzzleFlash: {fileID: 1704275320095063224}
   animator: {fileID: 3202696549785581572}
   bulletSpawnLocation: {fileID: 1523241009417913805}
-  lightGun: {fileID: 11400000, guid: 5de53fcef43d8164090a1591e3efa089, type: 2}
   energySystem: {fileID: 7363665805322312746}
 --- !u!1001 &385822068602893634
 PrefabInstance:
@@ -3613,10 +3591,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gunSystem: {fileID: 3725189694690446650}
   gunshotSoundLocation: {fileID: 8335364347258182078}
-  muzzleFlash: {fileID: 3832277794229511520}
+  muzzleFlash: {fileID: 135056554547943445}
   animator: {fileID: 7097293558237895199}
   bulletSpawnLocation: {fileID: 5348826949487086429}
-  heavyGun: {fileID: 11400000, guid: 74b6cf92efc8c274bb4bb8fbc4d644e6, type: 2}
+  index: 1
 --- !u!1001 &640697659905895844
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3961,7 +3939,6 @@ MonoBehaviour:
   muzzleFlash: {fileID: 1528247040139859654}
   animator: {fileID: 2463125771650392669}
   bulletSpawnLocation: {fileID: 67003662207803246}
-  lightGun: {fileID: 11400000, guid: aaac8ad849c909441aedf5871f7ff83e, type: 2}
   energySystem: {fileID: 7363665805322312746}
 --- !u!4 &1024693304344900365 stripped
 Transform:
@@ -4316,7 +4293,6 @@ MonoBehaviour:
   muzzleFlash: {fileID: 7103730885990102756}
   animator: {fileID: 1391142263714847613}
   bulletSpawnLocation: {fileID: 2229642763838759009}
-  lightGun: {fileID: 11400000, guid: aaac8ad849c909441aedf5871f7ff83e, type: 2}
   energySystem: {fileID: 7363665805322312746}
 --- !u!4 &2226129446189805198 stripped
 Transform:
@@ -4580,7 +4556,7 @@ MonoBehaviour:
   muzzleFlash: {fileID: 3832277794229511520}
   animator: {fileID: 8641353716537889367}
   bulletSpawnLocation: {fileID: 5891564207802765686}
-  heavyGun: {fileID: 11400000, guid: 74b6cf92efc8c274bb4bb8fbc4d644e6, type: 2}
+  index: 0
 --- !u!4 &1971388219823538161 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: a45c7e09bdeea5b4581f84e9fe46a7e2, type: 3}
@@ -4667,6 +4643,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8976fdd099a631343a930a304dfc9efd, type: 3}
+--- !u!198 &2048664026371567518 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 4452594906299861188, guid: 8976fdd099a631343a930a304dfc9efd, type: 3}
+  m_PrefabInstance: {fileID: 2424232279846430554}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3160271937660226624 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 756341951042136858, guid: 8976fdd099a631343a930a304dfc9efd, type: 3}
@@ -4930,7 +4911,6 @@ MonoBehaviour:
   muzzleFlash: {fileID: 7915910682503855955}
   animator: {fileID: 4488393106202449946}
   bulletSpawnLocation: {fileID: 79083873422189553}
-  lightGun: {fileID: 11400000, guid: aaac8ad849c909441aedf5871f7ff83e, type: 2}
   energySystem: {fileID: 7363665805322312746}
 --- !u!1001 &2954264529579777538
 PrefabInstance:
@@ -5104,6 +5084,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8976fdd099a631343a930a304dfc9efd, type: 3}
+--- !u!198 &1704275320095063224 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 4452594906299861188, guid: 8976fdd099a631343a930a304dfc9efd, type: 3}
+  m_PrefabInstance: {fileID: 3056825008615371900}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2311216155095408486 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 756341951042136858, guid: 8976fdd099a631343a930a304dfc9efd, type: 3}
@@ -5371,7 +5356,6 @@ MonoBehaviour:
   muzzleFlash: {fileID: 5289133352513506887}
   animator: {fileID: 4944527251776959623}
   bulletSpawnLocation: {fileID: 2941171122050685450}
-  lightGun: {fileID: 11400000, guid: aaac8ad849c909441aedf5871f7ff83e, type: 2}
   energySystem: {fileID: 7363665805322312746}
 --- !u!1001 &3762297374234713655
 PrefabInstance:
@@ -5635,7 +5619,6 @@ MonoBehaviour:
   muzzleFlash: {fileID: 5864902372505233869}
   animator: {fileID: 1719936074819462770}
   bulletSpawnLocation: {fileID: 5899465124895608450}
-  lightGun: {fileID: 11400000, guid: 5de53fcef43d8164090a1591e3efa089, type: 2}
   energySystem: {fileID: 7363665805322312746}
 --- !u!1001 &3952272721173901394
 PrefabInstance:
@@ -5899,7 +5882,7 @@ MonoBehaviour:
   muzzleFlash: {fileID: 2932866159168766772}
   animator: {fileID: 3341629320221569348}
   bulletSpawnLocation: {fileID: 8000520524297775928}
-  heavyGun: {fileID: 11400000, guid: 74b6cf92efc8c274bb4bb8fbc4d644e6, type: 2}
+  index: 2
 --- !u!1001 &4329395485155299537
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5981,6 +5964,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8976fdd099a631343a930a304dfc9efd, type: 3}
+--- !u!198 &135056554547943445 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 4452594906299861188, guid: 8976fdd099a631343a930a304dfc9efd, type: 3}
+  m_PrefabInstance: {fileID: 4329395485155299537}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3920958237683956683 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 756341951042136858, guid: 8976fdd099a631343a930a304dfc9efd, type: 3}
@@ -6240,10 +6228,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gunSystem: {fileID: 3725189694690446650}
   gunshotSoundLocation: {fileID: 3812100777362452591}
-  muzzleFlash: {fileID: 3832277794229511520}
+  muzzleFlash: {fileID: 7360480877500827440}
   animator: {fileID: 8074413545995174573}
   bulletSpawnLocation: {fileID: 4373886108069752966}
-  heavyGun: {fileID: 11400000, guid: 74b6cf92efc8c274bb4bb8fbc4d644e6, type: 2}
+  index: 3
 --- !u!4 &4314405264501217405 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: a45c7e09bdeea5b4581f84e9fe46a7e2, type: 3}
@@ -6768,6 +6756,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 756341951042136858, guid: 8976fdd099a631343a930a304dfc9efd, type: 3}
   m_PrefabInstance: {fileID: 6624624789590478836}
   m_PrefabAsset: {fileID: 0}
+--- !u!198 &7360480877500827440 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 4452594906299861188, guid: 8976fdd099a631343a930a304dfc9efd, type: 3}
+  m_PrefabInstance: {fileID: 6624624789590478836}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6872298295165632032
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7121,7 +7114,6 @@ MonoBehaviour:
   muzzleFlash: {fileID: 9065605512272713810}
   animator: {fileID: 1382844632259939556}
   bulletSpawnLocation: {fileID: 2697469652988663399}
-  lightGun: {fileID: 11400000, guid: 5de53fcef43d8164090a1591e3efa089, type: 2}
   energySystem: {fileID: 7363665805322312746}
 --- !u!1001 &7432297241692600617
 PrefabInstance:
@@ -7542,10 +7534,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gunSystem: {fileID: 3725189694690446650}
   gunshotSoundLocation: {fileID: 5031319470419990749}
-  muzzleFlash: {fileID: 5864902372505233869}
+  muzzleFlash: {fileID: 2048664026371567518}
   animator: {fileID: 4246810847641255885}
   bulletSpawnLocation: {fileID: 2972490487738006932}
-  lightGun: {fileID: 11400000, guid: 5de53fcef43d8164090a1591e3efa089, type: 2}
   energySystem: {fileID: 7363665805322312746}
 --- !u!4 &7506626763193739844 stripped
 Transform:

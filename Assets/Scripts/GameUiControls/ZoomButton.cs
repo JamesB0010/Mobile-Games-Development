@@ -7,7 +7,7 @@ using UnityEngine.Events;
 using UnityEngine.EventSystems;
 using Weapon;
 
-public class FireButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
+public class ZoomButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 {
     //Dependencies resolved in start
     private CameraFOVChanger fovChanger;
