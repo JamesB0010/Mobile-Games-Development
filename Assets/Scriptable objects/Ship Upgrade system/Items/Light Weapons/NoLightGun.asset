@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c2008404cba8f7647b47da7b08f99d37, type: 3}
-  m_Name: HighDamageHighEnergy
+  m_Name: NoLightGun
   m_EditorClassIdentifier: 
-  itemName: PlaceHolder Name
-  ableToShoot: 1
+  itemName: NoLightGun
+  ableToShoot: 0
   bulletPrefab: {fileID: 3118056857120007577, guid: 5a6baa86ac946c647b5019508c95ae8d, type: 3}
-  timeBetweenBullets: 0.02
-  bulletDamage: 3
-  energyExpensePerShot: 10
+  timeBetweenBullets: 0
+  bulletDamage: 0
+  energyExpensePerShot: 0

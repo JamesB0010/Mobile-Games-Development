@@ -18,7 +18,7 @@ namespace Weapon
 
         private PlayerShipHeavyWeapon[] heavyWeaponList;
 
-        [FormerlySerializedAs("playerWeaponsState")] [SerializeField] private PlayerUpgradesState playerUpgradesState;
+        [SerializeField] private PlayerUpgradesState playerUpgradesState;
 
 
         public bool tryingToShootLightLight = false;

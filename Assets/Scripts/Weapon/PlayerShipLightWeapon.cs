@@ -7,13 +7,13 @@ using Weapon;
 
 public class PlayerShipLightWeapon : PlayerShipWeapon
 {
-    [SerializeField]
     private LightGun lightGun;
 
     [SerializeField] private PlayerShipEnergySystem energySystem;
 
     public LightGun LightGun
     {
+        get => this.lightGun;
         set => this.lightGun = value;
     }
 

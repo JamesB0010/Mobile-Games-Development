@@ -15,5 +15,5 @@ MonoBehaviour:
   cost: 0
   icon: {fileID: 21300000, guid: d92891756e50dde4d88b4159d27731c7, type: 3}
   isPurchaseable: 1
-  OwnedByDefault: 1
+  quantityOwnedByDefault: 1
   energySystem: {fileID: 11400000, guid: 28659a4bf3f51dd4bbf53f17bef137ad, type: 2}

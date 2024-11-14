@@ -18,6 +18,9 @@ public class BoostEngineStatsDrawer : PropertyDrawer
         {
             boostDrainRateProperty.floatValue =
                 EditorGUILayout.FloatField("Boosting Energy Drain Rate", boostDrainRateProperty.floatValue);
+
+            var maxBoostVelProp = property.FindPropertyRelative("maxBoostVelocity");
+            maxBoostVelProp.floatValue = EditorGUILayout.FloatField("Max Boost Velocity", maxBoostVelProp.floatValue);
         }
     }
 }

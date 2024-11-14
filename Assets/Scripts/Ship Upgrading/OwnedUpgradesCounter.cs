@@ -18,6 +18,8 @@ public class OwnedUpgradesCounter : MonoBehaviour
 
     [SerializeField] private TextAsset jsonSaveFile;
     public TextAsset JsonSaveFile => this.jsonSaveFile;
+
+    [SerializeField] private PlayerUpgradesState playerUpgradesState;
     private void Awake()
     {
         if (OwnedUpgradesCounter.instance == null)
@@ -91,6 +93,38 @@ public class OwnedUpgradesCounter : MonoBehaviour
     {
 
         GenerateSaveableObject().SaveData(this.jsonSaveFile);
+    }
+
+    public float GetItemInCirculationCount(ShipItemUpgrade shipItemUpgrade)
+    {
+        switch (shipItemUpgrade)
+        {
+            case LightGunUpgrade lightGun:
+            {
+                List<ShipItemUpgrade> itemList = this.playerUpgradesState.LightGunsAbstract.FindAll(item => item == shipItemUpgrade);
+                float itemCount = this.GetUpgradeCount(lightGun);
+                itemCount += itemList.Count;
+                return itemCount;
+            }
+            case HeavyGunUpgrade heavyGun:
+            {
+                List<ShipItemUpgrade> itemList = this.playerUpgradesState.HeavyGunsAbstract.FindAll(item => item == shipItemUpgrade);
+                float itemCount = this.GetUpgradeCount(heavyGun);
+                itemCount += itemList.Count;
+                return itemCount;
+            }
+            case ArmourUpgrade armour:
+                bool armourEquipped = this.playerUpgradesState.Armour == armour;
+                return  armourEquipped ? 1 : this.GetUpgradeCount(armour);
+            case EnergySystemsUpgrade energy:
+                bool energySystemEquipped = this.playerUpgradesState.EnergySystem == energy;
+                return energySystemEquipped ? 1 : this.GetUpgradeCount(energy);
+            case EngineUpgrade engine:
+                bool engineEquipped = this.playerUpgradesState.Engine == engine;
+                return engineEquipped ? 1 : this.GetUpgradeCount(engine);
+        }
+        
+        return 0;
     }
 }
 

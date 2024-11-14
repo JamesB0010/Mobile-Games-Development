@@ -16,6 +16,8 @@ MonoBehaviour:
   accelerationSpeed: 20
   energyDrainRate: 30
   topSpeed: 0
+  maxVelocity: 30
   engineBoostStats:
-    canBoost: 0
+    canBoost: 1
     energyBoostDrainRate: 40
+    maxBoostVelocity: 60

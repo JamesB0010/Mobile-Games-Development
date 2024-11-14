@@ -11,6 +11,9 @@ public class Engine : ShipItem
     [SerializeField] private float energyDrainRate;
     
     [SerializeField] private float topSpeed;
+    
+    [SerializeField] private float maxVelocity;
+    public float MaxVelocity => this.maxVelocity;
 
     [SerializeField] private EngineBoostStats engineBoostStats;
 

@@ -5,6 +5,8 @@ using UnityEngine;
 
 public abstract class Gun : ShipItem
 {
+    
+    [SerializeField] protected bool ableToShoot;
     [SerializeField]
     protected Bullet bulletPrefab;
     protected float lastBulletShotTimestamp = -100.0f;
@@ -17,10 +19,32 @@ public abstract class Gun : ShipItem
     [SerializeField] protected float bulletDamage;
     public float BulletDamage => this.bulletDamage;
 
-    public abstract bool Shoot(Vector3 bulletStartPosition, Vector3 targetPosition, bool hasValidTarget, RaycastHit hit);
+     public bool Shoot(Vector3 bulletStartPosition, Vector3 targetPosition, bool hasValidTarget, RaycastHit hit)
+    {
+        if (!ableToShoot)
+            return false;
 
-    public abstract bool Shoot(Vector3 bulletStartPosition, Vector3 targetPosition, bool hasValidTarget);
+        if (this.IsPrimedToShoot())
+        {
+            Bullet bullet = InstantiateBullet(bulletStartPosition, targetPosition, hasValidTarget);
+            bullet.hit = hit;
+            return true;
+        }
+        return false;
+    }
+    public bool Shoot(Vector3 bulletStartPosition, Vector3 targetPosition, bool hasValidTarget)
+    {
+        if (!ableToShoot)
+            return false;
 
+        if (this.IsPrimedToShoot())
+        {
+            this.InstantiateBullet(bulletStartPosition, targetPosition, hasValidTarget);
+            return true;
+        }
+
+        return false;
+    }
     protected bool IsPrimedToShoot()
     {
         bool requiredTimeElapsed = Time.timeSinceLevelLoad - lastBulletShotTimestamp > timeBetweenBullets;

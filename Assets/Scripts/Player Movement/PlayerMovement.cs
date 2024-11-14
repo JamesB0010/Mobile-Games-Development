@@ -16,14 +16,10 @@ namespace Player_Movement
         }
 
 
-        [Header("Configurables")]
-        [SerializeField] private float maxVelocity;
-        public float MaxVelocity => this.maxVelocity;
-        
-        
+
         private void Start()
         {
-            this.currentMaxVelocity = this.maxVelocity;
+            this.currentMaxVelocity = this.playerShipEngine.MaxVelocity;
         }
         void Update()
         {

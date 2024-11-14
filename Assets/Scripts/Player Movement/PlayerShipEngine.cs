@@ -18,6 +18,8 @@ public class PlayerShipEngine : MonoBehaviour
     
     [SerializeField] PlayerShipEnergySystem energySystem;
     public bool CanBoost => this.engine.EngineBoostStats.CanBoost;
+    public float MaxVelocity => this.engine.MaxVelocity;
+    public float MaxBoostVelocity => this.engine.EngineBoostStats.MaxBoostVelocity;
 
     private void Start()
     {

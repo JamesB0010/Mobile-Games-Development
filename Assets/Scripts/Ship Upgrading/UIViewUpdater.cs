@@ -110,8 +110,10 @@ public class UIViewUpdater : MonoBehaviour
         {
             bool isEquipped = false;
             isEquipped = selectedCell.Upgrade.GenerateUpgradesStateInteractor(this.playerUpgradesState).IsEqualTo(selectedCell.Upgrade, selectedCell.WeaponIndex);
-            
-            bool isOwned = OwnedUpgradesCounter.Instance.GetUpgradeCount(selectedCell.Upgrade) > 0 || selectedCell.Upgrade.OwnedByDefault || isEquipped;
+
+            bool ownedByDefault = selectedCell.Upgrade.quantityOwnedByDefault > OwnedUpgradesCounter.Instance.GetItemInCirculationCount(this.playerUpgradesState.DefaultLightGun);
+            bool enoughOwned = OwnedUpgradesCounter.Instance.GetUpgradeCount(selectedCell.Upgrade) > 0;
+            bool isOwned = ownedByDefault || enoughOwned|| isEquipped;
             if (isOwned)
             {
                 if (isEquipped)

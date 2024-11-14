@@ -18,4 +18,7 @@ public class EngineBoostStats
     public float EnergyBoostDrainRate => this.energyBoostDrainRate;
 
 
+    [SerializeField] private float maxBoostVelocity;
+
+    public float MaxBoostVelocity => this.maxBoostVelocity;
 }

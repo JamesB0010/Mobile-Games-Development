@@ -15,5 +15,5 @@ MonoBehaviour:
   cost: 0
   icon: {fileID: 21300000, guid: 35469ed843615424083bf79d5371bb28, type: 3}
   isPurchaseable: 1
-  OwnedByDefault: 1
+  quantityOwnedByDefault: 2
   gun: {fileID: 11400000, guid: aaac8ad849c909441aedf5871f7ff83e, type: 2}

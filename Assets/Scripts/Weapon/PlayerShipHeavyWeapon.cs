@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class PlayerShipHeavyWeapon : PlayerShipWeapon
 {
-    [SerializeField]
     private HeavyGun heavyGun;
 
     public HeavyGun HeavyGun
     {
+        get => this.heavyGun;
         set => this.heavyGun = value;
     }
 

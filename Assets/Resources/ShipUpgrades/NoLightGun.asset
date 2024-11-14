@@ -9,11 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78a30f3de1a45234e9bcb0a99028c1e5, type: 3}
-  m_Name: DefaultArmour
+  m_Script: {fileID: 11500000, guid: 1688acab0abbd284d809ac0d63c93c0e, type: 3}
+  m_Name: NoLightGun
   m_EditorClassIdentifier: 
   cost: 0
-  icon: {fileID: 21300000, guid: 1e999e744c547704cb215ae907038700, type: 3}
-  isPurchaseable: 1
-  quantityOwnedByDefault: 1
-  armour: {fileID: 11400000, guid: 60f1a46dbf76ba8419f20a8511eb2029, type: 2}
+  icon: {fileID: 21300000, guid: 35469ed843615424083bf79d5371bb28, type: 3}
+  isPurchaseable: 0
+  quantityOwnedByDefault: 8
+  gun: {fileID: 11400000, guid: 9e03e9e38a5f05f41acfb17abd1a3940, type: 2}

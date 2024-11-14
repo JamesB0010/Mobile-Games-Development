@@ -25,6 +25,5 @@ public abstract class ShipItemUpgrade : ScriptableObject
     [SerializeField] private bool isPurchaseable;
     public bool IsPurchaseable => this.isPurchaseable;
 
-    public bool OwnedByDefault;
-
+    public int quantityOwnedByDefault;
 }

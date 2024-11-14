@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.Analytics;
 using UnityEngine.Serialization;
 using UnityEngine.TestTools;
 
@@ -11,6 +12,10 @@ public class PlayerUpgradesState : ScriptableObject
     [FormerlySerializedAs("defaultLightItem")]
     [Header("Light Guns")]
     [SerializeField] private LightGunUpgrade defaultLightGun;
+
+    public LightGunUpgrade DefaultLightGun => this.defaultLightGun;
+
+    [SerializeField] private LightGunUpgrade noLightGun;
 
     [SerializeField] private List<LightGunUpgrade> lightGuns;
     public List<LightGunUpgrade> LightGuns
@@ -26,7 +31,13 @@ public class PlayerUpgradesState : ScriptableObject
     {
         for (int i = 0; i < this.lightGuns.Count; i++)
         {
-            this.lightGuns[i] = this.defaultLightGun;
+            if (i < 2)
+            {
+                this.lightGuns[i] = this.defaultLightGun;
+                continue;
+            }
+
+            this.lightGuns[i] = noLightGun;
         }
     }
 
@@ -139,36 +150,31 @@ public class PlayerUpgradesState : ScriptableObject
 
     public void SetPlayershipWithStoredLightWeapons(PlayerShipLightWeapon[] weapons)
     {
-        int i = 0;
-        for (; i < this.lightGuns.Count; i++)
+        for (int i = 0; i < this.lightGuns.Count; i++)
         {
-            if (i >= weapons.Length)
-                break;
+            if (this.lightGuns[i] == noLightGun)
+            {
+                weapons[i].gameObject.SetActive(false);
+                continue;
+            }
+       
             weapons[i].LightGun = (LightGun)this.lightGuns[i].Gun;
             weapons[i].SetupWeapon();
-
-        }
-
-        for (; i < weapons.Length; i++)
-        {
-            weapons[i].gameObject.SetActive(false);
         }
     }
 
     public void SetPlayershipWithStoredHeavyWeapons(PlayerShipHeavyWeapon[] weapons)
     {
-        int i = 0;
-        for (; i < this.heavyGuns.Count; i++)
+        for (int i = 0; i < this.HeavyGuns.Count; i++)
         {
-            if (i >= weapons.Length)
-                break;
+            if (this.HeavyGuns[i] == this.defaultHeavyGun)
+            {
+                weapons[i].gameObject.SetActive(false);
+                continue;
+            }
+
             weapons[i].HeavyGun = (HeavyGun)this.heavyGuns[i].Gun;
             weapons[i].SetupWeapon();
-        }
-
-        for (; i < weapons.Length; i++)
-        {
-            weapons[i].gameObject.SetActive(false);
         }
     }
 }

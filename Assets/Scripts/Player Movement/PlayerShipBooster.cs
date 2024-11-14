@@ -24,7 +24,8 @@ public class PlayerShipBooster : MonoBehaviour
                     this.StartBoostingEvent?.Invoke();
                     this.isBoostingValRef.SetValue(true);
                 }
-                this.playerMovement.CurrentMaxVelocity = this.maxBoostVelocity;
+                
+                this.playerMovement.CurrentMaxVelocity = this.engine.MaxBoostVelocity;
                 isBoosting = true;
             }
             else
@@ -44,7 +45,6 @@ public class PlayerShipBooster : MonoBehaviour
 
 
     [SerializeField] private BoolReference isBoostingValRef;
-    [SerializeField] private float maxBoostVelocity;
     private PlayerMovement playerMovement;
     [SerializeField] private UnityEvent StartBoostingEvent = new UnityEvent();
     [SerializeField] private UnityEvent StopBoostingEvent = new UnityEvent();
@@ -52,7 +52,7 @@ public class PlayerShipBooster : MonoBehaviour
     private void Start()
     {
         playerMovement = FindObjectOfType<PlayerMovement>();
-        this.maxVelocityDefault = this.playerMovement.MaxVelocity;
+        this.maxVelocityDefault = this.engine.MaxVelocity;
     }
     public void OnBoost(InputAction.CallbackContext ctx)
     {

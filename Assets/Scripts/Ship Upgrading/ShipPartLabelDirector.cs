@@ -12,10 +12,8 @@ public class ShipPartLabelDirector : MonoBehaviour
     [SerializeField] private UIViewUpdater uiUpdater;
     [SerializeField] private EquipItem equipItemAction;
 
-    [Space]
 
-    [SerializeField] private ShipPartLabel[] shipPartLabels;
-
+    private ShipPartLabel[] shipPartLabels;
 
 
     [Space(2)]
@@ -24,6 +22,7 @@ public class ShipPartLabelDirector : MonoBehaviour
 
     private void Start()
     {
+        this.shipPartLabels = FindObjectsOfType<ShipPartLabel>();
         foreach (ShipPartLabel label in this.shipPartLabels)
         {
             label.clicked += OnShipPartClicked;
