@@ -17,18 +17,14 @@ public class GlobalLerpProcessor : MonoBehaviour
 
     public static void AddLerpPackage(LerpPackage pkg)
     {
-        try
+        if (instance == null)
         {
-            pkg.AddToProcessor(ref instance.lerpProcessor);
+           GameObject obj = new GameObject("Global Lerp Processor");
+           GlobalLerpProcessor component = obj.AddComponent<GlobalLerpProcessor>();
+           GlobalLerpProcessor.instance = component; 
         }
-        catch (NullReferenceException)
-        {
-            GameObject obj = new GameObject("Global Lerp Processor");
-            GlobalLerpProcessor component = obj.AddComponent<GlobalLerpProcessor>();
-            GlobalLerpProcessor.instance = component;
-            
-            pkg.AddToProcessor(ref instance.lerpProcessor);
-        }
+        
+        pkg.AddToProcessor(ref instance.lerpProcessor);
     }
     
     private void Awake()
