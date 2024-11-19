@@ -5,6 +5,8 @@ using UnityEngine;
 
 class Vector3LerpPackage : LerpPackage
 {
+    public event Action<Vector3> onLerpStep;
+    
     public Action<Vector3> lerpStepCallback;
 
     private Vector3 _start, _target;
@@ -36,8 +38,8 @@ class Vector3LerpPackage : LerpPackage
 
     public override void RunStepCallback()
     {
-        this.lerpStepCallback(
-            Vector3.Lerp(this._start, this._target, this.currentPercentage)
-        );
+        Vector3 value = Vector3.Lerp(this._start, this._target, this.currentPercentage);
+        this.onLerpStep?.Invoke(value);
+        this.lerpStepCallback(value);
     }
 }
