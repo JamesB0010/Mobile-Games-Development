@@ -2090,7 +2090,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4403592453908335707}
   - component: {fileID: 268901007549538282}
-  - component: {fileID: 8239346517634739908}
   - component: {fileID: 2682577841269466711}
   m_Layer: 10
   m_Name: RightMonitorUiCamera
@@ -2165,14 +2164,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!81 &8239346517634739908
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5666785929902519666}
-  m_Enabled: 1
 --- !u!114 &2682577841269466711
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2452,7 +2443,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.49948263, g: 0.6150943, b: 0, a: 1}
+  m_Color: {r: 0.49948263, g: 0.6150943, b: 0.03818437, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1

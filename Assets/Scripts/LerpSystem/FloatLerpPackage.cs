@@ -3,8 +3,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-class FloatLerpPackage : LerpPackage
+public class FloatLerpPackage : LerpPackage
 {
+    public event Action<float> onLerpStep;
+    
     public Action<float> lerpStepCallback;
 
     private float _start, _target;
@@ -36,8 +38,8 @@ class FloatLerpPackage : LerpPackage
 
     public override void RunStepCallback()
     {
-        this.lerpStepCallback(
-            Mathf.Lerp(this._start, this._target, this.currentPercentage)
-        );
+        float value = Mathf.Lerp(this._start, this._target, this.currentPercentage);
+        this.onLerpStep?.Invoke(value);
+        this.lerpStepCallback(value);
     }
 }

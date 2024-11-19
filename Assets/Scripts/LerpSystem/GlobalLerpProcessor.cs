@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -20,7 +21,7 @@ public class GlobalLerpProcessor : MonoBehaviour
         {
             pkg.AddToProcessor(ref instance.lerpProcessor);
         }
-        catch (NullReferenceException err)
+        catch (NullReferenceException)
         {
             GameObject obj = new GameObject("Global Lerp Processor");
             GlobalLerpProcessor component = obj.AddComponent<GlobalLerpProcessor>();
@@ -35,28 +36,30 @@ public class GlobalLerpProcessor : MonoBehaviour
         if (instance == null)
         {
             instance = this;
-            //Add cross scene compatibiltity
-            SceneManager.sceneUnloaded += this.OnSceneUnloaded;
             return;
         }
         Destroy(this.gameObject);
     }
     
     //Method to handle this scene getting unloaded
-    private void OnSceneUnloaded(Scene scene)
+    private void InvalidateInstance()
     {
-        if (scene == GameObject.GetScene(this.gameObject.GetInstanceID()))
-            GlobalLerpProcessor.instance = null;
+        GlobalLerpProcessor.instance = null;
     }
     
     //when instance is destroyed unbind from SceneManager.SceneUnloaded
     ~GlobalLerpProcessor()
     {
-        SceneManager.sceneUnloaded -= this.OnSceneUnloaded;
+        this.InvalidateInstance();
     }
 
     void Update()
     {
         this.lerpProcessor.Update();
+    }
+
+    public static bool RemovePackage(LerpPackage package)
+    {
+        return instance.lerpProcessor.RemovePackage(package);
     }
 }

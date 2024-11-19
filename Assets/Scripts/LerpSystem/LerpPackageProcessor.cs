@@ -53,4 +53,9 @@ public class LerpPackageProcessor
             pkg.finalCallback(pkg);
         }
     }
+
+    public bool RemovePackage(LerpPackage package)
+    {
+        return this.packageList.Remove(package);
+    }
 }

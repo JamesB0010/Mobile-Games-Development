@@ -5,7 +5,7 @@ using UnityEngine;
 
 public static class TypeLerpExtensions
 {
-    public static void LerpTo(this float value, float target, float timeToTake = 1.0f,
+    public static FloatLerpPackage LerpTo(this float value, float target, float timeToTake = 1.0f,
         Action<float> updateCallback = null, Action<LerpPackage> finishedCb = null, AnimationCurve animCurve = null)
     {
         updateCallback ??= (float val) => { Debug.Log(val);};
@@ -13,17 +13,19 @@ public static class TypeLerpExtensions
         finishedCb ??= pkg => { Debug.Log("Finished lerping"); };
 
         animCurve ??= GlobalLerpProcessor.linearCurve;
+
+        FloatLerpPackage package = new FloatLerpPackage(
+            value,
+            target,
+            updateCallback,
+            finishedCb,
+            timeToTake,
+            animCurve
+        );
         
-        GlobalLerpProcessor.AddLerpPackage(
-            new FloatLerpPackage(
-                value,
-                target,
-                updateCallback,
-                finishedCb,
-                timeToTake,
-                animCurve
-                )
-            );
+        GlobalLerpProcessor.AddLerpPackage(package);
+
+        return package;
     }
     
     public static void LerpTo(this Vector3 value, Vector3 target, float timeToTake = 1.0f,
