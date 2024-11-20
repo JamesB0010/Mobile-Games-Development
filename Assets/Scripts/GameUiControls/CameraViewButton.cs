@@ -26,15 +26,23 @@ public class CameraViewButton : MonoBehaviour, IPointerDownHandler, IPointerUpHa
                 cam.gameObject.SetActive(!value);
             }
             
+            firstPersonBoostCam.gameObject.SetActive(false);
+            thirdPersonBoostCam.gameObject.SetActive(false);
+            
             this.firstPerson = value;
         }
     }
 
     [SerializeField] private GameObject firstPersonCamera;
 
+    [SerializeField] private CinemachineVirtualCamera firstPersonBoostCam;
+
     [SerializeField] private CinemachineVirtualCamera[] firstPersonVirtualCameras;
+    
 
     [SerializeField] private GameObject thirdPersonCamera;
+
+    [SerializeField] private CinemachineVirtualCamera thirdPersonBoostCam;
 
     [SerializeField] private CinemachineVirtualCamera[] thirdPersonVirtualCameras;
     
