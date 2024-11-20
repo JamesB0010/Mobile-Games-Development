@@ -16,6 +16,7 @@ public class HeavyFireButton : MonoBehaviour, IPointerDownHandler, IPointerUpHan
 
     public void OnPointerDown(PointerEventData eventData)
     {
+        Debug.Log("Shoot");
         this.gunSystem.TryingToShootHeavy = true;
     }
 
