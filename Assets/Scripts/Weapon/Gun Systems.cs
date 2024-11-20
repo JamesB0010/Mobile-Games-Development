@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Serialization;
@@ -33,7 +34,7 @@ namespace Weapon
 
         [SerializeField]
         private FloatReference timeSpentLookingAtEnemy;
-        private void Start()
+        private IEnumerator Start()
         {
             this.aimingAtEnemy.SetValue(false);
             this.crosshairTargetFinder = GetComponent<CrosshairTargetFinder>();
@@ -43,7 +44,8 @@ namespace Weapon
 
             this.playerUpgradesState.SetPlayershipWithStoredLightWeapons(this.lightWeaponsList);
             this.playerUpgradesState.SetPlayershipWithStoredHeavyWeapons(this.heavyWeaponList);
-            
+
+            yield return new WaitForSeconds(0);
             this.HeavyGunsInitialied?.Invoke(this.HeavyWeaponsList);
         }
 
