@@ -9,8 +9,5 @@ public class PlayerMoneySaverReader : MonoBehaviour
     {
         float pMoney = PlayerPrefs.GetFloat(PlayerPrefsKeys.PlayerMoneyKey);
         this.playerMoney.SetValue(pMoney);
-        Debug.Log(pMoney);
     }
-
-
 }
