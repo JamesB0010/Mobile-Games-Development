@@ -1,47 +1,46 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 public class CrosshairPositioner : MonoBehaviour
 {
     private bool firstPerson = true;
 
-    [SerializeField] private Camera thirdPersonCamera;
+    [SerializeField] private Transform lookAtPoint; // World-space object
+    [SerializeField] private Camera thirdPersonCamera; // The camera rendering the object
+    [SerializeField] private RectTransform canvasRectTransform; // Canvas RectTransform
 
-    [SerializeField] private Transform lookAtPoint;
-
-    private RectTransform imageTransform;
-    
-    private Vector2 firstPersonCrosshairPosition;
+    private RectTransform imageTransform; // UI element RectTransform
 
     private void Start()
     {
         this.imageTransform = GetComponent<Image>().GetComponent<RectTransform>();
-        this.imageTransform.anchoredPosition = new Vector2(Screen.width, Screen.height) * 0.5f;
-        this.firstPersonCrosshairPosition = this.imageTransform.anchoredPosition;
     }
-
 
     private void Update()
     {
         if (this.firstPerson)
         {
-            this.imageTransform.anchoredPosition = this.firstPersonCrosshairPosition;
+            this.imageTransform.anchoredPosition = Vector2.zero;
         }
         else
         {
-            Vector3 screenPoint = this.thirdPersonCamera.WorldToViewportPoint(this.lookAtPoint.position);
+            Vector3 screenPoint = this.thirdPersonCamera.WorldToScreenPoint(this.lookAtPoint.position);
 
-            screenPoint.x *= Screen.width;
+            //Get the canvas size in pixels
+            Vector2 canvasSize = canvasRectTransform.sizeDelta;
 
-            screenPoint.y *= Screen.height;
+            // Map screen position to canvas local space
+            Vector2 canvasPosition = new Vector2(
+                screenPoint.x - (Screen.width / 2f),
+                screenPoint.y - (Screen.height / 2f)
+            );
 
-            imageTransform.anchoredPosition = screenPoint;
+            // Scale to match the canvas size
+            canvasPosition.x *= canvasSize.x / Screen.width;
+            canvasPosition.y *= canvasSize.y / Screen.height;
 
-            Debug.Log(screenPoint);
+            // Assign the new position
+            this.imageTransform.anchoredPosition = canvasPosition;
         }
     }
 
