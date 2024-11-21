@@ -6,8 +6,6 @@ using UnityEngine;
 
 public sealed class PlayerCamsManager : MonoBehaviour
 {
-    
-    
     [SerializeField] private GameObject firstPersonCamera;
 
     [SerializeField] private CinemachineVirtualCamera firstPersonBoostCam;
