@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class CrosshairPositioner : MonoBehaviour
@@ -10,6 +11,8 @@ public class CrosshairPositioner : MonoBehaviour
     [SerializeField] private RectTransform canvasRectTransform; // Canvas RectTransform
 
     private RectTransform imageTransform; // UI element RectTransform
+
+    [SerializeField] private UnityEvent<Vector2> CrosshairChangedPositionEvent = new UnityEvent<Vector2>();
 
     private void Start()
     {
@@ -41,6 +44,8 @@ public class CrosshairPositioner : MonoBehaviour
 
             // Assign the new position
             this.imageTransform.anchoredPosition = canvasPosition;
+            
+            this.CrosshairChangedPositionEvent?.Invoke(canvasPosition);
         }
     }
 

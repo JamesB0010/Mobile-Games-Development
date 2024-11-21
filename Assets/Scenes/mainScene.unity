@@ -6858,6 +6858,21 @@ MonoBehaviour:
   lookAtPoint: {fileID: 2114124659}
   thirdPersonCamera: {fileID: 1369053761}
   canvasRectTransform: {fileID: 678015518}
+  CrosshairChangedPositionEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1107839913}
+        m_TargetAssemblyTypeName: CrosshairTargetFinder, Assembly-CSharp
+        m_MethodName: OnCrosshairPositionChanged
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &442579530
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18074,6 +18089,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 9d1fcc19de7318343a8ad67f0fd75bbe, type: 3}
   m_PrefabInstance: {fileID: 1106936921}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1107839913 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1287365500066873420, guid: a1cbc9ce975b8684e8ab0fcf5e4f360e, type: 3}
+  m_PrefabInstance: {fileID: 1803987132}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa9789a09711cdf4ebe65f8501034432, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1122339683
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28315,6 +28341,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1287365500066873420, guid: a1cbc9ce975b8684e8ab0fcf5e4f360e, type: 3}
+      propertyPath: thirdPersonCamera
+      value: 
+      objectReference: {fileID: 1369053761}
+    - target: {fileID: 1287365500066873420, guid: a1cbc9ce975b8684e8ab0fcf5e4f360e, type: 3}
       propertyPath: raycastLayerMask.m_Bits
       value: 55
       objectReference: {fileID: 0}
@@ -28432,7 +28462,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3199795771566631354, guid: a1cbc9ce975b8684e8ab0fcf5e4f360e, type: 3}
       propertyPath: ChangeCameraView.m_PersistentCalls.m_Calls.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3199795771566631354, guid: a1cbc9ce975b8684e8ab0fcf5e4f360e, type: 3}
       propertyPath: ChangeCameraView.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -28443,11 +28473,19 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 437346927}
     - target: {fileID: 3199795771566631354, guid: a1cbc9ce975b8684e8ab0fcf5e4f360e, type: 3}
+      propertyPath: ChangeCameraView.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 1107839913}
+    - target: {fileID: 3199795771566631354, guid: a1cbc9ce975b8684e8ab0fcf5e4f360e, type: 3}
       propertyPath: ChangeCameraView.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3199795771566631354, guid: a1cbc9ce975b8684e8ab0fcf5e4f360e, type: 3}
       propertyPath: ChangeCameraView.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3199795771566631354, guid: a1cbc9ce975b8684e8ab0fcf5e4f360e, type: 3}
+      propertyPath: ChangeCameraView.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3199795771566631354, guid: a1cbc9ce975b8684e8ab0fcf5e4f360e, type: 3}
@@ -28459,6 +28497,10 @@ PrefabInstance:
       value: CameraViewChanged
       objectReference: {fileID: 0}
     - target: {fileID: 3199795771566631354, guid: a1cbc9ce975b8684e8ab0fcf5e4f360e, type: 3}
+      propertyPath: ChangeCameraView.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: OnCameraViewChanged
+      objectReference: {fileID: 0}
+    - target: {fileID: 3199795771566631354, guid: a1cbc9ce975b8684e8ab0fcf5e4f360e, type: 3}
       propertyPath: ChangeCameraView.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: PlayerCamsManager, Assembly-CSharp
       objectReference: {fileID: 0}
@@ -28467,11 +28509,19 @@ PrefabInstance:
       value: CrosshairPositioner, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 3199795771566631354, guid: a1cbc9ce975b8684e8ab0fcf5e4f360e, type: 3}
+      propertyPath: ChangeCameraView.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: CrosshairTargetFinder, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3199795771566631354, guid: a1cbc9ce975b8684e8ab0fcf5e4f360e, type: 3}
       propertyPath: ChangeCameraView.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 3199795771566631354, guid: a1cbc9ce975b8684e8ab0fcf5e4f360e, type: 3}
       propertyPath: ChangeCameraView.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 3199795771566631354, guid: a1cbc9ce975b8684e8ab0fcf5e4f360e, type: 3}
+      propertyPath: ChangeCameraView.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 3275013080770175168, guid: a1cbc9ce975b8684e8ab0fcf5e4f360e, type: 3}

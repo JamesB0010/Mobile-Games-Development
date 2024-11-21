@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
 public class CrosshairTargetFinder : MonoBehaviour
@@ -24,6 +25,8 @@ public class CrosshairTargetFinder : MonoBehaviour
     [SerializeField]
     private Camera PlayerCamera;
 
+    [SerializeField] private Camera thirdPersonCamera;
+
     [SerializeField]
     [Tooltip("This should be an object in your scene (maybe a sphere) " +
              "that will be used to keep track of where in world space your cursor is")]
@@ -35,28 +38,27 @@ public class CrosshairTargetFinder : MonoBehaviour
     [SerializeField]
     private LayerMask raycastLayerMask;
 
-    [SerializeField] private float minimumDistance;
-    
     private LatestHitData latestHitData = new LatestHitData();
 
     private EnemyBase target;
 
+
+    private bool firstPerson = true;
+
+    private Vector2 crosshairPosition;
     //methods
 
     private void Update()
     {
-        this.SampleCrosshairTarget();
-        Debug.Log(Vector3.Distance(transform.position, lookingAtPoint.position));
+        Vector3 cameraPosition = this.PlayerCamera.transform.position;
+        bool raycastHitCollider = Physics.Raycast(cameraPosition, this.PlayerCamera.transform.forward, out RaycastHit hit, float.MaxValue, this.raycastLayerMask);
+        
+        
+        this.SampleCrosshairTarget(cameraPosition, raycastHitCollider, hit);
     }
 
-    public void SampleCrosshairTarget()
+    private void SampleCrosshairTarget(Vector3 cameraPosition, bool raycastHitCollider, RaycastHit hit)
     {
-        Vector3 cameraPosition = this.PlayerCamera.transform.position;
-
-        bool raycastHitCollider = Physics.Raycast(cameraPosition, this.PlayerCamera.transform.forward, out RaycastHit hit, float.MaxValue,
-            this.raycastLayerMask);
-
-
         if (raycastHitCollider)
         {
             this.latestHitData.UpdateData(true, hit, hit.distance);
@@ -94,5 +96,15 @@ public class CrosshairTargetFinder : MonoBehaviour
     public RaycastHit GetLastHit()
     {
         return this.latestHitData.latestHit;
+    }
+
+    public void OnCameraViewChanged(bool firstPerson)
+    {
+        this.firstPerson = firstPerson;
+    }
+
+    public void OnCrosshairPositionChanged(Vector2 position)
+    {
+        this.crosshairPosition = position;
     }
 }
