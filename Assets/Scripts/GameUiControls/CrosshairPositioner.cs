@@ -9,18 +9,19 @@ public class CrosshairPositioner : MonoBehaviour
 {
     private bool firstPerson = true;
 
-    [SerializeField] private Camera uiCamera;
-    
+    [SerializeField] private Camera thirdPersonCamera;
+
     [SerializeField] private Transform lookAtPoint;
-    
+
     private RectTransform imageTransform;
     
-    private Vector3 firstPersonCrosshairPosition;
+    private Vector2 firstPersonCrosshairPosition;
 
     private void Start()
     {
         this.imageTransform = GetComponent<Image>().GetComponent<RectTransform>();
-        this.firstPersonCrosshairPosition = this.imageTransform.position;
+        this.imageTransform.anchoredPosition = new Vector2(Screen.width, Screen.height) * 0.5f;
+        this.firstPersonCrosshairPosition = this.imageTransform.anchoredPosition;
     }
 
 
@@ -28,23 +29,19 @@ public class CrosshairPositioner : MonoBehaviour
     {
         if (this.firstPerson)
         {
-            this.imageTransform.position = this.firstPersonCrosshairPosition;
+            this.imageTransform.anchoredPosition = this.firstPersonCrosshairPosition;
         }
         else
         {
-            Vector3 screenPosition = this.uiCamera.WorldToScreenPoint(this.lookAtPoint.position);
+            Vector3 screenPoint = this.thirdPersonCamera.WorldToViewportPoint(this.lookAtPoint.position);
 
-            Vector2 localPoint;
-            RectTransformUtility.ScreenPointToLocalPointInRectangle(
-                this.imageTransform.parent.GetComponent<RectTransform>(), // Parent RectTransform
-                screenPosition,
-                this.uiCamera,
-                out localPoint
-            );
-            
-            Debug.Log(localPoint);
+            screenPoint.x *= Screen.width;
 
-            this.imageTransform.anchoredPosition = localPoint;
+            screenPoint.y *= Screen.height;
+
+            imageTransform.anchoredPosition = screenPoint;
+
+            Debug.Log(screenPoint);
         }
     }
 

@@ -35,13 +35,18 @@ public class CrosshairTargetFinder : MonoBehaviour
     [SerializeField]
     private LayerMask raycastLayerMask;
 
+    [SerializeField] private float minimumDistance;
+    
     private LatestHitData latestHitData = new LatestHitData();
+
+    private EnemyBase target;
 
     //methods
 
     private void Update()
     {
         this.SampleCrosshairTarget();
+        Debug.Log(Vector3.Distance(transform.position, lookingAtPoint.position));
     }
 
     public void SampleCrosshairTarget()
