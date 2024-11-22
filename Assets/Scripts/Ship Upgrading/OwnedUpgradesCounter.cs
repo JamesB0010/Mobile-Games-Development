@@ -48,35 +48,45 @@ public class OwnedUpgradesCounter : MonoBehaviour
     public void OnLightUpgradeEquipped(EquipItem itemEquipper)
     {
         this.upgradesCount[this.cellHighlight.SelectedCell.Upgrade]--;
-        this.upgradesCount[itemEquipper.PreviouslyOwnedLightWeapon]++;
+        if(itemEquipper.PreviouslyOwnedLightWeapon != null)
+            this.upgradesCount[itemEquipper.PreviouslyOwnedLightWeapon]++;
+        
         this.SaveToJson();
     }
 
     public void OnHeavyUpgradeEquipped(EquipItem itemEquipper)
     {
         this.upgradesCount[this.cellHighlight.SelectedCell.Upgrade]--;
-        this.upgradesCount[itemEquipper.PreviouslyOwnedHeavyWeapon]++;
+        if(itemEquipper.PreviouslyOwnedHeavyWeapon != null)
+            this.upgradesCount[itemEquipper.PreviouslyOwnedHeavyWeapon]++;
+        
         this.SaveToJson();
     }
 
     public void OnArmourEquipped(EquipItem itemEquipper)
     {
         this.upgradesCount[this.cellHighlight.SelectedCell.Upgrade]--;
-        this.upgradesCount[itemEquipper.PreviouslyOwnedArmour]++;
+        if(itemEquipper.PreviouslyOwnedArmour != null)
+            this.upgradesCount[itemEquipper.PreviouslyOwnedArmour]++;
+        
         this.SaveToJson();
     }
 
     public void OnEnergySystemEquipped(EquipItem itemEquipper)
     {
         this.upgradesCount[this.cellHighlight.SelectedCell.Upgrade]--;
-        this.upgradesCount[itemEquipper.PreviouslyownedEnergySystem]++;
+        if(itemEquipper.PreviouslyownedEnergySystem != null)
+            this.upgradesCount[itemEquipper.PreviouslyownedEnergySystem]++;
+        
         this.SaveToJson();
     }
 
     public void OnEngineEquipped(EquipItem itemEquipper)
     {
         this.upgradesCount[this.cellHighlight.SelectedCell.Upgrade]--;
-        this.upgradesCount[itemEquipper.PreviouslyOwnedEngine]++ ;
+        if(itemEquipper.PreviouslyOwnedEngine != null)
+            this.upgradesCount[itemEquipper.PreviouslyOwnedEngine]++ ;
+        
         this.SaveToJson();
     }
     public int GetUpgradeCount(ShipItemUpgrade upgrade)

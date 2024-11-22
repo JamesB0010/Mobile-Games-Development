@@ -3,7 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using UnityEditor;
-using UnityEditor.VersionControl;
 using UnityEngine;
 
 public class EquipItem : ItemShopAction
@@ -49,8 +48,12 @@ public class EquipItem : ItemShopAction
         this.playerUpgradesState.EditLightWeaponAtIndex(cell.WeaponIndex, cell.Upgrade);
         SavedUpgradesJsonObject upgrades = new SavedUpgradesJsonObject(this.playerUpgradesState.LightGunsAbstract);
         string jsonString = JsonUtility.ToJson(upgrades, true);
-        File.WriteAllText(Application.dataPath + AssetDatabase.GetAssetPath(this.lightWeaponConfigurationSaveFile).Substring(6), jsonString);
+        
+        
+        File.WriteAllText(Application.dataPath + "/Resources/Json/lightWeaponConfiguration.txt", jsonString);
+        #if UNITY_EDITOR
         AssetDatabase.SaveAssetIfDirty(this.lightWeaponConfigurationSaveFile);
+        #endif
     }
 
     public void SaveHeavyWeaponAction(UpgradeCell cell)
@@ -58,8 +61,10 @@ public class EquipItem : ItemShopAction
         this.playerUpgradesState.EditHeavyWeaponAtIndex(cell.WeaponIndex, cell.Upgrade);
         SavedUpgradesJsonObject upgrades = new SavedUpgradesJsonObject(this.playerUpgradesState.HeavyGunsAbstract);
         string jsonString = JsonUtility.ToJson(upgrades, true);
-        File.WriteAllText(Application.dataPath + AssetDatabase.GetAssetPath(this.heavyWeaponConfigurationSaveFile).Substring(6), jsonString);
+        File.WriteAllText(Application.dataPath + "/Resources/Json/heavyWeaponConfiguration.txt", jsonString);
+        #if UNITY_EDITOR
         AssetDatabase.SaveAssetIfDirty(this.heavyWeaponConfigurationSaveFile);
+        #endif
     }
 
     public void SaveEngineAction(UpgradeCell cell)
@@ -67,8 +72,10 @@ public class EquipItem : ItemShopAction
         this.playerUpgradesState.EditEngine((EngineUpgrade)cell.Upgrade);
         SavedUpgradesJsonObject upgrade = new SavedUpgradesJsonObject(this.playerUpgradesState.EngineAbstract);
         string jsonString = JsonUtility.ToJson(upgrade, true);
-        File.WriteAllText(Application.dataPath + AssetDatabase.GetAssetPath(this.engineConfigutationFile).Substring(6),jsonString);
+        File.WriteAllText(Application.dataPath + "/Resources/Json/engineConfiguration.txt",jsonString);
+        #if UNITY_EDITOR
         AssetDatabase.SaveAssetIfDirty(this.engineConfigutationFile);
+        #endif
     }
 
     public void SaveEnergySystemAction(UpgradeCell cell)
@@ -76,8 +83,10 @@ public class EquipItem : ItemShopAction
         this.playerUpgradesState.EditEnergySystem((EnergySystemsUpgrade)cell.Upgrade);
         SavedUpgradesJsonObject upgrade = new SavedUpgradesJsonObject(this.playerUpgradesState.EnergySystemAbstract);
         string jsonString = JsonUtility.ToJson(upgrade, true);
-        File.WriteAllText(Application.dataPath + AssetDatabase.GetAssetPath(this.energySystemConfigurationFile).Substring(6), jsonString);
+        File.WriteAllText(Application.dataPath + "/Resources/Json/energySystemConfiguration.txt", jsonString);
+        #if UNITY_EDITOR
         AssetDatabase.SaveAssetIfDirty(this.energySystemConfigurationFile);
+        #endif
     }
 
     public void SaveArmourAction(UpgradeCell cell)
@@ -85,8 +94,10 @@ public class EquipItem : ItemShopAction
         this.playerUpgradesState.EditArmour((ArmourUpgrade)cell.Upgrade);
         SavedUpgradesJsonObject upgrade = new SavedUpgradesJsonObject(this.playerUpgradesState.ArmourAbstract);
         string jsonString = JsonUtility.ToJson(upgrade, true);
-        File.WriteAllText(Application.dataPath + AssetDatabase.GetAssetPath(this.armourConfigurationSaveFile).Substring(6), jsonString);
+        File.WriteAllText(Application.dataPath + "/Resources/Json/armourConfiguration.txt", jsonString);
+        #if UNITY_EDITOR
         AssetDatabase.SaveAssetIfDirty(this.armourConfigurationSaveFile);
+        #endif
     }
 
     private void SaveToJson(UpgradeCell cell)

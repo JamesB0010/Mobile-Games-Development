@@ -41,15 +41,11 @@ public class UpgradesCounterJsonObject
 
     public void SaveData(TextAsset saveFile)
     {
-        string saveFilePath = AssetDatabase.GetAssetPath(saveFile);
-        saveFilePath = saveFilePath.Substring(6);
-
-        File.WriteAllText(Application.dataPath + saveFilePath, JsonUtility.ToJson(this, true));
-
+        File.WriteAllText(Application.dataPath + "/Resources/Json/" + saveFile.name + ".txt", JsonUtility.ToJson(this, true));
+        
         #if UNITY_EDITOR
         AssetDatabase.Refresh();
         #endif
-        Debug.Log("Saved Upgrades Counter");
     }
 
     public void GenerateDefaultSafeFile(TextAsset jsonSaveFile)
