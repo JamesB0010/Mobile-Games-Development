@@ -55,10 +55,9 @@ namespace Weapon
                 return;
 
 
-            bool aimingAtAnyEnemy = IsAimingAtEnemy();
-            if (aimingAtAnyEnemy)
+            if (this.IsAimingAtEnemy())
             {
-                AimingAtEnemyLogic();
+                this.AimingAtEnemyLogic();
             }
         }
 

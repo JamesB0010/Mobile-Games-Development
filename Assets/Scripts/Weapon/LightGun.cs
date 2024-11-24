@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-[CreateAssetMenu(menuName = "Items/Guns/Light Gun")]
+[CreateAssetMenu(menuName = "Items/Guns/Player/Light Gun")]
 public class LightGun : Gun
 {
     [SerializeField] private float energyExpensePerShot;

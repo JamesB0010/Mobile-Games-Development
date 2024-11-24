@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class CrosshairTargetFinder : MonoBehaviour
 {
@@ -21,11 +22,11 @@ public class CrosshairTargetFinder : MonoBehaviour
     }
 
     //Attributes
+    [FormerlySerializedAs("PlayerCamera")]
     [Header("Mandatory Stuff")]
     [SerializeField]
-    private Camera PlayerCamera;
-
-    [SerializeField] private Camera thirdPersonCamera;
+    //By eye i mean the point/transform that the target finder views/samples the world from
+    private Transform EyeTransform;
 
     [SerializeField]
     [Tooltip("This should be an object in your scene (maybe a sphere) " +
@@ -42,7 +43,6 @@ public class CrosshairTargetFinder : MonoBehaviour
 
     private EnemyBase target;
 
-
     private bool firstPerson = true;
 
     private Vector2 crosshairPosition;
@@ -50,8 +50,8 @@ public class CrosshairTargetFinder : MonoBehaviour
 
     private void Update()
     {
-        Vector3 cameraPosition = this.PlayerCamera.transform.position;
-        bool raycastHitCollider = Physics.Raycast(cameraPosition, this.PlayerCamera.transform.forward, out RaycastHit hit, float.MaxValue, this.raycastLayerMask);
+        Vector3 cameraPosition = this.EyeTransform.position;
+        bool raycastHitCollider = Physics.Raycast(cameraPosition, this.EyeTransform.forward, out RaycastHit hit, float.MaxValue, this.raycastLayerMask);
         
         
         this.SampleCrosshairTarget(cameraPosition, raycastHitCollider, hit);
@@ -63,6 +63,7 @@ public class CrosshairTargetFinder : MonoBehaviour
         {
             this.latestHitData.UpdateData(true, hit, hit.distance);
             SetLookAtPointPosition(hit);
+            Debug.Log("hit something: " + hit.collider.gameObject.name);
         }
         else
         {
@@ -80,7 +81,7 @@ public class CrosshairTargetFinder : MonoBehaviour
     private void InferSetLookAtPointPosition(Vector3 cameraPosition)
     {
         this.lookingAtPoint.transform.position =
-            cameraPosition + (this.PlayerCamera.transform.forward * this.latestHitData.lastValidDistance);
+            cameraPosition + (this.EyeTransform.forward * this.latestHitData.lastValidDistance);
     }
 
     public Vector3 GetLatestHitPosition()

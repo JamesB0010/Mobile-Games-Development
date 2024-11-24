@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1904863700040533921}
   - component: {fileID: 7056405623187739976}
   - component: {fileID: 4073691440568152663}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Enemy Harb
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -16812,6 +16812,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: f64750b672ddd8649914b68059851db4, type: 3}
       propertyPath: m_Name
       value: harb
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f64750b672ddd8649914b68059851db4, type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

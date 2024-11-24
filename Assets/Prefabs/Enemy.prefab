@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6999675460621940730}
   - component: {fileID: 1904863700040533921}
   - component: {fileID: 7056405623187739976}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Enemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -16513,9 +16513,29 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -6184074966289106077, guid: a4e2bf95dab9cb74faefbf64f48fca1b, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: -6077621847447571854, guid: a4e2bf95dab9cb74faefbf64f48fca1b, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: -4873331041641752111, guid: a4e2bf95dab9cb74faefbf64f48fca1b, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: -1032341574929415737, guid: a4e2bf95dab9cb74faefbf64f48fca1b, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: a4e2bf95dab9cb74faefbf64f48fca1b, type: 3}
       propertyPath: m_Name
       value: Northstar Ship
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a4e2bf95dab9cb74faefbf64f48fca1b, type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
