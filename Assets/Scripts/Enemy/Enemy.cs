@@ -35,6 +35,7 @@ public class Enemy : EnemyBase
     private void Start()
     {
         this.directionChangeTimeKeeper = new PhasedEventTimeKeeper(this.desiredDirectionChangeInterval);
+        this.OnDeathReaction = this.OnDeath;
     }
 
     private void Update()
@@ -84,7 +85,7 @@ public class Enemy : EnemyBase
         this.velocity = Vector3.ClampMagnitude(this.velocity, this.maxVelocity);
     }
 
-    protected override void OnDeath()
+    private void OnDeath()
     {
         Instantiate(this.DeathParticle, transform.position, Quaternion.identity);
         this.enemiesManager.EnemyDied();

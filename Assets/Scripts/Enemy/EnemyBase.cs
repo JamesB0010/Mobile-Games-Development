@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,6 +7,11 @@ public class EnemyBase : MonoBehaviour
 {
     [SerializeField]
     private float health = 100.0f;
+
+    protected Action OnDeathReaction = null;
+
+
+    private bool dead = false;
 
     protected float Health
     {
@@ -28,8 +34,12 @@ public class EnemyBase : MonoBehaviour
         this.Health = this.health - damageToTake;
     }
 
-    protected virtual void OnDeath()
+    private void OnDeath()
     {
+        if (this.dead)
+            return;
+        this.dead = true;
 
+        this.OnDeathReaction?.Invoke();
     }
 }

@@ -50,6 +50,8 @@ public class Harb : EnemyBase
             turret.DeathEvent += this.TurretDied;
             this.turrentsLeft++;
         }
+
+        base.OnDeathReaction = this.OnDeath;
     }
 
     private IEnumerator DramaticDeath()
@@ -106,7 +108,7 @@ public class Harb : EnemyBase
         this.velocity = Vector3.ClampMagnitude(this.velocity, this.maxVelocity);
     }
 
-    protected override void OnDeath()
+    private void OnDeath()
     {
         Instantiate(this.DeathParticle, transform.position, Quaternion.identity);
         Destroy(this.gameObject);

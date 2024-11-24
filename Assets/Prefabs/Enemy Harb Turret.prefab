@@ -16449,6 +16449,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 100
   DeathParticle: {fileID: 3882828615210567630, guid: 7a8e966794bfadc459366685b18688c9, type: 3}
+  maxEngagementDistance: 1000
+  rotationSpeed: 1000
 --- !u!1001 &7642429607312176073
 PrefabInstance:
   m_ObjectHideFlags: 0

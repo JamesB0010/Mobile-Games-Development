@@ -15,6 +15,10 @@ public class GameManager : MonoBehaviour
     [Header("Enemy Management")]
     [SerializeField] private ActiveEnemiesManager activeEnemiesManager;
 
+    [SerializeField] private Transform player;
+
+    public Transform Player => this.player;
+
 
     private void Start()
     {

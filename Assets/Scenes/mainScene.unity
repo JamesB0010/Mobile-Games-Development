@@ -15490,18 +15490,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 274421527}
     m_Modifications:
-    - target: {fileID: 4073691440568152663, guid: bd6ad2fb5b766f34394d89e53c48cfd3, type: 3}
-      propertyPath: speed
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 4073691440568152663, guid: bd6ad2fb5b766f34394d89e53c48cfd3, type: 3}
-      propertyPath: rotationSpeed
-      value: 0.04
-      objectReference: {fileID: 0}
-    - target: {fileID: 4073691440568152663, guid: bd6ad2fb5b766f34394d89e53c48cfd3, type: 3}
-      propertyPath: desiredDirectionChangeInterval
-      value: 15
-      objectReference: {fileID: 0}
     - target: {fileID: 5572911970215649981, guid: bd6ad2fb5b766f34394d89e53c48cfd3, type: 3}
       propertyPath: m_LocalPosition.x
       value: -334
@@ -22626,6 +22614,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemySpawnManager: {fileID: 498202304}
   activeEnemiesManager: {fileID: 535710525}
+  player: {fileID: 2146181428}
 --- !u!4 &1461499936
 Transform:
   m_ObjectHideFlags: 0
