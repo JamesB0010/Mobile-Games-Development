@@ -6,6 +6,11 @@ dependencies {
 **DEPS**}
 
 android {
+packagingOptions {
+        jniLibs {
+            useLegacyPackaging = true
+        }
+    }
     ndkPath "**NDKPATH**"
 
     compileSdkVersion **APIVERSION**
