@@ -22,6 +22,8 @@ public class ResetScriptableObjects : ScriptableObject
 
     [SerializeField] private TextAsset OwnedUpgradesCounterJsonSaveFile;
 
+    [SerializeField] private FloatReference playerMoney;
+    
     [MenuItem("Custom/Reset Scriptable Objects and Save Files")]
     //This resets the scriptable objects which need to be resetted for the game to be built
     public static void ResetObjects()
@@ -47,7 +49,9 @@ public class ResetScriptableObjects : ScriptableObject
         SaveEngineStateJsonFile(instance);
 
         SaveEnergySystemStateJsonFile(instance);
-
+        
+        instance.playerMoney.SetValue(0);
+        
         new UpgradesCounterJsonObject().GenerateDefaultSafeFile(instance.OwnedUpgradesCounterJsonSaveFile);
     }
 

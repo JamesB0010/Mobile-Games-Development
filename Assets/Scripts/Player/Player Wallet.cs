@@ -21,7 +21,10 @@ namespace Player
 
         private void OnSceneChange(Scene scene, Scene sceneTo)
         {
-            PlayerPrefs.SetFloat(PlayerPrefsKeys.PlayerMoneyKey, (float)this.money.GetValue());
+            //PlayerPrefs.SetFloat(PlayerPrefsKeys.PlayerMoneyKey, (float)this.money.GetValue());
+            
+            
+            //todo replace with save game approach
         }
 
         private void OnDestroy()
