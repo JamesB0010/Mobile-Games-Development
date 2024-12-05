@@ -1,5 +1,5 @@
 {
     "upgradeReferences": [
-        "MediumHighEnergy"
+        "DefaultArmour"
     ]
 }

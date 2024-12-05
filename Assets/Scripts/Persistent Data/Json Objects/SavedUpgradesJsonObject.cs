@@ -23,7 +23,7 @@ public struct SavedUpgradesJsonObject
     }
 
 
-    public List<ShipItemUpgrade> GetSavedGuns()
+    public List<ShipItemUpgrade> GetSavedUpgrades()
     {
         List<ShipItemUpgrade> upgrades = new List<ShipItemUpgrade>();
 

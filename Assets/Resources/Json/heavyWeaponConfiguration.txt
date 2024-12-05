@@ -3,6 +3,6 @@
         "NoGun",
         "NoGun",
         "NoGun",
-        "AmmoMediumDamageLow"
+        "NoGun"
     ]
 }

@@ -10,7 +10,7 @@ using UnityEngine.Events;
 
 public class SaveGameInteractor : MonoBehaviour
 {
-    [SerializeField] private UnityEvent<string> SavedGameReadEvent = new UnityEvent<string>();
+    public UnityEvent<string> SavedGameReadEvent = new UnityEvent<string>();
     public void ReadSavedGame()
     {
         ISavedGameClient savedGameClient = PlayGamesPlatform.Instance.SavedGame;
@@ -39,7 +39,7 @@ public class SaveGameInteractor : MonoBehaviour
         if (status == SavedGameRequestStatus.Success)
         {
             //handle processing the byte array data
-            this.SavedGameReadEvent?.Invoke(Encoding.ASCII.GetString(data));
+            this.SavedGameReadEvent?.Invoke(Encoding.UTF8.GetString(data));
         }
         else
         {
