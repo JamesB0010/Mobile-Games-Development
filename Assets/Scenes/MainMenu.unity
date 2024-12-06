@@ -157,7 +157,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 59.388184, y: -22.709991}
+  m_AnchoredPosition: {x: 59.388184, y: -22.70996}
   m_SizeDelta: {x: 1938.7769, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &38470204
@@ -1144,7 +1144,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 402199823}
         m_TargetAssemblyTypeName: SaveGameTest, Assembly-CSharp
-        m_MethodName: SaveAllConfigFiles
+        m_MethodName: SaveAllConfigFilesLocal
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1525,7 +1525,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 027c96db71037464e9d7a21a9a2dcf84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  saveGameInteractor: {fileID: 1508331330}
+  saveGameInteractor: {fileID: 0}
   armourConfigFile: {fileID: 4900000, guid: 74b27149430c0d04eb9c06a405c0bf53, type: 3}
   energySystemConfigFile: {fileID: 4900000, guid: 8da2cd7e92868ce49b1df1629d5e95bc,
     type: 3}
@@ -1892,7 +1892,6 @@ Transform:
   - {fileID: 1678637230}
   - {fileID: 1380071424}
   - {fileID: 1415840621}
-  - {fileID: 1508331329}
   - {fileID: 402199822}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3916,7 +3915,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 402199823}
         m_TargetAssemblyTypeName: SaveGameTest, Assembly-CSharp
-        m_MethodName: TestSaveGame
+        m_MethodName: ReadSaveGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4055,65 +4054,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1445461502}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1508331328
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1508331329}
-  - component: {fileID: 1508331330}
-  m_Layer: 0
-  m_Name: Save Game Interactor
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1508331329
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1508331328}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 536381700}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1508331330
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1508331328}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ccb889bf8a1087438289eb5a1b16646, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  SavedGameReadEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 402199823}
-        m_TargetAssemblyTypeName: SaveGameTest, Assembly-CSharp
-        m_MethodName: OnSavedGameRead
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!1 &1539799626
 GameObject:
   m_ObjectHideFlags: 0
@@ -5148,7 +5088,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 402199823}
         m_TargetAssemblyTypeName: SaveGameTest, Assembly-CSharp
-        m_MethodName: ReadSaveData
+        m_MethodName: ReadSaveGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

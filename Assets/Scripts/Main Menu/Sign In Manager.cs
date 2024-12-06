@@ -27,7 +27,6 @@ public class SignInManager : MonoBehaviour
      {
          if (status == SignInStatus.Success)
          {
-             //signed in
              this.SignInSucess();
          }
          else
@@ -45,12 +44,10 @@ public class SignInManager : MonoBehaviour
      {
          if (status == SignInStatus.Success)
          {
-             //yay
              this.SignInSucess();
          }
          else
          {
-             //cooked
              this.SignInFailedEvent?.Invoke();
          }
      }   

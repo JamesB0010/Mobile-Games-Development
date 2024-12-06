@@ -7,9 +7,7 @@ public class PlayerMoneySaverReader : MonoBehaviour
     [SerializeField] private FloatReference playerMoney;
     void Start()
     {
-        //float pMoney = PlayerPrefs.GetFloat(PlayerPrefsKeys.PlayerMoneyKey);
-        //this.playerMoney.SetValue(pMoney);
-        
-        //todo replace with save game approach
+        float pMoney = FindObjectOfType<BuzzardGameData>().GetPlayerMoney();
+        this.playerMoney.SetValue(pMoney);
     }
 }

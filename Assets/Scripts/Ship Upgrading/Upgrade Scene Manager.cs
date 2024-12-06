@@ -19,9 +19,11 @@ public class ItemShopActionsManager : MonoBehaviour
     [SerializeField] private UnityEvent CellPurchasedEvent = new UnityEvent();
 
     [SerializeField] private UnityEvent CellEquippedEvent = new UnityEvent();
+    private BuzzardGameData gameData;
 
     private void Start()
     {
+        gameData = FindObjectOfType<BuzzardGameData>();
         this.purchaseItemShopAction.SelectedCellPurchased += this.CellPurchased;
         this.equipItemShopAction.SelectedCellEquipped += this.CellEquipped;
     }
@@ -48,6 +50,7 @@ public class ItemShopActionsManager : MonoBehaviour
 
     public void CellPurchased()
     {
+        this.gameData.Save();
         this.CellPurchasedEvent?.Invoke();
     }
 

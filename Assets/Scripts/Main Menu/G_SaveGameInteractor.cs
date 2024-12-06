@@ -5,12 +5,73 @@ using System.Text;
 using GooglePlayGames;
 using GooglePlayGames.BasicApi;
 using GooglePlayGames.BasicApi.SavedGame;
+using Unity.VisualScripting.Dependencies.NCalc;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class SaveGameInteractor : MonoBehaviour
+public class G_SaveGameInteractor 
 {
-    public UnityEvent<string> SavedGameReadEvent = new UnityEvent<string>();
+    //Statics
+    private static G_SaveGameInteractor instance = null;
+
+    public static G_SaveGameInteractor Instance
+    {
+        get
+        {
+            if (!PlayGamesPlatform.Instance.IsAuthenticated())
+                throw new Exception("User not authenticated cannot create save game interactor");   
+            
+            return instance ??= new G_SaveGameInteractor();
+        }
+    }
+
+    //this is used to hold callbacks if our instance doesnt exist yet.
+    //we only want to make this instance using CreateInstance which is only called after our user has been authenticated
+    private static List<Action<string>> readEventCallbackWaitingList;
+    
+    public static void AddReadEventCallback(Action<string> callback)
+    {
+        if (instance != null)
+        {
+            instance.SavedGameReadEvent += callback;
+        }
+        else
+        {
+            readEventCallbackWaitingList.Add(callback);
+        }
+    }
+
+    public static void RemoveReadEventCallback(Action<string> callback)
+    {
+        if (instance == null)
+            return;
+
+        instance.SavedGameReadEvent -= callback;
+    }
+    
+    
+    
+    
+    
+    
+    
+    //members
+    private event Action<string> SavedGameReadEvent;
+    private G_SaveGameInteractor()
+    {
+        AddListenersFromWaitingList();
+    }
+
+    private void AddListenersFromWaitingList()
+    {
+        for (int i = 0; i < readEventCallbackWaitingList.Count; ++i)
+        {
+            this.SavedGameReadEvent += readEventCallbackWaitingList[i];
+        }
+
+        readEventCallbackWaitingList.Clear();
+    }
+
     public void ReadSavedGame()
     {
         ISavedGameClient savedGameClient = PlayGamesPlatform.Instance.SavedGame;
@@ -22,9 +83,6 @@ public class SaveGameInteractor : MonoBehaviour
         if (status == SavedGameRequestStatus.Success)
         {
             this.LoadGameData(game);
-        }
-        else
-        {
         }
     }
 
@@ -40,9 +98,6 @@ public class SaveGameInteractor : MonoBehaviour
         {
             //handle processing the byte array data
             this.SavedGameReadEvent?.Invoke(Encoding.UTF8.GetString(data));
-        }
-        else
-        {
         }
     }
 
@@ -68,10 +123,6 @@ public class SaveGameInteractor : MonoBehaviour
         if (status == SavedGameRequestStatus.Success)
         {
             //handle writing of saved game
-        }
-        else
-        {
-            //handle error
         }
     }
 }

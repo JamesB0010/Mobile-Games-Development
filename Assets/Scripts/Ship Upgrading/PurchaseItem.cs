@@ -39,7 +39,5 @@ public class PurchaseItem : ItemShopAction
     {
         float PlayerMoneyFloat = (float)this.playerMoney.GetValue();
         this.playerMoney.SetValue(PlayerMoneyFloat - amountToDeduct);
-        //PlayerPrefs.SetFloat(PlayerPrefsKeys.PlayerMoneyKey, (float)this.playerMoney.GetValue());
-        //todo replace with save game approach
     }
 }

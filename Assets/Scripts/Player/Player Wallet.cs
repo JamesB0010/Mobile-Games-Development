@@ -13,42 +13,18 @@ namespace Player
 
         [SerializeField] private UnityEvent<string> OnMoneyChanged = new UnityEvent<string>();
 
+        private BuzzardGameData gameData;
+
         public void Start()
         {
             this.OnMoneyChanged?.Invoke("Credits: " + (float)this.money.GetValue());
-            SceneManager.activeSceneChanged += this.OnSceneChange;
-        }
-
-        private void OnSceneChange(Scene scene, Scene sceneTo)
-        {
-            //PlayerPrefs.SetFloat(PlayerPrefsKeys.PlayerMoneyKey, (float)this.money.GetValue());
-            
-            
-            //todo replace with save game approach
-        }
-
-        private void OnDestroy()
-        {
-            SceneManager.activeSceneChanged -= this.OnSceneChange;
+            this.gameData = FindObjectOfType<BuzzardGameData>();
         }
 
         public void OnEnemyKilled()
         {
             this.money += this.moneyPerEnnemy;
             this.OnMoneyChanged?.Invoke("Credits: " + (float)this.money.GetValue());
-        }
-
-        public void OnApplicationQuit()
-        {
-            PlayerPrefs.SetFloat(PlayerPrefsKeys.PlayerMoneyKey, (float)this.money.GetValue());
-        }
-
-        public void OnApplicationFocus(bool hasFocus)
-        {
-            if (hasFocus)
-            {
-                PlayerPrefs.SetFloat(PlayerPrefsKeys.PlayerMoneyKey, (float)this.money.GetValue());
-            }
         }
     }
 }

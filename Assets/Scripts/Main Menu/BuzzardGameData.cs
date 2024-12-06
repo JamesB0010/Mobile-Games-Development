@@ -5,11 +5,15 @@ using System.IO;
 using System.Text;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class SaveGameTest : MonoBehaviour
+/// <summary>
+/// This is present in the first scene and is not destroyed on load.
+/// it should be assumed that an instance of this class will be available in all game scenes
+/// as it will be created in the main menu
+/// </summary>
+public class BuzzardGameData : MonoBehaviour
 {
-    [SerializeField] private SaveGameInteractor saveGameInteractor;
-
     [SerializeField] private TextAsset armourConfigFile,
         energySystemConfigFile,
         engineConfigFile,
@@ -21,23 +25,63 @@ public class SaveGameTest : MonoBehaviour
 
     [SerializeField] private TextMeshProUGUI textElement, working1, working2, working3;
 
+    private static BuzzardGameData instance = null;
+
+    //has the save game been fetched yet?
+    private bool saveGameFetched = false;
+    
+    private GameSaveData saveGameData;
+
+    private void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else
+        {
+            Destroy(this.gameObject);
+        }
+    }
+
+    private void Start()
+    {
+        G_SaveGameInteractor.AddReadEventCallback(this.OnSavedGameRead);
+        
+        DontDestroyOnLoad(this.gameObject);
+
+        SceneManager.activeSceneChanged += ((sceneFrom, sceneTo) =>
+        {
+            this.SaveAllConfigFilesLocal();
+            this.SaveLocalSaveGameToCloud();
+        });
+
+    }
+
+    private void OnDestroy()
+    {
+        G_SaveGameInteractor.RemoveReadEventCallback(this.OnSavedGameRead);
+    }
+
     public void OnSavedGameRead(string data)
     {
+        this.saveGameFetched = true;
+        
         textElement.text = data;
         if (data == "")
         {
             //First time reading the data create defaults
-            saveGameInteractor.SaveGame(Encoding.UTF8.GetBytes(this.CollapseConfigFilesToString()), TimeSpan.Zero);
+            G_SaveGameInteractor.Instance.SaveGame(Encoding.UTF8.GetBytes(this.CollapseConfigFilesToString()), TimeSpan.Zero);
         }
         else
         {
             //parse data and update config files
-            var saveGameData = JsonUtility.FromJson<GameSaveData>(data);
+            saveGameData = JsonUtility.FromJson<GameSaveData>(data);
             
             __debug__UpdateUi(saveGameData);
 
             //Save to the different text files
-            this.SaveAllConfigFiles(saveGameData);
+            this.SaveAllConfigFilesLocal(saveGameData);
         }
     }
 
@@ -59,11 +103,7 @@ public class SaveGameTest : MonoBehaviour
         }
     }
 
-    public void ReadSaveData()
-    {
-        saveGameInteractor.ReadSavedGame();
-    }
-    public void SaveAllConfigFiles()
+    public void SaveAllConfigFilesLocal()
     {
         var saveGameData = JsonUtility.FromJson<GameSaveData>(this.CollapseConfigFilesToString());
         //Save to the different text files
@@ -75,11 +115,9 @@ public class SaveGameTest : MonoBehaviour
         File.WriteAllText(Application.dataPath + "/Resources/Json/ownedUpgradesCounter.txt",JsonUtility.ToJson(saveGameData.ownedUpgrades, true));
         this.playerMoney.SetValue(saveGameData.playerMoney);
         saveGameData.WriteToSaveGameJsonFile();
-
-        saveGameInteractor.SaveGame(Encoding.UTF8.GetBytes(Resources.Load<TextAsset>("Json/SaveGame").text),TimeSpan.Zero);
     }
 
-    public void SaveAllConfigFiles(GameSaveData saveGameData)
+    private void SaveAllConfigFilesLocal(GameSaveData saveGameData)
     {
         //Save to the different text files
         File.WriteAllText(Application.dataPath + "/Resources/Json/armourConfiguration.txt", JsonUtility.ToJson(saveGameData.configs[0], true));
@@ -90,15 +128,28 @@ public class SaveGameTest : MonoBehaviour
         File.WriteAllText(Application.dataPath + "/Resources/Json/ownedUpgradesCounter.txt", JsonUtility.ToJson(saveGameData.ownedUpgrades, true));
         this.playerMoney.SetValue(saveGameData.playerMoney);
         saveGameData.WriteToSaveGameJsonFile();
+    }
 
-        saveGameInteractor.SaveGame(Encoding.UTF8.GetBytes(Resources.Load<TextAsset>("Json/SaveGame").text), TimeSpan.Zero);
+    private void SaveLocalSaveGameToCloud()
+    {
+        G_SaveGameInteractor.Instance.SaveGame(Encoding.UTF8.GetBytes(Resources.Load<TextAsset>("Json/SaveGame").text), TimeSpan.Zero);
+    }
+
+    public void Save()
+    {
+        this.SaveAllConfigFilesLocal();
+        this.SaveLocalSaveGameToCloud();
     }
 
     //This is called once the user has been authenticated
-    public void TestSaveGame()
+    public void ReadSaveGame()
     {
-        saveGameInteractor.SaveGame(Encoding.UTF8.GetBytes(this.CollapseConfigFilesToString()), TimeSpan.Zero);
-        saveGameInteractor.ReadSavedGame();
+        G_SaveGameInteractor.Instance.ReadSavedGame();
+    }
+
+    public float GetPlayerMoney()
+    {
+        return this.saveGameData.playerMoney;
     }
 
     private string CollapseConfigFilesToString()
