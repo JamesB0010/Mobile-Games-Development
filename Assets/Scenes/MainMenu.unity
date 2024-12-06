@@ -1144,7 +1144,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 402199823}
         m_TargetAssemblyTypeName: SaveGameTest, Assembly-CSharp
-        m_MethodName: SaveCollapsedConfigFiles
+        m_MethodName: SaveAllConfigFiles
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

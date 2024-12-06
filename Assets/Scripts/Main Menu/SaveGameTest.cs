@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using System.Text;
 using TMPro;
 using UnityEngine;
@@ -33,20 +34,28 @@ public class SaveGameTest : MonoBehaviour
             //parse data and update config files
             var saveGameData = JsonUtility.FromJson<GameSaveData>(data);
             
-            if (saveGameData.configs != null)
-            {
-                this.working1.gameObject.SetActive(true);
-            }
+            __debug__UpdateUi(saveGameData);
 
-            if (saveGameData.ownedUpgrades != null)
-            {
-                this.working2.gameObject.SetActive(true);
-            }
+            //Save to the different text files
+            this.SaveAllConfigFiles(saveGameData);
+        }
+    }
 
-            if (saveGameData.playerMoney == 0)
-            {
-                this.working3.gameObject.SetActive(true);
-            }
+    private void __debug__UpdateUi(GameSaveData saveGameData)
+    {
+        if (saveGameData.configs[0].upgradeReferences != null)
+        {
+            this.working1.gameObject.SetActive(true);
+        }
+
+        if (saveGameData.ownedUpgrades != null)
+        {
+            this.working2.gameObject.SetActive(true);
+        }
+
+        if (saveGameData.playerMoney == 0)
+        {
+            this.working3.gameObject.SetActive(true);
         }
     }
 
@@ -54,18 +63,38 @@ public class SaveGameTest : MonoBehaviour
     {
         saveGameInteractor.ReadSavedGame();
     }
-    public void SaveCollapsedConfigFiles()
+    public void SaveAllConfigFiles()
     {
         var saveGameData = JsonUtility.FromJson<GameSaveData>(this.CollapseConfigFilesToString());
-        Debug.Log(saveGameData.configs);
-        Debug.Log(saveGameData.ownedUpgrades);
-        Debug.Log(saveGameData.playerMoney);
-        
+        //Save to the different text files
+        File.WriteAllText(Application.dataPath + "/Resources/Json/armourConfiguration.txt", JsonUtility.ToJson(saveGameData.configs[0], true));
+        File.WriteAllText(Application.dataPath + "/Resources/Json/energySystemConfiguration.txt",JsonUtility.ToJson(saveGameData.configs[1], true));
+        File.WriteAllText(Application.dataPath + "/Resources/Json/engineConfiguration.txt", JsonUtility.ToJson(saveGameData.configs[2], true));
+        File.WriteAllText(Application.dataPath + "/Resources/Json/heavyWeaponConfiguration.txt", JsonUtility.ToJson(saveGameData.configs[3], true));
+        File.WriteAllText(Application.dataPath + "/Resources/Json/lightWeaponConfiguration.txt", JsonUtility.ToJson(saveGameData.configs[4], true));
+        File.WriteAllText(Application.dataPath + "/Resources/Json/ownedUpgradesCounter.txt",JsonUtility.ToJson(saveGameData.ownedUpgrades, true));
+        this.playerMoney.SetValue(saveGameData.playerMoney);
         saveGameData.WriteToSaveGameJsonFile();
-        
+
         saveGameInteractor.SaveGame(Encoding.UTF8.GetBytes(Resources.Load<TextAsset>("Json/SaveGame").text),TimeSpan.Zero);
     }
 
+    public void SaveAllConfigFiles(GameSaveData saveGameData)
+    {
+        //Save to the different text files
+        File.WriteAllText(Application.dataPath + "/Resources/Json/armourConfiguration.txt", JsonUtility.ToJson(saveGameData.configs[0], true));
+        File.WriteAllText(Application.dataPath + "/Resources/Json/energySystemConfiguration.txt", JsonUtility.ToJson(saveGameData.configs[1], true));
+        File.WriteAllText(Application.dataPath + "/Resources/Json/engineConfiguration.txt", JsonUtility.ToJson(saveGameData.configs[2], true));
+        File.WriteAllText(Application.dataPath + "/Resources/Json/heavyWeaponConfiguration.txt", JsonUtility.ToJson(saveGameData.configs[3], true));
+        File.WriteAllText(Application.dataPath + "/Resources/Json/lightWeaponConfiguration.txt", JsonUtility.ToJson(saveGameData.configs[4], true));
+        File.WriteAllText(Application.dataPath + "/Resources/Json/ownedUpgradesCounter.txt", JsonUtility.ToJson(saveGameData.ownedUpgrades, true));
+        this.playerMoney.SetValue(saveGameData.playerMoney);
+        saveGameData.WriteToSaveGameJsonFile();
+
+        saveGameInteractor.SaveGame(Encoding.UTF8.GetBytes(Resources.Load<TextAsset>("Json/SaveGame").text), TimeSpan.Zero);
+    }
+
+    //This is called once the user has been authenticated
     public void TestSaveGame()
     {
         saveGameInteractor.SaveGame(Encoding.UTF8.GetBytes(this.CollapseConfigFilesToString()), TimeSpan.Zero);
