@@ -7,6 +7,8 @@ using UnityEngine;
 
 public class EquipItem : ItemShopAction
 {
+    //TODO when equipping items make it save to save game
+    
     public event Action SelectedCellEquipped;
 
 

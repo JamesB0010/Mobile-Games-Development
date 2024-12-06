@@ -8,6 +8,7 @@ using UnityEngine;
 [Serializable]
 public class UpgradesCounterJsonObject
 {
+    //TODO when equipping items make it save to save game
     [SerializeField]
     private List<KeyValuePairWrapper<string, int>> serializedDictionary = new List<KeyValuePairWrapper<string, int>>();
 
