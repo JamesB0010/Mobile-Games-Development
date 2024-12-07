@@ -6,15 +6,18 @@ public class ShopOrbitController : MonoBehaviour
     [SerializeField] private Transform rotateAroundPoint;
     [SerializeField] private CinemachineVirtualCamera vCam;
     [SerializeField] private float rotationSpeed;
+    [SerializeField] private float maxLookDown, maxLookUp;
 
     private Vector2 lastPos = Vector2.zero;
 
     private bool mouseUp = true;
 
+    private float mouseDownTime;
+
     public void OnMouseDown(Vector2 pos)
     {
         this.mouseUp = false;
-        this.lastPos = pos;
+        this.mouseDownTime = Time.timeSinceLevelLoad;
     }
 
     public void OnMouseUp()
@@ -24,23 +27,41 @@ public class ShopOrbitController : MonoBehaviour
 
     public void OnScreenPos(Vector2 pos)
     {
-        if (mouseUp)
+        if (mouseUp || Time.timeSinceLevelLoad - this.mouseDownTime == 0)
+        {
+            lastPos = pos;
             return;
-        
+        }
+    
         Vector2 delta = pos - lastPos;
         Debug.Log(delta);
-        
+    
         float rotationMagnitudeY = delta.x;
-        float rotationMagnitudeZ = delta.y;
 
-        vCam.transform.RotateAround(rotateAroundPoint.position, Vector3.up, rotationMagnitudeY * rotationSpeed * Time.deltaTime);
-        vCam.transform.RotateAround(rotateAroundPoint.position, Vector3.right, rotationMagnitudeZ * rotationSpeed * Time.deltaTime);
-        
+        // Normalize the x rotation to [-180, 180] range
+        float normalizedXRotation = NormalizeAngle(vCam.transform.rotation.eulerAngles.x);
+
+        bool noMoreLookingDown = normalizedXRotation >= maxLookDown && delta.y > 0;
+        bool noMoreLookingUp = normalizedXRotation <= maxLookUp && delta.y < 0;
+
+        float rotationMagnitudeZ = noMoreLookingDown || noMoreLookingUp ? 0 : delta.y;
+    
+        vCam.transform.RotateAround(rotateAroundPoint.position, -vCam.transform.up, rotationMagnitudeY * rotationSpeed * Time.deltaTime);
+        vCam.transform.RotateAround(rotateAroundPoint.position, vCam.transform.right, rotationMagnitudeZ * rotationSpeed * Time.deltaTime);
+
+        // Ignore z rotation
+        Vector3 camRotation = vCam.transform.eulerAngles;
+        vCam.transform.rotation = Quaternion.Euler(camRotation.x, camRotation.y, 0);
+
         lastPos = pos; 
     }
 
-    private void Update()
+// Helper method to normalize angles to [-180, 180]
+    private float NormalizeAngle(float angle)
     {
-        Debug.Log($"Mouse up is this: {mouseUp} and last pos is this: {lastPos}");
+        if (angle > 180)
+            angle -= 360;
+        return angle;
     }
+
 }

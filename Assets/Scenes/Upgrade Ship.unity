@@ -12114,9 +12114,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rotateAroundPoint: {fileID: 369525201}
   vCam: {fileID: 1250940241}
-  rotationSpeed: 10
-  inputActions: {fileID: -944628639613478452, guid: a19442ce077160a488adfbce4a6ea318,
-    type: 3}
+  rotationSpeed: 0.5
+  maxLookDown: 35
+  maxLookUp: -10.25
 --- !u!1 &1285677337
 GameObject:
   m_ObjectHideFlags: 0
