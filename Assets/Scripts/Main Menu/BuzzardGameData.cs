@@ -52,8 +52,12 @@ public class BuzzardGameData : MonoBehaviour
 
         SceneManager.activeSceneChanged += ((sceneFrom, sceneTo) =>
         {
+            #if UNITY_EDITOR
+            
+            #else
             this.SaveAllConfigFilesLocal();
             this.SaveLocalSaveGameToCloud();
+            #endif
         });
 
     }

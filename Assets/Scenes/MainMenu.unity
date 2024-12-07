@@ -1072,7 +1072,7 @@ GameObject:
   - component: {fileID: 359117843}
   - component: {fileID: 359117842}
   m_Layer: 5
-  m_Name: Button
+  m_Name: Save Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2419,7 +2419,7 @@ MonoBehaviour:
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 1
+            m_IntArgument: 3
             m_FloatArgument: 0
             m_StringArgument: 
             m_BoolArgument: 0
@@ -2743,7 +2743,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   elementsToHide:
   - {fileID: 1977897908}
-  - {fileID: 0}
+  - {fileID: 38470202}
+  - {fileID: 359117840}
+  - {fileID: 1894458212}
+  - {fileID: 1808148055}
+  - {fileID: 1377600143}
+  - {fileID: 258274055}
+  - {fileID: 1130756139}
+  - {fileID: 1518485028}
 --- !u!1 &1050334931
 GameObject:
   m_ObjectHideFlags: 0
@@ -2935,7 +2942,7 @@ GameObject:
   - component: {fileID: 1130756142}
   - component: {fileID: 1130756141}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Title
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4484,7 +4491,7 @@ GameObject:
   - component: {fileID: 1518485031}
   - component: {fileID: 1518485030}
   m_Layer: 5
-  m_Name: Button
+  m_Name: Achievements button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5554,7 +5561,7 @@ GameObject:
   - component: {fileID: 1894458215}
   - component: {fileID: 1894458214}
   m_Layer: 5
-  m_Name: Button (1)
+  m_Name: Load Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5687,7 +5694,7 @@ GameObject:
   - component: {fileID: 1977897911}
   - component: {fileID: 1977897910}
   m_Layer: 5
-  m_Name: Button
+  m_Name: Press to play
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

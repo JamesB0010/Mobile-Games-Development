@@ -16,6 +16,11 @@ public class MainMenuManager : MonoBehaviour
 
     private bool readyToStart = false;
 
+    private void Start()
+    {
+        LoadingScreenSceneIndexCounter.SceneIndex = 0;
+    }
+
     public void SetReadyToStart(bool value)
     {
         this.readyToStart = value;
@@ -23,8 +28,9 @@ public class MainMenuManager : MonoBehaviour
     
     public void EnterGameButtonPressed()
     {
-        if (!this.readyToStart)
+        /*if (!this.readyToStart)
             return;
+            */
         
         part1IntroDirector.Play();
         

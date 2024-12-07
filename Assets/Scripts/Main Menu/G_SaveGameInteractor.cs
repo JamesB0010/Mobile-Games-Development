@@ -27,7 +27,7 @@ public class G_SaveGameInteractor
 
     //this is used to hold callbacks if our instance doesnt exist yet.
     //we only want to make this instance using CreateInstance which is only called after our user has been authenticated
-    private static List<Action<string>> readEventCallbackWaitingList;
+    private static List<Action<string>> readEventCallbackWaitingList = new();
     
     public static void AddReadEventCallback(Action<string> callback)
     {
