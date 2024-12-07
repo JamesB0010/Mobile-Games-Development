@@ -1,11 +1,5 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using Cinemachine;
 using UnityEngine;
-using UnityEngine.EventSystems;
-using UnityEngine.InputSystem;
-using Vector3 = System.Numerics.Vector3;
 
 public class ShopOrbitController : MonoBehaviour
 {
@@ -13,24 +7,40 @@ public class ShopOrbitController : MonoBehaviour
     [SerializeField] private CinemachineVirtualCamera vCam;
     [SerializeField] private float rotationSpeed;
 
-    private Vector2 lastPos;
-    private float mouseDownTimestamp = -10000;
+    private Vector2 lastPos = Vector2.zero;
 
-    public void MouseDown(Vector2 pos)
+    private bool mouseUp = true;
+
+    public void OnMouseDown(Vector2 pos)
     {
-        this.mouseDownTimestamp = Time.timeSinceLevelLoad;
+        this.mouseUp = false;
+        this.lastPos = pos;
     }
+
+    public void OnMouseUp()
+    {
+        this.mouseUp = true;
+    }
+
     public void OnScreenPos(Vector2 pos)
     {
-        if (Time.timeSinceLevelLoad - this.mouseDownTimestamp > 0.1f)
-        {
-            this.lastPos = pos;
-        }
-        Vector2 Delta = pos - this.lastPos;
-        float rotationMagnitudeY = Delta.x;
-        float rotationMagnitudeZ = Delta.y;
-        this.lastPos = pos;
-        this.vCam.transform.RotateAround(this.rotateAroundPoint.position, new UnityEngine.Vector3(0, 1, 0), rotationMagnitudeY * Time.deltaTime * this.rotationSpeed);
-        this.vCam.transform.RotateAround(this.rotateAroundPoint.position, new UnityEngine.Vector3(0, 0, 1), rotationMagnitudeZ * Time.deltaTime * this.rotationSpeed);
+        if (mouseUp)
+            return;
+        
+        Vector2 delta = pos - lastPos;
+        Debug.Log(delta);
+        
+        float rotationMagnitudeY = delta.x;
+        float rotationMagnitudeZ = delta.y;
+
+        vCam.transform.RotateAround(rotateAroundPoint.position, Vector3.up, rotationMagnitudeY * rotationSpeed * Time.deltaTime);
+        vCam.transform.RotateAround(rotateAroundPoint.position, Vector3.right, rotationMagnitudeZ * rotationSpeed * Time.deltaTime);
+        
+        lastPos = pos; 
+    }
+
+    private void Update()
+    {
+        Debug.Log($"Mouse up is this: {mouseUp} and last pos is this: {lastPos}");
     }
 }

@@ -1660,22 +1660,14 @@ MonoBehaviour:
   click:
     m_Name: Click
     m_Type: 0
-    m_ExpectedControlType: 
+    m_ExpectedControlType: Touch
     m_Id: 3a9f3fa5-156d-4db2-a0f0-4f621c4e3038
     m_Processors: 
     m_Interactions: 
     m_SingletonActionBindings:
     - m_Name: 
-      m_Id: 6b769575-1f47-4826-8676-161bf69c59eb
-      m_Path: <Mouse>/leftButton
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Click
-      m_Flags: 0
-    - m_Name: 
-      m_Id: 2cdffe67-cac0-4678-873f-4199d546dcf0
-      m_Path: <Touchscreen>/Press
+      m_Id: 762b9987-a68b-45e0-a2f2-560e7bbee3c9
+      m_Path: <Touchscreen>/primaryTouch
       m_Interactions: 
       m_Processors: 
       m_Groups: 
@@ -1707,7 +1699,7 @@ MonoBehaviour:
       m_Action: Screen Pos
       m_Flags: 0
     m_Flags: 0
-  ClickEvent:
+  TouchDownEvent:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 318422503}
@@ -1724,8 +1716,23 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1267475345}
         m_TargetAssemblyTypeName: ShopOrbitController, Assembly-CSharp
-        m_MethodName: MouseDown
+        m_MethodName: OnMouseDown
         m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  TouchUpEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1267475345}
+        m_TargetAssemblyTypeName: ShopOrbitController, Assembly-CSharp
+        m_MethodName: OnMouseUp
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -7546,7 +7553,6 @@ GameObject:
   m_Component:
   - component: {fileID: 770817251}
   - component: {fileID: 770817252}
-  - component: {fileID: 770817253}
   m_Layer: 0
   m_Name: cm
   m_TagString: Untagged
@@ -7579,18 +7585,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ac0b09e7857660247b1477e93731de29, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &770817253
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 770817250}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1e8b78ac948f05a46a6d8339a503172b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &781813564
@@ -12121,6 +12115,8 @@ MonoBehaviour:
   rotateAroundPoint: {fileID: 369525201}
   vCam: {fileID: 1250940241}
   rotationSpeed: 10
+  inputActions: {fileID: -944628639613478452, guid: a19442ce077160a488adfbce4a6ea318,
+    type: 3}
 --- !u!1 &1285677337
 GameObject:
   m_ObjectHideFlags: 0

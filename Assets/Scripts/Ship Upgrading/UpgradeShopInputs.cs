@@ -5,6 +5,9 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.Controls;
+using UnityEngine.Serialization;
+using TouchPhase = UnityEngine.TouchPhase;
 
 //1. Storing input values
 //2. Checking for and responding to ui elements being pressed
@@ -21,7 +24,9 @@ public class UpgradeShopInputs : MonoBehaviour
     [Space(2)]
     [Header("Events")]
     [SerializeField]
-    private UnityEvent<Vector2> ClickEvent = new UnityEvent<Vector2>();
+    private UnityEvent<Vector2> TouchDownEvent = new UnityEvent<Vector2>();
+
+    [SerializeField] private UnityEvent TouchUpEvent = new UnityEvent();
 
     [SerializeField]
     private UnityEvent<Vector2> MoveEvent = new UnityEvent<Vector2>();
@@ -39,14 +44,16 @@ public class UpgradeShopInputs : MonoBehaviour
 
     private void OnClick(InputAction.CallbackContext ctx)
     {
-        float click = ctx.ReadValue<float>();
-
-        if (click != 1)
+        var control = ctx.control as TouchControl;
+        switch (control.phase.ReadValue())
         {
-            return;
+            case UnityEngine.InputSystem.TouchPhase.Began:
+        this.TouchDownEvent?.Invoke(this.mousePosition);
+                break;
+            case UnityEngine.InputSystem.TouchPhase.Ended:
+            this.TouchUpEvent?.Invoke();
+                break;
         }
-
-        this.ClickEvent?.Invoke(this.mousePosition);
     }
 
     private void OnMouseMove(InputAction.CallbackContext ctx)

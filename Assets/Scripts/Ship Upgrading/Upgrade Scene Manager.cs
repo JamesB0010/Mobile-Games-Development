@@ -56,6 +56,7 @@ public class ItemShopActionsManager : MonoBehaviour
 
     public void CellEquipped()
     {
+        this.gameData.Save();
         this.CellEquippedEvent?.Invoke();
     }
 
