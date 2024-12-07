@@ -6,14 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="c7630d3b-1041-428d-b5b5-aacdf8ac5685" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Mobile-Games-Development/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Mobile-Games-Development/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Upgrade Ship.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Upgrade Ship.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Main Menu/BuzzardGameData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Main Menu/BuzzardGameData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Main Menu/G_SaveGameInteractor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Main Menu/G_SaveGameInteractor.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Main Menu/MainMenuManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Main Menu/MainMenuManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Misc/Loading Screen Manager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Misc/Loading Screen Manager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Persistent Data/PlayerMoneySaverReader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Persistent Data/PlayerMoneySaverReader.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,6 +21,10 @@
     <setting file="file://$PROJECT_DIR$/../AI/milestones-ai-24-25-JamesB0010/MainProject/Assets/Scripts/Navigation/Pathfinding Strategies/Pathfinding Strategy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../AI/milestones-ai-24-25-JamesB0010/MainProject/Assets/Scripts/Navigation/Pathfinding.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Editor/ResetDataOnBuild.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/AudioRecording/AudioRecorder.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/AudioRecording/WavReader.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/AudioRecording/WavUtility.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameUiControls/LoadingScreenSceneChanger.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Main Menu/AchievementsButton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Main Menu/BuzzardGameData.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Main Menu/VersionCodeReader.cs" root0="FORCE_HIGHLIGHTING" />
@@ -160,7 +156,7 @@
       <workItem from="1733518391544" duration="4552000" />
       <workItem from="1733527923351" duration="7825000" />
       <workItem from="1733581693314" duration="8462000" />
-      <workItem from="1733606090702" duration="2696000" />
+      <workItem from="1733606090702" duration="7082000" />
     </task>
     <servers />
   </component>
@@ -171,25 +167,6 @@
   <component name="UnityUnitTestConfiguration" currentTestLauncher="Both" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/Misc/Loading Screen Manager.cs</url>
-          <line>55</line>
-          <properties documentPath="C:\Users\james\OneDrive\Documents\University\Year 3\Mobile-Games-Development\Assets\Scripts\Misc\Loading Screen Manager.cs" initialLine="55" containingFunctionPresentation="Method 'OnSceneChanged'">
-            <startOffsets>
-              <option value="1186" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1204" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
