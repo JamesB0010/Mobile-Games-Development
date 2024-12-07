@@ -63,7 +63,7 @@ public class CrosshairTargetFinder : MonoBehaviour
         {
             this.latestHitData.UpdateData(true, hit, hit.distance);
             SetLookAtPointPosition(hit);
-            Debug.Log("hit something: " + hit.collider.gameObject.name);
+            //Debug.Log("hit something: " + hit.collider.gameObject.name);
         }
         else
         {

@@ -23,4 +23,12 @@ public class BoostButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
     {
         this.booster.IsBoosting = false;
     }
+
+    public void OnEngineEquipped(Engine engine)
+    {
+        if (!engine.EngineBoostStats.CanBoost)
+        {
+            this.gameObject.SetActive(false);
+        }
+    }
 }

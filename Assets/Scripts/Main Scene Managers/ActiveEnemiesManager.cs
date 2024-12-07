@@ -20,12 +20,12 @@ public class ActiveEnemiesManager : MonoBehaviour
 
     //Events
     [SerializeField]
-    public UnityEvent EnemyDeathEvent;
+    public UnityEvent<EnemyBase> EnemyDeathEvent;
 
     //methods
-    public void EnemyDied()
+    public void EnemyDied(EnemyBase enemy)
     {
-        EnemyDeathEvent?.Invoke();
+        EnemyDeathEvent?.Invoke(enemy);
 
         this.ActiveEnemyCount--;
     }

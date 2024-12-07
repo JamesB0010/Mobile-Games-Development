@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class PlayerShipEngine : MonoBehaviour
 {
@@ -21,9 +22,13 @@ public class PlayerShipEngine : MonoBehaviour
     public float MaxVelocity => this.engine.MaxVelocity;
     public float MaxBoostVelocity => this.engine.EngineBoostStats.MaxBoostVelocity;
 
+    [SerializeField] private UnityEvent<Engine> EngineEquippedEvent = new UnityEvent<Engine>();
+
     private void Start()
     {
         this.engine = this.playerUpgradesState.Engine.Engine;
+        this.EngineEquippedEvent?.Invoke(this.engine);
+        
     }
 
     public Vector3 CalculateAcceleration()
