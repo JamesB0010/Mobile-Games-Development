@@ -20,7 +20,6 @@ public class OwnedUpgradesCounter : MonoBehaviour
     public TextAsset JsonSaveFile => this.jsonSaveFile;
 
     [SerializeField] private PlayerUpgradesState playerUpgradesState;
-    private BuzzardGameData gameData;
     private void Awake()
     {
         if (OwnedUpgradesCounter.instance == null)
@@ -37,8 +36,6 @@ public class OwnedUpgradesCounter : MonoBehaviour
         UpgradesCounterJsonObject obj = JsonUtility.FromJson<UpgradesCounterJsonObject>(this.jsonSaveFile.text);
 
         this.upgradesCount = obj.GenerateDictionaryFromJson();
-
-        this.gameData = FindObjectOfType<BuzzardGameData>();
     }
 
     //on upgrade purchased
@@ -105,7 +102,7 @@ public class OwnedUpgradesCounter : MonoBehaviour
     public void SaveToJson()
     {
         GenerateSaveableObject().SaveData(this.jsonSaveFile);
-        this.gameData.Save();
+        BuzzardGameData.Save();
     }
 
     public float GetItemInCirculationCount(ShipItemUpgrade shipItemUpgrade)

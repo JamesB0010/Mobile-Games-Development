@@ -9,6 +9,8 @@ public class FloatReference : SuperBaseScriptableValRef<float>
 {
     private float value;
 
+    public event Action<float> valueChanged;
+
     public override float GetValue()
     {
         return value;
@@ -16,7 +18,11 @@ public class FloatReference : SuperBaseScriptableValRef<float>
 
     public void SetValue(float val)
     {
+        if (val == this.value)
+            return;
+        
         this.value = val;
+        this.valueChanged?.Invoke(this.value);
     }
 
     public static FloatReference operator +(FloatReference to, float val)

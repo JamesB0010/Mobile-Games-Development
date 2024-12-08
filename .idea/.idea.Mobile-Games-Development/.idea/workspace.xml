@@ -5,14 +5,37 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c7630d3b-1041-428d-b5b5-aacdf8ac5685" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Ads Initialize.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Ads Initialize.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Save Game Debug Info.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Save Game Debug Info.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Json/Player Money.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Json/Player Money.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Main Menu/AdsInitialize.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Main Menu/AdsInitialize.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Main Menu/SaveGameDebugInfo.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Main Menu/SaveGameDebugInfo.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Ship Upgrading/AdForCreditsButton.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Ship Upgrading/AdForCreditsButton.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Mobile-Games-Development/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Mobile-Games-Development/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fonts/ethnocentric rg SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Fonts/ethnocentric rg SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/mainTemplate.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Android/mainTemplate.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/settingsTemplate.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Android/settingsTemplate.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Json/SaveGame.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Json/SaveGame.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Upgrade Ship.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Upgrade Ship.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/mainScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/mainScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/mainScene_Profiles/Post Process volume Profile(URP).asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/mainScene_Profiles/Post Process volume Profile(URP).asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scriptable objects/Player Data references/Player Money.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scriptable objects/Player Data references/Player Money.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Main Menu/BuzzardGameData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Main Menu/BuzzardGameData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Main Menu/MainMenuManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Main Menu/MainMenuManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ship Upgrading/OwnedUpgradesCounter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ship Upgrading/OwnedUpgradesCounter.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ship Upgrading/ShopOrbitController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ship Upgrading/ShopOrbitController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Timelines/DeathTimeline.playable" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Timelines/DeathTimeline.playable" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ship Upgrading/UIViewUpdater.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ship Upgrading/UIViewUpdater.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ship Upgrading/Upgrade Scene Manager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ship Upgrading/Upgrade Scene Manager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Value References/Float Reference.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Value References/Float Reference.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/AndroidResolverDependencies.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/AndroidResolverDependencies.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,16 +54,21 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/AudioRecording/AudioRecorder.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/AudioRecording/WavLoader.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/AudioRecording/WavUtility.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameUiControls/AdCreditsAwardedScreen.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameUiControls/LoadingScreenSceneChanger.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameUiControls/SelfDestructButton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameUiControls/SubtitleSetter.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Main Menu/AchievementsButton.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Main Menu/AdsInitialize.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Main Menu/BuzzardGameData.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Main Menu/SaveGameDebugInfo.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Main Menu/VersionCodeReader.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerHapticFeedback.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerHealth.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerHealthUiElement.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Ship Upgrading/AdForCreditsButton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Ship Upgrading/GameSaveData.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Ship Upgrading/PlayerCreditsTextView.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.cinemachine@2.10.3/Runtime/PostProcessing/CinemachineVolumeSettings.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.cinemachine@2.10.3/Runtime/ThirdParty/clipper.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.cinemachine@2.10.3/Samples~/Cinemachine Example Scenes/Scenes/DualTarget/MoveAimTarget.cs" root0="SKIP_HIGHLIGHTING" />
@@ -48,6 +76,7 @@
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.collab-proxy@2.5.2/Editor/PlasticSCM/Views/Welcome/DownloadAndInstallOperation.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ide.rider@3.0.28/Rider/Editor/UnitTesting/TestsCallback.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ide.vscode@1.2.5/Editor/VSCodeDiscovery.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.7.0/InputSystem/Editor/AssetEditor/InputBindingPropertiesView.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.mobile.android-logcat@1.4.3/Editor/AndroidLogcatUserSettings.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.test-framework@1.1.33/UnityEngine.TestRunner/Assertions/OutOfOrderExpectedLogMessageException.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.textmeshpro@3.0.6/Scripts/Editor/TMP_EditorCoroutine.cs" root0="SKIP_HIGHLIGHTING" />
@@ -66,11 +95,14 @@
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.textmeshpro@3.0.6/Scripts/Runtime/TMP_FontAsset.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.textmeshpro@3.0.6/Scripts/Runtime/TMP_InputField.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.textmeshpro@3.0.6/Scripts/Runtime/TMP_PackageResourceImporter.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.textmeshpro@3.0.6/Scripts/Runtime/TMP_ResourcesManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.textmeshpro@3.0.6/Scripts/Runtime/TMP_RichTextTagsCommon.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.textmeshpro@3.0.6/Scripts/Runtime/TMP_SpriteAnimator.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.textmeshpro@3.0.6/Scripts/Runtime/TMP_Text.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.textmeshpro@3.0.6/Scripts/Runtime/TMP_TextProcessingStack.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.textmeshpro@3.0.6/Scripts/Runtime/TMPro_Private.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.textmeshpro@3.0.6/Scripts/Runtime/TextMeshPro.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.timeline@1.7.6/Editor/treeview/Snapping/SnapEngine.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Tests/Editor/Canvas/RootCanvasTests.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Tests/Editor/Canvas/UISystemProfilerAddMarkerWithNullObjectDoesNotCrash.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Tests/Editor/RectMask2D/RectTransformPosition.cs" root0="SKIP_HIGHLIGHTING" />
@@ -94,7 +126,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;XThreadsFramesViewSplitterKey&quot;: &quot;0.43307087&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;CustomVoicelines&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;UnityAds&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -205,6 +237,7 @@
       <workItem from="1733527923351" duration="7825000" />
       <workItem from="1733581693314" duration="8462000" />
       <workItem from="1733606090702" duration="15536000" />
+      <workItem from="1733672301360" duration="6298000" />
     </task>
     <servers />
   </component>
@@ -215,6 +248,25 @@
   <component name="UnityUnitTestConfiguration" currentTestLauncher="Both" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Ship Upgrading/AdForCreditsButton.cs</url>
+          <line>63</line>
+          <properties documentPath="C:\Users\james\OneDrive\Documents\University\Year 3\Mobile-Games-Development\Assets\Scripts\Ship Upgrading\AdForCreditsButton.cs" initialLine="55" containingFunctionPresentation="Method 'OnUnityAdsFailedToLoad'">
+            <startOffsets>
+              <option value="1794" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1873" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

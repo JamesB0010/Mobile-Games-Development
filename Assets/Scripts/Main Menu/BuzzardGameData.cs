@@ -4,8 +4,10 @@ using System.Collections.Generic;
 using System.IO;
 using System.Text;
 using TMPro;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 /// <summary>
 /// This is present in the first scene and is not destroyed on load.
@@ -14,18 +16,32 @@ using UnityEngine.SceneManagement;
 /// </summary>
 public class BuzzardGameData : MonoBehaviour
 {
-    [SerializeField] private TextAsset armourConfigFile,
+    private TextAsset armourConfigFile,
         energySystemConfigFile,
         engineConfigFile,
         heavyWeaponsConfigFile,
         lightWeaponsConfigFile,
         ownedUpgradesConfigFile;
 
-    [SerializeField] private FloatReference playerMoney;
+    private FloatReference playerMoney;
 
-    [SerializeField] private TextMeshProUGUI textElement, working1, working2, working3;
+    [SerializeField] private SaveGameDebugInfo debugInfo;
 
     private static BuzzardGameData instance = null;
+
+    private static BuzzardGameData Instance
+    {
+        get
+        {
+            if (instance == null)
+            {
+                //create instance first 
+                GameObject obj = new GameObject("BuzzardGameData");
+                instance = obj.AddComponent<BuzzardGameData>();
+            }
+            return instance;
+        }
+    }
 
     //has the save game been fetched yet?
     private bool saveGameFetched = false;
@@ -46,20 +62,33 @@ public class BuzzardGameData : MonoBehaviour
 
     private void Start()
     {
+        this.SetupDependencies();
+        
         G_SaveGameInteractor.AddReadEventCallback(this.OnSavedGameRead);
         
         DontDestroyOnLoad(this.gameObject);
 
         SceneManager.activeSceneChanged += ((sceneFrom, sceneTo) =>
         {
-            #if UNITY_EDITOR
-            
-            #else
             this.SaveAllConfigFilesLocal();
+            #if UNITY_EDITOR
+            AssetDatabase.Refresh();
+            #else
             this.SaveLocalSaveGameToCloud();
             #endif
         });
 
+    }
+
+    private void SetupDependencies()
+    {
+        this.armourConfigFile = Resources.Load<TextAsset>("Json/armourConfiguration");
+        this.energySystemConfigFile = Resources.Load<TextAsset>("Json/energySystemConfiguration");
+        this.engineConfigFile = Resources.Load<TextAsset>("Json/engineConfiguration");
+        this.heavyWeaponsConfigFile = Resources.Load<TextAsset>("Json/heavyWeaponConfiguration");
+        this.lightWeaponsConfigFile = Resources.Load<TextAsset>("Json/lightWeaponConfiguration");
+        this.ownedUpgradesConfigFile = Resources.Load<TextAsset>("Json/ownedUpgradesCounter");
+        this.playerMoney = Resources.Load<FloatReference>("Json/Player Money");
     }
 
     private void OnDestroy()
@@ -71,11 +100,13 @@ public class BuzzardGameData : MonoBehaviour
     {
         this.saveGameFetched = true;
         
-        textElement.text = data;
+        this.debugInfo?.SetDataString(data);
+        
         if (data == "")
         {
             //First time reading the data create defaults
             G_SaveGameInteractor.Instance.SaveGame(Encoding.UTF8.GetBytes(this.CollapseConfigFilesToString()), TimeSpan.Zero);
+            BuzzardGameData.ReadSaveGame();
         }
         else
         {
@@ -91,20 +122,7 @@ public class BuzzardGameData : MonoBehaviour
 
     private void __debug__UpdateUi(GameSaveData saveGameData)
     {
-        if (saveGameData.configs[0].upgradeReferences != null)
-        {
-            this.working1.gameObject.SetActive(true);
-        }
-
-        if (saveGameData.ownedUpgrades != null)
-        {
-            this.working2.gameObject.SetActive(true);
-        }
-
-        if (saveGameData.playerMoney == 0)
-        {
-            this.working3.gameObject.SetActive(true);
-        }
+        this.debugInfo.UpdateUi(saveGameData);
     }
 
     public void SaveAllConfigFilesLocal()
@@ -139,14 +157,17 @@ public class BuzzardGameData : MonoBehaviour
         G_SaveGameInteractor.Instance.SaveGame(Encoding.UTF8.GetBytes(Resources.Load<TextAsset>("Json/SaveGame").text), TimeSpan.Zero);
     }
 
-    public void Save()
+    public static void Save()
     {
-        this.SaveAllConfigFilesLocal();
-        this.SaveLocalSaveGameToCloud();
+        Instance.SaveAllConfigFilesLocal();
+        #if UNITY_EDITOR
+        #else
+        Instance.SaveLocalSaveGameToCloud();
+        #endif
     }
 
     //This is called once the user has been authenticated
-    public void ReadSaveGame()
+    public static void ReadSaveGame()
     {
         G_SaveGameInteractor.Instance.ReadSavedGame();
     }

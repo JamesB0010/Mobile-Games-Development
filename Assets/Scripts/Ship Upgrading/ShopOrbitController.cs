@@ -35,7 +35,7 @@ public class ShopOrbitController : MonoBehaviour
     
         Vector2 delta = pos - lastPos;
         delta.x = delta.x;
-        Debug.Log(delta);
+        //Debug.Log(delta);
     
         float rotationMagnitudeY = delta.x;
 

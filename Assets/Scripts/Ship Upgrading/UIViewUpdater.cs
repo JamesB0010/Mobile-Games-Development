@@ -8,13 +8,11 @@ using UnityEngine.UI;
 
 public class UIViewUpdater : MonoBehaviour
 {
-    [SerializeField]
-    private TextMeshProUGUI itemNameField,
+    [SerializeField] private TextMeshProUGUI itemNameField,
         itemFireRateField,
         damagePerShotField,
         costField,
-        purchaseEquipButtonText,
-        playerMoneyField;
+        purchaseEquipButtonText;
     
     [SerializeField] private ScrollRect UpgradesScrollRect;
 
@@ -59,11 +57,6 @@ public class UIViewUpdater : MonoBehaviour
         }
         
         Destroy(this.gameObject);
-    }
-
-    private void Start()
-    {
-        this.playerMoneyField.text = ((float)playerMoney.GetValue()).ToString();
     }
 
     public void ScrollRectTopAfterSeconds(float waitTime)
@@ -132,11 +125,7 @@ public class UIViewUpdater : MonoBehaviour
     public void CellPurchased(SelectedCellHighlight highlight)
     {
         this.purchaseEquipButtonText.text = "Equipped";
-        this.playerMoneyField.text = ((float)this.playerMoney.GetValue()).ToString();
-
-
         this.UpdateUiBasedOnItem(highlight.SelectedCell);
-
     }
 
 

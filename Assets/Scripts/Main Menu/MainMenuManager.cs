@@ -28,9 +28,14 @@ public class MainMenuManager : MonoBehaviour
     
     public void EnterGameButtonPressed()
     {
+        #if UNITY_EDITOR
+        part1IntroDirector.Play();
+        mainMenuUi.HideUI();
+        return;
+        #endif
+        
         if (!this.readyToStart)
             return;
-        
         part1IntroDirector.Play();
         
         mainMenuUi.HideUI();
