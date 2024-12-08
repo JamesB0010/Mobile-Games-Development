@@ -28,9 +28,8 @@ public class MainMenuManager : MonoBehaviour
     
     public void EnterGameButtonPressed()
     {
-        /*if (!this.readyToStart)
+        if (!this.readyToStart)
             return;
-            */
         
         part1IntroDirector.Play();
         

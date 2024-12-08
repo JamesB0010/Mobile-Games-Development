@@ -871,7 +871,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -65.07001, y: -215}
+  m_AnchoredPosition: {x: -65.069824, y: -215}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &258274057
@@ -1930,7 +1930,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -106.8, y: 28.5}
+  m_AnchoredPosition: {x: -106.799805, y: 28.5}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &571738695
@@ -3905,7 +3905,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -65.07001, y: -135.85}
+  m_AnchoredPosition: {x: -65.069824, y: -135.85}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1377600145
@@ -4491,6 +4491,7 @@ GameObject:
   - component: {fileID: 1518485032}
   - component: {fileID: 1518485031}
   - component: {fileID: 1518485030}
+  - component: {fileID: 1518485033}
   m_Layer: 5
   m_Name: Achievements button
   m_TagString: Untagged
@@ -4561,7 +4562,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1518485031}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1518485033}
+        m_TargetAssemblyTypeName: AchievementsButton, Assembly-CSharp
+        m_MethodName: ShowAchievements
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1518485031
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4600,6 +4613,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1518485028}
   m_CullTransparentMesh: 1
+--- !u!114 &1518485033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1518485028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 155ea94d25ea12f488e94e753b0fab72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1539799626
 GameObject:
   m_ObjectHideFlags: 0
@@ -5317,7 +5342,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -65.07001, y: -71.15}
+  m_AnchoredPosition: {x: -65.069824, y: -71.15}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1808148057
@@ -5718,7 +5743,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0.0055847, y: 59.87}
+  m_AnchoredPosition: {x: 0.0055847, y: 59.870117}
   m_SizeDelta: {x: 892.02, y: 52.379}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1977897910
