@@ -176,5 +176,5 @@
             }
         ]
     },
-    "playerMoney": 50
+    "playerMoney": 60
 }

@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class SaveGameDebugInfo : MonoBehaviour
 {
-    [SerializeField] private TextMeshProUGUI saveGameContentsText, working1, working2, working3;
+    [SerializeField] private TextMeshProUGUI saveGameContentsText, working1, working2, working3, playerMoney;
 
     private string dataStrinig;
 
@@ -44,6 +44,7 @@ public class SaveGameDebugInfo : MonoBehaviour
         if (saveGameData.playerMoney != null)
         {
             this.working3.gameObject.SetActive(true);
+            this.playerMoney.text = $"Player Money: {saveGameData.playerMoney}";
         }
     }
 }
