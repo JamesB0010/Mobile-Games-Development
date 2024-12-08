@@ -34,6 +34,7 @@ public class ShopOrbitController : MonoBehaviour
         }
     
         Vector2 delta = pos - lastPos;
+        delta.x = delta.x;
         Debug.Log(delta);
     
         float rotationMagnitudeY = delta.x;
@@ -41,13 +42,13 @@ public class ShopOrbitController : MonoBehaviour
         // Normalize the x rotation to [-180, 180] range
         float normalizedXRotation = NormalizeAngle(vCam.transform.rotation.eulerAngles.x);
 
-        bool noMoreLookingDown = normalizedXRotation >= maxLookDown && delta.y > 0;
-        bool noMoreLookingUp = normalizedXRotation <= maxLookUp && delta.y < 0;
+        bool noMoreLookingDown = normalizedXRotation >= maxLookDown && delta.y < 0;
+        bool noMoreLookingUp = normalizedXRotation <= maxLookUp && delta.y > 0;
 
-        float rotationMagnitudeZ = noMoreLookingDown || noMoreLookingUp ? 0 : delta.y;
+        float rotationMagnitudeX = noMoreLookingDown || noMoreLookingUp ? 0 : delta.y;
     
-        vCam.transform.RotateAround(rotateAroundPoint.position, -vCam.transform.up, rotationMagnitudeY * rotationSpeed * Time.deltaTime);
-        vCam.transform.RotateAround(rotateAroundPoint.position, vCam.transform.right, rotationMagnitudeZ * rotationSpeed * Time.deltaTime);
+        vCam.transform.RotateAround(rotateAroundPoint.position, -vCam.transform.up, -rotationMagnitudeY * rotationSpeed * Time.deltaTime);
+        vCam.transform.RotateAround(rotateAroundPoint.position, vCam.transform.right, -rotationMagnitudeX * rotationSpeed * Time.deltaTime);
 
         // Ignore z rotation
         Vector3 camRotation = vCam.transform.eulerAngles;

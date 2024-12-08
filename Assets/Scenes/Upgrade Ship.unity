@@ -12249,7 +12249,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rotateAroundPoint: {fileID: 369525201}
   vCam: {fileID: 1250940241}
-  rotationSpeed: 0.5
+  rotationSpeed: 4
   maxLookDown: 35
   maxLookUp: -10.25
 --- !u!1 &1285677337
