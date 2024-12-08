@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -52,6 +53,19 @@ public class AudioRecorder : MonoBehaviour
         recordingLength = Time.realtimeSinceStartup - this.startTime;
         recordedClip = this.TrimClip(this.recordedClip, this.recordingLength);
         this.SaveRecording();
+    }
+
+    public void DeleteClip()
+    {
+        string fullFilepath = Path.Combine(this.directoryPath, this.filePath);
+        if (File.Exists(fullFilepath))
+        {
+            File.Delete(fullFilepath);
+        }
+        
+        #if UNITY_EDITOR
+        AssetDatabase.Refresh();
+        #endif
     }
 
     private AudioClip TrimClip(AudioClip clip, float length)

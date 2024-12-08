@@ -51,7 +51,7 @@ public class AttitudeInput
     {
         float roll = Roll();
         float normalizedRoll = Mathf.Clamp(ValueInRangeMapper.MapRange(roll, 75, 105, -1, 1), -1f, 1f);
-        Debug.Log($"Normalized roll {normalizedRoll}");
+        //Debug.Log($"Normalized roll {normalizedRoll}");
         return normalizedRoll;
     }
 

@@ -18,7 +18,7 @@ public class MainMenuManager : MonoBehaviour
 
     private void Start()
     {
-        LoadingScreenSceneIndexCounter.SceneIndex = 0;
+        LoadingScreenSceneIndexCounter.NextSceneIndex = 0;
     }
 
     public void SetReadyToStart(bool value)

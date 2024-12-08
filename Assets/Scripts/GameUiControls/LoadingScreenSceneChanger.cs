@@ -7,7 +7,7 @@ public class LoadingScreenSceneChanger : MonoBehaviour
 {
     void Start()
     {
-        SceneManager.LoadScene(LoadingScreenSceneIndexCounter.SceneIndex, LoadSceneMode.Single);
+        SceneManager.LoadScene(LoadingScreenSceneIndexCounter.NextSceneIndex, LoadSceneMode.Single);
 
     }
 }

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 
-public static class WavReader 
+public static class WavLoader 
 {
     public static AudioClip LoadClip(string filepath)
     {

@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/LoadingScreen.unity
     guid: a9592858c156a2d45a06a33cf3adb1b9
+  - enabled: 1
+    path: Assets/Scenes/Voicelines Recorder.unity
+    guid: 0557fda3437e122479c7e6b282a7a39c
   m_configObjects: {}

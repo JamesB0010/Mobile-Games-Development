@@ -9,7 +9,7 @@ public class LoadingScreenSceneIndexCounter
 {
     private static LoadingScreenSceneIndexCounter instance = null;
     
-    private int sceneIndex = 0;
+    private int nextSceneIndex = 0;
     public static LoadingScreenSceneIndexCounter Instance {
         get
         {
@@ -22,23 +22,22 @@ public class LoadingScreenSceneIndexCounter
 
     private LoadingScreenSceneIndexCounter()
     {
-        SceneManager.activeSceneChanged += this.OnSceneChanged;
     }
 
-    public static int SceneIndex
+    public static int NextSceneIndex
     {
         get
         {
             ConditionalInstantiation();
 
-            return instance.sceneIndex;
+            return instance.nextSceneIndex;
         }
 
         set
         {
             ConditionalInstantiation();
 
-            instance.sceneIndex = value;
+            instance.nextSceneIndex = value;
         }
     }
 
@@ -46,15 +45,5 @@ public class LoadingScreenSceneIndexCounter
     {
         if (LoadingScreenSceneIndexCounter.instance == null)
             instance = new LoadingScreenSceneIndexCounter();
-    }
-
-    private void OnSceneChanged(Scene oldScene, Scene newScene)
-    {
-        if (newScene.name == "LoadingScreen")
-        {
-            //load next scene
-            this.sceneIndex++;
-            this.sceneIndex %= 3;
-        }
     }
 }

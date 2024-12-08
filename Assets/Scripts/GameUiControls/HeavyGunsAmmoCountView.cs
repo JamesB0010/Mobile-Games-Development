@@ -3,12 +3,15 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 using Weapon;
 
 public class HeavyGunsAmmoCountView : MonoBehaviour
 {
     
     [SerializeField] private UnityEngine.UI.Image[] ammoCounterHeirarchies;
+
+    [SerializeField] private UnityEvent NoHeavyWeaponsEquipped = new UnityEvent();
     
     
     private void Start()
@@ -32,8 +35,11 @@ public class HeavyGunsAmmoCountView : MonoBehaviour
             }
 
             bool allWeaponsNull = nullWeaponsCount == weapons.Length;
-            if(allWeaponsNull)
+            if (allWeaponsNull)
+            {
                 GetComponent<TextMeshProUGUI>().gameObject.SetActive(false);
+                this.NoHeavyWeaponsEquipped?.Invoke();
+            }
         };
     }
 

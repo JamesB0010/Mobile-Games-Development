@@ -4,7 +4,7 @@ using System.IO;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class TestAudioPlayer : MonoBehaviour
+public class UserSubmittedSoundLoader : MonoBehaviour
 {
     private AudioClip clip;
     [SerializeField] private AudioClip defaultAudioClip;
@@ -16,7 +16,7 @@ public class TestAudioPlayer : MonoBehaviour
     {
         if (File.Exists(Application.dataPath + "/Resources/" + filepath + ".wav"))
         {
-            clip = WavReader.LoadClip(filepath);
+            clip = WavLoader.LoadClip(filepath);
             this.audioSource.clip = clip;
             this.TestAudioPlayerStatusUpdate?.Invoke("Clip Loaded");
         }
@@ -27,8 +27,9 @@ public class TestAudioPlayer : MonoBehaviour
         }
     }
 
-    public void PlayLoadedClip()
+    public void LoadAndPlayClip(string filepath)
     {
-        this.TestAudioPlayerStatusUpdate?.Invoke("Playing Clip");
+        this.LoadClip(filepath);
+        this.audioSource.Play();
     }
 }
