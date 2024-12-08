@@ -5,37 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c7630d3b-1041-428d-b5b5-aacdf8ac5685" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Ads Initialize.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Ads Initialize.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Save Game Debug Info.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Save Game Debug Info.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Json/Player Money.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Json/Player Money.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Main Menu/AdsInitialize.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Main Menu/AdsInitialize.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Main Menu/SaveGameDebugInfo.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Main Menu/SaveGameDebugInfo.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Ship Upgrading/AdForCreditsButton.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Ship Upgrading/AdForCreditsButton.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Mobile-Games-Development/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Mobile-Games-Development/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/mainTemplate.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Android/mainTemplate.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/settingsTemplate.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Android/settingsTemplate.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Json/SaveGame.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Json/SaveGame.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Upgrade Ship.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Upgrade Ship.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scriptable objects/Player Data references/Player Money.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scriptable objects/Player Data references/Player Money.asset.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Main Menu/BuzzardGameData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Main Menu/BuzzardGameData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Main Menu/MainMenuManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Main Menu/MainMenuManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ship Upgrading/OwnedUpgradesCounter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ship Upgrading/OwnedUpgradesCounter.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ship Upgrading/ShopOrbitController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ship Upgrading/ShopOrbitController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ship Upgrading/UIViewUpdater.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ship Upgrading/UIViewUpdater.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ship Upgrading/Upgrade Scene Manager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ship Upgrading/Upgrade Scene Manager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Value References/Float Reference.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Value References/Float Reference.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/AndroidResolverDependencies.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/AndroidResolverDependencies.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -196,10 +167,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="24868">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="24868" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -238,6 +209,7 @@
       <workItem from="1733581693314" duration="8462000" />
       <workItem from="1733606090702" duration="15536000" />
       <workItem from="1733672301360" duration="6298000" />
+      <workItem from="1733697868403" duration="309000" />
     </task>
     <servers />
   </component>
@@ -264,6 +236,32 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Main Menu/BuzzardGameData.cs</url>
+          <line>85</line>
+          <properties documentPath="C:\Users\james\OneDrive\Documents\University\Year 3\Mobile-Games-Development\Assets\Scripts\Main Menu\BuzzardGameData.cs" initialLine="84" containingFunctionPresentation="Method 'SetupDependencies'">
+            <startOffsets>
+              <option value="2078" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2156" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Main Menu/BuzzardGameData.cs</url>
+          <line>65</line>
+          <properties documentPath="C:\Users\james\OneDrive\Documents\University\Year 3\Mobile-Games-Development\Assets\Scripts\Main Menu\BuzzardGameData.cs" initialLine="64" containingFunctionPresentation="Method 'Start'">
+            <startOffsets>
+              <option value="1575" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1600" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="6" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

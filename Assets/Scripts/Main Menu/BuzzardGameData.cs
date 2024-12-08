@@ -28,7 +28,7 @@ public class BuzzardGameData : MonoBehaviour
     [SerializeField] private SaveGameDebugInfo debugInfo;
 
     private static BuzzardGameData instance = null;
-
+    
     private static BuzzardGameData Instance
     {
         get
@@ -38,6 +38,7 @@ public class BuzzardGameData : MonoBehaviour
                 //create instance first 
                 GameObject obj = new GameObject("BuzzardGameData");
                 instance = obj.AddComponent<BuzzardGameData>();
+                instance.SetupDependencies();
             }
             return instance;
         }
