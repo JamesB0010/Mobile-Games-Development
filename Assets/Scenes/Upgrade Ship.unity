@@ -11481,6 +11481,7 @@ GameObject:
   - component: {fileID: 1120891912}
   - component: {fileID: 1120891914}
   - component: {fileID: 1120891913}
+  - component: {fileID: 1120891915}
   m_Layer: 5
   m_Name: Eliminations Value
   m_TagString: Untagged
@@ -11605,6 +11606,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1120891911}
   m_CullTransparentMesh: 1
+--- !u!114 &1120891915
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1120891911}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd45b23de4ef6a945a3b4efa11db5a32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerKills: {fileID: 11400000, guid: 851bc228e2f9dc149b89de276d5d60a8, type: 2}
 --- !u!1 &1146157761
 GameObject:
   m_ObjectHideFlags: 0

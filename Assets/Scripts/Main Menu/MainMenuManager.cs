@@ -19,6 +19,7 @@ public class MainMenuManager : MonoBehaviour
     private void Start()
     {
         LoadingScreenSceneIndexCounter.NextSceneIndex = 0;
+        BuzzardGameData.ReadSaveGame();
     }
 
     public void SetReadyToStart(bool value)

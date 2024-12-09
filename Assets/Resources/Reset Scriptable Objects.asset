@@ -26,3 +26,4 @@ MonoBehaviour:
   OwnedUpgradesCounterJsonSaveFile: {fileID: 4900000, guid: eb7ae1a04d337494b829de8ec0039560,
     type: 3}
   playerMoney: {fileID: 11400000, guid: 384a2dd2a2371ab4a992b55471c6b828, type: 2}
+  playerKills: {fileID: 11400000, guid: 851bc228e2f9dc149b89de276d5d60a8, type: 2}

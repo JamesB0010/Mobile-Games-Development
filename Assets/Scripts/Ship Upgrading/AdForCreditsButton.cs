@@ -61,11 +61,13 @@ public class AdForCreditsButton : MonoBehaviour, IUnityAdsLoadListener, IUnityAd
 
     public void OnUnityAdsFailedToLoad(string placementId, UnityAdsLoadError error, string message)
     {
+        this.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = $"Error loading Ad Unit {adUnitId}: {error.ToString()} - {message}";
         Debug.Log($"Error loading Ad Unit {adUnitId}: {error.ToString()} - {message}"); 
     }
 
     public void OnUnityAdsShowFailure(string placementId, UnityAdsShowError error, string message)
     {
+        this.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = $"Error showing Ad Unit {this.adUnitId}: {error.ToString()} - {message}";
         Debug.Log($"Error showing Ad Unit {this.adUnitId}: {error.ToString()} - {message}");
     }
 
@@ -91,7 +93,6 @@ public class AdForCreditsButton : MonoBehaviour, IUnityAdsLoadListener, IUnityAd
             //grant reward
             Debug.Log("Rewareded");
             this.playerMoney.SetValue(this.playerMoney.GetValue() + this.creditsAwarded);
-            //TODO debut this save function BuzzardGameData seems to be running into a null ref exception
             BuzzardGameData.Save();
             //display screen
             this.displayAward?.Invoke(this.creditsAwarded);

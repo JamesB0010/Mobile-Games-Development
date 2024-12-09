@@ -10191,6 +10191,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2146181447}
+        m_TargetAssemblyTypeName: PlayerKillCounter, Assembly-CSharp
+        m_MethodName: OnEnemyKilled
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &540935761
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -34322,6 +34334,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 2146181446}
+    - targetCorrespondingSourceObject: {fileID: 2905897174217757130, guid: a1cbc9ce975b8684e8ab0fcf5e4f360e,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2146181447}
   m_SourcePrefab: {fileID: 100100000, guid: a1cbc9ce975b8684e8ab0fcf5e4f360e, type: 3}
 --- !u!114 &1803987134 stripped
 MonoBehaviour:
@@ -41758,6 +41774,32 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &2146181447
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 789787686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d79a68d0f4bef7b4f993456e8b815cfb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerKills: {fileID: 11400000, guid: 851bc228e2f9dc149b89de276d5d60a8, type: 2}
+  killAchievements:
+  - killsRequired: 1
+    achievementId: CgkIzPfgxf4GEAIQBw
+  - killsRequired: 10
+    achievementId: CgkIzPfgxf4GEAIQCA
+  - killsRequired: 25
+    achievementId: CgkIzPfgxf4GEAIQCQ
+  - killsRequired: 40
+    achievementId: CgkIzPfgxf4GEAIQCg
+  - killsRequired: 70
+    achievementId: CgkIzPfgxf4GEAIQCw
+  - killsRequired: 100
+    achievementId: CgkIzPfgxf4GEAIQDA
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
