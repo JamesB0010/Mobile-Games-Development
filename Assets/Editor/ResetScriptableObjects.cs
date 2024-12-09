@@ -57,6 +57,8 @@ public class ResetScriptableObjects : ScriptableObject
         instance.playerKills.SetValue(0);
         
         new UpgradesCounterJsonObject().GenerateDefaultSafeFile(instance.OwnedUpgradesCounterJsonSaveFile);
+        
+        BuzzardGameData.Save();
     }
 
     private static void SaveLightWeaponsStateJsonFile(ResetScriptableObjects instance)

@@ -176,5 +176,6 @@
             }
         ]
     },
-    "playerMoney": 60
+    "playerMoney": 0,
+    "playerKills": 0
 }

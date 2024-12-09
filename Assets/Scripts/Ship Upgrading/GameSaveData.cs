@@ -11,6 +11,7 @@ public class GameSaveData
    public List<SavedUpgradesJsonObject> configs;
    public UpgradesCounterJsonObject ownedUpgrades;
    public int playerMoney;
+   public int playerKills;
 
    public void WriteToSaveGameJsonFile()
    {

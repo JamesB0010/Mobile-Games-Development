@@ -25,6 +25,8 @@ public class BuzzardGameData : MonoBehaviour
 
     private FloatReference playerMoney;
 
+    private IntReference playerKills;
+
     [SerializeField] private SaveGameDebugInfo debugInfo;
 
     private static BuzzardGameData instance = null;
@@ -90,6 +92,7 @@ public class BuzzardGameData : MonoBehaviour
         this.lightWeaponsConfigFile = Resources.Load<TextAsset>("Json/lightWeaponConfiguration");
         this.ownedUpgradesConfigFile = Resources.Load<TextAsset>("Json/ownedUpgradesCounter");
         this.playerMoney = Resources.Load<FloatReference>("Json/Player Money");
+        this.playerKills = Resources.Load<IntReference>("Json/EliminationCount");
     }
 
     private void OnDestroy()
@@ -137,6 +140,7 @@ public class BuzzardGameData : MonoBehaviour
         File.WriteAllText(Application.dataPath + "/Resources/Json/lightWeaponConfiguration.txt", JsonUtility.ToJson(saveGameData.configs[4], true));
         File.WriteAllText(Application.dataPath + "/Resources/Json/ownedUpgradesCounter.txt",JsonUtility.ToJson(saveGameData.ownedUpgrades, true));
         this.playerMoney.SetValue(saveGameData.playerMoney);
+        this.playerKills.SetValue(saveGameData.playerKills);
         saveGameData.WriteToSaveGameJsonFile();
     }
 
@@ -150,6 +154,7 @@ public class BuzzardGameData : MonoBehaviour
         File.WriteAllText(Application.dataPath + "/Resources/Json/lightWeaponConfiguration.txt", JsonUtility.ToJson(saveGameData.configs[4], true));
         File.WriteAllText(Application.dataPath + "/Resources/Json/ownedUpgradesCounter.txt", JsonUtility.ToJson(saveGameData.ownedUpgrades, true));
         this.playerMoney.SetValue(saveGameData.playerMoney);
+        this.playerKills.SetValue(this.saveGameData.playerKills);
         saveGameData.WriteToSaveGameJsonFile();
     }
 
@@ -173,11 +178,6 @@ public class BuzzardGameData : MonoBehaviour
         G_SaveGameInteractor.Instance.ReadSavedGame();
     }
 
-    public float GetPlayerMoney()
-    {
-        return this.saveGameData.playerMoney;
-    }
-
     private string CollapseConfigFilesToString()
     {
         string output = "{\"configs\":[";
@@ -187,7 +187,8 @@ public class BuzzardGameData : MonoBehaviour
         output += this.heavyWeaponsConfigFile.text + ",";
         output += lightWeaponsConfigFile.text + "], \n \"ownedUpgrades\": ";
         output += ownedUpgradesConfigFile.text + ",";
-        output += "\"playerMoney\": " + this.playerMoney.GetValue();
+        output += "\"playerMoney\": " + this.playerMoney.GetValue() + ",";
+        output += "\"playerKills\": " + this.playerKills.GetValue();
         output += "}";
         return output;
     }
