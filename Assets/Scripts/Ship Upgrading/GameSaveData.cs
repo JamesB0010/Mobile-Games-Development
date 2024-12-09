@@ -12,6 +12,7 @@ public class GameSaveData
    public UpgradesCounterJsonObject ownedUpgrades;
    public int playerMoney;
    public int playerKills;
+   public int gamesPlayed;
 
    public void WriteToSaveGameJsonFile()
    {

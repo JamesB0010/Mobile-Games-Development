@@ -50,6 +50,7 @@ public class BuzzardGameData : MonoBehaviour
     private bool saveGameFetched = false;
     
     private GameSaveData saveGameData;
+    private IntReference gamesPlayed;
 
     private void Awake()
     {
@@ -93,6 +94,7 @@ public class BuzzardGameData : MonoBehaviour
         this.ownedUpgradesConfigFile = Resources.Load<TextAsset>("Json/ownedUpgradesCounter");
         this.playerMoney = Resources.Load<FloatReference>("Json/Player Money");
         this.playerKills = Resources.Load<IntReference>("Json/EliminationCount");
+        this.gamesPlayed = Resources.Load<IntReference>("Json/Games Played");
     }
 
     private void OnDestroy()
@@ -141,6 +143,7 @@ public class BuzzardGameData : MonoBehaviour
         File.WriteAllText(Application.dataPath + "/Resources/Json/ownedUpgradesCounter.txt",JsonUtility.ToJson(saveGameData.ownedUpgrades, true));
         this.playerMoney.SetValue(saveGameData.playerMoney);
         this.playerKills.SetValue(saveGameData.playerKills);
+        this.gamesPlayed.SetValue(saveGameData.gamesPlayed);
         saveGameData.WriteToSaveGameJsonFile();
     }
 
@@ -155,6 +158,7 @@ public class BuzzardGameData : MonoBehaviour
         File.WriteAllText(Application.dataPath + "/Resources/Json/ownedUpgradesCounter.txt", JsonUtility.ToJson(saveGameData.ownedUpgrades, true));
         this.playerMoney.SetValue(saveGameData.playerMoney);
         this.playerKills.SetValue(this.saveGameData.playerKills);
+        this.gamesPlayed.SetValue(this.saveGameData.gamesPlayed);
         saveGameData.WriteToSaveGameJsonFile();
     }
 
@@ -166,10 +170,15 @@ public class BuzzardGameData : MonoBehaviour
     public static void Save()
     {
         Instance.SaveAllConfigFilesLocal();
-        #if UNITY_EDITOR
-        #else
+#if UNITY_EDITOR
+        if (!Application.isPlaying)
+        {
+            DestroyImmediate(Instance.gameObject);
+            instance = null;
+        }
+#else
         Instance.SaveLocalSaveGameToCloud();
-        #endif
+#endif
     }
 
     //This is called once the user has been authenticated
@@ -188,7 +197,8 @@ public class BuzzardGameData : MonoBehaviour
         output += lightWeaponsConfigFile.text + "], \n \"ownedUpgrades\": ";
         output += ownedUpgradesConfigFile.text + ",";
         output += "\"playerMoney\": " + this.playerMoney.GetValue() + ",";
-        output += "\"playerKills\": " + this.playerKills.GetValue();
+        output += "\"playerKills\": " + this.playerKills.GetValue() + ",";
+        output += "\"gamesPlayed\": " + this.gamesPlayed.GetValue();
         output += "}";
         return output;
     }

@@ -177,5 +177,6 @@
         ]
     },
     "playerMoney": 0,
-    "playerKills": 0
+    "playerKills": 0,
+    "gamesPlayed": 2
 }
