@@ -44,13 +44,13 @@ public class AttitudeInput
             //ex: 182 = 182 - 360 = -178
             pitch -= 360;
         }
-        return Mathf.Clamp(ValueInRangeMapper.MapRange(pitch, 75, 105, -1, 1), -1f, 1f);
+        return Mathf.Clamp(ValueInRangeMapper.MapRange(pitch, 75, 105, -1, 1), -1f, 1f) + 1;
     }
 
     public static float GetRollNormalized()
     {
         float roll = Roll();
-        float normalizedRoll = Mathf.Clamp(ValueInRangeMapper.MapRange(roll, 75, 105, -1, 1), -1f, 1f);
+        float normalizedRoll = Mathf.Clamp(ValueInRangeMapper.MapRange(roll, 75, 105, -1, 1), -1f, 1f) + 1;
         //Debug.Log($"Normalized roll {normalizedRoll}");
         return normalizedRoll;
     }
