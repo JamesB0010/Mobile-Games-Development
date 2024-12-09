@@ -2,7 +2,7 @@
     "serializedDictionary": [
         {
             "key": "AmmoHighDamageHigh",
-            "value": 1
+            "value": 0
         },
         {
             "key": "AmmoHighDamageLow",
@@ -126,7 +126,7 @@
         },
         {
             "key": "NoGun",
-            "value": 1
+            "value": 0
         },
         {
             "key": "NoLightGun",
