@@ -32,4 +32,10 @@ public class LightGunUpgrade : ShipItemUpgrade
     {
         return new playerUpgradesStateInteractorLight(playerUpgradesState);
     }
+
+    public override UpgradeAchievementInteractorStrategy generateUpgradeAcievementInteractor(
+        FirstTimePurcaseAcievementIDCollection acievementIDCollection)
+    {
+        return new LightGunAchievementInteractor(acievementIDCollection);
+    }
 }

@@ -33,4 +33,10 @@ public class EnergySystemsUpgrade : ShipItemUpgrade
     {
         return new playerUpgradesStateInteractorEnergySystem(playerUpgradesState);
     }
+
+    public override UpgradeAchievementInteractorStrategy generateUpgradeAcievementInteractor(
+        FirstTimePurcaseAcievementIDCollection acievementIDCollection)
+    {
+        return new EnergySystemAchievementInteractor(acievementIDCollection);
+    }
 }

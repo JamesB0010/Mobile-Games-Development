@@ -31,4 +31,10 @@ public class EngineUpgrade : ShipItemUpgrade
     {
         return new playerUpgradesStateInteractorEngine(playerUpgradesState);
     }
+
+    public override UpgradeAchievementInteractorStrategy generateUpgradeAcievementInteractor(
+        FirstTimePurcaseAcievementIDCollection acievementIDCollection)
+    {
+        return new EngineAchievementInteractor(acievementIDCollection);
+    }
 }

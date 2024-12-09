@@ -20,6 +20,8 @@ public class OwnedUpgradesCounter : MonoBehaviour
     public TextAsset JsonSaveFile => this.jsonSaveFile;
 
     [SerializeField] private PlayerUpgradesState playerUpgradesState;
+
+    [SerializeField] private FirstTimePurcaseAcievementIDCollection firstTimePurcaseAchievementIDs;
     private void Awake()
     {
         if (OwnedUpgradesCounter.instance == null)
@@ -42,8 +44,8 @@ public class OwnedUpgradesCounter : MonoBehaviour
     public void IncrementUpgradeCount(SelectedCellHighlight highlight)
     {
         ShipItemUpgrade upgrade = cellHighlight.SelectedCell.Upgrade;
-        if(this.IsFirstPurcasedItemOfThisType(upgrade))
-            Debug.Log("First item of this type purcased");
+        if (this.IsFirstPurcasedItemOfThisType(upgrade))
+            upgrade.generateUpgradeAcievementInteractor(this.firstTimePurcaseAchievementIDs).ActivateFirstTimePurcaseAchievement();
         
         this.upgradesCount[upgrade]++;
         this.SaveToJson();

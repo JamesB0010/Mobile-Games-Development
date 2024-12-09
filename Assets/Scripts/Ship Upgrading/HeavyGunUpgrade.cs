@@ -32,4 +32,10 @@ public class HeavyGunUpgrade : ShipItemUpgrade
     {
         return new playerUpgradesStateInteractorHeavy(playerUpgradesState);
     }
+
+    public override UpgradeAchievementInteractorStrategy generateUpgradeAcievementInteractor(
+        FirstTimePurcaseAcievementIDCollection acievementIDCollection)
+    {
+        return new HeavyGunAchievementInteractor(acievementIDCollection);
+    }
 }

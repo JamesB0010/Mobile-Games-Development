@@ -33,4 +33,10 @@ public class ArmourUpgrade : ShipItemUpgrade
     {
         return new playerUpgradesStateInteractorArmour(playerUpgradesState);
     }
+
+    public override UpgradeAchievementInteractorStrategy generateUpgradeAcievementInteractor(
+        FirstTimePurcaseAcievementIDCollection acievementIDCollection)
+    {
+        return new ArmourAchievementInteractor(acievementIDCollection);
+    }
 }

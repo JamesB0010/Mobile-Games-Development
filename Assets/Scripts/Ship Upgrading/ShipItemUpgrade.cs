@@ -16,6 +16,10 @@ public abstract class ShipItemUpgrade : ScriptableObject
     public abstract PlayerUpgradesStateInteractorStrategy GenerateUpgradesStateInteractor(
         PlayerUpgradesState playerUpgradesState);
 
+
+    public abstract UpgradeAchievementInteractorStrategy generateUpgradeAcievementInteractor(
+        FirstTimePurcaseAcievementIDCollection acievementIDCollection);
+
     [SerializeField] private float cost;
     public float Cost => this.cost;
 
