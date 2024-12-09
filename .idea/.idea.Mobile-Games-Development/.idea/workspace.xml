@@ -7,9 +7,20 @@
     <list default="true" id="c7630d3b-1041-428d-b5b5-aacdf8ac5685" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Mobile-Games-Development/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Mobile-Games-Development/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/Json/SaveGame.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Json/SaveGame.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/mainScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/mainScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Misc/GamesPlayedIncrementor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Misc/GamesPlayedIncrementor.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerKillCounter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerKillCounter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Json/armourConfiguration.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Json/armourConfiguration.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Json/energySystemConfiguration.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Json/energySystemConfiguration.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Json/engineConfiguration.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Json/engineConfiguration.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Json/heavyWeaponConfiguration.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Json/heavyWeaponConfiguration.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Json/lightWeaponConfiguration.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Json/lightWeaponConfiguration.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Json/ownedUpgradesCounter.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Json/ownedUpgradesCounter.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ship Upgrading/Interactors/Upgrades Counter/CounterInteractorEnergySystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ship Upgrading/Interactors/Upgrades Counter/CounterInteractorEnergySystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ship Upgrading/Interactors/Upgrades Counter/UpgradeCounterInteractorEngine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ship Upgrading/Interactors/Upgrades Counter/UpgradeCounterInteractorEngine.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ship Upgrading/Interactors/Upgrades Counter/UpgradeCounterInteractorHeavy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ship Upgrading/Interactors/Upgrades Counter/UpgradeCounterInteractorHeavy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ship Upgrading/Interactors/Upgrades Counter/UpgradeCounterInteractorLight.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ship Upgrading/Interactors/Upgrades Counter/UpgradeCounterInteractorLight.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ship Upgrading/Interactors/Upgrades Counter/UpgradesCounterInteractorArmour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ship Upgrading/Interactors/Upgrades Counter/UpgradesCounterInteractorArmour.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ship Upgrading/Interactors/Upgrades Counter/UpgradesCounterInteractorStrategy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ship Upgrading/Interactors/Upgrades Counter/UpgradesCounterInteractorStrategy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ship Upgrading/OwnedUpgradesCounter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ship Upgrading/OwnedUpgradesCounter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ship Upgrading/Upgrade Scene Manager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ship Upgrading/Upgrade Scene Manager.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,6 +31,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c5ed782439084ef1bc2ad85eec89e9fe175a00/01/24f0a37b/UnityEvent.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../AI/milestones-ai-24-25-JamesB0010/MainProject/Assets/Scripts/Navigation/GridGenerator.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../AI/milestones-ai-24-25-JamesB0010/MainProject/Assets/Scripts/Navigation/Pathfinding Strategies/AStarAlgorithm.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../AI/milestones-ai-24-25-JamesB0010/MainProject/Assets/Scripts/Navigation/Pathfinding Strategies/Pathfinding Strategy.cs" root0="SKIP_HIGHLIGHTING" />
@@ -54,6 +66,7 @@
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.cinemachine@2.10.3/Samples~/Cinemachine Example Scenes/Scenes/DualTarget/MoveAimTarget.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.cinemachine@2.10.3/Samples~/Cinemachine Example Scenes/Shared/Scripts/PlayerMove.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.collab-proxy@2.5.2/Editor/PlasticSCM/AssetsUtils/SaveAssets.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.collab-proxy@2.5.2/Editor/PlasticSCM/CollabMigration/MigrationDialog.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.collab-proxy@2.5.2/Editor/PlasticSCM/Views/Welcome/DownloadAndInstallOperation.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ide.rider@3.0.28/Rider/Editor/UnitTesting/TestsCallback.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ide.visualstudio@2.0.22/Editor/UsageUtility.cs" root0="SKIP_HIGHLIGHTING" />
@@ -83,6 +96,7 @@
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.textmeshpro@3.0.6/Scripts/Runtime/TMP_ResourcesManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.textmeshpro@3.0.6/Scripts/Runtime/TMP_RichTextTagsCommon.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.textmeshpro@3.0.6/Scripts/Runtime/TMP_SpriteAnimator.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.textmeshpro@3.0.6/Scripts/Runtime/TMP_SpriteAsset.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.textmeshpro@3.0.6/Scripts/Runtime/TMP_StyleSheet.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.textmeshpro@3.0.6/Scripts/Runtime/TMP_Text.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.textmeshpro@3.0.6/Scripts/Runtime/TMP_TextProcessingStack.cs" root0="SKIP_HIGHLIGHTING" />
@@ -184,10 +198,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="41692">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="41692" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -231,6 +245,8 @@
       <workItem from="1733706597162" duration="607000" />
       <workItem from="1733743919315" duration="2122000" />
       <workItem from="1733749022628" duration="591000" />
+      <workItem from="1733767999349" duration="1247000" />
+      <workItem from="1733772361716" duration="1937000" />
     </task>
     <servers />
   </component>
@@ -257,6 +273,45 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Ship Upgrading/OwnedUpgradesCounter.cs</url>
+          <line>43</line>
+          <properties documentPath="C:\Users\james\OneDrive\Documents\University\Year 3\Mobile-Games-Development\Assets\Scripts\Ship Upgrading\OwnedUpgradesCounter.cs" initialLine="43" containingFunctionPresentation="Method 'IncrementUpgradeCount'">
+            <startOffsets>
+              <option value="1397" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1458" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Ship Upgrading/OwnedUpgradesCounter.cs</url>
+          <line>82</line>
+          <properties documentPath="C:\Users\james\OneDrive\Documents\University\Year 3\Mobile-Games-Development\Assets\Scripts\Ship Upgrading\OwnedUpgradesCounter.cs" initialLine="82" containingFunctionPresentation="Method 'OnHeavyUpgradeEquipped'">
+            <startOffsets>
+              <option value="2589" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2651" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Ship Upgrading/EquipItem.cs</url>
+          <line>117</line>
+          <properties documentPath="C:\Users\james\OneDrive\Documents\University\Year 3\Mobile-Games-Development\Assets\Scripts\Ship Upgrading\EquipItem.cs" initialLine="117" containingFunctionPresentation="Method 'UpdatePreviouslyOwnedHeavyWeapon'">
+            <startOffsets>
+              <option value="4673" />
+            </startOffsets>
+            <endOffsets>
+              <option value="4755" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="9" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

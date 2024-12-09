@@ -19,7 +19,7 @@
             "upgradeReferences": [
                 "NoGun",
                 "NoGun",
-                "NoGun",
+                "AmmoHighDamageLow",
                 "NoGun"
             ]
         },
@@ -40,7 +40,7 @@
         "serializedDictionary": [
             {
                 "key": "AmmoHighDamageHigh",
-                "value": 0
+                "value": 1
             },
             {
                 "key": "AmmoHighDamageLow",
@@ -164,7 +164,7 @@
             },
             {
                 "key": "NoGun",
-                "value": 0
+                "value": 1
             },
             {
                 "key": "NoLightGun",
@@ -178,5 +178,5 @@
     },
     "playerMoney": 0,
     "playerKills": 0,
-    "gamesPlayed": 1
+    "gamesPlayed": 0
 }

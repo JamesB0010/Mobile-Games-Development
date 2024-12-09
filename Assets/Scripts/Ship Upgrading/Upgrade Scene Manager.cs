@@ -48,14 +48,14 @@ public class ItemShopActionsManager : MonoBehaviour
 
     public void CellPurchased()
     {
-        BuzzardGameData.Save();
         this.CellPurchasedEvent?.Invoke();
+        BuzzardGameData.Save();
     }
 
     public void CellEquipped()
     {
-        BuzzardGameData.Save();
         this.CellEquippedEvent?.Invoke();
+        BuzzardGameData.Save();
     }
 
     public void NotifyOwnedUpgradesCounterOfEquip(OwnedUpgradesCounter upgradesCounter)

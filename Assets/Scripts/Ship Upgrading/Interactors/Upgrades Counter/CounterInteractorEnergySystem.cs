@@ -13,4 +13,9 @@ public class CounterInteractorEnergySystem : UpgradesCounterInteractorStrategy
     {
         this.upgradesCounter.OnEnergySystemEquipped(itemEquipAction);
     }
+
+    public override int GetOwnedUpgradeTypeCount()
+    {
+        return this.upgradesCounter.GetCountsOfType<EnergySystemsUpgrade>();
+    }
 }

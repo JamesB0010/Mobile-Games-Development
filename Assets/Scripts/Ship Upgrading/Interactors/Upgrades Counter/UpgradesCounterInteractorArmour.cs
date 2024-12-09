@@ -12,4 +12,9 @@ public class UpgradesCounterInteractorArmour : UpgradesCounterInteractorStrategy
     {
         this.upgradesCounter.OnArmourEquipped(itemEquipAction);
     }
+
+    public override int GetOwnedUpgradeTypeCount()
+    {
+        return this.upgradesCounter.GetCountsOfType<ArmourUpgrade>();
+    }
 }

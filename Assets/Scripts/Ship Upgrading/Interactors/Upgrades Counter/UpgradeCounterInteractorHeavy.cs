@@ -12,4 +12,9 @@ public class UpgradeCounterInteractorHeavy : UpgradesCounterInteractorStrategy
     {
         this.upgradesCounter.OnHeavyUpgradeEquipped(itemEquipAction);
     }
+
+    public override int GetOwnedUpgradeTypeCount()
+    {
+        return this.upgradesCounter.GetCountsOfType<HeavyGunUpgrade>();
+    }
 }

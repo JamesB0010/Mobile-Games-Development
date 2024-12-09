@@ -12,4 +12,9 @@ public class UpgradeCounterInteractorLight : UpgradesCounterInteractorStrategy
     {
         this.upgradesCounter.OnLightUpgradeEquipped(itemEquipAction);
     }
+
+    public override int GetOwnedUpgradeTypeCount()
+    {
+        return this.upgradesCounter.GetCountsOfType<LightGunUpgrade>();
+    }
 }

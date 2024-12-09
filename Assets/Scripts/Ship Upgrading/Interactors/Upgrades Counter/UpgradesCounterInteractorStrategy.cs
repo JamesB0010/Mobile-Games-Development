@@ -12,4 +12,6 @@ public abstract class UpgradesCounterInteractorStrategy
     }
 
     public abstract void NotifyEquip(EquipItem itemEquipAction);
+    
+    public abstract int GetOwnedUpgradeTypeCount();
 }

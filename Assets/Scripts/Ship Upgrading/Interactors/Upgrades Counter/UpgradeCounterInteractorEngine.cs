@@ -12,4 +12,9 @@ public class UpgradeCounterInteractorEngine : UpgradesCounterInteractorStrategy
     {
         this.upgradesCounter.OnEngineEquipped(itemEquipAction);
     }
+
+    public override int GetOwnedUpgradeTypeCount()
+    {
+        return this.upgradesCounter.GetCountsOfType<EngineUpgrade>();
+    }
 }

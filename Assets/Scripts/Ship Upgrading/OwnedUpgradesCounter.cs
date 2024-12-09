@@ -41,9 +41,33 @@ public class OwnedUpgradesCounter : MonoBehaviour
     //on upgrade purchased
     public void IncrementUpgradeCount(SelectedCellHighlight highlight)
     {
-        this.upgradesCount[highlight.SelectedCell.Upgrade]++;
+        ShipItemUpgrade upgrade = cellHighlight.SelectedCell.Upgrade;
+        if(this.IsFirstPurcasedItemOfThisType(upgrade))
+            Debug.Log("First item of this type purcased");
+        
+        this.upgradesCount[upgrade]++;
         this.SaveToJson();
     }
+
+    public int GetCountsOfType<T>() where T:  ShipItemUpgrade
+    {
+        int count = 0;
+        foreach (var upgrade in this.upgradesCount)
+        {
+            if (upgrade.Key is T)
+            {
+                count += upgrade.Value;
+            }
+        }
+
+        return count;
+    }
+
+    private bool IsFirstPurcasedItemOfThisType(ShipItemUpgrade upgrade)
+    { 
+        int quantityOfTypePurcased = upgrade.GenerateUpgradeCounterInteractor(this).GetOwnedUpgradeTypeCount();
+        return quantityOfTypePurcased == 0;
+    } 
 
     public void OnLightUpgradeEquipped(EquipItem itemEquipper)
     {
@@ -102,7 +126,6 @@ public class OwnedUpgradesCounter : MonoBehaviour
     public void SaveToJson()
     {
         GenerateSaveableObject().SaveData(this.jsonSaveFile);
-        BuzzardGameData.Save();
     }
 
     public float GetItemInCirculationCount(ShipItemUpgrade shipItemUpgrade)

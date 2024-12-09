@@ -115,7 +115,7 @@ public class EquipItem : ItemShopAction
     }
     public void UpdatePreviouslyOwnedHeavyWeapon(int weaponIndex)
     {
-        this.previouslyOwnedLightWeapon = base.playerUpgradesState.HeavyGuns[weaponIndex];
+        this.previouslyOwnedHeavyWeapon = base.playerUpgradesState.HeavyGuns[weaponIndex];
     }
 
     public void UpdatePreviouslyOwnedArmour()
