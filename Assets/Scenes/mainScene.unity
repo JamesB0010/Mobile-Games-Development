@@ -34862,6 +34862,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gamesPlayed: {fileID: 11400000, guid: d2848f4a39b71a342b8c2ca0b42e8d2c, type: 2}
+  gamesPlayedAchievements:
+  - key: CgkIzPfgxf4GEAIQAg
+    value: 1
+  - key: CgkIzPfgxf4GEAIQAw
+    value: 5
+  - key: CgkIzPfgxf4GEAIQBA
+    value: 10
+  - key: CgkIzPfgxf4GEAIQBQ
+    value: 25
+  - key: CgkIzPfgxf4GEAIQBg
+    value: 50
 --- !u!1001 &1827399328
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -40726,7 +40737,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d79a68d0f4bef7b4f993456e8b815cfb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  killAchievements2:
+  playerKills: {fileID: 11400000, guid: 851bc228e2f9dc149b89de276d5d60a8, type: 2}
+  killAchievements:
   - key: CgkIzPfgxf4GEAIQBw
     value: 1
   - key: CgkIzPfgxf4GEAIQCA
@@ -40739,20 +40751,6 @@ MonoBehaviour:
     value: 70
   - key: CgkIzPfgxf4GEAIQDA
     value: 100
-  playerKills: {fileID: 11400000, guid: 851bc228e2f9dc149b89de276d5d60a8, type: 2}
-  killAchievements:
-  - killsRequired: 1
-    achievementId: CgkIzPfgxf4GEAIQBw
-  - killsRequired: 10
-    achievementId: CgkIzPfgxf4GEAIQCA
-  - killsRequired: 25
-    achievementId: CgkIzPfgxf4GEAIQCQ
-  - killsRequired: 40
-    achievementId: CgkIzPfgxf4GEAIQCg
-  - killsRequired: 70
-    achievementId: CgkIzPfgxf4GEAIQCw
-  - killsRequired: 100
-    achievementId: CgkIzPfgxf4GEAIQDA
 --- !u!1001 &2093163372
 PrefabInstance:
   m_ObjectHideFlags: 0

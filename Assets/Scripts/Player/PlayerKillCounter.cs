@@ -8,8 +8,8 @@ public class PlayerKillCounter : MonoBehaviour
 {
     
     [SerializeField] private IntReference playerKills;
-
-    [FormerlySerializedAs("killAchievements2")] [SerializeField] private KeyValuePairWrapper<string, int>[] killAchievements;
+    
+    [SerializeField] private KeyValuePairWrapper<string, int>[] killAchievements;
 
     public void OnEnemyKilled()
     {
