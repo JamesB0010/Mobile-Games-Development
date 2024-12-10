@@ -769,7 +769,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f21fa93159485b549b1347610dcaa753, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  key: Default Local Group
+  key: GameContent
   percentageText: {fileID: 547515199}
   bar: {fileID: 2054436197}
   fakeLoadTime: 0.5

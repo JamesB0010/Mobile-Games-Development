@@ -176,8 +176,8 @@
             }
         ]
     },
-    "playerMoney": 1,
-    "playerKills": 1,
-    "gamesPlayed": 3,
-    "gyroEnabled": false
+    "playerMoney": 0,
+    "playerKills": 0,
+    "gamesPlayed": 0,
+    "gyroEnabled": true
 }

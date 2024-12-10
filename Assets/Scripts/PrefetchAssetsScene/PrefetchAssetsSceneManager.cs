@@ -27,6 +27,11 @@ public class PrefetchAssetsSceneManager : MonoBehaviour
 
     IEnumerator Start()
     {
+        #if UNITY_EDITOR
+        StartCoroutine(nameof(this.ChangeScene));
+        yield break;
+        #else
+        
         AsyncOperationHandle<long> getDownloadSize = Addressables.GetDownloadSizeAsync(this.key);
         yield return getDownloadSize;
 
@@ -71,14 +76,14 @@ public class PrefetchAssetsSceneManager : MonoBehaviour
             StartCoroutine(nameof(this.ChangeScene));
             Addressables.Release(downloadHandle); //Release the operation handle
         }
-        
+        #endif
     }
 
     private IEnumerator ChangeScene()
     {
         this.percentageText.text = "0";
         this.bar.fillAmount = 0;
-        var handle = SceneManager.LoadSceneAsync(0);
+        var handle = SceneManager.LoadSceneAsync(1);
         this.quipText.GetComponent<Text>().text = "Loading Main Menu";
         this.quipText.enabled = false;
 

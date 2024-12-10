@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 468a46d0ae32c3544b7d98094e6448a9, type: 3}
   m_Name: AddressableAssetSettings
   m_EditorClassIdentifier: 
-  m_DefaultGroup: ef6c57c29d4deb34c8a8a5b8684cdaec
+  m_DefaultGroup: 3a8dc041429b4f645bcd56a3af7e0c9a
   m_currentHash:
     serializedVersion: 2
     Hash: 00000000000000000000000000000000
   m_OptimizeCatalogSize: 0
-  m_BuildRemoteCatalog: 0
+  m_BuildRemoteCatalog: 1
   m_BundleLocalCatalog: 0
   m_CatalogRequestsTimeout: 0
   m_DisableCatalogUpdateOnStart: 0
@@ -35,17 +35,17 @@ MonoBehaviour:
   m_CheckForContentUpdateRestrictionsOption: 0
   m_MonoScriptBundleCustomNaming: 
   m_RemoteCatalogBuildPath:
-    m_Id: 
+    m_Id: d34cf9cd64cfd9c42989e4df398e5bf1
   m_RemoteCatalogLoadPath:
-    m_Id: 
-  m_ContentStateBuildPathProfileVariableName: 
+    m_Id: 0398f77b3618ab14d82e50b46634243f
+  m_ContentStateBuildPathProfileVariableName: <default settings path>
   m_CustomContentStateBuildPath: 
   m_ContentStateBuildPath: 
   m_BuildAddressablesWithPlayerBuild: 0
   m_overridePlayerVersion: '[UnityEditor.PlayerSettings.bundleVersion]'
   m_GroupAssets:
   - {fileID: 11400000, guid: 49938dd3f89441145ae9269fd9f16384, type: 2}
-  - {fileID: 11400000, guid: 61d4b37d7be66dc4ab6f90b641e6ac67, type: 2}
+  - {fileID: 11400000, guid: 5c7c5405a6eae9c49a0c03f77b11fa15, type: 2}
   m_BuildSettings:
     m_CompileScriptsInVirtualMode: 0
     m_CleanupStreamingAssetsAfterBuilds: 1
@@ -60,13 +60,13 @@ MonoBehaviour:
       - m_Id: 8722468bdfb04ce49a9b318b6ba49c81
         m_Value: '[UnityEditor.EditorUserBuildSettings.activeBuildTarget]'
       - m_Id: c76cd3f153d57ae458a57d245f03a15d
-        m_Value: '[UnityEngine.AddressableAssets.Addressables.BuildPath]/[BuildTarget]'
+        m_Value: ServerData/[BuildTarget]
       - m_Id: 354bad211ba3f1049af0ddb71ddecec0
-        m_Value: '{UnityEngine.AddressableAssets.Addressables.RuntimePath}/[BuildTarget]'
+        m_Value: http://[PrivateIpAddress]:[HostingServicePort]
       - m_Id: d34cf9cd64cfd9c42989e4df398e5bf1
         m_Value: ServerData/[BuildTarget]
       - m_Id: 0398f77b3618ab14d82e50b46634243f
-        m_Value: http://[PrivateIpAddress]:[HostingServicePort]
+        m_Value: https://bb86371e-2638-40c6-aeab-87f07b6f1b73.client-api.unity3dusercontent.com/client_api/v1/environments/production/buckets/bb0ef38b-9d9b-43a2-9884-890f840929bb/release_by_badge/latest/entry_by_path/content/?path=
     m_ProfileEntryNames:
     - m_Id: 8722468bdfb04ce49a9b318b6ba49c81
       m_Name: BuildTarget
