@@ -3,10 +3,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Serialization;
 
 public class PlayerShipElevator : MonoBehaviour
 {
-    [SerializeField] private bool usingGyro;
+    [SerializeField] private BoolReference usingGyro;
+    private bool UsingGyro => this.usingGyro.GetValue();
     private float inputtedPitch;
     public float InputtedPitch => inputtedPitch;
 
@@ -33,7 +35,7 @@ public class PlayerShipElevator : MonoBehaviour
 
     private void ConditionalGetPitchFromGyro()
     {
-        if (this.usingGyro)
+        if (this.UsingGyro)
         {
             this.inputtedPitch = -AttitudeInput.GetPitchNormalized();
         }
@@ -41,7 +43,7 @@ public class PlayerShipElevator : MonoBehaviour
 
     public void OnPitchAndRoll(InputAction.CallbackContext ctx)
     {
-        if (this.usingGyro)
+        if (this.UsingGyro)
             return;
 
         this.inputtedPitch = ctx.ReadValue<Vector2>().y;

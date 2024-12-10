@@ -34264,6 +34264,11 @@ PrefabInstance:
       propertyPath: m_Events.m_Events.Array.data[7].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 1113132068855237700, guid: a1cbc9ce975b8684e8ab0fcf5e4f360e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2842229157060007510, guid: a1cbc9ce975b8684e8ab0fcf5e4f360e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -34319,6 +34324,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 5006046386665479586, guid: a1cbc9ce975b8684e8ab0fcf5e4f360e,
+        type: 3}
+      propertyPath: usingGyro
+      value: 
+      objectReference: {fileID: 11400000, guid: fd3f2decbb3b8b94c8fa545135c93c23,
+        type: 2}
     - target: {fileID: 5376009853961654183, guid: a1cbc9ce975b8684e8ab0fcf5e4f360e,
         type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -34330,6 +34341,12 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 3882828615210567630, guid: bcf78e2790d26a340b25474400056c00,
         type: 3}
+    - target: {fileID: 6532062731706784961, guid: a1cbc9ce975b8684e8ab0fcf5e4f360e,
+        type: 3}
+      propertyPath: usingGyro
+      value: 
+      objectReference: {fileID: 11400000, guid: fd3f2decbb3b8b94c8fa545135c93c23,
+        type: 2}
     - target: {fileID: 7179868875603640608, guid: a1cbc9ce975b8684e8ab0fcf5e4f360e,
         type: 3}
       propertyPath: m_VolumeTrigger
@@ -34400,6 +34417,41 @@ PrefabInstance:
       propertyPath: m_AdditionalShaderChannelsFlag
       value: 25
       objectReference: {fileID: 0}
+    - target: {fileID: 8172441873461205921, guid: a1cbc9ce975b8684e8ab0fcf5e4f360e,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 357.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8172441873461205921, guid: a1cbc9ce975b8684e8ab0fcf5e4f360e,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -194
+      objectReference: {fileID: 0}
+    - target: {fileID: 8307301632229258981, guid: a1cbc9ce975b8684e8ab0fcf5e4f360e,
+        type: 3}
+      propertyPath: m_Behaviour
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8307301632229258981, guid: a1cbc9ce975b8684e8ab0fcf5e4f360e,
+        type: 3}
+      propertyPath: m_UseIsolatedInputActions
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8307301632229258981, guid: a1cbc9ce975b8684e8ab0fcf5e4f360e,
+        type: 3}
+      propertyPath: m_PointerDownAction.m_Name
+      value: Pointer Down
+      objectReference: {fileID: 0}
+    - target: {fileID: 8307301632229258981, guid: a1cbc9ce975b8684e8ab0fcf5e4f360e,
+        type: 3}
+      propertyPath: m_PointerMoveAction.m_Name
+      value: Pointer Move
+      objectReference: {fileID: 0}
+    - target: {fileID: 8862472031501350585, guid: a1cbc9ce975b8684e8ab0fcf5e4f360e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -34416,7 +34468,17 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 2146181446}
+    - targetCorrespondingSourceObject: {fileID: 8862472031501350585, guid: a1cbc9ce975b8684e8ab0fcf5e4f360e,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1803987136}
   m_SourcePrefab: {fileID: 100100000, guid: a1cbc9ce975b8684e8ab0fcf5e4f360e, type: 3}
+--- !u!1 &1803987133 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8862472031501350585, guid: a1cbc9ce975b8684e8ab0fcf5e4f360e,
+    type: 3}
+  m_PrefabInstance: {fileID: 1803987132}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1803987134 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6807032255658757836, guid: a1cbc9ce975b8684e8ab0fcf5e4f360e,
@@ -34441,6 +34503,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4fb35c0b63386e4b938fccedeb27edc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1803987136
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1803987133}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e34d1201268ec964f8baa3ef69552c0b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gyroControls: {fileID: 11400000, guid: fd3f2decbb3b8b94c8fa545135c93c23, type: 2}
 --- !u!1001 &1804938424
 PrefabInstance:
   m_ObjectHideFlags: 0

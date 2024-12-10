@@ -3,10 +3,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Serialization;
 
 public class PlayerShipAilerons : MonoBehaviour
 {
-    [SerializeField] private bool usingGyro;
+    [SerializeField] private BoolReference usingGyro;
+    private bool UsingGyro => this.usingGyro.GetValue();
     private float inputtedRoll;
     public float InputtedRoll => inputtedRoll;
 
@@ -33,7 +35,7 @@ public class PlayerShipAilerons : MonoBehaviour
 
     private void ConditionalGetRollFromGyro()
     {
-        if (this.usingGyro)
+        if (this.UsingGyro)
         {
             this.inputtedRoll = AttitudeInput.GetRollNormalized();
         }
@@ -41,7 +43,7 @@ public class PlayerShipAilerons : MonoBehaviour
 
     public void OnPitchAndRoll(InputAction.CallbackContext ctx)
     {
-        if (this.usingGyro)
+        if (this.UsingGyro)
             return;
 
         this.inputtedRoll = ctx.ReadValue<Vector2>().x;

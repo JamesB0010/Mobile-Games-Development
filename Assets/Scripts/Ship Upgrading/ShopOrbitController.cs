@@ -27,6 +27,9 @@ public class ShopOrbitController : MonoBehaviour
 
     public void OnScreenPos(Vector2 pos)
     {
+        if(!this.gameObject.activeSelf)
+            return;
+        
         if (mouseUp || Time.timeSinceLevelLoad - this.mouseDownTime == 0)
         {
             lastPos = pos;

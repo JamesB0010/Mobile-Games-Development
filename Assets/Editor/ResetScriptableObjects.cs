@@ -27,6 +27,8 @@ public class ResetScriptableObjects : ScriptableObject
     [SerializeField] private IntReference playerKills;
     
     [SerializeField] private IntReference gamesPlayed;
+
+    [SerializeField] private BoolReference gyroEnabled;
     
     [MenuItem("Custom/Reset Scriptable Objects and Save Files")]
     //This resets the scriptable objects which need to be resetted for the game to be built
@@ -59,6 +61,8 @@ public class ResetScriptableObjects : ScriptableObject
         instance.playerKills.SetValue(0);
         
         instance.gamesPlayed.SetValue(0);
+        
+        instance.gyroEnabled.SetValue(true);
         
         new UpgradesCounterJsonObject().GenerateDefaultSafeFile(instance.OwnedUpgradesCounterJsonSaveFile);
         

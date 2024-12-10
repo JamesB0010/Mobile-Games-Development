@@ -15,6 +15,13 @@ public abstract class LerpPackage
     public abstract object start { get; set; }
     public abstract object target { get; set; }
 
+    public void Reverse()
+    {
+        (this.start, this.target) = (this.target, this.start);
+        this.currentPercentage = 0.0f;
+        this.ResetTiming();
+    }
+
     public void ResetTiming()
     {
         this.elapsedtime = 0.0f;

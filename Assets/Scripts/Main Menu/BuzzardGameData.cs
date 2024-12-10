@@ -51,6 +51,7 @@ public class BuzzardGameData : MonoBehaviour
     
     private GameSaveData saveGameData;
     private IntReference gamesPlayed;
+    private BoolReference gyroEnabled;
 
     private void Awake()
     {
@@ -95,6 +96,7 @@ public class BuzzardGameData : MonoBehaviour
         this.playerMoney = Resources.Load<FloatReference>("Json/Player Money");
         this.playerKills = Resources.Load<IntReference>("Json/EliminationCount");
         this.gamesPlayed = Resources.Load<IntReference>("Json/Games Played");
+        this.gyroEnabled = Resources.Load<BoolReference>("Json/GyroEnabled");
     }
 
     private void OnDestroy()
@@ -144,6 +146,7 @@ public class BuzzardGameData : MonoBehaviour
         this.playerMoney.SetValue(saveGameData.playerMoney);
         this.playerKills.SetValue(saveGameData.playerKills);
         this.gamesPlayed.SetValue(saveGameData.gamesPlayed);
+        this.gyroEnabled.SetValue(saveGameData.gyroEnabled);
         saveGameData.WriteToSaveGameJsonFile();
     }
 
@@ -159,6 +162,7 @@ public class BuzzardGameData : MonoBehaviour
         this.playerMoney.SetValue(saveGameData.playerMoney);
         this.playerKills.SetValue(this.saveGameData.playerKills);
         this.gamesPlayed.SetValue(this.saveGameData.gamesPlayed);
+        this.gyroEnabled.SetValue(this.saveGameData.gyroEnabled);
         saveGameData.WriteToSaveGameJsonFile();
     }
 
@@ -198,7 +202,8 @@ public class BuzzardGameData : MonoBehaviour
         output += ownedUpgradesConfigFile.text + ",";
         output += "\"playerMoney\": " + this.playerMoney.GetValue() + ",";
         output += "\"playerKills\": " + this.playerKills.GetValue() + ",";
-        output += "\"gamesPlayed\": " + this.gamesPlayed.GetValue();
+        output += "\"gamesPlayed\": " + this.gamesPlayed.GetValue() + ",";
+        output += "\"gyroEnabled\": " + this.gyroEnabled.GetValue().ToString().ToLower();
         output += "}";
         return output;
     }

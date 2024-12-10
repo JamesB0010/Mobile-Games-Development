@@ -13,6 +13,7 @@ public class GameSaveData
    public int playerMoney;
    public int playerKills;
    public int gamesPlayed;
+   public bool gyroEnabled;
 
    public void WriteToSaveGameJsonFile()
    {
