@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c7630d3b-1041-428d-b5b5-aacdf8ac5685" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Mobile-Games-Development/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Mobile-Games-Development/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Cockpit/CockpitMain.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Cockpit/CockpitMain.fbx" afterDir="false" />
-    </list>
+    <list default="true" id="c7630d3b-1041-428d-b5b5-aacdf8ac5685" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -252,6 +249,7 @@
       <workItem from="1733788192613" duration="228000" />
       <workItem from="1733789221999" duration="10932000" />
       <workItem from="1733836553119" duration="3988000" />
+      <workItem from="1733849497157" duration="298000" />
     </task>
     <servers />
   </component>
