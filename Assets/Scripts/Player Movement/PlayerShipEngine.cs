@@ -26,6 +26,11 @@ public class PlayerShipEngine : MonoBehaviour
 
     [SerializeField] private ParticleSystem engineParticle;
 
+    [SerializeField] private Animator playerAnimator;
+    private static readonly int engineOpenAmountParameterID = Animator.StringToHash("EngineOpenAmount");
+
+    [SerializeField] private FighterShipFlame flame;
+
     private void Start()
     {
         this.engine = this.playerUpgradesState.Engine.Engine;
@@ -46,7 +51,19 @@ public class PlayerShipEngine : MonoBehaviour
         else
             acceleration += this.playerCamera.forward * (engine.AccelerationSpeed * this.throttle.Throttle * Time.deltaTime);
         
+        this.SetEngineOpenAmount();
+        this.flame.SetIntensity(this.throttle.Throttle);
+        
         return acceleration;
+    }
+
+    public void SetEngineOpenAmount()
+    {
+        if (this.booster.IsBoosting)
+        {
+            this.playerAnimator.SetFloat(engineOpenAmountParameterID, 1.0f);
+        }
+        this.playerAnimator.SetFloat(engineOpenAmountParameterID, this.throttle.Throttle);
     }
 }
 

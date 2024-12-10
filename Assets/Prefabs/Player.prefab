@@ -3483,6 +3483,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  engineParticle: {fileID: 5076826403856345123}
+  playerAnimator: {fileID: 9085360356837708153}
+  flame: {fileID: 788885624356034129}
 --- !u!1 &4073978282632314537
 GameObject:
   m_ObjectHideFlags: 0
@@ -3675,6 +3678,7 @@ GameObject:
   - component: {fileID: 4011923403254518088}
   - component: {fileID: 5076826403856345123}
   - component: {fileID: 785280162540021152}
+  - component: {fileID: 788885624356034129}
   m_Layer: 7
   m_Name: EngineParticle
   m_TagString: Untagged
@@ -3691,7 +3695,7 @@ Transform:
   m_GameObject: {fileID: 4154372732531456608}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0.02715, y: 0.00279, z: -0.00022}
+  m_LocalPosition: {x: 0.02501, y: 0.00279, z: -0.00022}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3780,7 +3784,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 4
+      scalar: 6.37
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -3951,7 +3955,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 3.46
+      scalar: 4.96
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -4659,13 +4663,22 @@ ParticleSystem:
           inWeight: 0
           outWeight: 0
         - serializedVersion: 3
-          time: 1
-          value: 0
-          inSlope: -2
-          outSlope: -2
+          time: 0.171333
+          value: 0.5834582
+          inSlope: 0.8330205
+          outSlope: 0.8330205
           tangentMode: 0
           weightedMode: 0
-          inWeight: 0
+          inWeight: 0.33333334
+          outWeight: 0.10621707
+        - serializedVersion: 3
+          time: 1
+          value: 0
+          inSlope: -3.6758223
+          outSlope: -3.6758223
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0.05046514
           outWeight: 0
         m_PreInfinity: 2
         m_PostInfinity: 2
@@ -8494,6 +8507,24 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
+--- !u!114 &788885624356034129
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4154372732531456608}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61442fe41efcc794da644343aa2055a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lowIntensityPos: {x: 0.02364, y: 0.00279, z: -0.00022}
+  highIntensityPos: {x: 0.02501, y: 0.00279, z: -0.00022}
+  lowIntensitySize: 2.95
+  highIntenitySize: 4.96
+  lowIntensityLifetime: 2.55
+  highIntensityLifetime: 6.37
 --- !u!1 &4469291174787846168
 GameObject:
   m_ObjectHideFlags: 0
@@ -18859,7 +18890,11 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 4011923403254518088}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: a4e2bf95dab9cb74faefbf64f48fca1b,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 9085360356837708153}
   m_SourcePrefab: {fileID: 100100000, guid: a4e2bf95dab9cb74faefbf64f48fca1b, type: 3}
 --- !u!1 &8550237611002878286 stripped
 GameObject:
@@ -18867,6 +18902,27 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 8820829971058517023}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &9085360356837708153
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8550237611002878286}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e9f3b1cb6756d1d42ac00841e4f19714, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!4 &9071194554269598708 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: a4e2bf95dab9cb74faefbf64f48fca1b,
