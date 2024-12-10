@@ -28,6 +28,9 @@ public class PrefetchAssetsLoadingText : MonoBehaviour
         int i = 0;
         while (true)
         {
+            if (!this.enabled)
+                break;
+            
             text.text = loadingMessages[i];
             i++;
             i %= loadingMessages.Count;

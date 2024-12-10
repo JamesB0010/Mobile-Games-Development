@@ -18,6 +18,8 @@ public class PrefetchAssetsSceneManager : MonoBehaviour
     [SerializeField] private Image bar;
 
     [SerializeField] private float fakeLoadTime;
+
+    [SerializeField] private PrefetchAssetsLoadingText quipText;
     
     
     
@@ -77,15 +79,15 @@ public class PrefetchAssetsSceneManager : MonoBehaviour
         this.percentageText.text = "0";
         this.bar.fillAmount = 0;
         var handle = SceneManager.LoadSceneAsync(0);
+        this.quipText.GetComponent<Text>().text = "Loading Main Menu";
+        this.quipText.enabled = false;
 
         float progress = 0;
         while (!handle.isDone)
         {
-            Debug.Log("Progress");
             float percentageComplete = handle.progress;
             if (percentageComplete > progress * 1.1)
             {
-                Debug.Log("Progress 2 " + handle.progress);
                 progress = handle.progress;
                 this.bar.fillAmount = progress;
                 this.percentageText.text = $"{progress * 100}%";
