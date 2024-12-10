@@ -20,4 +20,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Voicelines Recorder.unity
     guid: 0557fda3437e122479c7e6b282a7a39c
-  m_configObjects: {}
+  m_configObjects:
+    com.unity.addressableassets: {fileID: 11400000, guid: 70792807027f199489ce04c52324f7e3,
+      type: 2}
