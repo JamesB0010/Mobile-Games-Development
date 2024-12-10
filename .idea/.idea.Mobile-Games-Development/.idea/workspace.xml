@@ -6,11 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="c7630d3b-1041-428d-b5b5-aacdf8ac5685" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Mobile-Games-Development/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Mobile-Games-Development/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Northstar/Northstar Ship.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Northstar/Northstar Ship.fbx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Json/SaveGame.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Json/SaveGame.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Upgrade Ship.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Upgrade Ship.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/mainScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/mainScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player Movement/PlayerShipEngine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player Movement/PlayerShipEngine.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Cockpit/CockpitMain.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Cockpit/CockpitMain.fbx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -255,7 +251,7 @@
       <workItem from="1733779696118" duration="135000" />
       <workItem from="1733788192613" duration="228000" />
       <workItem from="1733789221999" duration="10932000" />
-      <workItem from="1733836553119" duration="3950000" />
+      <workItem from="1733836553119" duration="3988000" />
     </task>
     <servers />
   </component>
