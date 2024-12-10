@@ -24,6 +24,8 @@ public class PlayerShipEngine : MonoBehaviour
 
     [SerializeField] private UnityEvent<Engine> EngineEquippedEvent = new UnityEvent<Engine>();
 
+    [SerializeField] private ParticleSystem engineParticle;
+
     private void Start()
     {
         this.engine = this.playerUpgradesState.Engine.Engine;
