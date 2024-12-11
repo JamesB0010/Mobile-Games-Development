@@ -774,6 +774,8 @@ MonoBehaviour:
   bar: {fileID: 2054436197}
   fakeLoadTime: 0.5
   quipText: {fileID: 156650612}
+  labelToLoad:
+    m_LabelString: default
 --- !u!1 &1979013060
 GameObject:
   m_ObjectHideFlags: 0

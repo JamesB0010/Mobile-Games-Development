@@ -11,7 +11,6 @@ using UnityEngine.UI;
 
 public class PrefetchAssetsSceneManager : MonoBehaviour
 {
-    public string key = "preload";
     private AsyncOperationHandle downloadHandle;
     [SerializeField] private Text percentageText;
 
@@ -20,19 +19,21 @@ public class PrefetchAssetsSceneManager : MonoBehaviour
     [SerializeField] private float fakeLoadTime;
 
     [SerializeField] private PrefetchAssetsLoadingText quipText;
-    
+
+
+    [SerializeField] private AssetLabelReference labelToLoad;
     
     
     
 
     IEnumerator Start()
     {
-        #if UNITY_EDITOR
-        StartCoroutine(nameof(this.ChangeScene));
-        yield break;
-        #else
+        //#if UNITY_EDITOR
+        //StartCoroutine(nameof(this.ChangeScene));
+        //yield break;
+        //#else
         
-        AsyncOperationHandle<long> getDownloadSize = Addressables.GetDownloadSizeAsync(this.key);
+        AsyncOperationHandle<long> getDownloadSize = Addressables.GetDownloadSizeAsync(this.labelToLoad);
         yield return getDownloadSize;
 
         if (getDownloadSize.Result == 0)
@@ -57,7 +58,7 @@ public class PrefetchAssetsSceneManager : MonoBehaviour
         }
         else
         {
-            downloadHandle = Addressables.DownloadDependenciesAsync(key, false);
+            downloadHandle = Addressables.DownloadDependenciesAsync(this.labelToLoad, false);
             float progress = 0;
 
             while (downloadHandle.Status == AsyncOperationStatus.None)
@@ -76,7 +77,7 @@ public class PrefetchAssetsSceneManager : MonoBehaviour
             StartCoroutine(nameof(this.ChangeScene));
             Addressables.Release(downloadHandle); //Release the operation handle
         }
-        #endif
+        //#endif
     }
 
     private IEnumerator ChangeScene()

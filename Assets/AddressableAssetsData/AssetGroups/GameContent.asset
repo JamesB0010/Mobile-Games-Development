@@ -20,20 +20,29 @@ MonoBehaviour:
   - m_GUID: a1cbc9ce975b8684e8ab0fcf5e4f360e
     m_Address: Assets/Prefabs/Player.prefab
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - default
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: f64750b672ddd8649914b68059851db4
-    m_Address: Assets/Models/Carrier/DSS harbinger/harb.fbx
+  - m_GUID: bd6ad2fb5b766f34394d89e53c48cfd3
+    m_Address: Assets/Prefabs/Enemy Harb.prefab
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - default
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 9d1fcc19de7318343a8ad67f0fd75bbe
     m_Address: Assets/Models/Astroid/Asteriod.fbx
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - default
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 2f6c5d6ec779606459f39a8773a9fb35
     m_Address: Assets/Asset Store/Planet Earth Free/Prefabs/EarthMedium.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1d83dca1c89da304088ba23f465982ed
+    m_Address: Assets/Scenes/prefetchAssets.unity
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
