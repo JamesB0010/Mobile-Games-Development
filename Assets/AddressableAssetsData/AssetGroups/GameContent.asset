@@ -29,14 +29,14 @@ MonoBehaviour:
     m_SerializedLabels:
     - default
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 9d1fcc19de7318343a8ad67f0fd75bbe
-    m_Address: Assets/Models/Astroid/Asteriod.fbx
+  - m_GUID: 08f9d57a1cceca440872d84f05c1f814
+    m_Address: Assets/Prefabs/Enemy.prefab
     m_ReadOnly: 0
     m_SerializedLabels:
     - default
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 2f6c5d6ec779606459f39a8773a9fb35
-    m_Address: Assets/Asset Store/Planet Earth Free/Prefabs/EarthMedium.prefab
+  - m_GUID: abce709999f77a54c9a5f3a107973ea4
+    m_Address: Assets/Prefabs/MainMenuEnvironment.prefab
     m_ReadOnly: 0
     m_SerializedLabels:
     - default

@@ -14,6 +14,8 @@ public class MainMenuManager : MonoBehaviour
 
     [SerializeField] private MainMenuUi mainMenuUi;
 
+    [SerializeField] private SceneChanger sceneChanger;
+    
     private bool readyToStart = false;
 
     private void Start()
@@ -30,6 +32,7 @@ public class MainMenuManager : MonoBehaviour
     public void EnterGameButtonPressed()
     {
         #if UNITY_EDITOR
+        this.sceneChanger.LoadSceneWithLoadingScreen(2);
         part1IntroDirector.Play();
         mainMenuUi.HideUI();
         return;
@@ -37,6 +40,9 @@ public class MainMenuManager : MonoBehaviour
         
         if (!this.readyToStart)
             return;
+        
+        
+        this.sceneChanger.LoadSceneWithLoadingScreen(2);
         part1IntroDirector.Play();
         
         mainMenuUi.HideUI();
