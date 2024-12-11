@@ -2821,6 +2821,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DeathParticle: {fileID: 3882828615210567630, guid: bcf78e2790d26a340b25474400056c00,
     type: 3}
+  ShipModel: {fileID: 9071194554269598708}
   PlayerHealthChangedEvent:
     m_PersistentCalls:
       m_Calls:
@@ -3032,31 +3033,7 @@ MonoBehaviour:
             m_BoolArgument: 0
           m_CallState: 2
     - m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 0}
-          m_TargetAssemblyTypeName: UserSubmittedSoundLoader, Assembly-CSharp
-          m_MethodName: LoadAndPlayClip
-          m_Mode: 5
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: AudioRecordings/recording
-            m_BoolArgument: 0
-          m_CallState: 2
-        - m_Target: {fileID: 256819611430669684}
-          m_TargetAssemblyTypeName: TMPro.TMP_Text, Unity.TextMeshPro
-          m_MethodName: set_text
-          m_Mode: 5
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
+        m_Calls: []
     - m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 256819611430669684}
@@ -3630,6 +3607,30 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: BoostButton, Assembly-CSharp
         m_MethodName: OnEngineEquipped
         m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2337931531186534991}
+        m_TargetAssemblyTypeName: Player_Movement.PlayerMovement, Assembly-CSharp
+        m_MethodName: OnEngineEquipped
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 3275013080770175168}
+        m_TargetAssemblyTypeName: PlayerShipBooster, Assembly-CSharp
+        m_MethodName: OnEngineEquipped
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -9689,6 +9690,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2842229157060007510}
+  - component: {fileID: 8096199497070822186}
+  - component: {fileID: 8456996821306953218}
   m_Layer: 10
   m_Name: Player
   m_TagString: Player
@@ -9719,6 +9722,36 @@ Transform:
   - {fileID: 2625489949865469903}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8096199497070822186
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4936494512065095665}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5fbfd6fe4d4d2f44a56bb466751d9b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  signalReceiver: {fileID: 257242483560448543}
+  playerWallet: {fileID: 6209333244178350557}
+  rightMonitorAnimPlayExposer: {fileID: 6807032255658757836}
+  playerHapticFeedback: {fileID: 50586730395357941}
+  subtitleSetter: {fileID: 7219515255875332416}
+  outOfBoundsUiElements: {fileID: 1643817859153077561}
+--- !u!114 &8456996821306953218
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4936494512065095665}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a7c0002674cf004cab69f23e9b8fc72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5088793754487753917
 GameObject:
   m_ObjectHideFlags: 0

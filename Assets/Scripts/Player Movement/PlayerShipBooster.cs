@@ -49,10 +49,15 @@ public class PlayerShipBooster : MonoBehaviour
     [SerializeField] private UnityEvent StartBoostingEvent = new UnityEvent();
     [SerializeField] private UnityEvent StopBoostingEvent = new UnityEvent();
     private float maxVelocityDefault;
+
+    public void OnEngineEquipped()
+    {
+        this.maxVelocityDefault = this.engine.MaxVelocity;
+    }
+    
     private void Start()
     {
         playerMovement = FindObjectOfType<PlayerMovement>();
-        this.maxVelocityDefault = this.engine.MaxVelocity;
     }
     public void OnBoost(InputAction.CallbackContext ctx)
     {

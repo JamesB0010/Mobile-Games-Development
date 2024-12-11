@@ -28,11 +28,6 @@ public class PrefetchAssetsSceneManager : MonoBehaviour
 
     IEnumerator Start()
     {
-        //#if UNITY_EDITOR
-        //StartCoroutine(nameof(this.ChangeScene));
-        //yield break;
-        //#else
-        
         AsyncOperationHandle<long> getDownloadSize = Addressables.GetDownloadSizeAsync(this.labelToLoad);
         yield return getDownloadSize;
 
@@ -77,7 +72,6 @@ public class PrefetchAssetsSceneManager : MonoBehaviour
             StartCoroutine(nameof(this.ChangeScene));
             Addressables.Release(downloadHandle); //Release the operation handle
         }
-        //#endif
     }
 
     private IEnumerator ChangeScene()

@@ -8,10 +8,16 @@ public class Planet : MonoBehaviour
     private Vector3 distancetoMaintain;
 
     private Transform playerTransform;
-    void Start()
+
+    public void OnPlayerSpawned(GameObject player)
     {
-        this.playerTransform = FindObjectOfType<PlayerMovement>().transform;
+        //get moving part
+        Transform movingPart = player.transform.GetChild(0);
+        this.playerTransform = movingPart;
+        
         this.distancetoMaintain = transform.position - this.playerTransform.position;
+
+        this.enabled = true;
     }
 
     void Update()

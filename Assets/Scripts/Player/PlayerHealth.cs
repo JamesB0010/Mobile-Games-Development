@@ -9,6 +9,8 @@ public class PlayerHealth : MonoBehaviour
     
     [SerializeField] private GameObject DeathParticle;
 
+    [SerializeField] private Transform ShipModel;
+
     public float Health
     {
         get => this.health;
@@ -35,6 +37,6 @@ public class PlayerHealth : MonoBehaviour
 
     public void OnShipExplosion()
     {
-        Instantiate(this.DeathParticle, transform.position, Quaternion.identity);
+        Instantiate(this.DeathParticle, this.ShipModel.position, Quaternion.identity);
     }
 }

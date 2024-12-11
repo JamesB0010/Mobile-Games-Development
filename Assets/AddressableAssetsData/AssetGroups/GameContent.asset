@@ -41,11 +41,6 @@ MonoBehaviour:
     m_SerializedLabels:
     - default
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 1d83dca1c89da304088ba23f465982ed
-    m_Address: Assets/Scenes/prefetchAssets.unity
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: e08dd4486316e7a428ba1636ac813e81, type: 2}
   m_SchemaSet:

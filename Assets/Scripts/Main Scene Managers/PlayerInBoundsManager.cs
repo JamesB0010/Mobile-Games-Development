@@ -9,7 +9,7 @@ public class PlayerInBoundsManager : MonoBehaviour
 {
     [SerializeField] private Transform top, bottom, forward, back, left, right;
 
-    [SerializeField] private Transform player;
+    private Transform player;
 
     [SerializeField] private UnityEvent<FloatLerpPackage> outOfBounds = new UnityEvent<FloatLerpPackage>();
 
@@ -20,8 +20,16 @@ public class PlayerInBoundsManager : MonoBehaviour
     private FloatLerpPackage outOfBoundsTimeout;
 
     private bool playerInBounds = true;
-    private bool almostTimeUpInvoked= false;
+    private bool almostTimeUpInvoked = false;
 
+    public void SetPlayerTransform(GameObject topLevelPlayerObject)
+    {
+        //get the part of the player which actually moves around
+        Transform movingPart = topLevelPlayerObject.transform.GetChild(0);
+
+        this.player = movingPart;
+    }
+    
     private bool PlayerInBounds
     {
         get => this.playerInBounds;

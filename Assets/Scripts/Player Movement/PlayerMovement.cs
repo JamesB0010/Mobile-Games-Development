@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 namespace Player_Movement
@@ -16,11 +17,11 @@ namespace Player_Movement
         }
 
 
-
-        private void Start()
+        public void OnEngineEquipped()
         {
             this.currentMaxVelocity = this.playerShipEngine.MaxVelocity;
         }
+
         void Update()
         {
             var acceleration = this.playerShipEngine.CalculateAcceleration();

@@ -35,7 +35,6 @@ public class PlayerShipEngine : MonoBehaviour
     {
         this.engine = this.playerUpgradesState.Engine.Engine;
         this.EngineEquippedEvent?.Invoke(this.engine);
-        
     }
 
     public Vector3 CalculateAcceleration()

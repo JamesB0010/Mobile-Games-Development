@@ -14,16 +14,21 @@ public class GameManager : MonoBehaviour
 
     [Header("Enemy Management")]
     [SerializeField] private ActiveEnemiesManager activeEnemiesManager;
-
-    [SerializeField] private Transform player;
+    
+    private Transform player;
 
     public Transform Player => this.player;
 
-
-    private void Start()
+    
+    public void OnPlayerSpawned(GameObject player)
     {
-        SpawnEnemies();
+        //get the moving part of the player
+        Transform movingPart = player.transform.GetChild(0);
+        this.player = movingPart;
+        
+        this.SpawnEnemies();
     }
+    
     private void SpawnEnemies()
     {
         enemySpawnManager.SpawnEnemies(this, this.activeEnemiesManager);
