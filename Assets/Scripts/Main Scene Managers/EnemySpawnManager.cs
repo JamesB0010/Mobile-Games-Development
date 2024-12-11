@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemySpawnManager : MonoBehaviour
 {
-    [SerializeField] private Enemy enemyPrefab;
+    /*[SerializeField] private Enemy enemyPrefab;*/
     [SerializeField] private float enemiesToSpawn;
     [SerializeField]
     private Transform spawnBoundaryPositiveX,
@@ -18,7 +18,7 @@ public class EnemySpawnManager : MonoBehaviour
 
     public void SpawnEnemies(GameManager gameManager, ActiveEnemiesManager enemiesManager)
     {
-        short activeEnemies = 0;
+        /*short activeEnemies = 0;
 
         for (int i = 0; i < this.enemiesToSpawn; i++)
         {
@@ -36,6 +36,6 @@ public class EnemySpawnManager : MonoBehaviour
             enemy.EnemiesManager = enemiesManager;
         }
 
-        enemiesManager.ActiveEnemyCount = activeEnemies;
+        enemiesManager.ActiveEnemyCount = activeEnemies;*/
     }
 }
