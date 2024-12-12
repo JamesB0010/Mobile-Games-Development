@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AddressableAssets;
 
 public class EnemySpawnManager : MonoBehaviour
 {
@@ -15,10 +16,15 @@ public class EnemySpawnManager : MonoBehaviour
         spawnBoundaryNegativeZ;
 
 
+    [SerializeField] private AssetReference enemy;
 
-    public void SpawnEnemies(GameManager gameManager, ActiveEnemiesManager enemiesManager)
+    [SerializeField] private AssetReference enemyHarb;
+
+
+
+    public void SpawnEnemies(ActiveEnemiesManager enemiesManager)
     {
-        /*short activeEnemies = 0;
+        short activeEnemies = 0;
 
         for (int i = 0; i < this.enemiesToSpawn; i++)
         {
@@ -32,10 +38,20 @@ public class EnemySpawnManager : MonoBehaviour
             float minZ = this.spawnBoundaryNegativeZ.position.z;
             float maxZ = this.spawnBoundaryPositiveZ.position.z;
 
-            Enemy enemy = Instantiate(enemyPrefab, new Vector3(Random.Range(minX, minY), Random.Range(minY, maxY), Random.Range(minZ, maxZ)), Random.rotation);
-            enemy.EnemiesManager = enemiesManager;
+            this.enemy.InstantiateAsync(
+                    new Vector3(Random.Range(minX, minY), Random.Range(minY, maxY), Random.Range(minZ, maxZ)),
+                    Random.rotation).Completed +=
+                handle =>
+                {
+                    handle.Result.GetComponent<Enemy>().EnemiesManager = enemiesManager;
+                    enemiesManager.ActiveEnemyCount = activeEnemies;
+                };
         }
+        
+        
+        
+        //spawn harb
+        this.enemyHarb.InstantiateAsync();
 
-        enemiesManager.ActiveEnemyCount = activeEnemies;*/
     }
 }

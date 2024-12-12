@@ -30,6 +30,7 @@ public class SelectedCellHighlight : MonoBehaviour
             SelectedCellHighlight.instance = this;
         else
             Destroy(this.gameObject);
+        
     }
 
     private void Update()

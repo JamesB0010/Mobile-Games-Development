@@ -10,14 +10,6 @@ public class Enemy : EnemyBase
     //Attributes
     [SerializeField] private GameObject DeathParticle;
 
-    private ActiveEnemiesManager enemiesManager;
-
-    public ActiveEnemiesManager EnemiesManager
-    {
-        set => this.enemiesManager = value;
-    }
-
-
     [Header("Movement")]
     private Vector3 velocity = Vector3.zero;
     [SerializeField] private float maxVelocity;

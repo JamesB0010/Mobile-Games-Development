@@ -1657,6 +1657,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 11400000, guid: c10dd469d77fb674ca9ba53bff7db85b, type: 2}
+        m_TargetAssemblyTypeName: HapticFeedbackObject, Assembly-CSharp
+        m_MethodName: LightVibration
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &197567907
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2932,6 +2944,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 11400000, guid: c10dd469d77fb674ca9ba53bff7db85b, type: 2}
+        m_TargetAssemblyTypeName: HapticFeedbackObject, Assembly-CSharp
+        m_MethodName: LightVibration
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!1 &266253587
 GameObject:
   m_ObjectHideFlags: 0
@@ -3671,6 +3695,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: UIViewUpdater, Assembly-CSharp
         m_MethodName: CellSelected
         m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 11400000, guid: c10dd469d77fb674ca9ba53bff7db85b, type: 2}
+        m_TargetAssemblyTypeName: HapticFeedbackObject, Assembly-CSharp
+        m_MethodName: LightVibration
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -10591,6 +10627,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 11400000, guid: c10dd469d77fb674ca9ba53bff7db85b, type: 2}
+        m_TargetAssemblyTypeName: HapticFeedbackObject, Assembly-CSharp
+        m_MethodName: LightVibration
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1023090525
 GameObject:
   m_ObjectHideFlags: 0
@@ -11191,6 +11239,18 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 1677320587}
           m_ObjectArgumentAssemblyTypeName: SelectedCellHighlight, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 11400000, guid: c10dd469d77fb674ca9ba53bff7db85b, type: 2}
+        m_TargetAssemblyTypeName: HapticFeedbackObject, Assembly-CSharp
+        m_MethodName: LightVibration
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -12710,7 +12770,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1174064295}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: c10dd469d77fb674ca9ba53bff7db85b, type: 2}
+        m_TargetAssemblyTypeName: HapticFeedbackObject, Assembly-CSharp
+        m_MethodName: LightVibration
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1174064295
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17976,6 +18048,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 11400000, guid: c10dd469d77fb674ca9ba53bff7db85b, type: 2}
+        m_TargetAssemblyTypeName: HapticFeedbackObject, Assembly-CSharp
+        m_MethodName: LightVibration
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1646154957
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20083,6 +20167,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 11400000, guid: c10dd469d77fb674ca9ba53bff7db85b, type: 2}
+        m_TargetAssemblyTypeName: HapticFeedbackObject, Assembly-CSharp
+        m_MethodName: LightVibration
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -22977,6 +23073,18 @@ MonoBehaviour:
       - m_Target: {fileID: 995872741}
         m_TargetAssemblyTypeName: ShipPartLabelCameraDirector, Assembly-CSharp
         m_MethodName: DisableAllCameras
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 11400000, guid: c10dd469d77fb674ca9ba53bff7db85b, type: 2}
+        m_TargetAssemblyTypeName: HapticFeedbackObject, Assembly-CSharp
+        m_MethodName: LightVibration
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

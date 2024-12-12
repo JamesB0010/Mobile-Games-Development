@@ -28,6 +28,13 @@ public class EnemyBase : MonoBehaviour
             }
         }
     }
+    
+    protected ActiveEnemiesManager enemiesManager;
+
+    public ActiveEnemiesManager EnemiesManager
+    {
+        set => this.enemiesManager = value;
+    }
 
     public virtual void TakeDamage(float damageToTake)
     {

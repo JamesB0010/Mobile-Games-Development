@@ -2807,6 +2807,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56e2709e7df6ccf4e89cd39162290153, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hapticFeedback: {fileID: 11400000, guid: c10dd469d77fb674ca9ba53bff7db85b, type: 2}
 --- !u!114 &6429267163666634607
 MonoBehaviour:
   m_ObjectHideFlags: 0

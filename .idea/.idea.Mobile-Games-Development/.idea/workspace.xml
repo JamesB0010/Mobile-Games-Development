@@ -6,21 +6,16 @@
   <component name="ChangeListManager">
     <list default="true" id="c7630d3b-1041-428d-b5b5-aacdf8ac5685" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Mobile-Games-Development/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Mobile-Games-Development/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Asset Store/Planet Earth Free/Materials/Earth1kMaterial.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Asset Store/Planet Earth Free/Materials/Earth1kMaterial.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Asset Store/Planet Earth Free/Prefabs/EarthLow.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Asset Store/Planet Earth Free/Prefabs/EarthLow.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Save Game Debug Info.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Save Game Debug Info.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Json/SaveGame.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Json/SaveGame.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/LoadingScreen.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/LoadingScreen.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/link.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/link.xml.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Upgrade Ship.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Upgrade Ship.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Voicelines Recorder.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Voicelines Recorder.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/mainScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/mainScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/prefetchAssets.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/prefetchAssets.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Main Scene Managers/PlayerInBoundsManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Main Scene Managers/PlayerInBoundsManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/UnityConnectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/UnityConnectSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ServerData/Android/catalog_0.2.21.hash" beforeDir="false" afterPath="$PROJECT_DIR$/ServerData/Android/catalog_0.2.21.hash" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ServerData/Android/catalog_0.2.21.json" beforeDir="false" afterPath="$PROJECT_DIR$/ServerData/Android/catalog_0.2.21.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Main Scene Managers/EnemySpawnManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Main Scene Managers/EnemySpawnManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player Movement/AttitudeInput.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player Movement/AttitudeInput.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerHapticFeedback.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerHapticFeedback.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ship Upgrading/SelectedCellHighlight.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ship Upgrading/SelectedCellHighlight.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,6 +44,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameUiControls/RollAndPitchJoystick.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameUiControls/SelfDestructButton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameUiControls/SubtitleSetter.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Haptic feedback/HapticFeedbackObject.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Main Menu/AchievementsButton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Main Menu/AdsInitialize.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Main Menu/BuzzardGameData.cs" root0="FORCE_HIGHLIGHTING" />
@@ -282,6 +278,7 @@
       <workItem from="1733939614238" duration="6782000" />
       <workItem from="1733947834371" duration="1763000" />
       <workItem from="1733973465230" duration="633000" />
+      <workItem from="1733995099435" duration="2339000" />
     </task>
     <servers />
   </component>

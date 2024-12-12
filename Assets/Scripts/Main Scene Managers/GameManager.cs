@@ -31,7 +31,7 @@ public class GameManager : MonoBehaviour
     
     private void SpawnEnemies()
     {
-        enemySpawnManager.SpawnEnemies(this, this.activeEnemiesManager);
+        enemySpawnManager.SpawnEnemies(this.activeEnemiesManager);
     }
 
 }

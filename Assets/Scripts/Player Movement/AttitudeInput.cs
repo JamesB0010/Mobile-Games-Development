@@ -50,7 +50,7 @@ public class AttitudeInput
     public static float GetRollNormalized()
     {
         float roll = Roll();
-        float normalizedRoll = Mathf.Clamp(ValueInRangeMapper.MapRange(roll, 75, 105, -1, 1), -1f, 1f) + 1;
+        float normalizedRoll = Mathf.Clamp(ValueInRangeMapper.MapRange(roll, 75, 105, -1, 1), -1f, 1f); //fix from ali feedback might work might not + 1;
         //Debug.Log($"Normalized roll {normalizedRoll}");
         return normalizedRoll;
     }

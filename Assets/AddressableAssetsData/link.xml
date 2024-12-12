@@ -21,6 +21,7 @@
     <type fullname="FloatReference" preserve="all" />
     <type fullname="GreaterOrEqual" preserve="all" />
     <type fullname="GunSystemFSMBehaviour" preserve="all" />
+    <type fullname="HapticFeedbackObject" preserve="all" />
     <type fullname="Harb" preserve="all" />
     <type fullname="HeavyFireButton" preserve="all" />
     <type fullname="HeavyGun" preserve="all" />

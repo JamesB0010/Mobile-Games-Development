@@ -4,6 +4,8 @@ using UnityEngine;
 using CandyCoded.HapticFeedback;
 public class PlayerHapticFeedback : MonoBehaviour
 {
+    [SerializeField] private HapticFeedbackObject hapticFeedback;
+    
     public void OnEnemyKilled(EnemyBase enemy)
     {
         float distance = Vector3.Distance(transform.position, enemy.transform.position);
@@ -11,17 +13,17 @@ public class PlayerHapticFeedback : MonoBehaviour
         if (distance < 187)
         {
             Debug.Log("Close range kill detected");
-            HapticFeedback.HeavyFeedback();
+            this.hapticFeedback.HeavyVibration();
         }
         else if (distance > 385)
         {
             Debug.Log("Long range kill detected");
-            HapticFeedback.LightFeedback();
+            this.hapticFeedback.LightVibration();
         }
         else
         {
             Debug.Log("Medium range kill detected");
-            HapticFeedback.MediumFeedback();
+            this.hapticFeedback.MediumVibration();
         }
     }
 }
