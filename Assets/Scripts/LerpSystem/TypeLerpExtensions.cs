@@ -48,4 +48,17 @@ public static class TypeLerpExtensions
             )
         );
     }
+        public static void LerpTo(this Color value, Color target, float timeToTake = 1.0f,
+            Action<Color> updateCallback = null, Action<LerpPackage> finishedCb = null,
+            AnimationCurve animationCurve = null)
+        {
+            updateCallback ??= val => { Debug.Log(val); };
+            finishedCb ??= pkg => { Debug.Log("Finished Lerping"); };
+
+            animationCurve ??= GlobalLerpProcessor.linearCurve;
+            
+            GlobalLerpProcessor.AddLerpPackage(
+                new ColorLerpPackage(value, target, updateCallback, finishedCb, timeToTake, animationCurve)
+                );
+        }
 }
