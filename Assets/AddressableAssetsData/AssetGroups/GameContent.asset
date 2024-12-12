@@ -41,6 +41,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - default
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a4e2bf95dab9cb74faefbf64f48fca1b
+    m_Address: Assets/Models/Northstar/Northstar Ship.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: e08dd4486316e7a428ba1636ac813e81, type: 2}
   m_SchemaSet:
