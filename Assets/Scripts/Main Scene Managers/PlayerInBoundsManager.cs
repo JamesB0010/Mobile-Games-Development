@@ -28,6 +28,8 @@ public class PlayerInBoundsManager : MonoBehaviour
         Transform movingPart = topLevelPlayerObject.transform.GetChild(0);
 
         this.player = movingPart;
+
+        this.enabled = true;
     }
     
     private bool PlayerInBounds

@@ -5,18 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c7630d3b-1041-428d-b5b5-aacdf8ac5685" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/MainMenuEnvironment.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/MainMenuEnvironment.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Main Menu/MainMenuEnvironmentLoader.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Main Menu/MainMenuEnvironmentLoader.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ServerData/Android/5e1c6b33d3131a114adf97b1a5218c07_unitybuiltinshaders_6bc630ef38efda535a0449a995079a20.bundle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ServerData/Android/catalog_0.2.21.hash" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ServerData/Android/catalog_0.2.21.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ServerData/Android/gamecontent_assets_all_1144431531ad8dd697087165b500528a.bundle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Mobile-Games-Development/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Mobile-Games-Development/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/GameContent.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/GameContent.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Asset Store/Planet Earth Free/Materials/Earth1kMaterial.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Asset Store/Planet Earth Free/Materials/Earth1kMaterial.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Asset Store/Planet Earth Free/Prefabs/EarthLow.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Asset Store/Planet Earth Free/Prefabs/EarthLow.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Save Game Debug Info.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Save Game Debug Info.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Json/SaveGame.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Json/SaveGame.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/LoadingScreen.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/LoadingScreen.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Main Menu/MainMenuManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Main Menu/MainMenuManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Upgrade Ship.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Upgrade Ship.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Voicelines Recorder.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Voicelines Recorder.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/mainScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/mainScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/prefetchAssets.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/prefetchAssets.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Main Scene Managers/PlayerInBoundsManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Main Scene Managers/PlayerInBoundsManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/UnityConnectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/UnityConnectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ServerData/Android/catalog_0.2.21.hash" beforeDir="false" afterPath="$PROJECT_DIR$/ServerData/Android/catalog_0.2.21.hash" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ServerData/Android/catalog_0.2.21.json" beforeDir="false" afterPath="$PROJECT_DIR$/ServerData/Android/catalog_0.2.21.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -276,7 +280,8 @@
       <workItem from="1733836553119" duration="3988000" />
       <workItem from="1733849497157" duration="10044000" />
       <workItem from="1733939614238" duration="6782000" />
-      <workItem from="1733947834371" duration="929000" />
+      <workItem from="1733947834371" duration="1763000" />
+      <workItem from="1733973465230" duration="633000" />
     </task>
     <servers />
   </component>
