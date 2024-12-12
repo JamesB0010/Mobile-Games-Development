@@ -4103,37 +4103,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 273753588}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &274421526
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 274421527}
-  m_Layer: 0
-  m_Name: ------ Enemy ------
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &274421527
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 274421526}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &277454049
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9153,6 +9122,16 @@ MonoBehaviour:
   spawnBoundaryNegativeY: {fileID: 1460430863}
   spawnBoundaryPositiveZ: {fileID: 1744559026}
   spawnBoundaryNegativeZ: {fileID: 1070783237}
+  enemy:
+    m_AssetGUID: 08f9d57a1cceca440872d84f05c1f814
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  enemyHarb:
+    m_AssetGUID: bd6ad2fb5b766f34394d89e53c48cfd3
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
 --- !u!1001 &500450607
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -41094,4 +41073,3 @@ SceneRoots:
   - {fileID: 597706204}
   - {fileID: 409741688}
   - {fileID: 1511671989}
-  - {fileID: 274421527}
