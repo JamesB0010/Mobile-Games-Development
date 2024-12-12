@@ -32,7 +32,6 @@ public class MainMenuManager : MonoBehaviour
     public void EnterGameButtonPressed()
     {
         #if UNITY_EDITOR
-        this.sceneChanger.LoadSceneWithLoadingScreen(2);
         part1IntroDirector.Play();
         mainMenuUi.HideUI();
         return;
@@ -42,7 +41,6 @@ public class MainMenuManager : MonoBehaviour
             return;
         
         
-        this.sceneChanger.LoadSceneWithLoadingScreen(2);
         part1IntroDirector.Play();
         
         mainMenuUi.HideUI();

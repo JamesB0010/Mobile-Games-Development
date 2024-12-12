@@ -310,6 +310,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3244084639795060836}
+  - component: {fileID: 1763609648261026293}
   m_Layer: 0
   m_Name: MainMenuEnvironment
   m_TagString: Untagged
@@ -337,6 +338,72 @@ Transform:
   - {fileID: 8626507456355219646}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1763609648261026293
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5047758520354112049}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10c33035c50a8a5468f2ed1cd1add477, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  part1SignalTrackToReference:
+  - key: Activation Track
+    value: {fileID: 9093059361151162165}
+  - key: Animation Track (1)
+    value: {fileID: 1977052145888858648}
+  - key: Signal Track (1)
+    value: {fileID: 693661802398175848}
+  - key: Animation Track (2)
+    value: {fileID: 9093059361151162165}
+  - key: Signal Track (2)
+    value: {fileID: 7888631581978183059}
+  - key: Animation Track (3)
+    value: {fileID: 7888631581978183059}
+  part2SignalTrackToReference:
+  - key: Animation Track
+    value: {fileID: 1977052145888858648}
+  - key: Animation Track (14)
+    value: {fileID: 7888631581978183059}
+  - key: Animation Track (13)
+    value: {fileID: 9093059361151162165}
+  - key: Animation Track (12)
+    value: {fileID: 693661802398175848}
+  - key: Signal Track (5)
+    value: {fileID: 0}
+  - key: Signal Track (4)
+    value: {fileID: 0}
+  - key: Signal Track (3)
+    value: {fileID: 0}
+  - key: Signal Track (2)
+    value: {fileID: 0}
+  - key: Signal Track (1)
+    value: {fileID: 0}
+  - key: Animation Track (11)
+    value: {fileID: 0}
+  - key: Animation Track (10)
+    value: {fileID: 0}
+  - key: Animation Track (8)
+    value: {fileID: 0}
+  - key: Animation Track (7)
+    value: {fileID: 0}
+  - key: Animation Track (6)
+    value: {fileID: 0}
+  - key: Animation Track (5)
+    value: {fileID: 0}
+  - key: Animation Track (4)
+    value: {fileID: 0}
+  - key: Animation Track (3)
+    value: {fileID: 0}
+  - key: Animation Track (2)
+    value: {fileID: 0}
+  - key: Animation Track (9)
+    value: {fileID: 0}
+  - key: Activation Track
+    value: {fileID: 0}
 --- !u!1 &7888631581978183059
 GameObject:
   m_ObjectHideFlags: 0
