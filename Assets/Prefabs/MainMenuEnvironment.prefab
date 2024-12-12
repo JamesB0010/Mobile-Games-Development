@@ -373,35 +373,35 @@ MonoBehaviour:
   - key: Animation Track (12)
     value: {fileID: 693661802398175848}
   - key: Signal Track (5)
-    value: {fileID: 0}
+    value: {fileID: 7074040741708692145}
   - key: Signal Track (4)
-    value: {fileID: 0}
+    value: {fileID: 8064089243289585037}
   - key: Signal Track (3)
-    value: {fileID: 0}
+    value: {fileID: 2657954417466196547}
   - key: Signal Track (2)
-    value: {fileID: 0}
+    value: {fileID: 8340073744810116912}
   - key: Signal Track (1)
-    value: {fileID: 0}
+    value: {fileID: 6915559795557262428}
   - key: Animation Track (11)
-    value: {fileID: 0}
+    value: {fileID: 3772228123688522954}
   - key: Animation Track (10)
-    value: {fileID: 0}
+    value: {fileID: 1792073314158416920}
   - key: Animation Track (8)
-    value: {fileID: 0}
+    value: {fileID: 8514663194846315119}
   - key: Animation Track (7)
-    value: {fileID: 0}
+    value: {fileID: 5575076892524435444}
   - key: Animation Track (6)
-    value: {fileID: 0}
+    value: {fileID: 5060444674357109694}
   - key: Animation Track (5)
-    value: {fileID: 0}
+    value: {fileID: 4405008709126423969}
   - key: Animation Track (4)
-    value: {fileID: 0}
+    value: {fileID: 3910625786419311083}
   - key: Animation Track (3)
-    value: {fileID: 0}
+    value: {fileID: 670850930908424601}
   - key: Animation Track (2)
-    value: {fileID: 0}
+    value: {fileID: 2722508503412812107}
   - key: Animation Track (9)
-    value: {fileID: 0}
+    value: {fileID: 9029365872410670629}
   - key: Activation Track
     value: {fileID: 0}
 --- !u!1 &7888631581978183059
