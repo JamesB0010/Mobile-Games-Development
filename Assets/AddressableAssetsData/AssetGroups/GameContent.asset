@@ -47,6 +47,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - default
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 28bbfc69ec7dd754b953efbe03838749
+    m_Address: Assets/Models/Main Scene/mainScene.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: e08dd4486316e7a428ba1636ac813e81, type: 2}
   m_SchemaSet:

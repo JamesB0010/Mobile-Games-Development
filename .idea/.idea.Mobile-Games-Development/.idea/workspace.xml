@@ -5,7 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c7630d3b-1041-428d-b5b5-aacdf8ac5685" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Upgrade Ship.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Upgrade Ship.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/GameContent.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/GameContent.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Astroid/Material.001.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Astroid/Material.001.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/mainScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/mainScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ScriptableBuildPipeline.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ScriptableBuildPipeline.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ServerData/Android/5e1c6b33d3131a114adf97b1a5218c07_unitybuiltinshaders_6bc630ef38efda535a0449a995079a20.bundle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ServerData/Android/catalog_0.2.21.hash" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ServerData/Android/catalog_0.2.21.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ServerData/Android/catalog_0.2.22.hash" beforeDir="false" afterPath="$PROJECT_DIR$/ServerData/Android/catalog_0.2.22.hash" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ServerData/Android/catalog_0.2.22.json" beforeDir="false" afterPath="$PROJECT_DIR$/ServerData/Android/catalog_0.2.22.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ServerData/Android/gamecontent_assets_all_1144431531ad8dd697087165b500528a.bundle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ServerData/Android/gamecontent_assets_all_3b8d26662e44a4467b6da66b62dbb3ef.bundle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ServerData/Android/gamecontent_assets_all_ab2780808475fa2f6971df6065ffd872.bundle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ServerData/Android/gamecontent_assets_all_b4921c49c605735020ec27120fc064f6.bundle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ServerData/Android/gamecontent_assets_all_f65990f49b6668e0197972cb2dc26ce6.bundle" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -127,29 +143,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "XThreadsFramesViewSplitterKey": "0.43307087",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "settings.editor.selected.configurable": "reference.settings.project.statistic.project.settings",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;XThreadsFramesViewSplitterKey&quot;: &quot;0.43307087&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.statistic.project.settings&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "rider.external.source.directories": [
-      "C:\\Users\\james\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\DecompilerCache",
-      "C:\\Users\\james\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\SourcesCache",
-      "C:\\Users\\james\\AppData\\Local\\Symbols\\src"
+  &quot;keyToStringList&quot;: {
+    &quot;rider.external.source.directories&quot;: [
+      &quot;C:\\Users\\james\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\DecompilerCache&quot;,
+      &quot;C:\\Users\\james\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\SourcesCache&quot;,
+      &quot;C:\\Users\\james\\AppData\\Local\\Symbols\\src&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.3.26f1\Editor\Unity.exe" />
@@ -262,6 +278,7 @@
       <workItem from="1733947834371" duration="1763000" />
       <workItem from="1733973465230" duration="633000" />
       <workItem from="1733995099435" duration="2339000" />
+      <workItem from="1734106491310" duration="492000" />
     </task>
     <servers />
   </component>
