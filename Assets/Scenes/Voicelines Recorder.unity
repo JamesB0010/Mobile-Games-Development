@@ -1311,7 +1311,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0de55abbebb97ae468f0321ec2706f3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultAudioClip: {fileID: 8300000, guid: 8a972e2537c4cd144834a60f4f4375b1, type: 3}
+  defaultAudioClip: {fileID: 8300000, guid: 856a9500a5badf84ead4a1f1359e4153, type: 3}
   audioSource: {fileID: 1137705176}
   TestAudioPlayerStatusUpdate:
     m_PersistentCalls:

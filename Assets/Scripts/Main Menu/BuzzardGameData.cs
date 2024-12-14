@@ -30,7 +30,7 @@ public class BuzzardGameData : MonoBehaviour
     [SerializeField] private SaveGameDebugInfo debugInfo;
 
     private static BuzzardGameData instance = null;
-    
+
     private static BuzzardGameData Instance
     {
         get
@@ -97,7 +97,6 @@ public class BuzzardGameData : MonoBehaviour
         this.playerKills = Resources.Load<IntReference>("Json/EliminationCount");
         this.gamesPlayed = Resources.Load<IntReference>("Json/Games Played");
         this.gyroEnabled = Resources.Load<BoolReference>("Json/GyroEnabled");
-        WavUtility.CreateEmpty(AudioRecorder.GetFullRecordingFilepath()).Close();
     }
 
     private void OnDestroy()
@@ -107,7 +106,8 @@ public class BuzzardGameData : MonoBehaviour
 
     public static void ReadLocalSaveFile()
     {
-        Instance.OnSavedGameRead(File.ReadAllText(Application.dataPath + "/Resources/Json/SaveGame.txt"));
+        if(File.Exists(Application.dataPath + "/Resources/Json/SaveGame.txt"))
+            Instance.OnSavedGameRead(File.ReadAllText(Application.dataPath + "/Resources/Json/SaveGame.txt"));
     }
 
     public void OnSavedGameRead(string data)
@@ -136,7 +136,7 @@ public class BuzzardGameData : MonoBehaviour
 
     private void __debug__UpdateUi(GameSaveData saveGameData)
     {
-        this.debugInfo.UpdateUi(saveGameData);
+        this.debugInfo?.UpdateUi(saveGameData);
     }
 
     public void SaveAllConfigFilesLocal()
@@ -155,6 +155,7 @@ public class BuzzardGameData : MonoBehaviour
         this.gyroEnabled.SetValue(saveGameData.gyroEnabled);
         if (saveGameData.userSound != "noSoundRecorded")
         {
+            WavUtility.CreateEmpty(AudioRecorder.GetFullRecordingFilepath()).Close();
             File.WriteAllBytes(AudioRecorder.GetFullRecordingFilepath(),WavUtility.StringFileContentsToBytes(saveGameData.userSound));
         }
 
@@ -176,6 +177,7 @@ public class BuzzardGameData : MonoBehaviour
         this.gyroEnabled.SetValue(this.saveGameData.gyroEnabled);
         if (saveGameData.userSound != "noSoundRecorded")
         {
+            WavUtility.CreateEmpty(AudioRecorder.GetFullRecordingFilepath()).Close();
             File.WriteAllBytes(AudioRecorder.GetFullRecordingFilepath(),WavUtility.StringFileContentsToBytes(saveGameData.userSound));
         }
         saveGameData.WriteToSaveGameJsonFile();

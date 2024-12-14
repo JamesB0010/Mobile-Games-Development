@@ -17,9 +17,11 @@ public class GameSaveData
    public string userSound;
    public void WriteToSaveGameJsonFile()
    {
+      bool fileExists = File.Exists(Application.dataPath + "/Resources/Json/SaveGame.txt");
       File.WriteAllText(Application.dataPath + "/Resources/Json/SaveGame.txt", JsonUtility.ToJson(this, true));
       #if UNITY_EDITOR
-      AssetDatabase.SaveAssetIfDirty(Resources.Load<TextAsset>("Json/SaveGame"));
+      if(fileExists)
+         AssetDatabase.SaveAssetIfDirty(Resources.Load<TextAsset>("Json/SaveGame"));
       #endif
    }
 }
