@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class EnergySystemToPurchaseStats : MonoBehaviour
+public class EnergySystemItemStatsView : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI energySysNameValField, maxEnergyValField, rechargeRateValField;
 

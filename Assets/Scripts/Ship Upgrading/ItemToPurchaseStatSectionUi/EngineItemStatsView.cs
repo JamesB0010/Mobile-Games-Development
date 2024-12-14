@@ -4,7 +4,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.Serialization;
 
-public class EngineToPurchaseStats : MonoBehaviour
+public class EngineItemStatsView : MonoBehaviour
 {
     [FormerlySerializedAs("engineNameTitle")] [SerializeField] private TextMeshProUGUI BoostEnergyDrainRateTitle;
     [SerializeField] private TextMeshProUGUI engineNameValField,

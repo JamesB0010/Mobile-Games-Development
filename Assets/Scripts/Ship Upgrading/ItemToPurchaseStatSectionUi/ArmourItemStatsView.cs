@@ -4,7 +4,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.Serialization;
 
-public class ArmourToPurchaseStatSection : MonoBehaviour
+public class ArmourItemStatsView : MonoBehaviour
 {
     [SerializeField]
     private TextMeshProUGUI armourNameValField, energyUsedPerHitValField, minEnergyReqValField, shieldStrengthValField;
