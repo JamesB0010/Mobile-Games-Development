@@ -4,16 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c7630d3b-1041-428d-b5b5-aacdf8ac5685" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Mobile-Games-Development/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Mobile-Games-Development/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/AudioRecordings/recording.wav" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/AudioRecordings/recording.wav" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/AudioRecordings/recording.wav.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Json/SaveGame.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Json/SaveGame.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Json/SaveGame.txt.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Json/SaveGame.txt.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Voicelines Recorder.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Voicelines Recorder.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AudioRecording/AudioRecorder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AudioRecording/AudioRecorder.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Main Menu/BuzzardGameData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Main Menu/BuzzardGameData.cs" afterDir="false" />
-    </list>
+    <list default="true" id="c7630d3b-1041-428d-b5b5-aacdf8ac5685" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -65,6 +56,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Ship Upgrading/Interactors/UpgradeAcievementInteractor/EnergySystemAchievementInteractor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Ship Upgrading/PlayerCreditsTextView.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Ship Upgrading/PlayerElimsTextView.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Ship Upgrading/ShipViewButton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Ship Upgrading/UpgradeSceneShipInstantiatior.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Value References/IntReference.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.cinemachine@2.10.3/Runtime/Experimental/CinemachineNewVirtualCamera.cs" root0="SKIP_HIGHLIGHTING" />
@@ -280,7 +272,7 @@
       <workItem from="1734106491310" duration="656000" />
       <workItem from="1734135610623" duration="4096000" />
       <workItem from="1734139919755" duration="1054000" />
-      <workItem from="1734141189317" duration="4161000" />
+      <workItem from="1734141189317" duration="4853000" />
     </task>
     <servers />
   </component>
@@ -336,39 +328,39 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Scripts/Main Menu/BuzzardGameData.cs</url>
-          <line>157</line>
+          <line>158</line>
           <properties documentPath="C:\Users\james\OneDrive\Documents\University\Year 3\Mobile-Games-Development\Assets\Scripts\Main Menu\BuzzardGameData.cs" initialLine="157" containingFunctionPresentation="Method 'SaveAllConfigFilesLocal'">
             <startOffsets>
-              <option value="5733" />
+              <option value="5816" />
             </startOffsets>
             <endOffsets>
-              <option value="5855" />
+              <option value="5938" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="23" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Scripts/Main Menu/BuzzardGameData.cs</url>
-          <line>179</line>
+          <line>180</line>
           <properties documentPath="C:\Users\james\OneDrive\Documents\University\Year 3\Mobile-Games-Development\Assets\Scripts\Main Menu\BuzzardGameData.cs" initialLine="178" containingFunctionPresentation="Method 'SaveAllConfigFilesLocal'">
             <startOffsets>
-              <option value="7347" />
+              <option value="7430" />
             </startOffsets>
             <endOffsets>
-              <option value="7469" />
+              <option value="7552" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="24" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Scripts/Main Menu/BuzzardGameData.cs</url>
-          <line>181</line>
+          <line>182</line>
           <properties documentPath="C:\Users\james\OneDrive\Documents\University\Year 3\Mobile-Games-Development\Assets\Scripts\Main Menu\BuzzardGameData.cs" initialLine="180" containingFunctionPresentation="Method 'SaveAllConfigFilesLocal'">
             <startOffsets>
-              <option value="7488" />
+              <option value="7571" />
             </startOffsets>
             <endOffsets>
-              <option value="7527" />
+              <option value="7610" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="25" />
