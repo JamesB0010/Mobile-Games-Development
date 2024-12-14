@@ -14,7 +14,7 @@ public class GameSaveData
    public int playerKills;
    public int gamesPlayed;
    public bool gyroEnabled;
-
+   public string userSound;
    public void WriteToSaveGameJsonFile()
    {
       File.WriteAllText(Application.dataPath + "/Resources/Json/SaveGame.txt", JsonUtility.ToJson(this, true));

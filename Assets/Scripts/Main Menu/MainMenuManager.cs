@@ -18,17 +18,20 @@ public class MainMenuManager : MonoBehaviour
     
     private bool readyToStart = false;
 
+    [SerializeField] private UnityEvent startGameAttemptFailed;
+    
+
     private void Start()
     {
         LoadingScreenSceneIndexCounter.NextSceneIndex = 2;
+    }
+
+    public void AuthenticatedSucessfully()
+    {
+        this.readyToStart = true;
         BuzzardGameData.ReadSaveGame();
     }
 
-    public void SetReadyToStart(bool value)
-    {
-        this.readyToStart = value;
-    }
-    
     public void EnterGameButtonPressed()
     {
         #if UNITY_EDITOR
@@ -36,9 +39,12 @@ public class MainMenuManager : MonoBehaviour
         mainMenuUi.HideUI();
         return;
         #endif
-        
+
         if (!this.readyToStart)
+        {
+            this.startGameAttemptFailed?.Invoke();
             return;
+        }
         
         
         part1IntroDirector.Play();

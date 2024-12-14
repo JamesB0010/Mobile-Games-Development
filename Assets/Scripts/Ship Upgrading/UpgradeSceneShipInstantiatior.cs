@@ -11,8 +11,7 @@ public class UpgradeSceneShipInstantiatior : MonoBehaviour
     [SerializeField] private Transform spawnParent;
     [SerializeField] private Vector3 spawnPos;
 
-
-    private void Start()
+    private void Awake()
     {
         this.playerShip.InstantiateAsync(this.spawnPos, Quaternion.identity, this.spawnParent).Completed += handle =>
         {

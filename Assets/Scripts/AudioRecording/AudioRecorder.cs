@@ -11,12 +11,24 @@ using UnityEngine.Events;
 public class AudioRecorder : MonoBehaviour
 {
     private AudioClip recordedClip;
-    private string filePath = "recording.wav";
-    private string directoryPath = Application.dataPath + "/Resources/AudioRecordings";
+    private static string filePath = "";
+    private static string filename = "recording.wav";
+    private static string directoryPath = Application.dataPath + "/Resources/AudioRecordings";
     private float startTime;
     private float recordingLength;
     private bool recording = false;
 
+
+    private void Start()
+    {
+        //BuzzardGameData.ReadLocalSaveFile();
+    }
+
+
+    public static string GetFullRecordingFilepath()
+    {
+        return Path.Combine(directoryPath, filename);
+    }
 
     [SerializeField] private UnityEvent<string> AudioRecorderStatusUpdate = new UnityEvent<string>();
 
@@ -57,7 +69,7 @@ public class AudioRecorder : MonoBehaviour
 
     public void DeleteClip()
     {
-        string fullFilepath = Path.Combine(this.directoryPath, this.filePath);
+        string fullFilepath = Path.Combine(directoryPath, filename);
         if (File.Exists(fullFilepath))
         {
             File.Delete(fullFilepath);
@@ -84,7 +96,7 @@ public class AudioRecorder : MonoBehaviour
     {
         if(recordedClip != null)
         {
-            this.filePath = Path.Combine(this.directoryPath, this.filePath);
+            filePath = Path.Combine(directoryPath, filename);
             WavUtility.Save(filePath, this.recordedClip);
             Debug.Log($"Recording saved as {filePath}");
         }
@@ -93,5 +105,6 @@ public class AudioRecorder : MonoBehaviour
             Debug.Log("No recording found to save");
         }
         
+        BuzzardGameData.Save();
     }
 }

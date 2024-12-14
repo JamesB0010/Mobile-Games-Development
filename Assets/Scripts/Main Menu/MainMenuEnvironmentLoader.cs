@@ -14,7 +14,7 @@ public class MainMenuEnvironmentLoader : MonoBehaviour
 
     [SerializeField] private PlayableDirector introSequencePart1, introSequencePart2;
 
-    private void Start()
+    private void Awake()
     {
         environemnt.InstantiateAsync().Completed += this.EnvironmentLoaded;
     }

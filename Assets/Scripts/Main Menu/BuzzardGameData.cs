@@ -97,11 +97,17 @@ public class BuzzardGameData : MonoBehaviour
         this.playerKills = Resources.Load<IntReference>("Json/EliminationCount");
         this.gamesPlayed = Resources.Load<IntReference>("Json/Games Played");
         this.gyroEnabled = Resources.Load<BoolReference>("Json/GyroEnabled");
+        WavUtility.CreateEmpty(AudioRecorder.GetFullRecordingFilepath()).Close();
     }
 
     private void OnDestroy()
     {
         G_SaveGameInteractor.RemoveReadEventCallback(this.OnSavedGameRead);
+    }
+
+    public static void ReadLocalSaveFile()
+    {
+        Instance.OnSavedGameRead(File.ReadAllText(Application.dataPath + "/Resources/Json/SaveGame.txt"));
     }
 
     public void OnSavedGameRead(string data)
@@ -147,6 +153,11 @@ public class BuzzardGameData : MonoBehaviour
         this.playerKills.SetValue(saveGameData.playerKills);
         this.gamesPlayed.SetValue(saveGameData.gamesPlayed);
         this.gyroEnabled.SetValue(saveGameData.gyroEnabled);
+        if (saveGameData.userSound != "noSoundRecorded")
+        {
+            File.WriteAllBytes(AudioRecorder.GetFullRecordingFilepath(),WavUtility.StringFileContentsToBytes(saveGameData.userSound));
+        }
+
         saveGameData.WriteToSaveGameJsonFile();
     }
 
@@ -163,6 +174,10 @@ public class BuzzardGameData : MonoBehaviour
         this.playerKills.SetValue(this.saveGameData.playerKills);
         this.gamesPlayed.SetValue(this.saveGameData.gamesPlayed);
         this.gyroEnabled.SetValue(this.saveGameData.gyroEnabled);
+        if (saveGameData.userSound != "noSoundRecorded")
+        {
+            File.WriteAllBytes(AudioRecorder.GetFullRecordingFilepath(),WavUtility.StringFileContentsToBytes(saveGameData.userSound));
+        }
         saveGameData.WriteToSaveGameJsonFile();
     }
 
@@ -193,6 +208,15 @@ public class BuzzardGameData : MonoBehaviour
 
     private string CollapseConfigFilesToString()
     {
+        
+        bool userSubmittedSoundExists = File.Exists(AudioRecorder.GetFullRecordingFilepath());
+        
+        string sound = "noSoundRecorded";
+        if (userSubmittedSoundExists)
+        {
+            sound = WavUtility.FilepathToBase64Contents(AudioRecorder.GetFullRecordingFilepath());
+        }
+
         string output = "{\"configs\":[";
         output += this.armourConfigFile.text + ",";
         output += this.energySystemConfigFile.text + ",";
@@ -203,7 +227,8 @@ public class BuzzardGameData : MonoBehaviour
         output += "\"playerMoney\": " + this.playerMoney.GetValue() + ",";
         output += "\"playerKills\": " + this.playerKills.GetValue() + ",";
         output += "\"gamesPlayed\": " + this.gamesPlayed.GetValue() + ",";
-        output += "\"gyroEnabled\": " + this.gyroEnabled.GetValue().ToString().ToLower();
+        output += "\"gyroEnabled\": " + this.gyroEnabled.GetValue().ToString().ToLower() + ",";
+        output += "\"userSound\": " + "\"" + sound + "\"";
         output += "}";
         return output;
     }

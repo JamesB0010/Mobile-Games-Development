@@ -8,7 +8,7 @@ public static class WavUtility
 {
     private const int HEADER_SIZE = 44;
 
-    private static FileStream CreateEmpty(string filepath)
+    public static FileStream CreateEmpty(string filepath)
     {
         FileStream fileStream = new FileStream(filepath, FileMode.Create);
         byte emptyByte = new byte();
@@ -26,11 +26,9 @@ public static class WavUtility
 
         Directory.CreateDirectory(Path.GetDirectoryName(filePath));
 
-        using (FileStream fileStream = CreateEmpty(filePath))
-        {
-            WavUtility.ConvertAndWrite(fileStream, clip);
-            WavUtility.WriteHeader(fileStream, clip);
-        }
+        using FileStream fileStream = CreateEmpty(filePath);
+        WavUtility.ConvertAndWrite(fileStream, clip);
+        WavUtility.WriteHeader(fileStream, clip);
     }
 
     private static string FormatFilepth(string filePath)
@@ -113,5 +111,19 @@ public static class WavUtility
  
        Byte[] subChunk2 = BitConverter.GetBytes(samples * channels * 2);
        fileStream.Write(subChunk2, 0, 4); 
+    }
+
+    public static string FilepathToBase64Contents(string filepath)
+    {
+        byte[] bytes = File.ReadAllBytes(filepath);
+
+        string base64Audio = Convert.ToBase64String(bytes);
+
+        return base64Audio;
+    }
+
+    public static byte[] StringFileContentsToBytes(string fileContents)
+    {
+        return Convert.FromBase64String(fileContents);
     }
 }
