@@ -26,7 +26,8 @@ public class UiUpdaterInteractorLight : UiUpdaterInteractorStrategy
         this.ui.UpdateLightGunWeaponToPurchase(lGun.ItemName, 
             lGun.TimeBetweenBullets.ToString(), 
             lGun.BulletDamage.ToString(),
-            lGun.EnergyExpensePerShot.ToString()
+            lGun.EnergyExpensePerShot.ToString(),
+            lGun.Firepower.ToString()
             );
     }
 }

@@ -1,14 +1,24 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.Analytics;
+using UnityEngine.Events;
 using UnityEngine.Serialization;
 using UnityEngine.TestTools;
 
 [System.Serializable]
 public class PlayerUpgradesState : ScriptableObject
 {
+    public event Action<float> shipFirepowerChanged;
+    public event Action<float> shipArmourChanged;
+
+    public event Action<float> shipEnergySystemChanged;
+    
+    public event Action<float> shipMaxSpeedChanged;
+    
+    
     [FormerlySerializedAs("defaultLightItem")]
     [Header("Light Guns")]
     [SerializeField] private LightGunUpgrade defaultLightGun;
@@ -126,26 +136,52 @@ public class PlayerUpgradesState : ScriptableObject
     public void EditLightWeaponAtIndex(int index, ShipItemUpgrade item)
     {
         this.lightGuns[index] = (LightGunUpgrade)item;
+        
+        this.shipFirepowerChanged?.Invoke(this.CalculateShipFirepower());
     }
 
     public void EditHeavyWeaponAtIndex(int index, ShipItemUpgrade item)
     {
         this.heavyGuns[index] = (HeavyGunUpgrade)item;
+        
+        this.shipFirepowerChanged?.Invoke(this.CalculateShipFirepower());
+    }
+
+    public float CalculateShipFirepower()
+    {
+        int firepower = 0;
+        this.lightGuns.ForEach(upgrade =>
+        {
+            firepower += upgrade.Gun.Firepower;
+        });
+        
+        this.heavyGuns.ForEach(upgrade =>
+        {
+            firepower += upgrade.Gun.Firepower;
+        });
+
+        return firepower;
     }
 
     public void EditEngine(EngineUpgrade engine)
     {
         this.engine = engine;
+        
+        this.shipMaxSpeedChanged?.Invoke(this.engine.Engine.MaxVelocity);
     }
 
     public void EditEnergySystem(EnergySystemsUpgrade energySystem)
     {
         this.energySystem = energySystem;
+        
+        this.shipEnergySystemChanged?.Invoke(this.energySystem.EnergySystem.MaxEnergy);
     }
 
     public void EditArmour(ArmourUpgrade armour)
     {
         this.armour = armour;
+        
+        this.shipArmourChanged?.Invoke(armour.Armour.DamageDampeningMultiplier);
     }
 
     public void SetPlayershipWithStoredLightWeapons(PlayerShipLightWeapon[] weapons)
@@ -177,5 +213,13 @@ public class PlayerUpgradesState : ScriptableObject
             weapons[i].SetupWeapon();
             weapons[i].HeavyGun.CurrentAmmoCount = weapons[i].HeavyGun.MaxAmmoCount;
         }
+    }
+
+    public void SetupComplete()
+    {
+        this.shipFirepowerChanged?.Invoke(this.CalculateShipFirepower());
+        this.shipArmourChanged?.Invoke(this.armour.Armour.DamageDampeningMultiplier);
+        this.shipEnergySystemChanged?.Invoke(this.energySystem.EnergySystem.MaxEnergy);
+        this.shipMaxSpeedChanged?.Invoke(this.engine.Engine.MaxVelocity);
     }
 }

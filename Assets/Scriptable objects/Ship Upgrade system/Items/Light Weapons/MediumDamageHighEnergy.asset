@@ -14,7 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: PlaceHolder Name
   ableToShoot: 1
-  bulletPrefab: {fileID: 3118056857120007577, guid: 5a6baa86ac946c647b5019508c95ae8d, type: 3}
+  bulletPrefab: {fileID: 3118056857120007577, guid: 5a6baa86ac946c647b5019508c95ae8d,
+    type: 3}
+  firepower: 3
   timeBetweenBullets: 0.6
   bulletDamage: 3
   energyExpensePerShot: 10

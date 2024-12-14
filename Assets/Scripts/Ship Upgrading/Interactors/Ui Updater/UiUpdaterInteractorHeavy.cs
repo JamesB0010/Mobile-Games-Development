@@ -34,7 +34,8 @@ public class UiUpdaterInteractorHeavy : UiUpdaterInteractorStrategy
         this.ui.UpdateHeavyWeaponToPurchase(hGun.ItemName, 
             hGun.TimeBetweenBullets.ToString(), 
             hGun.BulletDamage.ToString(), 
-            hGun.MaxAmmoCount.ToString()
+            hGun.MaxAmmoCount.ToString(), 
+            hGun.Firepower.ToString()
             );
     }
 }

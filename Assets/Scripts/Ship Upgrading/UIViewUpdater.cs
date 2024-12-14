@@ -216,20 +216,20 @@ public class UIViewUpdater : MonoBehaviour
         this.heavyGunToPurchaseStats.WeaponCantShoot();
     }
 
-    public void UpdateHeavyWeaponToPurchase(string weaponName, string fireRate, string bulletDamage, string ammoCount)
+    public void UpdateHeavyWeaponToPurchase(string weaponName, string fireRate, string bulletDamage, string ammoCount, string firepower)
     {
         this.DisableAllToPurchaseFields();
         this.toPurchaseSectionBackground.enabled = true;
         this.heavyGunToPurchaseStats.gameObject.SetActive(true);
-        this.heavyGunToPurchaseStats.SetFields(weaponName, fireRate, bulletDamage, ammoCount);
+        this.heavyGunToPurchaseStats.SetFields(weaponName, fireRate, bulletDamage, ammoCount, firepower);
     }
 
-    public void UpdateLightGunWeaponToPurchase(string weaponName, string fireRate, string bulletDamage, string energyExpense)
+    public void UpdateLightGunWeaponToPurchase(string weaponName, string fireRate, string bulletDamage, string energyExpense, string firepower)
     {
         this.DisableAllToPurchaseFields();
         this.toPurchaseSectionBackground.enabled = true;
         this.lightGunToPurchaseStats.gameObject.SetActive(true);
-        this.lightGunToPurchaseStats.SetFields(weaponName, fireRate, bulletDamage, energyExpense);
+        this.lightGunToPurchaseStats.SetFields(weaponName, fireRate, bulletDamage, energyExpense, firepower);
     }
 
     private void DisableAllToPurchaseFields()

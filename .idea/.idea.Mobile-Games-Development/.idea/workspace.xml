@@ -4,7 +4,36 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c7630d3b-1041-428d-b5b5-aacdf8ac5685" name="Changes" comment="" />
+    <list default="true" id="c7630d3b-1041-428d-b5b5-aacdf8ac5685" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Mobile-Games-Development/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Mobile-Games-Development/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Json/SaveGame.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Json/SaveGame.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Json/armourConfiguration.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Json/armourConfiguration.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Json/engineConfiguration.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Json/engineConfiguration.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Json/heavyWeaponConfiguration.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Json/heavyWeaponConfiguration.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Json/ownedUpgradesCounter.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Json/ownedUpgradesCounter.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Upgrade Ship.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Upgrade Ship.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scriptable objects/Ship Upgrade system/Items/Heavy Weapons/AmmoHighDamageHigh.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scriptable objects/Ship Upgrade system/Items/Heavy Weapons/AmmoHighDamageHigh.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scriptable objects/Ship Upgrade system/Items/Heavy Weapons/AmmoHighDamageLow.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scriptable objects/Ship Upgrade system/Items/Heavy Weapons/AmmoHighDamageLow.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scriptable objects/Ship Upgrade system/Items/Heavy Weapons/AmmoMediumDamageHigh.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scriptable objects/Ship Upgrade system/Items/Heavy Weapons/AmmoMediumDamageHigh.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scriptable objects/Ship Upgrade system/Items/Heavy Weapons/AmmoMediumDamageLow.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scriptable objects/Ship Upgrade system/Items/Heavy Weapons/AmmoMediumDamageLow.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scriptable objects/Ship Upgrade system/Items/Heavy Weapons/AmmolowDamagehigh.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scriptable objects/Ship Upgrade system/Items/Heavy Weapons/AmmolowDamagehigh.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scriptable objects/Ship Upgrade system/Items/Light Weapons/Default Autocannon.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scriptable objects/Ship Upgrade system/Items/Light Weapons/Default Autocannon.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scriptable objects/Ship Upgrade system/Items/Light Weapons/HighDamageHighEnergy.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scriptable objects/Ship Upgrade system/Items/Light Weapons/HighDamageHighEnergy.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scriptable objects/Ship Upgrade system/Items/Light Weapons/HighDamageLowEnergy.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scriptable objects/Ship Upgrade system/Items/Light Weapons/HighDamageLowEnergy.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scriptable objects/Ship Upgrade system/Items/Light Weapons/LowDamageLowEnergy.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scriptable objects/Ship Upgrade system/Items/Light Weapons/LowDamageLowEnergy.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scriptable objects/Ship Upgrade system/Items/Light Weapons/MediumDamageHighEnergy.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scriptable objects/Ship Upgrade system/Items/Light Weapons/MediumDamageHighEnergy.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scriptable objects/Ship Upgrade system/Items/Light Weapons/mediumDamageLowEnergy.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scriptable objects/Ship Upgrade system/Items/Light Weapons/mediumDamageLowEnergy.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scriptable objects/State/PlayerWeaponsState.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scriptable objects/State/PlayerWeaponsState.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Persistent Data/PlayerShipStateLoader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Persistent Data/PlayerShipStateLoader.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ship Upgrading/Interactors/Ui Updater/UiUpdaterInteractorArmour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ship Upgrading/Interactors/Ui Updater/UiUpdaterInteractorArmour.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ship Upgrading/Interactors/Ui Updater/UiUpdaterInteractorHeavy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ship Upgrading/Interactors/Ui Updater/UiUpdaterInteractorHeavy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ship Upgrading/Interactors/Ui Updater/UiUpdaterInteractorLight.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ship Upgrading/Interactors/Ui Updater/UiUpdaterInteractorLight.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ship Upgrading/ItemToPurchaseStatSectionUi/HeavyGunToPurchaseStats.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ship Upgrading/ItemToPurchaseStatSectionUi/HeavyGunToPurchaseStats.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ship Upgrading/ItemToPurchaseStatSectionUi/LightGunToPurchaseStats.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ship Upgrading/ItemToPurchaseStatSectionUi/LightGunToPurchaseStats.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ship Upgrading/UIViewUpdater.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ship Upgrading/UIViewUpdater.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/State Management/PlayerUpgradesState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/State Management/PlayerUpgradesState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapon/Gun.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Weapon/Gun.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -56,6 +85,10 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Ship Upgrading/Interactors/UpgradeAcievementInteractor/EnergySystemAchievementInteractor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Ship Upgrading/PlayerCreditsTextView.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Ship Upgrading/PlayerElimsTextView.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Ship Upgrading/ShipFirepowerField.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Ship Upgrading/ShipStatsArmourField.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Ship Upgrading/ShipStatsEnergyField.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Ship Upgrading/ShipStatsSpeedField.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Ship Upgrading/ShipViewButton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Ship Upgrading/UpgradeSceneShipInstantiatior.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Value References/IntReference.cs" root0="FORCE_HIGHLIGHTING" />
@@ -210,10 +243,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="12692">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="12692" />
+      <option name="pid" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -273,6 +306,7 @@
       <workItem from="1734135610623" duration="4096000" />
       <workItem from="1734139919755" duration="1054000" />
       <workItem from="1734141189317" duration="5392000" />
+      <workItem from="1734157782936" duration="3219000" />
     </task>
     <servers />
   </component>

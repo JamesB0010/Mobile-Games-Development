@@ -26,6 +26,6 @@ public class UiUpdaterInteractorArmour : UiUpdaterInteractorStrategy
         this.ui.UpdateUiArmourToPurchase(armour.ItemName, 
             armour.EnergyUsedPerHit.ToString(), 
             armour.MinimumOperationalEnergyLevel.ToString(), 
-            armour.DamageDampeningMultiplier.ToString());
+            ((1 - armour.DamageDampeningMultiplier) * 100).ToString());
     }
 }

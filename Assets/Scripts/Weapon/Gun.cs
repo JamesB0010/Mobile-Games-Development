@@ -10,6 +10,10 @@ public abstract class Gun : ShipItem
     [SerializeField]
     protected Bullet bulletPrefab;
     protected float lastBulletShotTimestamp = -100.0f;
+    
+    [SerializeField] private int firepower;
+
+    public int Firepower => this.firepower;
 
     [SerializeField]
     protected float timeBetweenBullets;

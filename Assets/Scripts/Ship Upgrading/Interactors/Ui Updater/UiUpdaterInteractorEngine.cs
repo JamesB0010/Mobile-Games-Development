@@ -26,14 +26,14 @@ public class UiUpdaterInteractorEngine : UiUpdaterInteractorStrategy
         if(engine.EngineBoostStats.CanBoost)
             this.ui.UpdateUiEngineToPurchase(engine.ItemName, 
                 engine.AccelerationSpeed.ToString(),
-                engine.TopSpeed.ToString(),
+                engine.MaxVelocity.ToString(),
                 engine.EnergyDrainRate.ToString(), 
                 engine.EngineBoostStats.EnergyBoostDrainRate.ToString()
                 );
         else
             this.ui.UpdateUiEngineToPurchase(engine.ItemName, 
                 engine.AccelerationSpeed.ToString(),
-                engine.TopSpeed.ToString(),
+                engine.MaxVelocity.ToString(),
                 engine.EnergyDrainRate.ToString()
                 );
     }

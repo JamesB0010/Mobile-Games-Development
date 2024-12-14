@@ -2,7 +2,7 @@
     "configs": [
         {
             "upgradeReferences": [
-                "DefaultArmour"
+                "MediumLowEnergy"
             ]
         },
         {
@@ -12,13 +12,13 @@
         },
         {
             "upgradeReferences": [
-                "DefaultEngine"
+                "LowThrustHighEnergyBoost"
             ]
         },
         {
             "upgradeReferences": [
                 "NoGun",
-                "NoGun",
+                "AmmoHighDamageHigh",
                 "NoGun",
                 "NoGun"
             ]
@@ -60,7 +60,7 @@
             },
             {
                 "key": "DefaultArmour",
-                "value": 0
+                "value": 1
             },
             {
                 "key": "DefaultAutocannon",
@@ -72,7 +72,7 @@
             },
             {
                 "key": "DefaultEngine",
-                "value": 0
+                "value": 1
             },
             {
                 "key": "HeavyHighEnergy",
@@ -120,7 +120,7 @@
             },
             {
                 "key": "LowThrustHighEnergyBoost",
-                "value": 0
+                "value": 1
             },
             {
                 "key": "LowThrustLowEnergy",
@@ -164,7 +164,7 @@
             },
             {
                 "key": "NoGun",
-                "value": 0
+                "value": 1
             },
             {
                 "key": "NoLightGun",
@@ -172,7 +172,7 @@
             },
             {
                 "key": "WeakLowEnergy",
-                "value": 0
+                "value": 1
             }
         ]
     },

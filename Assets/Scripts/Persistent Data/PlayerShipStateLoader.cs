@@ -42,5 +42,7 @@ public class PlayerShipStateLoader : MonoBehaviour
         string jsonStringEngine = this.engineJson.text;
         SavedUpgradesJsonObject engineUpgradesObject = JsonUtility.FromJson<SavedUpgradesJsonObject>(jsonStringEngine);
         this.playerUpgradesState.Engine = engineUpgradesObject.GetSavedUpgrades().OfType<EngineUpgrade>().ToList()[0];
+        
+        this.playerUpgradesState.SetupComplete();
     }
 }
