@@ -6,7 +6,9 @@ using UnityEngine;
 public abstract class Gun : ShipItem
 {
     
-    [SerializeField] protected bool ableToShoot;
+    [SerializeField] private bool ableToShoot;
+    
+    public bool AbleToShoot => this.ableToShoot;
     [SerializeField]
     protected Bullet bulletPrefab;
     protected float lastBulletShotTimestamp = -100.0f;

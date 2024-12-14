@@ -8,7 +8,7 @@ public class UiUpdaterInteractorHeavy : UiUpdaterInteractorStrategy
     {
     }
 
-    public override void UpdateItemDetailsText(int index = 0)
+    public override void UpdateCurrentEquippedItemDetailsText(int index = 0)
     {
         PlayerUpgradesState upgradesState = ui.PlayerUpgradesState;
         HeavyGun heavyGun = (HeavyGun)upgradesState.HeavyGuns[index].Gun;
@@ -17,7 +17,7 @@ public class UiUpdaterInteractorHeavy : UiUpdaterInteractorStrategy
 
     public override void UpdateUi(ShipItem item)
     {
-        this.ui.UpdateUiHeavyGun((HeavyGun)item);
+        this.ui.SetItemStatsUi((HeavyGun)item);
     }
 
     public override void UpdateItemToPurchaseStats(ShipItem item)

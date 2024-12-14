@@ -8,7 +8,7 @@ public class UiUpdaterInteractorEngine : UiUpdaterInteractorStrategy
     {
     }
 
-    public override void UpdateItemDetailsText(int index = 0)
+    public override void UpdateCurrentEquippedItemDetailsText(int index = 0)
     {
         PlayerUpgradesState upgradesState = this.ui.PlayerUpgradesState;
         Engine engine = upgradesState.Engine.Engine;
@@ -17,7 +17,7 @@ public class UiUpdaterInteractorEngine : UiUpdaterInteractorStrategy
 
     public override void UpdateUi(ShipItem item)
     {
-        this.ui.UpdateUiEngine((Engine)item);
+        this.ui.SetItemStatsUi((Engine)item);
     }
 
     public override void UpdateItemToPurchaseStats(ShipItem item)

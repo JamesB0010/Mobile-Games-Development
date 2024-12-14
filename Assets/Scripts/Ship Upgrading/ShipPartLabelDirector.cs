@@ -34,7 +34,7 @@ public class ShipPartLabelDirector : MonoBehaviour
         this.ShipPartLabelClicked?.Invoke(label);
         label.GenerateItemEquipInteractor(this.equipItemAction).UpdatePrevOwned(label.WeaponIndex);
 
-        label.GenerateUiUpdaterInteractor(this.uiUpdater).UpdateItemDetailsText(label.WeaponIndex);
+        label.GenerateUiUpdaterInteractor(this.uiUpdater).UpdateCurrentEquippedItemDetailsText(label.WeaponIndex);
         
         this.cellsSetupHelper.SetupCells(label);
     }

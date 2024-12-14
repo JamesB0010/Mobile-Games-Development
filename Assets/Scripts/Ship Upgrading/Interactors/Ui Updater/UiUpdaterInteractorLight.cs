@@ -8,7 +8,7 @@ public class UiUpdaterInteractorLight : UiUpdaterInteractorStrategy
     {
     }
 
-    public override void UpdateItemDetailsText(int index = 0)
+    public override void UpdateCurrentEquippedItemDetailsText(int index = 0)
     {
         PlayerUpgradesState playerUpgradesState = this.ui.PlayerUpgradesState;
         LightGun lightGun = playerUpgradesState.LightGuns[index].Gun;
@@ -17,12 +17,19 @@ public class UiUpdaterInteractorLight : UiUpdaterInteractorStrategy
 
     public override void UpdateUi(ShipItem item)
     {
-        this.ui.UpdateUiLightGun((LightGun)item);
+        this.ui.SetItemStatsUi((LightGun)item);
     }
 
     public override void UpdateItemToPurchaseStats(ShipItem item)
     {
         LightGun lGun = (LightGun)item;
+
+        if (!lGun.AbleToShoot)
+        {
+            this.ui.LightWeaponToPurchaseIsNoGun();
+            return;
+        }
+        
         this.ui.UpdateLightGunWeaponToPurchase(lGun.ItemName, 
             lGun.TimeBetweenBullets.ToString(), 
             lGun.BulletDamage.ToString(),

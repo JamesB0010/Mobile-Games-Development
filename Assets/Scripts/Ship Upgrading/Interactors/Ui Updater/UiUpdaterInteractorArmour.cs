@@ -8,7 +8,7 @@ public class UiUpdaterInteractorArmour : UiUpdaterInteractorStrategy
     {
     }
 
-    public override void UpdateItemDetailsText(int index = 0)
+    public override void UpdateCurrentEquippedItemDetailsText(int index = 0)
     {
         PlayerUpgradesState upgradesState = this.ui.PlayerUpgradesState;
         Armour armour = upgradesState.Armour.Armour;
@@ -17,7 +17,7 @@ public class UiUpdaterInteractorArmour : UiUpdaterInteractorStrategy
 
     public override void UpdateUi(ShipItem item)
     {
-        this.ui.UpdateUiArmour((Armour)item);
+        this.ui.SetItemStatsUi((Armour)item);
     }
 
     public override void UpdateItemToPurchaseStats(ShipItem item)

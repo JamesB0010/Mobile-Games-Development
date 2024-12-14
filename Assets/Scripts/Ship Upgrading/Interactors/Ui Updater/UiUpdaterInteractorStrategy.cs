@@ -11,7 +11,7 @@ public abstract class UiUpdaterInteractorStrategy
         this.ui = ui;
     }
 
-    public abstract void UpdateItemDetailsText(int index = 0);
+    public abstract void UpdateCurrentEquippedItemDetailsText(int index = 0);
 
     public abstract void UpdateUi(ShipItem item);
     public abstract void UpdateItemToPurchaseStats(ShipItem item);

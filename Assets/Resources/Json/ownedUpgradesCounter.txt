@@ -26,7 +26,7 @@
         },
         {
             "key": "DefaultAutocannon",
-            "value": 0
+            "value": 1
         },
         {
             "key": "DefaultEnergySystem",

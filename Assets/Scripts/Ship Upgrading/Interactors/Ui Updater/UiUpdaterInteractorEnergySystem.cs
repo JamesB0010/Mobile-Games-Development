@@ -8,7 +8,7 @@ public class UiUpdaterInteractorEnergySystem : UiUpdaterInteractorStrategy
     {
     }
 
-    public override void UpdateItemDetailsText(int index = 0)
+    public override void UpdateCurrentEquippedItemDetailsText(int index = 0)
     {
         PlayerUpgradesState upgradesState = this.ui.PlayerUpgradesState;
         EnergySystem eSystem = upgradesState.EnergySystem.EnergySystem;
@@ -17,7 +17,7 @@ public class UiUpdaterInteractorEnergySystem : UiUpdaterInteractorStrategy
 
     public override void UpdateUi(ShipItem item)
     {
-        this.ui.UpdateUiEnergySystem((EnergySystem)item);
+        this.ui.SetItemStatsUi((EnergySystem)item);
     }
 
     public override void UpdateItemToPurchaseStats(ShipItem item)

@@ -8,11 +8,7 @@ using UnityEngine.UI;
 
 public class UIViewUpdater : MonoBehaviour
 {
-    [SerializeField] private TextMeshProUGUI itemNameField,
-        itemFireRateField,
-        damagePerShotField,
-        costField,
-        purchaseEquipButtonText;
+    [SerializeField] private TextMeshProUGUI costField, purchaseEquipButtonText;
     
     [SerializeField] private ScrollRect UpgradesScrollRect;
 
@@ -21,6 +17,20 @@ public class UIViewUpdater : MonoBehaviour
     [SerializeField] private FloatReference playerMoney;
     
     [FormerlySerializedAs("playerWeaponsState")] [SerializeField] private PlayerUpgradesState playerUpgradesState;
+
+    [Header("Current equipped stats setters")] [SerializeField]
+    private Image EquippedSectionBackground;
+
+    [SerializeField] private ArmourToPurchaseStatSection armourEquippedStatSection;
+
+    [SerializeField] private EnergySystemToPurchaseStats energySystemEquippedStats;
+
+    [SerializeField] private EngineToPurchaseStats engineEquippedStats;
+
+    [SerializeField] private HeavyGunToPurchaseStats heavyGunEquippedStats;
+
+    [SerializeField] private LightGunToPurchaseStats lightGunEquippedStats;
+    
 
     [Header("Item To Purchase Stats Setters")] 
     [SerializeField] private Image toPurchaseSectionBackground;
@@ -69,31 +79,76 @@ public class UIViewUpdater : MonoBehaviour
         this.UpgradesScrollRect.verticalNormalizedPosition = 1;
     }
 
-    public void SetItemStatsUi(Gun gun)
+    public void SetItemStatsUi(LightGun gun)
     {
-        itemNameField.text = gun.name;
+        Debug.Log("Update ui for light gun");
+        this.DisableAllEquippedFields();
+        this.EquippedSectionBackground.enabled = true;
+        this.lightGunEquippedStats.gameObject.SetActive(true);
 
-        this.itemFireRateField.text = gun.TimeBetweenBullets.ToString();
+        if (!gun.AbleToShoot)
+        {
+            this.lightGunEquippedStats.WeaponCantShoot();
+            return;
+        }
+        this.lightGunEquippedStats.SetFields(gun.ItemName, gun.TimeBetweenBullets.ToString(), gun.BulletDamage.ToString(), gun.EnergyExpensePerShot.ToString(), gun.Firepower.ToString());
+    }
 
-        this.damagePerShotField.text = gun.BulletDamage.ToString();
+    private void DisableAllEquippedFields()
+    {
+        this.EquippedSectionBackground.enabled = false;
+        this.armourEquippedStatSection.gameObject.SetActive(false);
+        this.energySystemEquippedStats.gameObject.SetActive(false);
+        this.engineEquippedStats.gameObject.SetActive(false);
+        this.heavyGunEquippedStats.gameObject.SetActive(false);
+        this.lightGunEquippedStats.gameObject.SetActive(false);
+    }
+
+    public void SetItemStatsUi(HeavyGun gun)
+    {
+        this.DisableAllEquippedFields();
+        this.EquippedSectionBackground.enabled = true;
+        this.heavyGunEquippedStats.gameObject.SetActive(true);
+        Debug.Log("Update ui for heavy gun");
+        if (!gun.AbleToShoot)
+        {
+            this.heavyGunEquippedStats.WeaponCantShoot();
+            return;
+        }
+        
+        this.heavyGunEquippedStats.SetFields(gun.ItemName, gun.TimeBetweenBullets.ToString(), gun.BulletDamage.ToString(), gun.MaxAmmoCount.ToString(), gun.Firepower.ToString());
     }
 
     public void SetItemStatsUi(Armour armour)
     {
-        itemNameField.text = armour.name;
-        Debug.Log("Display armour stats");
+        Debug.Log("Update ui for armour");
+        
+        this.DisableAllEquippedFields();
+        this.EquippedSectionBackground.enabled = true;
+        this.armourEquippedStatSection.gameObject.SetActive(true);
+        
+        this.armourEquippedStatSection.SetFields(armour.ItemName, armour.EnergyUsedPerHit.ToString(), armour.MinimumOperationalEnergyLevel.ToString(), (( 1 - armour.DamageDampeningMultiplier) * 100).ToString());
     }
 
     public void SetItemStatsUi(Engine engine)
     {
-        itemNameField.text = engine.name;
-        Debug.Log("Display engine stats");
+        Debug.Log("Update ui for engine");
+        
+        this.DisableAllEquippedFields();
+        this.EquippedSectionBackground.enabled = true;
+        this.engineEquippedStats.gameObject.SetActive(true); 
+        
+        this.engineEquippedStats.SetFields(engine.ItemName, engine.AccelerationSpeed.ToString(), engine.MaxVelocity.ToString(), engine.EnergyDrainRate.ToString());
     }
 
     public void SetItemStatsUi(EnergySystem energySystem)
     {
-        itemNameField.text = energySystem.name;
-        Debug.Log("Display energy system stats");
+        Debug.Log("Update ui for energy system");
+        
+        this.DisableAllEquippedFields();
+        this.EquippedSectionBackground.enabled = true;
+        this.energySystemEquippedStats.gameObject.SetActive(true); 
+        this.energySystemEquippedStats.SetFields(energySystem.ItemName, energySystem.MaxEnergy.ToString(), energySystem.RechargeRate.ToString());
     }
 
     public void CellSelected(UpgradeCell selectedCell)
@@ -141,41 +196,6 @@ public class UIViewUpdater : MonoBehaviour
 
     }
 
-    public void UpdateUiLightGun(LightGun gun)
-    {
-        itemNameField.text = gun.name;
-        
-        this.itemFireRateField.text = gun.TimeBetweenBullets.ToString();
-        
-        
-        this.damagePerShotField.text = gun.BulletDamage.ToString();
-    }
-
-    public void UpdateUiHeavyGun(HeavyGun gun)
-    {
-        itemNameField.text = gun.name;
-        
-        this.itemFireRateField.text = gun.TimeBetweenBullets.ToString();
-        
-        this.damagePerShotField.text = gun.BulletDamage.ToString();
-    }
-
-    public void UpdateUiArmour(Armour armour)
-    {
-        itemNameField.text = armour.name;
-    }
-
-    public void UpdateUiEngine(Engine engine)
-    {
-        itemNameField.text = engine.name;
-    }
-
-    public void UpdateUiEnergySystem(EnergySystem energySystem)
-    {
-        itemNameField.text = energySystem.name;
-    }
-
-
     public void UpdateUiArmourToPurchase(string armourName, string energyUsedPerHit, string minEnergyReq, string shieldsStrength)
     {
         this.DisableAllToPurchaseFields();
@@ -214,6 +234,14 @@ public class UIViewUpdater : MonoBehaviour
         this.toPurchaseSectionBackground.enabled = true;
         this.heavyGunToPurchaseStats.gameObject.SetActive(true);
         this.heavyGunToPurchaseStats.WeaponCantShoot();
+    }
+
+    public void LightWeaponToPurchaseIsNoGun()
+    {
+        this.DisableAllToPurchaseFields();
+        this.toPurchaseSectionBackground.enabled = true;
+        this.lightGunToPurchaseStats.gameObject.SetActive(true);
+        this.lightGunToPurchaseStats.WeaponCantShoot();
     }
 
     public void UpdateHeavyWeaponToPurchase(string weaponName, string fireRate, string bulletDamage, string ammoCount, string firepower)

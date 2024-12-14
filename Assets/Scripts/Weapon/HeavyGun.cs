@@ -19,7 +19,6 @@ public class HeavyGun : Gun
     }
 
 
-    public bool AbleToShoot => this.ableToShoot;
    
 
     public override object Clone()
