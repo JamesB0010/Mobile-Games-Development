@@ -5,14 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c7630d3b-1041-428d-b5b5-aacdf8ac5685" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Mobile-Games-Development/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Mobile-Games-Development/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/MainMenuEnvironment.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/MainMenuEnvironment.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Main Menu/MainMenuCameraMaskManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Main Menu/MainMenuCameraMaskManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Main Menu/MainMenuEnvironmentLoader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Main Menu/MainMenuEnvironmentLoader.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Main Menu/MainMenuEnvironmentUsefulChildren.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Main Menu/MainMenuEnvironmentUsefulChildren.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Main Menu/MainMenuManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Main Menu/MainMenuManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Timelines/main menu timeline part 1.playable" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Timelines/main menu timeline part 1.playable" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Main Menu/VoiceActivatedShip.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Main Menu/VoiceActivatedShip.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
