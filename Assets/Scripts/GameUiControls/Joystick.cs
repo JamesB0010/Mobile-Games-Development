@@ -4,6 +4,11 @@ using UnityEngine.EventSystems;
 
 public class Joystick : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IDragHandler
 {
+    public enum ClampMode
+    {
+        circle,
+        square
+    }
     private bool focused;
     private int activePointerId = -1;
 
@@ -16,6 +21,8 @@ public class Joystick : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, I
     /// useful for throttle controls
     /// </summary>
     [SerializeField] private bool bottomIsZero;
+
+    [SerializeField] private Joystick.ClampMode clampMode;
 
     public UnityEvent<Vector2> MovementDetected;
 
@@ -37,7 +44,14 @@ public class Joystick : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, I
     private void UpdatePos(Vector2 pointerPos)
     {
         // Clamp X and Y independently
-        pointerPos = ClampPositionWithinSquare(pointerPos);
+        if (this.clampMode == ClampMode.square)
+        {
+            pointerPos = ClampPositionWithinSquare(pointerPos);
+        }
+        else
+        {
+            pointerPos = ClampPositionWithinCircle(pointerPos);
+        }
 
         this.currentPos = pointerPos;
         this.MovementDetected?.Invoke(PositionToNormalisedDirection());
@@ -52,6 +66,16 @@ public class Joystick : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, I
         // Clamp X and Y independently to the range [-radius, radius]
         offset.x = Mathf.Clamp(offset.x, -this.radius, this.radius);
         offset.y = Mathf.Clamp(offset.y, -this.radius, this.radius);
+
+        return this.center + offset;
+    }
+
+    private Vector2 ClampPositionWithinCircle(Vector2 pointerPos)
+    {
+        Vector2 offset = pointerPos - this.center;
+
+        // Clamp the offset vector's magnitude to the radius
+        offset = Vector2.ClampMagnitude(offset, this.radius);
 
         return this.center + offset;
     }

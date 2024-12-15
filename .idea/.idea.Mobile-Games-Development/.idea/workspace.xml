@@ -6,6 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="c7630d3b-1041-428d-b5b5-aacdf8ac5685" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Mobile-Games-Development/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Mobile-Games-Development/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Joysticks Test.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Joysticks Test.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameUiControls/Joystick.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameUiControls/Joystick.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
