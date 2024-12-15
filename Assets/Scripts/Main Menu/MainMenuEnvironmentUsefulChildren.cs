@@ -2,13 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using Cinemachine;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class MainMenuEnvironmentUsefulChildren : MonoBehaviour
 {
-    [SerializeField]
-    private List<KeyValuePairWrapper<string, GameObject>> part1SignalTrackToReference = new ();
+    [FormerlySerializedAs("part1SignalTrackToReference")] [SerializeField]
+    private List<KeyValuePairWrapper<string, GameObject>> enterShipSgnalTrackToReference = new ();
 
-    public List<KeyValuePairWrapper<string, GameObject>> Part1SignalTrackToReference => this.part1SignalTrackToReference;
+    public List<KeyValuePairWrapper<string, GameObject>> EnterShipSgnalTrackToReference => this.enterShipSgnalTrackToReference;
 
 
     [SerializeField] private List<KeyValuePairWrapper<string, GameObject>> part2SignalTrackToReference = new();

@@ -6,8 +6,17 @@
   <component name="ChangeListManager">
     <list default="true" id="c7630d3b-1041-428d-b5b5-aacdf8ac5685" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Mobile-Games-Development/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Mobile-Games-Development/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/AudioRecordings/recording.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/AudioRecordings/recording.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Json/SaveGame.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Json/SaveGame.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/LoadingScreen.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/LoadingScreen.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Timelines/VoiceActivatedShipTimeline.playable" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Timelines/VoiceActivatedShipTimeline.playable" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Voicelines Recorder.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Voicelines Recorder.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AudioRecording/BannerAdSpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AudioRecording/BannerAdSpawner.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameUiControls/LoadingScreenSceneChanger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameUiControls/LoadingScreenSceneChanger.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Timelines/DeathTimeline.playable" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Timelines/DeathTimeline.playable" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Timelines/MainLevelIntro.playable" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Timelines/MainLevelIntro.playable" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -223,10 +232,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="37548">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="37548" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -291,7 +300,7 @@
       <workItem from="1734210983816" duration="1002000" />
       <workItem from="1734212303460" duration="115000" />
       <workItem from="1734217507367" duration="4998000" />
-      <workItem from="1734283848099" duration="600000" />
+      <workItem from="1734283848099" duration="1547000" />
     </task>
     <servers />
   </component>
@@ -415,6 +424,19 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="29" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/AudioRecording/BannerAdSpawner.cs</url>
+          <line>27</line>
+          <properties documentPath="C:\Users\james\OneDrive\Documents\University\Year 3\Mobile-Games-Development\Assets\Scripts\AudioRecording\BannerAdSpawner.cs" initialLine="27" containingFunctionPresentation="Method 'OnSceneChange'">
+            <startOffsets>
+              <option value="742" />
+            </startOffsets>
+            <endOffsets>
+              <option value="762" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="30" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

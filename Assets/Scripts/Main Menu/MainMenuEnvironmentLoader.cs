@@ -13,7 +13,7 @@ public class MainMenuEnvironmentLoader : MonoBehaviour
 {
     [SerializeField] private AssetReference environemnt;
 
-    [SerializeField] private PlayableDirector introSequencePart1, introSequencePart2;
+    [SerializeField] private PlayableDirector enterShipSequence, introSequencePart2;
 
     [SerializeField] private UnityEvent<GameObject> environmentLoaded;
 
@@ -33,17 +33,17 @@ public class MainMenuEnvironmentLoader : MonoBehaviour
     {
         var dependencies = obj.Result.GetComponent<MainMenuEnvironmentUsefulChildren>();
 
-        List<KeyValuePairWrapper<string, GameObject>> introSequence1Dependencies =
-            dependencies.Part1SignalTrackToReference;
+        List<KeyValuePairWrapper<string, GameObject>> enterShipSequence =
+            dependencies.EnterShipSgnalTrackToReference;
 
         List<KeyValuePairWrapper<string, GameObject>> introSequence2Dependencies =
             dependencies.Part2SignalTrackToReference;
 
         //Setup the dependencies
-        TimelineAsset timeline = (TimelineAsset)this.introSequencePart1.playableAsset;
+        TimelineAsset timeline = (TimelineAsset)this.enterShipSequence.playableAsset;
         TimelineAsset timeline2 = (TimelineAsset)this.introSequencePart2.playableAsset;
         
-        this.SetupTimelineDependencies(introSequence1Dependencies, timeline, this.introSequencePart1);
+        this.SetupTimelineDependencies(enterShipSequence, timeline, this.enterShipSequence);
         this.SetupTimelineDependencies(introSequence2Dependencies, timeline2, this.introSequencePart2);
     }
     private void SetupTimelineDependencies(List<KeyValuePairWrapper<string, GameObject>> sequenceDependencies,

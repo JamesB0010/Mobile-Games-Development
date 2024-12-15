@@ -1,12 +1,17 @@
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Advertisements;
- 
+using UnityEngine.Events;
+using UnityEngine.SceneManagement;
+
 public class BannerAdExample : MonoBehaviour
 {
     [SerializeField] BannerPosition _bannerPosition = BannerPosition.BOTTOM_CENTER;
  
     [SerializeField] string _adUnitId = "Banner_Android"; // This will remain null for unsupported platforms.
+
+    [SerializeField] private UnityEvent BannerAdSpawned;
  
     void Start()
     {
@@ -14,8 +19,20 @@ public class BannerAdExample : MonoBehaviour
         Advertisement.Banner.SetPosition(_bannerPosition);
  
         this.LoadBanner();
+
+        SceneManager.sceneLoaded += this.OnSceneChange;
     }
- 
+
+    private void OnSceneChange(Scene arg0, LoadSceneMode arg1)
+    {
+        this.HideBannerAd();
+    }
+
+    private void OnDestroy()
+    {
+        SceneManager.sceneLoaded -= this.OnSceneChange;
+    }
+
     // Implement a method to call when the Load Banner button is clicked:
     public void LoadBanner()
     {
@@ -58,6 +75,8 @@ public class BannerAdExample : MonoBehaviour
  
         // Show the loaded Banner Ad Unit:
         Advertisement.Banner.Show(_adUnitId, options);
+        
+        this.BannerAdSpawned?.Invoke();
     }
  
     // Implement a method to call when the Hide Banner button is clicked:

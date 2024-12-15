@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class LoadingScreenSceneChanger : MonoBehaviour
 {
-    void Start()
+    public void ChangeScene()
     {
         SceneManager.LoadSceneAsync(LoadingScreenSceneIndexCounter.NextSceneIndex, LoadSceneMode.Single);
     }
