@@ -6,23 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="c7630d3b-1041-428d-b5b5-aacdf8ac5685" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Mobile-Games-Development/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Mobile-Games-Development/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GeneratedLocalRepo.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GeneratedLocalRepo.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GeneratedLocalRepo/GooglePlayGames.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GeneratedLocalRepo/GooglePlayGames.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GeneratedLocalRepo/GooglePlayGames/com.google.play.games.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GeneratedLocalRepo/GooglePlayGames/com.google.play.games.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GeneratedLocalRepo/GooglePlayGames/com.google.play.games/Editor.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GeneratedLocalRepo/GooglePlayGames/com.google.play.games/Editor.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GeneratedLocalRepo/GooglePlayGames/com.google.play.games/Editor/m2repository.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GeneratedLocalRepo/GooglePlayGames/com.google.play.games/Editor/m2repository.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GeneratedLocalRepo/GooglePlayGames/com.google.play.games/Editor/m2repository/com.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GeneratedLocalRepo/GooglePlayGames/com.google.play.games/Editor/m2repository/com.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GeneratedLocalRepo/GooglePlayGames/com.google.play.games/Editor/m2repository/com/google.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GeneratedLocalRepo/GooglePlayGames/com.google.play.games/Editor/m2repository/com/google.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GeneratedLocalRepo/GooglePlayGames/com.google.play.games/Editor/m2repository/com/google/games.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GeneratedLocalRepo/GooglePlayGames/com.google.play.games/Editor/m2repository/com/google/games.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GeneratedLocalRepo/GooglePlayGames/com.google.play.games/Editor/m2repository/com/google/games/gpgs-plugin-support.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GeneratedLocalRepo/GooglePlayGames/com.google.play.games/Editor/m2repository/com/google/games/gpgs-plugin-support.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GeneratedLocalRepo/GooglePlayGames/com.google.play.games/Editor/m2repository/com/google/games/gpgs-plugin-support/2.0.0.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GeneratedLocalRepo/GooglePlayGames/com.google.play.games/Editor/m2repository/com/google/games/gpgs-plugin-support/2.0.0.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GeneratedLocalRepo/GooglePlayGames/com.google.play.games/Editor/m2repository/com/google/games/gpgs-plugin-support/2.0.0/gpgs-plugin-support-2.0.0.aar.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GeneratedLocalRepo/GooglePlayGames/com.google.play.games/Editor/m2repository/com/google/games/gpgs-plugin-support/2.0.0/gpgs-plugin-support-2.0.0.aar.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GeneratedLocalRepo/GooglePlayGames/com.google.play.games/Editor/m2repository/com/google/games/gpgs-plugin-support/2.0.0/gpgs-plugin-support-2.0.0.pom" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GeneratedLocalRepo/GooglePlayGames/com.google.play.games/Editor/m2repository/com/google/games/gpgs-plugin-support/2.0.0/gpgs-plugin-support-2.0.0.pom" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GeneratedLocalRepo/GooglePlayGames/com.google.play.games/Editor/m2repository/com/google/games/gpgs-plugin-support/2.0.0/gpgs-plugin-support-2.0.0.pom.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GeneratedLocalRepo/GooglePlayGames/com.google.play.games/Editor/m2repository/com/google/games/gpgs-plugin-support/2.0.0/gpgs-plugin-support-2.0.0.pom.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/mainTemplate.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Android/mainTemplate.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/settingsTemplate.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Android/settingsTemplate.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Upgrade Ship.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Upgrade Ship.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Voicelines Recorder.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Voicelines Recorder.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,10 +32,12 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/AudioRecording/WavLoader.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/AudioRecording/WavUtility.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameUiControls/AdCreditsAwardedScreen.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameUiControls/Joystick.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameUiControls/LoadingScreenSceneChanger.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameUiControls/RollAndPitchJoystick.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameUiControls/SelfDestructButton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameUiControls/SubtitleSetter.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Joystick test text.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/LoadingScreen/ImageColourBouncer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Main Menu/AchievementsButton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Main Menu/AdsInitialize.cs" root0="FORCE_HIGHLIGHTING" />
@@ -236,10 +221,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="13212">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="13212" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -303,6 +288,7 @@
       <workItem from="1734196946730" duration="2173000" />
       <workItem from="1734210983816" duration="1002000" />
       <workItem from="1734212303460" duration="115000" />
+      <workItem from="1734217507367" duration="4998000" />
     </task>
     <servers />
   </component>

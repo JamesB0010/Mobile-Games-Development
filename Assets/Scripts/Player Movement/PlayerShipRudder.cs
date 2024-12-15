@@ -28,6 +28,11 @@ public class PlayerShipRudder : MonoBehaviour
         Vector2 input = ctx.ReadValue<Vector2>();
         this.inputtedYaw = input.x;
     }
+
+    public void OnThrottleAndYaw(Vector2 value)
+    {
+        this.inputtedYaw = value.x;
+    }
     public void SetSensitivityAiming()
     {
         this.yawSpeed = 5;

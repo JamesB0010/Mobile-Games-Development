@@ -49,6 +49,11 @@ public class PlayerShipElevator : MonoBehaviour
         this.inputtedPitch = ctx.ReadValue<Vector2>().y;
     }
 
+    public void OnPitchAndRoll(Vector2 value)
+    {
+        this.inputtedPitch = value.y;
+    }
+
     public void SetSensitivityAiming()
     {
         this.pitchSpeed = 10;

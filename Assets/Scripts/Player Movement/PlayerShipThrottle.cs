@@ -25,4 +25,9 @@ public class PlayerShipThrottle : MonoBehaviour
 
         this.inputtedThrottle = throttleInput;
     }
+
+    public void OnThrottleAndYaw(Vector2 value)
+    {
+        this.inputtedThrottle = value.y;
+    }
 }

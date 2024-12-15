@@ -49,6 +49,11 @@ public class PlayerShipAilerons : MonoBehaviour
         this.inputtedRoll = ctx.ReadValue<Vector2>().x;
     }
 
+    public void OnPitchAndRoll(Vector2 value)
+    {
+        this.inputtedRoll = value.x;
+    }
+
     public void SetSensitivityAiming()
     {
         this.rollSpeed = 10;
