@@ -9,6 +9,6 @@ public class VoiceActivatedShip : MonoBehaviour
 {
     public void OnVoiceLineComplete()
     {
-        GetComponent<PlayableDirector>().Play();
+        GetComponent<PlayableDirector>().Play(); 
     }
 }
