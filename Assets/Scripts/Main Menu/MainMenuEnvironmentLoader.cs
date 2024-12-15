@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
+using UnityEngine.Events;
 using UnityEngine.Playables;
 using UnityEngine.ResourceManagement.AsyncOperations;
 using UnityEngine.Timeline;
@@ -14,6 +15,8 @@ public class MainMenuEnvironmentLoader : MonoBehaviour
 
     [SerializeField] private PlayableDirector introSequencePart1, introSequencePart2;
 
+    [SerializeField] private UnityEvent<GameObject> environmentLoaded;
+
     private void Awake()
     {
         environemnt.InstantiateAsync().Completed += this.EnvironmentLoaded;
@@ -22,6 +25,7 @@ public class MainMenuEnvironmentLoader : MonoBehaviour
     private void EnvironmentLoaded(AsyncOperationHandle<GameObject> obj)
     {
         SetupTimelineDependencies(obj);
+        this.environmentLoaded?.Invoke(obj.Result);
     }
 
 

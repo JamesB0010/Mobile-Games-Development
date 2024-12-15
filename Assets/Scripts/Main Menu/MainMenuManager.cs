@@ -10,7 +10,7 @@ using UnityEngine.Events;
 
 public class MainMenuManager : MonoBehaviour
 {
-    [SerializeField] private PlayableDirector startGameDirector, part1IntroDirector;
+    [SerializeField] private PlayableDirector enterShip, startGameDirector, part1IntroDirector;
 
     [SerializeField] private MainMenuUi mainMenuUi;
 
@@ -19,7 +19,7 @@ public class MainMenuManager : MonoBehaviour
     private bool readyToStart = false;
 
     [SerializeField] private UnityEvent startGameAttemptFailed;
-    
+
 
     private void Start()
     {
@@ -35,23 +35,31 @@ public class MainMenuManager : MonoBehaviour
     public void EnterGameButtonPressed()
     {
         #if UNITY_EDITOR
-        part1IntroDirector.Play();
-        mainMenuUi.HideUI();
-        return;
-        #endif
-
+        #else
         if (!this.readyToStart)
         {
             this.startGameAttemptFailed?.Invoke();
             return;
         }
-        
-        
-        part1IntroDirector.Play();
+        #endif
+
+
+        this.EnterShip();
         
         mainMenuUi.HideUI();
-        
     }
+
+    public void StartTakeoffSequence()
+    {
+        part1IntroDirector.Play();
+    }
+
+    private void EnterShip()
+    {
+        this.enterShip.Play();
+    }
+
+
     public void IntroFirstPartComplete()
     {
         this.startGameDirector.Play();

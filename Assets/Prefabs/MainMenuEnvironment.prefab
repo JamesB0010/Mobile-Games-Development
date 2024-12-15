@@ -211,6 +211,7 @@ MonoBehaviour:
     value: {fileID: 9029365872410670629}
   - key: Activation Track
     value: {fileID: 0}
+  vcam: {fileID: 7477193007179709854}
 --- !u!1 &9093059361151162165
 GameObject:
   m_ObjectHideFlags: 0

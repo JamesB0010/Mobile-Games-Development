@@ -6,11 +6,7 @@ public class MainMenuCameraMaskManager : MonoBehaviour
 {
     [SerializeField] private LayerMask layerToChangeTo;
 
-    private Camera sceneCamera;
-    void Start()
-    {
-        this.sceneCamera = FindObjectOfType<Camera>();
-    }
+    [SerializeField] private Camera sceneCamera;
 
     public void ChangeCullMask()
     {
