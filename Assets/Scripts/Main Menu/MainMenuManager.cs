@@ -20,6 +20,10 @@ public class MainMenuManager : MonoBehaviour
 
     [SerializeField] private UnityEvent startGameAttemptFailed;
 
+    private int modelsLoaded = 0;
+
+    [SerializeField] private int loadedModelsRequired = 2;
+
 
     private void Start()
     {
@@ -43,10 +47,18 @@ public class MainMenuManager : MonoBehaviour
         }
         #endif
 
+        if (this.modelsLoaded < this.loadedModelsRequired)
+            return;
+
 
         this.EnterShip();
         
         mainMenuUi.HideUI();
+    }
+
+    public void IncrementModelsLoaded()
+    {
+        this.modelsLoaded++;
     }
 
     public void StartTakeoffSequence()
