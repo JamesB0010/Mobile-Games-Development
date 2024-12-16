@@ -968,7 +968,6 @@ GameObject:
   m_Component:
   - component: {fileID: 554239911}
   - component: {fileID: 554239914}
-  - component: {fileID: 554239913}
   - component: {fileID: 554239912}
   m_Layer: 0
   m_Name: rightScreenCamera
@@ -1036,14 +1035,6 @@ MonoBehaviour:
     m_MipBias: 0
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
---- !u!81 &554239913
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 554239910}
-  m_Enabled: 1
 --- !u!20 &554239914
 Camera:
   m_ObjectHideFlags: 0
@@ -2684,7 +2675,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1023167048}
   - component: {fileID: 1023167051}
-  - component: {fileID: 1023167050}
   - component: {fileID: 1023167049}
   m_Layer: 0
   m_Name: CenterScreenCamera
@@ -2752,14 +2742,6 @@ MonoBehaviour:
     m_MipBias: 0
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
---- !u!81 &1023167050
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1023167047}
-  m_Enabled: 1
 --- !u!20 &1023167051
 Camera:
   m_ObjectHideFlags: 0
@@ -3950,6 +3932,7 @@ GameObject:
   - component: {fileID: 1259025065}
   - component: {fileID: 1259025064}
   - component: {fileID: 1259025063}
+  - component: {fileID: 1259025066}
   m_Layer: 5
   m_Name: Say Voiceline
   m_TagString: Untagged
@@ -4019,19 +4002,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1259025064}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 788257167}
-        m_TargetAssemblyTypeName: VoiceActivatedShip, Assembly-CSharp
-        m_MethodName: PlayerSaidVoiceline
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1259025064
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4070,6 +4041,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1259025061}
   m_CullTransparentMesh: 1
+--- !u!114 &1259025066
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1259025061}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34c55704e55ccbc47b741500b4cc20d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  voiceActivatedShip: {fileID: 788257167}
 --- !u!1 &1265635547
 GameObject:
   m_ObjectHideFlags: 0
@@ -5287,7 +5271,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1572258116}
   - component: {fileID: 1572258113}
-  - component: {fileID: 1572258115}
   - component: {fileID: 1572258114}
   m_Layer: 0
   m_Name: LeftScreenCamera
@@ -5391,14 +5374,6 @@ MonoBehaviour:
     m_MipBias: 0
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
---- !u!81 &1572258115
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1572258112}
-  m_Enabled: 1
 --- !u!4 &1572258116
 Transform:
   m_ObjectHideFlags: 0
