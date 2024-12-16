@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Advertisements;
@@ -11,8 +12,27 @@ public class BannerAdExample : MonoBehaviour
  
     [SerializeField] string _adUnitId = "Banner_Android"; // This will remain null for unsupported platforms.
 
-    [SerializeField] private UnityEvent BannerAdSpawned;
- 
+    private event Action BannerAdSpawned;
+    
+    private static BannerAdExample instance = null;
+
+    public void AddSpawnListener(Action handler)
+    {
+        this.BannerAdSpawned += handler;
+    }
+
+    private void Awake()
+    {
+        if (instance != null)
+        {
+            Destroy(this.gameObject);
+            return;
+        }
+
+        instance = this;
+        DontDestroyOnLoad(this.gameObject);
+    }
+
     void Start()
     {
         // Set the banner position:
@@ -23,9 +43,21 @@ public class BannerAdExample : MonoBehaviour
         SceneManager.sceneLoaded += this.OnSceneChange;
     }
 
-    private void OnSceneChange(Scene arg0, LoadSceneMode arg1)
+    private void OnSceneChange(Scene to, LoadSceneMode mode)
     {
+        this.BannerAdSpawned = null;
         this.HideBannerAd();
+        if (to.name == "LoadingScreen" || to.name == "Voicelines Recorder")
+        {
+            StartCoroutine(nameof(this.ShowBannerAdAfter2Frames));
+        }
+    }
+
+    private IEnumerator ShowBannerAdAfter2Frames()
+    {
+        yield return new WaitForSeconds(0);
+        yield return new WaitForSeconds(0);
+        this.ShowBannerAd();
     }
 
     private void OnDestroy()
@@ -80,7 +112,7 @@ public class BannerAdExample : MonoBehaviour
     }
  
     // Implement a method to call when the Hide Banner button is clicked:
-    void HideBannerAd()
+    public void HideBannerAd()
     {
         // Hide the banner:
         Advertisement.Banner.Hide();

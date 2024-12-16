@@ -6,16 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="c7630d3b-1041-428d-b5b5-aacdf8ac5685" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Mobile-Games-Development/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Mobile-Games-Development/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fonts/ethnocentric rg SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Fonts/ethnocentric rg SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/Json/SaveGame.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Json/SaveGame.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Main Menu/MainMenuManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Main Menu/MainMenuManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Main Menu/VoiceActivatedShip.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Main Menu/VoiceActivatedShip.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Main Menu/VoiceRecordingButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Main Menu/VoiceRecordingButton.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/UiStartupVideo.renderTexture" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/UiStartupVideo.renderTexture" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/monitorsRenderTexture.renderTexture" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/monitorsRenderTexture.renderTexture" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Voicelines Recorder.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Voicelines Recorder.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AudioRecording/BannerAdSpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AudioRecording/BannerAdSpawner.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameUiControls/LoadingScreenSceneChanger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameUiControls/LoadingScreenSceneChanger.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,13 +20,13 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/8a5cd56eb1bb450ba65aa5485166bfb3955a00/b2/d94132f1/Editor.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/a799942dddd64d7ab0ff69991e14bcf853c00/d4/a6d0b273/Command.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b11ba2a8fbf24f219f7cc98532a1130446ac00/52/d12b995e/String.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b11ba2a8fbf24f219f7cc98532a1130446ac00/9d/a6f5cab0/File.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c5ed782439084ef1bc2ad85eec89e9fe175a00/01/24f0a37b/UnityEvent.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c5ed782439084ef1bc2ad85eec89e9fe175a00/a7/830e8bc0/AsyncOperation.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c5ed782439084ef1bc2ad85eec89e9fe175a00/ae/eb7ddfaf/Object.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../AI/milestones-ai-24-25-JamesB0010/MainProject/Assets/Scripts/Navigation/GridGenerator.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../AI/milestones-ai-24-25-JamesB0010/MainProject/Assets/Scripts/Navigation/Pathfinding Strategies/AStarAlgorithm.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../AI/milestones-ai-24-25-JamesB0010/MainProject/Assets/Scripts/Navigation/Pathfinding Strategies/Pathfinding Strategy.cs" root0="SKIP_HIGHLIGHTING" />
@@ -163,7 +157,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;XThreadsFramesViewSplitterKey&quot;: &quot;0.24363233&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;VoiceToText&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -233,10 +227,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="48628">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="13320">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="48628" />
+      <option name="pid" value="13320" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -302,7 +296,9 @@
       <workItem from="1734212303460" duration="115000" />
       <workItem from="1734217507367" duration="4998000" />
       <workItem from="1734283848099" duration="14472000" />
-      <workItem from="1734315709149" duration="4360000" />
+      <workItem from="1734315709149" duration="4804000" />
+      <workItem from="1734320684801" duration="124000" />
+      <workItem from="1734372395951" duration="2640000" />
     </task>
     <servers />
   </component>
@@ -370,32 +366,6 @@
           <option name="timeStamp" value="23" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/Main Menu/BuzzardGameData.cs</url>
-          <line>180</line>
-          <properties documentPath="C:\Users\james\OneDrive\Documents\University\Year 3\Mobile-Games-Development\Assets\Scripts\Main Menu\BuzzardGameData.cs" initialLine="178" containingFunctionPresentation="Method 'SaveAllConfigFilesLocal'">
-            <startOffsets>
-              <option value="7430" />
-            </startOffsets>
-            <endOffsets>
-              <option value="7552" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="24" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/Main Menu/BuzzardGameData.cs</url>
-          <line>182</line>
-          <properties documentPath="C:\Users\james\OneDrive\Documents\University\Year 3\Mobile-Games-Development\Assets\Scripts\Main Menu\BuzzardGameData.cs" initialLine="180" containingFunctionPresentation="Method 'SaveAllConfigFilesLocal'">
-            <startOffsets>
-              <option value="7571" />
-            </startOffsets>
-            <endOffsets>
-              <option value="7610" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="25" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Scripts/Ship Upgrading/ItemToPurchaseStatSectionUi/ArmourItemStatsView.cs</url>
           <line>13</line>
           <properties documentPath="C:\Users\james\OneDrive\Documents\University\Year 3\Mobile-Games-Development\Assets\Scripts\Ship Upgrading\ItemToPurchaseStatSectionUi\ArmourToPurchaseStatSection.cs" initialLine="13" containingFunctionPresentation="Method 'SetFields'" />
@@ -428,19 +398,6 @@
           <option name="timeStamp" value="29" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/AudioRecording/BannerAdSpawner.cs</url>
-          <line>27</line>
-          <properties documentPath="C:\Users\james\OneDrive\Documents\University\Year 3\Mobile-Games-Development\Assets\Scripts\AudioRecording\BannerAdSpawner.cs" initialLine="27" containingFunctionPresentation="Method 'OnSceneChange'">
-            <startOffsets>
-              <option value="742" />
-            </startOffsets>
-            <endOffsets>
-              <option value="762" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="30" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Scripts/Main Menu/VoiceActivatedShip.cs</url>
           <line>152</line>
           <properties documentPath="C:\Users\james\OneDrive\Documents\University\Year 3\Mobile-Games-Development\Assets\Scripts\Main Menu\VoiceActivatedShip.cs" initialLine="146" containingFunctionPresentation="Method 'EvaluateIfPlayerSaidCorrectWords'">
@@ -465,6 +422,32 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="35" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/AudioRecording/BannerAdSpawner.cs</url>
+          <line>64</line>
+          <properties documentPath="C:\Users\james\OneDrive\Documents\University\Year 3\Mobile-Games-Development\Assets\Scripts\AudioRecording\BannerAdSpawner.cs" initialLine="58" containingFunctionPresentation="Method 'ShowBannerAdAfter'">
+            <startOffsets>
+              <option value="1631" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1651" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="42" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/AudioRecording/BannerAdSpawner.cs</url>
+          <line>25</line>
+          <properties documentPath="C:\Users\james\OneDrive\Documents\University\Year 3\Mobile-Games-Development\Assets\Scripts\AudioRecording\BannerAdSpawner.cs" initialLine="26" containingFunctionPresentation="Method 'Awake'">
+            <startOffsets>
+              <option value="663" />
+            </startOffsets>
+            <endOffsets>
+              <option value="684" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="44" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
