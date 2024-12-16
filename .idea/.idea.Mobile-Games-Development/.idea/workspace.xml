@@ -6,10 +6,16 @@
   <component name="ChangeListManager">
     <list default="true" id="c7630d3b-1041-428d-b5b5-aacdf8ac5685" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Mobile-Games-Development/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Mobile-Games-Development/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Fonts/ethnocentric rg SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Fonts/ethnocentric rg SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Json/SaveGame.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Json/SaveGame.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Main Menu/MainMenuManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Main Menu/MainMenuManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Main Menu/VoiceActivatedShip.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Main Menu/VoiceActivatedShip.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Main Menu/VoiceRecordingButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Main Menu/VoiceRecordingButton.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/UiStartupVideo.renderTexture" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/UiStartupVideo.renderTexture" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/monitorsRenderTexture.renderTexture" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/monitorsRenderTexture.renderTexture" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,6 +26,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/8a5cd56eb1bb450ba65aa5485166bfb3955a00/b2/d94132f1/Editor.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/a799942dddd64d7ab0ff69991e14bcf853c00/d4/a6d0b273/Command.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b11ba2a8fbf24f219f7cc98532a1130446ac00/52/d12b995e/String.cs" root0="SKIP_HIGHLIGHTING" />
@@ -226,10 +233,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="37548">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="48628">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="37548" />
+      <option name="pid" value="48628" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -294,7 +301,8 @@
       <workItem from="1734210983816" duration="1002000" />
       <workItem from="1734212303460" duration="115000" />
       <workItem from="1734217507367" duration="4998000" />
-      <workItem from="1734283848099" duration="12198000" />
+      <workItem from="1734283848099" duration="14472000" />
+      <workItem from="1734315709149" duration="4360000" />
     </task>
     <servers />
   </component>
@@ -433,17 +441,30 @@
           <option name="timeStamp" value="30" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/Main Menu/MainMenuManager.cs</url>
-          <line>49</line>
-          <properties documentPath="C:\Users\james\OneDrive\Documents\University\Year 3\Mobile-Games-Development\Assets\Scripts\Main Menu\MainMenuManager.cs" initialLine="49" containingFunctionPresentation="Method 'EnterGameButtonPressed'">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Main Menu/VoiceActivatedShip.cs</url>
+          <line>152</line>
+          <properties documentPath="C:\Users\james\OneDrive\Documents\University\Year 3\Mobile-Games-Development\Assets\Scripts\Main Menu\VoiceActivatedShip.cs" initialLine="146" containingFunctionPresentation="Method 'EvaluateIfPlayerSaidCorrectWords'">
             <startOffsets>
-              <option value="1158" />
+              <option value="4528" />
             </startOffsets>
             <endOffsets>
-              <option value="1208" />
+              <option value="4562" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="31" />
+          <option name="timeStamp" value="33" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Main Menu/VoiceRecordingButton.cs</url>
+          <line>74</line>
+          <properties documentPath="C:\Users\james\OneDrive\Documents\University\Year 3\Mobile-Games-Development\Assets\Scripts\Main Menu\VoiceRecordingButton.cs" initialLine="69" containingFunctionPresentation="Lambda expression inside Method 'SendRecording'">
+            <startOffsets>
+              <option value="2130" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2157" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="35" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -4,7 +4,9 @@ using System.Collections.Generic;
 using System.IO;
 using HuggingFace.API;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
@@ -17,6 +19,13 @@ public class VoiceRecordingButton : MonoBehaviour, IPointerDownHandler
 
     [SerializeField] private TextMeshProUGUI outputText;
     [SerializeField] private VoiceActivatedShip voiceActivatedShip;
+
+
+    [SerializeField] private UnityEvent<string> UserSpeechInterpreted;
+
+    [SerializeField] private string[] similarEnoughWordsAdAstra;
+
+    [SerializeField] private string[] similarEnoughWordsBuzzard;
 
 
     private AudioClip playerRecordedAudio;
@@ -51,17 +60,56 @@ public class VoiceRecordingButton : MonoBehaviour, IPointerDownHandler
         this.recording = false;
         
         this.outputText.text = "";
-        //this.voiceActivatedShip.PlayerSaidVoiceline();
     }
 
     private void SendRecording()
     {
+        this.button.interactable = false;
         HuggingFaceAPI.AutomaticSpeechRecognition(this.bytes, response =>
         {
-            this.outputText.text = response;
+            response = response.ToLower();
+            response = response.Trim();
+            response = response.TrimEnd('.');
+            response = response.TrimEnd('?');
+
+            bool similarEnough = false;
+
+            for (int i = 0; i < this.similarEnoughWordsBuzzard.Length; i++)
+            {
+                similarEnough = similarEnough || response == this.similarEnoughWordsBuzzard[i];
+                if (similarEnough == true)
+                    break;
+            }
+
+            if (similarEnough)
+            {
+                this.UserSpeechInterpreted?.Invoke("buzzard");
+                return;
+            }
+
+            similarEnough = false;
+
+            for (int i = 0; i < this.similarEnoughWordsAdAstra.Length; i++)
+            {
+                similarEnough = similarEnough || response == this.similarEnoughWordsAdAstra[i];
+                if (similarEnough == true)
+                    break;
+            }
+
+            similarEnough = response.Contains("ad astra house") || response.Contains("add astra house") || response.Contains("at astra house") || response.Contains("at astro house") || response.Contains("add astro house") || response.Contains("ad astro house") || response.Contains("ad astrahouse condol") || response.Contains("astrahouse");
+
+            if (similarEnough)
+            {
+                this.UserSpeechInterpreted?.Invoke("ad astra house condor");
+                return;
+            }
+            
+            
+            this.UserSpeechInterpreted?.Invoke(response);
+            this.button.interactable = true;
         }, error =>
         {
-            this.outputText.text = error;
+            this.button.interactable = true;
         });
     }
 

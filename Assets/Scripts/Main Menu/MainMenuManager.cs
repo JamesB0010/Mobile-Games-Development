@@ -24,10 +24,21 @@ public class MainMenuManager : MonoBehaviour
 
     [SerializeField] private int loadedModelsRequired = 2;
 
+    private Ping checkInternet;
+
+    private bool connectedToInternet = false;
 
     private void Start()
     {
         LoadingScreenSceneIndexCounter.NextSceneIndex = 2;
+
+        this.checkInternet = new Ping("8.8.8.8");
+    }
+
+    private void Update()
+    {
+        if (this.checkInternet.isDone)
+            this.connectedToInternet = true;
     }
 
     public void AuthenticatedSucessfully()
@@ -47,7 +58,7 @@ public class MainMenuManager : MonoBehaviour
         }
         #endif
 
-        if (this.modelsLoaded < this.loadedModelsRequired)
+        if (this.modelsLoaded < this.loadedModelsRequired || !this.connectedToInternet)
             return;
 
 

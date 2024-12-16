@@ -17,6 +17,8 @@ public class VoiceActivatedShip : MonoBehaviour
     [SerializeField] private string[] voiceLinesText;
 
     [SerializeField] private TextMeshProUGUI subtitlesText;
+
+    [SerializeField] private TextMeshProUGUI playerInterpretedText;
     
     private AudioSource audioSource;
     private bool listenForStopPlaying;
@@ -28,6 +30,7 @@ public class VoiceActivatedShip : MonoBehaviour
     [SerializeField] private Button playerVoicelineButton;
 
     private int completedVoicelines = 0;
+    private string targetWord = "buzzard";
 
     private void Awake()
     {
@@ -44,6 +47,7 @@ public class VoiceActivatedShip : MonoBehaviour
         StartCoroutine(nameof(this.AdvanceSubtitlesAfter), 2.1f);
         StartCoroutine(nameof(this.AdvanceSubtitlesAfter), 4.15f);
         StartCoroutine(nameof(this.AdvanceSubtitlesAfter), 7f);
+        StartCoroutine(nameof(this.AdvanceSubtitlesAfter), 7.5f);
     }
 
     private static void SetCinemachineBrainBlendTime()
@@ -65,17 +69,31 @@ public class VoiceActivatedShip : MonoBehaviour
         AdvanceSubtitles();
     }
 
+    IEnumerator PlayQueuedVoicelineAfter(float seconds)
+    {
+        yield return new WaitForSeconds(seconds);
+        this.PlayQueuedVoiceline();
+    }
+    private IEnumerator AllVoicelinesCompleteAfter(float seconds)
+    {
+        yield return new WaitForSeconds(seconds);
+        this.AllVoicelinesComplete();
+    }
+
     private void AdvanceSubtitles()
     {
         this.currentVoicelineText++;
         this.subtitlesText.text = this.voiceLinesText[this.currentVoicelineText];
+        this.playerInterpretedText.text = "";
+        this.playerInterpretedText.color = Color.white;
     }
+
     
     private void PlayQueuedVoiceline()
     {
         if (this.completedVoicelines == 3)
         {
-            this.AllVoicelinesComplete();
+            StartCoroutine(nameof(this.AllVoicelinesCompleteAfter), 0.5f);
             return;
         }
         
@@ -94,7 +112,9 @@ public class VoiceActivatedShip : MonoBehaviour
             StartCoroutine(nameof(this.AdvanceSubtitlesAfter), 0.4f);
             StartCoroutine(nameof(this.AdvanceSubtitlesAfter), 3.2f);
             StartCoroutine(nameof(this.AdvanceSubtitlesAfter), 5.6f);
+            StartCoroutine(nameof(this.AdvanceSubtitlesAfter), 8.6f);
             StartCoroutine(nameof(this.AdvanceSubtitlesAfter), 9f);
+            this.targetWord = "ad astra house condor";
         }
     }
 
@@ -128,15 +148,25 @@ public class VoiceActivatedShip : MonoBehaviour
         this.PlayQueuedVoiceline();
     }
 
-    public void PlayerSaidVoiceline()
+    public void EvaluateIfPlayerSaidCorrectWords(string playerWords)
+    {
+        if(playerWords == this.targetWord)
+            this.PlayerSaidVoiceline();
+            
+    }
+    
+    private void PlayerSaidVoiceline()
     {
         this.playerVoicelineButton.interactable = false;
-        this.PlayQueuedVoiceline();
+        this.playerInterpretedText.color = Color.green;
+        StartCoroutine(nameof(this.PlayQueuedVoicelineAfter), 0.4f);
     }
 
     public void AllVoicelinesComplete()
     {
         GetComponent<PlayableDirector>().Play(); 
         this.playerVoicelineButton.gameObject.SetActive(false);
+        this.playerInterpretedText.text = "";
+        this.subtitlesText.gameObject.SetActive(false);
     }
 }
