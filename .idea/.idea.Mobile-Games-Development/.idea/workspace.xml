@@ -6,9 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="c7630d3b-1041-428d-b5b5-aacdf8ac5685" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Mobile-Games-Development/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Mobile-Games-Development/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Json/SaveGame.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Json/SaveGame.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Save Game Debug Info.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Save Game Debug Info.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Main Menu/VoiceActivatedShip.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Main Menu/VoiceActivatedShip.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sound effects/Intro Voicelines 2.wav" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sound effects/Intro Voicelines 2.wav" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Timelines/EnterShipTimeline.playable" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Timelines/EnterShipTimeline.playable" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -293,7 +294,7 @@
       <workItem from="1734210983816" duration="1002000" />
       <workItem from="1734212303460" duration="115000" />
       <workItem from="1734217507367" duration="4998000" />
-      <workItem from="1734283848099" duration="4684000" />
+      <workItem from="1734283848099" duration="9969000" />
     </task>
     <servers />
   </component>

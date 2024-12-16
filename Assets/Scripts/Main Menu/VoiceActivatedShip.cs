@@ -1,6 +1,8 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Cinemachine;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.Playables;
@@ -12,10 +14,16 @@ public class VoiceActivatedShip : MonoBehaviour
 {
     [SerializeField] private AudioClip[] voiceLines;
 
+    [SerializeField] private string[] voiceLinesText;
+
+    [SerializeField] private TextMeshProUGUI subtitlesText;
+    
     private AudioSource audioSource;
     private bool listenForStopPlaying;
 
     private int nextVoiceline = 0;
+
+    private int currentVoicelineText = 0;
 
     [SerializeField] private Button playerVoicelineButton;
 
@@ -29,9 +37,40 @@ public class VoiceActivatedShip : MonoBehaviour
 
     public void FinishedEnteringShip()
     {
+        SetCinemachineBrainBlendTime();
+
         this.PlayQueuedVoiceline();
+        StartCoroutine(nameof(this.EnableSubtitlesAfter), 0.65f);
+        StartCoroutine(nameof(this.AdvanceSubtitlesAfter), 2.1f);
+        StartCoroutine(nameof(this.AdvanceSubtitlesAfter), 4.15f);
+        StartCoroutine(nameof(this.AdvanceSubtitlesAfter), 7f);
     }
 
+    private static void SetCinemachineBrainBlendTime()
+    {
+        var cinemachineBrain = FindObjectOfType<CinemachineBrain>();
+
+        
+    }
+
+    IEnumerator EnableSubtitlesAfter(float seconds)
+    {
+        yield return new WaitForSeconds(seconds);
+        this.subtitlesText.gameObject.SetActive(true);
+    }
+
+    IEnumerator AdvanceSubtitlesAfter(float seconds)
+    {
+        yield return new WaitForSeconds(seconds);
+        AdvanceSubtitles();
+    }
+
+    private void AdvanceSubtitles()
+    {
+        this.currentVoicelineText++;
+        this.subtitlesText.text = this.voiceLinesText[this.currentVoicelineText];
+    }
+    
     private void PlayQueuedVoiceline()
     {
         if (this.completedVoicelines == 3)
@@ -42,7 +81,21 @@ public class VoiceActivatedShip : MonoBehaviour
         
         this.audioSource.clip = this.voiceLines[this.nextVoiceline];
         this.audioSource.Play();
-        this.listenForStopPlaying = true;       
+        this.listenForStopPlaying = true;
+
+        if (this.nextVoiceline == 1)
+        {
+            StartCoroutine(nameof(this.AdvanceSubtitlesAfter), 0.5f);
+            StartCoroutine(nameof(this.AdvanceSubtitlesAfter), 1.2f);
+            StartCoroutine(nameof(this.AdvanceSubtitlesAfter), 4f);
+        }
+        else if (this.nextVoiceline == 2)
+        {
+            StartCoroutine(nameof(this.AdvanceSubtitlesAfter), 0.4f);
+            StartCoroutine(nameof(this.AdvanceSubtitlesAfter), 3.2f);
+            StartCoroutine(nameof(this.AdvanceSubtitlesAfter), 5.6f);
+            StartCoroutine(nameof(this.AdvanceSubtitlesAfter), 9f);
+        }
     }
 
     private void Update()
