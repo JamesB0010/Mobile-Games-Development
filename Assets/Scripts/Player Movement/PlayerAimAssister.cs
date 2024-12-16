@@ -16,7 +16,7 @@ public class PlayerAimAssister : MonoBehaviour
 
     private void Start()
     {
-        aimingAtEnemy.valueChanged += this.OnAimingAtEnemyChanged;
+        aimingAtEnemy.valueChanged += this.OnAimingAtEnemyChanged; 
     }
 
     private void OnAimingAtEnemyChanged(bool aimingAtEnemy)
