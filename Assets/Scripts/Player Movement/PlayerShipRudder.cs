@@ -37,6 +37,11 @@ public class PlayerShipRudder : MonoBehaviour
     {
         this.yawSpeed = 5;
     }
+    
+    public void SetSensitivityHover()
+    {
+        this.yawSpeed = 15;
+    }
 
     public void SetSensitivityNormal()
     {

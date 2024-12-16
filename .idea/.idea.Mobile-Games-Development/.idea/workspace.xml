@@ -6,10 +6,18 @@
   <component name="ChangeListManager">
     <list default="true" id="c7630d3b-1041-428d-b5b5-aacdf8ac5685" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Mobile-Games-Development/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Mobile-Games-Development/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Json/SaveGame.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Json/SaveGame.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Voicelines Recorder.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Voicelines Recorder.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AudioRecording/BannerAdSpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AudioRecording/BannerAdSpawner.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameUiControls/LoadingScreenSceneChanger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameUiControls/LoadingScreenSceneChanger.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scriptable objects/PlayerCamFsm/ZoomIdle.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scriptable objects/PlayerCamFsm/ZoomIdle.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scriptable objects/PlayerCamFsm/ZoomIn.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scriptable objects/PlayerCamFsm/ZoomIn.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scriptable objects/PlayerWeaponsSystemFsm/Light/LightShooting.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scriptable objects/PlayerWeaponsSystemFsm/Light/LightShooting.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scriptable objects/PlayerWeaponsSystemFsm/Light/LightweaponsIdle.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scriptable objects/PlayerWeaponsSystemFsm/Light/LightweaponsIdle.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scriptable objects/State/PlayerWeaponsState.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scriptable objects/State/PlayerWeaponsState.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameUiControls/ZoomButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameUiControls/ZoomButton.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player Movement/PlayerShipAilerons.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player Movement/PlayerShipAilerons.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player Movement/PlayerShipElevator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player Movement/PlayerShipElevator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player Movement/PlayerShipRudder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player Movement/PlayerShipRudder.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Value References/Bool Reference.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Value References/Bool Reference.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapon/GunSystemFSMBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Weapon/GunSystemFSMBehaviour.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,6 +64,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Main Menu/VoiceRecordingButton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Misc/FighterShipFlame.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Misc/GamesPlayedIncrementor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player Movement/PlayerAimAssister.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerHapticFeedback.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerHealth.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerHealthUiElement.cs" root0="FORCE_HIGHLIGHTING" />
@@ -298,7 +307,7 @@
       <workItem from="1734283848099" duration="14472000" />
       <workItem from="1734315709149" duration="4804000" />
       <workItem from="1734320684801" duration="124000" />
-      <workItem from="1734372395951" duration="2640000" />
+      <workItem from="1734372395951" duration="4110000" />
     </task>
     <servers />
   </component>
@@ -422,19 +431,6 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="35" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/AudioRecording/BannerAdSpawner.cs</url>
-          <line>64</line>
-          <properties documentPath="C:\Users\james\OneDrive\Documents\University\Year 3\Mobile-Games-Development\Assets\Scripts\AudioRecording\BannerAdSpawner.cs" initialLine="58" containingFunctionPresentation="Method 'ShowBannerAdAfter'">
-            <startOffsets>
-              <option value="1631" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1651" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="42" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Scripts/AudioRecording/BannerAdSpawner.cs</url>

@@ -58,6 +58,11 @@ public class PlayerShipElevator : MonoBehaviour
     {
         this.pitchSpeed = 10;
     }
+    
+    public void SetSensitivityHover()
+    {
+        this.pitchSpeed = 30;
+    }
 
     public void SetSensitivityNormal()
     {

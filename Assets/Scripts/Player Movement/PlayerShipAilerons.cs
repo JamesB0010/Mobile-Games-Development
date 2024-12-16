@@ -59,6 +59,11 @@ public class PlayerShipAilerons : MonoBehaviour
         this.rollSpeed = 10;
     }
 
+    public void SetSensitivityHover()
+    {
+        this.rollSpeed = 30;
+    }
+
     public void SetSensitivityNormal()
     {
         this.rollSpeed = this.rollSpeedDefault;

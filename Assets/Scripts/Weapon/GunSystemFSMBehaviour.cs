@@ -12,7 +12,6 @@ public class GunSystemFSMBehaviour : FSMBehaviour
     [SerializeField] private State lightIdle;
     [SerializeField] private State lightShooting;
 
-
     private GunSystems gunSystem;
 
     private void Start()
