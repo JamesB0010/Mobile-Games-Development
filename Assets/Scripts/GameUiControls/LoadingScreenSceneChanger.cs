@@ -8,8 +8,14 @@ public class LoadingScreenSceneChanger : MonoBehaviour
 {
     private IEnumerator Start()
     {
+        var adSpawners = FindObjectsOfType<BannerAdSpawner>();
+        if (adSpawners.Length == 1)
+        {
+            adSpawners[0].AddSpawnListener(this.ChangeScene);
+            yield break;
+        }
         yield return new WaitForSeconds(0);
-        FindObjectOfType<BannerAdExample>().AddSpawnListener(this.ChangeScene);
+        FindObjectOfType<BannerAdSpawner>().AddSpawnListener(this.ChangeScene);
     }
 
     public void ChangeScene()

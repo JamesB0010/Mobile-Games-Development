@@ -130,7 +130,7 @@
         },
         {
             "key": "NoLightGun",
-            "value": 1
+            "value": 2
         },
         {
             "key": "WeakLowEnergy",

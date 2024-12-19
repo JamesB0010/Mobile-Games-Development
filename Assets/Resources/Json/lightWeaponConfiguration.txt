@@ -5,7 +5,7 @@
         "NoLightGun",
         "NoLightGun",
         "NoLightGun",
-        "NoLightGun",
+        "MediumDamageHighEnergy",
         "MediumDamageHighEnergy",
         "NoLightGun"
     ]

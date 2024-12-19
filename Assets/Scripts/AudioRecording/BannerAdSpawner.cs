@@ -6,7 +6,7 @@ using UnityEngine.Advertisements;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 
-public class BannerAdExample : MonoBehaviour
+public class BannerAdSpawner : MonoBehaviour
 {
     [SerializeField] BannerPosition _bannerPosition = BannerPosition.BOTTOM_CENTER;
  
@@ -14,8 +14,8 @@ public class BannerAdExample : MonoBehaviour
 
     private event Action BannerAdSpawned;
     
-    private static BannerAdExample instance = null;
-
+    private static BannerAdSpawner instance = null;
+    
     public void AddSpawnListener(Action handler)
     {
         this.BannerAdSpawned += handler;
@@ -35,6 +35,8 @@ public class BannerAdExample : MonoBehaviour
 
     void Start()
     {
+        
+        
         // Set the banner position:
         Advertisement.Banner.SetPosition(_bannerPosition);
  
