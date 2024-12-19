@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Player_Movement;
@@ -18,6 +19,11 @@ public class Planet : MonoBehaviour
         this.distancetoMaintain = transform.position - this.playerTransform.position;
 
         this.enabled = true;
+    }
+
+    private void Awake()
+    {
+        this.enabled = false;
     }
 
     void Update()

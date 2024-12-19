@@ -39,7 +39,8 @@ public abstract class PlayerShipWeapon : MonoBehaviour
 
     public void ListenToBulletHitEvent()
     {
-        this.getGun().BulletReachedDesitnation += this.BulletHit;
+        if(this.gameObject.activeSelf)
+            this.getGun().BulletReachedDesitnation += this.BulletHit;
     }
 
     protected abstract Gun getGun();

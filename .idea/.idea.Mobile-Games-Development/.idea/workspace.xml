@@ -6,20 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="c7630d3b-1041-428d-b5b5-aacdf8ac5685" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Mobile-Games-Development/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Mobile-Games-Development/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Editor/ResetScriptableObjects.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/ResetScriptableObjects.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Json/SaveGame.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Json/SaveGame.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Reset Scriptable Objects.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Reset Scriptable Objects.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Upgrade Ship.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Upgrade Ship.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/mainScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/mainScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scriptable objects/SettingsMenuFunctions.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scriptable objects/SettingsMenuFunctions.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Main Menu/BuzzardGameData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Main Menu/BuzzardGameData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Main Menu/SettingsMenuFunctions.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Main Menu/SettingsMenuFunctions.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Main Menu/SettingsUiInitializer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Main Menu/SettingsUiInitializer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Main Menu/ToggleSwitch.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Main Menu/ToggleSwitch.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player Movement/PlayerShipElevator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player Movement/PlayerShipElevator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ship Upgrading/GameSaveData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ship Upgrading/GameSaveData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scriptable objects/State/PlayerWeaponsState.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scriptable objects/State/PlayerWeaponsState.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Main Scene Managers/ActiveEnemiesManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Main Scene Managers/ActiveEnemiesManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Misc/Planet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Misc/Planet.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapon/PlayerShipWeapon.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Weapon/PlayerShipWeapon.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,6 +56,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Main Menu/VersionCodeReader.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Main Menu/VoiceActivatedShip.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Main Menu/VoiceRecordingButton.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Main Scene Managers/EnemyWavesSpawner.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Main Scene Managers/MainSceneHarbEnvSpawner.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Misc/FighterShipFlame.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Misc/GamesPlayedIncrementor.cs" root0="FORCE_HIGHLIGHTING" />
@@ -240,10 +233,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="12640">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="5248">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="12640" />
+      <option name="pid" value="5248" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -312,7 +305,7 @@
       <workItem from="1734315709149" duration="4804000" />
       <workItem from="1734320684801" duration="124000" />
       <workItem from="1734372395951" duration="4197000" />
-      <workItem from="1734430778242" duration="9713000" />
+      <workItem from="1734430778242" duration="13429000" />
     </task>
     <servers />
   </component>
@@ -449,6 +442,19 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="51" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/GameUiControls/HeavyFireButton.cs</url>
+          <line>18</line>
+          <properties documentPath="C:\Users\james\OneDrive\Documents\University\Year 3\Mobile-Games-Development\Assets\Scripts\GameUiControls\HeavyFireButton.cs" initialLine="18" containingFunctionPresentation="Method 'OnPointerDown'">
+            <startOffsets>
+              <option value="429" />
+            </startOffsets>
+            <endOffsets>
+              <option value="448" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="59" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
