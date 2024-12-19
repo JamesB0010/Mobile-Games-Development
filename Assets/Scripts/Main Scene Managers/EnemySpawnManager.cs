@@ -22,7 +22,7 @@ public class EnemySpawnManager : MonoBehaviour
     [SerializeField] private AssetReference enemyHarb;
 
 
-    public void SpawnBasicEnemy()
+    public AsyncOperationHandle<GameObject> SpawnBasicEnemy()
     {
         float minX = this.spawnBoundaryNegativeX.position.x;
         float maxX = this.spawnBoundaryPositiveX.position.x;
@@ -33,22 +33,39 @@ public class EnemySpawnManager : MonoBehaviour
         float minZ = this.spawnBoundaryNegativeZ.position.z;
         float maxZ = this.spawnBoundaryPositiveZ.position.z;
 
-        Vector3 spawnPos = new Vector3(Random.Range(minX, minY), Random.Range(minY, maxY), Random.Range(minZ, maxZ));
+        Vector3 spawnPos = new Vector3(Random.Range(minX, maxX), Random.Range(minY, maxY), Random.Range(minZ, maxZ));
 
         var spawnEnemyHandle = this.enemy.InstantiateAsync(spawnPos, Random.rotation);
 
         spawnEnemyHandle.Completed += this.EnemySpawned;
+
+        return spawnEnemyHandle;
     }
 
-    private void SpawnHarb()
+    public AsyncOperationHandle<GameObject> SpawnSpecialEnemy()
     {
-        //spawn harb
-        this.enemyHarb.InstantiateAsync();
-    }
+         float minX = this.spawnBoundaryNegativeX.position.x;
+         float maxX = this.spawnBoundaryPositiveX.position.x;
+ 
+         float minY = this.spawnBoundaryNegativeY.position.y;
+         float maxY = this.spawnBoundaryPositiveY.position.y;
+ 
+         float minZ = this.spawnBoundaryNegativeZ.position.z;
+         float maxZ = this.spawnBoundaryPositiveZ.position.z;
+ 
+         Vector3 spawnPos = new Vector3(Random.Range(minX, maxX), Random.Range(minY, maxY), Random.Range(minZ, maxZ));
 
+         var spawnEnemyHandle = this.enemyHarb.InstantiateAsync(spawnPos, Random.rotation);
+
+         spawnEnemyHandle.Completed += this.EnemySpawned;
+         
+         return spawnEnemyHandle;
+    }
     private void EnemySpawned(AsyncOperationHandle<GameObject> handle)
     {
-        handle.Result.GetComponent<Enemy>().EnemiesManager = this.activeEnemiesManager;
-        this.activeEnemiesManager.IncrementEnemyCount();
+        EnemyBase enemy = handle.Result.GetComponent<EnemyBase>();
+        enemy.EnemiesManager = this.activeEnemiesManager;
+        
+        this.activeEnemiesManager.TrackEnemyAsActive(enemy);
     }
 }

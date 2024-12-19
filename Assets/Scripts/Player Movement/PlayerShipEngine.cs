@@ -41,7 +41,15 @@ public class PlayerShipEngine : MonoBehaviour
     {
         Vector3 acceleration = Vector3.zero;
 
-        bool enoughEnergy = this.energySystem.TryDebitEnergy(this.engine.EnergyDrainRate * this.throttle.Throttle * Time.deltaTime);
+        bool enoughEnergy;
+        if (this.booster.IsBoosting)
+        {
+            enoughEnergy = this.energySystem.TryDebitEnergy(this.engine.EngineBoostStats.EnergyBoostDrainRate * Time.deltaTime);
+        }
+        else
+            enoughEnergy = this.energySystem.TryDebitEnergy(this.engine.EnergyDrainRate * this.throttle.Throttle * Time.deltaTime);
+        
+        
         if (!enoughEnergy)
             return Vector3.zero;
 

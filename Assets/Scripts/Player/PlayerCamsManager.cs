@@ -6,29 +6,32 @@ using UnityEngine;
 
 public sealed class PlayerCamsManager : MonoBehaviour
 {
-    [SerializeField] private GameObject firstPersonCamera;
+    [SerializeField] private Camera firstPersonCamera;
 
     [SerializeField] private CinemachineVirtualCamera firstPersonBoostCam;
 
     [SerializeField] private CinemachineVirtualCamera[] firstPersonVirtualCameras;
 
 
-    [SerializeField] private GameObject thirdPersonCamera;
+    [SerializeField] private Camera thirdPersonCamera;
 
     [SerializeField] private CinemachineVirtualCamera thirdPersonBoostCam;
 
     [SerializeField] private CinemachineVirtualCamera[] thirdPersonVirtualCameras;
 
+    private bool firstPerson = true;
+
     public void CameraViewChanged(bool firstPerson)
     {
-        firstPersonCamera.SetActive(firstPerson);
+        this.firstPerson = true;
+        firstPersonCamera.gameObject.SetActive(firstPerson);
         foreach (var cam in this.firstPersonVirtualCameras)
         {
             cam.gameObject.SetActive(firstPerson);
         }
 
 
-        this.thirdPersonCamera.SetActive(!firstPerson);
+        this.thirdPersonCamera.gameObject.SetActive(!firstPerson);
         foreach (var cam in this.thirdPersonVirtualCameras)
         {
             cam.gameObject.SetActive(!firstPerson);
@@ -36,5 +39,12 @@ public sealed class PlayerCamsManager : MonoBehaviour
 
         firstPersonBoostCam.gameObject.SetActive(false);
         thirdPersonBoostCam.gameObject.SetActive(false);
+    }
+
+    public Camera GetActiveCamera()
+    {
+        return this.firstPerson
+            ? this.firstPersonCamera
+            : this.thirdPersonCamera;
     }
 }

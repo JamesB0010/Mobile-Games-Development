@@ -79,8 +79,7 @@ public class Enemy : EnemyBase
 
     private void OnDeath()
     {
-        Instantiate(this.DeathParticle, transform.position, Quaternion.identity);
         this.enemiesManager.EnemyDied(this);
-        Destroy(this.gameObject);
+        Instantiate(this.DeathParticle, transform.position, Quaternion.identity);
     }
 }

@@ -2214,6 +2214,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerUpgradesState: {fileID: 11400000, guid: b5f4d067d7d0e2744ab5cdf2c7f613f0,
     type: 2}
+  OutOfEnergy:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3275013080770175168}
+        m_TargetAssemblyTypeName: PlayerShipBooster, Assembly-CSharp
+        m_MethodName: OutOfEnergy
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &2290456269096047545
 GameObject:
   m_ObjectHideFlags: 0
@@ -2941,12 +2956,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3bfd620b3514b3b49b75caa1774c6066, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firstPersonCamera: {fileID: 8028261648759347436}
+  firstPersonCamera: {fileID: 4434650746464354878}
   firstPersonBoostCam: {fileID: 6727183197763476996}
   firstPersonVirtualCameras:
   - {fileID: 4583754627085781703}
   - {fileID: 6727183197763476996}
-  thirdPersonCamera: {fileID: 4688621641054424294}
+  thirdPersonCamera: {fileID: 4219992305214190124}
   thirdPersonBoostCam: {fileID: 1272479481698990600}
   thirdPersonVirtualCameras:
   - {fileID: 1668949361132249384}
@@ -3859,6 +3874,7 @@ RectTransform:
   - {fileID: 4118431032639194749}
   - {fileID: 5376009853961654183}
   - {fileID: 3771924330687987453}
+  - {fileID: 2159349366514140265}
   m_Father: {fileID: 9128274930130289777}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -9919,6 +9935,7 @@ MonoBehaviour:
   playerHapticFeedback: {fileID: 50586730395357941}
   subtitleSetter: {fileID: 7219515255875332416}
   outOfBoundsUiElements: {fileID: 1643817859153077561}
+  directionalMarkersManager: {fileID: 7017016068570468603}
 --- !u!114 &8456996821306953218
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13394,6 +13411,58 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &8297867780415985321
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2159349366514140265}
+  - component: {fileID: 7017016068570468603}
+  m_Layer: 5
+  m_Name: DirectionalMarkersManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2159349366514140265
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8297867780415985321}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5330213040616414023}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &7017016068570468603
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8297867780415985321}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51f5cdda3528b944fa6b5979aa181c25, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  directionMarkerPrefab: {fileID: 6194427713210366623, guid: 195994afc95b6f946a056fd5c244bd6e,
+    type: 3}
+  playerCamsManager: {fileID: 7482778018745197257}
+  playerTransform: {fileID: 680498930045963845}
 --- !u!1 &8357346935955244435
 GameObject:
   m_ObjectHideFlags: 0

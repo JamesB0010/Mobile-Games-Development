@@ -32,4 +32,9 @@ public class UsefulPlayerComponents : MonoBehaviour
     [SerializeField] private OutOfBoundsUiElements outOfBoundsUiElements;
 
     public OutOfBoundsUiElements OutOfBoundsUiElements => this.outOfBoundsUiElements;
+
+
+    [SerializeField] private DirectionalMarkersManager directionalMarkersManager;
+
+    public DirectionalMarkersManager DirectionalMarkersManager => this.directionalMarkersManager;
 }

@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 363154144694fb84d99a940f5fdcfe9a, type: 3}
   m_Name: HighThrustHighEnergy
   m_EditorClassIdentifier: 
-  cost: 0
+  cost: 18
   icon: {fileID: 21300000, guid: d92891756e50dde4d88b4159d27731c7, type: 3}
   isPurchaseable: 1
-  OwnedByDefault: 0
+  quantityOwnedByDefault: 0
   engine: {fileID: 11400000, guid: 92adb0b5a2421ee449e79efcbbfbcfea, type: 2}

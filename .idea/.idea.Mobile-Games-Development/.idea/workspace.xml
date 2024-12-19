@@ -5,13 +5,59 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c7630d3b-1041-428d-b5b5-aacdf8ac5685" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/DirectionalMarker.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/DirectionalMarker.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/GameUiControls/DirectionalMarkersManager.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/GameUiControls/DirectionalMarkersManager.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Mobile-Games-Development/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Mobile-Games-Development/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Fonts/ethnocentric rg SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Fonts/ethnocentric rg SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemy Harb.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemy Harb.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/ShipUpgrades/AmmoHighDamageHigh.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/ShipUpgrades/AmmoHighDamageHigh.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/ShipUpgrades/AmmoHighDamageLow.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/ShipUpgrades/AmmoHighDamageLow.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/ShipUpgrades/AmmoLowDamageHigh.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/ShipUpgrades/AmmoLowDamageHigh.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/ShipUpgrades/AmmoMediumDamageHigh.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/ShipUpgrades/AmmoMediumDamageHigh.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/ShipUpgrades/AmmoMediumDamageLow.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/ShipUpgrades/AmmoMediumDamageLow.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/ShipUpgrades/DefaultAutocannon.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/ShipUpgrades/DefaultAutocannon.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/ShipUpgrades/HeavyHighEnergy.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/ShipUpgrades/HeavyHighEnergy.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/ShipUpgrades/HeavyLowEnergy.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/ShipUpgrades/HeavyLowEnergy.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/ShipUpgrades/HighDamageHighEnergy.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/ShipUpgrades/HighDamageHighEnergy.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/ShipUpgrades/HighDamageLowEnergy.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/ShipUpgrades/HighDamageLowEnergy.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/ShipUpgrades/HighMaxHighRecharge.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/ShipUpgrades/HighMaxHighRecharge.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/ShipUpgrades/HighMaxLowRecharge.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/ShipUpgrades/HighMaxLowRecharge.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/ShipUpgrades/HighThrustHighEnergy.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/ShipUpgrades/HighThrustHighEnergy.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/ShipUpgrades/HighThrustHighEnergyBoost.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/ShipUpgrades/HighThrustHighEnergyBoost.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/ShipUpgrades/HighThrustLowEnergy.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/ShipUpgrades/HighThrustLowEnergy.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/ShipUpgrades/LowMaxHighRecharge.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/ShipUpgrades/LowMaxHighRecharge.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/ShipUpgrades/LowThrustHighEnergyBoost.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/ShipUpgrades/LowThrustHighEnergyBoost.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/ShipUpgrades/LowThrustLowEnergy.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/ShipUpgrades/LowThrustLowEnergy.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/ShipUpgrades/MediumDamageHighEnergy.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/ShipUpgrades/MediumDamageHighEnergy.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/ShipUpgrades/MediumDamageLowEnergy.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/ShipUpgrades/MediumDamageLowEnergy.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/ShipUpgrades/MediumHighEnergy.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/ShipUpgrades/MediumHighEnergy.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/ShipUpgrades/MediumLowEnergy.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/ShipUpgrades/MediumLowEnergy.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/ShipUpgrades/MediumMaxHighRecharge.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/ShipUpgrades/MediumMaxHighRecharge.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/ShipUpgrades/MediumMaxLowRecharge.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/ShipUpgrades/MediumMaxLowRecharge.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/ShipUpgrades/MediumThrustHighEnergy.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/ShipUpgrades/MediumThrustHighEnergy.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/ShipUpgrades/MediumThrustHighEnergyBoost.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/ShipUpgrades/MediumThrustHighEnergyBoost.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/ShipUpgrades/MediumThrustLowEnergy.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/ShipUpgrades/MediumThrustLowEnergy.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/ShipUpgrades/WeakLowEnergy.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/ShipUpgrades/WeakLowEnergy.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Upgrade Ship.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Upgrade Ship.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/mainScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/mainScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scriptable objects/State/PlayerWeaponsState.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scriptable objects/State/PlayerWeaponsState.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scriptable objects/Ship Upgrade system/Items/Engines/HighThrustHighEnergyBoost.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scriptable objects/Ship Upgrade system/Items/Engines/HighThrustHighEnergyBoost.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scriptable objects/Ship Upgrade system/Items/Engines/LowThrustHighEnergyBoost.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scriptable objects/Ship Upgrade system/Items/Engines/LowThrustHighEnergyBoost.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scriptable objects/Ship Upgrade system/Items/Engines/MediumThrustHighEnergyBoost.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scriptable objects/Ship Upgrade system/Items/Engines/MediumThrustHighEnergyBoost.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/Enemy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyBase.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/harb.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/harb.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Main Scene Managers/ActiveEnemiesManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Main Scene Managers/ActiveEnemiesManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Misc/Planet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Misc/Planet.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapon/PlayerShipWeapon.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Weapon/PlayerShipWeapon.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Main Scene Managers/EnemySpawnManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Main Scene Managers/EnemySpawnManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Main Scene Managers/EnemyWavesSpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Main Scene Managers/EnemyWavesSpawner.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Main Scene Managers/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Main Scene Managers/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player Movement/PlayerShipBooster.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player Movement/PlayerShipBooster.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player Movement/PlayerShipEngine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player Movement/PlayerShipEngine.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerCamsManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerCamsManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerShipEnergySystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerShipEnergySystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/UsefulPlayerComponents.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/UsefulPlayerComponents.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,7 +72,9 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/a799942dddd64d7ab0ff69991e14bcf853c00/d4/a6d0b273/Command.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b11ba2a8fbf24f219f7cc98532a1130446ac00/52/d12b995e/String.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b11ba2a8fbf24f219f7cc98532a1130446ac00/9d/a6f5cab0/File.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b11ba2a8fbf24f219f7cc98532a1130446ac00/b6/91fe6c40/ThrowHelper.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c5ed782439084ef1bc2ad85eec89e9fe175a00/01/24f0a37b/UnityEvent.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c5ed782439084ef1bc2ad85eec89e9fe175a00/5a/c6dac61c/GameObject.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c5ed782439084ef1bc2ad85eec89e9fe175a00/a7/830e8bc0/AsyncOperation.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c5ed782439084ef1bc2ad85eec89e9fe175a00/ae/eb7ddfaf/Object.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../AI/milestones-ai-24-25-JamesB0010/MainProject/Assets/Scripts/Navigation/GridGenerator.cs" root0="SKIP_HIGHLIGHTING" />
@@ -39,6 +87,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/AudioRecording/WavLoader.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/AudioRecording/WavUtility.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameUiControls/AdCreditsAwardedScreen.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameUiControls/DirectionalMarkersManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameUiControls/Joystick.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameUiControls/LoadingScreenSceneChanger.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameUiControls/RollAndPitchJoystick.cs" root0="FORCE_HIGHLIGHTING" />
@@ -80,6 +129,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Ship Upgrading/ShipViewButton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Ship Upgrading/UpgradeSceneShipInstantiatior.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Value References/IntReference.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.addressables@1.21.21/Runtime/ResourceManager/Util/DelegateList.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.cinemachine@2.10.3/Runtime/Experimental/CinemachineNewVirtualCamera.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.cinemachine@2.10.3/Runtime/PostProcessing/CinemachineVolumeSettings.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.cinemachine@2.10.3/Runtime/ThirdParty/clipper.cs" root0="SKIP_HIGHLIGHTING" />
@@ -305,7 +355,7 @@
       <workItem from="1734315709149" duration="4804000" />
       <workItem from="1734320684801" duration="124000" />
       <workItem from="1734372395951" duration="4197000" />
-      <workItem from="1734430778242" duration="13429000" />
+      <workItem from="1734430778242" duration="24228000" />
     </task>
     <servers />
   </component>
@@ -429,32 +479,6 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="47" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/Weapon/Gun Systems.cs</url>
-          <line>73</line>
-          <properties documentPath="C:\Users\james\OneDrive\Documents\University\Year 3\Mobile-Games-Development\Assets\Scripts\Weapon\Gun Systems.cs" initialLine="71" containingFunctionPresentation="Method 'OnBulletHit'">
-            <startOffsets>
-              <option value="2490" />
-            </startOffsets>
-            <endOffsets>
-              <option value="2520" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="51" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/GameUiControls/HeavyFireButton.cs</url>
-          <line>18</line>
-          <properties documentPath="C:\Users\james\OneDrive\Documents\University\Year 3\Mobile-Games-Development\Assets\Scripts\GameUiControls\HeavyFireButton.cs" initialLine="18" containingFunctionPresentation="Method 'OnPointerDown'">
-            <startOffsets>
-              <option value="429" />
-            </startOffsets>
-            <endOffsets>
-              <option value="448" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="59" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.Serialization;
 
 public class PlayerShipEnergySystem : MonoBehaviour
@@ -9,6 +10,8 @@ public class PlayerShipEnergySystem : MonoBehaviour
     private EnergySystem energySystem;
 
     [SerializeField] private PlayerUpgradesState playerUpgradesState;
+
+    [SerializeField] private UnityEvent OutOfEnergy;
 
     public void SubscribeToCurrentEnergyChanged(Action<float> callback)
     {
@@ -32,6 +35,8 @@ public class PlayerShipEnergySystem : MonoBehaviour
         }
 
         this.energySystem.CurrentEnergy = 0;
+        
+        this.OutOfEnergy?.Invoke();
 
         return false;
     }

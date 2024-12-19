@@ -7,8 +7,9 @@ using UnityEngine.Events;
 public class ActiveEnemiesManager : MonoBehaviour
 {
     //Attributes
-    private short activeEnemyCount;
+    private List<EnemyBase> activeEnemies = new List<EnemyBase>();
 
+    public List<EnemyBase> ActiveEnemies => this.activeEnemies;
     //Events
     [SerializeField]
     public UnityEvent<EnemyBase> EnemyDeathEvent;
@@ -19,15 +20,16 @@ public class ActiveEnemiesManager : MonoBehaviour
     public void EnemyDied(EnemyBase enemy)
     {
         EnemyDeathEvent?.Invoke(enemy);
-
-        this.activeEnemyCount--;
         
-        if(this.activeEnemyCount == 0)
+        activeEnemies.Remove(enemy);
+
+        
+        if(this.activeEnemies.Count == 0)
             this.AllEnemiesDead?.Invoke();
     }
 
-    public void IncrementEnemyCount()
+    public void TrackEnemyAsActive(EnemyBase enemy)
     {
-        this.activeEnemyCount++;
+        this.activeEnemies.Add(enemy);
     }
 }

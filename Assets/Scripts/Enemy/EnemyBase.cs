@@ -23,6 +23,10 @@ public class EnemyBase : MonoBehaviour
 
             if (this.health <= 0)
             {
+                if (this.dead)
+                    return;
+
+                this.dead = true;
                 this.OnDeath();
                 Destroy(this.gameObject);
             }
@@ -43,10 +47,6 @@ public class EnemyBase : MonoBehaviour
 
     private void OnDeath()
     {
-        if (this.dead)
-            return;
-        this.dead = true;
-
         this.OnDeathReaction?.Invoke();
     }
 }

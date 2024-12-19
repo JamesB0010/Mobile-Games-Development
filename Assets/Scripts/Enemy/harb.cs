@@ -58,7 +58,7 @@ public class Harb : EnemyBase
     {
         yield return new WaitForSeconds(2);
 
-        this.Health = 0;
+        base.Health = 0;
     }
 
     private void Update()
@@ -110,6 +110,7 @@ public class Harb : EnemyBase
 
     private void OnDeath()
     {
+        this.enemiesManager.EnemyDied(this);
         Instantiate(this.DeathParticle, transform.position, Quaternion.identity);
         Destroy(this.gameObject);
     }

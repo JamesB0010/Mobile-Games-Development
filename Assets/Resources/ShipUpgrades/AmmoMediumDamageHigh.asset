@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 786885c385831ad4d9480a8fc9b6438f, type: 3}
   m_Name: AmmoMediumDamageHigh
   m_EditorClassIdentifier: 
-  cost: 0
+  cost: 20
   icon: {fileID: 21300000, guid: 35469ed843615424083bf79d5371bb28, type: 3}
   isPurchaseable: 1
-  OwnedByDefault: 0
+  quantityOwnedByDefault: 0
   gun: {fileID: 11400000, guid: 4edb05afa3334db41abc44603f1cf78c, type: 2}

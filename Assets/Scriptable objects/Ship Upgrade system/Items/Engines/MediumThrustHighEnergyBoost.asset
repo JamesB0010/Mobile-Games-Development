@@ -15,9 +15,8 @@ MonoBehaviour:
   itemName: PlaceHolder Name
   accelerationSpeed: 35
   energyDrainRate: 20
-  topSpeed: 0
   maxVelocity: 40
   engineBoostStats:
     canBoost: 1
-    energyBoostDrainRate: 40
+    energyBoostDrainRate: 100
     maxBoostVelocity: 80

@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4893267aeff0d604083e5e96fc51f2b3, type: 3}
   m_Name: HighMaxHighRecharge
   m_EditorClassIdentifier: 
-  cost: 0
+  cost: 25
   icon: {fileID: 21300000, guid: d92891756e50dde4d88b4159d27731c7, type: 3}
   isPurchaseable: 1
-  OwnedByDefault: 0
+  quantityOwnedByDefault: 0
   energySystem: {fileID: 11400000, guid: 3e22fd504acd38744aa39af7c45203f8, type: 2}

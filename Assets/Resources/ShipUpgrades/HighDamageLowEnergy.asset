@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1688acab0abbd284d809ac0d63c93c0e, type: 3}
   m_Name: HighDamageLowEnergy
   m_EditorClassIdentifier: 
-  cost: 0
+  cost: 21
   icon: {fileID: 21300000, guid: 35469ed843615424083bf79d5371bb28, type: 3}
   isPurchaseable: 1
-  OwnedByDefault: 0
+  quantityOwnedByDefault: 0
   gun: {fileID: 11400000, guid: d91c8214fc8ecd443a062272655a0cac, type: 2}

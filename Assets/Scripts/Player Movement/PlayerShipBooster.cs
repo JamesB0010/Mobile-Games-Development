@@ -54,6 +54,11 @@ public class PlayerShipBooster : MonoBehaviour
     {
         this.maxVelocityDefault = this.engine.MaxVelocity;
     }
+
+    public void OutOfEnergy()
+    {
+        this.IsBoosting = false;
+    }
     
     private void Start()
     {
