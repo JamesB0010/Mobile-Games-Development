@@ -53,8 +53,8 @@ MonoBehaviour:
     m_SerializedLabels:
     - default
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: f64750b672ddd8649914b68059851db4
-    m_Address: Assets/Models/Carrier/DSS harbinger/harb.fbx
+  - m_GUID: 00b0e2167d1f13e46bf75f5b38e6892e
+    m_Address: Assets/Models/Carrier/DSS harbinger/Harb.prefab
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0

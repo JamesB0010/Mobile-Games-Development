@@ -783,6 +783,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 742481992}
+  - component: {fileID: 742481993}
   m_Layer: 0
   m_Name: HarbSpawner
   m_TagString: Untagged
@@ -806,6 +807,25 @@ Transform:
   - {fileID: 1921176029}
   m_Father: {fileID: 597706204}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &742481993
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 742481991}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71ff169c6102372448c8af11fa7fdb5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  harb:
+    m_AssetGUID: 00b0e2167d1f13e46bf75f5b38e6892e
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  harbSpawnLocations: {fileID: 1921176029}
+  environmentParent: {fileID: 1174275306}
 --- !u!1 &804751919
 GameObject:
   m_ObjectHideFlags: 0

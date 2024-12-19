@@ -6,23 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="c7630d3b-1041-428d-b5b5-aacdf8ac5685" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Mobile-Games-Development/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Mobile-Games-Development/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Main Scene/mainScene.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Main Scene/mainScene.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/GameContent.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/GameContent.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Carrier/DSS harbinger/harb.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Carrier/DSS harbinger/harb.fbx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Json/SaveGame.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Json/SaveGame.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/mainScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/mainScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scriptable objects/Ship Upgrade system/Items/Armour/DefaultArmour.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scriptable objects/Ship Upgrade system/Items/Armour/DefaultArmour.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scriptable objects/Ship Upgrade system/Items/Armour/HeavyHighEnergy.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scriptable objects/Ship Upgrade system/Items/Armour/HeavyHighEnergy.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scriptable objects/Ship Upgrade system/Items/Armour/HeavyLowEnergy.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scriptable objects/Ship Upgrade system/Items/Armour/HeavyLowEnergy.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scriptable objects/Ship Upgrade system/Items/Armour/MediumHighEnergy.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scriptable objects/Ship Upgrade system/Items/Armour/MediumHighEnergy.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scriptable objects/Ship Upgrade system/Items/Armour/MediumLowEnergy.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scriptable objects/Ship Upgrade system/Items/Armour/MediumLowEnergy.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scriptable objects/Ship Upgrade system/Items/Armour/WeakLowEnergy.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scriptable objects/Ship Upgrade system/Items/Armour/WeakLowEnergy.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scriptable objects/Ship Upgrade system/Items/Heavy Weapons/AmmoHighDamageHigh.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scriptable objects/Ship Upgrade system/Items/Heavy Weapons/AmmoHighDamageHigh.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scriptable objects/Ship Upgrade system/Items/Heavy Weapons/AmmoMediumDamageHigh.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scriptable objects/Ship Upgrade system/Items/Heavy Weapons/AmmoMediumDamageHigh.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scriptable objects/Ship Upgrade system/Items/Heavy Weapons/AmmoMediumDamageLow.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scriptable objects/Ship Upgrade system/Items/Heavy Weapons/AmmoMediumDamageLow.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scriptable objects/Ship Upgrade system/Items/Heavy Weapons/AmmolowDamagehigh.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scriptable objects/Ship Upgrade system/Items/Heavy Weapons/AmmolowDamagehigh.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Main Scene Managers/ActiveEnemiesManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Main Scene Managers/ActiveEnemiesManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Main Scene Managers/EnemySpawnManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Main Scene Managers/EnemySpawnManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Main Scene Managers/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Main Scene Managers/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Main Scene Managers/MainSceneHarbEnvSpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Main Scene Managers/MainSceneHarbEnvSpawner.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -315,7 +303,7 @@
       <workItem from="1734315709149" duration="4804000" />
       <workItem from="1734320684801" duration="124000" />
       <workItem from="1734372395951" duration="4197000" />
-      <workItem from="1734430778242" duration="6246000" />
+      <workItem from="1734430778242" duration="7459000" />
     </task>
     <servers />
   </component>

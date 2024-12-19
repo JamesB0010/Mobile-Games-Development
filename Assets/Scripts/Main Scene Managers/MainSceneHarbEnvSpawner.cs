@@ -18,6 +18,7 @@ public class MainSceneHarbEnvSpawner : MonoBehaviour
         {
             Vector3 harbSpawnPosition = this.harbSpawnLocations.GetChild(i).position;
             Quaternion harbSpawnRotation = this.harbSpawnLocations.GetChild(i).rotation;
+            harbSpawnRotation.x += 90;
             harb.InstantiateAsync(harbSpawnPosition, harbSpawnRotation, this.environmentParent);
         }
     }

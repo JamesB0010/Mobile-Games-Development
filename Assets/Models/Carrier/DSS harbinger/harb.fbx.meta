@@ -12,8 +12,18 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: MainEngineGlow.001
+    second: {fileID: 2100000, guid: 0eabf70bfaa2e3949aa6130d68806de3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: RevEngineGlow
     second: {fileID: 2100000, guid: 447c6491b630be44399b6cf1eb2b4b7d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: RevEngineGlow.001
+    second: {fileID: 2100000, guid: 9d23702a14ca1bc4aad141ae56f26db3, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -22,8 +32,28 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: engine.001
+    second: {fileID: 2100000, guid: 10e2eff2f4ed43c4b81e521d47c6a17f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: engine.002
+    second: {fileID: 2100000, guid: fcd073ccf383fcd49b1f0a2a9c61b95f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: engineDark
     second: {fileID: 2100000, guid: 077ecd804915a4749a90c958604f95ba, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: engineDark.001
+    second: {fileID: 2100000, guid: 039b62c1fb5546d42b896383cb283a82, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: engineDark.002
+    second: {fileID: 2100000, guid: 1843f8af1a5d48e4a953a37abad28e88, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -32,8 +62,23 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: greenLight.001
+    second: {fileID: 2100000, guid: 3ee8c890bbafb7943b5946096428c48b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: greenLight.002
+    second: {fileID: 2100000, guid: 246e671d000e86b4e8639097e08b59ed, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: nameDecal
     second: {fileID: 2100000, guid: c0153a6609ead8d4d8e0facc77732563, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: nameDecal.001
+    second: {fileID: 2100000, guid: e04c095ea0f42dd439574219695448e9, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -42,8 +87,28 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: panels.001
+    second: {fileID: 2100000, guid: 1cef601213a06464c96195cefae1fdcf, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: panels.002
+    second: {fileID: 2100000, guid: 371db84b818b152438945ef01ae044e5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: panelsDark
     second: {fileID: 2100000, guid: 851a0f3ce529618478785ae107f1503f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: panelsDark.001
+    second: {fileID: 2100000, guid: 9f08fd4c3c1c6334397b0f2a9d3cac77, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: panelsDark.002
+    second: {fileID: 2100000, guid: 865309e7a17e74040bb17ccf5fb16d15, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -52,8 +117,28 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: redDecal.001
+    second: {fileID: 2100000, guid: 77c0874f65fad2e40b9729493df56d05, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: redDecal.002
+    second: {fileID: 2100000, guid: b409db130e929c746b5ec719d7c4fdb8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: redLight
     second: {fileID: 2100000, guid: 84209d771350c6d4db2141d1bcc1b504, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: redLight.001
+    second: {fileID: 2100000, guid: 0f891d3ab8bb35e4b98ca5381c746ba4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: redLight.002
+    second: {fileID: 2100000, guid: 44b6af586c191144a894aa0dad87e635, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -62,8 +147,28 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: tech.001
+    second: {fileID: 2100000, guid: a05378de482d5e940baf0c43a90bd75a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: tech.002
+    second: {fileID: 2100000, guid: 8387f16020bd00d4dae5e47df304335f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: techDark
     second: {fileID: 2100000, guid: 02a20504f96901145a52ef6b56129dec, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: techDark.001
+    second: {fileID: 2100000, guid: d223a794d4f949449a3d11c5121f8c3d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: techDark.002
+    second: {fileID: 2100000, guid: 0e7dcb38e596a2c46b24f01e82863ba5, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -72,13 +177,38 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: techLight.001
+    second: {fileID: 2100000, guid: b9fee747ded81854db1b1532a865f679, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: techLight.002
+    second: {fileID: 2100000, guid: a809ff634bc9adf4abecbf5112b751df, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: whiteDecal
     second: {fileID: 2100000, guid: 0fe7e87f74909ca48ac7c7f5b986bd18, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: whiteDecal.001
+    second: {fileID: 2100000, guid: dca093e52d2817d4ea0fbacdea3b361e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: whiteLight
     second: {fileID: 2100000, guid: 57e99787b7f96794cbfcd4dfef261257, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: whiteLight.001
+    second: {fileID: 2100000, guid: 0e85752c1dfcc2143b6bcb3d1f915911, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: whiteLight.002
+    second: {fileID: 2100000, guid: 9453cd8106ba7254d8da862438a0a024, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -119,7 +249,10 @@ ModelImporter:
     clipAnimations: []
     isReadable: 1
   meshes:
-    lODScreenPercentages: []
+    lODScreenPercentages:
+    - 0.25
+    - 0.125
+    - 0.01
     globalScale: 1
     meshCompression: 0
     addColliders: 0
