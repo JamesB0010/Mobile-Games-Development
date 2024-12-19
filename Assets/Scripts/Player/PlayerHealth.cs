@@ -11,6 +11,8 @@ public class PlayerHealth : MonoBehaviour
 
     [SerializeField] private Transform ShipModel;
 
+    [Header("Debug")] [SerializeField] private bool invincible;
+
     private bool dead = false;
 
     public float Health
@@ -19,6 +21,9 @@ public class PlayerHealth : MonoBehaviour
 
         set
         {
+            if (this.invincible)
+                return;
+            
             if (this.health <= 0)
             {
                 this.health = 0;

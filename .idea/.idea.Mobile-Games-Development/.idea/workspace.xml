@@ -6,27 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="c7630d3b-1041-428d-b5b5-aacdf8ac5685" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Mobile-Games-Development/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Mobile-Games-Development/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemy Harb Turret.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemy Harb Turret.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemy Harb.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemy Harb.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/AudioRecordings/recording.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/AudioRecordings/recording.wav.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Json/SaveGame.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Json/SaveGame.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Upgrade Ship.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Upgrade Ship.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/mainScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/mainScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scriptable objects/Ship Upgrade system/Items/Armour/DefaultArmour.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scriptable objects/Ship Upgrade system/Items/Armour/DefaultArmour.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scriptable objects/Ship Upgrade system/Items/Armour/HeavyHighEnergy.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scriptable objects/Ship Upgrade system/Items/Armour/HeavyHighEnergy.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scriptable objects/Ship Upgrade system/Items/Armour/MediumHighEnergy.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scriptable objects/Ship Upgrade system/Items/Armour/MediumHighEnergy.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scriptable objects/Ship Upgrade system/Items/Armour/MediumLowEnergy.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scriptable objects/Ship Upgrade system/Items/Armour/MediumLowEnergy.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/TurretEnemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/TurretEnemy.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Main Scene Managers/EnemyWavesSpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Main Scene Managers/EnemyWavesSpawner.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerHealth.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerHealth.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerShipArmour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerShipArmour.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerShipEnergySystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerShipEnergySystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ship Upgrading/AdForCreditsButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ship Upgrading/AdForCreditsButton.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ship Upgrading/Armour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ship Upgrading/Armour.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ship Upgrading/EnergySystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ship Upgrading/EnergySystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapon/Bullet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Weapon/Bullet.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -253,10 +234,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="5248">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="17344">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="5248" />
+      <option name="pid" value="17344" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -325,7 +306,7 @@
       <workItem from="1734315709149" duration="4804000" />
       <workItem from="1734320684801" duration="124000" />
       <workItem from="1734372395951" duration="4197000" />
-      <workItem from="1734430778242" duration="29855000" />
+      <workItem from="1734430778242" duration="30302000" />
     </task>
     <servers />
   </component>
@@ -462,6 +443,32 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="81" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Weapon/CrosshairTargetFinder.cs</url>
+          <line>53</line>
+          <properties documentPath="C:\Users\james\OneDrive\Documents\University\Year 3\Mobile-Games-Development\Assets\Scripts\Weapon\CrosshairTargetFinder.cs" initialLine="53" containingFunctionPresentation="Method 'Update'">
+            <startOffsets>
+              <option value="1517" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1661" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="88" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Weapon/CrosshairTargetFinder.cs</url>
+          <line>52</line>
+          <properties documentPath="C:\Users\james\OneDrive\Documents\University\Year 3\Mobile-Games-Development\Assets\Scripts\Weapon\CrosshairTargetFinder.cs" initialLine="52" containingFunctionPresentation="Method 'Update'">
+            <startOffsets>
+              <option value="1456" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1508" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="89" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -80,6 +80,8 @@ public class CrosshairTargetFinder : MonoBehaviour
 
     private void InferSetLookAtPointPosition(Vector3 cameraPosition)
     {
+        if(this.latestHitData.lastValidDistance < 10)
+            this.latestHitData.lastValidDistance = 150f;
         this.lookingAtPoint.transform.position =
             cameraPosition + (this.EyeTransform.forward * this.latestHitData.lastValidDistance);
     }
