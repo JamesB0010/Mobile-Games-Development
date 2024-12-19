@@ -176,9 +176,9 @@
             }
         ]
     },
-    "playerMoney": 0,
-    "playerKills": 0,
-    "gamesPlayed": 0,
+    "playerMoney": 15,
+    "playerKills": 15,
+    "gamesPlayed": 4,
     "gyroEnabled": false,
     "pitchInverted": true,
     "userSound": "noSoundRecorded"

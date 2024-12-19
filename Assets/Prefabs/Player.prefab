@@ -386,7 +386,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 290745359663668146}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -3065,7 +3065,7 @@ MonoBehaviour:
   DeathParticle: {fileID: 3882828615210567630, guid: bcf78e2790d26a340b25474400056c00,
     type: 3}
   ShipModel: {fileID: 9071194554269598708}
-  invincible: 1
+  invincible: 0
   PlayerHealthChangedEvent:
     m_PersistentCalls:
       m_Calls:
