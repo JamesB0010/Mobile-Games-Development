@@ -21,14 +21,14 @@ public class PlayerAimAssister : MonoBehaviour
 
     private void OnAimingAtEnemyChanged(bool aimingAtEnemy)
     {
-        if (this.aimingAtEnemy == true)
+        if (this.zooming.GetValue())
+            return;
+        
+        if (this.aimingAtEnemy.GetValue() == true)
         {
-            if (this.zooming.GetValue() == false)
-            {
-             this.ailerons.SetSensitivityHover();
-             this.elavator.SetSensitivityHover();
-             this.rudder.SetSensitivityHover();   
-            }
+            this.ailerons.SetSensitivityHover();
+            this.elavator.SetSensitivityHover();
+            this.rudder.SetSensitivityHover();
         }
         else
         {

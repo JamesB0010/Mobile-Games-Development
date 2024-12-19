@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using Weapon;
 
 public abstract class PlayerShipWeapon : MonoBehaviour
@@ -18,6 +19,8 @@ public abstract class PlayerShipWeapon : MonoBehaviour
 
     protected List<ParticleSystem> muzzleFlashParticles = new List<ParticleSystem>();
 
+    public event Action BulletHit;
+
     protected static readonly int BulletFired = Animator.StringToHash("BulletFired");
     protected static readonly int TryingToShoot = Animator.StringToHash("TryingToShoot");
 
@@ -33,6 +36,11 @@ public abstract class PlayerShipWeapon : MonoBehaviour
     }
 
     protected abstract void cloneGun();
+
+    public void ListenToBulletHitEvent()
+    {
+        this.getGun().BulletReachedDesitnation += this.BulletHit;
+    }
 
     protected abstract Gun getGun();
 

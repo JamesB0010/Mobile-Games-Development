@@ -25,6 +25,8 @@ public class Bullet : MonoBehaviour
 
     public float damage;
 
+    public event Action BulletReachedDestination;
+
     //methods
     public void SetupBulletData(bool bulletHasValidTarget, float bulletDamage, Vector3 startPosition, Vector3 bulletDestination)
     {
@@ -54,6 +56,8 @@ public class Bullet : MonoBehaviour
 
         if (BulletHasReachedDestination())
         {
+            if(this.hasValidTarget)
+                BulletReachedDestination?.Invoke();
             TerminateBullet();
         }
     }

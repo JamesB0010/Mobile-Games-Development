@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.InputSystem;
 using UnityEngine.Serialization;
 
@@ -25,6 +26,8 @@ namespace Weapon
 
         [SerializeField] private PlayerUpgradesState playerUpgradesState;
 
+        [SerializeField] private UnityEvent BulletHitEvent;
+
 
         public bool TryingToShootLight { get; set; } = false;
 
@@ -45,8 +48,30 @@ namespace Weapon
             this.playerUpgradesState.SetPlayershipWithStoredLightWeapons(this.lightWeaponsList);
             this.playerUpgradesState.SetPlayershipWithStoredHeavyWeapons(this.heavyWeaponList);
 
+            this.SubscribeToAllBulletHitEvents();
+
             yield return new WaitForSeconds(0);
             this.HeavyGunsInitialied?.Invoke(this.HeavyWeaponsList);
+        }
+
+        private void SubscribeToAllBulletHitEvents()
+        {
+            foreach (PlayerShipWeapon lightWeapon in this.lightWeaponsList)
+            {
+                lightWeapon.BulletHit += this.OnBulletHit;
+                lightWeapon.ListenToBulletHitEvent();
+            }
+
+            foreach (PlayerShipWeapon heavyWeapon in this.heavyWeaponList)
+            {
+                heavyWeapon.BulletHit += this.OnBulletHit;
+                heavyWeapon.ListenToBulletHitEvent();
+            }
+        }
+
+        private void OnBulletHit()
+        {
+            this.BulletHitEvent?.Invoke();
         }
 
         private void Update()

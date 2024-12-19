@@ -25,6 +25,9 @@ public abstract class Gun : ShipItem
     [SerializeField] protected float bulletDamage;
     public float BulletDamage => this.bulletDamage;
 
+    public event Action BulletReachedDesitnation;
+    
+
      public bool Shoot(Vector3 bulletStartPosition, Vector3 targetPosition, bool hasValidTarget, RaycastHit hit)
     {
         if (!ableToShoot)
@@ -33,6 +36,7 @@ public abstract class Gun : ShipItem
         if (this.IsPrimedToShoot())
         {
             Bullet bullet = InstantiateBullet(bulletStartPosition, targetPosition, hasValidTarget);
+            bullet.BulletReachedDestination += this.BulletReachedDesitnation;
             bullet.hit = hit;
             return true;
         }
