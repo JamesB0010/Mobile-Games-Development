@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: WeakLowEnergy
   m_EditorClassIdentifier: 
   itemName: PlaceHolder Name
-  energyUsedPerHit: 0
+  energyUsedPerHit: 1
   minimumOperationalEnergyLevel: 5
   damageDampeningMultiplier: 0.7

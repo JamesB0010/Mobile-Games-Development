@@ -8,15 +8,6 @@ public class ActiveEnemiesManager : MonoBehaviour
 {
     //Attributes
     private short activeEnemyCount;
-    public short ActiveEnemyCount
-    {
-        get => this.activeEnemyCount;
-
-        set
-        {
-            this.activeEnemyCount = value;
-        }
-    }
 
     //Events
     [SerializeField]
@@ -27,6 +18,11 @@ public class ActiveEnemiesManager : MonoBehaviour
     {
         EnemyDeathEvent?.Invoke(enemy);
 
-        this.ActiveEnemyCount--;
+        this.activeEnemyCount--;
+    }
+
+    public void IncrementEnemyCount()
+    {
+        this.activeEnemyCount++;
     }
 }

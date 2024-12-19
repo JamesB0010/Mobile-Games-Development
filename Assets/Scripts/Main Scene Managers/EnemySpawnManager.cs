@@ -2,11 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
+using UnityEngine.ResourceManagement.AsyncOperations;
 
 public class EnemySpawnManager : MonoBehaviour
 {
-    /*[SerializeField] private Enemy enemyPrefab;*/
-    [SerializeField] private float enemiesToSpawn;
+    [SerializeField] private ActiveEnemiesManager activeEnemiesManager;
+    
     [SerializeField]
     private Transform spawnBoundaryPositiveX,
         spawnBoundaryNegativeX,
@@ -21,37 +22,33 @@ public class EnemySpawnManager : MonoBehaviour
     [SerializeField] private AssetReference enemyHarb;
 
 
-
-    public void SpawnEnemies(ActiveEnemiesManager enemiesManager)
+    public void SpawnBasicEnemy()
     {
-        short activeEnemies = 0;
+        float minX = this.spawnBoundaryNegativeX.position.x;
+        float maxX = this.spawnBoundaryPositiveX.position.x;
 
-        for (int i = 0; i < this.enemiesToSpawn; i++)
-        {
-            activeEnemies++;
-            float minX = this.spawnBoundaryNegativeX.position.x;
-            float maxX = this.spawnBoundaryPositiveX.position.x;
+        float minY = this.spawnBoundaryNegativeY.position.y;
+        float maxY = this.spawnBoundaryPositiveY.position.y;
 
-            float minY = this.spawnBoundaryNegativeY.position.y;
-            float maxY = this.spawnBoundaryPositiveY.position.y;
+        float minZ = this.spawnBoundaryNegativeZ.position.z;
+        float maxZ = this.spawnBoundaryPositiveZ.position.z;
 
-            float minZ = this.spawnBoundaryNegativeZ.position.z;
-            float maxZ = this.spawnBoundaryPositiveZ.position.z;
+        Vector3 spawnPos = new Vector3(Random.Range(minX, minY), Random.Range(minY, maxY), Random.Range(minZ, maxZ));
 
-            this.enemy.InstantiateAsync(
-                    new Vector3(Random.Range(minX, minY), Random.Range(minY, maxY), Random.Range(minZ, maxZ)),
-                    Random.rotation).Completed +=
-                handle =>
-                {
-                    handle.Result.GetComponent<Enemy>().EnemiesManager = enemiesManager;
-                    enemiesManager.ActiveEnemyCount = activeEnemies;
-                };
-        }
-        
-        
-        
+        var spawnEnemyHandle = this.enemy.InstantiateAsync(spawnPos, Random.rotation);
+
+        spawnEnemyHandle.Completed += this.EnemySpawned;
+    }
+
+    private void SpawnHarb()
+    {
         //spawn harb
         this.enemyHarb.InstantiateAsync();
+    }
 
+    private void EnemySpawned(AsyncOperationHandle<GameObject> handle)
+    {
+        handle.Result.GetComponent<Enemy>().EnemiesManager = this.activeEnemiesManager;
+        this.activeEnemiesManager.IncrementEnemyCount();
     }
 }

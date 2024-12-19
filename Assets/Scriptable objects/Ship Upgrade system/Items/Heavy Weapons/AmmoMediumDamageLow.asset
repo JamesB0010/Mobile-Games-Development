@@ -17,7 +17,7 @@ MonoBehaviour:
   bulletPrefab: {fileID: 3118056857120007577, guid: 7dc8c838d2c9a854abfacbe555b5733d,
     type: 3}
   firepower: 4
-  timeBetweenBullets: 0
-  bulletDamage: 0
-  maxAmmoCount: 0
+  timeBetweenBullets: 0.4
+  bulletDamage: 3
+  maxAmmoCount: 100
   currentAmmoCount: 0
