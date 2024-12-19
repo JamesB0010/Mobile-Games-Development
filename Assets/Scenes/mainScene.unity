@@ -1424,6 +1424,7 @@ MonoBehaviour:
   WaveSpawned:
     m_PersistentCalls:
       m_Calls: []
+  harbOnRound1: 1
 --- !u!114 &742812657
 MonoBehaviour:
   m_ObjectHideFlags: 0

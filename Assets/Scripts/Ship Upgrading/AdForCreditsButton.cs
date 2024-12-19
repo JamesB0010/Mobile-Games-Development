@@ -11,7 +11,7 @@ using UnityEngine.UI;
 [RequireComponent(typeof(Button))]
 public class AdForCreditsButton : MonoBehaviour, IUnityAdsLoadListener, IUnityAdsShowListener
 {
-    [FormerlySerializedAs("adUnityId")] [SerializeField] private string adUnitId = "Rewarded_Android";
+    [SerializeField] private string adUnitId = "Rewarded_Android";
     [SerializeField] private int creditsAwarded;
     [SerializeField] private FloatReference playerMoney;
     private Button button;
@@ -46,8 +46,6 @@ public class AdForCreditsButton : MonoBehaviour, IUnityAdsLoadListener, IUnityAd
         Debug.Log("Ad loaded");
         if (adUnitId.Equals(this.adUnitId))
         {
-
-
             this.button.interactable = true;
         }
     }
@@ -82,7 +80,7 @@ public class AdForCreditsButton : MonoBehaviour, IUnityAdsLoadListener, IUnityAd
     public void OnUnityAdsShowComplete(string adUnitId, UnityAdsShowCompletionState showCompletionState)
     {
         this.LoadAd();
-        bool eligableForAward = adUnitId.Equals(this.adUnitId) && showCompletionState.Equals(UnityAdsCompletionState.COMPLETED);
+        bool eligableForAward = true;//adUnitId.Equals(this.adUnitId) && showCompletionState.Equals(UnityAdsCompletionState.COMPLETED);
         
         #if UNITY_EDITOR
         eligableForAward = true;

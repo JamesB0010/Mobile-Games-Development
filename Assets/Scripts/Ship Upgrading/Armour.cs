@@ -22,7 +22,7 @@ public class Armour : ShipItem
         return ScriptableObject.Instantiate(this);
     }
     
-    private float CalculateDamageToPlayer(float damageIn, float energyLevel)
+    public float CalculateDamageToPlayer(float damageIn, float energyLevel)
     {
         if (energyLevel < this.minimumOperationalEnergyLevel)
         {

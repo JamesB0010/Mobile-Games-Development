@@ -77,27 +77,55 @@ public class Bullet : MonoBehaviour
         if (this.hasValidTarget)
         {
             Destroy(gameObject);
-            bool targetStillExists = false;
 
-            EnemyBase enemyBase = null;
-
-            try
-            {
-                targetStillExists = this.hit.collider.TryGetComponent(out enemyBase);
-            }
-            catch (NullReferenceException) { }
-
-
-            if (targetStillExists)
-            {
-                enemyBase.TakeDamage(this.damage);
-            }
+            DamageIfEnemy();
+            DamageIfPlayer();
+            
             SpawnImpactParticle();
         }
         else
         {
             //bullet shot at the sky
             Destroy(gameObject);
+        }
+    }
+
+    private void DamageIfPlayer()
+    {
+        PlayerShipArmour armour = null;
+        bool targetStillExists = false;
+        try
+        {
+            targetStillExists = this.hit.collider.TryGetComponent(out armour);
+        }
+        catch (NullReferenceException)
+        {
+        }
+
+        if (targetStillExists)
+        {
+            armour.DealDamage(this.damage);
+        }
+    }
+
+    private void DamageIfEnemy()
+    {
+        EnemyBase enemyBase = null;
+
+        bool targetStillExists = false;
+
+        try
+        {
+            targetStillExists = this.hit.collider.TryGetComponent(out enemyBase);
+        }
+        catch (NullReferenceException)
+        {
+        }
+
+
+        if (targetStillExists)
+        {
+            enemyBase.TakeDamage(this.damage);
         }
     }
 

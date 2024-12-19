@@ -13,6 +13,12 @@ public class PlayerShipEnergySystem : MonoBehaviour
 
     [SerializeField] private UnityEvent OutOfEnergy;
 
+    public float Energy
+    {
+        get => this.energySystem.CurrentEnergy;
+        set => this.energySystem.CurrentEnergy = value;
+    }
+
     public void SubscribeToCurrentEnergyChanged(Action<float> callback)
     {
         this.energySystem.CurrentEnergyChanged += callback;
@@ -54,5 +60,10 @@ public class PlayerShipEnergySystem : MonoBehaviour
     public void SubscribeToEnergyPeaked(Action<float> callback)
     {
         this.energySystem.CurrentEnergyPeaked += callback;
+    }
+
+    public void Tax(float taxAmount)
+    {
+        this.energySystem.CurrentEnergy -= taxAmount;
     }
 }

@@ -22,8 +22,12 @@ public class EnergySystem : ShipItem
                 this.CurrentEnergyPeaked?.Invoke(this.maxEnergy);
                 return;
             }
-            
+
             this.currentEnergy = value;
+            
+            if (this.currentEnergy < 0)
+                this.currentEnergy = 0;
+            
             this.CurrentEnergyChanged?.Invoke(value);
         }
     }

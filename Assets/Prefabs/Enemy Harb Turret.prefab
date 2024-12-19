@@ -30,7 +30,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3, y: 3, z: 3}
+  m_LocalScale: {x: 5.819781, y: 5.81978, z: 5.8197794}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7891964893928641570}
@@ -16452,7 +16452,7 @@ MonoBehaviour:
   health: 100
   DeathParticle: {fileID: 3882828615210567630, guid: 7a8e966794bfadc459366685b18688c9,
     type: 3}
-  maxEngagementDistance: 1000
+  maxEngagementDistance: 500
   rotationSpeed: 1000
   gun: {fileID: 11400000, guid: a2b2d57c7fac1b74c9ef3f37c71d4c10, type: 2}
 --- !u!114 &7631007642652525645
@@ -16471,7 +16471,7 @@ MonoBehaviour:
   lookingAtPoint: {fileID: 6634374715441336370}
   raycastLayerMask:
     serializedVersion: 2
-    m_Bits: 55
+    m_Bits: 447
 --- !u!1 &8098430310399224536
 GameObject:
   m_ObjectHideFlags: 0

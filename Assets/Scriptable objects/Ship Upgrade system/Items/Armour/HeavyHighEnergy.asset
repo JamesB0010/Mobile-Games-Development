@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: HeavyHighEnergy
   m_EditorClassIdentifier: 
   itemName: PlaceHolder Name
-  energyUsedPerHit: 30
+  energyUsedPerHit: 20
   minimumOperationalEnergyLevel: 10
   damageDampeningMultiplier: 0.1

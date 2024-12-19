@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.ResourceManagement.AsyncOperations;
@@ -24,6 +25,10 @@ public class EnemyWavesSpawner : MonoBehaviour
 
     private int round = 1;
 
+
+    [Header("Debug")] 
+    [SerializeField] private bool harbOnRound1;
+
     public void AllEnemiesKilled()
     {
         this.round++;
@@ -31,6 +36,26 @@ public class EnemyWavesSpawner : MonoBehaviour
 
     public void SpawnRound()
     {
+        if (this.harbOnRound1)
+        {
+            if (round == 1)
+            {
+                this.SpawnSpecialRound();
+                for (int i = 0; i < this.spawningEnemies.Count; i++)
+                {
+                    this.spawningEnemies[i].Completed += handle =>
+                    {
+                        this.spawningEnemies.Remove(handle);
+
+                        if (this.spawningEnemies.Count == 0)
+                            this.WaveSpawned?.Invoke();
+                    };
+                }
+
+                return;
+            }
+        }
+        
         if (this.round % 5 != 0)
             this.SpawnNormalRound();
         else

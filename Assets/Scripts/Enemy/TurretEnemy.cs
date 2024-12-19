@@ -33,13 +33,13 @@ public class TurretEnemy : EnemyBase
         float distanceFromPlayer = Vector3.Distance(transform.position, this.player.position);
         if (distanceFromPlayer < this.maxEngagementDistance)
         {
-            transform.rotation = Quaternion.Lerp(transform.rotation, 
+            transform.rotation = Quaternion.Lerp(transform.rotation,
                 Quaternion.LookRotation((this.player.position - transform.position).normalized, transform.up), Time.deltaTime * this.rotationSpeed);
 
             if (crosshairTargetFinder.WasLastHitValid())
             {
                 //shoot at player
-                this.gun.Shoot(transform.position, this.crosshairTargetFinder.GetLatestHitPosition(),true);
+                this.gun.Shoot(transform.position, this.crosshairTargetFinder.GetLatestHitPosition(),true, this.crosshairTargetFinder.GetLastHit());
             }
         }
     }
