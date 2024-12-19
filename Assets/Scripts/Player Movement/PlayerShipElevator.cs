@@ -8,6 +8,8 @@ using UnityEngine.Serialization;
 public class PlayerShipElevator : MonoBehaviour
 {
     [SerializeField] private BoolReference usingGyro;
+
+    [SerializeField] private BoolReference invertPitch;
     private bool UsingGyro => this.usingGyro.GetValue();
     private float inputtedPitch;
     public float InputtedPitch => inputtedPitch;
@@ -35,9 +37,15 @@ public class PlayerShipElevator : MonoBehaviour
 
     private void ConditionalGetPitchFromGyro()
     {
+        float gyroPitch = AttitudeInput.GetPitchNormalized();
         if (this.UsingGyro)
         {
-            this.inputtedPitch = -AttitudeInput.GetPitchNormalized();
+            if (this.invertPitch.GetValue())
+                this.inputtedPitch = gyroPitch;
+            else
+                this.inputtedPitch = -gyroPitch;
+
+
         }
     }
 
@@ -45,13 +53,22 @@ public class PlayerShipElevator : MonoBehaviour
     {
         if (this.UsingGyro)
             return;
+        
+        float inputVal = ctx.ReadValue<Vector2>().y;
+        if (this.invertPitch.GetValue())
+            this.inputtedPitch = inputVal;
+        else
+            this.inputtedPitch = -inputVal;
 
-        this.inputtedPitch = ctx.ReadValue<Vector2>().y;
+
     }
 
     public void OnPitchAndRoll(Vector2 value)
     {
-        this.inputtedPitch = value.y;
+        if (this.invertPitch.GetValue())
+            this.inputtedPitch = value.y;
+        else
+            this.inputtedPitch = -value.y;
     }
 
     public void SetSensitivityAiming()

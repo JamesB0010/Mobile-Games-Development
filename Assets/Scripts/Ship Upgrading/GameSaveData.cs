@@ -14,7 +14,9 @@ public class GameSaveData
    public int playerKills;
    public int gamesPlayed;
    public bool gyroEnabled;
+   public bool pitchInverted;
    public string userSound;
+
    public void WriteToSaveGameJsonFile()
    {
       bool fileExists = File.Exists(Application.dataPath + "/Resources/Json/SaveGame.txt");

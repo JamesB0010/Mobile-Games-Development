@@ -29,3 +29,4 @@ MonoBehaviour:
   playerKills: {fileID: 11400000, guid: 851bc228e2f9dc149b89de276d5d60a8, type: 2}
   gamesPlayed: {fileID: 11400000, guid: d2848f4a39b71a342b8c2ca0b42e8d2c, type: 2}
   gyroEnabled: {fileID: 11400000, guid: fd3f2decbb3b8b94c8fa545135c93c23, type: 2}
+  invertedPitch: {fileID: 11400000, guid: 3b030cb84ca41fb48991a6600192161d, type: 2}

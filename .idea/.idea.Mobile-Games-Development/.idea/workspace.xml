@@ -5,15 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c7630d3b-1041-428d-b5b5-aacdf8ac5685" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Cockpit/CockpitMain.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Cockpit/CockpitMain.fbx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Cockpit/CockpitPeddleLeft.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Cockpit/CockpitPeddleLeft.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Cockpit/CockpitPeddleRight.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Cockpit/CockpitPeddleRight.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Hands/Hands.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Hands/Hands.fbx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Main Scene Managers/MainSceneHarbEnvSpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Main Scene Managers/MainSceneHarbEnvSpawner.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Mobile-Games-Development/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Mobile-Games-Development/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Editor/ResetScriptableObjects.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/ResetScriptableObjects.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Json/SaveGame.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Json/SaveGame.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Reset Scriptable Objects.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Reset Scriptable Objects.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Upgrade Ship.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Upgrade Ship.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/mainScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/mainScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scriptable objects/SettingsMenuFunctions.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scriptable objects/SettingsMenuFunctions.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Main Menu/BuzzardGameData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Main Menu/BuzzardGameData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Main Menu/SettingsMenuFunctions.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Main Menu/SettingsMenuFunctions.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Main Menu/SettingsUiInitializer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Main Menu/SettingsUiInitializer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Main Menu/ToggleSwitch.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Main Menu/ToggleSwitch.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player Movement/PlayerShipElevator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player Movement/PlayerShipElevator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ship Upgrading/GameSaveData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ship Upgrading/GameSaveData.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -306,7 +312,7 @@
       <workItem from="1734315709149" duration="4804000" />
       <workItem from="1734320684801" duration="124000" />
       <workItem from="1734372395951" duration="4197000" />
-      <workItem from="1734430778242" duration="8044000" />
+      <workItem from="1734430778242" duration="9713000" />
     </task>
     <servers />
   </component>

@@ -106,6 +106,8 @@ public class ToggleSwitch : MonoBehaviour, IPointerDownHandler
         
         this.SetupToggleComponent();
         
+        this.SetupLerpPackages();
+        this.UpdateToggleColors();
     }
 
     private void SetupLerpPackages()

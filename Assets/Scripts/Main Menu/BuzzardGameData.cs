@@ -52,6 +52,8 @@ public class BuzzardGameData : MonoBehaviour
     private GameSaveData saveGameData;
     private IntReference gamesPlayed;
     private BoolReference gyroEnabled;
+    private BoolReference pitchInverted;
+    
 
     private void Awake()
     {
@@ -97,6 +99,7 @@ public class BuzzardGameData : MonoBehaviour
         this.playerKills = Resources.Load<IntReference>("Json/EliminationCount");
         this.gamesPlayed = Resources.Load<IntReference>("Json/Games Played");
         this.gyroEnabled = Resources.Load<BoolReference>("Json/GyroEnabled");
+        this.pitchInverted = Resources.Load<BoolReference>("Json/InvertPitch");
     }
 
     private void OnDestroy()
@@ -153,6 +156,7 @@ public class BuzzardGameData : MonoBehaviour
         this.playerKills.SetValue(saveGameData.playerKills);
         this.gamesPlayed.SetValue(saveGameData.gamesPlayed);
         this.gyroEnabled.SetValue(saveGameData.gyroEnabled);
+        this.pitchInverted.SetValue(saveGameData.pitchInverted);
         if (saveGameData.userSound != "noSoundRecorded")
         {
             WavUtility.CreateEmpty(AudioRecorder.GetFullRecordingFilepath()).Close();
@@ -175,6 +179,7 @@ public class BuzzardGameData : MonoBehaviour
         this.playerKills.SetValue(this.saveGameData.playerKills);
         this.gamesPlayed.SetValue(this.saveGameData.gamesPlayed);
         this.gyroEnabled.SetValue(this.saveGameData.gyroEnabled);
+        this.pitchInverted.SetValue(this.saveGameData.pitchInverted);
         if (saveGameData.userSound != "noSoundRecorded")
         {
             WavUtility.CreateEmpty(AudioRecorder.GetFullRecordingFilepath()).Close();
@@ -230,6 +235,7 @@ public class BuzzardGameData : MonoBehaviour
         output += "\"playerKills\": " + this.playerKills.GetValue() + ",";
         output += "\"gamesPlayed\": " + this.gamesPlayed.GetValue() + ",";
         output += "\"gyroEnabled\": " + this.gyroEnabled.GetValue().ToString().ToLower() + ",";
+        output += "\"pitchInverted\":" + this.pitchInverted.GetValue().ToString().ToLower() + ",";
         output += "\"userSound\": " + "\"" + sound + "\"";
         output += "}";
         return output;

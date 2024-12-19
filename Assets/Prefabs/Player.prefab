@@ -2796,6 +2796,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   usingGyro: {fileID: 11400000, guid: fd3f2decbb3b8b94c8fa545135c93c23, type: 2}
+  invertPitch: {fileID: 11400000, guid: 3b030cb84ca41fb48991a6600192161d, type: 2}
   pitchSpeed: 60
 --- !u!114 &3275013080770175168
 MonoBehaviour:
