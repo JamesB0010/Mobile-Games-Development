@@ -22,11 +22,11 @@
         },
         {
             "key": "DefaultArmour",
-            "value": 1
+            "value": 0
         },
         {
             "key": "DefaultAutocannon",
-            "value": 1
+            "value": 0
         },
         {
             "key": "DefaultEnergySystem",
@@ -34,7 +34,7 @@
         },
         {
             "key": "DefaultEngine",
-            "value": 1
+            "value": 0
         },
         {
             "key": "HeavyHighEnergy",
@@ -66,7 +66,7 @@
         },
         {
             "key": "HighThrustHighEnergyBoost",
-            "value": 1
+            "value": 0
         },
         {
             "key": "HighThrustLowEnergy",
@@ -82,7 +82,7 @@
         },
         {
             "key": "LowThrustHighEnergyBoost",
-            "value": 2
+            "value": 0
         },
         {
             "key": "LowThrustLowEnergy",
@@ -126,15 +126,15 @@
         },
         {
             "key": "NoGun",
-            "value": 1
+            "value": 0
         },
         {
             "key": "NoLightGun",
-            "value": 2
+            "value": 0
         },
         {
             "key": "WeakLowEnergy",
-            "value": 1
+            "value": 0
         }
     ]
 }

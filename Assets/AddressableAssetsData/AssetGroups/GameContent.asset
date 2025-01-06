@@ -56,7 +56,8 @@ MonoBehaviour:
   - m_GUID: 00b0e2167d1f13e46bf75f5b38e6892e
     m_Address: Assets/Models/Carrier/DSS harbinger/Harb.prefab
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - default
     FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: e08dd4486316e7a428ba1636ac813e81, type: 2}

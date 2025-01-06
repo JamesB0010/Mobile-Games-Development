@@ -12,13 +12,18 @@ public class BannerAdSpawner : MonoBehaviour
  
     [SerializeField] string _adUnitId = "Banner_Android"; // This will remain null for unsupported platforms.
 
-    private event Action BannerAdSpawned;
+    private event Action BannerAdSpawned, Error;
     
     private static BannerAdSpawner instance = null;
     
     public void AddSpawnListener(Action handler)
     {
         this.BannerAdSpawned += handler;
+    }
+
+    public void AddFailureListener(Action handler)
+    {
+        this.Error += handler;
     }
 
     private void Awake()
@@ -35,8 +40,6 @@ public class BannerAdSpawner : MonoBehaviour
 
     void Start()
     {
-        
-        
         // Set the banner position:
         Advertisement.Banner.SetPosition(_bannerPosition);
  
@@ -93,7 +96,8 @@ public class BannerAdSpawner : MonoBehaviour
     void OnBannerError(string message)
     {
         Debug.Log($"Banner Error: {message}");
-        // Optionally execute additional code, such as attempting to load another ad.
+        
+        this.Error?.Invoke();
     }
  
     // Implement a method to call when the Show Banner button is clicked:
