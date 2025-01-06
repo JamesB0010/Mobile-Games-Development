@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f366397f5f8633c4ba3a0b421da66c1e, type: 3}
+  m_Name: UiAudioSounds
+  m_EditorClassIdentifier: 
+  defaultClickSound: {fileID: 8300000, guid: feba8f50019e5654ebb7ac2e73cf1a0b, type: 3}
+  fuzzyClickSound: {fileID: 8300000, guid: 9da08b8bf5c10ea4ea7cad105865f856, type: 3}
+  toggleOffSound: {fileID: 8300000, guid: 32968708c59fadf4f8cceb8ca7311527, type: 3}
+  toggleOnSound: {fileID: 8300000, guid: d954b44d0b1a00149a619362fb111032, type: 3}

@@ -2,12 +2,12 @@
     "configs": [
         {
             "upgradeReferences": [
-                "DefaultArmour"
+                "MediumLowEnergy"
             ]
         },
         {
             "upgradeReferences": [
-                "DefaultEnergySystem"
+                "LowMaxHighRecharge"
             ]
         },
         {
@@ -19,7 +19,7 @@
             "upgradeReferences": [
                 "NoGun",
                 "NoGun",
-                "NoGun",
+                "AmmoMediumDamageLow",
                 "NoGun"
             ]
         },
@@ -56,11 +56,11 @@
             },
             {
                 "key": "AmmoMediumDamageLow",
-                "value": 0
+                "value": -1
             },
             {
                 "key": "DefaultArmour",
-                "value": 0
+                "value": 1
             },
             {
                 "key": "DefaultAutocannon",
@@ -68,7 +68,7 @@
             },
             {
                 "key": "DefaultEnergySystem",
-                "value": 0
+                "value": 2
             },
             {
                 "key": "DefaultEngine",
@@ -116,7 +116,7 @@
             },
             {
                 "key": "LowMaxHighRecharge",
-                "value": 0
+                "value": -1
             },
             {
                 "key": "LowThrustHighEnergyBoost",
@@ -164,7 +164,7 @@
             },
             {
                 "key": "NoGun",
-                "value": 0
+                "value": 1
             },
             {
                 "key": "NoLightGun",
@@ -179,7 +179,7 @@
     "playerMoney": 0,
     "playerKills": 0,
     "gamesPlayed": 0,
-    "gyroEnabled": true,
-    "pitchInverted": true,
+    "gyroEnabled": false,
+    "pitchInverted": false,
     "userSound": "noSoundRecorded"
 }

@@ -230,6 +230,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 11400000, guid: 39fcfaf5942eb9b4f832de678c77fe0a, type: 2}
+        m_TargetAssemblyTypeName: UiAudioSounds, Assembly-CSharp
+        m_MethodName: PlayDefaultClickSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &292271354
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -431,6 +443,18 @@ MonoBehaviour:
       - m_Target: {fileID: 11400000, guid: c10dd469d77fb674ca9ba53bff7db85b, type: 2}
         m_TargetAssemblyTypeName: HapticFeedbackObject, Assembly-CSharp
         m_MethodName: LightVibration
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 11400000, guid: 39fcfaf5942eb9b4f832de678c77fe0a, type: 2}
+        m_TargetAssemblyTypeName: UiAudioSounds, Assembly-CSharp
+        m_MethodName: PlayDefaultClickSound
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -696,6 +720,18 @@ MonoBehaviour:
       - m_Target: {fileID: 11400000, guid: c10dd469d77fb674ca9ba53bff7db85b, type: 2}
         m_TargetAssemblyTypeName: HapticFeedbackObject, Assembly-CSharp
         m_MethodName: LightVibration
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 11400000, guid: 39fcfaf5942eb9b4f832de678c77fe0a, type: 2}
+        m_TargetAssemblyTypeName: UiAudioSounds, Assembly-CSharp
+        m_MethodName: PlayDefaultClickSound
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1512,6 +1548,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 11400000, guid: 39fcfaf5942eb9b4f832de678c77fe0a, type: 2}
+        m_TargetAssemblyTypeName: UiAudioSounds, Assembly-CSharp
+        m_MethodName: PlayToggleOffSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1308578930
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2039,6 +2087,18 @@ MonoBehaviour:
       - m_Target: {fileID: 11400000, guid: c10dd469d77fb674ca9ba53bff7db85b, type: 2}
         m_TargetAssemblyTypeName: HapticFeedbackObject, Assembly-CSharp
         m_MethodName: LightVibration
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 11400000, guid: 39fcfaf5942eb9b4f832de678c77fe0a, type: 2}
+        m_TargetAssemblyTypeName: UiAudioSounds, Assembly-CSharp
+        m_MethodName: PlayDefaultClickSound
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

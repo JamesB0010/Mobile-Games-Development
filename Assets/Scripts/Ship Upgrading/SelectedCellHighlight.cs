@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class SelectedCellHighlight : MonoBehaviour
 {
@@ -11,6 +12,8 @@ public class SelectedCellHighlight : MonoBehaviour
     private bool stickToCell = false;
 
     private static SelectedCellHighlight instance = null;
+
+    [SerializeField] private UnityEvent SelectCellEvent;
 
     public static SelectedCellHighlight GetHighlight()
     {
@@ -41,6 +44,9 @@ public class SelectedCellHighlight : MonoBehaviour
 
     public void SelectCell(UpgradeCell cell)
     {
+        if(this.selectedCell != cell)
+            this.SelectCellEvent?.Invoke();
+        
         this.selectedCell = cell;
         this.stickToCell = true;
         transform.position = cell.transform.position;

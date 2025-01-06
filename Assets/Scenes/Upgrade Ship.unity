@@ -7890,6 +7890,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 11400000, guid: 39fcfaf5942eb9b4f832de678c77fe0a, type: 2}
+        m_TargetAssemblyTypeName: UiAudioSounds, Assembly-CSharp
+        m_MethodName: PlayDefaultClickSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!222 &197567908
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -9631,7 +9643,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 257276660}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: 39fcfaf5942eb9b4f832de678c77fe0a, type: 2}
+        m_TargetAssemblyTypeName: UiAudioSounds, Assembly-CSharp
+        m_MethodName: PlayFuzzyClickSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &257276660
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19389,6 +19413,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 11400000, guid: 39fcfaf5942eb9b4f832de678c77fe0a, type: 2}
+        m_TargetAssemblyTypeName: UiAudioSounds, Assembly-CSharp
+        m_MethodName: PlayDefaultClickSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1023090525
 GameObject:
   m_ObjectHideFlags: 0
@@ -20333,6 +20369,18 @@ MonoBehaviour:
       - m_Target: {fileID: 11400000, guid: c10dd469d77fb674ca9ba53bff7db85b, type: 2}
         m_TargetAssemblyTypeName: HapticFeedbackObject, Assembly-CSharp
         m_MethodName: LightVibration
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 11400000, guid: 39fcfaf5942eb9b4f832de678c77fe0a, type: 2}
+        m_TargetAssemblyTypeName: UiAudioSounds, Assembly-CSharp
+        m_MethodName: PlayDefaultClickSound
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -21948,6 +21996,18 @@ MonoBehaviour:
       - m_Target: {fileID: 11400000, guid: c10dd469d77fb674ca9ba53bff7db85b, type: 2}
         m_TargetAssemblyTypeName: HapticFeedbackObject, Assembly-CSharp
         m_MethodName: LightVibration
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 11400000, guid: 39fcfaf5942eb9b4f832de678c77fe0a, type: 2}
+        m_TargetAssemblyTypeName: UiAudioSounds, Assembly-CSharp
+        m_MethodName: PlayDefaultClickSound
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -28844,6 +28904,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 11400000, guid: 39fcfaf5942eb9b4f832de678c77fe0a, type: 2}
+        m_TargetAssemblyTypeName: UiAudioSounds, Assembly-CSharp
+        m_MethodName: PlayDefaultClickSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1646154957
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29004,6 +29076,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4f1cc49ccc94a343aaf5e45448c848b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SelectCellEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: 39fcfaf5942eb9b4f832de678c77fe0a, type: 2}
+        m_TargetAssemblyTypeName: UiAudioSounds, Assembly-CSharp
+        m_MethodName: PlayDefaultClickSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1677790732
 GameObject:
   m_ObjectHideFlags: 0
@@ -29523,12 +29610,12 @@ PrefabInstance:
     - target: {fileID: 6465417623062990450, guid: d1eda07512f71ac4ebbe95fdf6fa761d,
         type: 3}
       propertyPath: ToggleOnEvent.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6465417623062990450, guid: d1eda07512f71ac4ebbe95fdf6fa761d,
         type: 3}
       propertyPath: ToggleOffEvent.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6465417623062990450, guid: d1eda07512f71ac4ebbe95fdf6fa761d,
         type: 3}
@@ -29537,8 +29624,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6465417623062990450, guid: d1eda07512f71ac4ebbe95fdf6fa761d,
         type: 3}
+      propertyPath: ToggleOnEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6465417623062990450, guid: d1eda07512f71ac4ebbe95fdf6fa761d,
+        type: 3}
       propertyPath: ToggleOffEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6465417623062990450, guid: d1eda07512f71ac4ebbe95fdf6fa761d,
+        type: 3}
+      propertyPath: ToggleOffEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6465417623062990450, guid: d1eda07512f71ac4ebbe95fdf6fa761d,
         type: 3}
@@ -29548,13 +29645,30 @@ PrefabInstance:
         type: 2}
     - target: {fileID: 6465417623062990450, guid: d1eda07512f71ac4ebbe95fdf6fa761d,
         type: 3}
+      propertyPath: ToggleOnEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 11400000, guid: 39fcfaf5942eb9b4f832de678c77fe0a,
+        type: 2}
+    - target: {fileID: 6465417623062990450, guid: d1eda07512f71ac4ebbe95fdf6fa761d,
+        type: 3}
       propertyPath: ToggleOffEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 11400000, guid: 3b030cb84ca41fb48991a6600192161d,
         type: 2}
     - target: {fileID: 6465417623062990450, guid: d1eda07512f71ac4ebbe95fdf6fa761d,
         type: 3}
+      propertyPath: ToggleOffEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 11400000, guid: 39fcfaf5942eb9b4f832de678c77fe0a,
+        type: 2}
+    - target: {fileID: 6465417623062990450, guid: d1eda07512f71ac4ebbe95fdf6fa761d,
+        type: 3}
       propertyPath: ToggleOnEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6465417623062990450, guid: d1eda07512f71ac4ebbe95fdf6fa761d,
+        type: 3}
+      propertyPath: ToggleOnEvent.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6465417623062990450, guid: d1eda07512f71ac4ebbe95fdf6fa761d,
@@ -29564,8 +29678,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6465417623062990450, guid: d1eda07512f71ac4ebbe95fdf6fa761d,
         type: 3}
+      propertyPath: ToggleOffEvent.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6465417623062990450, guid: d1eda07512f71ac4ebbe95fdf6fa761d,
+        type: 3}
       propertyPath: ToggleOnEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: SetValue
+      objectReference: {fileID: 0}
+    - target: {fileID: 6465417623062990450, guid: d1eda07512f71ac4ebbe95fdf6fa761d,
+        type: 3}
+      propertyPath: ToggleOnEvent.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: PlayToggleOnSound
       objectReference: {fileID: 0}
     - target: {fileID: 6465417623062990450, guid: d1eda07512f71ac4ebbe95fdf6fa761d,
         type: 3}
@@ -29574,8 +29698,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6465417623062990450, guid: d1eda07512f71ac4ebbe95fdf6fa761d,
         type: 3}
+      propertyPath: ToggleOffEvent.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: PlayToggleOffSound
+      objectReference: {fileID: 0}
+    - target: {fileID: 6465417623062990450, guid: d1eda07512f71ac4ebbe95fdf6fa761d,
+        type: 3}
       propertyPath: ToggleOnEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: BoolReference, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6465417623062990450, guid: d1eda07512f71ac4ebbe95fdf6fa761d,
+        type: 3}
+      propertyPath: ToggleOnEvent.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: UiAudioSounds, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 6465417623062990450, guid: d1eda07512f71ac4ebbe95fdf6fa761d,
         type: 3}
@@ -29584,7 +29718,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6465417623062990450, guid: d1eda07512f71ac4ebbe95fdf6fa761d,
         type: 3}
+      propertyPath: ToggleOffEvent.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: UiAudioSounds, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6465417623062990450, guid: d1eda07512f71ac4ebbe95fdf6fa761d,
+        type: 3}
       propertyPath: ToggleOnEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6465417623062990450, guid: d1eda07512f71ac4ebbe95fdf6fa761d,
+        type: 3}
+      propertyPath: ToggleOnEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_BoolArgument
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6465417623062990450, guid: d1eda07512f71ac4ebbe95fdf6fa761d,
@@ -29594,7 +29738,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6465417623062990450, guid: d1eda07512f71ac4ebbe95fdf6fa761d,
         type: 3}
+      propertyPath: ToggleOnEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 6465417623062990450, guid: d1eda07512f71ac4ebbe95fdf6fa761d,
+        type: 3}
       propertyPath: ToggleOffEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 6465417623062990450, guid: d1eda07512f71ac4ebbe95fdf6fa761d,
+        type: 3}
+      propertyPath: ToggleOffEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -32395,6 +32549,18 @@ MonoBehaviour:
       - m_Target: {fileID: 11400000, guid: c10dd469d77fb674ca9ba53bff7db85b, type: 2}
         m_TargetAssemblyTypeName: HapticFeedbackObject, Assembly-CSharp
         m_MethodName: LightVibration
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 11400000, guid: 39fcfaf5942eb9b4f832de678c77fe0a, type: 2}
+        m_TargetAssemblyTypeName: UiAudioSounds, Assembly-CSharp
+        m_MethodName: PlayDefaultClickSound
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -35972,6 +36138,18 @@ MonoBehaviour:
           m_StringArgument: Purchase
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 11400000, guid: 39fcfaf5942eb9b4f832de678c77fe0a, type: 2}
+        m_TargetAssemblyTypeName: UiAudioSounds, Assembly-CSharp
+        m_MethodName: PlayDefaultClickSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Purchase
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!1001 &2111541148
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -36815,12 +36993,12 @@ PrefabInstance:
     - target: {fileID: 6465417623062990450, guid: d1eda07512f71ac4ebbe95fdf6fa761d,
         type: 3}
       propertyPath: ToggleOnEvent.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6465417623062990450, guid: d1eda07512f71ac4ebbe95fdf6fa761d,
         type: 3}
       propertyPath: ToggleOffEvent.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6465417623062990450, guid: d1eda07512f71ac4ebbe95fdf6fa761d,
         type: 3}
@@ -36829,8 +37007,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6465417623062990450, guid: d1eda07512f71ac4ebbe95fdf6fa761d,
         type: 3}
+      propertyPath: ToggleOnEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6465417623062990450, guid: d1eda07512f71ac4ebbe95fdf6fa761d,
+        type: 3}
       propertyPath: ToggleOffEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6465417623062990450, guid: d1eda07512f71ac4ebbe95fdf6fa761d,
+        type: 3}
+      propertyPath: ToggleOffEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6465417623062990450, guid: d1eda07512f71ac4ebbe95fdf6fa761d,
         type: 3}
@@ -36840,13 +37028,30 @@ PrefabInstance:
         type: 2}
     - target: {fileID: 6465417623062990450, guid: d1eda07512f71ac4ebbe95fdf6fa761d,
         type: 3}
+      propertyPath: ToggleOnEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 11400000, guid: 39fcfaf5942eb9b4f832de678c77fe0a,
+        type: 2}
+    - target: {fileID: 6465417623062990450, guid: d1eda07512f71ac4ebbe95fdf6fa761d,
+        type: 3}
       propertyPath: ToggleOffEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 11400000, guid: fd3f2decbb3b8b94c8fa545135c93c23,
         type: 2}
     - target: {fileID: 6465417623062990450, guid: d1eda07512f71ac4ebbe95fdf6fa761d,
         type: 3}
+      propertyPath: ToggleOffEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 11400000, guid: 39fcfaf5942eb9b4f832de678c77fe0a,
+        type: 2}
+    - target: {fileID: 6465417623062990450, guid: d1eda07512f71ac4ebbe95fdf6fa761d,
+        type: 3}
       propertyPath: ToggleOnEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6465417623062990450, guid: d1eda07512f71ac4ebbe95fdf6fa761d,
+        type: 3}
+      propertyPath: ToggleOnEvent.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6465417623062990450, guid: d1eda07512f71ac4ebbe95fdf6fa761d,
@@ -36856,8 +37061,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6465417623062990450, guid: d1eda07512f71ac4ebbe95fdf6fa761d,
         type: 3}
+      propertyPath: ToggleOffEvent.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6465417623062990450, guid: d1eda07512f71ac4ebbe95fdf6fa761d,
+        type: 3}
       propertyPath: ToggleOnEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: SetValue
+      objectReference: {fileID: 0}
+    - target: {fileID: 6465417623062990450, guid: d1eda07512f71ac4ebbe95fdf6fa761d,
+        type: 3}
+      propertyPath: ToggleOnEvent.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: PlayToggleOnSound
       objectReference: {fileID: 0}
     - target: {fileID: 6465417623062990450, guid: d1eda07512f71ac4ebbe95fdf6fa761d,
         type: 3}
@@ -36866,8 +37081,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6465417623062990450, guid: d1eda07512f71ac4ebbe95fdf6fa761d,
         type: 3}
+      propertyPath: ToggleOffEvent.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: PlayToggleOffSound
+      objectReference: {fileID: 0}
+    - target: {fileID: 6465417623062990450, guid: d1eda07512f71ac4ebbe95fdf6fa761d,
+        type: 3}
       propertyPath: ToggleOnEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: BoolReference, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6465417623062990450, guid: d1eda07512f71ac4ebbe95fdf6fa761d,
+        type: 3}
+      propertyPath: ToggleOnEvent.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: UiAudioSounds, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 6465417623062990450, guid: d1eda07512f71ac4ebbe95fdf6fa761d,
         type: 3}
@@ -36876,7 +37101,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6465417623062990450, guid: d1eda07512f71ac4ebbe95fdf6fa761d,
         type: 3}
+      propertyPath: ToggleOffEvent.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: UiAudioSounds, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6465417623062990450, guid: d1eda07512f71ac4ebbe95fdf6fa761d,
+        type: 3}
       propertyPath: ToggleOnEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6465417623062990450, guid: d1eda07512f71ac4ebbe95fdf6fa761d,
+        type: 3}
+      propertyPath: ToggleOnEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_BoolArgument
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6465417623062990450, guid: d1eda07512f71ac4ebbe95fdf6fa761d,
@@ -36886,7 +37121,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6465417623062990450, guid: d1eda07512f71ac4ebbe95fdf6fa761d,
         type: 3}
+      propertyPath: ToggleOnEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 6465417623062990450, guid: d1eda07512f71ac4ebbe95fdf6fa761d,
+        type: 3}
       propertyPath: ToggleOffEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 6465417623062990450, guid: d1eda07512f71ac4ebbe95fdf6fa761d,
+        type: 3}
+      propertyPath: ToggleOffEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []

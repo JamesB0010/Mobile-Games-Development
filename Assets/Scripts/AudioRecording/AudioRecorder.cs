@@ -13,6 +13,7 @@ public class AudioRecorder : MonoBehaviour
     private AudioClip recordedClip;
     private static string filePath = "";
     private static string filename = "recording.wav";
+    private static string metaFilename = "recording.meta";
     private static string directoryPath = Application.dataPath + "/Resources/AudioRecordings";
     private float startTime;
     private float recordingLength;
@@ -72,9 +73,12 @@ public class AudioRecorder : MonoBehaviour
     {
         string fullFilepath = Path.Combine(directoryPath, filename);
         if (File.Exists(fullFilepath))
-        {
             File.Delete(fullFilepath);
-        }
+
+        string fullMetaFilepath = Path.Combine(directoryPath, metaFilename);
+        if(File.Exists(fullMetaFilepath))
+            File.Delete(fullMetaFilepath);
+        
         
         #if UNITY_EDITOR
         AssetDatabase.Refresh();

@@ -1,0 +1,6 @@
+.title {
+    align-items: stretch;
+    font-size: 100%;
+    -unity-font-definition: initial;
+    -unity-font: url("project://database/Assets/Fonts/ethnocentric%20rg.otf?fileID=12800000&guid=d8287381f00f2ce4aacd1036b49bbade&type=3#ethnocentric rg");
+}
