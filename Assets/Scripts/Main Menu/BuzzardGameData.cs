@@ -52,8 +52,11 @@ public class BuzzardGameData : MonoBehaviour
     private GameSaveData saveGameData;
     private IntReference gamesPlayed;
     private BoolReference gyroEnabled;
+    public bool GyroEnabled => this.gyroEnabled.GetValue();
     private BoolReference pitchInverted;
+    public bool PitchInverted => this.pitchInverted.GetValue();
     private ColorReference enemyOutlineColor;
+    public Color EnemyOutlineColor => this.enemyOutlineColor.GetValue();
     
 
     private void Awake()
@@ -71,6 +74,8 @@ public class BuzzardGameData : MonoBehaviour
     private void Start()
     {
         this.SetupDependencies();
+        
+        BuzzardGameData.ReadLocalSaveFile();
         
         G_SaveGameInteractor.AddReadEventCallback(this.OnSavedGameRead);
         
@@ -146,7 +151,8 @@ public class BuzzardGameData : MonoBehaviour
 
     public void SaveAllConfigFilesLocal()
     {
-        var saveGameData = JsonUtility.FromJson<GameSaveData>(this.CollapseConfigFilesToString());
+        string jsonString = this.CollapseConfigFilesToString();
+        var saveGameData = JsonUtility.FromJson<GameSaveData>(jsonString);
         //Save to the different text files
         File.WriteAllText(Application.dataPath + "/Resources/Json/armourConfiguration.txt", JsonUtility.ToJson(saveGameData.configs[0], true));
         File.WriteAllText(Application.dataPath + "/Resources/Json/energySystemConfiguration.txt",JsonUtility.ToJson(saveGameData.configs[1], true));
@@ -159,7 +165,7 @@ public class BuzzardGameData : MonoBehaviour
         this.gamesPlayed.SetValue(saveGameData.gamesPlayed);
         this.gyroEnabled.SetValue(saveGameData.gyroEnabled);
         this.pitchInverted.SetValue(saveGameData.pitchInverted);
-        this.enemyOutlineColor.SetValue(this.saveGameData.enemyOutlineColor);
+        this.enemyOutlineColor.SetValue(saveGameData.enemyOutlineColor.ToColor());
         if (saveGameData.userSound != "noSoundRecorded")
         {
             WavUtility.CreateEmpty(AudioRecorder.GetFullRecordingFilepath()).Close();
@@ -183,7 +189,7 @@ public class BuzzardGameData : MonoBehaviour
         this.gamesPlayed.SetValue(this.saveGameData.gamesPlayed);
         this.gyroEnabled.SetValue(this.saveGameData.gyroEnabled);
         this.pitchInverted.SetValue(this.saveGameData.pitchInverted);
-        this.enemyOutlineColor.SetValue(this.saveGameData.enemyOutlineColor);
+        this.enemyOutlineColor.SetValue(this.saveGameData.enemyOutlineColor.ToColor());
         if (saveGameData.userSound != "noSoundRecorded")
         {
             WavUtility.CreateEmpty(AudioRecorder.GetFullRecordingFilepath()).Close();
@@ -241,7 +247,7 @@ public class BuzzardGameData : MonoBehaviour
         output += "\"gyroEnabled\": " + this.gyroEnabled.GetValue().ToString().ToLower() + ",";
         output += "\"pitchInverted\":" + this.pitchInverted.GetValue().ToString().ToLower() + ",";
         //todo work out serialisation of color to json
-        output += "\"enemyOutlineColor\":" + this.enemyOutlineColor.GetValue() + ",";
+        output += "\"enemyOutlineColor\":" + JsonUtility.ToJson(new JsonColor(this.enemyOutlineColor.GetValue())) + ",";
         output += "\"userSound\": " + "\"" + sound + "\"";
         output += "}";
         return output;

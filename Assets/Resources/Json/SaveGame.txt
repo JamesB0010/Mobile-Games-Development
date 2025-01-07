@@ -2,12 +2,12 @@
     "configs": [
         {
             "upgradeReferences": [
-                "MediumLowEnergy"
+                "DefaultArmour"
             ]
         },
         {
             "upgradeReferences": [
-                "LowMaxHighRecharge"
+                "DefaultEnergySystem"
             ]
         },
         {
@@ -19,7 +19,7 @@
             "upgradeReferences": [
                 "NoGun",
                 "NoGun",
-                "AmmoMediumDamageLow",
+                "NoGun",
                 "NoGun"
             ]
         },
@@ -56,11 +56,11 @@
             },
             {
                 "key": "AmmoMediumDamageLow",
-                "value": -1
+                "value": 0
             },
             {
                 "key": "DefaultArmour",
-                "value": 1
+                "value": 0
             },
             {
                 "key": "DefaultAutocannon",
@@ -68,7 +68,7 @@
             },
             {
                 "key": "DefaultEnergySystem",
-                "value": 2
+                "value": 0
             },
             {
                 "key": "DefaultEngine",
@@ -116,7 +116,7 @@
             },
             {
                 "key": "LowMaxHighRecharge",
-                "value": -1
+                "value": 0
             },
             {
                 "key": "LowThrustHighEnergyBoost",
@@ -164,7 +164,7 @@
             },
             {
                 "key": "NoGun",
-                "value": 1
+                "value": 0
             },
             {
                 "key": "NoLightGun",
@@ -176,10 +176,16 @@
             }
         ]
     },
-    "playerMoney": 0,
-    "playerKills": 0,
-    "gamesPlayed": 0,
+    "playerMoney": 14,
+    "playerKills": 4,
+    "gamesPlayed": 1,
     "gyroEnabled": false,
-    "pitchInverted": false,
+    "pitchInverted": true,
+    "enemyOutlineColor": {
+        "r": 1.0,
+        "g": 0.0,
+        "b": 0.0,
+        "a": 1.0
+    },
     "userSound": "noSoundRecorded"
 }

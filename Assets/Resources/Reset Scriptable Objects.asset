@@ -30,3 +30,4 @@ MonoBehaviour:
   gamesPlayed: {fileID: 11400000, guid: d2848f4a39b71a342b8c2ca0b42e8d2c, type: 2}
   gyroEnabled: {fileID: 11400000, guid: fd3f2decbb3b8b94c8fa545135c93c23, type: 2}
   invertedPitch: {fileID: 11400000, guid: 3b030cb84ca41fb48991a6600192161d, type: 2}
+  enemyOutlineColor: {fileID: 11400000, guid: fad5500fed875784cbc6a0dacd9e740f, type: 2}

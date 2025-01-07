@@ -31,6 +31,8 @@ public class ResetScriptableObjects : ScriptableObject
     [SerializeField] private BoolReference gyroEnabled;
 
     [SerializeField] private BoolReference invertedPitch;
+
+    [SerializeField] private ColorReference enemyOutlineColor;
     
     [MenuItem("Custom/Reset Scriptable Objects and Save Files")]
     //This resets the scriptable objects which need to be resetted for the game to be built
@@ -67,6 +69,8 @@ public class ResetScriptableObjects : ScriptableObject
         instance.gyroEnabled.SetValue(true);
         
         instance.invertedPitch.SetValue(true);
+        
+        instance.enemyOutlineColor.SetValue(Color.red);
         
         new UpgradesCounterJsonObject().GenerateDefaultSafeFile(instance.OwnedUpgradesCounterJsonSaveFile);
         
