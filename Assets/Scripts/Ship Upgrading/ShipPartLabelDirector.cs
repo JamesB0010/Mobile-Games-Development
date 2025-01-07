@@ -15,10 +15,16 @@ public class ShipPartLabelDirector : MonoBehaviour
 
     private ShipPartLabel[] shipPartLabels;
 
+    private bool ignoreShipParts;
+    public void IgnoreShipParts(bool value)
+    {
+        this.ignoreShipParts = value;
+    }
 
     [Space(2)]
     [Header("Events")]
     [SerializeField] private UnityEvent<ShipPartLabel> ShipPartLabelClicked = new UnityEvent<ShipPartLabel>();
+
 
     private void Start()
     {
@@ -31,6 +37,9 @@ public class ShipPartLabelDirector : MonoBehaviour
 
     private void OnShipPartClicked(ShipPartLabel label)
     {
+        if (this.ignoreShipParts)
+            return;
+        
         this.ShipPartLabelClicked?.Invoke(label);
         label.GenerateItemEquipInteractor(this.equipItemAction).UpdatePrevOwned(label.WeaponIndex);
 
@@ -38,6 +47,7 @@ public class ShipPartLabelDirector : MonoBehaviour
         
         this.cellsSetupHelper.SetupCells(label);
     }
+
 }
 
 
