@@ -830,7 +830,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   col: {fileID: 11400000, guid: ca070579a1d09e148968609e7c39b025, type: 2}
-  alpha: 1
+  alpha: 0.968
 --- !u!1 &668825535035582643
 GameObject:
   m_ObjectHideFlags: 0
@@ -10984,7 +10984,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   col: {fileID: 11400000, guid: 19715e1c684de204d9d09cb85e7055cf, type: 2}
-  alpha: 1
+  alpha: 0
 --- !u!1 &5904094429470044394
 GameObject:
   m_ObjectHideFlags: 0
@@ -12775,6 +12775,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad44250ca4d59464798a408c3f4f30f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tertiaryAccentColor: {fileID: 11400000, guid: 19715e1c684de204d9d09cb85e7055cf,
+    type: 2}
 --- !u!114 &930134028054947695
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12788,7 +12790,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   col: {fileID: 11400000, guid: ca070579a1d09e148968609e7c39b025, type: 2}
-  alpha: 1
+  alpha: 0
 --- !u!1 &6892904609193663642
 GameObject:
   m_ObjectHideFlags: 0
@@ -16411,7 +16413,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   col: {fileID: 11400000, guid: ca070579a1d09e148968609e7c39b025, type: 2}
-  alpha: 1
+  alpha: 0
 --- !u!224 &7492561689390538505 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7578063350034040651, guid: 4a86a812c718cb4428a7ca99e560eeea,
@@ -16458,7 +16460,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   col: {fileID: 11400000, guid: ca070579a1d09e148968609e7c39b025, type: 2}
-  alpha: 1
+  alpha: 0
 --- !u!1001 &1547383680806374384
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18956,7 +18958,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   col: {fileID: 11400000, guid: ca070579a1d09e148968609e7c39b025, type: 2}
-  alpha: 1
+  alpha: 0
 --- !u!1 &5386113809085766847 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8143616005309439066, guid: 4a86a812c718cb4428a7ca99e560eeea,
@@ -18997,7 +18999,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   col: {fileID: 11400000, guid: ca070579a1d09e148968609e7c39b025, type: 2}
-  alpha: 1
+  alpha: 0
 --- !u!224 &5950959435234543534 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7578063350034040651, guid: 4a86a812c718cb4428a7ca99e560eeea,

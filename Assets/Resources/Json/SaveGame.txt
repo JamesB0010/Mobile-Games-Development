@@ -178,7 +178,7 @@
     },
     "playerMoney": 0,
     "playerKills": 0,
-    "gamesPlayed": 1,
+    "gamesPlayed": 3,
     "gyroEnabled": false,
     "pitchInverted": true,
     "enemyOutlineColor": {

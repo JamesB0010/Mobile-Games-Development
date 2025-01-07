@@ -21,7 +21,7 @@ public class Enemy : EnemyBase
 
     [Header("Behaviour settings")]
     [SerializeField] private float desiredDirectionChangeInterval = 5;
-    private PhasedEventTimeKeeper directionChangeTimeKeeper = new();
+    private PhasedEventTimeKeeper directionChangeTimeKeeper ;
 
 
     private void Start()
