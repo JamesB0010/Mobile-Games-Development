@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(FlexibleColorPicker))]
-public class ColorPickerColorInitializer : MonoBehaviour
+public class ColorPickerColorSetter : MonoBehaviour
 {
     private FlexibleColorPicker colorPicker;
     
@@ -16,6 +16,11 @@ public class ColorPickerColorInitializer : MonoBehaviour
     }
 
     private void Start()
+    {
+        this.colorPicker.color = this.colorToInitializeTo.GetValue();
+    }
+
+    public void UpdateColor()
     {
         this.colorPicker.color = this.colorToInitializeTo.GetValue();
     }

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 884480269386796853}
   - component: {fileID: 1872327772845465594}
   - component: {fileID: 6194427713210366623}
+  - component: {fileID: 1068668753702010844}
   m_Layer: 5
   m_Name: DirectionalMarker
   m_TagString: Untagged
@@ -75,3 +76,16 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &1068668753702010844
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2402796842344855406}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: febc332972115664f8e8891bca3b281c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  col: {fileID: 11400000, guid: 19715e1c684de204d9d09cb85e7055cf, type: 2}

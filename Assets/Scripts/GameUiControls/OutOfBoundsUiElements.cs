@@ -13,16 +13,6 @@ public class OutOfBoundsUiElements : MonoBehaviour
 
    [SerializeField] private Image skull;
 
-
-   private Color blackoutImageColor, textColor, timerColor, skullColor;
-   private void Start()
-   {
-      this.blackoutImageColor = this.blackoutImage.color;
-      this.textColor = this.text.color;
-      this.timerColor = this.timer.color;
-      this.skullColor = this.skull.color;
-   }
-
    public void PlayerExitedBounds(FloatLerpPackage timeout)
    {
       timeout.onLerpStep += FadeInWarning;
@@ -32,6 +22,10 @@ public class OutOfBoundsUiElements : MonoBehaviour
    private void FadeInWarning(float value)
    {
       Debug.Log(value);
+      Color blackoutImageColor = this.blackoutImage.color;
+      Color textColor = this.text.color;
+      Color timerColor = this.timer.color;
+      Color skullColor = this.skull.color;
       this.blackoutImage.color = new Color(blackoutImageColor.r, blackoutImageColor.g, blackoutImageColor.b, value);
       this.text.color = new Color(textColor.r, textColor.g, textColor.b, value);
       this.timer.color = new Color(timerColor.r, timerColor.g, timerColor.b, value);
@@ -41,9 +35,22 @@ public class OutOfBoundsUiElements : MonoBehaviour
 
    public void PlayerBackInBounds()
    {
-      this.blackoutImage.color = blackoutImageColor;
-      this.text.color = this.textColor;
-      this.timer.color = this.timerColor;
-      this.skull.color = this.skullColor;
+      Color blackoutImageCol = this.blackoutImage.color;
+      blackoutImageCol.a = 0;
+
+      Color textColor = this.text.color;
+      textColor.a = 0;
+
+      Color timerColor = this.timer.color;
+      timerColor.a = 0;
+
+      Color skullColor = this.skull.color;
+      skullColor.a = 0;
+      
+      
+      this.blackoutImage.color = blackoutImageCol;
+      this.text.color = textColor;
+      this.timer.color = timerColor;
+      this.skull.color = skullColor;
    }
 }

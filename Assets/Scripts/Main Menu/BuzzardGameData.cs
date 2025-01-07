@@ -55,6 +55,9 @@ public class BuzzardGameData : MonoBehaviour
     private BoolReference pitchInverted;
     private ColorReference enemyOutlineColor;
     private FloatReference enemyOutlineWidth;
+    private ColorReference primaryUiColor;
+    private ColorReference tertiaryUiColor;
+    private ColorReference secondaryUiColor;
     
 
     private void Awake()
@@ -106,6 +109,9 @@ public class BuzzardGameData : MonoBehaviour
         this.pitchInverted = Resources.Load<BoolReference>("Json/InvertPitch");
         this.enemyOutlineColor = Resources.Load<ColorReference>("Json/EnemyShipOutlineColor");
         this.enemyOutlineWidth = Resources.Load<FloatReference>("Json/EnemyOutlineSize");
+        this.primaryUiColor = Resources.Load<ColorReference>("Json/PrimaryUiColor");
+        this.secondaryUiColor = Resources.Load<ColorReference>("Json/Secondary Ui Color");
+        this.tertiaryUiColor = Resources.Load<ColorReference>("Json/Tertiary Ui Color");
     }
 
     private void OnDestroy()
@@ -166,6 +172,10 @@ public class BuzzardGameData : MonoBehaviour
         this.pitchInverted.SetValue(saveGameData.pitchInverted);
         this.enemyOutlineColor.SetValue(saveGameData.enemyOutlineColor.ToColor());
         this.enemyOutlineWidth.SetValue(saveGameData.enemyOutlineWidth);
+        this.primaryUiColor.SetValue(saveGameData.primaryUiColor.ToColor());
+        this.secondaryUiColor.SetValue(saveGameData.secondaryUiColor.ToColor());
+        this.tertiaryUiColor.SetValue(saveGameData.tertiaryUiColor.ToColor());
+        
         if (saveGameData.userSound != "noSoundRecorded")
         {
             WavUtility.CreateEmpty(AudioRecorder.GetFullRecordingFilepath()).Close();
@@ -191,6 +201,9 @@ public class BuzzardGameData : MonoBehaviour
         this.pitchInverted.SetValue(this.saveGameData.pitchInverted);
         this.enemyOutlineColor.SetValue(this.saveGameData.enemyOutlineColor.ToColor());
         this.enemyOutlineWidth.SetValue(this.saveGameData.enemyOutlineWidth);
+        this.primaryUiColor.SetValue(this.saveGameData.primaryUiColor.ToColor());
+        this.secondaryUiColor.SetValue(this.saveGameData.secondaryUiColor.ToColor());
+        this.tertiaryUiColor.SetValue(this.saveGameData.tertiaryUiColor.ToColor());
         if (saveGameData.userSound != "noSoundRecorded")
         {
             WavUtility.CreateEmpty(AudioRecorder.GetFullRecordingFilepath()).Close();
@@ -250,6 +263,9 @@ public class BuzzardGameData : MonoBehaviour
         //todo work out serialisation of color to json
         output += "\"enemyOutlineColor\":" + JsonUtility.ToJson(new JsonColor(this.enemyOutlineColor.GetValue())) + ",";
         output += "\"enemyOutlineWidth\":" + this.enemyOutlineWidth.GetValue() + ",";
+        output += "\"primaryUiColor\":" + JsonUtility.ToJson(new JsonColor(this.primaryUiColor.GetValue())) + ",";
+        output += "\"secondaryUiColor\":" + JsonUtility.ToJson(new JsonColor(this.secondaryUiColor.GetValue())) + ",";
+        output += "\"tertiaryUiColor\":" + JsonUtility.ToJson(new JsonColor(this.tertiaryUiColor.GetValue())) + ",";
         output += "\"userSound\": " + "\"" + sound + "\"";
         output += "}";
         return output;

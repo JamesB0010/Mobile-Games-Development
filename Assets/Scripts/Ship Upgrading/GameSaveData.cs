@@ -17,6 +17,9 @@ public class GameSaveData
    public bool pitchInverted;
    public JsonColor enemyOutlineColor;
    public float enemyOutlineWidth;
+   public JsonColor primaryUiColor;
+   public JsonColor secondaryUiColor;
+   public JsonColor tertiaryUiColor;
    public string userSound;
 
    public void WriteToSaveGameJsonFile()

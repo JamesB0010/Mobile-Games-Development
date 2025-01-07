@@ -32,3 +32,6 @@ MonoBehaviour:
   invertedPitch: {fileID: 11400000, guid: 3b030cb84ca41fb48991a6600192161d, type: 2}
   enemyOutlineColor: {fileID: 11400000, guid: fad5500fed875784cbc6a0dacd9e740f, type: 2}
   enemyOutlineWidth: {fileID: 11400000, guid: fd8a217443afe4547acfa681912718f3, type: 2}
+  primaryUiColor: {fileID: 11400000, guid: ca070579a1d09e148968609e7c39b025, type: 2}
+  secondaryUiColor: {fileID: 11400000, guid: 2a15414c55620ad4dabbd5acb7ba8448, type: 2}
+  tertiaryUiColor: {fileID: 11400000, guid: 19715e1c684de204d9d09cb85e7055cf, type: 2}

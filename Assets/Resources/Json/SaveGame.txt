@@ -178,15 +178,33 @@
     },
     "playerMoney": 0,
     "playerKills": 0,
-    "gamesPlayed": 0,
+    "gamesPlayed": 1,
     "gyroEnabled": false,
     "pitchInverted": true,
     "enemyOutlineColor": {
-        "r": 0.0,
-        "g": 0.20000000298023225,
-        "b": 1.0,
+        "r": 1.0,
+        "g": 0.0,
+        "b": 0.0,
         "a": 1.0
     },
     "enemyOutlineWidth": 6.0,
+    "primaryUiColor": {
+        "r": 0.7098922729492188,
+        "g": 0.0,
+        "b": 1.0,
+        "a": 1.0
+    },
+    "secondaryUiColor": {
+        "r": 0.886274516582489,
+        "g": 0.8478492498397827,
+        "b": 0.0,
+        "a": 1.0
+    },
+    "tertiaryUiColor": {
+        "r": 0.0,
+        "g": 0.5098297595977783,
+        "b": 1.0,
+        "a": 1.0
+    },
     "userSound": "noSoundRecorded"
 }
