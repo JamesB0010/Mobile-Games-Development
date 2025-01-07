@@ -28,6 +28,18 @@ public class UiSoundFxEditor : Editor
             this.audioSounds.PlayDefaultClickSound();
         };
 
+        root.Q<Button>("purchaseSuccessButton").clicked += () =>
+        {
+            this.audioSounds.PlayPurchaseSuccessSound();
+        };
+        
+        
+        root.Q<Button>("purchaseFailureButton").clicked += () =>
+        {
+            this.audioSounds.PlayPurchaseFailureSound();
+        };
+        
+        
         root.Q<Button>("fuzzyClickButton").clicked += () =>
         {
             this.audioSounds.PlayFuzzyClickSound();

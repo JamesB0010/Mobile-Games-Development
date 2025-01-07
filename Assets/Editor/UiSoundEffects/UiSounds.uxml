@@ -4,6 +4,10 @@
         <ui:Label tabindex="-1" text="Ui Sound Effects" parse-escape-sequences="true" display-tooltip-when-elided="true" class="title" style="font-size: 25%;" />
         <uie:PropertyField name="PropertyField" binding-path="defaultClickSound" />
         <ui:Button text="Play Default Click Sound" parse-escape-sequences="true" display-tooltip-when-elided="true" name="DefaultClickButton" />
+        <uie:PropertyField binding-path="purchaseSuccessSound" />
+        <ui:Button text="purchaseSucessSound" parse-escape-sequences="true" display-tooltip-when-elided="true" name="purchaseSuccessButton" />
+        <uie:PropertyField binding-path="purchaseFailureSound" />
+        <ui:Button text="purchaseFailureSound" parse-escape-sequences="true" display-tooltip-when-elided="true" name="purchaseFailureButton" />
         <uie:PropertyField binding-path="fuzzyClickSound" />
         <ui:Button text="PlayFuzzyClickSound" parse-escape-sequences="true" display-tooltip-when-elided="true" name="fuzzyClickButton" />
         <uie:PropertyField binding-path="toggleOnSound" />

@@ -21486,18 +21486,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 11400000, guid: 39fcfaf5942eb9b4f832de678c77fe0a, type: 2}
-        m_TargetAssemblyTypeName: UiAudioSounds, Assembly-CSharp
-        m_MethodName: PlayDefaultClickSound
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &1078265183
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28015,6 +28003,33 @@ MonoBehaviour:
           m_StringArgument: Equip
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 11400000, guid: 39fcfaf5942eb9b4f832de678c77fe0a, type: 2}
+        m_TargetAssemblyTypeName: UiAudioSounds, Assembly-CSharp
+        m_MethodName: PlayPurchaseSuccessSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Equip
+          m_BoolArgument: 0
+        m_CallState: 2
+  CellPurchaseFailureEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: 39fcfaf5942eb9b4f832de678c77fe0a, type: 2}
+        m_TargetAssemblyTypeName: UiAudioSounds, Assembly-CSharp
+        m_MethodName: PlayPurchaseFailureSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   CellEquippedEvent:
     m_PersistentCalls:
       m_Calls:
@@ -28757,6 +28772,21 @@ MonoBehaviour:
   - {fileID: 1493545661}
   - {fileID: 686335782}
   - {fileID: 1726709883}
+  CellsSetupEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1909742062}
+        m_TargetAssemblyTypeName: UIViewUpdater, Assembly-CSharp
+        m_MethodName: CellSelected
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1968275997}
+          m_ObjectArgumentAssemblyTypeName: UpgradeCell, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!4 &1576774908 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8433507581721789825, guid: 6ac3f90453b63674691a4d74ab6fd07b,

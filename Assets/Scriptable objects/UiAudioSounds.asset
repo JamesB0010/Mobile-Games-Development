@@ -14,5 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultClickSound: {fileID: 8300000, guid: feba8f50019e5654ebb7ac2e73cf1a0b, type: 3}
   fuzzyClickSound: {fileID: 8300000, guid: 9da08b8bf5c10ea4ea7cad105865f856, type: 3}
+  purchaseSuccessSound: {fileID: 8300000, guid: 6a562b4ee5b8fbb448d80f03456ee29b,
+    type: 3}
+  purchaseFailureSound: {fileID: 8300000, guid: 499145df8536a8b408b6585c3cbab79b,
+    type: 3}
   toggleOffSound: {fileID: 8300000, guid: 32968708c59fadf4f8cceb8ca7311527, type: 3}
   toggleOnSound: {fileID: 8300000, guid: d954b44d0b1a00149a619362fb111032, type: 3}

@@ -7,7 +7,7 @@ public class EngineUpgrade : ShipItemUpgrade
 {
     [SerializeField] private Engine engine;
     public Engine Engine => this.engine;
-    public override object GetUpgrade()
+    public override ShipItem GetUpgrade()
     {
         return engine;
     }

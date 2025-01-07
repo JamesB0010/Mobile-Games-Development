@@ -12,14 +12,20 @@ public class PurchaseItem : ItemShopAction
     [SerializeField] private FloatReference playerMoney;
     public event Action SelectedCellPurchased;
 
-    public void PurchaseCell(UpgradeCell cell)
+    public event Action PurchaseFailed;
+
+    public bool PurchaseCell(UpgradeCell cell)
     {
         if (!IsAbleToMakePurchase(cell))
-            return;
+        {
+            this.PurchaseFailed?.Invoke();
+            return false;
+        }
 
         DeductFromPlayerMoney(cell.Upgrade.Cost);
 
         this.SelectedCellPurchased?.Invoke();
+        return true;
     }
 
 

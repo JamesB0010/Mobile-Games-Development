@@ -6,6 +6,8 @@ public class UiAudioSounds : ScriptableObject
 {
     [SerializeField] private AudioClip defaultClickSound;
     [SerializeField] private AudioClip fuzzyClickSound;
+    [SerializeField] private AudioClip purchaseSuccessSound;
+    [SerializeField] private AudioClip purchaseFailureSound;
     [SerializeField] private AudioClip toggleOffSound;
     [SerializeField] private AudioClip toggleOnSound;
 
@@ -27,6 +29,16 @@ public class UiAudioSounds : ScriptableObject
     public void PlayDefaultClickSound()
     {
         this.PlayClip(this.defaultClickSound);
+    }
+
+    public void PlayPurchaseSuccessSound()
+    {
+        this.PlayClip(this.purchaseSuccessSound);
+    }
+    
+    public void PlayPurchaseFailureSound()
+    {
+        this.PlayClip(this.purchaseFailureSound);
     }
 
     public void PlayFuzzyClickSound()

@@ -174,7 +174,7 @@ public class UIViewUpdater : MonoBehaviour
         }
         
         
-        selectedCell.Upgrade.GenerateUiUpdatorInteractor(this).UpdateItemToPurchaseStats((ShipItem)selectedCell.Upgrade.GetUpgrade());
+        selectedCell.Upgrade.GenerateUiUpdatorInteractor(this).UpdateItemToPurchaseStats(selectedCell.Upgrade.GetUpgrade());
     }
 
     public void CellPurchased(SelectedCellHighlight highlight)
@@ -190,7 +190,7 @@ public class UIViewUpdater : MonoBehaviour
     }
     private void UpdateUiBasedOnItem(UpgradeCell cell)
     {
-        ShipItem item = (ShipItem)cell.Upgrade.GetUpgrade();
+        ShipItem item = cell.Upgrade.GetUpgrade();
 
         cell.Upgrade.GenerateUiUpdatorInteractor(this).UpdateUi(item);;
 

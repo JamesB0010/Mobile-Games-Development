@@ -18,13 +18,17 @@ public class ItemShopActionsManager : MonoBehaviour
     [Header("Events")]
     [SerializeField] private UnityEvent CellPurchasedEvent = new UnityEvent();
 
+    [SerializeField] private UnityEvent CellPurchaseFailureEvent;
+
     [SerializeField] private UnityEvent CellEquippedEvent = new UnityEvent();
 
     private void Start()
     {
         this.purchaseItemShopAction.SelectedCellPurchased += this.CellPurchased;
+        this.purchaseItemShopAction.PurchaseFailed += this.CellPurchasedFailed;
         this.equipItemShopAction.SelectedCellEquipped += this.CellEquipped;
     }
+
 
     public void TryPurchaseEquipCell(SelectedCellHighlight highlight)
     {
@@ -38,8 +42,8 @@ public class ItemShopActionsManager : MonoBehaviour
             this.equipItemShopAction.EquipCell(cell);
         else
         {
-            this.purchaseItemShopAction.PurchaseCell(cell);
-            this.equipItemShopAction.EquipCell(cell);
+            if(this.purchaseItemShopAction.PurchaseCell(cell))
+                this.equipItemShopAction.EquipCell(cell);
         }
         
         UIViewUpdater.GetInstance().CellSelected(highlight.SelectedCell);
@@ -52,6 +56,10 @@ public class ItemShopActionsManager : MonoBehaviour
         BuzzardGameData.Save();
     }
 
+    private void CellPurchasedFailed()
+    {
+        this.CellPurchaseFailureEvent?.Invoke();
+    }
     public void CellEquipped()
     {
         this.CellEquippedEvent?.Invoke();

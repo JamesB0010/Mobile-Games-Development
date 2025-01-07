@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2008404cba8f7647b47da7b08f99d37, type: 3}
   m_Name: Default Autocannon
   m_EditorClassIdentifier: 
-  itemName: PlaceHolder Name
+  itemName: Nyx Spectre
   ableToShoot: 1
   bulletPrefab: {fileID: 3118056857120007577, guid: 5a6baa86ac946c647b5019508c95ae8d,
     type: 3}

@@ -12,10 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce0c28e9a12cca24b990eeb72e8dc303, type: 3}
   m_Name: mediumThrustLowEnergy
   m_EditorClassIdentifier: 
-  itemName: PlaceHolder Name
+  itemName: Aquilla Hawk
   accelerationSpeed: 30
   energyDrainRate: 15
-  topSpeed: 0
   maxVelocity: 40
   engineBoostStats:
     canBoost: 0

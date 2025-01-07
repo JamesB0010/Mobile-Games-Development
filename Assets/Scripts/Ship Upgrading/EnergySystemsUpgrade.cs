@@ -9,7 +9,7 @@ public class EnergySystemsUpgrade : ShipItemUpgrade
     [SerializeField] private EnergySystem energySystem;
     public EnergySystem EnergySystem => this.energySystem;
 
-    public override object GetUpgrade()
+    public override ShipItem GetUpgrade()
     {
         return this.energySystem;
     }

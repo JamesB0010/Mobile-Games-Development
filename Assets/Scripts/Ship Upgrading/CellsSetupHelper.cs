@@ -2,10 +2,14 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
+using UnityEngine.Serialization;
 
 public class CellsSetupHelper : MonoBehaviour
 {
     [SerializeField] private UpgradeCell[] cells;
+    
+    [SerializeField] private UnityEvent CellsSetupEvent;
 
     private void Start()
     {
@@ -47,6 +51,8 @@ public class CellsSetupHelper : MonoBehaviour
             this.cells[i].Upgrade = label.Upgrades.GetShipUpgrades()[i];
             this.cells[i].WeaponIndex = label.WeaponIndex;
             this.cells[i].gameObject.SetActive(true);
+            this.CellsSetupEvent?.Invoke();
         }
     }
+
 }

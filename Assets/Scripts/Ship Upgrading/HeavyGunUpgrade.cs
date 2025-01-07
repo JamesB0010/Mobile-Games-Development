@@ -8,7 +8,7 @@ public class HeavyGunUpgrade : ShipItemUpgrade
     [SerializeField] private HeavyGun gun;
     public HeavyGun Gun => this.gun;
 
-    public override object GetUpgrade()
+    public override ShipItem GetUpgrade()
     {
         return gun;
     }

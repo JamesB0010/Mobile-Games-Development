@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f7e31b75b8ae62438589fe9503e2b9e, type: 3}
   m_Name: MediumMaxLowRecharge
   m_EditorClassIdentifier: 
-  itemName: PlaceHolder Name
+  itemName: Ironclad Steadfast
   maxEnergy: 160
   rechargeRate: 2

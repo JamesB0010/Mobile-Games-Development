@@ -12,10 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce0c28e9a12cca24b990eeb72e8dc303, type: 3}
   m_Name: DefaultEngine
   m_EditorClassIdentifier: 
-  itemName: PlaceHolder Name
+  itemName: Adeptus Swift
   accelerationSpeed: 20
   energyDrainRate: 10
-  topSpeed: 0
   maxVelocity: 30
   engineBoostStats:
     canBoost: 0

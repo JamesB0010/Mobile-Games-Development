@@ -5,7 +5,7 @@ using UnityEngine.Serialization;
 
 public abstract class ShipItemUpgrade : ScriptableObject
 {
-    public abstract object GetUpgrade();
+    public abstract ShipItem GetUpgrade();
 
     public abstract EquipItemInteractorStrategy GenerateEquipItemInteractor(EquipItem itemEquipAction);
 

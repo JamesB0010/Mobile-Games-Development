@@ -176,10 +176,10 @@
             }
         ]
     },
-    "playerMoney": 14,
-    "playerKills": 4,
-    "gamesPlayed": 1,
-    "gyroEnabled": false,
+    "playerMoney": 0,
+    "playerKills": 0,
+    "gamesPlayed": 0,
+    "gyroEnabled": true,
     "pitchInverted": true,
     "enemyOutlineColor": {
         "r": 1.0,

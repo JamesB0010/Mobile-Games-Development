@@ -9,7 +9,7 @@ public class ArmourUpgrade : ShipItemUpgrade
 
     public Armour Armour => this.armour;
 
-    public override object GetUpgrade()
+    public override ShipItem GetUpgrade()
     {
         return armour;
     }

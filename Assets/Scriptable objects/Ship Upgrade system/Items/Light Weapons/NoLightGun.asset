@@ -12,9 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2008404cba8f7647b47da7b08f99d37, type: 3}
   m_Name: NoLightGun
   m_EditorClassIdentifier: 
-  itemName: NoLightGun
+  itemName: Empty
   ableToShoot: 0
-  bulletPrefab: {fileID: 3118056857120007577, guid: 5a6baa86ac946c647b5019508c95ae8d, type: 3}
+  bulletPrefab: {fileID: 3118056857120007577, guid: 5a6baa86ac946c647b5019508c95ae8d,
+    type: 3}
+  firepower: 0
   timeBetweenBullets: 0
   bulletDamage: 0
   energyExpensePerShot: 0

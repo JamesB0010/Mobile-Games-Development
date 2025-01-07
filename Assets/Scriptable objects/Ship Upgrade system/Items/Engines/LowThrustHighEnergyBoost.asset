@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce0c28e9a12cca24b990eeb72e8dc303, type: 3}
   m_Name: LowThrustHighEnergyBoost
   m_EditorClassIdentifier: 
-  itemName: PlaceHolder Name
+  itemName: Adeptus Pioneer
   accelerationSpeed: 20
   energyDrainRate: 30
   maxVelocity: 30
