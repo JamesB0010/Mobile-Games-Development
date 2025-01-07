@@ -9,6 +9,8 @@ public class EnemySpawnManager : MonoBehaviour
     [SerializeField] private ActiveEnemiesManager activeEnemiesManager;
 
     [SerializeField] private ColorReference enemyOutlineColor;
+
+    [SerializeField] private FloatReference enemyOutlineWidth;
     
     [SerializeField]
     private Transform spawnBoundaryPositiveX,
@@ -70,7 +72,9 @@ public class EnemySpawnManager : MonoBehaviour
         
         this.activeEnemiesManager.TrackEnemyAsActive(enemy);
 
-        enemy.GetComponentInChildren<Outline>().OutlineColor = this.enemyOutlineColor.GetValue();
+        var outline = enemy.GetComponentInChildren<Outline>();
+        outline.OutlineColor = this.enemyOutlineColor.GetValue();
+        outline.OutlineWidth = this.enemyOutlineWidth.GetValue();
     }
     
     private void SpecialEnemySpawned(AsyncOperationHandle<GameObject> handle)
@@ -83,6 +87,7 @@ public class EnemySpawnManager : MonoBehaviour
         foreach (Outline outline in enemy.GetComponentsInChildren<Outline>())
         {
             outline.OutlineColor = this.enemyOutlineColor.GetValue();
+            outline.OutlineWidth = this.enemyOutlineWidth.GetValue();
         }
     }
 }

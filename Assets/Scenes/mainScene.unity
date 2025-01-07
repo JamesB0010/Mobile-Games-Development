@@ -603,6 +603,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   activeEnemiesManager: {fileID: 535710525}
   enemyOutlineColor: {fileID: 11400000, guid: fad5500fed875784cbc6a0dacd9e740f, type: 2}
+  enemyOutlineWidth: {fileID: 11400000, guid: fd8a217443afe4547acfa681912718f3, type: 2}
   spawnBoundaryPositiveX: {fileID: 195731048}
   spawnBoundaryNegativeX: {fileID: 1434706284}
   spawnBoundaryPositiveY: {fileID: 1493184042}

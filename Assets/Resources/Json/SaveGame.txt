@@ -182,10 +182,11 @@
     "gyroEnabled": false,
     "pitchInverted": true,
     "enemyOutlineColor": {
-        "r": 1.0,
-        "g": 1.0,
+        "r": 0.0,
+        "g": 0.20000000298023225,
         "b": 1.0,
         "a": 1.0
     },
+    "enemyOutlineWidth": 6.0,
     "userSound": "noSoundRecorded"
 }
