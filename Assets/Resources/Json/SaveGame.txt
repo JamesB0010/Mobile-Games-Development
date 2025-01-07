@@ -179,12 +179,12 @@
     "playerMoney": 0,
     "playerKills": 0,
     "gamesPlayed": 0,
-    "gyroEnabled": true,
+    "gyroEnabled": false,
     "pitchInverted": true,
     "enemyOutlineColor": {
         "r": 1.0,
-        "g": 0.0,
-        "b": 0.0,
+        "g": 1.0,
+        "b": 1.0,
         "a": 1.0
     },
     "userSound": "noSoundRecorded"
