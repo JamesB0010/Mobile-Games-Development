@@ -7,6 +7,8 @@ using UnityEngine.ResourceManagement.AsyncOperations;
 public class EnemySpawnManager : MonoBehaviour
 {
     [SerializeField] private ActiveEnemiesManager activeEnemiesManager;
+
+    [SerializeField] private ColorReference enemyOutlineColor;
     
     [SerializeField]
     private Transform spawnBoundaryPositiveX,
@@ -57,7 +59,7 @@ public class EnemySpawnManager : MonoBehaviour
 
          var spawnEnemyHandle = this.enemyHarb.InstantiateAsync(spawnPos, Random.rotation);
 
-         spawnEnemyHandle.Completed += this.EnemySpawned;
+         spawnEnemyHandle.Completed += this.SpecialEnemySpawned;
          
          return spawnEnemyHandle;
     }
@@ -67,5 +69,20 @@ public class EnemySpawnManager : MonoBehaviour
         enemy.EnemiesManager = this.activeEnemiesManager;
         
         this.activeEnemiesManager.TrackEnemyAsActive(enemy);
+
+        enemy.GetComponentInChildren<Outline>().OutlineColor = this.enemyOutlineColor.GetValue();
+    }
+    
+    private void SpecialEnemySpawned(AsyncOperationHandle<GameObject> handle)
+    {
+        EnemyBase enemy = handle.Result.GetComponent<EnemyBase>();
+        enemy.EnemiesManager = this.activeEnemiesManager;
+            
+        this.activeEnemiesManager.TrackEnemyAsActive(enemy);
+        
+        foreach (Outline outline in enemy.GetComponentsInChildren<Outline>())
+        {
+            outline.OutlineColor = this.enemyOutlineColor.GetValue();
+        }
     }
 }

@@ -53,6 +53,7 @@ public class BuzzardGameData : MonoBehaviour
     private IntReference gamesPlayed;
     private BoolReference gyroEnabled;
     private BoolReference pitchInverted;
+    private ColorReference enemyOutlineColor;
     
 
     private void Awake()
@@ -100,6 +101,7 @@ public class BuzzardGameData : MonoBehaviour
         this.gamesPlayed = Resources.Load<IntReference>("Json/Games Played");
         this.gyroEnabled = Resources.Load<BoolReference>("Json/GyroEnabled");
         this.pitchInverted = Resources.Load<BoolReference>("Json/InvertPitch");
+        this.enemyOutlineColor = Resources.Load<ColorReference>("Json/EnemyShipOutlineColor");
     }
 
     private void OnDestroy()
@@ -157,6 +159,7 @@ public class BuzzardGameData : MonoBehaviour
         this.gamesPlayed.SetValue(saveGameData.gamesPlayed);
         this.gyroEnabled.SetValue(saveGameData.gyroEnabled);
         this.pitchInverted.SetValue(saveGameData.pitchInverted);
+        this.enemyOutlineColor.SetValue(this.saveGameData.enemyOutlineColor);
         if (saveGameData.userSound != "noSoundRecorded")
         {
             WavUtility.CreateEmpty(AudioRecorder.GetFullRecordingFilepath()).Close();
@@ -180,6 +183,7 @@ public class BuzzardGameData : MonoBehaviour
         this.gamesPlayed.SetValue(this.saveGameData.gamesPlayed);
         this.gyroEnabled.SetValue(this.saveGameData.gyroEnabled);
         this.pitchInverted.SetValue(this.saveGameData.pitchInverted);
+        this.enemyOutlineColor.SetValue(this.saveGameData.enemyOutlineColor);
         if (saveGameData.userSound != "noSoundRecorded")
         {
             WavUtility.CreateEmpty(AudioRecorder.GetFullRecordingFilepath()).Close();
@@ -236,6 +240,8 @@ public class BuzzardGameData : MonoBehaviour
         output += "\"gamesPlayed\": " + this.gamesPlayed.GetValue() + ",";
         output += "\"gyroEnabled\": " + this.gyroEnabled.GetValue().ToString().ToLower() + ",";
         output += "\"pitchInverted\":" + this.pitchInverted.GetValue().ToString().ToLower() + ",";
+        //todo work out serialisation of color to json
+        output += "\"enemyOutlineColor\":" + this.enemyOutlineColor.GetValue() + ",";
         output += "\"userSound\": " + "\"" + sound + "\"";
         output += "}";
         return output;

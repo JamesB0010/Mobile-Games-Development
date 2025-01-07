@@ -60,7 +60,6 @@ public class EnemyWavesSpawner : MonoBehaviour
             this.SpawnNormalRound();
         else
             this.SpawnSpecialRound();
-
         for (int i = 0; i < this.spawningEnemies.Count; i++)
         {
             this.spawningEnemies[i].Completed += handle =>

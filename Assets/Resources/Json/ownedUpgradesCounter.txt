@@ -18,11 +18,11 @@
         },
         {
             "key": "AmmoMediumDamageLow",
-            "value": -1
+            "value": 0
         },
         {
             "key": "DefaultArmour",
-            "value": 1
+            "value": 0
         },
         {
             "key": "DefaultAutocannon",
@@ -30,7 +30,7 @@
         },
         {
             "key": "DefaultEnergySystem",
-            "value": 2
+            "value": 0
         },
         {
             "key": "DefaultEngine",
@@ -78,7 +78,7 @@
         },
         {
             "key": "LowMaxHighRecharge",
-            "value": -1
+            "value": 0
         },
         {
             "key": "LowThrustHighEnergyBoost",
@@ -126,7 +126,7 @@
         },
         {
             "key": "NoGun",
-            "value": 1
+            "value": 0
         },
         {
             "key": "NoLightGun",

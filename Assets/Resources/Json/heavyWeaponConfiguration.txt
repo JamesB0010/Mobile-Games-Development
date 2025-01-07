@@ -2,7 +2,7 @@
     "upgradeReferences": [
         "NoGun",
         "NoGun",
-        "AmmoMediumDamageLow",
+        "NoGun",
         "NoGun"
     ]
 }

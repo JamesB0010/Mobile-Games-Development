@@ -16,6 +16,7 @@ public class GameSaveData
    public bool gyroEnabled;
    public bool pitchInverted;
    public string userSound;
+   public Color enemyOutlineColor;
 
    public void WriteToSaveGameJsonFile()
    {
