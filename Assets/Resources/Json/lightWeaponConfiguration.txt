@@ -1,12 +1,12 @@
 {
     "upgradeReferences": [
-        "HighDamageLowEnergy",
+        "DefaultAutocannon",
         "DefaultAutocannon",
         "NoLightGun",
         "NoLightGun",
-        "HighDamageLowEnergy",
         "NoLightGun",
         "NoLightGun",
-        "HighDamageLowEnergy"
+        "NoLightGun",
+        "NoLightGun"
     ]
 }
