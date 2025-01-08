@@ -26,7 +26,7 @@
         },
         {
             "key": "DefaultAutocannon",
-            "value": 0
+            "value": 1
         },
         {
             "key": "DefaultEnergySystem",
@@ -50,7 +50,7 @@
         },
         {
             "key": "HighDamageLowEnergy",
-            "value": 0
+            "value": 1
         },
         {
             "key": "HighMaxHighRecharge",
@@ -130,7 +130,7 @@
         },
         {
             "key": "NoLightGun",
-            "value": 0
+            "value": 2
         },
         {
             "key": "WeakLowEnergy",

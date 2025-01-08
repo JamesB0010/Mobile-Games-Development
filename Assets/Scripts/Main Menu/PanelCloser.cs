@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CloseAccessibilitySettings : MonoBehaviour
+public class PanelCloser : MonoBehaviour
 {
     [SerializeField] private Transform panel;
 

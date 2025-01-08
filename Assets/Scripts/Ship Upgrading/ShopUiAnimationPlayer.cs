@@ -15,6 +15,7 @@ public class ShopUiAnimationPlayer : MonoBehaviour
     [Header("Events")]
     [SerializeField] private UnityEvent OpenInventoryEvent = new UnityEvent();
     [SerializeField] private UnityEvent CloseInventoryEvent = new UnityEvent();
+    [SerializeField] private UnityEvent FinishedClosingInventoryEvent = new UnityEvent();
 
 
     public void OpenInventory()
@@ -28,5 +29,10 @@ public class ShopUiAnimationPlayer : MonoBehaviour
         this.inventoryAnimationComp.clip = this.closeInventoryAnim;
         this.inventoryAnimationComp.Play();
         this.CloseInventoryEvent?.Invoke();
+    }
+
+    public void FinishedClosingInventory()
+    {
+        this.FinishedClosingInventoryEvent?.Invoke();
     }
 }

@@ -17,7 +17,7 @@ public class ShipPartLabel : MonoBehaviour
     [SerializeField]
     private CinemachineVirtualCamera shipSectionCamera;
 
-    public event Action<ShipPartLabel> clicked;
+    public event Action<ShipPartLabel, GameObject> clicked;
 
     [SerializeField] private int weaponIndex;
 
@@ -25,9 +25,7 @@ public class ShipPartLabel : MonoBehaviour
 
     public void Clicked()
     {
-        clicked?.Invoke(this);
-
-        this.shipSectionCamera.gameObject.SetActive(true);
+        clicked?.Invoke(this, this.shipSectionCamera.gameObject);
     }
 
     public EquipItemInteractorStrategy GenerateItemEquipInteractor(EquipItem equipItemAction)

@@ -12,14 +12,7 @@ public class ShipPartLabelDirector : MonoBehaviour
     [SerializeField] private UIViewUpdater uiUpdater;
     [SerializeField] private EquipItem equipItemAction;
 
-
     private ShipPartLabel[] shipPartLabels;
-
-    private bool ignoreShipParts;
-    public void IgnoreShipParts(bool value)
-    {
-        this.ignoreShipParts = value;
-    }
 
     [Space(2)]
     [Header("Events")]
@@ -35,11 +28,12 @@ public class ShipPartLabelDirector : MonoBehaviour
         }
     }
 
-    private void OnShipPartClicked(ShipPartLabel label)
+    private void OnShipPartClicked(ShipPartLabel label, GameObject camera)
     {
-        if (this.ignoreShipParts)
+        if (!base.enabled)
             return;
         
+        camera.gameObject.SetActive(true);
         this.ShipPartLabelClicked?.Invoke(label);
         label.GenerateItemEquipInteractor(this.equipItemAction).UpdatePrevOwned(label.WeaponIndex);
 
