@@ -10,23 +10,23 @@ public class EnergySystem : ShipItem
 
     public event Action<float> CurrentEnergyPeaked;
 
-    private float currentEnergy;
+    private float currentEngine;
     public float CurrentEnergy
     {
-        get => this.currentEnergy;
+        get => this.currentEngine;
         set
         {
             if (value >= this.maxEnergy)
             {
-                this.currentEnergy = this.maxEnergy;
+                this.currentEngine = this.maxEnergy;
                 this.CurrentEnergyPeaked?.Invoke(this.maxEnergy);
                 return;
             }
 
-            this.currentEnergy = value;
+            this.currentEngine = value;
             
-            if (this.currentEnergy < 0)
-                this.currentEnergy = 0;
+            if (this.currentEngine < 0)
+                this.currentEngine = 0;
             
             this.CurrentEnergyChanged?.Invoke(value);
         }

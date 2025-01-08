@@ -52,6 +52,12 @@ public class CrosshairTargetFinder : MonoBehaviour
     {
         Vector3 cameraPosition = this.EyeTransform.position;
         bool raycastHitCollider = Physics.Raycast(cameraPosition, this.EyeTransform.forward, out RaycastHit hit, float.MaxValue, this.raycastLayerMask);
+
+        if (gameObject.name == "Gun System")
+        {
+            if(this.latestHitData.latestHit.collider != null)
+                Debug.Log(this.latestHitData.latestHit.collider.gameObject);
+        }
         
         
         this.SampleCrosshairTarget(cameraPosition, raycastHitCollider, hit);
