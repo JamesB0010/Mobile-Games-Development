@@ -34,7 +34,7 @@ public class PlayerShipEnergySystem : MonoBehaviour
     public bool TryDebitEnergy(float amountToDebit)
     {
         float newEnergyAmount = this.energySystem.CurrentEnergy - amountToDebit;
-        if (newEnergyAmount > 0)
+        if (newEnergyAmount > 5)
         {
             this.energySystem.CurrentEnergy = newEnergyAmount;
             return true;

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -7,7 +8,18 @@ public class SaveGameDebugInfo : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI saveGameContentsText, working1, working2, working3, playerMoney;
 
+    [SerializeField] private bool includeInBuild;
+
     private string dataStrinig;
+
+    private void Start()
+    {
+        #if UNITY_EDITOR
+        #else
+        if(this.includeInBuild == false)
+            Destroy(this.gameObject);
+        #endif
+    }
 
     public void SetDataString(string data)
     {

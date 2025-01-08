@@ -2479,18 +2479,6 @@ MonoBehaviour:
   OutOfEnergy:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 3275013080770175168}
-        m_TargetAssemblyTypeName: PlayerShipBooster, Assembly-CSharp
-        m_MethodName: OutOfEnergy
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 7918859954135442063}
         m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
         m_MethodName: Play
@@ -14969,6 +14957,18 @@ MonoBehaviour:
       - m_Target: {fileID: 11400000, guid: 39fcfaf5942eb9b4f832de678c77fe0a, type: 2}
         m_TargetAssemblyTypeName: UiAudioSounds, Assembly-CSharp
         m_MethodName: PlayDefaultClickSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 11400000, guid: c10dd469d77fb674ca9ba53bff7db85b, type: 2}
+        m_TargetAssemblyTypeName: HapticFeedbackObject, Assembly-CSharp
+        m_MethodName: LightVibration
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
