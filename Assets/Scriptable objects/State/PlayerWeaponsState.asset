@@ -17,19 +17,19 @@ MonoBehaviour:
   lightGuns:
   - {fileID: 11400000, guid: 001e711458261114f8b759ff63cf3e8b, type: 2}
   - {fileID: 11400000, guid: 001e711458261114f8b759ff63cf3e8b, type: 2}
-  - {fileID: 11400000, guid: da2602b39fccdf9428c3a265e4162c09, type: 2}
-  - {fileID: 11400000, guid: da2602b39fccdf9428c3a265e4162c09, type: 2}
-  - {fileID: 11400000, guid: da2602b39fccdf9428c3a265e4162c09, type: 2}
-  - {fileID: 11400000, guid: da2602b39fccdf9428c3a265e4162c09, type: 2}
-  - {fileID: 11400000, guid: da2602b39fccdf9428c3a265e4162c09, type: 2}
-  - {fileID: 11400000, guid: da2602b39fccdf9428c3a265e4162c09, type: 2}
+  - {fileID: 11400000, guid: 5b1c74579afd1624b9d483f4953b755a, type: 2}
+  - {fileID: 11400000, guid: 5b1c74579afd1624b9d483f4953b755a, type: 2}
+  - {fileID: 11400000, guid: 5b1c74579afd1624b9d483f4953b755a, type: 2}
+  - {fileID: 11400000, guid: 5b1c74579afd1624b9d483f4953b755a, type: 2}
+  - {fileID: 11400000, guid: 5b1c74579afd1624b9d483f4953b755a, type: 2}
+  - {fileID: 11400000, guid: 5b1c74579afd1624b9d483f4953b755a, type: 2}
   defaultHeavyGun: {fileID: 11400000, guid: 654056ab37c9ef74b87b9b5e65e4ab50, type: 2}
   heavyGuns:
   - {fileID: 11400000, guid: 482110b67bd0c3445ae83a08482e6623, type: 2}
   - {fileID: 11400000, guid: 482110b67bd0c3445ae83a08482e6623, type: 2}
-  - {fileID: 11400000, guid: 6e06bc29190e520468444e7ac3e026f3, type: 2}
-  - {fileID: 11400000, guid: 6e06bc29190e520468444e7ac3e026f3, type: 2}
-  armour: {fileID: 11400000, guid: ef3dc743de77aa24081a3b97132d242d, type: 2}
+  - {fileID: 11400000, guid: d7170bb2ad244b346bb93abfc6a17d7e, type: 2}
+  - {fileID: 11400000, guid: d7170bb2ad244b346bb93abfc6a17d7e, type: 2}
+  armour: {fileID: 11400000, guid: 51e7331516d43614ba44d9968659c898, type: 2}
   defaultArmour: {fileID: 11400000, guid: 12d51dc336316804cbde7afb2a7255d8, type: 2}
   engine: {fileID: 11400000, guid: 4e6e3a23082c5d94ca6146f4c6f27a36, type: 2}
   defaultEngine: {fileID: 11400000, guid: c3c55ec69c349c9428fa66fdaa60d9ae, type: 2}

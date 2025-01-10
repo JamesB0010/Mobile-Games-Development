@@ -45,7 +45,7 @@ public class AttitudeInput
             pitch -= 360;
         }
 
-        return Mathf.Clamp(ValueInRangeMapper.MapRange(pitch, 75, 105, -1, 1), -1f, 1f); //fix from ali feedback might work might not + 1;
+        return -Mathf.Clamp(ValueInRangeMapper.MapRange(pitch, 75, 105, -1, 1), -1f, 1f); //fix from ali feedback might work might not + 1;
     }
 
     public static float GetRollNormalized()

@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
+using System.Runtime.CompilerServices;
 using System.Text;
 using TMPro;
 using UnityEditor;
@@ -90,8 +91,19 @@ public class BuzzardGameData : MonoBehaviour
         });
     }
 
+
     private void SetupDependencies()
     {
+        Debug.Log(this.CheckAllDependenciesExist());
+
+        if (this.CheckAllDependenciesExist())
+        {
+            this.LoadDependencies();
+        }
+        else
+        {
+            this.CreateDependentFiles();
+        }
         //Load Files
         this.armourConfigFile = Resources.Load<TextAsset>("Json/armourConfiguration");
         this.energySystemConfigFile = Resources.Load<TextAsset>("Json/energySystemConfiguration");
@@ -111,6 +123,52 @@ public class BuzzardGameData : MonoBehaviour
         this.primaryUiColor = Resources.Load<ColorReference>("Json/PrimaryUiColor");
         this.secondaryUiColor = Resources.Load<ColorReference>("Json/Secondary Ui Color");
         this.tertiaryUiColor = Resources.Load<ColorReference>("Json/Tertiary Ui Color");
+    }
+
+
+    private void LoadDependencies()
+    {
+        this.armourConfigFile = new TextAsset(File.ReadAllText("Json/armourConfiguration.txt"));
+        this.energySystemConfigFile = new TextAsset(File.ReadAllText("Json/energySystemConfiguration.txt"));
+        this.engineConfigFile = new TextAsset(File.ReadAllText("Json/engineConfiguration.txt"));
+        this.heavyWeaponsConfigFile = new TextAsset(File.ReadAllText("Json/heavyWeaponConfiguration.txt"));
+        this.lightWeaponsConfigFile = new TextAsset("Json/lightWeaponConfiguration.txt");
+        this.ownedUpgradesConfigFile = new TextAsset("Json/ownedUpgradesCounter.txt");
+    }
+
+    private void CreateDependentFiles()
+    {
+        throw new NotImplementedException();
+    }
+    private bool CheckAllDependenciesExist()
+    {
+        bool result = true;
+        string[] filePaths = new[]
+        {
+            "Json/armourConfiguration.txt",
+            "Json/energySystemConfiguration.txt",
+            "Json/engineConfiguration.txt",
+            "Json/heavyWeaponConfiguration.txt",
+            "Json/lightWeaponConfiguration.txt",
+            "Json/ownedUpgradesCounter.txt",
+            "Json/Player Money.asset",
+            "Json/EliminationCount.asset",
+            "Json/Games Played.asset",
+            "Json/GyroEnabled.asset",
+            "Json/InvertPitch.asset",
+            "Json/EnemyShipOutlineColor.asset",
+            "Json/EnemyOutlineSize.asset",
+            "Json/PrimaryUiColor.asset",
+            "Json/Secondary Ui Color.asset",
+            "Json/Tertiary Ui Color.asset"
+        };
+
+        foreach (string path in filePaths)
+        {
+            result = result && File.Exists(Path.Combine(Application.persistentDataPath, path));
+        }
+
+        return result;
     }
 
     private void OnDestroy()
