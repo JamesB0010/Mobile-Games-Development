@@ -8,13 +8,9 @@ public class AttitudeInput
 {
     private static AttitudeInput instance = null;
 
-    static public AttitudeInput GetInstance()
+    private static AttitudeInput GetInstance()
     {
-        if (instance == null)
-        {
-            AttitudeInput.instance = new AttitudeInput();
-        }
-
+        instance ??= new AttitudeInput();
         return instance;
     }
 
@@ -23,16 +19,20 @@ public class AttitudeInput
     {
         Input.gyro.enabled = true;
     }
-    private Quaternion attitude => Input.gyro.attitude;
+    private Quaternion GetAttitude ()
+    {
+        Quaternion deviceToUnity = new Quaternion(0, 0, 1, 0); //converts from left hand to right hand coordinate
+        return Input.gyro.attitude * deviceToUnity;
+    }
 
     private static float Pitch()
     {
-        return NormalizedYAngle(GetInstance().attitude);
+        return NormalizedYAngle(GetInstance().GetAttitude());
     }
 
     private static float Roll()
     {
-        return NormalizedZAngle(GetInstance().attitude);
+        return NormalizedZAngle(GetInstance().GetAttitude());
     }
 
     public static float GetPitchNormalized()
@@ -53,7 +53,7 @@ public class AttitudeInput
         float roll = Roll();
         float normalizedRoll = Mathf.Clamp(ValueInRangeMapper.MapRange(roll, 75, 105, -1, 1), -1f, 1f); //fix from ali feedback might work might not + 1;
         //Debug.Log($"Normalized roll {normalizedRoll}");
-        return normalizedRoll;
+        return -normalizedRoll;
     }
 
 

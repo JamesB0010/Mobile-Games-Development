@@ -57,6 +57,7 @@ public class G_SaveGameInteractor
     
     //members
     private event Action<string> SavedGameReadEvent;
+
     private G_SaveGameInteractor()
     {
         AddListenersFromWaitingList();

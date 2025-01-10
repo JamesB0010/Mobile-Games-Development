@@ -12,7 +12,6 @@ public class EnergySystemAchievementInteractor : UpgradeAchievementInteractorStr
     {
         Social.ReportProgress(this.firstTimePurcaseAcievementIds.EnergySystem, 100.0f, sucess =>
         {
-            
         });
         
         Debug.Log("First energy system purcased");

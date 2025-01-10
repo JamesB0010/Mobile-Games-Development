@@ -7088,6 +7088,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Save Game Debug Info
       objectReference: {fileID: 0}
+    - target: {fileID: 1705123476647917467, guid: a4f94bb377828fe4baf4081f06bc6c87,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2100251872759000462, guid: a4f94bb377828fe4baf4081f06bc6c87,
         type: 3}
       propertyPath: m_Pivot.x

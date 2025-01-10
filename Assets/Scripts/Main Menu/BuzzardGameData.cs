@@ -45,9 +45,6 @@ public class BuzzardGameData : MonoBehaviour
             return instance;
         }
     }
-
-    //has the save game been fetched yet?
-    private bool saveGameFetched = false;
     
     private GameSaveData saveGameData;
     private IntReference gamesPlayed;
@@ -91,17 +88,19 @@ public class BuzzardGameData : MonoBehaviour
             this.SaveLocalSaveGameToCloud();
             #endif
         });
-
     }
 
     private void SetupDependencies()
     {
+        //Load Files
         this.armourConfigFile = Resources.Load<TextAsset>("Json/armourConfiguration");
         this.energySystemConfigFile = Resources.Load<TextAsset>("Json/energySystemConfiguration");
         this.engineConfigFile = Resources.Load<TextAsset>("Json/engineConfiguration");
         this.heavyWeaponsConfigFile = Resources.Load<TextAsset>("Json/heavyWeaponConfiguration");
         this.lightWeaponsConfigFile = Resources.Load<TextAsset>("Json/lightWeaponConfiguration");
         this.ownedUpgradesConfigFile = Resources.Load<TextAsset>("Json/ownedUpgradesCounter");
+        
+        //Setup Value References
         this.playerMoney = Resources.Load<FloatReference>("Json/Player Money");
         this.playerKills = Resources.Load<IntReference>("Json/EliminationCount");
         this.gamesPlayed = Resources.Load<IntReference>("Json/Games Played");
@@ -127,22 +126,21 @@ public class BuzzardGameData : MonoBehaviour
 
     public void OnSavedGameRead(string data)
     {
-        this.saveGameFetched = true;
-        
         this.debugInfo?.SetDataString(data);
         
         if (data == "")
         {
             //First time reading the data create defaults
-            G_SaveGameInteractor.Instance.SaveGame(Encoding.UTF8.GetBytes(this.CollapseConfigFilesToString()), TimeSpan.Zero);
-            BuzzardGameData.ReadSaveGame();
+            byte[] initSaveFileContents = Encoding.UTF8.GetBytes(this.CollapseConfigFilesToString());
+            G_SaveGameInteractor.Instance.SaveGame(initSaveFileContents, TimeSpan.Zero);
+            this.OnSavedGameRead(Encoding.UTF8.GetString(initSaveFileContents));
         }
         else
         {
             //parse data and update config files
-            saveGameData = JsonUtility.FromJson<GameSaveData>(data);
+            this.saveGameData = JsonUtility.FromJson<GameSaveData>(data);
             
-            __debug__UpdateUi(saveGameData);
+            __debug__UpdateUi(this.saveGameData);
 
             //Save to the different text files
             this.SaveAllConfigFilesLocal(saveGameData);
@@ -157,59 +155,36 @@ public class BuzzardGameData : MonoBehaviour
     public void SaveAllConfigFilesLocal()
     {
         string jsonString = this.CollapseConfigFilesToString();
-        var saveGameData = JsonUtility.FromJson<GameSaveData>(jsonString);
-        //Save to the different text files
-        File.WriteAllText(Application.dataPath + "/Resources/Json/armourConfiguration.txt", JsonUtility.ToJson(saveGameData.configs[0], true));
-        File.WriteAllText(Application.dataPath + "/Resources/Json/energySystemConfiguration.txt",JsonUtility.ToJson(saveGameData.configs[1], true));
-        File.WriteAllText(Application.dataPath + "/Resources/Json/engineConfiguration.txt", JsonUtility.ToJson(saveGameData.configs[2], true));
-        File.WriteAllText(Application.dataPath + "/Resources/Json/heavyWeaponConfiguration.txt", JsonUtility.ToJson(saveGameData.configs[3], true));
-        File.WriteAllText(Application.dataPath + "/Resources/Json/lightWeaponConfiguration.txt", JsonUtility.ToJson(saveGameData.configs[4], true));
-        File.WriteAllText(Application.dataPath + "/Resources/Json/ownedUpgradesCounter.txt",JsonUtility.ToJson(saveGameData.ownedUpgrades, true));
-        this.playerMoney.SetValue(saveGameData.playerMoney);
-        this.playerKills.SetValue(saveGameData.playerKills);
-        this.gamesPlayed.SetValue(saveGameData.gamesPlayed);
-        this.gyroEnabled.SetValue(saveGameData.gyroEnabled);
-        this.pitchInverted.SetValue(saveGameData.pitchInverted);
-        this.enemyOutlineColor.SetValue(saveGameData.enemyOutlineColor.ToColor());
-        this.enemyOutlineWidth.SetValue(saveGameData.enemyOutlineWidth);
-        this.primaryUiColor.SetValue(saveGameData.primaryUiColor.ToColor());
-        this.secondaryUiColor.SetValue(saveGameData.secondaryUiColor.ToColor());
-        this.tertiaryUiColor.SetValue(saveGameData.tertiaryUiColor.ToColor());
+        var gameData = JsonUtility.FromJson<GameSaveData>(jsonString);
         
-        if (saveGameData.userSound != "noSoundRecorded")
-        {
-            WavUtility.CreateEmpty(AudioRecorder.GetFullRecordingFilepath()).Close();
-            File.WriteAllBytes(AudioRecorder.GetFullRecordingFilepath(),WavUtility.StringFileContentsToBytes(saveGameData.userSound));
-        }
-
-        saveGameData.WriteToSaveGameJsonFile();
+        this.SaveAllConfigFilesLocal(gameData);
     }
 
-    private void SaveAllConfigFilesLocal(GameSaveData saveGameData)
+    private void SaveAllConfigFilesLocal(GameSaveData data)
     {
         //Save to the different text files
-        File.WriteAllText(Application.dataPath + "/Resources/Json/armourConfiguration.txt", JsonUtility.ToJson(saveGameData.configs[0], true));
-        File.WriteAllText(Application.dataPath + "/Resources/Json/energySystemConfiguration.txt", JsonUtility.ToJson(saveGameData.configs[1], true));
-        File.WriteAllText(Application.dataPath + "/Resources/Json/engineConfiguration.txt", JsonUtility.ToJson(saveGameData.configs[2], true));
-        File.WriteAllText(Application.dataPath + "/Resources/Json/heavyWeaponConfiguration.txt", JsonUtility.ToJson(saveGameData.configs[3], true));
-        File.WriteAllText(Application.dataPath + "/Resources/Json/lightWeaponConfiguration.txt", JsonUtility.ToJson(saveGameData.configs[4], true));
-        File.WriteAllText(Application.dataPath + "/Resources/Json/ownedUpgradesCounter.txt", JsonUtility.ToJson(saveGameData.ownedUpgrades, true));
-        this.playerMoney.SetValue(saveGameData.playerMoney);
-        this.playerKills.SetValue(this.saveGameData.playerKills);
-        this.gamesPlayed.SetValue(this.saveGameData.gamesPlayed);
-        this.gyroEnabled.SetValue(this.saveGameData.gyroEnabled);
-        this.pitchInverted.SetValue(this.saveGameData.pitchInverted);
-        this.enemyOutlineColor.SetValue(this.saveGameData.enemyOutlineColor.ToColor());
-        this.enemyOutlineWidth.SetValue(this.saveGameData.enemyOutlineWidth);
-        this.primaryUiColor.SetValue(this.saveGameData.primaryUiColor.ToColor());
-        this.secondaryUiColor.SetValue(this.saveGameData.secondaryUiColor.ToColor());
-        this.tertiaryUiColor.SetValue(this.saveGameData.tertiaryUiColor.ToColor());
-        if (saveGameData.userSound != "noSoundRecorded")
+        File.WriteAllText(Application.dataPath + "/Resources/Json/armourConfiguration.txt", JsonUtility.ToJson(data.configs[0], true));
+        File.WriteAllText(Application.dataPath + "/Resources/Json/energySystemConfiguration.txt", JsonUtility.ToJson(data.configs[1], true));
+        File.WriteAllText(Application.dataPath + "/Resources/Json/engineConfiguration.txt", JsonUtility.ToJson(data.configs[2], true));
+        File.WriteAllText(Application.dataPath + "/Resources/Json/heavyWeaponConfiguration.txt", JsonUtility.ToJson(data.configs[3], true));
+        File.WriteAllText(Application.dataPath + "/Resources/Json/lightWeaponConfiguration.txt", JsonUtility.ToJson(data.configs[4], true));
+        File.WriteAllText(Application.dataPath + "/Resources/Json/ownedUpgradesCounter.txt", JsonUtility.ToJson(data.ownedUpgrades, true));
+        this.playerMoney.SetValue(data.playerMoney);
+        this.playerKills.SetValue(data.playerKills);
+        this.gamesPlayed.SetValue(data.gamesPlayed);
+        this.gyroEnabled.SetValue(data.gyroEnabled);
+        this.pitchInverted.SetValue(data.pitchInverted);
+        this.enemyOutlineColor.SetValue(data.enemyOutlineColor.ToColor());
+        this.enemyOutlineWidth.SetValue(data.enemyOutlineWidth);
+        this.primaryUiColor.SetValue(data.primaryUiColor.ToColor());
+        this.secondaryUiColor.SetValue(data.secondaryUiColor.ToColor());
+        this.tertiaryUiColor.SetValue(data.tertiaryUiColor.ToColor());
+        if (data.userSound != "noSoundRecorded")
         {
             WavUtility.CreateEmpty(AudioRecorder.GetFullRecordingFilepath()).Close();
-            File.WriteAllBytes(AudioRecorder.GetFullRecordingFilepath(),WavUtility.StringFileContentsToBytes(saveGameData.userSound));
+            File.WriteAllBytes(AudioRecorder.GetFullRecordingFilepath(),WavUtility.StringFileContentsToBytes(data.userSound));
         }
-        saveGameData.WriteToSaveGameJsonFile();
+        data.WriteToSaveGameJsonFile();
     }
 
     private void SaveLocalSaveGameToCloud()
@@ -260,7 +235,6 @@ public class BuzzardGameData : MonoBehaviour
         output += "\"gamesPlayed\": " + this.gamesPlayed.GetValue() + ",";
         output += "\"gyroEnabled\": " + this.gyroEnabled.GetValue().ToString().ToLower() + ",";
         output += "\"pitchInverted\":" + this.pitchInverted.GetValue().ToString().ToLower() + ",";
-        //todo work out serialisation of color to json
         output += "\"enemyOutlineColor\":" + JsonUtility.ToJson(new JsonColor(this.enemyOutlineColor.GetValue())) + ",";
         output += "\"enemyOutlineWidth\":" + this.enemyOutlineWidth.GetValue() + ",";
         output += "\"primaryUiColor\":" + JsonUtility.ToJson(new JsonColor(this.primaryUiColor.GetValue())) + ",";
