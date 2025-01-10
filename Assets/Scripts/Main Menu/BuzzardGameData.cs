@@ -56,7 +56,27 @@ public class BuzzardGameData : MonoBehaviour
     private ColorReference primaryUiColor;
     private ColorReference tertiaryUiColor;
     private ColorReference secondaryUiColor;
-    
+
+    private string[] filePaths = new[]
+    {
+        Path.Combine("Json", "armourConfiguration.txt"),
+        Path.Combine("Json", "energySystemConfiguration.txt"),
+        Path.Combine("Json", "engineConfiguration.txt"),
+        Path.Combine("Json", "heavyWeaponConfiguration.txt"),
+        Path.Combine("Json", "lightWeaponConfiguration.txt"),
+        Path.Combine("Json", "ownedUpgradesCounter.txt"),
+        Path.Combine("Json", "Player Money.txt"),
+        Path.Combine("Json", "EliminationCount.txt"),
+        Path.Combine("Json", "Games Played.txt"),
+        Path.Combine("Json", "GyroEnabled.txt"),
+        Path.Combine("Json", "InvertPitch.txt"),
+        Path.Combine("Json", "EnemyShipOutlineColor.txt"),
+        Path.Combine("Json", "EnemyOutlineSize.txt"),
+        Path.Combine("Json", "PrimaryUiColor.txt"),
+        Path.Combine("Json", "Secondary Ui Color.txt"),
+        Path.Combine("Json", "Tertiary Ui Color.txt")
+    };
+
 
     private void Awake()
     {
@@ -94,78 +114,130 @@ public class BuzzardGameData : MonoBehaviour
 
     private void SetupDependencies()
     {
-        Debug.Log(this.CheckAllDependenciesExist());
-
+        string dependencyDirectoryPath = Path.Combine(Application.persistentDataPath, "Json");
+        bool jsonFolderExists = Directory.Exists(dependencyDirectoryPath);
+        if(!jsonFolderExists)
+            Directory.CreateDirectory(dependencyDirectoryPath);
+        
+        
         if (this.CheckAllDependenciesExist())
         {
             this.LoadDependencies();
         }
         else
         {
+            if (jsonFolderExists)
+            {
+                //if the folder exists but not all the correct items were found in it then the folder has been corrupted and we need to regenerate the folder
+                Directory.Delete(Path.Combine(Application.persistentDataPath, "Json"));
+            }
             this.CreateDependentFiles();
         }
-        //Load Files
-        this.armourConfigFile = Resources.Load<TextAsset>("Json/armourConfiguration");
-        this.energySystemConfigFile = Resources.Load<TextAsset>("Json/energySystemConfiguration");
-        this.engineConfigFile = Resources.Load<TextAsset>("Json/engineConfiguration");
-        this.heavyWeaponsConfigFile = Resources.Load<TextAsset>("Json/heavyWeaponConfiguration");
-        this.lightWeaponsConfigFile = Resources.Load<TextAsset>("Json/lightWeaponConfiguration");
-        this.ownedUpgradesConfigFile = Resources.Load<TextAsset>("Json/ownedUpgradesCounter");
-        
-        //Setup Value References
-        this.playerMoney = Resources.Load<FloatReference>("Json/Player Money");
-        this.playerKills = Resources.Load<IntReference>("Json/EliminationCount");
-        this.gamesPlayed = Resources.Load<IntReference>("Json/Games Played");
-        this.gyroEnabled = Resources.Load<BoolReference>("Json/GyroEnabled");
-        this.pitchInverted = Resources.Load<BoolReference>("Json/InvertPitch");
-        this.enemyOutlineColor = Resources.Load<ColorReference>("Json/EnemyShipOutlineColor");
-        this.enemyOutlineWidth = Resources.Load<FloatReference>("Json/EnemyOutlineSize");
-        this.primaryUiColor = Resources.Load<ColorReference>("Json/PrimaryUiColor");
-        this.secondaryUiColor = Resources.Load<ColorReference>("Json/Secondary Ui Color");
-        this.tertiaryUiColor = Resources.Load<ColorReference>("Json/Tertiary Ui Color");
     }
 
 
     private void LoadDependencies()
     {
-        this.armourConfigFile = new TextAsset(File.ReadAllText("Json/armourConfiguration.txt"));
-        this.energySystemConfigFile = new TextAsset(File.ReadAllText("Json/energySystemConfiguration.txt"));
-        this.engineConfigFile = new TextAsset(File.ReadAllText("Json/engineConfiguration.txt"));
-        this.heavyWeaponsConfigFile = new TextAsset(File.ReadAllText("Json/heavyWeaponConfiguration.txt"));
-        this.lightWeaponsConfigFile = new TextAsset("Json/lightWeaponConfiguration.txt");
-        this.ownedUpgradesConfigFile = new TextAsset("Json/ownedUpgradesCounter.txt");
+        this.armourConfigFile = new TextAsset(File.ReadAllText(Path.Combine(Application.persistentDataPath, "Json", "armourConfiguration.txt")));
+        this.energySystemConfigFile = new TextAsset(File.ReadAllText(Path.Combine(Application.persistentDataPath,"Json", "energySystemConfiguration.txt")));
+        this.engineConfigFile = new TextAsset(File.ReadAllText(Path.Combine(Application.persistentDataPath,"Json", "engineConfiguration.txt")));
+        this.heavyWeaponsConfigFile = new TextAsset(File.ReadAllText(Path.Combine(Application.persistentDataPath,"Json", "heavyWeaponConfiguration.txt")));
+        this.lightWeaponsConfigFile = new TextAsset(File.ReadAllText(Path.Combine(Application.persistentDataPath,"Json", "lightWeaponConfiguration.txt")));
+        this.ownedUpgradesConfigFile = new TextAsset(File.ReadAllText(Path.Combine(Application.persistentDataPath,"Json", "ownedUpgradesCounter.txt")));
+
+        this.playerMoney = FloatReference.JSON.CreateFromFilepath(Path.Combine(Application.persistentDataPath, "Json", "Player Money.txt"));
+        this.playerKills = IntReference.JSON.CreateFromFilepath(Path.Combine(Application.persistentDataPath, "Json", "EliminationCount.txt"));
+        this.gamesPlayed = IntReference.JSON.CreateFromFilepath(Path.Combine(Application.persistentDataPath, "Json", "Games Played.txt"));
+        this.gyroEnabled = BoolReference.JSON.CreateFromFilepath(Path.Combine(Application.persistentDataPath, "Json", "GyroEnabled.txt"));
+        this.pitchInverted = BoolReference.JSON.CreateFromFilepath(Path.Combine(Application.persistentDataPath, "Json", "InvertPitch.txt"));
+        this.enemyOutlineColor = ColorReference.JSON.CreateFromFilepath(Path.Combine(Application.persistentDataPath, "Json", "EnemyShipOutlineColor.txt"));
+        this.enemyOutlineWidth = FloatReference.JSON.CreateFromFilepath(Path.Combine(Application.persistentDataPath, "Json", "EnemyOutlineSize.txt"));
+        this.primaryUiColor = ColorReference.JSON.CreateFromFilepath(Path.Combine(Application.persistentDataPath, "Json", "PrimaryUiColor.txt"));
+        this.secondaryUiColor = ColorReference.JSON.CreateFromFilepath(Path.Combine(Application.persistentDataPath, "Json", "Secondary Ui Color.txt"));
+        this.tertiaryUiColor = ColorReference.JSON.CreateFromFilepath(Path.Combine(Application.persistentDataPath, "Json", "Tertiary Ui Color.txt"));
     }
 
     private void CreateDependentFiles()
     {
-        throw new NotImplementedException();
+        this.armourConfigFile = new TextAsset("{\n    \"upgradeReferences\": [\n        \"DefaultArmour\"\n    ]\n}");
+        this.energySystemConfigFile = new TextAsset("{\n    \"upgradeReferences\": [\n        \"DefaultEnergySystem\"\n    ]\n}");
+        this.engineConfigFile = new TextAsset("{\n    \"upgradeReferences\": [\n        \"DefaultEngine\"\n    ]\n}");
+        this.heavyWeaponsConfigFile = new TextAsset("{\n    \"upgradeReferences\": [\n        \"NoGun\",\n        \"NoGun\",\n        \"NoGun\",\n        \"NoGun\"\n    ]\n}");
+        this.lightWeaponsConfigFile = new TextAsset("{\n    \"upgradeReferences\": [\n        \"DefaultAutocannon\",\n        \"DefaultAutocannon\",\n        \"NoLightGun\",\n        \"NoLightGun\",\n        \"NoLightGun\",\n        \"NoLightGun\",\n        \"NoLightGun\",\n        \"NoLightGun\"\n    ]\n}");
+        this.ownedUpgradesConfigFile = new TextAsset("{\n    \"serializedDictionary\": [\n        {\n            \"key\": \"AmmoHighDamageHigh\",\n            \"value\": 0\n        },\n        {\n            \"key\": \"AmmoHighDamageLow\",\n            \"value\": 0\n        },\n        {\n            \"key\": \"AmmoLowDamageHigh\",\n            \"value\": 0\n        },\n        {\n            \"key\": \"AmmoMediumDamageHigh\",\n            \"value\": 0\n        },\n        {\n            \"key\": \"AmmoMediumDamageLow\",\n            \"value\": 0\n        },\n        {\n            \"key\": \"DefaultArmour\",\n            \"value\": 0\n        },\n        {\n            \"key\": \"DefaultAutocannon\",\n            \"value\": 0\n        },\n        {\n            \"key\": \"DefaultEnergySystem\",\n            \"value\": 0\n        },\n        {\n            \"key\": \"DefaultEngine\",\n            \"value\": 0\n        },\n        {\n            \"key\": \"HeavyHighEnergy\",\n            \"value\": 0\n        },\n        {\n            \"key\": \"HeavyLowEnergy\",\n            \"value\": 0\n        },\n        {\n            \"key\": \"HighDamageHighEnergy\",\n            \"value\": 0\n        },\n        {\n            \"key\": \"HighDamageLowEnergy\",\n            \"value\": 0\n        },\n        {\n            \"key\": \"HighMaxHighRecharge\",\n            \"value\": 0\n        },\n        {\n            \"key\": \"HighMaxLowRecharge\",\n            \"value\": 0\n        },\n        {\n            \"key\": \"HighThrustHighEnergy\",\n            \"value\": 0\n        },\n        {\n            \"key\": \"HighThrustHighEnergyBoost\",\n            \"value\": 0\n        },\n        {\n            \"key\": \"HighThrustLowEnergy\",\n            \"value\": 0\n        },\n        {\n            \"key\": \"LowDamageLowEnergy\",\n            \"value\": 0\n        },\n        {\n            \"key\": \"LowMaxHighRecharge\",\n            \"value\": 0\n        },\n        {\n            \"key\": \"LowThrustHighEnergyBoost\",\n            \"value\": 0\n        },\n        {\n            \"key\": \"LowThrustLowEnergy\",\n            \"value\": 0\n        },\n        {\n            \"key\": \"MediumDamageHighEnergy\",\n            \"value\": 0\n        },\n        {\n            \"key\": \"MediumDamageLowEnergy\",\n            \"value\": 0\n        },\n        {\n            \"key\": \"MediumHighEnergy\",\n            \"value\": 0\n        },\n        {\n            \"key\": \"MediumLowEnergy\",\n            \"value\": 0\n        },\n        {\n            \"key\": \"MediumMaxHighRecharge\",\n            \"value\": 0\n        },\n        {\n            \"key\": \"MediumMaxLowRecharge\",\n            \"value\": 0\n        },\n        {\n            \"key\": \"MediumThrustHighEnergy\",\n            \"value\": 0\n        },\n        {\n            \"key\": \"MediumThrustHighEnergyBoost\",\n            \"value\": 0\n        },\n        {\n            \"key\": \"MediumThrustLowEnergy\",\n            \"value\": 0\n        },\n        {\n            \"key\": \"NoGun\",\n            \"value\": 0\n        },\n        {\n            \"key\": \"NoLightGun\",\n            \"value\": 0\n        },\n        {\n            \"key\": \"WeakLowEnergy\",\n            \"value\": 0\n        }\n    ]\n}");
+
+        this.playerMoney = ScriptableObject.CreateInstance<FloatReference>();
+        this.playerMoney.SetValue(0);
+
+        this.playerKills = ScriptableObject.CreateInstance<IntReference>();
+        this.playerKills.SetValue(0);
+
+        this.gamesPlayed = ScriptableObject.CreateInstance<IntReference>();
+        this.gamesPlayed.SetValue(0);
+
+        this.gyroEnabled = ScriptableObject.CreateInstance<BoolReference>();
+        this.gyroEnabled.SetValue(true);
+
+        this.pitchInverted = ScriptableObject.CreateInstance<BoolReference>();
+        this.pitchInverted.SetValue(true);
+
+        this.enemyOutlineColor = ScriptableObject.CreateInstance<ColorReference>();
+        this.enemyOutlineColor.SetValue(Color.red);
+
+        this.enemyOutlineWidth = ScriptableObject.CreateInstance<FloatReference>();
+        this.enemyOutlineWidth.SetValue(6);
+
+        this.primaryUiColor = ScriptableObject.CreateInstance<ColorReference>();
+        this.primaryUiColor.SetValue(Color.white);
+
+        this.secondaryUiColor = ScriptableObject.CreateInstance<ColorReference>();
+        this.secondaryUiColor.SetValue(new Color(0, 0.8862745098f, 0.09019607843f, 1));
+
+        this.tertiaryUiColor = ScriptableObject.CreateInstance<ColorReference>();
+        this.tertiaryUiColor.SetValue(Color.red);
+        
+
+        string[] fileContents = new string[]
+        {
+            this.armourConfigFile.text,
+            this.energySystemConfigFile.text,
+            this.engineConfigFile.text,
+            this.heavyWeaponsConfigFile.text,
+            this.lightWeaponsConfigFile.text,
+            this.ownedUpgradesConfigFile.text,
+            JsonUtility.ToJson(new FloatReference.JSON(this.playerMoney.GetValue())),
+            JsonUtility.ToJson(new IntReference.JSON(this.playerKills.GetValue())), 
+            JsonUtility.ToJson(new IntReference.JSON(this.gamesPlayed.GetValue())),
+            JsonUtility.ToJson(new BoolReference.JSON(this.gyroEnabled.GetValue())),
+            JsonUtility.ToJson(new BoolReference.JSON(this.pitchInverted.GetValue())),
+            JsonUtility.ToJson(new ColorReference.JSON(this.enemyOutlineColor.GetValue())), 
+            JsonUtility.ToJson(new FloatReference.JSON(this.enemyOutlineWidth.GetValue())), 
+            JsonUtility.ToJson(new ColorReference.JSON(this.primaryUiColor.GetValue())), 
+            JsonUtility.ToJson(new ColorReference.JSON(this.secondaryUiColor.GetValue())),
+            JsonUtility.ToJson(new ColorReference.JSON(this.tertiaryUiColor.GetValue())) 
+        };
+        
+        //save to files
+        for(int i = 0; i < this.filePaths.Length; i++)
+        {
+            WriteTextAssetToNewFile(Path.Combine(Application.persistentDataPath, filePaths[i]), fileContents[i]);
+        }
     }
+
+    private static void WriteTextAssetToNewFile(string filepath, string content)
+    {
+        using FileStream fs = File.Create(filepath);
+        fs.Write(UTF8Encoding.UTF8.GetBytes(content));
+    }
+
     private bool CheckAllDependenciesExist()
     {
         bool result = true;
-        string[] filePaths = new[]
-        {
-            "Json/armourConfiguration.txt",
-            "Json/energySystemConfiguration.txt",
-            "Json/engineConfiguration.txt",
-            "Json/heavyWeaponConfiguration.txt",
-            "Json/lightWeaponConfiguration.txt",
-            "Json/ownedUpgradesCounter.txt",
-            "Json/Player Money.asset",
-            "Json/EliminationCount.asset",
-            "Json/Games Played.asset",
-            "Json/GyroEnabled.asset",
-            "Json/InvertPitch.asset",
-            "Json/EnemyShipOutlineColor.asset",
-            "Json/EnemyOutlineSize.asset",
-            "Json/PrimaryUiColor.asset",
-            "Json/Secondary Ui Color.asset",
-            "Json/Tertiary Ui Color.asset"
-        };
 
         foreach (string path in filePaths)
         {
-            result = result && File.Exists(Path.Combine(Application.persistentDataPath, path));
+            bool fileExists = File.Exists(Path.Combine(Application.persistentDataPath, path));
+            result = result && fileExists;
         }
 
         return result;

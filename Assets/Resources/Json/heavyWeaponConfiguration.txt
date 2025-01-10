@@ -1,8 +1,0 @@
-{
-    "upgradeReferences": [
-        "NoGun",
-        "NoGun",
-        "NoGun",
-        "NoGun"
-    ]
-}

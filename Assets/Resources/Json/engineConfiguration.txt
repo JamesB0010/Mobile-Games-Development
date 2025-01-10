@@ -1,5 +1,0 @@
-{
-    "upgradeReferences": [
-        "DefaultEngine"
-    ]
-}

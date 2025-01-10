@@ -8,40 +8,15 @@ using UnityEngine.Serialization;
 
 public class ResetScriptableObjects : ScriptableObject
 {
-    [FormerlySerializedAs("weaponsState")] [SerializeField] private PlayerUpgradesState upgradesState;
+    [SerializeField] private PlayerUpgradesState upgradesState;
 
-    [SerializeField] private TextAsset lightWeaponConfigurationSaveFile;
-
-    [SerializeField] private TextAsset heavyWeaponConfigurationSaveFile;
-
-    [SerializeField] private TextAsset armourConfigurationSaveFile;
-
-    [SerializeField] private TextAsset engineConfigurationSaveFile;
-
-    [SerializeField] private TextAsset energySystemConfigurationSaveFile;
-
-    [SerializeField] private TextAsset OwnedUpgradesCounterJsonSaveFile;
-
-    [SerializeField] private FloatReference playerMoney;
-
-    [SerializeField] private IntReference playerKills;
-    
-    [SerializeField] private IntReference gamesPlayed;
-
-    [SerializeField] private BoolReference gyroEnabled;
-
-    [SerializeField] private BoolReference invertedPitch;
-
-    [SerializeField] private ColorReference enemyOutlineColor;
-
-    [SerializeField] private FloatReference enemyOutlineWidth;
-    
-    [SerializeField] private ColorReference primaryUiColor, secondaryUiColor, tertiaryUiColor;
-    
     [MenuItem("Custom/Reset Scriptable Objects and Save Files")]
     //This resets the scriptable objects which need to be resetted for the game to be built
     public static void ResetObjects()
     {
+        Debug.LogError("Reset scriptable object not fixed");
+        return;
+        
         ResetScriptableObjects instance = Resources.Load<ResetScriptableObjects>("Reset Scriptable Objects");
 
         instance.upgradesState.ResetLightGuns();

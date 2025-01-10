@@ -1,12 +1,31 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using UnityEditor;
 using UnityEngine;
 
 [CreateAssetMenu(menuName = "Scriptable Object Value References/Int")]
 public class IntReference : SuperBaseScriptableValRef<int>
 {
+    [Serializable]
+    public class JSON
+    {
+        public int value;
+
+        public JSON(int val)
+        {
+            this.value = val;
+        }
+
+        public static IntReference CreateFromFilepath(string path)
+        {
+            IntReference val = ScriptableObject.CreateInstance<IntReference>();
+            var data = JsonUtility.FromJson<IntReference.JSON>(File.ReadAllText(path));
+            val.value = data.value;
+            return val;
+        }
+    }
     private int value;
 
     public event Action<int> valueChanged;

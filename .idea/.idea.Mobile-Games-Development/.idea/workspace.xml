@@ -6,25 +6,27 @@
   <component name="ChangeListManager">
     <list default="true" id="c7630d3b-1041-428d-b5b5-aacdf8ac5685" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Mobile-Games-Development/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Mobile-Games-Development/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Json/EliminationCount.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Json/EliminationCount.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Json/EnemyOutlineSize.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Json/EnemyOutlineSize.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Json/EnemyShipOutlineColor.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Json/EnemyShipOutlineColor.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Json/Games Played.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Json/Games Played.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Json/GyroEnabled.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Json/GyroEnabled.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Json/InvertPitch.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Json/InvertPitch.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Json/Player Money.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Json/Player Money.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Json/PrimaryUiColor.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Json/PrimaryUiColor.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Json/Secondary Ui Color.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Json/Secondary Ui Color.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Json/Tertiary Ui Color.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Json/Tertiary Ui Color.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Json/armourConfiguration.txt.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Json/armourConfiguration.txt.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Json/energySystemConfiguration.txt.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Json/energySystemConfiguration.txt.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Json/engineConfiguration.txt.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Json/engineConfiguration.txt.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Json/heavyWeaponConfiguration.txt.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Json/heavyWeaponConfiguration.txt.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Json/lightWeaponConfiguration.txt.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Json/lightWeaponConfiguration.txt.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Json/ownedUpgradesCounter.txt.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Json/ownedUpgradesCounter.txt.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scriptable objects/State/PlayerWeaponsState.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scriptable objects/State/PlayerWeaponsState.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Editor/ResetScriptableObjects.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/ResetScriptableObjects.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Json/SaveGame.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Json/SaveGame.txt.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Json/armourConfiguration.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Json/armourConfiguration.txt.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Json/energySystemConfiguration.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Json/energySystemConfiguration.txt.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Json/engineConfiguration.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Json/engineConfiguration.txt.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Json/heavyWeaponConfiguration.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Json/heavyWeaponConfiguration.txt.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Json/lightWeaponConfiguration.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Json/lightWeaponConfiguration.txt.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Json/ownedUpgradesCounter.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Json/ownedUpgradesCounter.txt.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Upgrade Ship.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Upgrade Ship.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Main Menu/BuzzardGameData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Main Menu/BuzzardGameData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player Movement/AttitudeInput.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player Movement/AttitudeInput.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Value References/Bool Reference.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Value References/Bool Reference.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Value References/ColorReference.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Value References/ColorReference.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Value References/Float Reference.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Value References/Float Reference.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Value References/IntReference.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Value References/IntReference.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,15 +52,21 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/adf207f0f9c24878928d77b1e7ac4d4ca000/41/1ad8e117/Social.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b11ba2a8fbf24f219f7cc98532a1130446ac00/46/dcf5bf78/Buffer.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b11ba2a8fbf24f219f7cc98532a1130446ac00/52/d12b995e/String.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b11ba2a8fbf24f219f7cc98532a1130446ac00/9b/8a3afc9d/Path.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b11ba2a8fbf24f219f7cc98532a1130446ac00/9d/a6f5cab0/File.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b11ba2a8fbf24f219f7cc98532a1130446ac00/b6/91fe6c40/ThrowHelper.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b11ba2a8fbf24f219f7cc98532a1130446ac00/ef/3d4252f5/FileStream.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c5ed782439084ef1bc2ad85eec89e9fe175a00/01/24f0a37b/UnityEvent.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c5ed782439084ef1bc2ad85eec89e9fe175a00/23/af09c285/MonoBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c5ed782439084ef1bc2ad85eec89e9fe175a00/5a/c6dac61c/GameObject.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c5ed782439084ef1bc2ad85eec89e9fe175a00/6e/6dcfb54c/Transform.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c5ed782439084ef1bc2ad85eec89e9fe175a00/94/5e87e553/Color.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c5ed782439084ef1bc2ad85eec89e9fe175a00/9f/ba0f7d19/ResourcesAPI.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c5ed782439084ef1bc2ad85eec89e9fe175a00/a7/830e8bc0/AsyncOperation.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c5ed782439084ef1bc2ad85eec89e9fe175a00/ae/eb7ddfaf/Object.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c5ed782439084ef1bc2ad85eec89e9fe175a00/af/bbd6bf83/TextAsset.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c5ed782439084ef1bc2ad85eec89e9fe175a00/bc/fcbdf44a/Resources.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c5ed782439084ef1bc2ad85eec89e9fe175a00/be/8d55a826/ResourcesAPIInternal.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../AI/milestones-ai-24-25-JamesB0010/MainProject/Assets/Scripts/Navigation/GridGenerator.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../AI/milestones-ai-24-25-JamesB0010/MainProject/Assets/Scripts/Navigation/Pathfinding Strategies/AStarAlgorithm.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../AI/milestones-ai-24-25-JamesB0010/MainProject/Assets/Scripts/Navigation/Pathfinding Strategies/Pathfinding Strategy.cs" root0="SKIP_HIGHLIGHTING" />
@@ -386,7 +394,7 @@
       <workItem from="1736503406356" duration="611000" />
       <workItem from="1736505722023" duration="10461000" />
       <workItem from="1736532932716" duration="3330000" />
-      <workItem from="1736538552568" duration="2627000" />
+      <workItem from="1736538552568" duration="9468000" />
     </task>
     <servers />
   </component>

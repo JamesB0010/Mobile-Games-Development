@@ -1,12 +1,31 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using UnityEditor;
 using UnityEngine;
 
 [CreateAssetMenu(menuName = "Scriptable Object Value References/Float")]
 public class FloatReference : SuperBaseScriptableValRef<float>
 {
+    [Serializable]
+    public class JSON
+    {
+        public float value;
+
+        public JSON (float val)
+        {
+            this.value = val;
+        }
+
+        public static FloatReference CreateFromFilepath(string path)
+        {
+            FloatReference val = ScriptableObject.CreateInstance<FloatReference>();
+            var data = JsonUtility.FromJson<FloatReference.JSON>(File.ReadAllText(path));
+            val.value = data.value;
+            return val;
+        }
+    }
     private float value;
 
     public event Action<float> valueChanged;

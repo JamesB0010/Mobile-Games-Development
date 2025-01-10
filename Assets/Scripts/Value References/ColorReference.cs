@@ -1,12 +1,31 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 
 
 [CreateAssetMenu(menuName = "Scriptable Object Value References/Color")]
 public class ColorReference : SuperBaseScriptableValRef<Color>
 {
+    [Serializable]
+    public class JSON
+    {
+        public JsonColor value;
+
+        public JSON (Color color)
+        {
+            this.value = new JsonColor(color);
+        }
+
+        public static ColorReference CreateFromFilepath(string path)
+        {
+            ColorReference val = ScriptableObject.CreateInstance<ColorReference>();
+            var data = JsonUtility.FromJson<ColorReference.JSON>(File.ReadAllText(path));
+            val.value = data.value.ToColor();
+            return val;
+        }
+    }
     private Color value;
 
     public event Action<Color> valueChanged;
