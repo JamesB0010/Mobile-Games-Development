@@ -14,7 +14,7 @@ public class UserSubmittedSoundLoader : MonoBehaviour
 
     public void LoadClip(string filepath)
     {
-        if (File.Exists(Application.dataPath + "/Resources/" + filepath + ".wav"))
+        if (File.Exists(Path.Combine(Application.persistentDataPath, filepath + ".wav")))
         {
             clip = WavLoader.LoadClip(filepath);
             this.audioSource.clip = clip;

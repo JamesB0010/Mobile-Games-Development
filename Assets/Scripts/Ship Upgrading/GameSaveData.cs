@@ -24,11 +24,6 @@ public class GameSaveData
 
    public void WriteToSaveGameJsonFile()
    {
-      bool fileExists = File.Exists(Application.dataPath + "/Resources/Json/SaveGame.txt");
-      File.WriteAllText(Application.dataPath + "/Resources/Json/SaveGame.txt", JsonUtility.ToJson(this, true));
-      #if UNITY_EDITOR
-      if(fileExists)
-         AssetDatabase.SaveAssetIfDirty(Resources.Load<TextAsset>("Json/SaveGame"));
-      #endif
+      File.WriteAllText(Path.Combine(Application.persistentDataPath, "Json", "SaveGame.txt"), JsonUtility.ToJson(this, true));
    }
 }

@@ -130,6 +130,7 @@ public class BuzzardGameData : MonoBehaviour
             {
                 //if the folder exists but not all the correct items were found in it then the folder has been corrupted and we need to regenerate the folder
                 Directory.Delete(Path.Combine(Application.persistentDataPath, "Json"));
+                Directory.CreateDirectory(dependencyDirectoryPath);
             }
             this.CreateDependentFiles();
         }
@@ -250,8 +251,9 @@ public class BuzzardGameData : MonoBehaviour
 
     public static void ReadLocalSaveFile()
     {
-        if(File.Exists(Application.dataPath + "/Resources/Json/SaveGame.txt"))
-            Instance.OnSavedGameRead(File.ReadAllText(Application.dataPath + "/Resources/Json/SaveGame.txt"));
+        string saveGameFilePath = Path.Combine(Application.persistentDataPath, "Json", "SaveGame.txt");
+        if(File.Exists(saveGameFilePath))
+            Instance.OnSavedGameRead(File.ReadAllText(saveGameFilePath));
     }
 
     public void OnSavedGameRead(string data)
@@ -293,12 +295,12 @@ public class BuzzardGameData : MonoBehaviour
     private void SaveAllConfigFilesLocal(GameSaveData data)
     {
         //Save to the different text files
-        File.WriteAllText(Application.dataPath + "/Resources/Json/armourConfiguration.txt", JsonUtility.ToJson(data.configs[0], true));
-        File.WriteAllText(Application.dataPath + "/Resources/Json/energySystemConfiguration.txt", JsonUtility.ToJson(data.configs[1], true));
-        File.WriteAllText(Application.dataPath + "/Resources/Json/engineConfiguration.txt", JsonUtility.ToJson(data.configs[2], true));
-        File.WriteAllText(Application.dataPath + "/Resources/Json/heavyWeaponConfiguration.txt", JsonUtility.ToJson(data.configs[3], true));
-        File.WriteAllText(Application.dataPath + "/Resources/Json/lightWeaponConfiguration.txt", JsonUtility.ToJson(data.configs[4], true));
-        File.WriteAllText(Application.dataPath + "/Resources/Json/ownedUpgradesCounter.txt", JsonUtility.ToJson(data.ownedUpgrades, true));
+        File.WriteAllText(Path.Combine(Application.persistentDataPath, "Json", "armourConfiguration.txt"), JsonUtility.ToJson(data.configs[0], true));
+        File.WriteAllText(Path.Combine(Application.persistentDataPath, "Json", "energySystemConfiguration.txt"), JsonUtility.ToJson(data.configs[1], true));
+        File.WriteAllText(Path.Combine(Application.persistentDataPath, "Json", "engineConfiguration.txt"), JsonUtility.ToJson(data.configs[2], true));
+        File.WriteAllText(Path.Combine(Application.persistentDataPath, "Json", "heavyWeaponConfiguration.txt"), JsonUtility.ToJson(data.configs[3], true));
+        File.WriteAllText(Path.Combine(Application.persistentDataPath, "Json", "lightWeaponConfiguration.txt"), JsonUtility.ToJson(data.configs[4], true));
+        File.WriteAllText(Path.Combine(Application.persistentDataPath, "Json", "ownedUpgradesCounter.txt"), JsonUtility.ToJson(data.ownedUpgrades, true));
         this.playerMoney.SetValue(data.playerMoney);
         this.playerKills.SetValue(data.playerKills);
         this.gamesPlayed.SetValue(data.gamesPlayed);
@@ -319,7 +321,8 @@ public class BuzzardGameData : MonoBehaviour
 
     private void SaveLocalSaveGameToCloud()
     {
-        G_SaveGameInteractor.Instance.SaveGame(Encoding.UTF8.GetBytes(Resources.Load<TextAsset>("Json/SaveGame").text), TimeSpan.Zero);
+        string saveGameText = File.ReadAllText(Path.Combine(Application.persistentDataPath, "Json", "SaveGame.txt"));
+        G_SaveGameInteractor.Instance.SaveGame(Encoding.UTF8.GetBytes(saveGameText), TimeSpan.Zero);
     }
 
     public static void Save()

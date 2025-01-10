@@ -13,8 +13,7 @@ public class AudioRecorder : MonoBehaviour
     private AudioClip recordedClip;
     private static string filePath = "";
     private static string filename = "recording.wav";
-    private static string metaFilename = "recording.meta";
-    private static string directoryPath = Application.dataPath + "/Resources/AudioRecordings";
+    private string directoryPath;
     private float startTime;
     private float recordingLength;
     private bool recording = false;
@@ -22,6 +21,8 @@ public class AudioRecorder : MonoBehaviour
 
     private void Start()
     {
+        string dataPath = Application.persistentDataPath;
+        this.directoryPath = Path.Combine(dataPath, "AudioRecordings");
         BuzzardGameData.ReadLocalSaveFile();
         //up to here works then something after modifies the sound file
     }
@@ -29,7 +30,7 @@ public class AudioRecorder : MonoBehaviour
 
     public static string GetFullRecordingFilepath()
     {
-        return Path.Combine(directoryPath, filename);
+        return Path.Combine(Application.persistentDataPath, "AudioRecordings", filename);
     }
 
     [SerializeField] private UnityEvent<string> AudioRecorderStatusUpdate = new UnityEvent<string>();
@@ -75,11 +76,6 @@ public class AudioRecorder : MonoBehaviour
         if (File.Exists(fullFilepath))
             File.Delete(fullFilepath);
 
-        string fullMetaFilepath = Path.Combine(directoryPath, metaFilename);
-        if(File.Exists(fullMetaFilepath))
-            File.Delete(fullMetaFilepath);
-        
-        
         #if UNITY_EDITOR
         AssetDatabase.Refresh();
         #endif
@@ -101,7 +97,12 @@ public class AudioRecorder : MonoBehaviour
     {
         if(recordedClip != null)
         {
-            filePath = Path.Combine(directoryPath, filename);
+            bool exists = Directory.Exists(this.directoryPath);
+            if (!exists)
+                Directory.CreateDirectory(this.directoryPath);
+            
+            
+            filePath = Path.Combine(this.directoryPath, filename);
             WavUtility.Save(filePath, this.recordedClip);
             Debug.Log($"Recording saved as {filePath}");
         }
