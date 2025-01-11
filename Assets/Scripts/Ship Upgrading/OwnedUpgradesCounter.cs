@@ -16,9 +16,6 @@ public class OwnedUpgradesCounter : MonoBehaviour
     public Dictionary<ShipItemUpgrade, int> UpgradesCount => this.upgradesCount;
     private SelectedCellHighlight cellHighlight;
 
-    [SerializeField] private TextAsset jsonSaveFile;
-    public TextAsset JsonSaveFile => this.jsonSaveFile;
-
     [SerializeField] private PlayerUpgradesState playerUpgradesState;
 
     [SerializeField] private FirstTimePurcaseAcievementIDCollection firstTimePurcaseAchievementIDs;
@@ -35,7 +32,8 @@ public class OwnedUpgradesCounter : MonoBehaviour
     {
         this.cellHighlight = FindObjectOfType<SelectedCellHighlight>();
 
-        UpgradesCounterJsonObject obj = JsonUtility.FromJson<UpgradesCounterJsonObject>(this.jsonSaveFile.text);
+        TextAsset ownedUpgrades = BuzzardGameData.OwnedUpgradesConfigFile;
+        UpgradesCounterJsonObject obj = JsonUtility.FromJson<UpgradesCounterJsonObject>(ownedUpgrades.text);
 
         this.upgradesCount = obj.GenerateDictionaryFromJson();
     }
@@ -127,7 +125,7 @@ public class OwnedUpgradesCounter : MonoBehaviour
     }
     public void SaveToJson()
     {
-        GenerateSaveableObject().SaveData(this.jsonSaveFile);
+        GenerateSaveableObject().SaveData(BuzzardGameData.OwnedUpgradesConfigFile);
     }
 
     public float GetItemInCirculationCount(ShipItemUpgrade shipItemUpgrade)

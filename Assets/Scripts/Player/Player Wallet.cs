@@ -13,12 +13,10 @@ namespace Player
 
         [SerializeField] private UnityEvent<string> OnMoneyChanged = new UnityEvent<string>();
 
-        private BuzzardGameData gameData;
 
         public void Start()
         {
             this.OnMoneyChanged?.Invoke("Credits: " + (float)this.money.GetValue());
-            this.gameData = FindObjectOfType<BuzzardGameData>();
         }
 
         public void OnEnemyKilled()

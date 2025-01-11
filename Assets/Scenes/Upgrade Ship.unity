@@ -6889,9 +6889,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3f6e13cb8ddacf448fa1d631bb06a9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gyroEnabled: {fileID: 11400000, guid: fd3f2decbb3b8b94c8fa545135c93c23, type: 2}
   gyroToggleSwitch: {fileID: 1966546317}
-  pitchInverted: {fileID: 11400000, guid: 3b030cb84ca41fb48991a6600192161d, type: 2}
   pitchInvertedToggleSwitch: {fileID: 1903293098}
 --- !u!320 &68914838
 PlayableDirector:
@@ -18300,7 +18298,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3150a2efb0c7aac4c96e07d52abc87e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jsonSaveFile: {fileID: 4900000, guid: eb7ae1a04d337494b829de8ec0039560, type: 3}
   playerUpgradesState: {fileID: 11400000, guid: b5f4d067d7d0e2744ab5cdf2c7f613f0,
     type: 2}
   firstTimePurcaseAchievementIDs: {fileID: 11400000, guid: b0cbd2d06e2895d48aa9c94a7f49d19c,
@@ -25984,51 +25981,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 974372846}
   m_CullTransparentMesh: 1
---- !u!1 &975507845
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 975507847}
-  - component: {fileID: 975507846}
-  m_Layer: 0
-  m_Name: BuzzardGameData
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &975507846
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 975507845}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 027c96db71037464e9d7a21a9a2dcf84, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  debugInfo: {fileID: 0}
---- !u!4 &975507847
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 975507845}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &975594720
 GameObject:
   m_ObjectHideFlags: 0
@@ -29422,7 +29374,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e55620187b5c7f6458a6015d1c2e7f97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerMoney: {fileID: 11400000, guid: 384a2dd2a2371ab4a992b55471c6b828, type: 2}
 --- !u!1 &1120891911
 GameObject:
   m_ObjectHideFlags: 0
@@ -29571,7 +29522,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd45b23de4ef6a945a3b4efa11db5a32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerKills: {fileID: 11400000, guid: 851bc228e2f9dc149b89de276d5d60a8, type: 2}
 --- !u!1 &1138766658
 GameObject:
   m_ObjectHideFlags: 0
@@ -37674,11 +37624,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a814270161b71664389a48fe0aced99a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lightWeaponsJson: {fileID: 4900000, guid: fc6796ea5dfbdc341a004d5f06320d94, type: 3}
-  heavyWeaponsJson: {fileID: 4900000, guid: a877279f3d4a6bf44bae1eaf0be3f22c, type: 3}
-  armourJson: {fileID: 4900000, guid: 74b27149430c0d04eb9c06a405c0bf53, type: 3}
-  energySystemJson: {fileID: 4900000, guid: 8da2cd7e92868ce49b1df1629d5e95bc, type: 3}
-  engineJson: {fileID: 4900000, guid: 2b33c56035e3e4e429ab3ea291490fc0, type: 3}
   playerUpgradesState: {fileID: 11400000, guid: b5f4d067d7d0e2744ab5cdf2c7f613f0,
     type: 2}
 --- !u!1 &1532187056
@@ -52042,4 +51987,3 @@ SceneRoots:
   - {fileID: 1656113329}
   - {fileID: 2050942555}
   - {fileID: 1291590651}
-  - {fileID: 975507847}

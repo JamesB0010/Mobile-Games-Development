@@ -11,6 +11,6 @@ public class ResetDataOnBuild : IPreprocessBuildWithReport
 
     public void OnPreprocessBuild(BuildReport report)
     {
-        ResetScriptableObjects.ResetObjects();
+        ResetScriptableObjects.WipeSaveData();
     }
 }

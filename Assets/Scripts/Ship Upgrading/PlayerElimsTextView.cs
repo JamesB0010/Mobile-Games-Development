@@ -7,13 +7,11 @@ using UnityEngine;
 [RequireComponent(typeof(TextMeshProUGUI))]
 public class PlayerElimsTextView : MonoBehaviour
 {
-    [SerializeField] private IntReference playerKills;
-
     private TextMeshProUGUI text;
 
     private void Start()
     {
         this.text = GetComponent<TextMeshProUGUI>();
-        this.text.text = this.playerKills.GetValue().ToString();
+        this.text.text = BuzzardGameData.PlayerKills.GetValue().ToString();
     }
 }

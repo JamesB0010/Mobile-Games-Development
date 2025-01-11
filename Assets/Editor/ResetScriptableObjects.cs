@@ -10,110 +10,44 @@ public class ResetScriptableObjects : ScriptableObject
 {
     [SerializeField] private PlayerUpgradesState upgradesState;
 
-    //[MenuItem("Custom/Reset Scriptable Objects and Save Files")]
-    //This resets the scriptable objects which need to be resetted for the game to be built
-    public static void ResetObjects()
+    private static ResetScriptableObjects instance = null;
+    private void Awake()
     {
-        Debug.LogError("Reset scriptable object not fixed");
-        return;
+        if (instance == null && instance != this)
+        {
+            instance = this;
+            return;
+        }
+        
+        ScriptableObject.Destroy(this);
     }
-    /*
-       ResetScriptableObjects instance = Resources.Load<ResetScriptableObjects>("Reset Scriptable Objects");
 
-       instance.upgradesState.ResetLightGuns();
+    private void OnEnable()
+    {
+         if (instance == null && instance != this)
+         {
+             instance = this;
+             return;
+         }
+         
+         ScriptableObject.Destroy(this);       
+    }
 
-       instance.upgradesState.ResetHeavyGuns();
-
-       instance.upgradesState.ResetArmour();
-
-       instance.upgradesState.ResetEngine();
-
-       instance.upgradesState.ResetEnergySystem();
-
-       SaveLightWeaponsStateJsonFile(instance);
-
-       SaveHeavyWeaponsStateJsonFile(instance);
-
-       SaveArmourStateJsonFile(instance);
-
-       SaveEngineStateJsonFile(instance);
-
-       SaveEnergySystemStateJsonFile(instance);
-
-       instance.playerMoney.SetValue(0);
-
-       instance.playerKills.SetValue(0);
-
-       instance.gamesPlayed.SetValue(0);
-
-       instance.gyroEnabled.SetValue(true);
-
-       instance.invertedPitch.SetValue(true);
-
-       instance.enemyOutlineColor.SetValue(Color.red);
-
-       instance.enemyOutlineWidth.SetValue(6);
-
-       instance.primaryUiColor.SetValue(new Color(1,1,1, 1));
-       instance.secondaryUiColor.SetValue(new Color(0, 0.8862745098f, 0.09019607843f, 1));
-       instance.tertiaryUiColor.SetValue(Color.red);
-
-       new UpgradesCounterJsonObject().GenerateDefaultSafeFile(instance.OwnedUpgradesCounterJsonSaveFile);
-
-       BuzzardGameData.Save();
-   }
-
-   private static void SaveLightWeaponsStateJsonFile(ResetScriptableObjects instance)
-   {
-       SavedUpgradesJsonObject upgrades = new SavedUpgradesJsonObject(instance.upgradesState.LightGunsAbstract);
-       string jsonString = JsonUtility.ToJson(upgrades, true);
-       string saveFilePath = Application.dataPath + AssetDatabase.GetAssetPath(instance.lightWeaponConfigurationSaveFile).Substring(6);
-       File.WriteAllText(saveFilePath, jsonString);
-       AssetDatabase.SaveAssetIfDirty(instance.lightWeaponConfigurationSaveFile);
-   }
-
-   private static void SaveHeavyWeaponsStateJsonFile(ResetScriptableObjects instance)
-   {
-       SavedUpgradesJsonObject upgrades = new SavedUpgradesJsonObject(instance.upgradesState.HeavyGunsAbstract);
-       string jsonString = JsonUtility.ToJson(upgrades, true);
-       string saveFilePath = Application.dataPath + AssetDatabase.GetAssetPath(instance.heavyWeaponConfigurationSaveFile).Substring(6);
-       File.WriteAllText(saveFilePath, jsonString);
-       AssetDatabase.SaveAssetIfDirty(instance.heavyWeaponConfigurationSaveFile);
-   }
-
-   private static void SaveArmourStateJsonFile(ResetScriptableObjects instance)
-   {
-       SavedUpgradesJsonObject armour = new SavedUpgradesJsonObject(new List<ShipItemUpgrade>()
-           { instance.upgradesState.ArmourAbstract });
-
-       string jsonString = JsonUtility.ToJson(armour, true);
-       string saveFilePath = Application.dataPath + AssetDatabase.GetAssetPath(instance.armourConfigurationSaveFile).Substring(6);
-
-       File.WriteAllText(saveFilePath, jsonString);
-       AssetDatabase.SaveAssetIfDirty(instance.armourConfigurationSaveFile);
-   }
-
-   private static void SaveEngineStateJsonFile(ResetScriptableObjects instance)
-   {
-       SavedUpgradesJsonObject engine = new SavedUpgradesJsonObject(new List<ShipItemUpgrade>()
-           { instance.upgradesState.EngineAbstract });
-
-       string jsonString = JsonUtility.ToJson(engine, true);
-       string saveFilePath = Application.dataPath + AssetDatabase.GetAssetPath(instance.engineConfigurationSaveFile).Substring(6);
-
-       File.WriteAllText(saveFilePath, jsonString);
-       AssetDatabase.SaveAssetIfDirty(instance.engineConfigurationSaveFile);
-   }
-
-   private static void SaveEnergySystemStateJsonFile(ResetScriptableObjects instance)
-   {
-       SavedUpgradesJsonObject energySystem = new SavedUpgradesJsonObject(new List<ShipItemUpgrade>()
-           { instance.upgradesState.EnergySystemAbstract });
-
-       string jsonString = JsonUtility.ToJson(energySystem, true);
-       string saveFilePath = Application.dataPath + AssetDatabase.GetAssetPath(instance.energySystemConfigurationSaveFile).Substring(6);
-
-       File.WriteAllText(saveFilePath, jsonString);
-       AssetDatabase.SaveAssetIfDirty(instance.energySystemConfigurationSaveFile);
-   }*/
+    [MenuItem("Custom/Wipe Save Data")]
+    //This resets the scriptable objects which need to be resetted for the game to be built
+    public static void WipeSaveData()
+    {
+        string jsonPath = Path.Combine(Application.persistentDataPath, "Json");
+        string audioPath = Path.Combine(Application.persistentDataPath, "AudioRecordings"); 
+        
+        if(Directory.Exists(jsonPath))
+            Directory.Delete(jsonPath, true);
+        
+        if(Directory.Exists(audioPath))
+            Directory.Delete(audioPath, true);
+        
+        instance.upgradesState.ResetAll();
+        
+        Debug.Log("Persistant data wiped");
+    }
 }

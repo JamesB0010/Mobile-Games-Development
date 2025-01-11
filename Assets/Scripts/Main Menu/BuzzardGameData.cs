@@ -5,8 +5,10 @@ using System.IO;
 using System.Runtime.CompilerServices;
 using System.Text;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.PlayerLoop;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -15,8 +17,38 @@ using UnityEngine.UI;
 /// it should be assumed that an instance of this class will be available in all game scenes
 /// as it will be created in the main menu
 /// </summary>
-public class BuzzardGameData : MonoBehaviour
+public class BuzzardGameData 
 {
+    private BuzzardGameData()
+    {
+    }
+    
+   private void Init()
+   { 
+    this.SetupDependencies();
+        
+        BuzzardGameData.ReadLocalSaveFile();
+        
+        G_SaveGameInteractor.AddReadEventCallback(this.OnSavedGameRead);
+        
+        SceneManager.activeSceneChanged += ((sceneFrom, sceneTo) =>
+        {
+            this.SaveAllConfigFilesLocal();
+#if UNITY_EDITOR
+#else
+            this.SaveLocalSaveGameToCloud();
+#endif
+        }); 
+        
+        
+        #if UNITY_EDITOR
+        EditorApplication.playModeStateChanged += change =>
+        {
+            if (change == PlayModeStateChange.ExitingPlayMode)
+                instance = null;
+        };
+        #endif
+    }
     private TextAsset armourConfigFile,
         energySystemConfigFile,
         engineConfigFile,
@@ -24,9 +56,25 @@ public class BuzzardGameData : MonoBehaviour
         lightWeaponsConfigFile,
         ownedUpgradesConfigFile;
 
+    public static TextAsset ArmourConfigFile => Instance.armourConfigFile;
+
+    public static TextAsset EnergySystemsConfigFile => Instance.energySystemConfigFile;
+
+    public static TextAsset EngineConfigFile => Instance.engineConfigFile;
+
+    public static TextAsset HeavyWeaponsConfigFile => Instance.heavyWeaponsConfigFile;
+
+    public static TextAsset LightWeaponsConfigFile => Instance.lightWeaponsConfigFile;
+
+    public static TextAsset OwnedUpgradesConfigFile => Instance.ownedUpgradesConfigFile;
+
     private FloatReference playerMoney;
 
+    public static FloatReference PlayerMoney => Instance.playerMoney;
+
     private IntReference playerKills;
+
+    public static IntReference PlayerKills => Instance.playerKills;
 
     [SerializeField] private SaveGameDebugInfo debugInfo;
 
@@ -36,21 +84,21 @@ public class BuzzardGameData : MonoBehaviour
     {
         get
         {
-            if (instance == null)
-            {
-                //create instance first 
-                GameObject obj = new GameObject("BuzzardGameData");
-                instance = obj.AddComponent<BuzzardGameData>();
-                instance.SetupDependencies();
-            }
+            if (instance != null)
+                return instance;
+
+            instance = new BuzzardGameData();
+            instance.Init();
             return instance;
         }
     }
-    
+
     private GameSaveData saveGameData;
     private IntReference gamesPlayed;
     private BoolReference gyroEnabled;
+    public static BoolReference GyroEnabled => Instance.gyroEnabled;
     private BoolReference pitchInverted;
+    public static BoolReference PitchInverted => Instance.pitchInverted;
     private ColorReference enemyOutlineColor;
     private FloatReference enemyOutlineWidth;
     private ColorReference primaryUiColor;
@@ -77,41 +125,6 @@ public class BuzzardGameData : MonoBehaviour
         Path.Combine("Json", "Tertiary Ui Color.txt")
     };
 
-
-    private void Awake()
-    {
-        if (instance == null)
-        {
-            instance = this;
-        }
-        else
-        {
-            Destroy(this.gameObject);
-        }
-    }
-
-    private void Start()
-    {
-        this.SetupDependencies();
-        
-        BuzzardGameData.ReadLocalSaveFile();
-        
-        G_SaveGameInteractor.AddReadEventCallback(this.OnSavedGameRead);
-        
-        DontDestroyOnLoad(this.gameObject);
-
-        SceneManager.activeSceneChanged += ((sceneFrom, sceneTo) =>
-        {
-            this.SaveAllConfigFilesLocal();
-            #if UNITY_EDITOR
-            AssetDatabase.Refresh();
-            #else
-            this.SaveLocalSaveGameToCloud();
-            #endif
-        });
-    }
-
-
     private void SetupDependencies()
     {
         string dependencyDirectoryPath = Path.Combine(Application.persistentDataPath, "Json");
@@ -134,6 +147,8 @@ public class BuzzardGameData : MonoBehaviour
             }
             this.CreateDependentFiles();
         }
+        
+        this.debugInfo = GameObject.FindObjectOfType<SaveGameDebugInfo>();
     }
 
 
@@ -329,11 +344,6 @@ public class BuzzardGameData : MonoBehaviour
     {
         Instance.SaveAllConfigFilesLocal();
 #if UNITY_EDITOR
-        if (!Application.isPlaying)
-        {
-            DestroyImmediate(Instance.gameObject);
-            instance = null;
-        }
 #else
         Instance.SaveLocalSaveGameToCloud();
 #endif

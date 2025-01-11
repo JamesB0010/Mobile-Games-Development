@@ -40,7 +40,7 @@ public class Inspector_OwnedUpgradesCounter : Editor
 
         if (GUILayout.Button("Generate Default Save File"))
         {
-            new UpgradesCounterJsonObject().GenerateDefaultSafeFile(this.castedTarget.JsonSaveFile);
+            new UpgradesCounterJsonObject().GenerateDefaultSafeFile(BuzzardGameData.OwnedUpgradesConfigFile);
         }
     }
 }

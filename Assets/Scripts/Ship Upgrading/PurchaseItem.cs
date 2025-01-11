@@ -9,7 +9,6 @@ using UnityEngine;
 
 public class PurchaseItem : ItemShopAction
 {
-    [SerializeField] private FloatReference playerMoney;
     public event Action SelectedCellPurchased;
 
     public event Action PurchaseFailed;
@@ -31,7 +30,7 @@ public class PurchaseItem : ItemShopAction
 
     private bool IsAbleToMakePurchase(UpgradeCell cell)
     {
-        float PlayerMoneyFloat = (float)this.playerMoney.GetValue();
+        float PlayerMoneyFloat = BuzzardGameData.PlayerMoney.GetValue();
         bool unableToMakePurchase = cell.Upgrade.Cost > PlayerMoneyFloat || !cell.Upgrade.IsPurchaseable;
         if (unableToMakePurchase)
         {
@@ -43,7 +42,8 @@ public class PurchaseItem : ItemShopAction
 
     private void DeductFromPlayerMoney(float amountToDeduct)
     {
-        float PlayerMoneyFloat = (float)this.playerMoney.GetValue();
-        this.playerMoney.SetValue(PlayerMoneyFloat - amountToDeduct);
+        FloatReference playerMoney = BuzzardGameData.PlayerMoney;
+        float PlayerMoneyFloat = playerMoney.GetValue();
+        playerMoney.SetValue(PlayerMoneyFloat - amountToDeduct);
     }
 }

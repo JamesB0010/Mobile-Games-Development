@@ -6,40 +6,30 @@ using UnityEngine.Serialization;
 
 public class PlayerShipStateLoader : MonoBehaviour
 {
-    [SerializeField] private TextAsset lightWeaponsJson;
-
-    [SerializeField] private TextAsset heavyWeaponsJson;
-
-    [SerializeField] private TextAsset armourJson;
-
-    [SerializeField] private TextAsset energySystemJson;
-
-    [SerializeField] private TextAsset engineJson;
-    
     [FormerlySerializedAs("playerWeaponsState")] [SerializeField] private PlayerUpgradesState playerUpgradesState;
 
     void Start()
     {
-        string jsonStringLight = this.lightWeaponsJson.text;
+        string jsonStringLight = BuzzardGameData.LightWeaponsConfigFile.text;
         SavedUpgradesJsonObject lightUpgradesObject = JsonUtility.FromJson<SavedUpgradesJsonObject>(jsonStringLight);
         this.playerUpgradesState.LightGuns = lightUpgradesObject.GetSavedUpgrades().OfType<LightGunUpgrade>().ToList();
 
-        string jsonStringHeavy = this.heavyWeaponsJson.text;
+        string jsonStringHeavy = BuzzardGameData.HeavyWeaponsConfigFile.text;
         SavedUpgradesJsonObject heavyUpgradesObject = JsonUtility.FromJson<SavedUpgradesJsonObject>(jsonStringHeavy);
         this.playerUpgradesState.HeavyGuns = heavyUpgradesObject.GetSavedUpgrades().OfType<HeavyGunUpgrade>().ToList();
 
 
-        string jsonStringArmour = this.armourJson.text;
+        string jsonStringArmour = BuzzardGameData.ArmourConfigFile.text;
         SavedUpgradesJsonObject armourUpgradesObject = JsonUtility.FromJson<SavedUpgradesJsonObject>(jsonStringArmour);
         this.playerUpgradesState.Armour = armourUpgradesObject.GetSavedUpgrades().OfType<ArmourUpgrade>().ToList()[0];
 
-        string jsonStringEnergy = this.energySystemJson.text;
+        string jsonStringEnergy = BuzzardGameData.EnergySystemsConfigFile.text;
         SavedUpgradesJsonObject energyUpgradesObject = JsonUtility.FromJson<SavedUpgradesJsonObject>(jsonStringEnergy);
         this.playerUpgradesState.EnergySystem =
             energyUpgradesObject.GetSavedUpgrades().OfType<EnergySystemsUpgrade>().ToList()[0];
 
 
-        string jsonStringEngine = this.engineJson.text;
+        string jsonStringEngine = BuzzardGameData.EngineConfigFile.text;
         SavedUpgradesJsonObject engineUpgradesObject = JsonUtility.FromJson<SavedUpgradesJsonObject>(jsonStringEngine);
         this.playerUpgradesState.Engine = engineUpgradesObject.GetSavedUpgrades().OfType<EngineUpgrade>().ToList()[0];
         

@@ -94,6 +94,15 @@ public class PlayerUpgradesState : ScriptableObject
         this.armour = this.defaultArmour;
     }
 
+    public void ResetAll()
+    {
+        this.ResetArmour();
+        this.ResetEngine();
+        this.ResetEnergySystem();
+        this.ResetLightGuns();
+        this.ResetHeavyGuns();
+    }
+
     [Space(5)]
     [Header("Engine / Booster")]
     [SerializeField] private EngineUpgrade engine;

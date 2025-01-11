@@ -20,7 +20,7 @@ public class Inspector_ResetSaveFilesAndScriptableObjects : Editor
 
         if (GUILayout.Button("Reset Scriptable Objects"))
         {
-            //ResetScriptableObjects.ResetObjects();
+            ResetScriptableObjects.WipeSaveData();
         }
     }
 }
