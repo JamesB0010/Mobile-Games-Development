@@ -8,13 +8,11 @@ public class EnemyOutlineSizeSetter : MonoBehaviour
 {
     [SerializeField] private float[] sizes;
 
-    [SerializeField] private FloatReference enemyOutlineSize;
-
     private IEnumerator Start()
     {
         yield return null;
         var selectionController = GetComponent<OneOfThreeSelection>();
-        int outlineSize = (int)this.enemyOutlineSize.GetValue();
+        int outlineSize = (int)BuzzardGameData.EnemyOutlineWidth.GetValue();
         if (outlineSize == 2)
         {
             selectionController.SelectedButton = 0;
@@ -30,6 +28,6 @@ public class EnemyOutlineSizeSetter : MonoBehaviour
 
     public void OutlineSizeSelectionChange(int index)
     {
-        this.enemyOutlineSize.SetValue(this.sizes[index]);
+        BuzzardGameData.EnemyOutlineWidth.SetValue(this.sizes[index]);
     }
 }

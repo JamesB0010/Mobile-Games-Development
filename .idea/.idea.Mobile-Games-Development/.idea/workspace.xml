@@ -4,25 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c7630d3b-1041-428d-b5b5-aacdf8ac5685" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Mobile-Games-Development/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Mobile-Games-Development/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Editor/Inspector_OwnedUpgradesCounter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/Inspector_OwnedUpgradesCounter.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Editor/Inspector_ResetSaveFilesAndScriptableObjects.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/Inspector_ResetSaveFilesAndScriptableObjects.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Editor/ResetDataOnBuild.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/ResetDataOnBuild.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Editor/ResetScriptableObjects.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/ResetScriptableObjects.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainMenuBuzzard.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainMenuBuzzard.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Upgrade Ship.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Upgrade Ship.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scriptable objects/State/PlayerWeaponsState.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scriptable objects/State/PlayerWeaponsState.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Main Menu/BuzzardGameData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Main Menu/BuzzardGameData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Main Menu/SettingsUiInitializer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Main Menu/SettingsUiInitializer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Persistent Data/PlayerShipStateLoader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Persistent Data/PlayerShipStateLoader.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Player Wallet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/Player Wallet.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ship Upgrading/OwnedUpgradesCounter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ship Upgrading/OwnedUpgradesCounter.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ship Upgrading/PlayerCreditsTextView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ship Upgrading/PlayerCreditsTextView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ship Upgrading/PlayerElimsTextView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ship Upgrading/PlayerElimsTextView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ship Upgrading/PurchaseItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ship Upgrading/PurchaseItem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/State Management/PlayerUpgradesState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/State Management/PlayerUpgradesState.cs" afterDir="false" />
-    </list>
+    <list default="true" id="c7630d3b-1041-428d-b5b5-aacdf8ac5685" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -399,6 +381,7 @@
       <workItem from="1736563973695" duration="372000" />
       <workItem from="1736564403779" duration="411000" />
       <workItem from="1736564911951" duration="320000" />
+      <workItem from="1736601944286" duration="411000" />
     </task>
     <servers />
   </component>

@@ -101,6 +101,8 @@ public class BuzzardGameData
     public static BoolReference PitchInverted => Instance.pitchInverted;
     private ColorReference enemyOutlineColor;
     private FloatReference enemyOutlineWidth;
+
+    public static FloatReference EnemyOutlineWidth => Instance.enemyOutlineWidth;
     private ColorReference primaryUiColor;
     private ColorReference tertiaryUiColor;
     private ColorReference secondaryUiColor;
