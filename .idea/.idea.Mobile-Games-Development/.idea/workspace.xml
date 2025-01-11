@@ -6,38 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="c7630d3b-1041-428d-b5b5-aacdf8ac5685" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Mobile-Games-Development/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Mobile-Games-Development/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Editor/Inspector_ResetSaveFilesAndScriptableObjects.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/Inspector_ResetSaveFilesAndScriptableObjects.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Editor/ResetScriptableObjects.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/ResetScriptableObjects.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/AudioRecordings.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/AudioRecordings/recording.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/AudioRecordings/recording.wav.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Json.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Json/EliminationCount.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Json/EliminationCount.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Json/EnemyOutlineSize.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Json/EnemyOutlineSize.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Json/EnemyShipOutlineColor.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Json/EnemyShipOutlineColor.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Json/Games Played.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Json/Games Played.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Json/GyroEnabled.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Json/GyroEnabled.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Json/InvertPitch.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Json/InvertPitch.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Json/Player Money.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Json/Player Money.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Json/PrimaryUiColor.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Json/PrimaryUiColor.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Json/Secondary Ui Color.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Json/Secondary Ui Color.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Json/Tertiary Ui Color.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Json/Tertiary Ui Color.asset.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/AudioRecording/AudioRecorder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AudioRecording/AudioRecorder.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/AudioRecording/UserSubmittedSoundLoader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AudioRecording/UserSubmittedSoundLoader.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Main Menu/BuzzardGameData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Main Menu/BuzzardGameData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ship Upgrading/EquipItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ship Upgrading/EquipItem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ship Upgrading/GameSaveData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ship Upgrading/GameSaveData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ship Upgrading/UpgradesCounterJsonObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ship Upgrading/UpgradesCounterJsonObject.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AudioRecording/WavLoader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AudioRecording/WavLoader.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -315,10 +286,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="24152">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="17984">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="24152" />
+      <option name="pid" value="17984" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -406,6 +377,7 @@
       <workItem from="1736505722023" duration="10461000" />
       <workItem from="1736532932716" duration="3330000" />
       <workItem from="1736538552568" duration="11553000" />
+      <workItem from="1736552148964" duration="2469000" />
     </task>
     <servers />
   </component>
@@ -518,30 +490,17 @@
           <option name="timeStamp" value="107" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/AudioRecording/AudioRecorder.cs</url>
-          <line>100</line>
-          <properties documentPath="C:\Users\james\OneDrive\Documents\University\Year 3\Mobile-Games-Development\Assets\Scripts\AudioRecording\AudioRecorder.cs" initialLine="98" containingFunctionPresentation="Method 'SaveRecording'">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/AudioRecording/WavLoader.cs</url>
+          <line>14</line>
+          <properties documentPath="C:\Users\james\OneDrive\Documents\University\Year 3\Mobile-Games-Development\Assets\Scripts\AudioRecording\WavLoader.cs" initialLine="14" containingFunctionPresentation="Method 'LoadClip'">
             <startOffsets>
-              <option value="2818" />
+              <option value="350" />
             </startOffsets>
             <endOffsets>
-              <option value="2823" />
+              <option value="396" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="124" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/AudioRecording/AudioRecorder.cs</url>
-          <line>24</line>
-          <properties documentPath="C:\Users\james\OneDrive\Documents\University\Year 3\Mobile-Games-Development\Assets\Scripts\AudioRecording\AudioRecorder.cs" initialLine="24" containingFunctionPresentation="Method 'Start'">
-            <startOffsets>
-              <option value="627" />
-            </startOffsets>
-            <endOffsets>
-              <option value="690" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="126" />
+          <option name="timeStamp" value="135" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

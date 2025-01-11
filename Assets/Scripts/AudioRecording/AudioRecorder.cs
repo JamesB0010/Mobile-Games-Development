@@ -23,6 +23,11 @@ public class AudioRecorder : MonoBehaviour
     {
         string dataPath = Application.persistentDataPath;
         this.directoryPath = Path.Combine(dataPath, "AudioRecordings");
+
+        if (!Directory.Exists(this.directoryPath))
+            Directory.CreateDirectory(this.directoryPath);
+
+
         BuzzardGameData.ReadLocalSaveFile();
         //up to here works then something after modifies the sound file
     }
@@ -97,11 +102,6 @@ public class AudioRecorder : MonoBehaviour
     {
         if(recordedClip != null)
         {
-            bool exists = Directory.Exists(this.directoryPath);
-            if (!exists)
-                Directory.CreateDirectory(this.directoryPath);
-            
-            
             filePath = Path.Combine(this.directoryPath, filename);
             WavUtility.Save(filePath, this.recordedClip);
             Debug.Log($"Recording saved as {filePath}");
