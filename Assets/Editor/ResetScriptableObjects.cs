@@ -33,7 +33,6 @@ public class ResetScriptableObjects : ScriptableObject
          ScriptableObject.Destroy(this);       
     }
 
-    [MenuItem("Custom/Wipe Save Data")]
     //This resets the scriptable objects which need to be resetted for the game to be built
     public static void WipeSaveData()
     {

@@ -41,7 +41,9 @@ public class UpgradesCounterJsonObject
 
     public void SaveData(TextAsset saveFile)
     {
-        File.WriteAllText(Path.Combine(Application.persistentDataPath, "Json", saveFile.name + ".txt"), JsonUtility.ToJson(this, true));
+        string filepath = Path.Combine(Application.persistentDataPath, "Json", saveFile.name + ".txt");
+        File.WriteAllText(filepath, JsonUtility.ToJson(this, true));
+        BuzzardGameData.ReloadTextFiles();
     }
 
     public void GenerateDefaultSafeFile(TextAsset jsonSaveFile)

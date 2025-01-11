@@ -157,11 +157,22 @@ public class BuzzardGameData
     private void LoadDependencies()
     {
         this.armourConfigFile = new TextAsset(File.ReadAllText(Path.Combine(Application.persistentDataPath, "Json", "armourConfiguration.txt")));
+        this.armourConfigFile.name = "armourConfiguration";
+        
         this.energySystemConfigFile = new TextAsset(File.ReadAllText(Path.Combine(Application.persistentDataPath,"Json", "energySystemConfiguration.txt")));
+        this.energySystemConfigFile.name = "energySystemConfiguration";
+        
         this.engineConfigFile = new TextAsset(File.ReadAllText(Path.Combine(Application.persistentDataPath,"Json", "engineConfiguration.txt")));
+        this.engineConfigFile.name = "engineConfiguration";
+        
         this.heavyWeaponsConfigFile = new TextAsset(File.ReadAllText(Path.Combine(Application.persistentDataPath,"Json", "heavyWeaponConfiguration.txt")));
+        this.heavyWeaponsConfigFile.name = "heavyWeaponConfiguration";
+        
         this.lightWeaponsConfigFile = new TextAsset(File.ReadAllText(Path.Combine(Application.persistentDataPath,"Json", "lightWeaponConfiguration.txt")));
+        this.lightWeaponsConfigFile.name = "lightWeaponConfiguration";
+        
         this.ownedUpgradesConfigFile = new TextAsset(File.ReadAllText(Path.Combine(Application.persistentDataPath,"Json", "ownedUpgradesCounter.txt")));
+        this.ownedUpgradesConfigFile.name = "ownedUpgradesCounter";
         
         this.playerMoney = Resources.Load<FloatReference>("Json/Player Money");
         this.playerKills = Resources.Load<IntReference>("Json/EliminationCount");
@@ -399,5 +410,26 @@ public class BuzzardGameData
         output += "\"userSound\": " + "\"" + sound + "\"";
         output += "}";
         return output;
+    }
+
+    public static void ReloadTextFiles()
+    {
+        Instance.armourConfigFile = new TextAsset(File.ReadAllText(Path.Combine(Application.persistentDataPath, "Json", "armourConfiguration.txt")));
+        Instance.armourConfigFile.name = "armourConfiguration";
+
+        Instance.energySystemConfigFile = new TextAsset(File.ReadAllText(Path.Combine(Application.persistentDataPath, "Json", "energySystemConfiguration.txt")));
+        Instance.energySystemConfigFile.name = "energySystemConfiguration";
+
+        Instance.engineConfigFile = new TextAsset(File.ReadAllText(Path.Combine(Application.persistentDataPath, "Json", "engineConfiguration.txt")));
+        Instance.engineConfigFile.name = "engineConfiguration";
+
+        Instance.heavyWeaponsConfigFile = new TextAsset(File.ReadAllText(Path.Combine(Application.persistentDataPath, "Json", "heavyWeaponConfiguration.txt")));
+        Instance.heavyWeaponsConfigFile.name = "heavyWeaponConfiguration";
+
+        Instance.lightWeaponsConfigFile = new TextAsset(File.ReadAllText(Path.Combine(Application.persistentDataPath, "Json", "lightWeaponConfiguration.txt")));
+        Instance.lightWeaponsConfigFile.name = "lightWeaponConfiguration";
+
+        Instance.ownedUpgradesConfigFile = new TextAsset(File.ReadAllText(Path.Combine(Application.persistentDataPath, "Json", "ownedUpgradesCounter.txt")));
+        Instance.ownedUpgradesConfigFile.name = "ownedUpgradesCounter";
     }
 }

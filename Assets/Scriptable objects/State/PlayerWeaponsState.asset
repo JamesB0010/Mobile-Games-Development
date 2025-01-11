@@ -15,24 +15,24 @@ MonoBehaviour:
   defaultLightGun: {fileID: 11400000, guid: 5b1c74579afd1624b9d483f4953b755a, type: 2}
   noLightGun: {fileID: 11400000, guid: 92ce8debf425093498648378a6d09178, type: 2}
   lightGuns:
-  - {fileID: 11400000, guid: 001e711458261114f8b759ff63cf3e8b, type: 2}
-  - {fileID: 11400000, guid: 001e711458261114f8b759ff63cf3e8b, type: 2}
   - {fileID: 11400000, guid: 5b1c74579afd1624b9d483f4953b755a, type: 2}
   - {fileID: 11400000, guid: 5b1c74579afd1624b9d483f4953b755a, type: 2}
-  - {fileID: 11400000, guid: 8c5d8edaf80e7d64a992e3ab9bde085a, type: 2}
-  - {fileID: 11400000, guid: 5b1c74579afd1624b9d483f4953b755a, type: 2}
-  - {fileID: 11400000, guid: 5b1c74579afd1624b9d483f4953b755a, type: 2}
-  - {fileID: 11400000, guid: 5b1c74579afd1624b9d483f4953b755a, type: 2}
+  - {fileID: 11400000, guid: 92ce8debf425093498648378a6d09178, type: 2}
+  - {fileID: 11400000, guid: 92ce8debf425093498648378a6d09178, type: 2}
+  - {fileID: 11400000, guid: 92ce8debf425093498648378a6d09178, type: 2}
+  - {fileID: 11400000, guid: 92ce8debf425093498648378a6d09178, type: 2}
+  - {fileID: 11400000, guid: 92ce8debf425093498648378a6d09178, type: 2}
+  - {fileID: 11400000, guid: 92ce8debf425093498648378a6d09178, type: 2}
   defaultHeavyGun: {fileID: 11400000, guid: 654056ab37c9ef74b87b9b5e65e4ab50, type: 2}
   heavyGuns:
-  - {fileID: 11400000, guid: 482110b67bd0c3445ae83a08482e6623, type: 2}
-  - {fileID: 11400000, guid: 482110b67bd0c3445ae83a08482e6623, type: 2}
-  - {fileID: 11400000, guid: ae4b44307a00f1241a502489cac5695d, type: 2}
-  - {fileID: 11400000, guid: d7170bb2ad244b346bb93abfc6a17d7e, type: 2}
-  armour: {fileID: 11400000, guid: 51e7331516d43614ba44d9968659c898, type: 2}
+  - {fileID: 11400000, guid: d39e8d0d56211794893a33a4c19a0e3a, type: 2}
+  - {fileID: 11400000, guid: 654056ab37c9ef74b87b9b5e65e4ab50, type: 2}
+  - {fileID: 11400000, guid: 654056ab37c9ef74b87b9b5e65e4ab50, type: 2}
+  - {fileID: 11400000, guid: 654056ab37c9ef74b87b9b5e65e4ab50, type: 2}
+  armour: {fileID: 11400000, guid: 12d51dc336316804cbde7afb2a7255d8, type: 2}
   defaultArmour: {fileID: 11400000, guid: 12d51dc336316804cbde7afb2a7255d8, type: 2}
-  engine: {fileID: 11400000, guid: 46ca42b100f674545b2af3bcde16b0d0, type: 2}
+  engine: {fileID: 11400000, guid: c3c55ec69c349c9428fa66fdaa60d9ae, type: 2}
   defaultEngine: {fileID: 11400000, guid: c3c55ec69c349c9428fa66fdaa60d9ae, type: 2}
-  energySystem: {fileID: 11400000, guid: 2d4c812ed0714514b80226b80cc4ddb1, type: 2}
+  energySystem: {fileID: 11400000, guid: f8ab4004ae39b274b99841ebfd935409, type: 2}
   defaultEnergySystem: {fileID: 11400000, guid: f8ab4004ae39b274b99841ebfd935409,
     type: 2}

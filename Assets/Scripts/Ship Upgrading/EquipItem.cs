@@ -9,18 +9,6 @@ public class EquipItem : ItemShopAction
 {
     public event Action SelectedCellEquipped;
 
-
-    [SerializeField] private TextAsset lightWeaponConfigurationSaveFile;
-
-    [SerializeField] private TextAsset heavyWeaponConfigurationSaveFile;
-
-    [SerializeField] private TextAsset armourConfigurationSaveFile;
-
-    [SerializeField] private TextAsset energySystemConfigurationFile;
-
-    [SerializeField] private TextAsset engineConfigutationFile;
-
-
     private ShipItemUpgrade previouslyOwnedLightWeapon;
     public ShipItemUpgrade PreviouslyOwnedLightWeapon => this.previouslyOwnedLightWeapon;
 
@@ -48,12 +36,8 @@ public class EquipItem : ItemShopAction
         this.playerUpgradesState.EditLightWeaponAtIndex(cell.WeaponIndex, cell.Upgrade);
         SavedUpgradesJsonObject upgrades = new SavedUpgradesJsonObject(this.playerUpgradesState.LightGunsAbstract);
         string jsonString = JsonUtility.ToJson(upgrades, true);
-        
-        
         File.WriteAllText(Path.Combine(Application.persistentDataPath, "Json", "lightWeaponConfiguration.txt"), jsonString);
-        #if UNITY_EDITOR
-        AssetDatabase.SaveAssetIfDirty(this.lightWeaponConfigurationSaveFile);
-        #endif
+        BuzzardGameData.ReloadTextFiles();
     }
 
     public void SaveHeavyWeaponAction(UpgradeCell cell)
@@ -61,10 +45,9 @@ public class EquipItem : ItemShopAction
         this.playerUpgradesState.EditHeavyWeaponAtIndex(cell.WeaponIndex, cell.Upgrade);
         SavedUpgradesJsonObject upgrades = new SavedUpgradesJsonObject(this.playerUpgradesState.HeavyGunsAbstract);
         string jsonString = JsonUtility.ToJson(upgrades, true);
-        File.WriteAllText(Path.Combine(Application.persistentDataPath, "Json", "heavyWeaponConfiguration.txt"), jsonString);
-        #if UNITY_EDITOR
-        AssetDatabase.SaveAssetIfDirty(this.heavyWeaponConfigurationSaveFile);
-        #endif
+        string filepath = Path.Combine(Application.persistentDataPath, "Json", "heavyWeaponConfiguration.txt");
+        File.WriteAllText(filepath, jsonString);
+        BuzzardGameData.ReloadTextFiles();
     }
 
     public void SaveEngineAction(UpgradeCell cell)
@@ -73,9 +56,7 @@ public class EquipItem : ItemShopAction
         SavedUpgradesJsonObject upgrade = new SavedUpgradesJsonObject(this.playerUpgradesState.EngineAbstract);
         string jsonString = JsonUtility.ToJson(upgrade, true);
         File.WriteAllText(Path.Combine(Application.persistentDataPath + "Json", "engineConfiguration.txt") ,jsonString);
-        #if UNITY_EDITOR
-        AssetDatabase.SaveAssetIfDirty(this.engineConfigutationFile);
-        #endif
+        BuzzardGameData.ReloadTextFiles();
     }
 
     public void SaveEnergySystemAction(UpgradeCell cell)
@@ -84,9 +65,7 @@ public class EquipItem : ItemShopAction
         SavedUpgradesJsonObject upgrade = new SavedUpgradesJsonObject(this.playerUpgradesState.EnergySystemAbstract);
         string jsonString = JsonUtility.ToJson(upgrade, true);
         File.WriteAllText(Path.Combine(Application.persistentDataPath, "Json", "energySystemConfiguration.txt"), jsonString);
-        #if UNITY_EDITOR
-        AssetDatabase.SaveAssetIfDirty(this.energySystemConfigurationFile);
-        #endif
+        BuzzardGameData.ReloadTextFiles();
     }
 
     public void SaveArmourAction(UpgradeCell cell)
@@ -95,9 +74,7 @@ public class EquipItem : ItemShopAction
         SavedUpgradesJsonObject upgrade = new SavedUpgradesJsonObject(this.playerUpgradesState.ArmourAbstract);
         string jsonString = JsonUtility.ToJson(upgrade, true);
         File.WriteAllText(Path.Combine(Application.persistentDataPath, "Json", "armourConfiguration.txt"), jsonString);
-        #if UNITY_EDITOR
-        AssetDatabase.SaveAssetIfDirty(this.armourConfigurationSaveFile);
-        #endif
+        BuzzardGameData.ReloadTextFiles();
     }
 
     private void SaveToJson(UpgradeCell cell)
