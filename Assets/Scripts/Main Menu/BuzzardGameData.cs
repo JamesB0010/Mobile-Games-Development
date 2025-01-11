@@ -162,17 +162,28 @@ public class BuzzardGameData
         this.heavyWeaponsConfigFile = new TextAsset(File.ReadAllText(Path.Combine(Application.persistentDataPath,"Json", "heavyWeaponConfiguration.txt")));
         this.lightWeaponsConfigFile = new TextAsset(File.ReadAllText(Path.Combine(Application.persistentDataPath,"Json", "lightWeaponConfiguration.txt")));
         this.ownedUpgradesConfigFile = new TextAsset(File.ReadAllText(Path.Combine(Application.persistentDataPath,"Json", "ownedUpgradesCounter.txt")));
+        
+        this.playerMoney = Resources.Load<FloatReference>("Json/Player Money");
+        this.playerKills = Resources.Load<IntReference>("Json/EliminationCount");
+        this.gamesPlayed = Resources.Load<IntReference>("Json/Games Played");
+        this.gyroEnabled = Resources.Load<BoolReference>("Json/GyroEnabled");
+        this.pitchInverted = Resources.Load<BoolReference>("Json/InvertPitch");
+        this.enemyOutlineColor = Resources.Load<ColorReference>("Json/EnemyShipOutlineColor");
+        this.enemyOutlineWidth = Resources.Load<FloatReference>("Json/EnemyOutlineSize");
+        this.primaryUiColor = Resources.Load<ColorReference>("Json/PrimaryUiColor");
+        this.secondaryUiColor = Resources.Load<ColorReference>("Json/Secondary Ui Color");
+        this.tertiaryUiColor = Resources.Load<ColorReference>("Json/Tertiary Ui Color"); 
 
-        this.playerMoney = FloatReference.JSON.CreateFromFilepath(Path.Combine(Application.persistentDataPath, "Json", "Player Money.txt"));
-        this.playerKills = IntReference.JSON.CreateFromFilepath(Path.Combine(Application.persistentDataPath, "Json", "EliminationCount.txt"));
-        this.gamesPlayed = IntReference.JSON.CreateFromFilepath(Path.Combine(Application.persistentDataPath, "Json", "Games Played.txt"));
-        this.gyroEnabled = BoolReference.JSON.CreateFromFilepath(Path.Combine(Application.persistentDataPath, "Json", "GyroEnabled.txt"));
-        this.pitchInverted = BoolReference.JSON.CreateFromFilepath(Path.Combine(Application.persistentDataPath, "Json", "InvertPitch.txt"));
-        this.enemyOutlineColor = ColorReference.JSON.CreateFromFilepath(Path.Combine(Application.persistentDataPath, "Json", "EnemyShipOutlineColor.txt"));
-        this.enemyOutlineWidth = FloatReference.JSON.CreateFromFilepath(Path.Combine(Application.persistentDataPath, "Json", "EnemyOutlineSize.txt"));
-        this.primaryUiColor = ColorReference.JSON.CreateFromFilepath(Path.Combine(Application.persistentDataPath, "Json", "PrimaryUiColor.txt"));
-        this.secondaryUiColor = ColorReference.JSON.CreateFromFilepath(Path.Combine(Application.persistentDataPath, "Json", "Secondary Ui Color.txt"));
-        this.tertiaryUiColor = ColorReference.JSON.CreateFromFilepath(Path.Combine(Application.persistentDataPath, "Json", "Tertiary Ui Color.txt"));
+        this.playerMoney.SetValue(new FloatReference.JSON(Path.Combine(Application.persistentDataPath, "Json", "Player Money.txt")));
+        this.playerKills.SetValue(new IntReference.JSON(Path.Combine(Application.persistentDataPath, "Json", "EliminationCount.txt")));
+        this.gamesPlayed.SetValue(new IntReference.JSON(Path.Combine(Application.persistentDataPath, "Json", "Games Played.txt")));
+        this.gyroEnabled.SetValue(new BoolReference.JSON(Path.Combine(Application.persistentDataPath, "Json", "GyroEnabled.txt")));
+        this.pitchInverted.SetValue(new BoolReference.JSON(Path.Combine(Application.persistentDataPath, "Json", "InvertPitch.txt")));
+        this.enemyOutlineColor.SetValue(new ColorReference.JSON(Path.Combine(Application.persistentDataPath, "Json", "EnemyShipOutlineColor.txt")));
+        this.enemyOutlineWidth.SetValue(new FloatReference.JSON(Path.Combine(Application.persistentDataPath, "Json", "EnemyOutlineSize.txt")));
+        this.primaryUiColor.SetValue(new ColorReference.JSON(Path.Combine(Application.persistentDataPath, "Json", "PrimaryUiColor.txt")));
+        this.secondaryUiColor.SetValue(new ColorReference.JSON(Path.Combine(Application.persistentDataPath, "Json", "Secondary Ui Color.txt")));
+        this.tertiaryUiColor.SetValue(new ColorReference.JSON(Path.Combine(Application.persistentDataPath, "Json", "Tertiary Ui Color.txt")));
     }
 
     private void CreateDependentFiles()

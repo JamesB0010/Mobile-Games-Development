@@ -18,6 +18,12 @@ public class FloatReference : SuperBaseScriptableValRef<float>
             this.value = val;
         }
 
+        public JSON(string filepath)
+        {
+            var data = JsonUtility.FromJson<FloatReference.JSON>(File.ReadAllText(filepath));
+            this.value = data.value;
+        }
+
         public static FloatReference CreateFromFilepath(string path)
         {
             FloatReference val = ScriptableObject.CreateInstance<FloatReference>();
@@ -42,6 +48,11 @@ public class FloatReference : SuperBaseScriptableValRef<float>
         
         this.value = val;
         this.valueChanged?.Invoke(this.value);
+    }
+
+    public void SetValue(FloatReference.JSON json)
+    {
+        this.value = json.value;
     }
 
     public static FloatReference operator +(FloatReference to, float val)

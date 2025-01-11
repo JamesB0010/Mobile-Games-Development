@@ -4,7 +4,35 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c7630d3b-1041-428d-b5b5-aacdf8ac5685" name="Changes" comment="" />
+    <list default="true" id="c7630d3b-1041-428d-b5b5-aacdf8ac5685" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Json/EliminationCount.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Json/EliminationCount.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Json/EnemyOutlineSize.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Json/EnemyOutlineSize.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Json/EnemyShipOutlineColor.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Json/EnemyShipOutlineColor.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Json/Games Played.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Json/Games Played.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Json/GyroEnabled.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Json/GyroEnabled.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Json/InvertPitch.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Json/InvertPitch.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Json/Player Money.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Json/Player Money.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Json/PrimaryUiColor.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Json/PrimaryUiColor.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Json/Secondary Ui Color.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Json/Secondary Ui Color.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Json/Tertiary Ui Color.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Json/Tertiary Ui Color.asset.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Mobile-Games-Development/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Mobile-Games-Development/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Upgrade Ship.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Upgrade Ship.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Main Menu/BuzzardGameData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Main Menu/BuzzardGameData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Value References/Bool Reference.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Value References/Bool Reference.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Value References/ColorReference.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Value References/ColorReference.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Value References/Float Reference.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Value References/Float Reference.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Value References/IntReference.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Value References/IntReference.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -381,7 +409,7 @@
       <workItem from="1736563973695" duration="372000" />
       <workItem from="1736564403779" duration="411000" />
       <workItem from="1736564911951" duration="320000" />
-      <workItem from="1736601944286" duration="411000" />
+      <workItem from="1736601944286" duration="3180000" />
     </task>
     <servers />
   </component>

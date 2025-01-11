@@ -18,6 +18,12 @@ public class ColorReference : SuperBaseScriptableValRef<Color>
             this.value = new JsonColor(color);
         }
 
+        public JSON(string filepath)
+        {
+            var data = JsonUtility.FromJson<ColorReference.JSON>(File.ReadAllText(filepath));
+            this.value = data.value;
+        }
+
         public static ColorReference CreateFromFilepath(string path)
         {
             ColorReference val = ScriptableObject.CreateInstance<ColorReference>();
@@ -41,5 +47,10 @@ public class ColorReference : SuperBaseScriptableValRef<Color>
 
         this.value = val;
         this.valueChanged?.Invoke(this.value);
+    }
+
+    public void SetValue(ColorReference.JSON json)
+    {
+        this.value = json.value.ToColor();
     }
 }

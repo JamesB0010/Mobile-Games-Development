@@ -18,6 +18,12 @@ public class BoolReference : SuperBaseScriptableValRef<bool>
             this.value = value;
         }
 
+        public JSON(string filepath)
+        {
+            var data = JsonUtility.FromJson<BoolReference.JSON>(File.ReadAllText(filepath));
+            this.value = data.value;
+        }
+
         public static BoolReference CreateFromFilepath(string path)
         {
             BoolReference val = ScriptableObject.CreateInstance<BoolReference>();
@@ -43,5 +49,10 @@ public class BoolReference : SuperBaseScriptableValRef<bool>
         
         this.value = val;
         this.valueChanged?.Invoke(this.value);
+    }
+
+    public void SetValue(BoolReference.JSON json)
+    {
+        this.value = json.value;
     }
 }

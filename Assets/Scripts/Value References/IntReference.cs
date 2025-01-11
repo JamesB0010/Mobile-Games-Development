@@ -18,6 +18,12 @@ public class IntReference : SuperBaseScriptableValRef<int>
             this.value = val;
         }
 
+        public JSON(string filepath)
+        {
+            var data = JsonUtility.FromJson<IntReference.JSON>(File.ReadAllText(filepath));
+            this.value = data.value;
+        }
+
         public static IntReference CreateFromFilepath(string path)
         {
             IntReference val = ScriptableObject.CreateInstance<IntReference>();
@@ -42,6 +48,11 @@ public class IntReference : SuperBaseScriptableValRef<int>
         
         this.value = val;
         this.valueChanged?.Invoke(this.value);
+    }
+
+    public void SetValue(IntReference.JSON json)
+    {
+        this.value = json.value;
     }
 
     public static IntReference operator +(IntReference to, int val)
