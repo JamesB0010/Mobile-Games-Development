@@ -64,10 +64,10 @@ public class ColorPickerExpandContractor : MonoBehaviour, IPointerDownHandler
     private void Awake()
     {
         this.image = GetComponent<Image>();
-        this.colorPickerBackground.pointerDown = () =>
+        this.colorPickerBackground.pointerDown.AddListener( () =>
         {
             this.Expanded = false;
-        };
+        });
     }
 
     private void Start()

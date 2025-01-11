@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
@@ -9,6 +10,9 @@ public class Joystick : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, I
         circle,
         square
     }
+
+    [SerializeField] private BoolReference simpleControls;
+    
     private bool focused;
     private int activePointerId = -1;
 
@@ -25,6 +29,8 @@ public class Joystick : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, I
     [SerializeField] private Joystick.ClampMode clampMode;
 
     public UnityEvent<Vector2> MovementDetected;
+
+    public UnityEvent<Vector2> simpleMovementDetected;
 
     private void Start()
     {
@@ -54,7 +60,17 @@ public class Joystick : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, I
         }
 
         this.currentPos = pointerPos;
-        this.MovementDetected?.Invoke(PositionToNormalisedDirection());
+
+        Vector2 inputDirection = PositionToNormalisedDirection();
+        if (this.simpleControls.GetValue())
+        {
+            this.simpleMovementDetected?.Invoke(inputDirection);
+        }
+        else
+        {
+            this.MovementDetected?.Invoke(inputDirection);
+        }
+
 
         this.transform.position = pointerPos;
     }
@@ -129,7 +145,15 @@ public class Joystick : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, I
             transform.position = this.GetDefaultPosition();
             this.currentPos = this.transform.position;
 
-            this.MovementDetected?.Invoke(this.PositionToNormalisedDirection());
+            Vector2 movementDirec = this.PositionToNormalisedDirection();
+            if (this.simpleControls)
+            {
+                this.simpleMovementDetected?.Invoke(movementDirec);
+            }
+            else
+            {
+                this.MovementDetected?.Invoke(movementDirec);
+            }
         }
     }
 }

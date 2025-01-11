@@ -23,7 +23,6 @@ public class Enemy : EnemyBase
     [SerializeField] private float desiredDirectionChangeInterval = 5;
     private PhasedEventTimeKeeper directionChangeTimeKeeper ;
 
-
     private void Start()
     {
         this.directionChangeTimeKeeper = new PhasedEventTimeKeeper(this.desiredDirectionChangeInterval);
@@ -79,7 +78,7 @@ public class Enemy : EnemyBase
 
     private void OnDeath()
     {
-        this.enemiesManager.EnemyDied(this);
+        this.enemiesManager?.EnemyDied(this);
         Instantiate(this.DeathParticle, transform.position, Quaternion.identity);
     }
 }

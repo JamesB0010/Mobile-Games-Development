@@ -20,6 +20,7 @@ public class GameSaveData
    public JsonColor primaryUiColor;
    public JsonColor secondaryUiColor;
    public JsonColor tertiaryUiColor;
+   public bool simpleControls;
    public string userSound;
 
    public void WriteToSaveGameJsonFile()

@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 public class DirectionalMarkersManager : MonoBehaviour
 {
-    private List<EnemyBase> enemies;
+    private List<EnemyBase> enemies = new List<EnemyBase>();
 
     public List<EnemyBase> Enemies
     {

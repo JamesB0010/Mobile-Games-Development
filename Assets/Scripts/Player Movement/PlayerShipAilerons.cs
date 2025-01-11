@@ -8,6 +8,8 @@ using UnityEngine.Serialization;
 public class PlayerShipAilerons : MonoBehaviour
 {
     [SerializeField] private BoolReference usingGyro;
+    [SerializeField] private BoolReference simpleInput;
+    
     private bool UsingGyro => this.usingGyro.GetValue();
     private float inputtedRoll;
     public float InputtedRoll => inputtedRoll;
@@ -38,6 +40,9 @@ public class PlayerShipAilerons : MonoBehaviour
         if (this.UsingGyro)
         {
             this.inputtedRoll = AttitudeInput.GetRollNormalized();
+
+            if (this.simpleInput.GetValue())
+                this.inputtedRoll = 0;
         }
     }
 
@@ -53,6 +58,8 @@ public class PlayerShipAilerons : MonoBehaviour
     {
         this.inputtedRoll = value.x;
     }
+    
+    
 
     public void SetSensitivityAiming()
     {

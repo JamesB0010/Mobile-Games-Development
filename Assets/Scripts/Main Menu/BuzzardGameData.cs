@@ -106,6 +106,8 @@ public class BuzzardGameData
     private ColorReference primaryUiColor;
     private ColorReference tertiaryUiColor;
     private ColorReference secondaryUiColor;
+    private BoolReference simpleControls;
+    public static BoolReference SimpleControls => Instance.simpleControls;
 
     private string[] filePaths = new[]
     {
@@ -124,7 +126,8 @@ public class BuzzardGameData
         Path.Combine("Json", "EnemyOutlineSize.txt"),
         Path.Combine("Json", "PrimaryUiColor.txt"),
         Path.Combine("Json", "Secondary Ui Color.txt"),
-        Path.Combine("Json", "Tertiary Ui Color.txt")
+        Path.Combine("Json", "Tertiary Ui Color.txt"),
+        Path.Combine("Json", "Simple Controls.txt")
     };
 
     private void SetupDependencies()
@@ -183,7 +186,8 @@ public class BuzzardGameData
         this.enemyOutlineWidth = Resources.Load<FloatReference>("Json/EnemyOutlineSize");
         this.primaryUiColor = Resources.Load<ColorReference>("Json/PrimaryUiColor");
         this.secondaryUiColor = Resources.Load<ColorReference>("Json/Secondary Ui Color");
-        this.tertiaryUiColor = Resources.Load<ColorReference>("Json/Tertiary Ui Color"); 
+        this.tertiaryUiColor = Resources.Load<ColorReference>("Json/Tertiary Ui Color");
+        this.simpleControls = Resources.Load<BoolReference>("Json/Simple Controls");
 
         this.playerMoney.SetValue(new FloatReference.JSON(Path.Combine(Application.persistentDataPath, "Json", "Player Money.txt")));
         this.playerKills.SetValue(new IntReference.JSON(Path.Combine(Application.persistentDataPath, "Json", "EliminationCount.txt")));
@@ -195,6 +199,7 @@ public class BuzzardGameData
         this.primaryUiColor.SetValue(new ColorReference.JSON(Path.Combine(Application.persistentDataPath, "Json", "PrimaryUiColor.txt")));
         this.secondaryUiColor.SetValue(new ColorReference.JSON(Path.Combine(Application.persistentDataPath, "Json", "Secondary Ui Color.txt")));
         this.tertiaryUiColor.SetValue(new ColorReference.JSON(Path.Combine(Application.persistentDataPath, "Json", "Tertiary Ui Color.txt")));
+        this.simpleControls.SetValue(new BoolReference.JSON(Path.Combine(Application.persistentDataPath, "Json", "Simple Controls.txt")));
     }
 
     private void CreateDependentFiles()
@@ -206,35 +211,39 @@ public class BuzzardGameData
         this.lightWeaponsConfigFile = new TextAsset("{\n    \"upgradeReferences\": [\n        \"DefaultAutocannon\",\n        \"DefaultAutocannon\",\n        \"NoLightGun\",\n        \"NoLightGun\",\n        \"NoLightGun\",\n        \"NoLightGun\",\n        \"NoLightGun\",\n        \"NoLightGun\"\n    ]\n}");
         this.ownedUpgradesConfigFile = new TextAsset("{\n    \"serializedDictionary\": [\n        {\n            \"key\": \"AmmoHighDamageHigh\",\n            \"value\": 0\n        },\n        {\n            \"key\": \"AmmoHighDamageLow\",\n            \"value\": 0\n        },\n        {\n            \"key\": \"AmmoLowDamageHigh\",\n            \"value\": 0\n        },\n        {\n            \"key\": \"AmmoMediumDamageHigh\",\n            \"value\": 0\n        },\n        {\n            \"key\": \"AmmoMediumDamageLow\",\n            \"value\": 0\n        },\n        {\n            \"key\": \"DefaultArmour\",\n            \"value\": 0\n        },\n        {\n            \"key\": \"DefaultAutocannon\",\n            \"value\": 0\n        },\n        {\n            \"key\": \"DefaultEnergySystem\",\n            \"value\": 0\n        },\n        {\n            \"key\": \"DefaultEngine\",\n            \"value\": 0\n        },\n        {\n            \"key\": \"HeavyHighEnergy\",\n            \"value\": 0\n        },\n        {\n            \"key\": \"HeavyLowEnergy\",\n            \"value\": 0\n        },\n        {\n            \"key\": \"HighDamageHighEnergy\",\n            \"value\": 0\n        },\n        {\n            \"key\": \"HighDamageLowEnergy\",\n            \"value\": 0\n        },\n        {\n            \"key\": \"HighMaxHighRecharge\",\n            \"value\": 0\n        },\n        {\n            \"key\": \"HighMaxLowRecharge\",\n            \"value\": 0\n        },\n        {\n            \"key\": \"HighThrustHighEnergy\",\n            \"value\": 0\n        },\n        {\n            \"key\": \"HighThrustHighEnergyBoost\",\n            \"value\": 0\n        },\n        {\n            \"key\": \"HighThrustLowEnergy\",\n            \"value\": 0\n        },\n        {\n            \"key\": \"LowDamageLowEnergy\",\n            \"value\": 0\n        },\n        {\n            \"key\": \"LowMaxHighRecharge\",\n            \"value\": 0\n        },\n        {\n            \"key\": \"LowThrustHighEnergyBoost\",\n            \"value\": 0\n        },\n        {\n            \"key\": \"LowThrustLowEnergy\",\n            \"value\": 0\n        },\n        {\n            \"key\": \"MediumDamageHighEnergy\",\n            \"value\": 0\n        },\n        {\n            \"key\": \"MediumDamageLowEnergy\",\n            \"value\": 0\n        },\n        {\n            \"key\": \"MediumHighEnergy\",\n            \"value\": 0\n        },\n        {\n            \"key\": \"MediumLowEnergy\",\n            \"value\": 0\n        },\n        {\n            \"key\": \"MediumMaxHighRecharge\",\n            \"value\": 0\n        },\n        {\n            \"key\": \"MediumMaxLowRecharge\",\n            \"value\": 0\n        },\n        {\n            \"key\": \"MediumThrustHighEnergy\",\n            \"value\": 0\n        },\n        {\n            \"key\": \"MediumThrustHighEnergyBoost\",\n            \"value\": 0\n        },\n        {\n            \"key\": \"MediumThrustLowEnergy\",\n            \"value\": 0\n        },\n        {\n            \"key\": \"NoGun\",\n            \"value\": 0\n        },\n        {\n            \"key\": \"NoLightGun\",\n            \"value\": 0\n        },\n        {\n            \"key\": \"WeakLowEnergy\",\n            \"value\": 0\n        }\n    ]\n}");
 
-        this.playerMoney = ScriptableObject.CreateInstance<FloatReference>();
+        this.playerMoney = Resources.Load<FloatReference>("Json/Player Money");
         this.playerMoney.SetValue(0);
 
-        this.playerKills = ScriptableObject.CreateInstance<IntReference>();
+        this.playerKills = Resources.Load<IntReference>("Json/EliminationCount");
         this.playerKills.SetValue(0);
 
-        this.gamesPlayed = ScriptableObject.CreateInstance<IntReference>();
+        this.gamesPlayed = Resources.Load<IntReference>("Json/Games Played");
         this.gamesPlayed.SetValue(0);
 
-        this.gyroEnabled = ScriptableObject.CreateInstance<BoolReference>();
+        this.gyroEnabled = Resources.Load<BoolReference>("Json/GyroEnabled");
         this.gyroEnabled.SetValue(true);
 
-        this.pitchInverted = ScriptableObject.CreateInstance<BoolReference>();
+        this.pitchInverted = Resources.Load<BoolReference>("Json/InvertPitch");
         this.pitchInverted.SetValue(true);
 
-        this.enemyOutlineColor = ScriptableObject.CreateInstance<ColorReference>();
+        this.enemyOutlineColor = Resources.Load<ColorReference>("Json/EnemyShipOutlineColor");
         this.enemyOutlineColor.SetValue(Color.red);
 
-        this.enemyOutlineWidth = ScriptableObject.CreateInstance<FloatReference>();
+        this.enemyOutlineWidth = Resources.Load<FloatReference>("Json/EnemyOutlineSize");
         this.enemyOutlineWidth.SetValue(6);
 
-        this.primaryUiColor = ScriptableObject.CreateInstance<ColorReference>();
+        this.primaryUiColor = Resources.Load<ColorReference>("Json/PrimaryUiColor");
         this.primaryUiColor.SetValue(Color.white);
 
-        this.secondaryUiColor = ScriptableObject.CreateInstance<ColorReference>();
+        this.secondaryUiColor = Resources.Load<ColorReference>("Json/Secondary Ui Color"); 
         this.secondaryUiColor.SetValue(new Color(0, 0.8862745098f, 0.09019607843f, 1));
 
-        this.tertiaryUiColor = ScriptableObject.CreateInstance<ColorReference>();
+        this.tertiaryUiColor = Resources.Load<ColorReference>("Json/Tertiary Ui Color");
         this.tertiaryUiColor.SetValue(Color.red);
+
+
+        this.simpleControls = Resources.Load<BoolReference>("Json/Simple Controls");
+        this.simpleControls.SetValue(false);
         
 
         string[] fileContents = new string[]
@@ -254,7 +263,8 @@ public class BuzzardGameData
             JsonUtility.ToJson(new FloatReference.JSON(this.enemyOutlineWidth.GetValue())), 
             JsonUtility.ToJson(new ColorReference.JSON(this.primaryUiColor.GetValue())), 
             JsonUtility.ToJson(new ColorReference.JSON(this.secondaryUiColor.GetValue())),
-            JsonUtility.ToJson(new ColorReference.JSON(this.tertiaryUiColor.GetValue())) 
+            JsonUtility.ToJson(new ColorReference.JSON(this.tertiaryUiColor.GetValue())),
+            JsonUtility.ToJson(new BoolReference.JSON(this.simpleControls.GetValue()))
         };
         
         //save to files
@@ -350,6 +360,7 @@ public class BuzzardGameData
         this.primaryUiColor.SetValue(data.primaryUiColor.ToColor());
         this.secondaryUiColor.SetValue(data.secondaryUiColor.ToColor());
         this.tertiaryUiColor.SetValue(data.tertiaryUiColor.ToColor());
+        this.simpleControls.SetValue(data.simpleControls);
         if (data.userSound != "noSoundRecorded")
         {
             WavUtility.CreateEmpty(AudioRecorder.GetFullRecordingFilepath()).Close();
@@ -407,6 +418,7 @@ public class BuzzardGameData
         output += "\"primaryUiColor\":" + JsonUtility.ToJson(new JsonColor(this.primaryUiColor.GetValue())) + ",";
         output += "\"secondaryUiColor\":" + JsonUtility.ToJson(new JsonColor(this.secondaryUiColor.GetValue())) + ",";
         output += "\"tertiaryUiColor\":" + JsonUtility.ToJson(new JsonColor(this.tertiaryUiColor.GetValue())) + ",";
+        output += "\"simpleControls\":" + this.simpleControls.GetValue().ToString().ToLower() + ",";
         output += "\"userSound\": " + "\"" + sound + "\"";
         output += "}";
         return output;
