@@ -59,6 +59,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - default
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e1ca3e1d27172754bab17419eafbdae2
+    m_Address: Assets/MainMainMenuAsteriods.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: e08dd4486316e7a428ba1636ac813e81, type: 2}
   m_SchemaSet:
