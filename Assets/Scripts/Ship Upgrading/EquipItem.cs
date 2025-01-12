@@ -55,7 +55,7 @@ public class EquipItem : ItemShopAction
         this.playerUpgradesState.EditEngine((EngineUpgrade)cell.Upgrade);
         SavedUpgradesJsonObject upgrade = new SavedUpgradesJsonObject(this.playerUpgradesState.EngineAbstract);
         string jsonString = JsonUtility.ToJson(upgrade, true);
-        File.WriteAllText(Path.Combine(Application.persistentDataPath + "Json", "engineConfiguration.txt") ,jsonString);
+        File.WriteAllText(Path.Combine(Application.persistentDataPath, "Json", "engineConfiguration.txt") ,jsonString);
         BuzzardGameData.ReloadTextFiles();
     }
 

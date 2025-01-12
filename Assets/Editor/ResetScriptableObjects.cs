@@ -30,7 +30,7 @@ public class ResetScriptableObjects : ScriptableObject
              return;
          }
          
-         ScriptableObject.Destroy(this);       
+         ScriptableObject.DestroyImmediate(this);       
     }
 
     //This resets the scriptable objects which need to be resetted for the game to be built

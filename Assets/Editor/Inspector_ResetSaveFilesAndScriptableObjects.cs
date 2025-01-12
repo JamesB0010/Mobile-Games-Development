@@ -18,7 +18,7 @@ public class Inspector_ResetSaveFilesAndScriptableObjects : Editor
     {
         base.DrawDefaultInspector();
 
-        if (GUILayout.Button("Reset Scriptable Objects"))
+        if (GUILayout.Button("Wipe Persistant Data"))
         {
             ResetScriptableObjects.WipeSaveData();
         }

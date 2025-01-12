@@ -6,20 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="c7630d3b-1041-428d-b5b5-aacdf8ac5685" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Mobile-Games-Development/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Mobile-Games-Development/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Pitch And Roll Demo.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Pitch And Roll Demo.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Upgrade Ship.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Upgrade Ship.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/mainScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/mainScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/Enemy.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameUiControls/DirectionalMarkersManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameUiControls/DirectionalMarkersManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameUiControls/Joystick.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameUiControls/Joystick.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Editor/ResetScriptableObjects.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/ResetScriptableObjects.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Fonts/ethnocentric rg SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Fonts/ethnocentric rg SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Pitch And Roll Demo.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Pitch And Roll Demo.unity.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Main Menu/BuzzardGameData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Main Menu/BuzzardGameData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Main Menu/ColorPickerExpandContractor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Main Menu/ColorPickerExpandContractor.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Main Menu/SettingsUiInitializer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Main Menu/SettingsUiInitializer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Main Menu/pointerDownPassthrough.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Main Menu/pointerDownPassthrough.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player Movement/PlayerShipAilerons.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player Movement/PlayerShipAilerons.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player Movement/PlayerShipRudder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player Movement/PlayerShipRudder.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ship Upgrading/GameSaveData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ship Upgrading/GameSaveData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ship Upgrading/EquipItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ship Upgrading/EquipItem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ship Upgrading/Interactors/PlayerUpgradesState/playerUpgradesStateInteractorEnergySystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ship Upgrading/Interactors/PlayerUpgradesState/playerUpgradesStateInteractorEnergySystem.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,14 +39,20 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b11ba2a8fbf24f219f7cc98532a1130446ac00/30/17605133/NullReferenceException.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b11ba2a8fbf24f219f7cc98532a1130446ac00/46/dcf5bf78/Buffer.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b11ba2a8fbf24f219f7cc98532a1130446ac00/52/d12b995e/String.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b11ba2a8fbf24f219f7cc98532a1130446ac00/8b/49726cce/List`1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b11ba2a8fbf24f219f7cc98532a1130446ac00/9b/8a3afc9d/Path.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b11ba2a8fbf24f219f7cc98532a1130446ac00/9d/a6f5cab0/File.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b11ba2a8fbf24f219f7cc98532a1130446ac00/a1/e837d8f5/IntPtr.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b11ba2a8fbf24f219f7cc98532a1130446ac00/b6/91fe6c40/ThrowHelper.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b11ba2a8fbf24f219f7cc98532a1130446ac00/ef/3d4252f5/FileStream.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b11ba2a8fbf24f219f7cc98532a1130446ac00/ff/ca1d5ff6/Delegate.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b5f3ce160aa7489fabbd685e71298a613600/79/edb72733/JsonUtility.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c5ed782439084ef1bc2ad85eec89e9fe175a00/01/24f0a37b/UnityEvent.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c5ed782439084ef1bc2ad85eec89e9fe175a00/23/af09c285/MonoBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c5ed782439084ef1bc2ad85eec89e9fe175a00/52/5eb00afe/CachedInvokableCall`1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c5ed782439084ef1bc2ad85eec89e9fe175a00/5a/c6dac61c/GameObject.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c5ed782439084ef1bc2ad85eec89e9fe175a00/6e/6dcfb54c/Transform.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c5ed782439084ef1bc2ad85eec89e9fe175a00/7b/ef33258a/InvokableCall`1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c5ed782439084ef1bc2ad85eec89e9fe175a00/94/5e87e553/Color.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c5ed782439084ef1bc2ad85eec89e9fe175a00/9f/ba0f7d19/ResourcesAPI.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c5ed782439084ef1bc2ad85eec89e9fe175a00/a7/830e8bc0/AsyncOperation.cs" root0="SKIP_HIGHLIGHTING" />
@@ -61,6 +60,8 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c5ed782439084ef1bc2ad85eec89e9fe175a00/af/bbd6bf83/TextAsset.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c5ed782439084ef1bc2ad85eec89e9fe175a00/bc/fcbdf44a/Resources.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c5ed782439084ef1bc2ad85eec89e9fe175a00/be/8d55a826/ResourcesAPIInternal.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c5ed782439084ef1bc2ad85eec89e9fe175a00/dc/fc384ac3/BaseInvokableCall.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c5ed782439084ef1bc2ad85eec89e9fe175a00/f1/6e00ab28/Debug.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../AI/milestones-ai-24-25-JamesB0010/MainProject/Assets/Scripts/Navigation/GridGenerator.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../AI/milestones-ai-24-25-JamesB0010/MainProject/Assets/Scripts/Navigation/Pathfinding Strategies/AStarAlgorithm.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../AI/milestones-ai-24-25-JamesB0010/MainProject/Assets/Scripts/Navigation/Pathfinding Strategies/Pathfinding Strategy.cs" root0="SKIP_HIGHLIGHTING" />
@@ -307,10 +308,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="27252">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="25020">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="27252" />
+      <option name="pid" value="25020" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -405,7 +406,9 @@
       <workItem from="1736564911951" duration="320000" />
       <workItem from="1736601944286" duration="5966000" />
       <workItem from="1736610625141" duration="3600000" />
-      <workItem from="1736624752232" duration="2869000" />
+      <workItem from="1736624752232" duration="3572000" />
+      <workItem from="1736634816585" duration="1209000" />
+      <workItem from="1736639606324" duration="2169000" />
     </task>
     <servers />
   </component>
@@ -505,19 +508,6 @@
           <option name="timeStamp" value="107" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/Ship Upgrading/UpgradesCounterJsonObject.cs</url>
-          <line>44</line>
-          <properties documentPath="C:\Users\james\OneDrive\Documents\University\Year 3\Mobile-Games-Development\Assets\Scripts\Ship Upgrading\UpgradesCounterJsonObject.cs" initialLine="43" containingFunctionPresentation="Method 'SaveData'">
-            <startOffsets>
-              <option value="1311" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1371" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="109" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Scripts/Ship Upgrading/EquipItem.cs</url>
           <line>48</line>
           <properties documentPath="C:\Users\james\OneDrive\Documents\University\Year 3\Mobile-Games-Development\Assets\Scripts\Ship Upgrading\EquipItem.cs" initialLine="48" containingFunctionPresentation="Method 'SaveHeavyWeaponAction'">
@@ -531,46 +521,38 @@
           <option name="timeStamp" value="114" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/Main Menu/BuzzardGameData.cs</url>
-          <line>240</line>
-          <properties documentPath="C:\Users\james\OneDrive\Documents\University\Year 3\Mobile-Games-Development\Assets\Scripts\Main Menu\BuzzardGameData.cs" initialLine="235" containingFunctionPresentation="Method 'CreateDependentFiles'">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Ship Upgrading/Upgrade Scene Manager.cs</url>
+          <line>34</line>
+          <properties documentPath="C:\Users\james\OneDrive\Documents\University\Year 3\Mobile-Games-Development\Assets\Scripts\Ship Upgrading\Upgrade Scene Manager.cs" initialLine="34" containingFunctionPresentation="Method 'TryPurchaseEquipCell'">
             <startOffsets>
-              <option value="14592" />
+              <option value="1047" />
             </startOffsets>
             <endOffsets>
-              <option value="14672" />
+              <option value="1089" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="117" />
+          <option name="timeStamp" value="123" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/Main Menu/BuzzardGameData.cs</url>
-          <line>337</line>
-          <properties documentPath="C:\Users\james\OneDrive\Documents\University\Year 3\Mobile-Games-Development\Assets\Scripts\Main Menu\BuzzardGameData.cs" initialLine="337" containingFunctionPresentation="Method 'SaveAllConfigFilesLocal'">
+          <url>file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c5ed782439084ef1bc2ad85eec89e9fe175a00/01/24f0a37b/UnityEvent.cs</url>
+          <line>67</line>
+          <properties documentPath="C:\Users\james\AppData\Roaming\JetBrains\Rider2023.2\resharper-host\DecompilerCache\decompiler\c5ed782439084ef1bc2ad85eec89e9fe175a00\01\24f0a37b\UnityEvent.cs" initialLine="67" containingFunctionPresentation="Method 'Invoke'">
             <startOffsets>
-              <option value="18292" />
+              <option value="2812" />
             </startOffsets>
             <endOffsets>
-              <option value="18347" />
+              <option value="2857" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="118" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/Main Menu/BuzzardGameData.cs</url>
-          <line>423</line>
-          <properties documentPath="C:\Users\james\OneDrive\Documents\University\Year 3\Mobile-Games-Development\Assets\Scripts\Main Menu\BuzzardGameData.cs" initialLine="423" containingFunctionPresentation="Method 'CollapseConfigFilesToString'">
-            <startOffsets>
-              <option value="23060" />
-            </startOffsets>
-            <endOffsets>
-              <option value="23074" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="120" />
+          <option name="timeStamp" value="126" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="Type#PlayerUpgradesState" memberName="EnergySystemAbstract" />
+      </pinned-members>
+    </pin-to-top-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

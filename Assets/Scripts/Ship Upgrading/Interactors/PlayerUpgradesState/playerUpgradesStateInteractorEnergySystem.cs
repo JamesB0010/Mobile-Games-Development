@@ -10,6 +10,6 @@ public class playerUpgradesStateInteractorEngine : PlayerUpgradesStateInteractor
 
     public override bool IsEqualTo(ShipItemUpgrade otherUpgrade, int index = 0)
     {
-        return this.playerUpgradesState.EnergySystem == otherUpgrade;
+        return this.playerUpgradesState.Engine == otherUpgrade;
     }
 }
