@@ -6,16 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="c7630d3b-1041-428d-b5b5-aacdf8ac5685" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Mobile-Games-Development/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Mobile-Games-Development/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainMenuBuzzard.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainMenuBuzzard.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Main Scene Managers/PlayerInBoundsManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Main Scene Managers/PlayerInBoundsManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Misc/SceneChanger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Misc/SceneChanger.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Scene Changing/Return ToGame From GunStore.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Scene Changing/Return ToGame From GunStore.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Timelines/main menu timeline part 1.playable" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Timelines/main menu timeline part 1.playable" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/santa sleigh.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/santa sleigh.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Asset Store/Planet Earth Free/Materials/Earth4kMaterial.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Asset Store/Planet Earth Free/Materials/Earth4kMaterial.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Main Menu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main Main Menu.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Main Main Menu/MainMainMenuEnvironmentSpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Main Main Menu/MainMainMenuEnvironmentSpawner.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -421,7 +414,7 @@
       <workItem from="1736634816585" duration="1209000" />
       <workItem from="1736639606324" duration="4091000" />
       <workItem from="1736708139014" duration="1215000" />
-      <workItem from="1736710550408" duration="3302000" />
+      <workItem from="1736710550408" duration="4138000" />
     </task>
     <servers />
   </component>

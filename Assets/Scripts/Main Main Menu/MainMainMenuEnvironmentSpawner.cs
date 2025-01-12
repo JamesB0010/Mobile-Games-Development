@@ -25,17 +25,17 @@ public class MainMainMenuEnvironmentSpawner : MonoBehaviour
         SpawnThings(harb, harbSpawns);
     }
 
-    private void SpawnThings(AssetReference thingToSpawn, Transform[] spawnPositions)
+    private void SpawnThings(AssetReference thingToSpawn, Transform[] spawnTransforms)
     {
-        for (int i = 0; i < spawnPositions.Length; i++)
+        for (int i = 0; i < spawnTransforms.Length; i++)
         {
             int j = i;
             thingToSpawn.InstantiateAsync().Completed += handle =>
             {
                 Transform trans = handle.Result.transform;
-                trans.position = this.asteriodPlaces[j].position;
-                trans.rotation = this.asteriodPlaces[j].rotation;
-                trans.localScale = this.asteriodPlaces[j].localScale;
+                trans.position = spawnTransforms[j].position;
+                trans.rotation = spawnTransforms[j].rotation;
+                trans.localScale = spawnTransforms[j].localScale;
             };
         }
     }
