@@ -81,7 +81,7 @@ public class PlayerInBoundsManager : MonoBehaviour
             }
         }, pkg =>
         {
-            SceneManager.LoadScene(1, LoadSceneMode.Single);
+            SceneManager.LoadScene(3, LoadSceneMode.Single);
         });
     }
 

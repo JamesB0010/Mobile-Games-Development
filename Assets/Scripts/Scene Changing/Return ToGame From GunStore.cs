@@ -5,8 +5,4 @@ using UnityEngine.SceneManagement;
 
 public class ReturnToGameFromGunStore : MonoBehaviour
 {
-    public void ReturnToGame()
-    {
-        SceneManager.LoadScene(1, LoadSceneMode.Single);
-    }
 }

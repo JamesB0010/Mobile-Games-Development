@@ -13,6 +13,6 @@ public class SceneChanger : ScriptableObject
     public void LoadSceneWithLoadingScreen(int sceneIndex)
     {
         LoadingScreenSceneIndexCounter.NextSceneIndex = sceneIndex;
-        SceneManager.LoadScene(4);
+        SceneManager.LoadScene(5);
     }
 }
