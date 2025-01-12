@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Light Gun Upgrade Platter
   m_EditorClassIdentifier: 
   upgrades:
+  - {fileID: 11400000, guid: 92ce8debf425093498648378a6d09178, type: 2}
   - {fileID: 11400000, guid: 5b1c74579afd1624b9d483f4953b755a, type: 2}
   - {fileID: 11400000, guid: 001e711458261114f8b759ff63cf3e8b, type: 2}
   - {fileID: 11400000, guid: 3f92cdefcb3297a4bb7aadbeaee613cb, type: 2}

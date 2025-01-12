@@ -7,12 +7,12 @@
     <list default="true" id="c7630d3b-1041-428d-b5b5-aacdf8ac5685" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Mobile-Games-Development/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Mobile-Games-Development/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Editor/ResetScriptableObjects.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/ResetScriptableObjects.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fonts/ethnocentric rg SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Fonts/ethnocentric rg SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Pitch And Roll Demo.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Pitch And Roll Demo.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Main Menu/BuzzardGameData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Main Menu/BuzzardGameData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ship Upgrading/EquipItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ship Upgrading/EquipItem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ship Upgrading/Interactors/PlayerUpgradesState/playerUpgradesStateInteractorEnergySystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ship Upgrading/Interactors/PlayerUpgradesState/playerUpgradesStateInteractorEnergySystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Pitch And Roll Demo.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Pitch And Roll Demo.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/BuzzardGameData.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/BuzzardGameData.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scriptable objects/Ship Upgrade system/ShipUpgradesPlatter/Light Gun Upgrade Platter.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scriptable objects/Ship Upgrade system/ShipUpgradesPlatter/Light Gun Upgrade Platter.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -124,6 +124,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Ship Upgrading/ShipViewButton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Ship Upgrading/UpgradeSceneShipInstantiatior.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Value References/IntReference.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/TakeScreenshot.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.addressables@1.21.21/Runtime/ResourceManager/Util/DelegateList.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.burst@1.8.13/Runtime/DiagnosticId.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.cinemachine@2.10.3/Runtime/Behaviours/CinemachineBrain.cs" root0="SKIP_HIGHLIGHTING" />
@@ -408,7 +409,7 @@
       <workItem from="1736610625141" duration="3600000" />
       <workItem from="1736624752232" duration="3572000" />
       <workItem from="1736634816585" duration="1209000" />
-      <workItem from="1736639606324" duration="2169000" />
+      <workItem from="1736639606324" duration="4091000" />
     </task>
     <servers />
   </component>

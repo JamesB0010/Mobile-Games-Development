@@ -10,29 +10,6 @@ public class ResetScriptableObjects : ScriptableObject
 {
     [SerializeField] private PlayerUpgradesState upgradesState;
 
-    private static ResetScriptableObjects instance = null;
-    private void Awake()
-    {
-        if (instance == null && instance != this)
-        {
-            instance = this;
-            return;
-        }
-        
-        ScriptableObject.Destroy(this);
-    }
-
-    private void OnEnable()
-    {
-         if (instance == null && instance != this)
-         {
-             instance = this;
-             return;
-         }
-         
-         ScriptableObject.DestroyImmediate(this);       
-    }
-
     //This resets the scriptable objects which need to be resetted for the game to be built
     public static void WipeSaveData()
     {
@@ -44,8 +21,6 @@ public class ResetScriptableObjects : ScriptableObject
         
         if(Directory.Exists(audioPath))
             Directory.Delete(audioPath, true);
-        
-        instance.upgradesState.ResetAll();
         
         Debug.Log("Persistant data wiped");
     }
