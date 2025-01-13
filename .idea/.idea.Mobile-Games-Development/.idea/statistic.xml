@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Statistic">
+    <option name="excludedDirectories">
+      <list>
+        <option value="$PROJECT_DIR$/Assets/Asset Store" />
+        <option value="$PROJECT_DIR$/Assets/AddressableAssetsData" />
+        <option value="$PROJECT_DIR$/Assets/Animation" />
+        <option value="$PROJECT_DIR$/Assets/Asset Store" />
+        <option value="$PROJECT_DIR$/Assets/CinemachineCustomBlends" />
+        <option value="$PROJECT_DIR$/Assets/Editor Default Resources" />
+        <option value="$PROJECT_DIR$/Assets/ExternalDependencyManager" />
+        <option value="$PROJECT_DIR$/Assets/Fonts" />
+        <option value="$PROJECT_DIR$/Assets/GeneratedLocalRepo" />
+        <option value="$PROJECT_DIR$/Assets/GooglePlayGames" />
+        <option value="$PROJECT_DIR$/Assets/Input" />
+        <option value="$PROJECT_DIR$/Assets/Materials" />
+        <option value="$PROJECT_DIR$/Assets/Models" />
+        <option value="$PROJECT_DIR$/Assets/Particle Systems" />
+        <option value="$PROJECT_DIR$/Assets/Plugins" />
+        <option value="$PROJECT_DIR$/Assets/Prefabs" />
+        <option value="$PROJECT_DIR$/Assets/Resources" />
+        <option value="$PROJECT_DIR$/Assets/Scenes" />
+        <option value="$PROJECT_DIR$/Assets/Scriptable objects" />
+        <option value="$PROJECT_DIR$/Assets/Settings" />
+        <option value="$PROJECT_DIR$/Assets/Signals" />
+        <option value="$PROJECT_DIR$/Assets/Sound effects" />
+        <option value="$PROJECT_DIR$/Assets/Sprites" />
+        <option value="$PROJECT_DIR$/Assets/StreamingAssets" />
+        <option value="$PROJECT_DIR$/Assets/TextMesh Pro" />
+        <option value="$PROJECT_DIR$/Assets/Textures" />
+        <option value="$PROJECT_DIR$/Assets/Timelines" />
+        <option value="$PROJECT_DIR$/Assets/Video" />
+        <option value="$PROJECT_DIR$/.git" />
+        <option value="$PROJECT_DIR$/.idea" />
+        <option value="$PROJECT_DIR$/.vs" />
+        <option value="$PROJECT_DIR$/Library" />
+        <option value="$PROJECT_DIR$/Logs" />
+        <option value="$PROJECT_DIR$/obj" />
+        <option value="$PROJECT_DIR$/Packages" />
+        <option value="$PROJECT_DIR$/ProjectSettings" />
+        <option value="$PROJECT_DIR$/Recordings" />
+        <option value="$PROJECT_DIR$/ServerData" />
+        <option value="$PROJECT_DIR$/Temp" />
+        <option value="$PROJECT_DIR$/UIElementsSchema" />
+        <option value="$PROJECT_DIR$/UserSettings" />
+      </list>
+    </option>
+  </component>
+</project>

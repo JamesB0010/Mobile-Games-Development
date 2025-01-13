@@ -4,7 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c7630d3b-1041-428d-b5b5-aacdf8ac5685" name="Changes" comment="" />
+    <list default="true" id="c7630d3b-1041-428d-b5b5-aacdf8ac5685" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Mobile-Games-Development/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Mobile-Games-Development/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FadeInMainMenu.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FadeInMainMenu.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Pitch And Roll Demo.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Pitch And Roll Demo.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Recordings.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scriptable objects/Ship Upgrade system/ShipUpgradesPlatter/Light Gun Upgrade Platter.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scriptable objects/Ship Upgrade system/ShipUpgradesPlatter/Light Gun Upgrade Platter.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/WipeUpAnimation.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/WipeUpAnimation.cs.meta" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -308,10 +318,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="17768">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="17768" />
+      <option name="pid" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -412,6 +422,10 @@
       <workItem from="1736708139014" duration="1215000" />
       <workItem from="1736710550408" duration="4138000" />
       <workItem from="1736715315471" duration="2848000" />
+      <workItem from="1736729672083" duration="365000" />
+      <workItem from="1736730145438" duration="986000" />
+      <workItem from="1736737947743" duration="532000" />
+      <workItem from="1736766884571" duration="53000" />
     </task>
     <servers />
   </component>
