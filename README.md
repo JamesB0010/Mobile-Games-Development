@@ -11,10 +11,8 @@
 <!-- Credits for readme template https://github.com/othneildrew/Best-README-Template/blob/master/README.md -->
 <a name="readme-top"></a>
 <br />
-<div align="center">
 ![google play big hero](https://github.com/user-attachments/assets/e87484bb-b420-423f-b0cf-5f5c186374cb)
-
-
+<div align="center">
   <p align="center">
     Space dogfighting
     <br />
