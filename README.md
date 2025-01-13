@@ -95,9 +95,6 @@ Step 4 you should now be able to open the project by selecting the project in th
 ![Screenshot 2025-01-13 002234](https://github.com/user-attachments/assets/263495c3-3009-41a6-ae97-996caf1f37ec)
 
 
-![Screenshot 2025-01-13 002234](https://github.com/user-attachments/assets/6301f287-1f4e-4dda-ad9b-6e47ac0fd230)
-
-
 ### Getting started for players
 
 #### Google Play Store Download
