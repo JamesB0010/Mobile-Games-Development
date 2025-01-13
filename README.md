@@ -182,7 +182,7 @@ The file structure of the project is as follows
           * LightVibration()
           * MediumVibration()
           * HeavyVibration()
-    * Scripts - too many to count! not really there is 238 
+    * Scripts - too many to count! not really there is 251 (not including store assets)
     * Settings
     * Signals
     * Sound effects
