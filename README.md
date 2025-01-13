@@ -127,7 +127,8 @@ and you should be able to see the store page listing
 
 ooorrrrr it will be on my page: https://averagealtodriver.itch.io
 
-![Screenshot 2025-01-13 003250](https://github.com/user-attachments/assets/031fec64-5c10-4f6f-a3bb-81ea0cf20fdc)
+![Screenshot 2025-01-13 003250](https://github.com/user-attachments/assets/9aed57f7-71c0-4202-8e8c-0cb88f40b868)
+
 
 <!--File structure-->
 ## FileStructure
