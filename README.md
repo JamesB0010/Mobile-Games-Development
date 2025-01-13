@@ -14,18 +14,17 @@
 ![google play big hero](https://github.com/user-attachments/assets/e87484bb-b420-423f-b0cf-5f5c186374cb)
 <div align="center">
   <p align="center">
-    Space dogfighting \n
 
-    Take to the stars in Buzzard
-
+Take to the stars in Buzzard
+    
 Dogfight in space to earn credits
-
+    
 spend credits to upgrade your ship
     <br />
     <br />
-    <a href="https://play.google.com/store/apps/details?id=com.JamesBland.HeavenBound&hl=en">Google Play Store</a>
-    <a href="https://averagealtodriver.itch.io/buzzard">Itch Io</a>
-    <a href="https://www.youtube.com/@jamesbland5082">submission video</a>
+    <a href="https://play.google.com/store/apps/details?id=com.JamesBland.HeavenBound&hl=en">Google Play Store</a><br><br>
+    <a href="https://averagealtodriver.itch.io/buzzard">Itch Io</a><br><br>
+    <a href="https://www.youtube.com/@jamesbland5082">submission video</a><br><br>
   </p>
 </div>
 
