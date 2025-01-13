@@ -14,7 +14,13 @@
 ![google play big hero](https://github.com/user-attachments/assets/e87484bb-b420-423f-b0cf-5f5c186374cb)
 <div align="center">
   <p align="center">
-    Space dogfighting
+    Space dogfighting \n
+
+    Take to the stars in Buzzard
+
+Dogfight in space to earn credits
+
+spend credits to upgrade your ship
     <br />
     <br />
     <a href="https://play.google.com/store/apps/details?id=com.JamesBland.HeavenBound&hl=en">Google Play Store</a>
