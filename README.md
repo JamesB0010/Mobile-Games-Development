@@ -96,6 +96,10 @@ Step 3 Navigate to the project root (Parent folder of the assets folder) and cli
 Step 4 you should now be able to open the project by selecting the project in the project list
 ![Screenshot 2025-01-13 002234](https://github.com/user-attachments/assets/263495c3-3009-41a6-ae97-996caf1f37ec)
 
+Step 5 Ensure that the build target is set to android
+![Screenshot 2025-01-13 133334](https://github.com/user-attachments/assets/ab8d6f6c-735e-4306-b7e6-1f06561ecd6b)
+
+
 
 ### Getting started for players
 
